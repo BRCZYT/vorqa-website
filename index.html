@@ -34,6 +34,21 @@
 tailwind.config={theme:{extend:{colors:{navy:'#0A2540',mid:'#051728',blue:'#2874B2',steel:'#5C8DB8',graph:'#3A4858',mist:'#E8EEF4',orange:'#E87722'},fontFamily:{display:["'Sora Variable'","Sora","sans-serif"],body:["'Manrope Variable'","Manrope","sans-serif"],mono:["'JetBrains Mono Variable'","'JetBrains Mono'","monospace"]}}}}
 </script>
 <style>
+/* ── Tokens (Faz 1.4 — hibrit açık tema) ── */
+:root{
+  --bg-light:#F7FAFC;
+  --bg-light-2:#EDF3F8;
+  --card:#FFFFFF;
+  --ink:#0A2540;
+  --ink-soft:#3A4858;
+  --line-light:#D5E0EA;
+  --navy:#0A2540;
+  --blue:#2874B2;
+  --steel:#5C8DB8;
+  --orange:#E87722;
+  --orange-hover:#C96315;
+}
+
 /* ── Reset ── */
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -113,7 +128,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .cta-band,.stats-band,.clients-band,#plant-sec{position:relative;overflow:hidden;isolation:isolate}
 #foot{position:relative;overflow:hidden;isolation:isolate}
 .sec-dark{position:relative;overflow:hidden;isolation:isolate}
-.cta-band::before,.stats-band::before,.clients-band::before,#plant-sec::before,#foot::before,.sec-dark::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse 75% 200% at 50% 50%,rgba(40,116,178,.26) 0%,transparent 55%),radial-gradient(ellipse 60% 180% at 8% 50%,rgba(40,116,178,.48) 0%,transparent 55%),radial-gradient(ellipse 48% 180% at 92% 50%,rgba(40,116,178,.34) 0%,transparent 55%);animation:hamb 12s ease-in-out infinite alternate, bg-pulse 18s ease-in-out infinite}
+.cta-band::before,.stats-band::before,.clients-band::before,#foot::before,.sec-dark::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse 75% 200% at 50% 50%,rgba(40,116,178,.26) 0%,transparent 55%),radial-gradient(ellipse 60% 180% at 8% 50%,rgba(40,116,178,.48) 0%,transparent 55%),radial-gradient(ellipse 48% 180% at 92% 50%,rgba(40,116,178,.34) 0%,transparent 55%);animation:hamb 12s ease-in-out infinite alternate, bg-pulse 18s ease-in-out infinite}
 /* HERO AMBIENT */
 .h-amb{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .h-amb::before{content:'';position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(40,116,178,.38) 0%,transparent 65%);top:-240px;left:-220px;animation:hamb 10s ease-in-out infinite alternate, bg-pulse 14s ease-in-out infinite}
@@ -238,28 +253,28 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* Dark section headings */
 .sec-title-d{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:#fff}
 /* Light section headings */
-.sec-title-l{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:#0A2540}
+.sec-title-l{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:var(--ink)}
 
 /* ── Light section base ── */
-.sec-light{background:#E8EEF4}
-.sec-light p,.sec-light li{color:#3A4858}
-.sec-light .sec-title-l{color:#0A2540}
+.sec-light{background:var(--bg-light)}
+.sec-light p,.sec-light li{color:var(--ink-soft)}
+.sec-light .sec-title-l{color:var(--ink)}
 
 /* ══════════════════════════════════════════
    ABOUT (light)
 ══════════════════════════════════════════ */
-.intro-text-l{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.25rem,2.1vw,1.7rem);font-weight:300;line-height:1.45;letter-spacing:-.012em;color:#0A2540;max-width:680px}
+.intro-text-l{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.25rem,2.1vw,1.7rem);font-weight:300;line-height:1.45;letter-spacing:-.012em;color:var(--ink);max-width:680px}
 .intro-text-l em{color:#2874B2;font-style:normal;font-weight:500}
-.pillar{background:#fff;border-radius:8px;padding:28px;box-shadow:0 2px 16px rgba(10,37,64,.07),0 1px 3px rgba(10,37,64,.04)}
+.pillar{background:var(--card);border:1px solid var(--line-light);border-radius:8px;padding:28px;box-shadow:0 2px 16px rgba(10,37,64,.07),0 1px 3px rgba(10,37,64,.04)}
 .pillar-num{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:#2874B2;text-transform:uppercase;margin-bottom:10px}
-.pillar-title{font-family:'Sora Variable',Sora,sans-serif;font-size:16px;font-weight:500;color:#0A2540;letter-spacing:-.01em;margin-bottom:8px}
-.pillar-body{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;color:#3A4858;line-height:1.65}
+.pillar-title{font-family:'Sora Variable',Sora,sans-serif;font-size:16px;font-weight:500;color:var(--ink);letter-spacing:-.01em;margin-bottom:8px}
+.pillar-body{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;color:var(--ink-soft);line-height:1.65}
 
 /* ══════════════════════════════════════════
    GROUP COMPANIES — CHIPSA HOVER-EXPAND
 ══════════════════════════════════════════ */
-.co-hx-section{background:#051728;border-top:1px solid rgba(40,116,178,.12)}
-.co-hx-header{padding:22px 80px 24px;border-bottom:1px solid rgba(40,116,178,.12)}
+.co-hx-section{background:var(--bg-light-2);border-top:1px solid var(--line-light)}
+.co-hx-header{padding:22px 80px 24px;border-bottom:1px solid var(--line-light)}
 @media(max-width:768px){.co-hx-header{padding:18px 24px 20px}}
 /* 5-col grid — hovered column expands 3× */
 .co-hx-panel{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;height:84vh;overflow:hidden;transition:grid-template-columns .52s cubic-bezier(.37,0,.63,1)}
@@ -269,9 +284,9 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .co-hx-panel:has([data-co-idx="3"]:hover){grid-template-columns:1fr 1fr 1fr 3fr 1fr}
 .co-hx-panel:has([data-co-idx="4"]:hover){grid-template-columns:1fr 1fr 1fr 1fr 3fr}
 @media(max-width:768px){.co-hx-panel{height:auto;grid-template-columns:1fr !important;transition:none}}
-.co-hx-card{position:relative;overflow:hidden;border-right:1px solid rgba(40,116,178,.12);display:flex;flex-direction:column;justify-content:flex-end;padding:0 28px 36px;text-decoration:none;background:#051728;cursor:pointer}
+.co-hx-card{position:relative;overflow:hidden;border-right:1px solid var(--line-light);display:flex;flex-direction:column;justify-content:flex-end;padding:0 28px 36px;text-decoration:none;background:var(--card);cursor:pointer}
 .co-hx-card:last-child{border-right:none}
-@media(max-width:768px){.co-hx-card{min-height:62vh;border-right:none;border-bottom:1px solid rgba(40,116,178,.12)}}
+@media(max-width:768px){.co-hx-card{min-height:62vh;border-right:none;border-bottom:1px solid var(--line-light)}}
 /* Blue accent line on hover */
 .co-hx-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2874B2,#5C8DB8);opacity:0;z-index:8;transition:opacity .4s cubic-bezier(.16,1,.3,1)}
 .co-hx-card:hover::after{opacity:1}
@@ -285,14 +300,14 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .co-hx-card:nth-child(5) .co-hx-img img{animation-delay:-7s}
 .co-hx-card:hover .co-hx-img img{opacity:.92;transform:scale(1.03) translate(0,0);animation-play-state:paused;filter:brightness(1.15) saturate(.85)}
 /* Bottom gradient overlay */
-.co-hx-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,#051728 8%,rgba(5,23,40,.4) 42%,rgba(5,23,40,.04) 100%);transition:background .5s}
+.co-hx-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,#FFFFFF 8%,rgba(255,255,255,.75) 42%,rgba(255,255,255,.05) 100%);transition:background .5s}
 /* Badge */
 .co-hx-badge{position:absolute;top:24px;left:28px;z-index:6;font-family:'JetBrains Mono Variable',monospace;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#2874B2;opacity:.8}
 /* Content block at bottom */
 .co-hx-content{position:relative;z-index:6;display:flex;flex-direction:column;gap:6px}
-.co-hx-name{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(14px,1.3vw,25px);font-weight:500;color:#fff;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1}
-.co-hx-tag{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.8px;color:#5C8DB8;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.co-hx-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.6);max-width:300px;opacity:0;transform:translateY(8px);order:-1;transition:opacity .42s .06s cubic-bezier(.16,1,.3,1),transform .42s .06s cubic-bezier(.16,1,.3,1)}
+.co-hx-name{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(14px,1.3vw,25px);font-weight:500;color:var(--ink);letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1}
+.co-hx-tag{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.8px;color:#2874B2;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.co-hx-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;line-height:1.65;color:var(--ink-soft);max-width:300px;opacity:0;transform:translateY(8px);order:-1;transition:opacity .42s .06s cubic-bezier(.16,1,.3,1),transform .42s .06s cubic-bezier(.16,1,.3,1)}
 .co-hx-card:hover .co-hx-desc{opacity:1;transform:translateY(0)}
 @media(max-width:768px){.co-hx-desc{opacity:1;transform:none}}
 .co-hx-link{display:inline-flex;align-items:center;gap:4px;font-family:'JetBrains Mono Variable',monospace;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#2874B2;opacity:0;transform:translateY(6px);margin-top:4px;transition:opacity .42s .12s cubic-bezier(.16,1,.3,1),transform .42s .12s cubic-bezier(.16,1,.3,1)}
@@ -317,7 +332,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* ══════════════════════════════════════════
    CONCRETE PLANT ANIMATION
 ══════════════════════════════════════════ */
-#plant-sec{background:#0A2540;padding:80px 80px 60px}
+#plant-sec{background:var(--bg-light);padding:80px 80px 60px}
 .plant-label{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:#5C8DB8;text-transform:uppercase}
 .plant-label-line{stroke:#5C8DB8;stroke-width:.8;stroke-dasharray:3 4;opacity:.5}
 /* Belt animation */
@@ -406,7 +421,7 @@ select.f-inp option{background:#fff;color:#0A2540}
 .co-grid  {display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .pil-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .st-grid  {display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(40,116,178,.1);border-radius:6px;overflow:hidden;margin-top:16px}
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
 .ind-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .prj-grid {display:grid;grid-template-columns:1.45fr 1fr;gap:14px}
 .ct-grid  {display:grid;grid-template-columns:1fr 1.05fr;gap:96px;align-items:start}
@@ -532,6 +547,8 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 /* BLOCK SEP */
 .block-sep{height:2px;background:linear-gradient(90deg,transparent 0%,rgba(40,116,178,.48) 12%,rgba(100,180,255,.92) 32%,rgba(180,230,255,1) 50%,rgba(100,180,255,.92) 68%,rgba(40,116,178,.48) 88%,transparent 100%);box-shadow:0 0 18px 8px rgba(40,116,178,.28),0 0 45px 16px rgba(40,116,178,.12);position:relative;z-index:2;animation:sep-pulse 3.5s ease-in-out infinite alternate}
 @keyframes sep-pulse{from{opacity:.55;box-shadow:0 0 12px 4px rgba(40,116,178,.18)}to{opacity:1;box-shadow:0 0 28px 10px rgba(40,116,178,.42),0 0 60px 22px rgba(40,116,178,.18)}}
+/* Açık↔açık veya açık↔koyu geçişler: glow yerine ince çizgi (Faz 1.4) */
+.block-sep-light{height:1px;background:var(--line-light)}
 @keyframes foot-glow{0%,100%{opacity:.6}50%{opacity:1}}
 #foot::before{animation:foot-glow 5s ease-in-out infinite !important;background:radial-gradient(ellipse 80% 220% at 50% 50%,rgba(40,116,178,.28) 0%,transparent 52%),radial-gradient(ellipse 65% 200% at 5% 50%,rgba(40,116,178,.48) 0%,transparent 52%),radial-gradient(ellipse 55% 200% at 95% 50%,rgba(40,116,178,.35) 0%,transparent 52%) !important}
 
@@ -547,12 +564,15 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 .h-scan{opacity:.72}
 
 /* ── Stronger dark section glows ── */
-.cta-band::before,.clients-band::before,#plant-sec::before,#foot::before,.sec-dark::before{
+.cta-band::before,.clients-band::before,#foot::before,.sec-dark::before{
   background:
     radial-gradient(ellipse 90% 220% at 50% 50%,rgba(40,116,178,.42) 0%,transparent 50%),
     radial-gradient(ellipse 72% 200% at 4% 50%,rgba(40,116,178,.65) 0%,transparent 48%),
     radial-gradient(ellipse 62% 200% at 96% 50%,rgba(40,116,178,.50) 0%,transparent 48%)
 }
+/* Açık bölümler — silik blueprint grid (Faz 1.4) */
+.co-hx-section,#plant-sec{position:relative}
+.co-hx-section::before,#plant-sec::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.035;background-image:linear-gradient(rgba(40,116,178,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(40,116,178,.4) 1px,transparent 1px);background-size:80px 80px}
 
 /* ── Enhanced scroll reveal ── */
 .rv{opacity:0;transform:translateY(44px) scale(.972);filter:blur(6px);
@@ -561,8 +581,8 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
 .d4{transition-delay:.40s}.d5{transition-delay:.50s}.d6{transition-delay:.60s}
 
-/* ── Light sections — gradient texture ── */
-.sec-light{background:linear-gradient(160deg,#dce8f5 0%,#E8EEF4 55%,#d8e5f2 100%)}
+/* ── Light sections ── */
+.sec-light{background:var(--bg-light)}
 
 /* ── Scroll progress bar ── */
 #scroll-prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:9999;
@@ -600,7 +620,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 @keyframes dot-pulse{0%,100%{opacity:.4}50%{opacity:1}}
 
 /* light background + install SVG container */
-.prj-pin-root{position:relative;background:#dce8f5}
+.prj-pin-root{position:relative;background:var(--bg-light-2)}
 .prj-pin-stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:clamp(80px,13vh,130px);padding-bottom:clamp(36px,5vh,60px);background:linear-gradient(135deg,#f2f7fc 0%,#bcd6f2 18%,#e8eef4 35%,#90bae3 52%,#d8e8f6 68%,#a8c8ec 84%,#edf3f9 100%);background-size:360% 360%;animation:prj-bg-morph 22s ease-in-out infinite}
 @keyframes prj-bg-morph{0%{background-position:0% 50%}33%{background-position:100% 20%}66%{background-position:50% 100%}100%{background-position:0% 50%}}
 .prj-install-anim{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
@@ -623,8 +643,8 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 .prj-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
 .prj-current{text-align:center;will-change:opacity,transform}
 .prj-curr-meta{font-family:'JetBrains Mono Variable',monospace;font-size:3.5px;letter-spacing:1px;color:#2874B2;text-transform:uppercase;margin-bottom:4px}
-.prj-curr-title{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(.52rem,1.27vw,1.07rem);font-weight:300;letter-spacing:-.03em;color:#0A2540;line-height:1.05;margin-bottom:clamp(3px,.5vh,5px);max-width:680px}
-.prj-curr-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(4px,.32vw,4.7px);color:rgba(10,37,64,.52);line-height:1.68;max-width:450px;margin:0 auto}
+.prj-curr-title{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(.52rem,1.27vw,1.07rem);font-weight:300;letter-spacing:-.03em;color:var(--ink);line-height:1.05;margin-bottom:clamp(3px,.5vh,5px);max-width:680px}
+.prj-curr-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(4px,.32vw,4.7px);color:var(--ink-soft);line-height:1.68;max-width:450px;margin:0 auto}
 .prj-pin-bot{position:absolute;bottom:clamp(20px,3.2vh,38px);left:0;right:0;display:flex;align-items:center;justify-content:center;gap:30px;z-index:4}
 .prj-dots{display:flex;gap:8px;align-items:center}
 .prj-dot{width:6px;height:6px;border-radius:50%;background:rgba(10,37,64,.2);transition:background .3s cubic-bezier(.22,1,.36,1),width .3s cubic-bezier(.22,1,.36,1),border-radius .3s;cursor:default}
@@ -885,7 +905,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 <!-- ════════════════════════════════════
      ABOUT  (light)
 ════════════════════════════════════ -->
-<section id="about" class="sec sec-light">
+<section id="about" class="sec sec-light" style="border-top:1px solid var(--line-light)">
   <div style="max-width:1160px;margin:0 auto">
     <div class="g2" style="margin-bottom:60px">
       <div><div class="sec-num rv" data-i18n="about.num">§ 01 / Kimiz</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
@@ -906,7 +926,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 <!-- ════════════════════════════════════
      GROUP COMPANIES (dark)
 ════════════════════════════════════ -->
-<div class="block-sep"></div>
+<div class="block-sep-light"></div>
 <section id="companies" class="co-hx-section">
   <!-- Header -->
   <div class="co-hx-header rv">
@@ -919,7 +939,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 01 — ZYT Beton -->
     <a href="beton.html" class="co-hx-card" data-co-idx="0">
       <div class="co-hx-img">
-        <img src="images/illustrations/srv-beton.svg" alt="Beton santrali — cephe teknik çizimi" loading="lazy" />
+        <img src="images/illustrations/srv-beton-light.svg" alt="Beton santrali — cephe teknik çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">01 — Şirket</span>
@@ -934,7 +954,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 02 — ZYT Enerji -->
     <a href="enerji.html" class="co-hx-card" data-co-idx="1">
       <div class="co-hx-img">
-        <img src="images/illustrations/srv-enerji.svg" alt="Atıktan enerji tesisi — proses akış çizimi" loading="lazy" />
+        <img src="images/illustrations/srv-enerji-light.svg" alt="Atıktan enerji tesisi — proses akış çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">02 — Şirket</span>
@@ -949,7 +969,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 03 — ZYT Galvaniz -->
     <a href="galvaniz.html" class="co-hx-card" data-co-idx="2">
       <div class="co-hx-img">
-        <img src="images/illustrations/srv-galvaniz.svg" alt="Sıcak daldırma galvaniz hattı — kesit çizimi" loading="lazy" />
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Sıcak daldırma galvaniz hattı — kesit çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">03 — Şirket</span>
@@ -964,7 +984,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 04 — ZYT Mühendislik -->
     <a href="tedarik-zinciri.html" class="co-hx-card" data-co-idx="3">
       <div class="co-hx-img">
-        <img src="images/illustrations/srv-tedarik.svg" alt="Tedarik zinciri ağı — Ankara merkezli lojistik haritası" loading="lazy" />
+        <img src="images/illustrations/srv-tedarik-light.svg" alt="Tedarik zinciri ağı — Ankara merkezli lojistik haritası" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">04 — Şirket</span>
@@ -979,7 +999,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 05 — ZYT Makina -->
     <a href="atik-donusum.html" class="co-hx-card" data-co-idx="4">
       <div class="co-hx-img">
-        <img src="images/illustrations/srv-celik.svg" alt="Çelik konstrüksiyon — makas ve detay çizimi" loading="lazy" />
+        <img src="images/illustrations/srv-celik-light.svg" alt="Çelik konstrüksiyon — makas ve detay çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">05 — Şirket</span>
@@ -1038,8 +1058,8 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <div class="g2" style="margin-bottom:40px">
       <div class="rv"><div class="sec-num" data-i18n="plant.num">§ 03 / Beton Santrali</div></div>
       <div class="rv d1">
-        <h2 class="sec-title-d" data-i18n="plant.title">Sıfırdan tam kapasiteye.</h2>
-        <p style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:13.5px;color:rgba(255,255,255,.45);margin-top:6px" data-i18n="plant.sub">Sabit ve mobil beton santrali kurulumu — 90 günde devreye alma.</p>
+        <h2 class="sec-title-l" data-i18n="plant.title">Sıfırdan tam kapasiteye.</h2>
+        <p style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:13.5px;color:var(--ink-soft);margin-top:6px" data-i18n="plant.sub">Sabit ve mobil beton santrali kurulumu — 90 günde devreye alma.</p>
       </div>
     </div>
 
@@ -1308,21 +1328,21 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 
     <!-- Spec bar below plant -->
     <div class="spec-grid rv d2">
-      <div style="background:#051728;padding:18px 22px;text-align:center">
-        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:5px">Kapasite</div>
-        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:#fff">60–240 m³/sa</div>
+      <div style="background:var(--card);border:1px solid var(--line-light);border-radius:6px;box-shadow:0 2px 12px rgba(10,37,64,.06);padding:18px 22px;text-align:center">
+        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:5px">Kapasite</div>
+        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:var(--ink)">60–240 m³/sa</div>
       </div>
-      <div style="background:#051728;padding:18px 22px;text-align:center">
-        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:5px">Kurulum</div>
-        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:#fff">90 Gün</div>
+      <div style="background:var(--card);border:1px solid var(--line-light);border-radius:6px;box-shadow:0 2px 12px rgba(10,37,64,.06);padding:18px 22px;text-align:center">
+        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:5px">Kurulum</div>
+        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:var(--ink)">90 Gün</div>
       </div>
-      <div style="background:#051728;padding:18px 22px;text-align:center">
-        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:5px">Kontrol</div>
-        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:#fff">Uzaktan SCADA</div>
+      <div style="background:var(--card);border:1px solid var(--line-light);border-radius:6px;box-shadow:0 2px 12px rgba(10,37,64,.06);padding:18px 22px;text-align:center">
+        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:5px">Kontrol</div>
+        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:var(--ink)">Uzaktan SCADA</div>
       </div>
-      <div style="background:#051728;padding:18px 22px;text-align:center">
-        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:5px">Sertifika</div>
-        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:#fff">ISO 9001 · CE</div>
+      <div style="background:var(--card);border:1px solid var(--line-light);border-radius:6px;box-shadow:0 2px 12px rgba(10,37,64,.06);padding:18px 22px;text-align:center">
+        <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:5px">Sertifika</div>
+        <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:var(--ink)">ISO 9001 · CE</div>
       </div>
     </div>
   </div>
@@ -1332,7 +1352,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 <!-- ════════════════════════════════════
      PROJECTS — Scroll-Pin  §04
 ════════════════════════════════════ -->
-<div class="block-sep"></div>
+<div class="block-sep-light"></div>
 <section id="projects" class="prj-pin-root">
 
   <!-- ◆ STICKY STAGE ◆ -->
@@ -1650,7 +1670,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 <!-- ════════════════════════════════════
      FOOTER
 ════════════════════════════════════ -->
-<div class="block-sep"></div>
+<div class="block-sep-light"></div>
 <footer id="foot">
   <div style="max-width:1160px;margin:0 auto">
     <div class="foot-inner" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:26px">

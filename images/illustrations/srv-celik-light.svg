@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Çelik konstrüksiyon — makas ve detay çizimi">
+<defs>
+<linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g6" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<filter id="gl6" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.st{stroke:#0A2540;stroke-opacity:.75;stroke-width:3.4;fill:none}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.dim{stroke:#3A6A94;stroke-width:1;stroke-opacity:.5;fill:none}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:17px;letter-spacing:.16em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg6)"/>
+<rect width="1600" height="1200" fill="url(#g6)"/>
+<line x1="100" y1="950" x2="1500" y2="950" class="ln" stroke-opacity=".4"/>
+
+<!-- portal frame: columns -->
+<path class="st" d="M300 950 V470 M1300 950 V470"/>
+<path class="lnT" d="M282 950 V470 M318 950 V470 M1282 950 V470 M1318 950 V470"/>
+<!-- rafters (apex) -->
+<path class="st" d="M300 470 L800 330 L1300 470"/>
+<path class="lnT" d="M300 500 L800 360 L1300 500"/>
+<!-- truss webbing -->
+<g class="ln" stroke-opacity=".7">
+<path d="M400 498 L400 442 M500 470 L500 415 M600 442 L600 386 M700 414 L700 358 M800 386 L800 330"/>
+<path d="M300 500 L400 442 M400 498 L500 415 M500 470 L600 386 M600 442 L700 358 M700 414 L800 330"/>
+<path d="M1200 498 L1200 442 M1100 470 L1100 415 M1000 442 L1000 386 M900 414 L900 358"/>
+<path d="M1300 500 L1200 442 M1200 498 L1100 415 M1100 470 L1000 386 M1000 442 L900 358 M900 414 L800 330"/>
+</g>
+<!-- purlins -->
+<g class="lnT"><path d="M395 436 v-16 M495 409 v-16 M595 380 v-16 M695 352 v-16 M795 324 v-16 M905 352 v-16 M1005 380 v-16 M1105 409 v-16 M1205 436 v-16"/></g>
+
+<!-- haunch plates -->
+<path class="ln" d="M300 470 l60 30 v40 l-60 -18 z M1300 470 l-60 30 v40 l60 -18 z"/>
+
+<!-- base plates + anchor bolts -->
+<g class="ln">
+<path d="M256 950 h88 M256 950 v-16 h88 v16"/>
+<path d="M1256 950 h88 M1256 950 v-16 h88 v16"/>
+</g>
+<g fill="#3A6A94"><circle cx="272" cy="942" r="3.4"/><circle cx="328" cy="942" r="3.4"/><circle cx="1272" cy="942" r="3.4"/><circle cx="1328" cy="942" r="3.4"/></g>
+
+<!-- crane beam + bracket -->
+<path class="st" d="M300 640 h180"/>
+<path class="ln" d="M300 660 l60 40 M480 640 v20"/>
+<!-- weld sparks (orange signature) at active joint -->
+<g filter="url(#gl6)">
+<circle cx="800" cy="330" r="8" fill="#E87722"/>
+<g stroke="#E87722" stroke-width="2.4" stroke-linecap="round">
+<path d="M800 330 l26 -22 M800 330 l32 4 M800 330 l18 30 M800 330 l-8 -34 M800 330 l-30 14"/>
+</g>
+</g>
+
+<!-- detail circle: bolted connection zoom -->
+<g>
+<circle cx="1210" cy="250" r="120" class="ln" fill="#F4F8FB"/>
+<path class="dim" d="M1300 470 L1268 332"/>
+<!-- flange plates -->
+<path class="st" d="M1140 250 h140 M1140 226 h140 M1140 274 h140" stroke-width="2.6"/>
+<g fill="none" stroke="#0A2540" stroke-opacity=".8" stroke-width="2">
+<circle cx="1168" cy="238" r="6"/><circle cx="1168" cy="262" r="6"/>
+<circle cx="1252" cy="238" r="6"/><circle cx="1252" cy="262" r="6"/>
+</g>
+<path d="M1204 226 v48" stroke="#E87722" stroke-width="3"/>
+<text x="1210" y="404" class="lbl" text-anchor="middle">DETAY D-1 · M24 8.8</text>
+</g>
+
+<!-- dimensions -->
+<g class="dim">
+<path d="M300 1030 h1000 M300 1022 v16 M1300 1022 v16"/>
+<path d="M180 950 v-620 M172 950 h16 M172 330 h16"/>
+</g>
+<g class="lbl">
+<text x="800" y="1068" text-anchor="middle">ACIKLIK L=30 m</text>
+<text x="150" y="646" transform="rotate(-90 150 646)" text-anchor="middle">H=12 m</text>
+</g>
+
+<g class="lbl">
+<text x="120" y="112" class="lblO">//</text><text x="152" y="112" class="lblM">CELIK KONSTRUKSIYON</text>
+<text x="120" y="144">PORTAL CERCEVE · EN 1090-2 EXC2</text>
+</g>
+<path class="dim" d="M760 300 l-160 -60 h-120"/><circle cx="760" cy="300" r="4" fill="#3A6A94"/>
+<text x="474" y="232" class="lbl lblO" text-anchor="end">KAYNAK NDT</text>
+</svg>

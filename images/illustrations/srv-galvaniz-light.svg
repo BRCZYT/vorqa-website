@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sıcak daldırma galvaniz hattı — kesit çizimi">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<linearGradient id="zinc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E87722" stop-opacity=".95"/><stop offset=".5" stop-color="#C96315" stop-opacity=".55"/><stop offset="1" stop-color="#C96315" stop-opacity=".15"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.stl{stroke:#0A2540;stroke-opacity:.8}
+.dim{stroke:#3A6A94;stroke-width:1;stroke-opacity:.5;fill:none}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:17px;letter-spacing:.16em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- overhead rail + hoist -->
+<path class="ln" d="M180 190 h1240"/>
+<path class="lnT" d="M180 210 h1240"/>
+<rect x="700" y="176" width="120" height="48" fill="#DCE7F1" class="ln"/>
+<circle cx="730" cy="232" r="10" class="ln"/><circle cx="790" cy="232" r="10" class="ln"/>
+<!-- chains -->
+<path class="ln stl" d="M735 242 v210 M785 242 v210"/>
+<!-- spreader beam -->
+<path class="ln stl" d="M640 452 h240" stroke-width="5"/>
+<path class="ln stl" d="M690 452 v130 M830 452 v130"/>
+<!-- steel profile being dipped (I-beam end view group lowered into bath) -->
+<g class="ln stl" stroke-width="4">
+<path d="M600 582 h320 M600 700 h320 M760 582 v118"/>
+</g>
+<!-- kettle -->
+<path class="ln" d="M380 660 v300 h840 v-300" stroke-width="3"/>
+<path class="lnT" d="M380 720 h840"/>
+<!-- molten zinc surface + body -->
+<rect x="388" y="666" width="824" height="288" fill="url(#zinc)" opacity=".9"/>
+<path d="M388 666 h824" stroke="#E87722" stroke-width="4" filter="url(#gl)"/>
+<!-- vapor wisps -->
+<g stroke="#E87722" stroke-opacity=".35" fill="none" stroke-width="2.5">
+<path d="M520 640 c10 -22 -8 -30 4 -52"/><path d="M980 636 c12 -24 -6 -34 6 -54"/><path d="M1120 646 c10 -20 -8 -28 4 -48"/>
+</g>
+<!-- burners under kettle -->
+<g fill="#E87722" filter="url(#gl)">
+<path d="M470 972 l14 24 h-28 z"/><path d="M700 972 l14 24 h-28 z"/><path d="M930 972 l14 24 h-28 z"/><path d="M1130 972 l14 24 h-28 z"/>
+</g>
+<path class="lnT" d="M380 998 h840"/>
+
+<!-- platform + handrail left -->
+<path class="ln" d="M180 660 h200 M180 660 v300 M220 660 v-70 M300 660 v-70 M212 590 h96"/>
+<path class="lnT" d="M180 740 h200 M180 830 h200"/>
+
+<!-- dimensions -->
+<g class="dim">
+<path d="M380 1050 h840 M380 1042 v16 M1220 1042 v16"/>
+<path d="M1300 660 v300 M1292 660 h16 M1292 960 h16"/>
+<path d="M1300 452 v130 M1292 452 h16 M1292 582 h16"/>
+</g>
+<g class="lbl">
+<text x="800" y="1088" text-anchor="middle">KAZAN L=12.5 m</text>
+<text x="1320" y="816" >D=3.2 m</text>
+<text x="1320" y="522" class="lblO">DALDIRMA</text>
+</g>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="112" class="lblO">//</text><text x="152" y="112" class="lblM">SICAK DALDIRMA GALVANIZ</text>
+<text x="120" y="144">KESIT B—B · ISO 1461</text>
+</g>
+<path class="dim" d="M540 690 l-120 -60 h-120"/><circle cx="540" cy="690" r="4" fill="#3A6A94"/>
+<text x="296" y="612" class="lbl lblO" text-anchor="end">Zn 450°C</text>
+</svg>
