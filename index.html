@@ -197,8 +197,8 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .hero-orb-2{bottom:-22%;left:-10%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(40,116,178,.07),transparent 65%)}
 
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
-.hero-h1{font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(1.3rem,2.4vw,2.1rem);line-height:.98;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
-.hero-h1 .accent{color:#2874B2}
+.hero-h1{font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,6rem);line-height:1.02;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
+.hero-h1 .accent{color:#E87722}
 
 /* ── Wheel ── */
 .wheel-wrap{position:relative;width:min(400px,64vw);height:min(400px,64vw);margin:14px 0 8px;animation:fade-up .8s .3s both}
@@ -230,7 +230,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
    COMMON SECTION
 ══════════════════════════════════════════ */
 .sec{padding:100px 80px;position:relative;overflow:hidden}
-.sec-num{font-family:'JetBrains Mono Variable',monospace;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;background:linear-gradient(135deg,#7ec8e3 0%,#c8e6f0 30%,#fff 50%,#a0c4d8 70%,#6ab0cc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;display:inline-block}
+.sec-num{font-family:'JetBrains Mono Variable',monospace;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:#E87722;font-weight:600;display:inline-block}
 .g2{display:grid;grid-template-columns:220px 1fr;gap:64px;align-items:baseline}
 
 /* Dark section headings */
@@ -240,7 +240,6 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
 /* ── Light section base ── */
 .sec-light{background:#E8EEF4}
-.sec-light .sec-num{background:linear-gradient(135deg,#0a4d7a 0%,#1a6da0 35%,#2874B2 50%,#1a5d8a 70%,#0d406d 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sec-light p,.sec-light li{color:#3A4858}
 .sec-light .sec-title-l{color:#0A2540}
 
@@ -359,7 +358,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
    BUTTONS
 ══════════════════════════════════════════ */
 .btn-p,.btn-g,.btn-s,.btn-o,.btn-navy{display:inline-flex;align-items:center;gap:9px;font-family:'Manrope Variable',Manrope,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;border-radius:4px;border:none;cursor:pointer;padding:13px 28px;transition:background .2s,border-color .2s,transform .12s}
-.btn-p{background:#2874B2;color:#fff} .btn-p:hover{background:#1f5d92}
+.btn-p{background:#E87722;color:#051728} .btn-p:hover{background:#C96315}
 .btn-p:active,.btn-g:active,.btn-s:active,.btn-navy:active{transform:scale(.98)}
 .btn-g{background:transparent;color:#2874B2;border:1px solid #2874B2} .btn-g:hover{background:rgba(40,116,178,.1)}
 .btn-s{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)} .btn-s:hover{border-color:#fff}
@@ -482,7 +481,6 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   #foot{padding:36px 20px}
 
   .g2{grid-template-columns:1fr;gap:10px}
-  .hero-h1{font-size:clamp(1rem,4.5vw,1.6rem);white-space:normal}
   .wheel-wrap{width:min(280px,78vw);height:min(280px,78vw)}
 
   /* 3-col → 2-col */
@@ -509,7 +507,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 @media(max-width:600px){
   #hero{padding-top:56px;padding-bottom:64px}
   .wheel-wrap{width:min(250px,76vw);height:min(250px,76vw)}
-  .hero-h1{font-size:clamp(.95rem,5vw,1.3rem)}
+  .hero-h1{font-size:clamp(2rem,9vw,2.6rem)}
   .hero-eyebrow{font-size:8.5px;letter-spacing:2px}
 
   /* All major grids → 1 col */
@@ -573,7 +571,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 /* ── Stats band → light (section alternation fix) ── */
 .stats-band{background:linear-gradient(160deg,#d8e7f3 0%,#E8EEF4 55%,#d6e5f2 100%);border-top:1px solid rgba(40,116,178,.15);border-bottom:1px solid rgba(40,116,178,.15)}
 .stats-band::before{background:radial-gradient(ellipse 50% 80% at 20% 50%,rgba(40,116,178,.07) 0%,transparent 60%),radial-gradient(ellipse 42% 70% at 80% 50%,rgba(40,116,178,.05) 0%,transparent 60%)}
-.stat-n{color:#0A2540}
+.stat-n{color:#E87722}
 .stat-n sup{color:#2874B2}
 .stat-lbl{color:rgba(10,37,64,.52)}
 /* foot-top-brightness-added */
@@ -585,7 +583,6 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 /* ══════════════════════════════════════════
    PROJECTS SCROLL-PIN  §04
 ══════════════════════════════════════════ */
-.prj-pin-root .sec-num{background:linear-gradient(135deg,#0a4d7a 0%,#1a6da0 35%,#2874B2 50%,#1a5d8a 70%,#0d406d 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
 /* §04 installation animation keyframes */
 @keyframes prj-side-drift{0%,100%{opacity:.5;transform:translateX(0) scale(1)}50%{opacity:.85;transform:translateX(60px) scale(1.12)}}
@@ -847,7 +844,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   <!-- Title — BELOW the wheel -->
   <div style="position:relative;z-index:10;text-align:center;padding:0 32px;margin-top:6px">
     <p class="hero-eyebrow" data-i18n="hero.eyebrow">// Ankara · Türkiye · Şirketlerimiz · Küresel Operasyonlar</p>
-    <h1 class="hero-h1" data-i18n-html="hero.h1">KÜRESEL ÖLÇEKLİ <span class="accent">ENDÜSTRİYEL</span> MÜKEMMELİYET</h1>
+    <h1 class="hero-h1" data-i18n-html="hero.h1">KÜRESEL ÖLÇEKLİ<br><span class="accent">ENDÜSTRİYEL</span> MÜKEMMELİYET</h1>
   </div>
 
   <div style="display:flex;align-items:center;gap:10px;margin-top:14px;margin-bottom:28px;animation:fade-up .7s 1.1s both">
@@ -1822,7 +1819,7 @@ const T = {
     'dd.about':'Hakkımızda','dd.docs':'Belgelerimiz','dd.refs':'Referanslar','dd.academy':'Akademi',
     'mob.projects':'Projeler','mob.cta':'Teklif Al →',
     'hero.eyebrow':'// Ankara · Türkiye · Şirketlerimiz · Küresel Operasyonlar',
-    'hero.h1':'KÜRESEL ÖLÇEKLİ <span class="accent">ENDÜSTRİYEL</span> MÜKEMMELİYET',
+    'hero.h1':'KÜRESEL ÖLÇEKLİ<br><span class="accent">ENDÜSTRİYEL</span> MÜKEMMELİYET',
     'hero.eco':'Ekosistemimiz','hero.scroll':'Kaydır',
     'tab.1':'Beton Santralleri','tab.2':'Atık-Enerji Dönüşüm','tab.3':'Galvaniz Tesisleri',
     'tab.4':'Tedarik Zinciri','tab.5':'Anahtar Teslim',
@@ -1885,7 +1882,7 @@ const T = {
     'dd.about':'About Us','dd.docs':'Our Documents','dd.refs':'References','dd.academy':'Academy',
     'mob.projects':'Projects','mob.cta':'Request Quote',
     'hero.eyebrow':'// Ankara · Turkey · Our Companies · Global Operations',
-    'hero.h1':'GLOBAL-SCALE <span class="accent">INDUSTRIAL</span> EXCELLENCE',
+    'hero.h1':'GLOBAL-SCALE<br><span class="accent">INDUSTRIAL</span> EXCELLENCE',
     'hero.eco':'Our Ecosystem','hero.scroll':'Scroll',
     'tab.1':'Concrete Plants','tab.2':'Waste-Energy Conversion','tab.3':'Galvanizing Plants',
     'tab.4':'Supply Chain','tab.5':'Turnkey Projects',
@@ -1948,7 +1945,7 @@ const T = {
     'dd.about':'من نحن','dd.docs':'وثائقنا','dd.refs':'المراجع','dd.academy':'الأكاديمية',
     'mob.projects':'المشاريع','mob.cta':'طلب عرض سعر',
     'hero.eyebrow':'// أنقرة · تركيا · شركاتنا · العمليات العالمية',
-    'hero.h1':'<span class="accent">التميز الصناعي</span> على المستوى العالمي',
+    'hero.h1':'على المستوى العالمي<br><span class="accent">التميز الصناعي</span>',
     'hero.eco':'نظامنا البيئي','hero.scroll':'تمرير',
     'tab.1':'محطات الخرسانة','tab.2':'تحويل النفايات إلى طاقة','tab.3':'مصانع الجلفنة',
     'tab.4':'سلسلة الإمداد','tab.5':'مشاريع تسليم المفتاح',
