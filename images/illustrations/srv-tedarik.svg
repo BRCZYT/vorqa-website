@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tedarik zinciri ağı — Ankara merkezli lojistik haritası">
+<defs>
+<linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#030d18"/><stop offset="1" stop-color="#0A2540"/></linearGradient>
+<pattern id="g5" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#5C8DB8" stroke-opacity=".06"/></pattern>
+<filter id="gl5" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+.ln{stroke:#5C8DB8;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#5C8DB8;stroke-width:1;fill:none;stroke-opacity:.35}
+.route{stroke:#5C8DB8;stroke-width:1.6;fill:none;stroke-opacity:.55;stroke-dasharray:3 9;stroke-linecap:round}
+.routeO{stroke:#E87722;stroke-width:2.4;fill:none;stroke-dasharray:3 10;stroke-linecap:round}
+.node{fill:#0E2C4A;stroke:#5C8DB8;stroke-width:2}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:17px;letter-spacing:.16em;fill:#5C8DB8}
+.lblO{fill:#E87722}.lblM{fill:#E8EEF4;fill-opacity:.85}
+.dim{stroke:#5C8DB8;stroke-width:1;stroke-opacity:.5;fill:none}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg5)"/>
+<rect width="1600" height="1200" fill="url(#g5)"/>
+
+<!-- graticule arcs (map feel) -->
+<g class="lnT">
+<path d="M-100 300 Q800 180 1700 300"/>
+<path d="M-100 620 Q800 500 1700 620"/>
+<path d="M-100 940 Q800 820 1700 940"/>
+<path d="M420 -50 Q500 600 380 1250"/>
+<path d="M840 -50 Q860 600 820 1250"/>
+<path d="M1240 -50 Q1220 600 1260 1250"/>
+</g>
+
+<!-- HUB: Ankara -->
+<g filter="url(#gl5)">
+<circle cx="860" cy="330" r="16" fill="#E87722"/>
+</g>
+<circle cx="860" cy="330" r="30" fill="none" stroke="#E87722" stroke-opacity=".5" stroke-width="1.6"/>
+<circle cx="860" cy="330" r="46" fill="none" stroke="#E87722" stroke-opacity=".22" stroke-width="1.2"/>
+
+<!-- routes from hub -->
+<path class="routeO" d="M860 330 Q640 470 470 640"/>   <!-- Libya -->
+<path class="routeO" d="M860 330 Q800 560 720 760"/>   <!-- Egypt -->
+<path class="routeO" d="M860 330 Q1050 460 1130 620"/> <!-- Iraq -->
+<path class="route" d="M860 330 Q1000 380 1060 470"/>  <!-- Syria -->
+<path class="route" d="M860 330 Q560 760 520 980"/>    <!-- Africa -->
+<path class="route" d="M860 330 Q1250 300 1400 380"/>  <!-- Gulf -->
+
+<!-- destination nodes -->
+<g>
+<circle cx="470" cy="640" r="12" class="node"/>
+<circle cx="720" cy="760" r="12" class="node"/>
+<circle cx="1130" cy="620" r="12" class="node"/>
+<circle cx="1060" cy="470" r="9" class="node"/>
+<circle cx="520" cy="980" r="9" class="node"/>
+<circle cx="1400" cy="380" r="9" class="node"/>
+</g>
+<!-- moving cargo dots on orange routes -->
+<g fill="#E87722" filter="url(#gl5)">
+<circle cx="652" cy="470" r="6"/>
+<circle cx="792" cy="570" r="6"/>
+<circle cx="1042" cy="452" r="6"/>
+</g>
+
+<!-- node labels -->
+<g class="lbl">
+<text x="900" y="308" class="lblM">ANKARA — MERKEZ</text>
+<text x="430" y="690" text-anchor="end" class="lblM">LIBYA</text>
+<text x="720" y="812" text-anchor="middle" class="lblM">MISIR</text>
+<text x="1170" y="628" class="lblM">IRAK</text>
+<text x="1092" y="452">SURIYE</text>
+<text x="548" y="1008">AFRIKA</text>
+<text x="1428" y="368">KORFEZ</text>
+</g>
+
+<!-- container ship at bottom (technical) -->
+<g class="ln" transform="translate(1020,940)">
+<path d="M0 60 h360 l-40 60 h-280 z" fill="#0A2137"/>
+<path class="lnT" d="M30 60 v-34 h60 v34 M110 60 v-34 h60 v34 M190 60 v-34 h60 v34 M270 60 v-34 h60 v34"/>
+<rect x="300" y="-18" width="44" height="44" class="node"/>
+<circle cx="322" cy="-30" r="5" fill="#E87722" filter="url(#gl5)"/>
+</g>
+
+<!-- stats strip -->
+<g class="dim"><path d="M120 1082 h520"/></g>
+<g class="lbl">
+<text x="120" y="1062"><tspan class="lblO">1000+</tspan> DOGRULANMIS TEDARIKCI</text>
+<text x="120" y="1118"><tspan class="lblO">24+</tspan> ULKE · AKTIF SEVKIYAT</text>
+</g>
+
+<g class="lbl">
+<text x="120" y="112" class="lblO">//</text><text x="152" y="112" class="lblM">TEDARIK ZINCIRI YONETIMI</text>
+<text x="120" y="144">ROTA HARITASI · TR→MENA</text>
+</g>
+</svg>

@@ -127,6 +127,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 @keyframes galv-sweep{0%{left:-25%;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:115%;opacity:0}}
 .hero-h1 .acc{color:#2874B2;font-weight:500}
 .hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.2vw,16px);color:rgba(255,255,255,.48);line-height:1.7;max-width:540px;margin-bottom:36px;animation:fade-up .6s .6s both}
+.hero-svc-illus{position:absolute;right:0;bottom:0;width:52%;max-width:760px;height:auto;opacity:.55;pointer-events:none;z-index:0}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fade-up .6s .8s both}
 .hero-stats{position:absolute;right:80px;bottom:80px;display:flex;flex-direction:column;gap:24px;animation:fade-up .8s .6s both}
 .hstat{text-align:right}
@@ -350,6 +351,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 /* RESPONSIVE */
 @media(max-width:960px){
+  .hero-svc-illus{display:none}
   #nav{padding:14px 20px}
   .nav-links{display:none}
   .ham-btn{display:flex}
@@ -563,6 +565,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
   <div class="galv-sheen"></div>
   <div class="hero-orb-1"></div>
   <div class="hero-orb-2"></div>
+  <img class="hero-svc-illus" src="images/illustrations/srv-galvaniz.svg" alt="Sıcak daldırma galvaniz hattı — kesit çizimi" loading="lazy">
   <a href="index.html#companies" class="hero-breadcrumb">
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M7 2L3 6l4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
     <span data-i18n="bc.back">ZYT Global Industry</span>

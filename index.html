@@ -195,6 +195,8 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .hero-orb{position:absolute;pointer-events:none;border-radius:50%}
 .hero-orb-1{top:-10%;right:-6%;width:55%;aspect-ratio:1;background:radial-gradient(circle,rgba(40,116,178,.1),transparent 65%)}
 .hero-orb-2{bottom:-22%;left:-10%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(40,116,178,.07),transparent 65%)}
+.hero-main-illus{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;opacity:.55;pointer-events:none;z-index:0}
+.hero-legibility-veil{position:absolute;left:0;right:0;bottom:0;height:65%;background:linear-gradient(to bottom,transparent 0%,rgba(5,23,40,.55) 55%,rgba(5,23,40,.88) 100%);pointer-events:none;z-index:0}
 
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
 .hero-h1{font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,6rem);line-height:1.02;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
@@ -793,6 +795,8 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   <div class="hero-grid-bg"></div>
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
+  <img class="hero-main-illus" src="images/illustrations/hero-main.svg" alt="ZYT Global endüstriyel tesis panoraması — teknik çizim">
+  <div class="hero-legibility-veil" aria-hidden="true"></div>
 
   <!-- Rotating Wheel — FIRST, above the text -->
   <div class="wheel-wrap">
@@ -915,7 +919,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 01 — ZYT Beton -->
     <a href="beton.html" class="co-hx-card" data-co-idx="0">
       <div class="co-hx-img">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80" alt="Beton Santrali" loading="eager" />
+        <img src="images/illustrations/srv-beton.svg" alt="Beton santrali — cephe teknik çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">01 — Şirket</span>
@@ -930,7 +934,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 02 — ZYT Enerji -->
     <a href="enerji.html" class="co-hx-card" data-co-idx="1">
       <div class="co-hx-img">
-        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1920&q=80" alt="Enerji Tesisi" loading="lazy" />
+        <img src="images/illustrations/srv-enerji.svg" alt="Atıktan enerji tesisi — proses akış çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">02 — Şirket</span>
@@ -945,7 +949,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 03 — ZYT Galvaniz -->
     <a href="galvaniz.html" class="co-hx-card" data-co-idx="2">
       <div class="co-hx-img">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/553-730x520.jpg" alt="Galvaniz Tesisi" loading="lazy" />
+        <img src="images/illustrations/srv-galvaniz.svg" alt="Sıcak daldırma galvaniz hattı — kesit çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">03 — Şirket</span>
@@ -960,7 +964,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 04 — ZYT Mühendislik -->
     <a href="tedarik-zinciri.html" class="co-hx-card" data-co-idx="3">
       <div class="co-hx-img">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80" alt="Mühendislik" loading="lazy" />
+        <img src="images/illustrations/srv-tedarik.svg" alt="Tedarik zinciri ağı — Ankara merkezli lojistik haritası" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">04 — Şirket</span>
@@ -975,7 +979,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <!-- 05 — ZYT Makina -->
     <a href="atik-donusum.html" class="co-hx-card" data-co-idx="4">
       <div class="co-hx-img">
-        <img src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211126_093204-scaled.jpg" alt="Çelik Yapı" loading="lazy" />
+        <img src="images/illustrations/srv-celik.svg" alt="Çelik konstrüksiyon — makas ve detay çizimi" loading="lazy" />
       </div>
       <div class="co-hx-overlay"></div>
       <span class="co-hx-badge">05 — Şirket</span>

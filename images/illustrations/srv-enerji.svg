@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atıktan enerji tesisi — proses akış çizimi">
+<defs>
+<linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#030d18"/><stop offset="1" stop-color="#0A2540"/></linearGradient>
+<pattern id="g3" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#5C8DB8" stroke-opacity=".06"/></pattern>
+<filter id="gl3" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+.ln{stroke:#5C8DB8;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#5C8DB8;stroke-width:1;fill:none;stroke-opacity:.4}
+.fl{fill:#0E2C4A}
+.dim{stroke:#5C8DB8;stroke-width:1;stroke-opacity:.5;fill:none}
+.flow{stroke:#E87722;stroke-width:3;fill:none;stroke-dasharray:14 12}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:17px;letter-spacing:.16em;fill:#5C8DB8}
+.lblO{fill:#E87722}.lblM{fill:#E8EEF4;fill-opacity:.85}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg3)"/>
+<rect width="1600" height="1200" fill="url(#g3)"/>
+<line x1="120" y1="940" x2="1480" y2="940" class="ln" stroke-opacity=".4"/>
+
+<!-- feed hopper -->
+<path class="ln" d="M160 700 h180 l-40 90 h-100 z"/>
+<path class="lnT" d="M180 730 h140 M196 760 h108"/>
+<path class="ln" d="M250 790 v150"/>
+<!-- screw conveyor -->
+<path class="ln" d="M250 870 h150" stroke-width="6" stroke="#E8EEF4" stroke-opacity=".7"/>
+
+<!-- digester 1 -->
+<g>
+<path class="fl" d="M430 620 a120 120 0 0 1 240 0 v320 h-240 z"/>
+<path class="ln" d="M430 620 a120 120 0 0 1 240 0 v320 h-240 v-320"/>
+<path class="lnT" d="M430 700 h240 M430 800 h240 M430 880 h240"/>
+<!-- gas dome highlight -->
+<path class="lnT" d="M462 560 a88 88 0 0 1 176 0" stroke="#E8EEF4" stroke-opacity=".5"/>
+</g>
+<!-- digester 2 -->
+<g>
+<path class="fl" d="M740 660 a100 100 0 0 1 200 0 v280 h-200 z"/>
+<path class="ln" d="M740 660 a100 100 0 0 1 200 0 v280 h-200 v-280"/>
+<path class="lnT" d="M740 740 h200 M740 840 h200"/>
+</g>
+
+<!-- gas line (orange flow) -->
+<path class="flow" d="M550 500 v-90 h520 v170" filter="url(#gl3)"/>
+<path class="flow" d="M840 560 v-60"/>
+<!-- CHP / turbine block -->
+<rect x="1000" y="580" width="240" height="200" class="fl"/>
+<rect x="1000" y="580" width="240" height="200" fill="none" class="ln"/>
+<path class="lnT" d="M1000 640 h240 M1060 580 v200 M1180 580 v200"/>
+<!-- turbine circle -->
+<circle cx="1120" cy="700" r="44" class="ln"/>
+<path class="ln" d="M1120 656 v88 M1076 700 h88 M1089 669 l62 62 M1151 669 l-62 62" stroke-opacity=".6"/>
+<!-- power line out -->
+<path class="ln" d="M1240 640 h120 l40 -40 v-120" stroke="#E8EEF4" stroke-opacity=".75"/>
+<path d="M1400 470 l-14 30 h28 l-14 30" stroke="#E87722" stroke-width="4" fill="none" filter="url(#gl3)"/>
+<!-- pylon -->
+<path class="lnT" d="M1370 940 l30 -300 l30 300 M1352 780 h96 M1362 860 h76"/>
+
+<!-- flare -->
+<path class="ln" d="M1310 940 v-560"/>
+<path d="M1310 366 c-18 -32 8 -48 0 -76 c24 24 26 52 0 76 z" fill="#E87722" filter="url(#gl3)"/>
+
+<!-- digestate out -->
+<path class="lnT" d="M670 900 h70 M940 900 h60"/>
+
+<!-- dimensions -->
+<g class="dim">
+<path d="M430 1000 h240 M430 992 v16 M670 992 v16"/>
+<path d="M1000 1000 h240 M1000 992 v16 M1240 992 v16"/>
+</g>
+<g class="lbl">
+<text x="550" y="1038" text-anchor="middle">REAKTOR R-01</text>
+<text x="1120" y="1038" text-anchor="middle">CHP UNITESI</text>
+<text x="250" y="672" text-anchor="middle">BESLEME</text>
+</g>
+
+<!-- title + callouts -->
+<g class="lbl">
+<text x="120" y="112" class="lblO">//</text><text x="152" y="112" class="lblM">ATIKTAN ENERJI · BIYOMETANIZASYON</text>
+<text x="120" y="144">PROSES AKISI · P&amp;ID OZET</text>
+</g>
+<path class="dim" d="M810 410 l90 -50 h130"/><circle cx="810" cy="410" r="4" fill="#5C8DB8"/>
+<text x="1044" y="366" class="lbl lblO">CH4 →</text>
+<path class="dim" d="M1408 540 l60 40 v60"/><circle cx="1408" cy="540" r="4" fill="#5C8DB8"/>
+<text x="1468" y="672" class="lbl lblM" text-anchor="end">SEBEKE</text>
+</svg>

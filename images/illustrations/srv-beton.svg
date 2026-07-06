@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Beton santrali — cephe teknik çizimi">
+<defs>
+<linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#030d18"/><stop offset="1" stop-color="#0A2540"/></linearGradient>
+<pattern id="g4" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#5C8DB8" stroke-opacity=".06"/></pattern>
+<filter id="gl4" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+.ln{stroke:#5C8DB8;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#5C8DB8;stroke-width:1;fill:none;stroke-opacity:.4}
+.fl{fill:#0E2C4A}.flD{fill:#0A2137}
+.dim{stroke:#5C8DB8;stroke-width:1;stroke-opacity:.5;fill:none}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:17px;letter-spacing:.16em;fill:#5C8DB8}
+.lblO{fill:#E87722}.lblM{fill:#E8EEF4;fill-opacity:.85}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg4)"/>
+<rect width="1600" height="1200" fill="url(#g4)"/>
+<line x1="100" y1="960" x2="1500" y2="960" class="ln" stroke-opacity=".4"/>
+
+<!-- twin cement silos -->
+<g>
+<path class="fl" d="M220 420 h120 v380 h-120 z M390 420 h120 v380 h-120 z"/>
+<path class="ln" d="M220 800 v-380 h120 v380 M220 420 l60 -80 l60 80 M390 800 v-380 h120 v380 M390 420 l60 -80 l60 80"/>
+<path class="lnT" d="M220 520 h120 M220 640 h120 M390 520 h120 M390 640 h120"/>
+<!-- legs -->
+<path class="ln" d="M232 800 v160 M328 800 v160 M402 800 v160 M498 800 v160"/>
+<path class="lnT" d="M232 870 l96 60 M328 870 l-96 60 M402 870 l96 60 M498 870 l-96 60"/>
+<!-- filter tops -->
+<path class="lnT" d="M280 340 v-36 M450 340 v-36"/>
+</g>
+
+<!-- screw conveyors to mixer -->
+<path class="ln" d="M340 760 L760 560" stroke-width="4" stroke="#E8EEF4" stroke-opacity=".65"/>
+<path class="ln" d="M510 760 L790 600" stroke-width="4" stroke="#E8EEF4" stroke-opacity=".5"/>
+
+<!-- aggregate bins -->
+<g>
+<path class="ln" d="M1120 500 h300 M1120 500 l50 110 h200 l50 -110"/>
+<path class="lnT" d="M1220 500 l30 110 M1320 500 l-30 110"/>
+<path class="ln" d="M1170 610 h200"/>
+</g>
+<!-- aggregate conveyor down to mixer -->
+<path class="ln" d="M1170 640 L850 560" stroke-width="4" stroke="#E8EEF4" stroke-opacity=".65"/>
+<circle cx="1166" cy="644" r="10" class="ln"/><circle cx="856" cy="562" r="10" class="ln"/>
+
+<!-- mixer tower -->
+<g>
+<rect x="740" y="540" width="180" height="220" class="flD"/>
+<rect x="740" y="540" width="180" height="220" fill="none" class="ln"/>
+<path class="lnT" d="M740 610 h180 M740 690 h180"/>
+<!-- twin-shaft mixer symbol -->
+<circle cx="796" cy="650" r="26" class="ln"/><circle cx="864" cy="650" r="26" class="ln"/>
+<path class="lnT" d="M796 624 v52 M864 624 v52"/>
+<!-- structure legs -->
+<path class="ln" d="M752 760 v200 M908 760 v200"/>
+<path class="lnT" d="M752 840 l156 70 M908 840 l-156 70"/>
+<!-- discharge (orange) -->
+<path d="M806 760 h48 l-12 40 h-24 z" fill="#E87722" filter="url(#gl4)"/>
+</g>
+
+<!-- mixer truck under discharge -->
+<g class="ln">
+<path d="M700 930 h90 l24 -34 h96 l30 34 h58 v30 h-298 z" fill="#0A2137"/>
+<circle cx="760" cy="960" r="22"/><circle cx="920" cy="960" r="22"/>
+<ellipse cx="866" cy="886" rx="64" ry="34" fill="#0E2C4A"/>
+<path class="lnT" d="M818 866 l96 40 M818 906 l96 -40"/>
+</g>
+
+<!-- control cabin -->
+<rect x="1010" y="860" width="120" height="100" class="fl"/>
+<rect x="1010" y="860" width="120" height="100" fill="none" class="ln"/>
+<rect x="1030" y="882" width="80" height="34" class="lnT" fill="#051728"/>
+<circle cx="1120" cy="852" r="6" fill="#E87722" filter="url(#gl4)"/>
+
+<!-- dimensions -->
+<g class="dim">
+<path d="M220 1030 h290 M220 1022 v16 M510 1022 v16"/>
+<path d="M740 1030 h180 M740 1022 v16 M920 1022 v16"/>
+<path d="M1500 960 v-460 M1492 960 h16 M1492 500 h16"/>
+</g>
+<g class="lbl">
+<text x="365" y="1068" text-anchor="middle">CIMENTO ×2</text>
+<text x="830" y="1068" text-anchor="middle">MIKSER 3 m³</text>
+<text x="1520" y="736" >H=18 m</text>
+</g>
+<g class="lbl">
+<text x="120" y="112" class="lblO">//</text><text x="152" y="112" class="lblM">BETON SANTRALI · SABIT TIP</text>
+<text x="120" y="144">CEPHE C—C · 120 m³/SA</text>
+</g>
+<path class="dim" d="M842 790 l120 30 h120"/><circle cx="842" cy="790" r="4" fill="#5C8DB8"/>
+<text x="1090" y="826" class="lbl lblO">DOKUM</text>
+</svg>

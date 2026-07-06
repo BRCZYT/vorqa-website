@@ -1,0 +1,140 @@
+<svg viewBox="0 0 2560 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ZYT Global endüstriyel tesis panoraması — teknik çizim">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#030d18"/><stop offset=".55" stop-color="#051728"/><stop offset="1" stop-color="#0A2540"/>
+</linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0A2540"/><stop offset="1" stop-color="#051728"/>
+</linearGradient>
+<linearGradient id="oGlow" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#E87722" stop-opacity=".9"/><stop offset="1" stop-color="#E87722" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="vign" cx=".5" cy=".45" r=".75">
+<stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/>
+</radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+<path d="M40 0H0V40" fill="none" stroke="#5C8DB8" stroke-opacity=".055" stroke-width="1"/>
+</pattern>
+<pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+<path d="M200 0H0V200" fill="none" stroke="#5C8DB8" stroke-opacity=".09" stroke-width="1"/>
+</pattern>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<style>
+.ln{stroke:#5C8DB8;stroke-width:1.6;fill:none;stroke-opacity:.85}
+.lnT{stroke:#5C8DB8;stroke-width:1;fill:none;stroke-opacity:.45}
+.fill{fill:#0E2C4A}
+.fillD{fill:#0A2137}
+.dim{stroke:#5C8DB8;stroke-width:1;stroke-opacity:.5}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:15px;letter-spacing:.18em;fill:#5C8DB8}
+.lblO{fill:#E87722}
+.lblM{fill:#E8EEF4;fill-opacity:.8}
+</style>
+</defs>
+
+<rect width="2560" height="1100" fill="url(#sky)"/>
+<rect width="2560" height="1100" fill="url(#grid)"/>
+<rect width="2560" height="1100" fill="url(#gridMajor)"/>
+
+<!-- horizon ground -->
+<rect y="860" width="2560" height="240" fill="url(#ground)"/>
+<line x1="0" y1="860" x2="2560" y2="860" stroke="#5C8DB8" stroke-opacity=".35" stroke-width="1.5"/>
+
+<!-- ======== LEFT: cement silos (batching) ======== -->
+<g>
+<g class="fill">
+<path d="M170 500 h90 v300 h-90 z"/><path d="M290 460 h90 v340 h-90 z"/><path d="M410 500 h90 v300 h-90 z"/>
+</g>
+<g class="ln">
+<path d="M170 500 h90 v300 h-90 z M170 500 l45 -60 l45 60 M290 460 h90 v340 h-90 z M290 460 l45 -60 l45 60 M410 500 h90 v300 h-90 z M410 500 l45 -60 l45 60"/>
+<path d="M215 440 v-40 M335 400 v-40 M455 440 v-40" class="lnT"/>
+</g>
+<g class="lnT"><path d="M170 580 h90 M290 560 h90 M410 580 h90 M170 700 h90 M290 700 h90 M410 700 h90"/></g>
+<!-- conveyor to mixer -->
+<path class="ln" d="M500 780 L720 640"/><path class="lnT" d="M500 800 L735 650"/>
+<circle cx="510" cy="790" r="9" class="ln"/><circle cx="722" cy="646" r="9" class="ln"/>
+<!-- mixer tower -->
+<rect x="690" y="640" width="110" height="160" class="fill"/><rect x="690" y="640" width="110" height="160" fill="none" class="ln"/>
+<path class="ln" d="M700 640 l45 -70 h20 l45 70"/>
+<!-- orange: mix discharge -->
+<path d="M737 800 h36 l-10 34 h-16 z" fill="#E87722" filter="url(#glow)"/>
+</g>
+
+<!-- ======== CENTER-LEFT: galvanizing hall ======== -->
+<g>
+<path class="fillD" d="M880 620 h420 v240 h-420 z"/>
+<path class="ln" d="M880 860 v-240 h420 v240 M880 620 l105 -80 h210 l105 80"/>
+<path class="lnT" d="M985 540 v320 M1195 540 v320 M880 700 h420 M880 780 h420"/>
+<!-- kettle inside with molten zinc -->
+<rect x="1000" y="800" width="180" height="44" class="ln" fill="#0A2137"/>
+<rect x="1006" y="806" width="168" height="14" fill="url(#oGlow)" filter="url(#glow)"/>
+<!-- dipped beam -->
+<path class="ln" d="M1046 690 h88 M1090 690 v116" stroke="#E8EEF4" stroke-opacity=".7"/>
+<circle cx="1090" cy="690" r="6" fill="#E8EEF4" fill-opacity=".7"/>
+<!-- roof stack -->
+<path class="ln" d="M1240 540 v-70 h26 v70" /><path class="lnT" d="M1253 470 v-30"/>
+</g>
+
+<!-- ======== CENTER: gantry crane (signature) ======== -->
+<g>
+<path class="ln" d="M1380 860 v-380 M1760 860 v-380 M1340 480 h460"/>
+<path class="lnT" d="M1380 560 l60 -60 M1380 640 l60 -60 M1380 720 l60 -60 M1380 800 l60 -60 M1760 560 l-60 -60 M1760 640 l-60 -60 M1760 720 l-60 -60 M1760 800 l-60 -60"/>
+<path class="lnT" d="M1400 480 v380 M1740 480 v380"/>
+<!-- trolley + hook with steel load -->
+<rect x="1540" y="466" width="56" height="26" class="fill" stroke="#5C8DB8" stroke-opacity=".85"/>
+<path class="ln" d="M1568 492 v120"/>
+<path class="ln" d="M1548 612 h40 l-20 24 z"/>
+<path class="ln" d="M1500 648 h136" stroke="#E8EEF4" stroke-opacity=".75" stroke-width="5"/>
+<!-- warning light -->
+<circle cx="1568" cy="452" r="7" fill="#E87722" filter="url(#glow)"/>
+</g>
+
+<!-- ======== RIGHT: digester tanks + flare (energy) ======== -->
+<g>
+<g class="fill">
+<path d="M1930 640 a95 95 0 0 1 190 0 v220 h-190 z"/>
+<path d="M2180 680 a75 75 0 0 1 150 0 v180 h-150 z"/>
+</g>
+<g class="ln">
+<path d="M1930 640 a95 95 0 0 1 190 0 v220 h-190 v-220 M2180 680 a75 75 0 0 1 150 0 v180 h-150 v-180"/>
+</g>
+<path class="lnT" d="M1930 700 h190 M1930 780 h190 M2180 740 h150 M2180 800 h150"/>
+<!-- pipework -->
+<path class="ln" d="M2120 700 h60 M2025 545 v-55 h330 v190"/>
+<!-- flare stack + orange flame -->
+<path class="ln" d="M2430 860 v-330"/>
+<path d="M2430 512 c-16 -30 6 -44 0 -70 c22 22 24 48 0 70 z" fill="#E87722" filter="url(#glow)"/>
+</g>
+
+<!-- ======== dimension lines ======== -->
+<g class="dim">
+<path d="M170 920 h330 M170 912 v16 M500 912 v16"/>
+<path d="M880 920 h420 M880 912 v16 M1300 912 v16"/>
+<path d="M1380 920 h380 M1380 912 v16 M1760 912 v16"/>
+<path d="M1930 920 h500 M1930 912 v16 M2430 912 v16"/>
+<path d="M2500 860 v-390 M2492 860 h16 M2492 470 h16"/>
+</g>
+<g class="lbl">
+<text x="252" y="952" text-anchor="middle">SILO ×3</text>
+<text x="1090" y="952" text-anchor="middle">GALVANIZ HATTI</text>
+<text x="1570" y="952" text-anchor="middle">PORTAL VINC</text>
+<text x="2180" y="952" text-anchor="middle">BIYOGAZ</text>
+</g>
+
+<!-- callouts -->
+<g class="lbl">
+<text x="120" y="120" class="lblO">//</text><text x="150" y="120" class="lblM">ZYT — SAHA GENEL YERLESIM</text>
+<text x="120" y="150">OLCEK 1:500 · KESIT A—A</text>
+<text x="2440" y="120" text-anchor="end" class="lblM">EPC · ANAHTAR TESLIM</text>
+<text x="2440" y="150" text-anchor="end">REV.2026-07</text>
+</g>
+<!-- leader to flame -->
+<path class="dim" d="M2372 430 l-90 -40 h-120"/><circle cx="2372" cy="430" r="3.5" fill="#5C8DB8"/>
+<text x="2158" y="382" class="lbl">ATIK→ENERJI</text>
+<!-- leader to zinc -->
+<path class="dim" d="M1090 812 l-150 96 h-120"/><circle cx="1090" cy="812" r="3.5" fill="#5C8DB8"/>
+<text x="818" y="900" class="lbl lblO" text-anchor="end">Zn 450°C</text>
+
+<rect width="2560" height="1100" fill="url(#vign)"/>
+</svg>
