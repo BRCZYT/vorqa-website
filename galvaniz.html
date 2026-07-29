@@ -7,7 +7,7 @@
 <meta name="description" content="ZYT Galvaniz — Sıcak daldırma, merkezkaç ve boru galvaniz tesislerinin mühendislik tasarımı, mekanizasyon ve anahtar teslim kurulumu.">
 <meta name="keywords" content="ZYT Galvaniz, sıcak daldırma galvaniz, merkezkaç galvaniz, galvaniz tesisi, galvaniz ekipmanı, EN 1461">
 <meta property="og:title" content="ZYT Galvaniz — Galvaniz Tesisleri">
-<meta property="og:description" content="Sıcak daldırma, merkezkaç ve boru galvaniz tesislerinin tasarım ve anahtar teslim kurulumu. 30+ yıl deneyim.">
+<meta property="og:description" content="Sıcak daldırma, merkezkaç ve boru galvaniz tesislerinin tasarım ve anahtar teslim kurulumu.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.zytindustry.com/galvaniz.html">
 <meta property="og:image" content="https://www.zytindustry.com/og-default.png">
@@ -159,6 +159,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .prod-img-wrap{position:relative;overflow:hidden;height:210px}
 .prod-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
 .prod-card:hover .prod-img{transform:scale(1.04)}
+.img-ph{object-fit:contain;background:#E8EEF4;padding:32px}
 .prod-over{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.45),transparent)}
 .prod-bdy{padding:24px}
 .prod-tag{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:10px}
@@ -183,6 +184,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .prj-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(10,37,64,.12)}
 .prj-img-w{position:relative;height:180px;overflow:hidden}
 .prj-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.prj-img.img-ph{object-fit:contain;background:#E8EEF4;padding:28px}
 .prj-card:hover .prj-img{transform:scale(1.04)}
 .prj-over{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.6),transparent)}
 .prj-badge{position:absolute;bottom:12px;left:14px;font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;background:rgba(40,116,178,.75);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
@@ -573,15 +575,14 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
   <div style="position:relative;z-index:2">
     <div class="hero-label" data-i18n="hero.label">// ZYT Galvaniz · Galvaniz Tesisleri</div>
     <h1 class="hero-h1" data-i18n-html="hero.h1">SICAK DALDI &amp; MERKEZKAÇ<br><span class="acc">GALVANİZ</span> TESİSLERİ</h1>
-    <p class="hero-sub" data-i18n="hero.sub">30 yılı aşkın deneyimle tasarım, imalat ve anahtar teslim devreye almada tam kapsamlı galvaniz tesis çözümleri.</p>
+    <p class="hero-sub" data-i18n="hero.sub">Doğrulanmış tedarikçi ağımızla tasarım, imalat koordinasyonu ve anahtar teslim devreye almada tam kapsamlı galvaniz tesis çözümleri.</p>
     <div class="hero-btns">
       <a href="#products" class="btn-p" data-i18n="hero.btn1">Ürünleri İncele <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <a href="iletisim.html" class="btn-o" data-i18n="hero.btn2">Teklif Al →</a>
     </div>
   </div>
   <div class="hero-stats">
-    <div class="hstat"><div class="hstat-n">30<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.1">Yıl Deneyim</div></div>
-    <div class="hstat"><div class="hstat-n">15<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.2">Ülke Referans</div></div>
+    <div class="hstat"><div class="hstat-n">1.000<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.1">Doğrulanmış Tedarikçi</div></div>
     <div class="hstat"><div class="hstat-n">6</div><div class="hstat-l" data-i18n="hstat.3">Hat Kapasitesi (ton/sa)</div></div>
   </div>
 </section>
@@ -596,11 +597,12 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <p class="sec-sub-l" data-i18n="s01.sub">Sıcak daldırma, merkezkaç ve boru galvaniz sistemleri — her kapasiteye ve uygulama ihtiyacına özel mühendislik.</p>
   </div>
   <div class="prod-grid">
+  <!-- TODO: Burcu — gerçek/lisanslı ürün fotoğrafları veya docs/05 AI-prompt standardıyla üretilecek görsellerle değiştirilecek -->
 
     <!-- Sıcak Daldırma -->
     <div class="prod-card rv d1">
       <div class="prod-img-wrap">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2025/04/foto-1.png" alt="Sıcak Daldırma" class="prod-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Sıcak daldırma galvaniz hattı — teknik çizim" class="prod-img img-ph" loading="lazy">
         <div class="prod-over"></div>
       </div>
       <div class="prod-bdy">
@@ -619,7 +621,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <!-- Merkezkaç -->
     <div class="prod-card rv d2">
       <div class="prod-img-wrap">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2025/02/Resim3-3.jpg" alt="Merkezkaç" class="prod-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Merkezkaç galvaniz hattı — teknik çizim" class="prod-img img-ph" loading="lazy">
         <div class="prod-over"></div>
       </div>
       <div class="prod-bdy">
@@ -638,7 +640,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <!-- Boru Galvaniz -->
     <div class="prod-card rv d3">
       <div class="prod-img-wrap">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2025/01/view-tank-container-water-storage-scaled-2-771x1024.jpg" alt="Boru Galvaniz" class="prod-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Boru galvaniz hattı — teknik çizim" class="prod-img img-ph" loading="lazy">
         <div class="prod-over"></div>
       </div>
       <div class="prod-bdy">
@@ -657,7 +659,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <!-- Malzeme Taşıma -->
     <div class="prod-card rv d1">
       <div class="prod-img-wrap">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/553-730x520.jpg" alt="Malzeme Taşıma" class="prod-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Malzeme taşıma sistemleri — teknik çizim" class="prod-img img-ph" loading="lazy">
         <div class="prod-over"></div>
       </div>
       <div class="prod-bdy">
@@ -674,7 +676,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <!-- Çevre Ekipmanları -->
     <div class="prod-card rv d2">
       <div class="prod-img-wrap">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/172-730x520.jpg" alt="Çevre Ekipmanları" class="prod-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Çevre kontrol ekipmanları — teknik çizim" class="prod-img img-ph" loading="lazy">
         <div class="prod-over"></div>
       </div>
       <div class="prod-bdy">
@@ -691,7 +693,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <!-- Dekapaj Hattı -->
     <div class="prod-card rv d3">
       <div class="prod-img-wrap">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/459-730x520.jpg" alt="Ön İşlem" class="prod-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Dekapaj ve flux hattı — teknik çizim" class="prod-img img-ph" loading="lazy">
         <div class="prod-over"></div>
       </div>
       <div class="prod-bdy">
@@ -793,81 +795,82 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
     <p class="sec-sub-l" data-i18n="s03.sub">Savunma sanayiinden büyük çelik konstrüksiyon firmalarına — farklı sektörlerde anahtar teslim galvaniz tesisi referansları.</p>
   </div>
   <div class="prj-grid">
+  <!-- TODO: Burcu — gerçek/izinli referans fotoğrafları veya docs/05 AI-prompt standardıyla üretilecek görsellerle değiştirilecek. İsimler doğrulanana/izin alınana kadar temsili kapasite etiketi kullanılıyor. -->
 
     <div class="prj-card rv d1">
       <div class="prj-img-w">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2025/04/foto-1.png" alt="GALVA Innovation" class="prj-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Sıcak daldırma galvaniz tesisi — teknik çizim" class="prj-img img-ph" loading="lazy">
         <div class="prj-over"></div>
         <div class="prj-badge" data-i18n="prj01.badge">2025 · Savunma</div>
       </div>
       <div class="prj-bdy">
         <div class="prj-country" data-i18n="prj01.country">Türkiye</div>
-        <div class="prj-name">GALVA Innovation</div>
+        <div class="prj-name" data-i18n="prj01.name">Savunma Sanayii Tesisi</div>
         <div class="prj-cap" data-i18n="prj01.cap">Sıcak Daldırma · 4 ton/sa · SCADA Entegrasyonlu</div>
       </div>
     </div>
 
     <div class="prj-card rv d2">
       <div class="prj-img-w">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2025/02/Resim3-3.jpg" alt="CESA Teknik" class="prj-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Otomatik sıcak daldırma hattı — teknik çizim" class="prj-img img-ph" loading="lazy">
         <div class="prj-over"></div>
         <div class="prj-badge" data-i18n="prj02.badge">Tamamlandı</div>
       </div>
       <div class="prj-bdy">
         <div class="prj-country" data-i18n="prj02.country">Türkiye</div>
-        <div class="prj-name">CESA Teknik</div>
+        <div class="prj-name" data-i18n="prj02.name">Tam Otomatik Galvaniz Hattı</div>
         <div class="prj-cap" data-i18n="prj02.cap">Sıcak Daldırma · Tam Otomatik Hat</div>
       </div>
     </div>
 
     <div class="prj-card rv d3">
       <div class="prj-img-w">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/553-730x520.jpg" alt="Borusan Boru" class="prj-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Boru galvaniz tesisi — teknik çizim" class="prj-img img-ph" loading="lazy">
         <div class="prj-over"></div>
         <div class="prj-badge" data-i18n="prj03.badge">Boru Galvaniz</div>
       </div>
       <div class="prj-bdy">
         <div class="prj-country" data-i18n="prj03.country">Türkiye</div>
-        <div class="prj-name">Borusan Boru</div>
+        <div class="prj-name" data-i18n="prj03.name">Boru İmalat Tesisi</div>
         <div class="prj-cap" data-i18n="prj03.cap">Boru Galvaniz · DN15–DN200 · Sürekli Hat</div>
       </div>
     </div>
 
     <div class="prj-card rv d1">
       <div class="prj-img-w">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/172-730x520.jpg" alt="Çepaş" class="prj-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Çevre arıtmalı galvaniz tesisi — teknik çizim" class="prj-img img-ph" loading="lazy">
         <div class="prj-over"></div>
         <div class="prj-badge" data-i18n="prj04.badge">Tamamlandı</div>
       </div>
       <div class="prj-bdy">
         <div class="prj-country" data-i18n="prj04.country">Türkiye</div>
-        <div class="prj-name">Çepaş Çelik</div>
+        <div class="prj-name" data-i18n="prj04.name">Çelik Yapı Firması</div>
         <div class="prj-cap" data-i18n="prj04.cap">Sıcak Daldırma · 3 ton/sa · Çevre Arıtma Dahil</div>
       </div>
     </div>
 
     <div class="prj-card rv d2">
       <div class="prj-img-w">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/459-730x520.jpg" alt="Galva-Pro" class="prj-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="Merkezkaç galvaniz hattı — teknik çizim" class="prj-img img-ph" loading="lazy">
         <div class="prj-over"></div>
         <div class="prj-badge" data-i18n="prj05.badge">Merkezkaç</div>
       </div>
       <div class="prj-bdy">
         <div class="prj-country" data-i18n="prj05.country">Türkiye</div>
-        <div class="prj-name">Galva-Pro</div>
+        <div class="prj-name" data-i18n="prj05.name">Küçük Parça Galvaniz Hattı</div>
         <div class="prj-cap" data-i18n="prj05.cap">Merkezkaç Galvaniz · Küçük Parça Hattı</div>
       </div>
     </div>
 
     <div class="prj-card rv d3">
       <div class="prj-img-w">
-        <img src="https://galvaproendustri.com/wp-content/uploads/2020/11/195-730x520.jpg" alt="Avrasya" class="prj-img">
+        <img src="images/illustrations/srv-galvaniz-light.svg" alt="İhracat galvaniz projesi — teknik çizim" class="prj-img img-ph" loading="lazy">
         <div class="prj-over"></div>
         <div class="prj-badge" data-i18n="prj06.badge">İhracat</div>
       </div>
       <div class="prj-bdy">
         <div class="prj-country" data-i18n="prj06.country">Yurt Dışı</div>
-        <div class="prj-name">Avrasya Galvaniz</div>
+        <div class="prj-name" data-i18n="prj06.name">İhracat Galvaniz Projesi</div>
         <div class="prj-cap" data-i18n="prj06.cap">Sıcak Daldırma · Anahtar Teslim Kurulum</div>
       </div>
     </div>
@@ -1117,7 +1120,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
       <div class="sec-num-d" data-i18n="s04.num">§ 04 — Neden ZYT</div>
       <div class="sec-title-d" data-i18n="s04.title">Rekabet Avantajları</div>
     </div>
-    <p class="sec-sub-d" data-i18n="s04.sub">30 yılı aşkın tesis kurulum deneyimi, kendi bünyesinde imalat kapasitesi ve proje bitimine kadar tam destek.</p>
+    <p class="sec-sub-d" data-i18n="s04.sub">Doğrulanmış tedarikçi ağımızla tesis kurulum koordinasyonu, şeffaf süreç yönetimi ve proje bitimine kadar tam destek.</p>
   </div>
   <div class="feat-grid rv">
     <div class="feat-item">
@@ -1125,8 +1128,8 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2874B2" stroke-width="1.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
       <div>
-        <div class="feat-title" data-i18n="f01.title">Kendi Bünyesinde İmalat</div>
-        <div class="feat-body" data-i18n="f01.body">Kazanlar, çelik konstrüksiyon ve otomasyon sistemleri dahil tüm kritik bileşenler kendi atölyemizde üretilir. Dışarıya bağımlılık yok, kalite kontrolü baştan sona ZYT'de.</div>
+        <div class="feat-title" data-i18n="f01.title">Doğrulanmış Üretim Ağı</div>
+        <div class="feat-body" data-i18n="f01.body">Kazanlar, çelik konstrüksiyon ve otomasyon sistemleri dahil tüm kritik bileşenler, doğrulanmış Türk üretici ağımız aracılığıyla tedarik edilir ve koordine edilir.</div>
       </div>
     </div>
     <div class="feat-item">
@@ -1135,7 +1138,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
       </div>
       <div>
         <div class="feat-title" data-i18n="f02.title">Zamanında Teslimat</div>
-        <div class="feat-body" data-i18n="f02.body">Proje başından devreye almaya kadar titiz zaman çizelgesi yönetimi. 30 yıllık referans portföyümüzde gecikme kaynaklı sözleşme ihlali yok.</div>
+        <div class="feat-body" data-i18n="f02.body">Proje başından devreye almaya kadar titiz zaman çizelgesi ve tedarikçi koordinasyonu.</div>
       </div>
     </div>
     <div class="feat-item">
@@ -1143,8 +1146,8 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2874B2" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
       <div>
-        <div class="feat-title" data-i18n="f03.title">ISO & TSE Sertifikaları</div>
-        <div class="feat-body" data-i18n="f03.body">ISO 9001 Kalite, ISO 14001 Çevre ve TSE belgeleri ile standart uyumluluk garantisi. Uluslararası ihracat projelerinde gerekli tüm sertifikalara sahip.</div>
+        <div class="feat-title" data-i18n="f03.title">Kalite & Uyumluluk Süreci</div>
+        <div class="feat-body" data-i18n="f03.body">Ağımızdaki üretici partnerler ISO 9001, ISO 14001 ve TSE kapsamında sertifikalıdır; uygunluk her projede ayrıca doğrulanır.</div>
       </div>
     </div>
     <div class="feat-item">
@@ -1276,9 +1279,9 @@ const T = {
     'bc.back':'ZYT Global Industry',
     'hero.label':'// ZYT Galvaniz · Galvaniz Tesisleri',
     'hero.h1':'SICAK DALDI &amp; MERKEZKAÇ<br><span class="acc">GALVANİZ</span> TESİSLERİ',
-    'hero.sub':'30 yılı aşkın deneyimle tasarım, imalat ve anahtar teslim devreye almada tam kapsamlı galvaniz tesis çözümleri.',
+    'hero.sub':'Doğrulanmış tedarikçi ağımızla tasarım, imalat koordinasyonu ve anahtar teslim devreye almada tam kapsamlı galvaniz tesis çözümleri.',
     'hero.btn1':'Ürünleri İncele','hero.btn2':'Teklif Al →',
-    'hstat.1':'Yıl Deneyim','hstat.2':'Ülke Referans','hstat.3':'Hat Kapasitesi (ton/sa)',
+    'hstat.1':'Doğrulanmış Tedarikçi','hstat.3':'Hat Kapasitesi (ton/sa)',
     's01.num':'§ 01 — Ürünler','s01.title':'Tesis Sistemleri','s01.sub':'Sıcak daldırma, merkezkaç ve boru galvaniz sistemleri — her kapasiteye ve uygulama ihtiyacına özel mühendislik.',
     'p01.tag':'// Batch Galvaniz','p01.title':'Sıcak Daldırma Galvaniz Tesisi','p01.desc':'Çelik konstrüksiyonlar için tam otomatik flux, kurutma, daldırma ve soğutma hattı. SCADA entegrasyonu ile anlık proses izleme.','p01.cap':'2–6 ton/sa','p01.tank':'7–16 m',
     'p02.tag':'// Küçük Parça','p02.title':'Merkezkaç Galvaniz Tesisi','p02.desc':'Cıvata, somun, vida ve küçük profillerin galvanizlenmesi için döner sepet sistemi. Minimum çinko sarfiyatı ile yüksek verim.','p02.cap':'100–500 kg/sefer',
@@ -1294,17 +1297,17 @@ const T = {
     'c04.title':'SCADA & Otomasyon','c04.body':'Siemens ve Schneider tabanlı PLC/HMI sistemleri, gerçek zamanlı proses takibi. Uzaktan erişim ve alarm yönetimi.','c04.badge':'Industry 4.0',
     'c05.title':'Atık Asit Arıtma','c05.body':'Dekapaj banyolarından kaynaklanan atık asidin nötralizasyonu ve geri kazanımı. pH ölçüm ve dozaj sistemi.','c05.badge':'ISO 14001',
     'c06.title':'Duman & Toz Filtrasyonu','c06.body':'Islak skrüber ve torba filtre kombinasyonu ile çinko dumanı ve asit buharı arıtımı.','c06.badge':'CE Sertifikalı',
-    's03.num':'§ 03 — Referans Projeler','s03.title':'Tamamlanan Projeler','s03.sub':'Savunma sanayiinden büyük çelik konstrüksiyon firmalarına — farklı sektörlerde anahtar teslim galvaniz tesisi referansları.',
-    'prj01.badge':'2025 · Savunma','prj01.country':'Türkiye','prj01.cap':'Sıcak Daldırma · 4 ton/sa · SCADA Entegrasyonlu',
-    'prj02.badge':'Tamamlandı','prj02.country':'Türkiye','prj02.cap':'Sıcak Daldırma · Tam Otomatik Hat',
-    'prj03.badge':'Boru Galvaniz','prj03.country':'Türkiye','prj03.cap':'Boru Galvaniz · DN15–DN200 · Sürekli Hat',
-    'prj04.badge':'Tamamlandı','prj04.country':'Türkiye','prj04.cap':'Sıcak Daldırma · 3 ton/sa · Çevre Arıtma Dahil',
-    'prj05.badge':'Merkezkaç','prj05.country':'Türkiye','prj05.cap':'Merkezkaç Galvaniz · Küçük Parça Hattı',
-    'prj06.badge':'İhracat','prj06.country':'Yurt Dışı','prj06.cap':'Sıcak Daldırma · Anahtar Teslim Kurulum',
-    's04.num':'§ 04 — Neden ZYT','s04.title':'Rekabet Avantajları','s04.sub':'30 yılı aşkın tesis kurulum deneyimi, kendi bünyesinde imalat kapasitesi ve proje bitimine kadar tam destek.',
-    'f01.title':'Kendi Bünyesinde İmalat','f01.body':'Kazanlar, çelik konstrüksiyon ve otomasyon sistemleri dahil tüm kritik bileşenler kendi atölyemizde üretilir.',
-    'f02.title':'Zamanında Teslimat','f02.body':'Proje başından devreye almaya kadar titiz zaman çizelgesi yönetimi. 30 yıllık referansta gecikme yok.',
-    'f03.title':'ISO & TSE Sertifikaları','f03.body':'ISO 9001, ISO 14001 ve TSE belgeleri ile standart uyumluluk garantisi.',
+    's03.num':'§ 03 — Referans Projeler','s03.title':'Teslim Edilen Kapasite','s03.sub':'Savunma sanayiinden çelik konstrüksiyon firmalarına — ağımız aracılığıyla farklı sektörlerde teslim edilen anahtar teslim galvaniz tesisi kapasitesi.',
+    'prj01.badge':'2025 · Savunma','prj01.country':'Türkiye','prj01.name':'Savunma Sanayii Tesisi','prj01.cap':'Sıcak Daldırma · 4 ton/sa · SCADA Entegrasyonlu',
+    'prj02.badge':'Tamamlandı','prj02.country':'Türkiye','prj02.name':'Tam Otomatik Galvaniz Hattı','prj02.cap':'Sıcak Daldırma · Tam Otomatik Hat',
+    'prj03.badge':'Boru Galvaniz','prj03.country':'Türkiye','prj03.name':'Boru İmalat Tesisi','prj03.cap':'Boru Galvaniz · DN15–DN200 · Sürekli Hat',
+    'prj04.badge':'Tamamlandı','prj04.country':'Türkiye','prj04.name':'Çelik Yapı Firması','prj04.cap':'Sıcak Daldırma · 3 ton/sa · Çevre Arıtma Dahil',
+    'prj05.badge':'Merkezkaç','prj05.country':'Türkiye','prj05.name':'Küçük Parça Galvaniz Hattı','prj05.cap':'Merkezkaç Galvaniz · Küçük Parça Hattı',
+    'prj06.badge':'İhracat','prj06.country':'Yurt Dışı','prj06.name':'İhracat Galvaniz Projesi','prj06.cap':'Sıcak Daldırma · Anahtar Teslim Kurulum',
+    's04.num':'§ 04 — Neden ZYT','s04.title':'Rekabet Avantajları','s04.sub':'Doğrulanmış tedarikçi ağımızla tesis kurulum koordinasyonu, şeffaf süreç yönetimi ve proje bitimine kadar tam destek.',
+    'f01.title':'Doğrulanmış Üretim Ağı','f01.body':'Kazanlar, çelik konstrüksiyon ve otomasyon sistemleri dahil tüm kritik bileşenler, doğrulanmış Türk üretici ağımız aracılığıyla tedarik edilir ve koordine edilir.',
+    'f02.title':'Zamanında Teslimat','f02.body':'Proje başından devreye almaya kadar titiz zaman çizelgesi ve tedarikçi koordinasyonu.',
+    'f03.title':'Kalite & Uyumluluk Süreci','f03.body':'Ağımızdaki üretici partnerler ISO 9001, ISO 14001 ve TSE kapsamında sertifikalıdır; uygunluk her projede ayrıca doğrulanır.',
     'f04.title':'7/24 Teknik Destek','f04.body':'Devreye alma sonrası uzaktan diagnostik, yedek parça tedariki ve saha servis ekibi.',
     's05.num':'§ 05 — Tedarikçiler','s05.title':'Teknoloji Ortakları','s05.sub':'Otomasyon, elektrik ve sensör sistemlerinde dünya standartlarında marka entegrasyonu.',
     'pt01.role':'PLC · SCADA · Sürücü Sistemleri','pt02.role':'MCC Panoları · Enerji Dağıtım','pt03.role':'Redüktörler · Kren Sürücüleri','pt04.role':'Sensörler · Endüstriyel Algılama','pt05.role':'Terminal Blokları · Güç Kaynakları','pt06.role':'Frekans Konvertörleri · Motor','pt07.role':'pH · Akış · Sıcaklık Ölçüm','pt08.role':'Lazer Sensörler · Görüntü Sistemleri',
@@ -1318,9 +1321,9 @@ const T = {
     'bc.back':'ZYT Global Industry',
     'hero.label':'// ZYT Galvaniz · Galvanizing Plants',
     'hero.h1':'HOT-DIP &amp; CENTRIFUGAL<br><span class="acc">GALVANIZING</span> PLANTS',
-    'hero.sub':'Over 30 years of expertise in design, manufacturing and turnkey commissioning of complete galvanizing plant solutions.',
+    'hero.sub':'Complete design, manufacturing coordination and turnkey commissioning solutions for galvanizing plants, delivered through our verified supplier network.',
     'hero.btn1':'Explore Products','hero.btn2':'Request Quote →',
-    'hstat.1':'Years Experience','hstat.2':'Country References','hstat.3':'Line Capacity (t/h)',
+    'hstat.1':'Verified Suppliers','hstat.3':'Line Capacity (t/h)',
     's01.num':'§ 01 — Products','s01.title':'Plant Systems','s01.sub':'Hot-dip, centrifugal and pipe galvanizing systems — custom engineering for every capacity and application.',
     'p01.tag':'// Batch Galvanizing','p01.title':'Hot-Dip Galvanizing Plant','p01.desc':'Fully automated flux, drying, dipping and cooling line for steel structures. SCADA integration for real-time process monitoring.','p01.cap':'2–6 t/h','p01.tank':'7–16 m',
     'p02.tag':'// Small Parts','p02.title':'Centrifugal Galvanizing Plant','p02.desc':'Rotating basket system for galvanizing bolts, nuts, screws and small profiles. High yield with minimum zinc consumption.','p02.cap':'100–500 kg/batch',
@@ -1336,17 +1339,17 @@ const T = {
     'c04.title':'SCADA & Automation','c04.body':'Siemens and Schneider-based PLC/HMI systems with real-time process monitoring. Remote access, alarm management and production reporting.','c04.badge':'Industry 4.0',
     'c05.title':'Waste Acid Treatment','c05.body':'Neutralization and recovery of waste acid from pickling baths. pH measurement, dosing and discharge monitoring for compliant operation.','c05.badge':'ISO 14001',
     'c06.title':'Fume & Dust Filtration','c06.body':'Wet scrubber and bag filter combination for zinc fume and acid vapor treatment. CE certified with automatic cleaning cycle.','c06.badge':'CE Certified',
-    's03.num':'§ 03 — Reference Projects','s03.title':'Completed Projects','s03.sub':'From defense industry to large steel fabricators — turnkey galvanizing plant references across diverse sectors.',
-    'prj01.badge':'2025 · Defense','prj01.country':'Turkey','prj01.cap':'Hot-Dip · 4 t/h · SCADA Integrated',
-    'prj02.badge':'Completed','prj02.country':'Turkey','prj02.cap':'Hot-Dip · Fully Automated Line',
-    'prj03.badge':'Pipe Galvanizing','prj03.country':'Turkey','prj03.cap':'Pipe Galvanizing · DN15–DN200 · Continuous',
-    'prj04.badge':'Completed','prj04.country':'Turkey','prj04.cap':'Hot-Dip · 3 t/h · Environmental Treatment Incl.',
-    'prj05.badge':'Centrifugal','prj05.country':'Turkey','prj05.cap':'Centrifugal Galvanizing · Small Parts Line',
-    'prj06.badge':'Export','prj06.country':'International','prj06.cap':'Hot-Dip · Turnkey Installation',
-    's04.num':'§ 04 — Why ZYT','s04.title':'Competitive Advantages','s04.sub':'30+ years of plant installation experience, in-house manufacturing capacity and full support through project completion.',
-    'f01.title':'In-House Manufacturing','f01.body':'All critical components including kettles, steel structures and automation systems are manufactured in our own workshop.',
-    'f02.title':'On-Time Delivery','f02.body':'Rigorous schedule management from project start to commissioning. No delay-related contract breaches in our 30-year reference portfolio.',
-    'f03.title':'ISO & TSE Certifications','f03.body':'ISO 9001, ISO 14001 and TSE certifications guaranteeing standards compliance. All certificates required for international export projects.',
+    's03.num':'§ 03 — Reference Projects','s03.title':'Delivered Capacity','s03.sub':'From defense industry to steel fabricators — turnkey galvanizing plant capacity delivered through our network across diverse sectors.',
+    'prj01.badge':'2025 · Defense','prj01.country':'Turkey','prj01.name':'Defense Industry Facility','prj01.cap':'Hot-Dip · 4 t/h · SCADA Integrated',
+    'prj02.badge':'Completed','prj02.country':'Turkey','prj02.name':'Fully Automated Galvanizing Line','prj02.cap':'Hot-Dip · Fully Automated Line',
+    'prj03.badge':'Pipe Galvanizing','prj03.country':'Turkey','prj03.name':'Pipe Manufacturing Facility','prj03.cap':'Pipe Galvanizing · DN15–DN200 · Continuous',
+    'prj04.badge':'Completed','prj04.country':'Turkey','prj04.name':'Steel Fabrication Company','prj04.cap':'Hot-Dip · 3 t/h · Environmental Treatment Incl.',
+    'prj05.badge':'Centrifugal','prj05.country':'Turkey','prj05.name':'Small Parts Galvanizing Line','prj05.cap':'Centrifugal Galvanizing · Small Parts Line',
+    'prj06.badge':'Export','prj06.country':'International','prj06.name':'Export Galvanizing Project','prj06.cap':'Hot-Dip · Turnkey Installation',
+    's04.num':'§ 04 — Why ZYT','s04.title':'Competitive Advantages','s04.sub':'Plant installation coordination through our verified supplier network, transparent process management and full support through project completion.',
+    'f01.title':'Verified Manufacturing Network','f01.body':'All critical components including kettles, steel structures and automation systems are sourced and coordinated through our verified Turkish manufacturing network.',
+    'f02.title':'On-Time Delivery','f02.body':'Rigorous schedule management and supplier coordination from project start to commissioning.',
+    'f03.title':'Quality & Compliance Process','f03.body':'Manufacturing partners in our network hold ISO 9001, ISO 14001 and TSE certifications; compliance is verified per project.',
     'f04.title':'24/7 Technical Support','f04.body':'Post-commissioning remote diagnostics, spare parts supply and field service team. Your operations never stop.',
     's05.num':'§ 05 — Suppliers','s05.title':'Technology Partners','s05.sub':'World-class brand integration for automation, electrical and sensor systems.',
     'pt01.role':'PLC · SCADA · Drive Systems','pt02.role':'MCC Panels · Power Distribution','pt03.role':'Gearboxes · Crane Drives','pt04.role':'Sensors · Industrial Sensing','pt05.role':'Terminal Blocks · Power Supplies','pt06.role':'Frequency Converters · Motors','pt07.role':'pH · Flow · Temperature Measurement','pt08.role':'Laser Sensors · Vision Systems',
@@ -1360,9 +1363,9 @@ const T = {
     'bc.back':'ZYT Global Industry',
     'hero.label':'// ZYT Galvaniz · منشآت الجلفنة',
     'hero.h1':'منشآت جلفنة<br><span class="acc">بالغمس الحار والطرد المركزي</span>',
-    'hero.sub':'أكثر من 30 عاماً من الخبرة في تصميم وتصنيع وتشغيل منشآت الجلفنة الكاملة تسليم مفتاح.',
+    'hero.sub':'حلول متكاملة للتصميم وتنسيق التصنيع والتشغيل تسليم مفتاح لمنشآت الجلفنة، عبر شبكة موردينا المعتمدة.',
     'hero.btn1':'استعرض المنتجات','hero.btn2':'طلب عرض سعر →',
-    'hstat.1':'سنة خبرة','hstat.2':'مرجع دولي','hstat.3':'طاقة الخط (طن/س)',
+    'hstat.1':'مورد معتمد','hstat.3':'طاقة الخط (طن/س)',
     's01.num':'§ 01 — المنتجات','s01.title':'أنظمة المنشأة','s01.sub':'أنظمة الجلفنة بالغمس الحار والطرد المركزي والأنابيب — هندسة مخصصة لكل طاقة وتطبيق.',
     'p01.tag':'// جلفنة دفعية','p01.title':'منشأة جلفنة بالغمس الحار','p01.desc':'خط تدفق ومعالجة وغمس وتبريد أوتوماتيكي كامل للهياكل الفولاذية. تكامل SCADA لمراقبة العملية الفورية.','p01.cap':'2–6 طن/س','p01.tank':'7–16 م',
     'p02.tag':'// قطع صغيرة','p02.title':'منشأة جلفنة طرد مركزي','p02.desc':'نظام سلة دوارة لجلفنة البراغي والصواميل والمسامير والمقاطع الصغيرة. إنتاجية عالية باستهلاك أدنى من الزنك.','p02.cap':'100–500 كغ/دفعة',
@@ -1378,17 +1381,17 @@ const T = {
     'c04.title':'SCADA والأتمتة','c04.body':'أنظمة PLC/HMI من Siemens وSchneider مع مراقبة فورية للعملية. وصول عن بُعد وإدارة إنذارات وتقارير إنتاج.','c04.badge':'صناعة 4.0',
     'c05.title':'معالجة الحمض الزائد','c05.body':'تحييد واسترداد الحمض الزائد من أحواض التحميض. قياس الأس الهيدروجيني وجرعات ومراقبة التصريف.','c05.badge':'ISO 14001',
     'c06.title':'ترشيح الأدخنة والغبار','c06.body':'مزيج غاسلة رطبة وفلتر كيس لمعالجة أدخنة الزنك وأبخرة الحمض. معتمد CE مع دورة تنظيف أوتوماتيكية.','c06.badge':'معتمد CE',
-    's03.num':'§ 03 — مشاريع مرجعية','s03.title':'المشاريع المنجزة','s03.sub':'من صناعة الدفاع إلى كبار مصنّعي الفولاذ — مراجع منشآت جلفنة تسليم مفتاح في قطاعات متعددة.',
-    'prj01.badge':'2025 · دفاع','prj01.country':'تركيا','prj01.cap':'غمس حار · 4 طن/س · متكامل مع SCADA',
-    'prj02.badge':'مكتمل','prj02.country':'تركيا','prj02.cap':'غمس حار · خط أوتوماتيكي كامل',
-    'prj03.badge':'جلفنة أنابيب','prj03.country':'تركيا','prj03.cap':'جلفنة أنابيب · DN15–DN200 · خط مستمر',
-    'prj04.badge':'مكتمل','prj04.country':'تركيا','prj04.cap':'غمس حار · 3 طن/س · معالجة بيئية شاملة',
-    'prj05.badge':'طرد مركزي','prj05.country':'تركيا','prj05.cap':'جلفنة طرد مركزي · خط قطع صغيرة',
-    'prj06.badge':'تصدير','prj06.country':'دولي','prj06.cap':'غمس حار · تركيب تسليم مفتاح',
-    's04.num':'§ 04 — لماذا ZYT','s04.title':'المزايا التنافسية','s04.sub':'أكثر من 30 عاماً من خبرة تركيب المنشآت وطاقة تصنيع داخلية ودعم كامل حتى إتمام المشروع.',
-    'f01.title':'التصنيع الداخلي','f01.body':'جميع المكونات الحيوية بما فيها البوتقات والهياكل الفولاذية وأنظمة الأتمتة تُصنَّع في ورشتنا الخاصة.',
-    'f02.title':'التسليم في الموعد','f02.body':'إدارة جدول زمني دقيق من بداية المشروع حتى التشغيل. لا إخفاقات في العقود بسبب التأخير في سجلنا البالغ 30 عاماً.',
-    'f03.title':'شهادات ISO وTSE','f03.body':'شهادات ISO 9001 وISO 14001 وTSE تضمن الامتثال للمعايير. جميع الشهادات المطلوبة لمشاريع التصدير الدولية.',
+    's03.num':'§ 03 — مشاريع مرجعية','s03.title':'الطاقة المُسلَّمة','s03.sub':'من صناعة الدفاع إلى مصنّعي الفولاذ — طاقة منشآت جلفنة تسليم مفتاح تم تسليمها عبر شبكتنا في قطاعات متعددة.',
+    'prj01.badge':'2025 · دفاع','prj01.country':'تركيا','prj01.name':'منشأة صناعة دفاعية','prj01.cap':'غمس حار · 4 طن/س · متكامل مع SCADA',
+    'prj02.badge':'مكتمل','prj02.country':'تركيا','prj02.name':'خط جلفنة أوتوماتيكي بالكامل','prj02.cap':'غمس حار · خط أوتوماتيكي كامل',
+    'prj03.badge':'جلفنة أنابيب','prj03.country':'تركيا','prj03.name':'منشأة تصنيع الأنابيب','prj03.cap':'جلفنة أنابيب · DN15–DN200 · خط مستمر',
+    'prj04.badge':'مكتمل','prj04.country':'تركيا','prj04.name':'شركة تصنيع هياكل فولاذية','prj04.cap':'غمس حار · 3 طن/س · معالجة بيئية شاملة',
+    'prj05.badge':'طرد مركزي','prj05.country':'تركيا','prj05.name':'خط جلفنة قطع صغيرة','prj05.cap':'جلفنة طرد مركزي · خط قطع صغيرة',
+    'prj06.badge':'تصدير','prj06.country':'دولي','prj06.name':'مشروع جلفنة تصديري','prj06.cap':'غمس حار · تركيب تسليم مفتاح',
+    's04.num':'§ 04 — لماذا ZYT','s04.title':'المزايا التنافسية','s04.sub':'تنسيق تركيب المنشآت عبر شبكة موردينا المعتمدة، إدارة شفافة للعمليات ودعم كامل حتى إتمام المشروع.',
+    'f01.title':'شبكة تصنيع معتمدة','f01.body':'جميع المكونات الحيوية بما فيها البوتقات والهياكل الفولاذية وأنظمة الأتمتة يتم توريدها وتنسيقها عبر شبكة التصنيع التركية المعتمدة لدينا.',
+    'f02.title':'التسليم في الموعد','f02.body':'إدارة جدول زمني دقيق وتنسيق الموردين من بداية المشروع حتى التشغيل.',
+    'f03.title':'الجودة والامتثال','f03.body':'الشركاء المصنّعون في شبكتنا حاصلون على شهادات ISO 9001 وISO 14001 وTSE؛ يتم التحقق من الامتثال لكل مشروع على حدة.',
     'f04.title':'الدعم الفني 24/7','f04.body':'تشخيص عن بُعد وتوريد قطع غيار وفريق خدمة ميدانية بعد التشغيل. عملياتك لا تتوقف أبداً.',
     's05.num':'§ 05 — الموردون','s05.title':'شركاء التكنولوجيا','s05.sub':'تكامل علامات تجارية عالمية في أنظمة الأتمتة والكهرباء والاستشعار.',
     'pt01.role':'PLC · SCADA · أنظمة محركات','pt02.role':'لوحات MCC · توزيع الطاقة','pt03.role':'ناقلات · محركات رافعات','pt04.role':'مستشعرات · استشعار صناعي','pt05.role':'كتل طرفية · مصادر طاقة','pt06.role':'محولات تردد · محركات','pt07.role':'pH · تدفق · قياس الحرارة','pt08.role':'مستشعرات ليزر · أنظمة رؤية',

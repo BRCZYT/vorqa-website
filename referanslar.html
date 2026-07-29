@@ -112,6 +112,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .ref-card:hover{border-color:rgba(40,116,178,.4);background:rgba(255,255,255,.05)}
 .ref-img-wrap{position:relative;overflow:hidden;height:200px}
 .ref-img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.22,1,.36,1);display:block}
+.ref-img.img-ph{object-fit:contain;background:#0A2540;padding:28px}
 .ref-card:hover .ref-img{transform:scale(1.04)}
 .ref-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(5,23,40,.7) 100%)}
 .ref-body{padding:24px}
@@ -126,7 +127,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .ref-card.hidden{opacity:0;pointer-events:none;position:absolute;visibility:hidden}
 /* STATS BAND */
 .stats-band{background:linear-gradient(160deg,#d8e7f3 0%,#E8EEF4 55%,#d6e5f2 100%);padding:56px 80px;border-top:1px solid rgba(40,116,178,.15);border-bottom:1px solid rgba(40,116,178,.15)}
-.st-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.st-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
 .stat-n{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;letter-spacing:-.035em;color:#E87722;line-height:1}
 .stat-n sup{font-size:.55em;color:#2874B2;font-weight:500}
 .stat-lbl{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(10,37,64,.52);margin-top:6px}
@@ -278,7 +279,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
   <div style="position:relative;z-index:2">
     <div class="hero-label" data-i18n="page.num">§ 03 / Referanslar</div>
     <h1 class="hero-h1" data-i18n-html="hero.h1">Tamamlanan projeler,<br><span class="acc">kanıtlanmış yetkinlik.</span></h1>
-    <p class="hero-sub" data-i18n="hero.sub">24+ ülkede teslim edilmiş beton santralleri, galvaniz tesisleri, çelik yapılar ve enerji dönüşüm projeleri.</p>
+    <p class="hero-sub" data-i18n="hero.sub">Ağımız aracılığıyla teslim edilen beton santralleri, galvaniz tesisleri, çelik yapılar ve enerji dönüşüm kapasitesi.</p>
   </div>
 </section>
 
@@ -288,20 +289,12 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
 <div class="stats-band">
   <div style="max-width:1160px;margin:0 auto" class="st-grid">
     <div style="padding-left:20px;border-left:2px solid rgba(40,116,178,.45)" class="rv d1">
-      <div class="stat-n"><span class="counter" data-target="850">0</span><sup>+</sup></div>
-      <div class="stat-lbl" data-i18n="s1.lbl">Tamamlanan Proje</div>
+      <div class="stat-n"><span class="counter" data-target="1000">0</span><sup>+</sup></div>
+      <div class="stat-lbl" data-i18n="s1.lbl">Doğrulanmış Tedarikçi Ağı</div>
     </div>
     <div style="padding-left:20px;border-left:2px solid rgba(40,116,178,.45)" class="rv d2">
-      <div class="stat-n"><span class="counter" data-target="24">0</span><sup>+</sup></div>
-      <div class="stat-lbl" data-i18n="s2.lbl">Ülke</div>
-    </div>
-    <div style="padding-left:20px;border-left:2px solid rgba(40,116,178,.45)" class="rv d3">
-      <div class="stat-n">₺<span class="counter" data-target="24" data-suffix=".4">0</span><sup>B</sup></div>
-      <div class="stat-lbl" data-i18n="s3.lbl">Toplam Proje Değeri</div>
-    </div>
-    <div style="padding-left:20px;border-left:2px solid rgba(40,116,178,.45)" class="rv d4">
-      <div class="stat-n"><span class="counter" data-target="30">0</span><sup>+</sup></div>
-      <div class="stat-lbl" data-i18n="s4.lbl">Yıllık Deneyim</div>
+      <div class="stat-n" style="font-size:clamp(1.4rem,2.6vw,2rem)" data-i18n="s2.val">MENA & Afrika</div>
+      <div class="stat-lbl" data-i18n="s2.lbl">Hedef Pazarlar</div>
     </div>
   </div>
 </div>
@@ -333,7 +326,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 1: 240m³ Bağdat — from index.html -->
       <div class="ref-card rv d1" data-filter="beton">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://vettertech.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-12-at-11.45.17-3.jpeg" alt="240 m³/sa Beton Santrali Kompleksi — Bağdat" loading="lazy">
+          <img class="ref-img" src="images/beton/prj-1.jpg" alt="240 m³/sa Beton Santrali Kompleksi — Bağdat" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Beton · 2025 · Irak</div>
@@ -349,7 +342,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 2: 200m³ Suudi Arabistan — from akademi.html -->
       <div class="ref-card rv d2" data-filter="beton">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://vettertech.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-12-at-11.45.17-3.jpeg" alt="200 m³/sa Sabit Beton Santrali — Suudi Arabistan" loading="lazy">
+          <img class="ref-img" src="images/beton/prj-2.jpg" alt="200 m³/sa Sabit Beton Santrali — Suudi Arabistan" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Beton · 2025 · Suudi Arabistan</div>
@@ -365,7 +358,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 3: 130m³ BAE — from akademi.html -->
       <div class="ref-card rv d3" data-filter="beton">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://vettertech.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-12-at-11.45.17.jpeg" alt="130 m³/sa Mobil Beton Santrali — BAE" loading="lazy">
+          <img class="ref-img" src="images/beton/prj-3.jpg" alt="130 m³/sa Mobil Beton Santrali — BAE" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Beton · 2025 · BAE</div>
@@ -381,7 +374,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 4: 80m³ Manchester — from akademi.html -->
       <div class="ref-card rv d1" data-filter="beton">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://vettertech.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-12-at-11.45.17-1.jpeg" alt="80 m³/sa Kuru Sistem Beton Santrali — Manchester" loading="lazy">
+          <img class="ref-img" src="images/beton/prj-4.jpg" alt="80 m³/sa Kuru Sistem Beton Santrali — Manchester" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Beton · 2024 · İngiltere</div>
@@ -397,7 +390,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 5: 120m³ Cezayir — from akademi.html -->
       <div class="ref-card rv d2" data-filter="beton">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://vettertech.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-12-at-11.45.16.jpeg" alt="120 m³/sa Sabit Beton Santrali — Cezayir" loading="lazy">
+          <img class="ref-img" src="images/beton/prj-5.jpg" alt="120 m³/sa Sabit Beton Santrali — Cezayir" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Beton · 2024 · Cezayir</div>
@@ -413,7 +406,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 6: Galvaniz Tesis — from index.html + akademi.html -->
       <div class="ref-card rv d3" data-filter="galvaniz">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211115_083411-scaled.jpg" alt="Galvaniz Tesis Mekanizasyonu — Ankara" loading="lazy">
+          <img class="ref-img img-ph" src="images/illustrations/srv-galvaniz.svg" alt="Galvaniz tesis mekanizasyonu — teknik çizim" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Galvaniz · 2024 · Türkiye</div>
@@ -429,7 +422,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 7: Çelik Yapı — from akademi.html -->
       <div class="ref-card rv d1" data-filter="makina">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211126_093204-scaled.jpg" alt="Endüstriyel Çelik Yapı İmalatı ve Mekanik Montaj" loading="lazy">
+          <img class="ref-img img-ph" src="images/illustrations/srv-celik.svg" alt="Endüstriyel çelik yapı imalatı — teknik çizim" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Makina · 2023–2024</div>
@@ -445,7 +438,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- 8: Katı Atık Enerji Tesisi — from index.html -->
       <div class="ref-card rv d2" data-filter="enerji">
         <div class="ref-img-wrap">
-          <img class="ref-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211115_083411-scaled.jpg" alt="Katı Atık Enerji Tesisi — 12 MW" loading="lazy">
+          <img class="ref-img img-ph" src="images/illustrations/srv-enerji.svg" alt="Katı atık enerji tesisi — teknik çizim" loading="lazy">
         </div>
         <div class="ref-body">
           <div class="ref-cat">ZYT Enerji · 2024 · Kazakistan</div>
@@ -516,8 +509,8 @@ const T={
     'dd.about':'Hakkımızda','dd.docs':'Belgelerimiz','dd.refs':'Referanslar','dd.academy':'Akademi',
     'page.num':'§ 03 / Referanslar',
     'hero.h1':'Tamamlanan projeler,<br><span class="acc">kanıtlanmış yetkinlik.</span>',
-    'hero.sub':'24+ ülkede teslim edilmiş beton santralleri, galvaniz tesisleri, çelik yapılar ve enerji dönüşüm projeleri.',
-    's1.lbl':'Tamamlanan Proje','s2.lbl':'Ülke','s3.lbl':'Toplam Proje Değeri','s4.lbl':'Yıllık Deneyim',
+    'hero.sub':'Ağımız aracılığıyla teslim edilen beton santralleri, galvaniz tesisleri, çelik yapılar ve enerji dönüşüm kapasitesi.',
+    's1.lbl':'Doğrulanmış Tedarikçi Ağı','s2.lbl':'Hedef Pazarlar','s2.val':'MENA & Afrika',
     'ref.title':'Seçilmiş proje referansları.','ref.sub':'Farklı ülkeler ve sektörler genelinde teslim ettiğimiz projelerden bir seçki.',
     'f.all':'Tümü',
     'ref.cta':'Teklif Al',
@@ -532,8 +525,8 @@ const T={
     'dd.about':'About Us','dd.docs':'Our Documents','dd.refs':'References','dd.academy':'Academy',
     'page.num':'§ 03 / References',
     'hero.h1':'Completed projects,<br><span class="acc">proven competence.</span>',
-    'hero.sub':'Concrete plants, galvanizing facilities, steel structures and energy conversion projects delivered across 24+ countries.',
-    's1.lbl':'Completed Projects','s2.lbl':'Countries','s3.lbl':'Total Project Value','s4.lbl':'Years of Experience',
+    'hero.sub':'Concrete plants, galvanizing facilities, steel structures and energy conversion capacity delivered through our network.',
+    's1.lbl':'Verified Supplier Network','s2.lbl':'Target Markets','s2.val':'MENA & Africa',
     'ref.title':'Selected project references.','ref.sub':'A selection of projects delivered across different countries and sectors.',
     'f.all':'All',
     'ref.cta':'Get Quote',
@@ -548,8 +541,8 @@ const T={
     'dd.about':'من نحن','dd.docs':'وثائقنا','dd.refs':'المراجع','dd.academy':'الأكاديمية',
     'page.num':'03 / المراجع',
     'hero.h1':'مشاريع مكتملة،<br><span class="acc">كفاءة مثبتة.</span>',
-    'hero.sub':'محطات خرسانة ومصانع جلفنة وهياكل فولاذية ومشاريع تحويل الطاقة في أكثر من 24 دولة.',
-    's1.lbl':'مشروع مكتمل','s2.lbl':'دولة','s3.lbl':'إجمالي قيمة المشاريع','s4.lbl':'سنة خبرة',
+    'hero.sub':'محطات خرسانة ومصانع جلفنة وهياكل فولاذية ومشاريع تحويل طاقة، تُسلَّم عبر شبكتنا.',
+    's1.lbl':'شبكة موردين معتمدة','s2.lbl':'الأسواق المستهدفة','s2.val':'الشرق الأوسط وشمال أفريقيا',
     'ref.title':'مراجع المشاريع المختارة.','ref.sub':'مجموعة مختارة من المشاريع المسلّمة عبر دول وقطاعات مختلفة.',
     'f.all':'الكل',
     'ref.cta':'احصل على عرض',

@@ -213,6 +213,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .featured-card:hover{box-shadow:0 20px 60px rgba(10,37,64,.12),0 0 0 1px rgba(40,116,178,.12);transform:translateY(-4px)}
 .featured-img-wrap{position:relative;overflow:hidden;min-height:300px}
 .featured-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.featured-img-wrap img.img-ph{object-fit:contain;background:#E8EEF4;padding:40px}
 .featured-card:hover .featured-img-wrap img{transform:scale(1.04)}
 .featured-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,37,64,.3) 0%,rgba(40,116,178,.15) 100%)}
 .featured-badge{position:absolute;top:20px;left:20px;background:#2874B2;border-radius:20px;padding:5px 14px;font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:#fff;box-shadow:0 4px 14px rgba(40,116,178,.4)}
@@ -239,6 +240,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .blog-card:hover .blog-img{transform:scale(1.05)}
 .blog-img-wrap{overflow:hidden;height:200px;position:relative}
 .blog-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.blog-img.img-ph{object-fit:contain;background:#E8EEF4;padding:28px}
 .blog-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.25) 0%,transparent 50%)}
 .blog-body{padding:24px;flex:1;display:flex;flex-direction:column}
 .blog-cat-chip{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:#2874B2;margin-bottom:12px}
@@ -486,7 +488,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
     <!-- FEATURED -->
     <div class="featured-card rv d1" data-cat="beton" id="featured-post" onclick="location.href='ZYT-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html'" style="cursor:pointer">
       <div class="featured-img-wrap">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&h=600&q=80" alt="Beton Santrali Kapasitesi" loading="lazy">
+        <img class="img-ph" src="images/illustrations/srv-beton-light.svg" alt="Beton santrali kapasitesi — teknik çizim" loading="lazy">
         <div class="featured-img-overlay"></div>
         <div class="featured-badge">Öne Çıkan</div>
       </div>
@@ -504,7 +506,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- POST: Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Proj -->
       <div class="blog-card rv d1" data-pg="1" data-cat="enerji" onclick="location.href='ZYT-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html'">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=1200&h=600&q=80" alt="Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Enerji sektöründe EPC-F modeli — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">
@@ -520,7 +522,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- POST 1: Galvaniz -->
       <div class="blog-card rv d1" data-cat="galvaniz" onclick="location.href='ZYT-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html'">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1565197261854-57f69e7028c6?auto=format&fit=crop&w=600&h=280&q=80" alt="Sıcak Daldırma Galvanizleme" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-galvaniz-light.svg" alt="Sıcak daldırma galvanizleme — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">
@@ -536,7 +538,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- POST 2: WtE -->
       <div class="blog-card rv d2" data-cat="enerji" onclick="location.href='ZYT-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html'">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=600&h=280&q=80" alt="Atık-Enerji Dönüşüm Tesisi" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Atık-enerji dönüşüm tesisi — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">
@@ -552,7 +554,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- POST 3: EN 1090-2 -->
       <div class="blog-card rv d3" data-cat="makina" onclick="location.href='ZYT-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html'">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=280&q=80" alt="Çelik Yapı İmalatı" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-celik-light.svg" alt="Çelik yapı imalatı — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">
@@ -568,7 +570,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- POST 4: Tedarik -->
       <div class="blog-card rv d4" data-cat="tedarik" onclick="location.href='ZYT-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html'">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&h=280&q=80" alt="Küresel Lojistik" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-tedarik-light.svg" alt="Küresel lojistik — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">
@@ -584,7 +586,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- POST 5: Mobil vs Sabit -->
       <div class="blog-card rv d5" data-cat="beton" onclick="location.href='ZYT-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html'">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&h=280&q=80" alt="Sabit ve Mobil Beton Santrali" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-beton-light.svg" alt="Sabit ve mobil beton santrali — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">
@@ -600,7 +602,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
       <!-- PAGE 2 POSTS (hidden on load) -->
       <div class="blog-card rv d1" data-pg="2" data-cat="enerji" onclick="location.href='ZYT-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html'" style="display:none">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&h=280&q=80" alt="EPC Anahtar Teslim" loading="lazy">
+          <img class="blog-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="EPC anahtar teslim projeler — teknik çizim" loading="lazy">
           <div class="blog-img-overlay"></div>
         </div>
         <div class="blog-body">

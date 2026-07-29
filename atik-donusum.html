@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{navy:'#0A2540',mid:'#051728',blue:'#2874B2'},fontFamily:{display:["'Sora Variable'","Sora","sans-serif"],body:["'Manrope Variable'","Manrope","sans-serif"],mono:["'JetBrains Mono Variable'","monospace"]}}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{navy:'#0A2540',mid:'#051728',blue:'#2874B2'},fontFamily:{display:["'Sora Variable'","Sora","sans-serif"],body:["'Manrope Variable'","Manrope","sans-serif"],mono:["'JetBrains Mono Variable'","monospace"]}}}}</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -177,6 +177,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .prod-img-wrap{position:relative;overflow:hidden;height:220px}
 .prod-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
 .prod-card:hover .prod-img{transform:scale(1.04)}
+.img-ph{object-fit:contain;background:#E8EEF4;padding:32px}
 .prod-over{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.45),transparent)}
 .prod-bdy{padding:24px}
 .prod-tag{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:10px}
@@ -201,6 +202,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .prj-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(10,37,64,.12)}
 .prj-img-w{position:relative;height:200px;overflow:hidden}
 .prj-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.prj-img.img-ph{object-fit:contain;background:#E8EEF4;padding:28px}
 .prj-card:hover .prj-img{transform:scale(1.04)}
 .prj-over{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.6),transparent)}
 .prj-badge{position:absolute;bottom:12px;left:14px;font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;background:rgba(40,116,178,.75);padding:4px 10px;border-radius:2px;backdrop-filter:blur(4px)}
@@ -681,8 +683,8 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
     </div>
   </div>
   <div class="hero-stats">
-    <div class="hstat"><div class="hstat-n">500<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.1">Ton/yıl imalat kapasitesi</div></div>
-    <div class="hstat"><div class="hstat-n">15<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.2">Ülke referans projesi</div></div>
+    <div class="hstat"><div class="hstat-n">500<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.1">Ton/yıl ağ kapasitesi</div></div>
+    <div class="hstat"><div class="hstat-n">1.000<sup>+</sup></div><div class="hstat-l" data-i18n="hstat.2">Doğrulanmış Tedarikçi</div></div>
     <div class="hstat"><div class="hstat-n">24</div><div class="hstat-l" data-i18n="hstat.3">Saat teknik destek</div></div>
   </div>
 </section>
@@ -701,7 +703,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- Çelik Yapı -->
       <div class="prod-card rv d1">
         <div class="prod-img-wrap">
-          <img class="prod-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211115_083411-scaled.jpg" alt="Çelik Yapı İmalatı">
+          <img class="prod-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Çelik yapı imalatı — teknik çizim" loading="lazy">
           <div class="prod-over"></div>
         </div>
         <div class="prod-bdy">
@@ -709,7 +711,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
           <div class="prod-title" data-i18n="p1.title">Çelik Yapı İmalatı</div>
           <p class="prod-desc" data-i18n="p1.desc">Atık işleme tesisleri, geri dönüşüm fabrikaları ve endüstriyel proses yapıları için özel çelik konstrüksiyon tasarımı ve üretimi. 3D modelleme ile hassas toleranslar.</p>
           <div class="prod-specs">
-            <div class="spec-item"><span class="spec-k" data-i18n="spec.cap">Kapasite</span><span class="spec-v">500+ ton/yıl</span></div>
+            <div class="spec-item"><span class="spec-k" data-i18n="spec.cap">Kapasite</span><span class="spec-v" data-i18n="p1.cap">500+ ton/yıl (ağ üzerinden)</span></div>
             <div class="spec-item"><span class="spec-k" data-i18n="spec.mat">Malzeme</span><span class="spec-v">S235 – S460</span></div>
             <div class="spec-item"><span class="spec-k" data-i18n="spec.std">Standart</span><span class="spec-v">EN 1090 / CE</span></div>
             <div class="spec-item"><span class="spec-k" data-i18n="spec.weld">Kaynak</span><span class="spec-v">MIG / TIG / SAW</span></div>
@@ -719,7 +721,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- Mekanik Projelendirme -->
       <div class="prod-card rv d2">
         <div class="prod-img-wrap">
-          <img class="prod-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211126_092950-scaled.jpg" alt="Mekanik Projelendirme">
+          <img class="prod-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Mekanik proje tasarımı — teknik çizim" loading="lazy">
           <div class="prod-over"></div>
         </div>
         <div class="prod-bdy">
@@ -737,7 +739,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- Tesis Kurulumu -->
       <div class="prod-card rv d3">
         <div class="prod-img-wrap">
-          <img class="prod-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211202_085038-scaled.jpg" alt="Tesis Kurulumu">
+          <img class="prod-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Tesis kurulumu — teknik çizim" loading="lazy">
           <div class="prod-over"></div>
         </div>
         <div class="prod-bdy">
@@ -755,7 +757,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       <!-- Bakım & Onarım -->
       <div class="prod-card rv d4">
         <div class="prod-img-wrap">
-          <img class="prod-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211207_131223-scaled.jpg" alt="Bakım Onarım">
+          <img class="prod-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Bakım onarım hizmeti — teknik çizim" loading="lazy">
           <div class="prod-over"></div>
         </div>
         <div class="prod-bdy">
@@ -857,7 +859,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
     <div class="prj-grid">
       <div class="prj-card rv d1">
         <div class="prj-img-w">
-          <img class="prj-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211125_183737-scaled.jpg" alt="Atık İşleme Tesisi">
+          <img class="prj-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Atık işleme tesisi — teknik çizim" loading="lazy">
           <div class="prj-over"></div>
           <span class="prj-badge">Çelik Yapı · 800 ton</span>
         </div>
@@ -869,7 +871,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       </div>
       <div class="prj-card rv d2">
         <div class="prj-img-w">
-          <img class="prj-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211126_093014-scaled.jpg" alt="Geri Dönüşüm Fabrikası">
+          <img class="prj-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Geri dönüşüm fabrikası — teknik çizim" loading="lazy">
           <div class="prj-over"></div>
           <span class="prj-badge">Montaj · Mekanik</span>
         </div>
@@ -881,7 +883,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       </div>
       <div class="prj-card rv d3">
         <div class="prj-img-w">
-          <img class="prj-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211201_090801-scaled.jpg" alt="Biyogaz Tesisi">
+          <img class="prj-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Biyogaz tesisi — teknik çizim" loading="lazy">
           <div class="prj-over"></div>
           <span class="prj-badge">Çelik Konstrüksiyon</span>
         </div>
@@ -893,7 +895,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       </div>
       <div class="prj-card rv d4">
         <div class="prj-img-w">
-          <img class="prj-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211202_084826-scaled.jpg" alt="Endüstriyel Tesis">
+          <img class="prj-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Endüstriyel tesis — teknik çizim" loading="lazy">
           <div class="prj-over"></div>
           <span class="prj-badge">Endüstriyel Yapı</span>
         </div>
@@ -905,7 +907,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       </div>
       <div class="prj-card rv d5">
         <div class="prj-img-w">
-          <img class="prj-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211203_172114-scaled.jpg" alt="Konveyör Sistemi">
+          <img class="prj-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Konveyör sistemi — teknik çizim" loading="lazy">
           <div class="prj-over"></div>
           <span class="prj-badge">Konveyör Sistemi</span>
         </div>
@@ -917,7 +919,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
       </div>
       <div class="prj-card rv d5">
         <div class="prj-img-w">
-          <img class="prj-img" src="https://mimakine.com/wp-content/uploads/2023/03/IMG_20211207_160759-scaled.jpg" alt="Proses Tesisi">
+          <img class="prj-img img-ph" src="images/illustrations/srv-enerji-light.svg" alt="Proses tesisi — teknik çizim" loading="lazy">
           <div class="prj-over"></div>
           <span class="prj-badge">Proses Tesisi</span>
         </div>
@@ -969,7 +971,7 @@ const T={
     'hero.h1':'ÇELİK YAPI &amp; <span class="acc">MEKANİK</span><br>İMALAT TESİSLERİ',
     'hero.sub':'Atık işleme, geri dönüşüm ve endüstriyel proses tesisleri için çelik konstrüksiyon imalatı, mekanik montaj ve anahtar teslim kurulum.',
     'hero.btn1':'Hizmetleri İncele','hero.btn2':'Teklif Al →',
-    'hstat.1':'Ton/yıl imalat kapasitesi','hstat.2':'Ülke referans projesi','hstat.3':'Saat teknik destek',
+    'hstat.1':'Ton/yıl ağ kapasitesi','hstat.2':'Doğrulanmış Tedarikçi','hstat.3':'Saat teknik destek',
     's1.num':'§ 01 / Hizmetler','s1.title':'Tasarım, imalat, montaj.',
     's1.sub':'Atık dönüşüm ve geri dönüşüm tesisleri için çelik yapı imalatından sahaya kuruluma kadar eksiksiz mühendislik hizmetleri.',
     's2.num':'§ 02 / Ekipman','s2.title':'Entegre imalat kapasitesi.',
@@ -991,7 +993,7 @@ const T={
     'hero.h1':'STEEL STRUCTURES &amp; <span class="acc">MECHANICAL</span><br>FABRICATION PLANTS',
     'hero.sub':'Turnkey steel structure fabrication, mechanical assembly and commissioning for waste processing, recycling and industrial process facilities.',
     'hero.btn1':'View Services','hero.btn2':'Request Quote →',
-    'hstat.1':'tons/year production capacity','hstat.2':'Country references','hstat.3':'Hour technical support',
+    'hstat.1':'tons/year network capacity','hstat.2':'Verified Suppliers','hstat.3':'Hour technical support',
     's1.num':'§ 01 / Services','s1.title':'Design, fabricate, install.',
     's1.sub':'Complete engineering services from steel structure fabrication to field installation for waste conversion and recycling plants.',
     's2.num':'§ 02 / Equipment','s2.title':'Integrated manufacturing capacity.',
@@ -1013,7 +1015,7 @@ const T={
     'hero.h1':'هياكل فولاذية &amp; <span class="acc">تصنيع</span><br>ميكانيكي',
     'hero.sub':'تصنيع الهياكل الفولاذية، التجميع الميكانيكي وتسليم مفتاح لمنشآت معالجة النفايات وإعادة التدوير.',
     'hero.btn1':'استعرض الخدمات','hero.btn2':'طلب عرض سعر →',
-    'hstat.1':'طن/سنة طاقة إنتاجية','hstat.2':'مشروع مرجعي دولي','hstat.3':'ساعة دعم فني',
+    'hstat.1':'طن/سنة طاقة الشبكة','hstat.2':'مورد معتمد','hstat.3':'ساعة دعم فني',
     'cta.pre':'// ZYT ماكينا',
     'cta.h':'دعنا نبني الهيكل الصحيح لمشروعك.',
     'cta.p':'شاركنا نوع المنشأة، الطاقة والموقع — سنقدم مقترحاً تقنياً وعرض سعر خلال 48 ساعة.',
