@@ -215,6 +215,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
 .hero-h1{font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,6rem);line-height:1.02;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
+.hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.3vw,17px);color:rgba(255,255,255,.55);line-height:1.7;max-width:640px;text-align:center;margin:18px auto 0;animation:fade-up .7s 1s both}
 .hero-h1 .accent{color:#E87722}
 
 /* ── Wheel ── */
@@ -747,13 +748,13 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
       </div>
     </div>
     <div class="has-dd">
-      <span class="nav-link dd-tog"><span data-i18n="nav.companies">Şirketlerimiz</span> <svg class="dd-caret" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="nav-link dd-tog"><span data-i18n="nav.companies">Uzmanlık Alanlarımız</span> <svg class="dd-caret" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       <div class="dd-menu">
-        <a href="beton.html" class="dd-item"><span class="dd-item-num">01</span>ZYT Beton</a>
-        <a href="galvaniz.html" class="dd-item"><span class="dd-item-num">02</span>ZYT Galvaniz</a>
-        <a href="enerji.html" class="dd-item"><span class="dd-item-num">03</span>ZYT Enerji</a>
-        <a href="atik-donusum.html" class="dd-item"><span class="dd-item-num">04</span>ZYT Makina</a>
-        <a href="tedarik-zinciri.html" class="dd-item"><span class="dd-item-num">05</span>ZYT Tedarik</a>
+        <a href="beton.html" class="dd-item"><span class="dd-item-num">01</span>Beton Santralleri</a>
+        <a href="galvaniz.html" class="dd-item"><span class="dd-item-num">02</span>Galvaniz Tesisleri</a>
+        <a href="enerji.html" class="dd-item"><span class="dd-item-num">03</span>Atık-Enerji Dönüşümü</a>
+        <a href="atik-donusum.html" class="dd-item"><span class="dd-item-num">04</span>Çelik Yapı & Mekanik İmalat</a>
+        <a href="tedarik-zinciri.html" class="dd-item"><span class="dd-item-num">05</span>Tedarik Zinciri Yönetimi</a>
       </div>
     </div>
     <a href="iletisim.html" class="nav-link" style="color:rgba(255,255,255,.8)" data-i18n="nav.contact">İletişim</a>
@@ -783,13 +784,13 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   </div>
   <div class="mob-sep"></div>
   <div class="mob-dd-wrap">
-    <button class="mob-link mob-dd-tog" onclick="toggleMobDd(this)"><span data-i18n="nav.companies">Şirketlerimiz</span> <span class="mob-dd-arr">+</span></button>
+    <button class="mob-link mob-dd-tog" onclick="toggleMobDd(this)"><span data-i18n="nav.companies">Uzmanlık Alanlarımız</span> <span class="mob-dd-arr">+</span></button>
     <div class="mob-dd-inner">
-      <a href="beton.html" class="mob-sub-link" onclick="closeMobNav()">ZYT Beton</a>
-      <a href="galvaniz.html" class="mob-sub-link" onclick="closeMobNav()">ZYT Galvaniz</a>
-      <a href="enerji.html" class="mob-sub-link" onclick="closeMobNav()">ZYT Enerji</a>
-      <a href="atik-donusum.html" class="mob-sub-link" onclick="closeMobNav()">ZYT Makina</a>
-      <a href="tedarik-zinciri.html" class="mob-sub-link" onclick="closeMobNav()">ZYT Tedarik</a>
+      <a href="beton.html" class="mob-sub-link" onclick="closeMobNav()">Beton Santralleri</a>
+      <a href="galvaniz.html" class="mob-sub-link" onclick="closeMobNav()">Galvaniz Tesisleri</a>
+      <a href="enerji.html" class="mob-sub-link" onclick="closeMobNav()">Atık-Enerji Dönüşümü</a>
+      <a href="atik-donusum.html" class="mob-sub-link" onclick="closeMobNav()">Çelik Yapı & Mekanik İmalat</a>
+      <a href="tedarik-zinciri.html" class="mob-sub-link" onclick="closeMobNav()">Tedarik Zinciri Yönetimi</a>
     </div>
   </div>
   <div class="mob-sep"></div>
@@ -867,8 +868,9 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 
   <!-- Title — BELOW the wheel -->
   <div style="position:relative;z-index:10;text-align:center;padding:0 32px;margin-top:6px">
-    <p class="hero-eyebrow" data-i18n="hero.eyebrow">// Ankara · Türkiye · Şirketlerimiz · Küresel Operasyonlar</p>
-    <h1 class="hero-h1" data-i18n-html="hero.h1">KÜRESEL ÖLÇEKLİ<br><span class="accent">ENDÜSTRİYEL</span> MÜKEMMELİYET</h1>
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">// Ankara · Türkiye · Teknik Tedarik Partneri · MENA & Afrika</p>
+    <h1 class="hero-h1" data-i18n-html="hero.h1">TEKNİK TEDARİK &<br><span class="accent">PROJE KOORDİNASYON</span> PARTNERİ</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Türk uzman üreticilerin mühendislik gücünü, MENA ve Afrika projeleri için, şeffaf ve tek muhatap bir teknik tedarik &amp; koordinasyon modelinde birleştiren partner.</p>
   </div>
 
   <div style="display:flex;align-items:center;gap:10px;margin-top:14px;margin-bottom:28px;animation:fade-up .7s 1.1s both">
@@ -936,7 +938,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   <!-- 5-col hover-expand panel -->
   <div class="co-hx-panel">
 
-    <!-- 01 — ZYT Beton -->
+    <!-- 01 — Beton Santralleri -->
     <a href="beton.html" class="co-hx-card" data-co-idx="0">
       <div class="co-hx-img">
         <img src="images/illustrations/srv-beton-light.svg" alt="Beton santrali — cephe teknik çizimi" loading="lazy" />
@@ -944,13 +946,13 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
       <div class="co-hx-overlay"></div>
       <div class="co-hx-content">
         <p class="co-hx-desc" data-i18n="co1.desc">Sabit, mobil ve kompakt beton santrali tasarımı, kurulumu ve devreye alma.</p>
-        <h3 class="co-hx-name">ZYT Beton</h3>
+        <h3 class="co-hx-name">Beton Santralleri</h3>
         <span class="co-hx-tag" data-i18n="co1.tag">Beton Santralleri</span>
         <span class="co-hx-link">Keşfet <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </div>
     </a>
 
-    <!-- 02 — ZYT Enerji -->
+    <!-- 02 — Atık-Enerji Dönüşümü -->
     <a href="enerji.html" class="co-hx-card" data-co-idx="1">
       <div class="co-hx-img">
         <img src="images/illustrations/srv-enerji-light.svg" alt="Atıktan enerji tesisi — proses akış çizimi" loading="lazy" />
@@ -958,13 +960,13 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
       <div class="co-hx-overlay"></div>
       <div class="co-hx-content">
         <p class="co-hx-desc" data-i18n="co2.desc">Katı atık, biyogaz ve endüstriyel atıktan elektrik ve ısı üretim tesisleri.</p>
-        <h3 class="co-hx-name">ZYT Enerji</h3>
+        <h3 class="co-hx-name">Atık-Enerji Dönüşümü</h3>
         <span class="co-hx-tag" data-i18n="co2.tag">Atık-Enerji Dönüşüm</span>
         <span class="co-hx-link">Keşfet <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </div>
     </a>
 
-    <!-- 03 — ZYT Galvaniz -->
+    <!-- 03 — Galvaniz Tesisleri -->
     <a href="galvaniz.html" class="co-hx-card" data-co-idx="2">
       <div class="co-hx-img">
         <img src="images/illustrations/srv-galvaniz-light.svg" alt="Sıcak daldırma galvaniz hattı — kesit çizimi" loading="lazy" />
@@ -972,13 +974,13 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
       <div class="co-hx-overlay"></div>
       <div class="co-hx-content">
         <p class="co-hx-desc" data-i18n="co3.desc">Sıcak daldırma galvaniz tesis kurulumu, mekanizasyon ve proses optimizasyonu.</p>
-        <h3 class="co-hx-name">ZYT Galvaniz</h3>
+        <h3 class="co-hx-name">Galvaniz Tesisleri</h3>
         <span class="co-hx-tag" data-i18n="co3.tag">Galvaniz Tesisleri</span>
         <span class="co-hx-link">Keşfet <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </div>
     </a>
 
-    <!-- 04 — ZYT Mühendislik -->
+    <!-- 04 — Tedarik Zinciri Yönetimi -->
     <a href="tedarik-zinciri.html" class="co-hx-card" data-co-idx="3">
       <div class="co-hx-img">
         <img src="images/illustrations/srv-tedarik-light.svg" alt="Tedarik zinciri ağı — Ankara merkezli lojistik haritası" loading="lazy" />
@@ -986,13 +988,13 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
       <div class="co-hx-overlay"></div>
       <div class="co-hx-content">
         <p class="co-hx-desc" data-i18n="co4.desc">Proje yönetimi, tedarik zinciri ve anahtar teslim mühendislik projeleri.</p>
-        <h3 class="co-hx-name" data-i18n="co4.name">ZYT Mühendislik</h3>
+        <h3 class="co-hx-name" data-i18n="co4.name">Tedarik Zinciri Yönetimi</h3>
         <span class="co-hx-tag" data-i18n="co4.tag">Tedarik &amp; Anahtar Teslim</span>
         <span class="co-hx-link">Keşfet <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </div>
     </a>
 
-    <!-- 05 — ZYT Makina -->
+    <!-- 05 — Çelik Yapı & Mekanik İmalat -->
     <a href="atik-donusum.html" class="co-hx-card" data-co-idx="4">
       <div class="co-hx-img">
         <img src="images/illustrations/srv-celik-light.svg" alt="Çelik konstrüksiyon — makas ve detay çizimi" loading="lazy" />
@@ -1000,7 +1002,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
       <div class="co-hx-overlay"></div>
       <div class="co-hx-content">
         <p class="co-hx-desc" data-i18n="co5.desc">Atık dönüşüm ve geri dönüşüm tesisleri için çelik konstrüksiyon imalatı, mekanik montaj ve anahtar teslim kurulum.</p>
-        <h3 class="co-hx-name" data-i18n="co5.name">ZYT Makina</h3>
+        <h3 class="co-hx-name" data-i18n="co5.name">Çelik Yapı & Mekanik İmalat</h3>
         <span class="co-hx-tag" data-i18n="co5.tag">Çelik Yapı &amp; Mekanik İmalat</span>
         <span class="co-hx-link">Keşfet <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
       </div>
@@ -1653,6 +1655,61 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 
 </section>
 
+<!-- ════════════════════════════════════
+     HOW WE WORK
+════════════════════════════════════ -->
+<div class="block-sep"></div>
+<section id="how" class="sec sec-light">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="g2" style="margin-bottom:48px">
+      <div class="rv"><div class="sec-num" data-i18n="how.num">§ 05 / Nasıl Çalışırız</div></div>
+      <div class="rv d1"><h2 class="sec-title-l" data-i18n="how.title">Talepten teslime, tek muhatap.</h2></div>
+    </div>
+    <div class="pil-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <div class="pillar rv d1"><div class="pillar-num" data-i18n="how1.num">01</div><div class="pillar-title" data-i18n="how1.title">Talep &amp; Kapsam</div><p class="pillar-body" data-i18n="how1.body">Proje ihtiyacınızı ve teknik kapsamı birlikte netleştiririz.</p></div>
+      <div class="pillar rv d2"><div class="pillar-num" data-i18n="how2.num">02</div><div class="pillar-title" data-i18n="how2.title">Tedarikçi Eşleştirme</div><p class="pillar-body" data-i18n="how2.body">Doğrulanmış ağımızdan uygun üreticileri belirler, teklifleri tek dosyada konsolide ederiz.</p></div>
+      <div class="pillar rv d3"><div class="pillar-num" data-i18n="how3.num">03</div><div class="pillar-title" data-i18n="how3.title">Koordinasyon &amp; Şeffaflık</div><p class="pillar-body" data-i18n="how3.body">Kalite, termin, lojistik ve dokümantasyon sürecini şeffafça yönetiriz.</p></div>
+      <div class="pillar rv d4"><div class="pillar-num" data-i18n="how4.num">04</div><div class="pillar-title" data-i18n="how4.title">Teslim &amp; Destek</div><p class="pillar-body" data-i18n="how4.body">Devreye alma sonrası teknik destek ve raporlama sağlarız.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     WHY ZYT — 5 DIFFERENTIATORS
+════════════════════════════════════ -->
+<div class="block-sep"></div>
+<section id="why" class="sec sec-dark" style="background:#0A2540">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="g2" style="margin-bottom:48px">
+      <div class="rv"><div class="sec-num" data-i18n="why.num">§ 06 / Neden ZYT</div></div>
+      <div class="rv d1"><h2 class="sec-title-d" data-i18n="why.title">Bizi farklı kılan beş şey.</h2></div>
+    </div>
+    <div class="pil-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      <div class="rv d1"><div class="pillar-num" style="color:#E87722" data-i18n="w1.num">01</div><div class="pillar-title" style="color:#fff" data-i18n="w1.title">Dikey Derinlik</div><p class="pillar-body" style="color:rgba(255,255,255,.55)" data-i18n="w1.body">Genel sourcing değil — beton, galvaniz, atıktan enerji ve çelik dikeylerinde teknik dil ve tedarikçi derinliği.</p></div>
+      <div class="rv d2"><div class="pillar-num" style="color:#E87722" data-i18n="w2.num">02</div><div class="pillar-title" style="color:#fff" data-i18n="w2.title">MENA &amp; Afrika Köprüsü</div><p class="pillar-body" style="color:rgba(255,255,255,.55)" data-i18n="w2.body">Arapça içerik ve MENA ihale/kültür akıcılığıyla kurduğumuz gerçek bir köprü.</p></div>
+      <div class="rv d3"><div class="pillar-num" style="color:#E87722" data-i18n="w3.num">03</div><div class="pillar-title" style="color:#fff" data-i18n="w3.title">Şeffaflık = Güven</div><p class="pillar-body" style="color:rgba(255,255,255,.55)" data-i18n="w3.body">Rolümüzü ve nasıl kazandığımızı açıkça paylaşan bir partner.</p></div>
+      <div class="rv d4"><div class="pillar-num" style="color:#E87722" data-i18n="w4.num">04</div><div class="pillar-title" style="color:#fff" data-i18n="w4.title">Tek Muhatap, Çok Kalemli Proje</div><p class="pillar-body" style="color:rgba(255,255,255,.55)" data-i18n="w4.body">Beton, çelik, galvaniz ve enerji yatırımınızı tek yönetilen pakette, tek sözleşmede topluyoruz.</p></div>
+      <div class="rv d5"><div class="pillar-num" style="color:#E87722" data-i18n="w5.num">05</div><div class="pillar-title" style="color:#fff" data-i18n="w5.title">Doğrulanmış 1.000+ Tedarikçi Ağı</div><p class="pillar-body" style="color:rgba(255,255,255,.55)" data-i18n="w5.body">Kurucumuzun gerçek satınalma sicili üzerine kurulu, abartısız kredibilite motoru.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SUPPLIER NETWORK & TRANSPARENT MODEL
+════════════════════════════════════ -->
+<div class="block-sep"></div>
+<section id="network" class="sec sec-light">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="g2">
+      <div><div class="sec-num rv" data-i18n="net.num">§ 07 / Tedarikçi Ağımız &amp; Şeffaf Model</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
+      <div class="rv d2">
+        <h2 class="sec-title-l" style="margin-bottom:14px" data-i18n="net.title">Türk üreticileri temsil ediyoruz — bunu şeffaf yapıyoruz.</h2>
+        <p class="intro-text-l" style="font-size:clamp(1.05rem,1.6vw,1.3rem)" data-i18n="net.body">1.000+ doğrulanmış Türk tedarikçiden oluşan ağımızla çalışıyoruz. Rolümüzü ve nasıl kazandığımızı açıkça paylaşırız; koordinasyon bedelimiz projeye özel netleştirilir.</p>
+        <!-- TODO: Burcu — gelir modeli kesin seçimi (şeffaf koordinasyon bedeli / açıklanan marj) netleşince bu paragraf güncellenecek -->
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════════
      FOOTER
@@ -1825,12 +1882,13 @@ document.querySelectorAll('.f-inp').forEach(el=>{
 /* ── i18n ─────────────────────────────────── */
 const T = {
   tr: {
-    'nav.group':'ZYT Grup','nav.about':'Hakkımızda','nav.companies':'Şirketlerimiz','nav.sectors':'Sektörler',
+    'nav.group':'ZYT Grup','nav.about':'Hakkımızda','nav.companies':'Uzmanlık Alanlarımız','nav.sectors':'Sektörler',
     'nav.contact':'İletişim','nav.menu':'Menü','ham.label':'Menüyü Aç',
     'dd.about':'Hakkımızda','dd.docs':'Belgelerimiz','dd.refs':'Referanslar','dd.academy':'Akademi',
     'mob.projects':'Projeler','mob.cta':'Teklif Al →',
-    'hero.eyebrow':'// Ankara · Türkiye · Şirketlerimiz · Küresel Operasyonlar',
-    'hero.h1':'KÜRESEL ÖLÇEKLİ<br><span class="accent">ENDÜSTRİYEL</span> MÜKEMMELİYET',
+    'hero.eyebrow':'// Ankara · Türkiye · Teknik Tedarik Partneri · MENA & Afrika',
+    'hero.h1':'TEKNİK TEDARİK &<br><span class="accent">PROJE KOORDİNASYON</span> PARTNERİ',
+    'hero.sub':'Türk uzman üreticilerin mühendislik gücünü, MENA ve Afrika projeleri için, şeffaf ve tek muhatap bir teknik tedarik &amp; koordinasyon modelinde birleştiren partner.',
     'hero.eco':'Ekosistemimiz','hero.scroll':'Kaydır',
     'tab.1':'Beton Santralleri','tab.2':'Atık-Enerji Dönüşüm','tab.3':'Galvaniz Tesisleri',
     'tab.4':'Tedarik Zinciri','tab.5':'Anahtar Teslim',
@@ -1845,12 +1903,25 @@ const T = {
     'btn.contact':'Bize Ulaşın',
     'co.num':'§ 02 / Uzmanlık Alanlarımız','co.title':'Uzmanlaşmış yapı. Bütünleşik güç.',
     'co.sub':'Dört sektörde derin uzmanlık, tek çatı altında küresel proje kapasitesi.',
+    'how.num':'§ 05 / Nasıl Çalışırız','how.title':'Talepten teslime, tek muhatap.',
+    'how1.num':'01','how1.title':'Talep &amp; Kapsam','how1.body':'Proje ihtiyacınızı ve teknik kapsamı birlikte netleştiririz.',
+    'how2.num':'02','how2.title':'Tedarikçi Eşleştirme','how2.body':'Doğrulanmış ağımızdan uygun üreticileri belirler, teklifleri tek dosyada konsolide ederiz.',
+    'how3.num':'03','how3.title':'Koordinasyon &amp; Şeffaflık','how3.body':'Kalite, termin, lojistik ve dokümantasyon sürecini şeffafça yönetiriz.',
+    'how4.num':'04','how4.title':'Teslim &amp; Destek','how4.body':'Devreye alma sonrası teknik destek ve raporlama sağlarız.',
+    'why.num':'§ 06 / Neden ZYT','why.title':'Bizi farklı kılan beş şey.',
+    'w1.num':'01','w1.title':'Dikey Derinlik','w1.body':'Genel sourcing değil — beton, galvaniz, atıktan enerji ve çelik dikeylerinde teknik dil ve tedarikçi derinliği.',
+    'w2.num':'02','w2.title':'MENA &amp; Afrika Köprüsü','w2.body':'Arapça içerik ve MENA ihale/kültür akıcılığıyla kurduğumuz gerçek bir köprü.',
+    'w3.num':'03','w3.title':'Şeffaflık = Güven','w3.body':'Rolümüzü ve nasıl kazandığımızı açıkça paylaşan bir partner.',
+    'w4.num':'04','w4.title':'Tek Muhatap, Çok Kalemli Proje','w4.body':'Beton, çelik, galvaniz ve enerji yatırımınızı tek yönetilen pakette, tek sözleşmede topluyoruz.',
+    'w5.num':'05','w5.title':'Doğrulanmış 1.000+ Tedarikçi Ağı','w5.body':'Kurucumuzun gerçek satınalma sicili üzerine kurulu, abartısız kredibilite motoru.',
+    'net.num':'§ 07 / Tedarikçi Ağımız &amp; Şeffaf Model','net.title':'Türk üreticileri temsil ediyoruz — bunu şeffaf yapıyoruz.',
+    'net.body':'1.000+ doğrulanmış Türk tedarikçiden oluşan ağımızla çalışıyoruz. Rolümüzü ve nasıl kazandığımızı açıkça paylaşırız; koordinasyon bedelimiz projeye özel netleştirilir.',
     'co1.tag':'Beton Santralleri','co1.desc':'Sabit, mobil ve kompakt beton santrali tasarımı, kurulumu ve devreye alma.',
     'co2.tag':'Atık-Enerji Dönüşüm','co2.desc':'Katı atık, biyogaz ve endüstriyel atıktan elektrik ve ısı üretim tesisleri.',
     'co3.tag':'Galvaniz Tesisleri','co3.desc':'Sıcak daldırma galvaniz tesis kurulumu, mekanizasyon ve proses optimizasyonu.',
-    'co4.name':'ZYT Mühendislik','co4.tag':'Tedarik & Anahtar Teslim',
+    'co4.name':'Tedarik Zinciri Yönetimi','co4.tag':'Tedarik & Anahtar Teslim',
     'co4.desc':'Proje yönetimi, tedarik zinciri ve anahtar teslim mühendislik projeleri.',
-    'co5.name':'ZYT Makina','co5.tag':'Çelik Yapı & Mekanik İmalat',
+    'co5.name':'Çelik Yapı & Mekanik İmalat','co5.tag':'Çelik Yapı & Mekanik İmalat',
     'co5.desc':'Atık dönüşüm ve geri dönüşüm tesisleri için çelik konstrüksiyon imalatı, mekanik montaj ve anahtar teslim kurulum.',
     's1.lbl':'Doğrulanmış Tedarikçi Ağı','s2.lbl':'Hedef Pazarlar','s2.val':'MENA & Afrika',
     'plant.num':'§ 03 / Beton Santrali','plant.title':'Sıfırdan tam kapasiteye.',
@@ -1873,13 +1944,13 @@ const T = {
     'prj.btn':'Tüm Projeleri Gör',
     'ct.num':'§ 05 / İletişim',
     'ct.h2':'Projenizi<br><span style="color:#2874B2;font-weight:500">hayata geçirelim.</span>',
-    'ct.p':'Şirketlerimizden biriyle proje geliştirmek için 48 saat içinde uzman ekibimizden yanıt alırsınız.',
+    'ct.p':'Projenizi bizimle paylaşın — 48 saat içinde uzman ekibimizden yanıt alırsınız.',
     'ph.tag':'Telefon','em.tag':'E-posta','ad.tag':'Adres','ad.val':'Ankara · Türkiye',
     'form.nl':'Ad Soyad','form.nph':'Adınız','form.cl':'Şirket','form.cph':'Şirket Adı',
     'form.el':'E-posta','form.eph':'email@sirket.com',
     'form.sl':'İlgili Şirket / Sektör','form.sph':'Seçin',
-    'opt.1':'ZYT Beton — Beton Santralleri','opt.2':'ZYT Enerji — Atık-Enerji Dönüşüm',
-    'opt.3':'ZYT Galvaniz — Galvaniz Tesisleri','opt.4':'ZYT Mühendislik — Tedarik & Anahtar Teslim',
+    'opt.1':'Beton Santralleri','opt.2':'Atık-Enerji Dönüşümü',
+    'opt.3':'Galvaniz Tesisleri','opt.4':'Tedarik Zinciri Yönetimi',
     'form.ml':'Proje Özeti','form.mph':'Projenizi kısaca anlatın...',
     'form.sub':'Gönder','form.note':'48 saat içinde yanıt',
     'fp.policy':'Politika','fp.privacy':'Gizlilik','fp.career':'Kariyer',
@@ -1887,12 +1958,13 @@ const T = {
     'ticker':['Beton Santralleri','Atık-Enerji Dönüşüm','Galvaniz Tesisleri','Tedarik Zinciri','Anahtar Teslim Projeler','ZYT Global Industry']
   },
   en: {
-    'nav.group':'ZYT Group','nav.about':'About','nav.companies':'Companies','nav.sectors':'Sectors',
+    'nav.group':'ZYT Group','nav.about':'About','nav.companies':'Areas of Expertise','nav.sectors':'Sectors',
     'nav.contact':'Contact','nav.menu':'Menu','ham.label':'Open Menu',
     'dd.about':'About Us','dd.docs':'Our Documents','dd.refs':'References','dd.academy':'Academy',
     'mob.projects':'Projects','mob.cta':'Request Quote',
-    'hero.eyebrow':'// Ankara · Turkey · Our Companies · Global Operations',
-    'hero.h1':'GLOBAL-SCALE<br><span class="accent">INDUSTRIAL</span> EXCELLENCE',
+    'hero.eyebrow':'// Ankara · Turkey · Technical Sourcing Partner · MENA & Africa',
+    'hero.h1':'TECHNICAL SOURCING &<br><span class="accent">PROJECT COORDINATION</span> PARTNER',
+    'hero.sub':'A partner bringing together the engineering power of expert Turkish manufacturers for MENA and Africa projects, in a transparent, single-point-of-contact technical sourcing &amp; coordination model.',
     'hero.eco':'Our Ecosystem','hero.scroll':'Scroll',
     'tab.1':'Concrete Plants','tab.2':'Waste-Energy Conversion','tab.3':'Galvanizing Plants',
     'tab.4':'Supply Chain','tab.5':'Turnkey Projects',
@@ -1907,12 +1979,25 @@ const T = {
     'btn.contact':'Contact Us',
     'co.num':'§ 02 / Areas of Expertise','co.title':'Specialized structure. Unified power.',
     'co.sub':'Deep expertise across four sectors, global project capacity under one roof.',
+    'how.num':'§ 05 / How We Work','how.title':'From request to delivery, one point of contact.',
+    'how1.num':'01','how1.title':'Request &amp; Scope','how1.body':'We clarify your project needs and technical scope together.',
+    'how2.num':'02','how2.title':'Supplier Matching','how2.body':'We identify the right manufacturers from our verified network and consolidate quotes into a single file.',
+    'how3.num':'03','how3.title':'Coordination &amp; Transparency','how3.body':'We transparently manage quality, schedule, logistics and documentation.',
+    'how4.num':'04','how4.title':'Delivery &amp; Support','how4.body':'We provide technical support and reporting after commissioning.',
+    'why.num':'§ 06 / Why ZYT','why.title':'Five things that set us apart.',
+    'w1.num':'01','w1.title':'Vertical Depth','w1.body':'Not generalist sourcing — technical fluency and supplier depth in concrete, galvanizing, waste-to-energy and steel verticals.',
+    'w2.num':'02','w2.title':'MENA &amp; Africa Bridge','w2.body':'A real bridge built through Arabic content and fluency in MENA tendering and culture.',
+    'w3.num':'03','w3.title':'Transparency = Trust','w3.body':'A partner that openly shares its role and how it earns.',
+    'w4.num':'04','w4.title':'Single Point of Contact, Multi-Line Projects','w4.body':'We bring your concrete, steel, galvanizing and energy investment together in one managed package, one contract.',
+    'w5.num':'05','w5.title':'Verified Network of 1,000+ Suppliers','w5.body':'A no-exaggeration credibility engine built on our founder\'s real procurement track record.',
+    'net.num':'§ 07 / Our Supplier Network &amp; Transparent Model','net.title':'We represent Turkish manufacturers — and we do it transparently.',
+    'net.body':'We work with our network of 1,000+ verified Turkish suppliers. We openly share our role and how we earn; our coordination fee is clarified per project.',
     'co1.tag':'Concrete Plants','co1.desc':'Design, installation and commissioning of stationary, mobile and compact concrete plants.',
     'co2.tag':'Waste-Energy Conversion','co2.desc':'Power and heat generation plants from solid waste, biogas and industrial by-products.',
     'co3.tag':'Galvanizing Plants','co3.desc':'Engineering design, mechanization, installation and process optimization of hot-dip galvanizing plants.',
-    'co4.name':'ZYT Engineering','co4.tag':'Supply & Turnkey',
+    'co4.name':'Supply Chain Management','co4.tag':'Supply & Turnkey',
     'co4.desc':'Project management, supply chain and turnkey engineering projects.',
-    'co5.name':'ZYT Makina','co5.tag':'Steel Structure & Fabrication',
+    'co5.name':'Steel Structure & Mechanical Fabrication','co5.tag':'Steel Structure & Fabrication',
     'co5.desc':'Steel structure fabrication, mechanical assembly and turnkey installation for waste conversion and recycling facilities.',
     's1.lbl':'Verified Supplier Network','s2.lbl':'Target Markets','s2.val':'MENA & Africa',
     'plant.num':'§ 03 / Concrete Plant','plant.title':'From zero to full capacity.',
@@ -1935,13 +2020,13 @@ const T = {
     'prj.btn':'View All Projects',
     'ct.num':'§ 05 / Contact',
     'ct.h2':'Let\'s bring your<br><span style="color:#2874B2;font-weight:500">project to life.</span>',
-    'ct.p':'Contact our expert team to develop a project with one of our companies. We respond within 48 hours.',
+    'ct.p':'Share your project with us — our expert team responds within 48 hours.',
     'ph.tag':'Phone','em.tag':'Email','ad.tag':'Address','ad.val':'Ankara · Turkey',
     'form.nl':'Full Name','form.nph':'Your Name','form.cl':'Company','form.cph':'Company Name',
     'form.el':'Email','form.eph':'email@company.com',
     'form.sl':'Relevant Company / Sector','form.sph':'Select',
-    'opt.1':'ZYT Beton — Concrete Plants','opt.2':'ZYT Enerji — Waste-Energy Conversion',
-    'opt.3':'ZYT Galvaniz — Galvanizing Plants','opt.4':'ZYT Engineering — Supply & Turnkey',
+    'opt.1':'Concrete Plants','opt.2':'Waste-to-Energy Conversion',
+    'opt.3':'Galvanizing Plants','opt.4':'Supply Chain Management',
     'form.ml':'Project Summary','form.mph':'Briefly describe your project...',
     'form.sub':'Send','form.note':'Response within 48 hours',
     'fp.policy':'Policy','fp.privacy':'Privacy','fp.career':'Careers',
@@ -1949,12 +2034,13 @@ const T = {
     'ticker':['Concrete Batching Plants','Waste-Energy Conversion','Galvanizing Facilities','Supply Chain','Turnkey Projects','ZYT Global Industry']
   },
   ar: {
-    'nav.group':'مجموعة ZYT','nav.about':'من نحن','nav.companies':'شركاتنا','nav.sectors':'القطاعات',
+    'nav.group':'مجموعة ZYT','nav.about':'من نحن','nav.companies':'مجالات خبرتنا','nav.sectors':'القطاعات',
     'nav.contact':'اتصل بنا','nav.menu':'القائمة','ham.label':'فتح القائمة',
     'dd.about':'من نحن','dd.docs':'وثائقنا','dd.refs':'المراجع','dd.academy':'الأكاديمية',
     'mob.projects':'المشاريع','mob.cta':'طلب عرض سعر',
-    'hero.eyebrow':'// أنقرة · تركيا · شركاتنا · العمليات العالمية',
-    'hero.h1':'على المستوى العالمي<br><span class="accent">التميز الصناعي</span>',
+    'hero.eyebrow':'// أنقرة · تركيا · شريك التوريد التقني · الشرق الأوسط وأفريقيا',
+    'hero.h1':'شريك التوريد التقني<br><span class="accent">وتنسيق المشاريع</span>',
+    'hero.sub':'شريك يجمع القوة الهندسية للمصنّعين الأتراك الخبراء لمشاريع الشرق الأوسط وأفريقيا، ضمن نموذج توريد وتنسيق تقني شفاف وبمرجعية واحدة.',
     'hero.eco':'نظامنا البيئي','hero.scroll':'تمرير',
     'tab.1':'محطات الخرسانة','tab.2':'تحويل النفايات إلى طاقة','tab.3':'مصانع الجلفنة',
     'tab.4':'سلسلة الإمداد','tab.5':'مشاريع تسليم المفتاح',
@@ -1969,12 +2055,25 @@ const T = {
     'btn.contact':'تواصل معنا',
     'co.num':'02 / مجالات خبرتنا','co.title':'هيكل متخصص. قوة موحدة.',
     'co.sub':'خبرة عميقة في أربعة قطاعات، وطاقة مشاريع عالمية تحت سقف واحد.',
+    'how.num':'05 / كيف نعمل','how.title':'من الطلب إلى التسليم، بمرجعية واحدة.',
+    'how1.num':'01','how1.title':'الطلب والنطاق','how1.body':'نوضّح معاً احتياجات مشروعك والنطاق الفني.',
+    'how2.num':'02','how2.title':'مطابقة الموردين','how2.body':'نحدد المصنّعين المناسبين من شبكتنا المعتمدة وندمج العروض في ملف واحد.',
+    'how3.num':'03','how3.title':'التنسيق والشفافية','how3.body':'ندير الجودة والجدول الزمني واللوجستيات والتوثيق بشفافية.',
+    'how4.num':'04','how4.title':'التسليم والدعم','how4.body':'نقدم الدعم الفني والتقارير بعد التشغيل.',
+    'why.num':'06 / لماذا ZYT','why.title':'خمسة أشياء تميّزنا.',
+    'w1.num':'01','w1.title':'عمق قطاعي','w1.body':'ليس توريداً عاماً — بل عمق فني ومعرفة موردين في قطاعات الخرسانة والجلفنة وتحويل النفايات إلى طاقة والفولاذ.',
+    'w2.num':'02','w2.title':'جسر الشرق الأوسط وأفريقيا','w2.body':'جسر حقيقي مبني على محتوى عربي وإلمام بثقافة ومناقصات المنطقة.',
+    'w3.num':'03','w3.title':'الشفافية = الثقة','w3.body':'شريك يشارك بصراحة دوره وكيفية تحقيقه للأرباح.',
+    'w4.num':'04','w4.title':'مرجعية واحدة لمشاريع متعددة البنود','w4.body':'نجمع استثمارك في الخرسانة والفولاذ والجلفنة والطاقة في حزمة واحدة مُدارة وعقد واحد.',
+    'w5.num':'05','w5.title':'شبكة معتمدة من أكثر من 1.000 مورد','w5.body':'محرك مصداقية بلا مبالغة، مبني على سجل الشراء الحقيقي لمؤسسنا.',
+    'net.num':'07 / شبكة موردينا والنموذج الشفاف','net.title':'نمثّل المصنّعين الأتراك — وبشفافية.',
+    'net.body':'نعمل مع شبكتنا التي تضم أكثر من 1.000 مورد تركي معتمد. نشارك بصراحة دورنا وكيفية تحقيقنا للأرباح؛ تُحدَّد رسوم التنسيق لكل مشروع على حدة.',
     'co1.tag':'محطات الخرسانة','co1.desc':'تصميم وتركيب وتشغيل محطات الخرسانة الثابتة والمتنقلة والمدمجة.',
     'co2.tag':'تحويل النفايات إلى طاقة','co2.desc':'محطات توليد الكهرباء والحرارة من النفايات الصلبة والغاز الحيوي.',
     'co3.tag':'مصانع الجلفنة','co3.desc':'التصميم الهندسي والميكنة والتركيب وتحسين عمليات مصانع الجلفنة.',
-    'co4.name':'ZYT للهندسة','co4.tag':'التوريد وتسليم المفتاح',
+    'co4.name':'إدارة سلسلة التوريد','co4.tag':'التوريد وتسليم المفتاح',
     'co4.desc':'إدارة المشاريع وسلسلة التوريد ومشاريع الهندسة المتكاملة.',
-    'co5.name':'ZYT ماكينا','co5.tag':'هياكل فولاذية وتصنيع ميكانيكي',
+    'co5.name':'الهياكل الفولاذية والتصنيع الميكانيكي','co5.tag':'هياكل فولاذية وتصنيع ميكانيكي',
     'co5.desc':'تصنيع الهياكل الفولاذية والتجميع الميكانيكي وتركيب المنشآت لمعالجة النفايات وإعادة التدوير.',
     's1.lbl':'شبكة موردين معتمدة','s2.lbl':'الأسواق المستهدفة','s2.val':'الشرق الأوسط وشمال أفريقيا',
     'plant.num':'03 / محطة الخرسانة','plant.title':'من الصفر إلى الطاقة الكاملة.',
@@ -1997,13 +2096,13 @@ const T = {
     'prj.btn':'عرض جميع المشاريع',
     'ct.num':'§ 05 / اتصل بنا',
     'ct.h2':'لنحوّل<br><span style="color:#2874B2;font-weight:500">مشروعك إلى واقع.</span>',
-    'ct.p':'تواصل مع فريق خبرائنا لتطوير مشروع مع إحدى شركاتنا. نرد خلال 48 ساعة.',
+    'ct.p':'شاركنا مشروعك — سيرد فريقنا المتخصص خلال 48 ساعة.',
     'ph.tag':'الهاتف','em.tag':'البريد الإلكتروني','ad.tag':'العنوان','ad.val':'أنقرة · تركيا',
     'form.nl':'الاسم الكامل','form.nph':'اسمك','form.cl':'الشركة','form.cph':'اسم الشركة',
     'form.el':'البريد الإلكتروني','form.eph':'email@company.com',
     'form.sl':'الشركة / القطاع المعني','form.sph':'اختر',
-    'opt.1':'ZYT بيتون — محطات الخرسانة','opt.2':'ZYT للطاقة — تحويل النفايات',
-    'opt.3':'ZYT للجلفنة — مصانع الجلفنة','opt.4':'ZYT للهندسة — التوريد وتسليم المفتاح',
+    'opt.1':'محطات الخرسانة','opt.2':'تحويل النفايات إلى طاقة',
+    'opt.3':'مصانع الجلفنة','opt.4':'إدارة سلسلة التوريد',
     'form.ml':'ملخص المشروع','form.mph':'صف مشروعك باختصار...',
     'form.sub':'إرسال','form.note':'رد خلال 48 ساعة',
     'fp.policy':'السياسة','fp.privacy':'الخصوصية','fp.career':'الوظائف',
