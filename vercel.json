@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/atik-donusum.html",
+      "destination": "/celik-yapi-mekanik-imalat.html",
+      "permanent": true
+    }
+  ]
+}
