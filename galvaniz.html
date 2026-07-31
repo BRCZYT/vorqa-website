@@ -525,7 +525,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
 
 <!-- MOBILE NAV -->
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px">Galvaniz Tesisleri</div>
+  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px" data-i18n="co3.tag">Galvaniz Tesisleri</div>
   <div class="mob-dd-wrap">
     <button class="mob-link mob-dd-tog" onclick="toggleMobDd(this)"><span data-i18n="nav.group">Vorqa Grup</span> <span class="mob-dd-arr">+</span></button>
     <div class="mob-dd-inner">
@@ -614,7 +614,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
           <div class="spec-item"><div class="spec-k" data-i18n="spec.cap">Kapasite</div><div class="spec-v" data-i18n="p01.cap">2–6 ton/sa</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.tank">Kazan Uzunluğu</div><div class="spec-v" data-i18n="p01.tank">7–16 m</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.temp">Sıcaklık</div><div class="spec-v">450–460 °C</div></div>
-          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v">SCADA / PLC</div></div>
+          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v" data-i18n="p01.ctrl">SCADA / PLC</div></div>
         </div>
       </div>
     </div>
@@ -633,7 +633,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
           <div class="spec-item"><div class="spec-k" data-i18n="spec.basket">Sepet Kapasitesi</div><div class="spec-v" data-i18n="p02.cap">100–500 kg/sefer</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.rpm">Santrifüj Hızı</div><div class="spec-v">200–600 rpm</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.temp">Sıcaklık</div><div class="spec-v">450–460 °C</div></div>
-          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v">PLC Auto</div></div>
+          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v" data-i18n="p02.ctrl">PLC Auto</div></div>
         </div>
       </div>
     </div>
@@ -652,7 +652,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
           <div class="spec-item"><div class="spec-k" data-i18n="spec.pipe">Boru Çapı</div><div class="spec-v">DN15–DN200</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.len">Uzunluk</div><div class="spec-v">1–12 m</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.cap">Kapasite</div><div class="spec-v" data-i18n="p03.cap">1–4 ton/sa</div></div>
-          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v">SCADA</div></div>
+          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v" data-i18n="p03.ctrl">SCADA</div></div>
         </div>
       </div>
     </div>
@@ -669,7 +669,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
         <div class="prod-desc" data-i18n="p04.desc">Vinç sistemleri, konveyörler ve otomatik askı transferi ile hattan hatta kesintisiz malzeme akışı. Özel yük kapasitelerine göre tasarım.</div>
         <div class="prod-specs">
           <div class="spec-item"><div class="spec-k" data-i18n="spec.load">Taşıma Kapasitesi</div><div class="spec-v" data-i18n="p04.load">500 kg–5 ton</div></div>
-          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v">Tam Otomatik</div></div>
+          <div class="spec-item"><div class="spec-k" data-i18n="spec.ctrl">Kontrol</div><div class="spec-v" data-i18n="p04.ctrl">Tam Otomatik</div></div>
         </div>
       </div>
     </div>
@@ -702,7 +702,7 @@ html[dir="rtl"] .marquee-track{animation-direction:reverse}
         <div class="prod-title" data-i18n="p06.title">Dekapaj & Flux Hattı</div>
         <div class="prod-desc" data-i18n="p06.desc">Asit dekapaj tankları, durulama banyoları ve flux banyosu — kaplama kalitesini belirleyen kritik ön işlem ekipmanı. PP/HDPE veya çelik konstrüksiyon seçeneği.</div>
         <div class="prod-specs">
-          <div class="spec-item"><div class="spec-k" data-i18n="spec.mat">Tank Malzeme</div><div class="spec-v">PP / HDPE / Çelik</div></div>
+          <div class="spec-item"><div class="spec-k" data-i18n="spec.mat">Tank Malzeme</div><div class="spec-v" data-i18n="p06.mat">PP / HDPE / Çelik</div></div>
           <div class="spec-item"><div class="spec-k" data-i18n="spec.heat">Isıtma</div><div class="spec-v" data-i18n="p06.heat">Buhar / Elektrik</div></div>
         </div>
       </div>
@@ -1281,12 +1281,12 @@ const T = {
     'hero.btn1':'Ürünleri İncele','hero.btn2':'Teklif Al →',
     'hstat.1':'Doğrulanmış Tedarikçi','hstat.3':'Hat Kapasitesi (ton/sa)',
     's01.num':'§ 01 — Ürünler','s01.title':'Tesis Sistemleri','s01.sub':'Sıcak daldırma, merkezkaç ve boru galvaniz sistemleri — her kapasiteye ve uygulama ihtiyacına özel mühendislik.',
-    'p01.tag':'// Batch Galvaniz','p01.title':'Sıcak Daldırma Galvaniz Tesisi','p01.desc':'Çelik konstrüksiyonlar için tam otomatik flux, kurutma, daldırma ve soğutma hattı. SCADA entegrasyonu ile anlık proses izleme.','p01.cap':'2–6 ton/sa','p01.tank':'7–16 m',
-    'p02.tag':'// Küçük Parça','p02.title':'Merkezkaç Galvaniz Tesisi','p02.desc':'Cıvata, somun, vida ve küçük profillerin galvanizlenmesi için döner sepet sistemi. Minimum çinko sarfiyatı ile yüksek verim.','p02.cap':'100–500 kg/sefer',
-    'p03.tag':'// Boru & Profil','p03.title':'Boru Galvaniz Tesisi','p03.desc':'İç ve dış yüzey galvanizleme için özel tasarlanmış hat. DN15\'ten DN200\'e kadar çap aralığı, sürekli hat konfigürasyonu.','p03.cap':'1–4 ton/sa',
-    'p04.tag':'// Lojistik','p04.title':'Malzeme Taşıma Sistemleri','p04.desc':'Vinç sistemleri, konveyörler ve otomatik askı transferi ile hattan hatta kesintisiz malzeme akışı.','p04.load':'500 kg–5 ton',
+    'p01.tag':'// Batch Galvaniz','p01.title':'Sıcak Daldırma Galvaniz Tesisi','p01.desc':'Çelik konstrüksiyonlar için tam otomatik flux, kurutma, daldırma ve soğutma hattı. SCADA entegrasyonu ile anlık proses izleme.','p01.cap':'2–6 ton/sa','p01.tank':'7–16 m','p01.ctrl':'SCADA / PLC',
+    'p02.tag':'// Küçük Parça','p02.title':'Merkezkaç Galvaniz Tesisi','p02.desc':'Cıvata, somun, vida ve küçük profillerin galvanizlenmesi için döner sepet sistemi. Minimum çinko sarfiyatı ile yüksek verim.','p02.cap':'100–500 kg/sefer','p02.ctrl':'PLC Auto',
+    'p03.tag':'// Boru & Profil','p03.title':'Boru Galvaniz Tesisi','p03.desc':'İç ve dış yüzey galvanizleme için özel tasarlanmış hat. DN15\'ten DN200\'e kadar çap aralığı, sürekli hat konfigürasyonu.','p03.cap':'1–4 ton/sa','p03.ctrl':'SCADA',
+    'p04.tag':'// Lojistik','p04.title':'Malzeme Taşıma Sistemleri','p04.desc':'Vinç sistemleri, konveyörler ve otomatik askı transferi ile hattan hatta kesintisiz malzeme akışı.','p04.load':'500 kg–5 ton','p04.ctrl':'Tam Otomatik',
     'p05.tag':'// Arıtma & Filtre','p05.title':'Çevre Kontrol Ekipmanları','p05.desc':'Asit buharı arıtma, çinko tozu filtrasyonu ve atık asit nötralizasyon sistemleri. Yerel ve AB çevre standartlarına tam uyum.','p05.filter':'Islak + Torba',
-    'p06.tag':'// Ön İşlem','p06.title':'Dekapaj & Flux Hattı','p06.desc':'Asit dekapaj tankları, durulama banyoları ve flux banyosu — kaplama kalitesini belirleyen kritik ön işlem ekipmanı.','p06.heat':'Buhar / Elektrik',
+    'p06.tag':'// Ön İşlem','p06.title':'Dekapaj & Flux Hattı','p06.desc':'Asit dekapaj tankları, durulama banyoları ve flux banyosu — kaplama kalitesini belirleyen kritik ön işlem ekipmanı.','p06.heat':'Buhar / Elektrik','p06.mat':'PP / HDPE / Çelik',
     'spec.cap':'Kapasite','spec.tank':'Kazan Uzunluğu','spec.temp':'Sıcaklık','spec.ctrl':'Kontrol','spec.basket':'Sepet Kapasitesi','spec.rpm':'Santrifüj Hızı','spec.pipe':'Boru Çapı','spec.len':'Uzunluk','spec.load':'Taşıma Kapasitesi','spec.std':'Standart','spec.filter':'Filtre Tipi','spec.mat':'Tank Malzeme','spec.heat':'Isıtma',
     's02.num':'§ 02 — Bileşenler','s02.title':'Kritik Sistem Bileşenleri','s02.sub':'Her tesisin performansını belirleyen çinko kazanları, otomasyon sistemleri ve kren altyapısı.',
     'c01.title':'Çinko Kazanları','c01.body':'EN 1461 standardına uygun özel tasarım çelik kazanlar. Uzun ömür için kalın cidarlı yapı ve optimize ısı dağılımı.','c01.badge':'EN 1461 Uyumlu',
@@ -1324,12 +1324,12 @@ const T = {
     'hero.btn1':'Explore Products','hero.btn2':'Request Quote →',
     'hstat.1':'Verified Suppliers','hstat.3':'Line Capacity (t/h)',
     's01.num':'§ 01 — Products','s01.title':'Plant Systems','s01.sub':'Hot-dip, centrifugal and pipe galvanizing systems — custom engineering for every capacity and application.',
-    'p01.tag':'// Batch Galvanizing','p01.title':'Hot-Dip Galvanizing Plant','p01.desc':'Fully automated flux, drying, dipping and cooling line for steel structures. SCADA integration for real-time process monitoring.','p01.cap':'2–6 t/h','p01.tank':'7–16 m',
-    'p02.tag':'// Small Parts','p02.title':'Centrifugal Galvanizing Plant','p02.desc':'Rotating basket system for galvanizing bolts, nuts, screws and small profiles. High yield with minimum zinc consumption.','p02.cap':'100–500 kg/batch',
-    'p03.tag':'// Pipe & Profile','p03.title':'Pipe Galvanizing Plant','p03.desc':'Dedicated line for internal and external surface galvanizing. Diameter range DN15 to DN200, continuous line configuration.','p03.cap':'1–4 t/h',
-    'p04.tag':'// Logistics','p04.title':'Material Handling Systems','p04.desc':'Crane systems, conveyors and automatic jig transfer for continuous material flow between lines.','p04.load':'500 kg–5 t',
+    'p01.tag':'// Batch Galvanizing','p01.title':'Hot-Dip Galvanizing Plant','p01.desc':'Fully automated flux, drying, dipping and cooling line for steel structures. SCADA integration for real-time process monitoring.','p01.cap':'2–6 t/h','p01.tank':'7–16 m','p01.ctrl':'SCADA / PLC',
+    'p02.tag':'// Small Parts','p02.title':'Centrifugal Galvanizing Plant','p02.desc':'Rotating basket system for galvanizing bolts, nuts, screws and small profiles. High yield with minimum zinc consumption.','p02.cap':'100–500 kg/batch','p02.ctrl':'PLC Auto',
+    'p03.tag':'// Pipe & Profile','p03.title':'Pipe Galvanizing Plant','p03.desc':'Dedicated line for internal and external surface galvanizing. Diameter range DN15 to DN200, continuous line configuration.','p03.cap':'1–4 t/h','p03.ctrl':'SCADA',
+    'p04.tag':'// Logistics','p04.title':'Material Handling Systems','p04.desc':'Crane systems, conveyors and automatic jig transfer for continuous material flow between lines.','p04.load':'500 kg–5 t','p04.ctrl':'Fully Automatic',
     'p05.tag':'// Treatment & Filter','p05.title':'Environmental Control Equipment','p05.desc':'Acid vapor scrubbing, zinc dust filtration and waste acid neutralization. Full compliance with local and EU environmental standards.','p05.filter':'Wet + Bag',
-    'p06.tag':'// Pre-treatment','p06.title':'Pickling & Flux Line','p06.desc':'Acid pickling tanks, rinsing baths and flux bath — the critical pre-treatment equipment that determines coating quality.','p06.heat':'Steam / Electric',
+    'p06.tag':'// Pre-treatment','p06.title':'Pickling & Flux Line','p06.desc':'Acid pickling tanks, rinsing baths and flux bath — the critical pre-treatment equipment that determines coating quality.','p06.heat':'Steam / Electric','p06.mat':'PP / HDPE / Steel',
     'spec.cap':'Capacity','spec.tank':'Kettle Length','spec.temp':'Temperature','spec.ctrl':'Control','spec.basket':'Basket Capacity','spec.rpm':'Centrifuge Speed','spec.pipe':'Pipe Diameter','spec.len':'Length','spec.load':'Load Capacity','spec.std':'Standard','spec.filter':'Filter Type','spec.mat':'Tank Material','spec.heat':'Heating',
     's02.num':'§ 02 — Components','s02.title':'Critical System Components','s02.sub':'Zinc kettles, automation systems and crane infrastructure that define every plant\'s performance.',
     'c01.title':'Zinc Kettles','c01.body':'Custom-designed steel kettles to EN 1461 standard. Heavy-wall construction for longevity and optimized heat distribution.','c01.badge':'EN 1461 Compliant',
@@ -1367,12 +1367,12 @@ const T = {
     'hero.btn1':'استعرض المنتجات','hero.btn2':'طلب عرض سعر →',
     'hstat.1':'مورد معتمد','hstat.3':'طاقة الخط (طن/س)',
     's01.num':'§ 01 — المنتجات','s01.title':'أنظمة المنشأة','s01.sub':'أنظمة الجلفنة بالغمس الحار والطرد المركزي والأنابيب — هندسة مخصصة لكل طاقة وتطبيق.',
-    'p01.tag':'// جلفنة دفعية','p01.title':'منشأة جلفنة بالغمس الحار','p01.desc':'خط تدفق ومعالجة وغمس وتبريد أوتوماتيكي كامل للهياكل الفولاذية. تكامل SCADA لمراقبة العملية الفورية.','p01.cap':'2–6 طن/س','p01.tank':'7–16 م',
-    'p02.tag':'// قطع صغيرة','p02.title':'منشأة جلفنة طرد مركزي','p02.desc':'نظام سلة دوارة لجلفنة البراغي والصواميل والمسامير والمقاطع الصغيرة. إنتاجية عالية باستهلاك أدنى من الزنك.','p02.cap':'100–500 كغ/دفعة',
-    'p03.tag':'// أنابيب وملفات','p03.title':'منشأة جلفنة الأنابيب','p03.desc':'خط مخصص لجلفنة الأسطح الداخلية والخارجية. نطاق القطر من DN15 إلى DN200، تكوين خط مستمر.','p03.cap':'1–4 طن/س',
-    'p04.tag':'// لوجستيات','p04.title':'أنظمة نقل المواد','p04.desc':'أنظمة رافعات وناقلات ونقل علاقات أوتوماتيكي لتدفق مواد مستمر بين الخطوط.','p04.load':'500 كغ–5 طن',
+    'p01.tag':'// جلفنة دفعية','p01.title':'منشأة جلفنة بالغمس الحار','p01.desc':'خط تدفق ومعالجة وغمس وتبريد أوتوماتيكي كامل للهياكل الفولاذية. تكامل SCADA لمراقبة العملية الفورية.','p01.cap':'2–6 طن/س','p01.tank':'7–16 م','p01.ctrl':'SCADA / PLC',
+    'p02.tag':'// قطع صغيرة','p02.title':'منشأة جلفنة طرد مركزي','p02.desc':'نظام سلة دوارة لجلفنة البراغي والصواميل والمسامير والمقاطع الصغيرة. إنتاجية عالية باستهلاك أدنى من الزنك.','p02.cap':'100–500 كغ/دفعة','p02.ctrl':'PLC Auto',
+    'p03.tag':'// أنابيب وملفات','p03.title':'منشأة جلفنة الأنابيب','p03.desc':'خط مخصص لجلفنة الأسطح الداخلية والخارجية. نطاق القطر من DN15 إلى DN200، تكوين خط مستمر.','p03.cap':'1–4 طن/س','p03.ctrl':'SCADA',
+    'p04.tag':'// لوجستيات','p04.title':'أنظمة نقل المواد','p04.desc':'أنظمة رافعات وناقلات ونقل علاقات أوتوماتيكي لتدفق مواد مستمر بين الخطوط.','p04.load':'500 كغ–5 طن','p04.ctrl':'أوتوماتيكي كامل',
     'p05.tag':'// معالجة وترشيح','p05.title':'معدات التحكم البيئي','p05.desc':'معالجة أبخرة الحمض وترشيح غبار الزنك وتحييد الحمض الزائد. امتثال كامل للمعايير البيئية المحلية والأوروبية.','p05.filter':'رطب + كيس',
-    'p06.tag':'// المعالجة المسبقة','p06.title':'خط التحميض والفلكس','p06.desc':'خزانات تحميض حمضي وأحواض شطف وحمام فلكس — معدات المعالجة المسبقة الحاسمة التي تحدد جودة الطلاء.','p06.heat':'بخار / كهرباء',
+    'p06.tag':'// المعالجة المسبقة','p06.title':'خط التحميض والفلكس','p06.desc':'خزانات تحميض حمضي وأحواض شطف وحمام فلكس — معدات المعالجة المسبقة الحاسمة التي تحدد جودة الطلاء.','p06.heat':'بخار / كهرباء','p06.mat':'PP / HDPE / صلب',
     'spec.cap':'الطاقة','spec.tank':'طول البوتقة','spec.temp':'درجة الحرارة','spec.ctrl':'التحكم','spec.basket':'سعة السلة','spec.rpm':'سرعة الطرد المركزي','spec.pipe':'قطر الأنبوب','spec.len':'الطول','spec.load':'سعة الحمل','spec.std':'المعيار','spec.filter':'نوع الفلتر','spec.mat':'مادة الخزان','spec.heat':'التسخين',
     's02.num':'§ 02 — المكونات','s02.title':'مكونات النظام الحيوية','s02.sub':'بوتقات الزنك وأنظمة الأتمتة وبنية الرافعة التي تحدد أداء كل منشأة.',
     'c01.title':'بوتقات الزنك','c01.body':'بوتقات فولاذية مصممة خصيصاً وفق معيار EN 1461. بنية جدار سميك للمتانة وتوزيع حراري محسّن.','c01.badge':'متوافق EN 1461',

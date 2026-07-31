@@ -472,7 +472,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
 
 <!-- MOBILE NAV -->
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px">Tedarik Zinciri Yönetimi</div>
+  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px" data-i18n="co4.name">Tedarik Zinciri Yönetimi</div>
   <div class="mob-dd-wrap">
     <button class="mob-link mob-dd-tog" onclick="toggleMobDd(this)"><span data-i18n="nav.group">Vorqa Grup</span> <span class="mob-dd-arr">+</span></button>
     <div class="mob-dd-inner">
@@ -591,7 +591,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
         <div class="svc-tags">
           <div class="svc-tag-pill" data-i18n="svc02.pill1">Deniz / Hava / Kara</div>
           <div class="svc-tag-pill" data-i18n="svc02.pill2">Gümrük Hizmetleri</div>
-          <div class="svc-tag-pill">Real-time Takip</div>
+          <div class="svc-tag-pill" data-i18n="svc02.pill3">Real-time Takip</div>
         </div>
       </div>
     </div>
@@ -605,7 +605,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
         <div class="svc-tags">
           <div class="svc-tag-pill" data-i18n="svc03.pill1">1.000+ Tedarikçi</div>
           <div class="svc-tag-pill" data-i18n="svc03.pill2">Audit & Kalifikasyon</div>
-          <div class="svc-tag-pill">KPI İzleme</div>
+          <div class="svc-tag-pill" data-i18n="svc03.pill3">KPI İzleme</div>
         </div>
       </div>
     </div>
@@ -619,7 +619,7 @@ html[dir="rtl"] .hero-breadcrumb{left:auto;right:80px}
         <div class="svc-tags">
           <div class="svc-tag-pill" data-i18n="svc04.pill1">EPC Satın Alma</div>
           <div class="svc-tag-pill" data-i18n="svc04.pill2">İhale Yönetimi</div>
-          <div class="svc-tag-pill">FIDIC Uyumlu</div>
+          <div class="svc-tag-pill" data-i18n="svc04.pill3">FIDIC Uyumlu</div>
         </div>
       </div>
     </div>
@@ -773,9 +773,9 @@ const T = {
     'hstat.2':'Tedarikçi Ağı','hstat.3':'Teklif Süresi',
     's01.num':'§ 01 — Hizmet Alanları','s01.title':'Tedarik Hizmetleri','s01.sub':'Endüstriyel ekipman temininden lojistik koordinasyonuna kadar uçtan uca tedarik zinciri çözümleri.',
     'svc01.tag':'// Ekipman Temini','svc01.title':'Endüstriyel Ekipman Tedariği','svc01.body':'Beton santralleri, enerji tesisleri ve galvaniz hatları için makine, ekipman ve yedek parça temini. OEM ve alternatif marka seçenekleriyle maliyet optimizasyonu.','svc01.pill1':'OEM Parça','svc01.pill2':'Global Kaynak',
-    'svc02.tag':'// Lojistik','svc02.title':'Lojistik Koordinasyonu','svc02.body':'Fabrika çıkışından proje sahasına kadar tam lojistik yönetimi — gümrük müşavirliği, nakliye koordinasyonu, sigorta ve takip.','svc02.pill1':'Deniz / Hava / Kara','svc02.pill2':'Gümrük Hizmetleri',
-    'svc03.tag':'// Tedarikçi Ağı','svc03.title':'Tedarikçi Ağı Yönetimi','svc03.body':'1.000+ doğrulanmış Türk tedarikçiyle kurulmuş uzun vadeli iş birliktelikleri. Tedarikçi kalifikasyonu, audit ve sürekli performans izleme.','svc03.pill1':'1.000+ Tedarikçi','svc03.pill2':'Audit & Kalifikasyon',
-    'svc04.tag':'// Proje Satın Alma','svc04.title':'Proje Bazlı Satın Alma','svc04.body':'EPC projeleri için paket satın alma, teknik spesifikasyon hazırlama, ihale yönetimi ve tedarikçi sözleşmeleri.','svc04.pill1':'EPC Satın Alma','svc04.pill2':'İhale Yönetimi',
+    'svc02.tag':'// Lojistik','svc02.title':'Lojistik Koordinasyonu','svc02.body':'Fabrika çıkışından proje sahasına kadar tam lojistik yönetimi — gümrük müşavirliği, nakliye koordinasyonu, sigorta ve takip.','svc02.pill1':'Deniz / Hava / Kara','svc02.pill2':'Gümrük Hizmetleri','svc02.pill3':'Real-time Takip',
+    'svc03.tag':'// Tedarikçi Ağı','svc03.title':'Tedarikçi Ağı Yönetimi','svc03.body':'1.000+ doğrulanmış Türk tedarikçiyle kurulmuş uzun vadeli iş birliktelikleri. Tedarikçi kalifikasyonu, audit ve sürekli performans izleme.','svc03.pill1':'1.000+ Tedarikçi','svc03.pill2':'Audit & Kalifikasyon','svc03.pill3':'KPI İzleme',
+    'svc04.tag':'// Proje Satın Alma','svc04.title':'Proje Bazlı Satın Alma','svc04.body':'EPC projeleri için paket satın alma, teknik spesifikasyon hazırlama, ihale yönetimi ve tedarikçi sözleşmeleri.','svc04.pill1':'EPC Satın Alma','svc04.pill2':'İhale Yönetimi','svc04.pill3':'FIDIC Uyumlu',
     's02.num':'§ 02 — Süreç Akışı','s02.title':'Tedarik Süreci','s02.sub':'İhtiyaç analizinden teslimat onayına — şeffaf, izlenebilir ve verimli tedarik süreci.',
     'proc01.title':'İhtiyaç Analizi','proc01.body':'Teknik spesifikasyon, miktar ve teslimat takviminin belirlenmesi. Bütçe onayı ve satın alma emirleri.',
     'proc02.title':'Tedarikçi Araştırma','proc02.body':'Küresel tedarikçi taraması, teknik değerlendirme ve fiyat teklif toplama. Alternatiflerin analizi.',
@@ -806,9 +806,9 @@ const T = {
     'hstat.2':'Supplier Network','hstat.3':'Quote Turnaround',
     's01.num':'§ 01 — Services','s01.title':'Supply Chain Services','s01.sub':'End-to-end supply chain solutions from industrial equipment procurement to logistics coordination.',
     'svc01.tag':'// Equipment Procurement','svc01.title':'Industrial Equipment Sourcing','svc01.body':'Machinery, equipment and spare parts sourcing for concrete plants, energy facilities and galvanizing lines. Cost optimization through OEM and alternative brand options.','svc01.pill1':'OEM Parts','svc01.pill2':'Global Sourcing',
-    'svc02.tag':'// Logistics','svc02.title':'Logistics Coordination','svc02.body':'Full logistics management from factory gate to project site — customs brokerage, freight coordination, insurance and tracking. Heavy and industrial equipment expertise.','svc02.pill1':'Sea / Air / Road','svc02.pill2':'Customs Services',
-    'svc03.tag':'// Supplier Network','svc03.title':'Supplier Network Management','svc03.body':'Long-term partnerships with our network of 1,000+ verified Turkish suppliers. Supplier qualification, audit, technical evaluation and ongoing performance monitoring.','svc03.pill1':'1,000+ Suppliers','svc03.pill2':'Audit & Qualification',
-    'svc04.tag':'// Project Procurement','svc04.title':'Project-Based Procurement','svc04.body':'Package procurement for EPC projects, technical specification development, tender management and supplier contracts. Full compliance with project budget and timeline.','svc04.pill1':'EPC Procurement','svc04.pill2':'Tender Management',
+    'svc02.tag':'// Logistics','svc02.title':'Logistics Coordination','svc02.body':'Full logistics management from factory gate to project site — customs brokerage, freight coordination, insurance and tracking. Heavy and industrial equipment expertise.','svc02.pill1':'Sea / Air / Road','svc02.pill2':'Customs Services','svc02.pill3':'Real-Time Tracking',
+    'svc03.tag':'// Supplier Network','svc03.title':'Supplier Network Management','svc03.body':'Long-term partnerships with our network of 1,000+ verified Turkish suppliers. Supplier qualification, audit, technical evaluation and ongoing performance monitoring.','svc03.pill1':'1,000+ Suppliers','svc03.pill2':'Audit & Qualification','svc03.pill3':'KPI Monitoring',
+    'svc04.tag':'// Project Procurement','svc04.title':'Project-Based Procurement','svc04.body':'Package procurement for EPC projects, technical specification development, tender management and supplier contracts. Full compliance with project budget and timeline.','svc04.pill1':'EPC Procurement','svc04.pill2':'Tender Management','svc04.pill3':'FIDIC Compliant',
     's02.num':'§ 02 — Process Flow','s02.title':'Procurement Process','s02.sub':'From needs analysis to delivery confirmation — transparent, traceable and efficient procurement.',
     'proc01.title':'Needs Analysis','proc01.body':'Technical specification, quantity and delivery schedule determination. Budget approval and purchase orders.',
     'proc02.title':'Supplier Research','proc02.body':'Global supplier screening, technical evaluation and RFQ collection. Comparative analysis of alternatives.',
@@ -839,9 +839,9 @@ const T = {
     'hstat.2':'شبكة الموردين','hstat.3':'وقت تقديم العرض',
     's01.num':'§ 01 — الخدمات','s01.title':'خدمات سلسلة التوريد','s01.sub':'حلول متكاملة لسلسلة التوريد من توريد المعدات الصناعية إلى تنسيق الخدمات اللوجستية.',
     'svc01.tag':'// توريد المعدات','svc01.title':'توريد المعدات الصناعية','svc01.body':'توريد الآلات والمعدات وقطع الغيار لمحطات الخرسانة ومنشآت الطاقة وخطوط الجلفنة.','svc01.pill1':'قطع OEM','svc01.pill2':'مصادر عالمية',
-    'svc02.tag':'// اللوجستيات','svc02.title':'تنسيق الخدمات اللوجستية','svc02.body':'إدارة لوجستية كاملة من بوابة المصنع إلى موقع المشروع — وساطة جمركية وتنسيق شحن وتأمين وتتبع.','svc02.pill1':'بحر / جو / بر','svc02.pill2':'الخدمات الجمركية',
-    'svc03.tag':'// شبكة الموردين','svc03.title':'إدارة شبكة الموردين','svc03.body':'شراكات طويلة الأمد مع شبكتنا التي تضم أكثر من 1.000 مورد تركي معتمد. تأهيل الموردين والتدقيق والتقييم التقني.','svc03.pill1':'+1.000 مورد','svc03.pill2':'تدقيق وتأهيل',
-    'svc04.tag':'// المشتريات','svc04.title':'المشتريات على أساس المشروع','svc04.body':'مشتريات الحزمة لمشاريع EPC وإعداد المواصفات التقنية وإدارة المناقصات وعقود الموردين.','svc04.pill1':'مشتريات EPC','svc04.pill2':'إدارة المناقصات',
+    'svc02.tag':'// اللوجستيات','svc02.title':'تنسيق الخدمات اللوجستية','svc02.body':'إدارة لوجستية كاملة من بوابة المصنع إلى موقع المشروع — وساطة جمركية وتنسيق شحن وتأمين وتتبع.','svc02.pill1':'بحر / جو / بر','svc02.pill2':'الخدمات الجمركية','svc02.pill3':'تتبع لحظي',
+    'svc03.tag':'// شبكة الموردين','svc03.title':'إدارة شبكة الموردين','svc03.body':'شراكات طويلة الأمد مع شبكتنا التي تضم أكثر من 1.000 مورد تركي معتمد. تأهيل الموردين والتدقيق والتقييم التقني.','svc03.pill1':'+1.000 مورد','svc03.pill2':'تدقيق وتأهيل','svc03.pill3':'مراقبة مؤشرات الأداء',
+    'svc04.tag':'// المشتريات','svc04.title':'المشتريات على أساس المشروع','svc04.body':'مشتريات الحزمة لمشاريع EPC وإعداد المواصفات التقنية وإدارة المناقصات وعقود الموردين.','svc04.pill1':'مشتريات EPC','svc04.pill2':'إدارة المناقصات','svc04.pill3':'متوافق مع FIDIC',
     's02.num':'§ 02 — تدفق العملية','s02.title':'عملية التوريد','s02.sub':'من تحليل الاحتياجات إلى تأكيد التسليم — عملية توريد شفافة وقابلة للتتبع وفعالة.',
     'proc01.title':'تحليل الاحتياجات','proc01.body':'تحديد المواصفات التقنية والكميات وجدول التسليم. اعتماد الميزانية وأوامر الشراء.',
     'proc02.title':'بحث الموردين','proc02.body':'فحص الموردين العالميين والتقييم التقني وجمع عروض الأسعار. التحليل المقارن للبدائل.',
