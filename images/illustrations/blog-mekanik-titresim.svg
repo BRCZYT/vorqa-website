@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Endüstriyel ekipman titreşim analizi ve lazer hizalama diyagramı">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.stl{stroke:#0A2540;stroke-opacity:.8}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- Motor + coupling + gearbox on baseplate -->
+<g class="ln" stroke-width="2.5">
+<rect x="280" y="560" width="280" height="200"/>
+<circle cx="560" cy="660" r="10"/>
+<rect x="620" y="620" width="40" height="80"/>
+<rect x="700" y="580" width="260" height="160"/>
+<path d="M240 780 h840"/>
+</g>
+<g class="lnT"><path d="M320 600 h200 M320 680 h200"/></g>
+<text x="420" y="820" text-anchor="middle" class="lbl lblM">MOT&#214;R</text>
+<text x="830" y="820" text-anchor="middle" class="lbl lblM">RED&#220;KT&#214;R</text>
+
+<!-- laser alignment beam -->
+<path class="ln" stroke="#E87722" stroke-width="2" stroke-dasharray="10 6" d="M560 660 h140"/>
+<circle cx="560" cy="660" r="6" fill="#E87722"/><circle cx="700" cy="660" r="6" fill="#E87722"/>
+<text x="630" y="630" text-anchor="middle" class="lbl lblO" font-size="13">LAZER H&#304;ZALAMA</text>
+
+<!-- vibration waveform -->
+<path class="ln" stroke="#3A6A94" stroke-width="2.5" d="M300 950 q40 -80 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0" fill="none"/>
+<text x="800" y="1010" text-anchor="middle" class="lbl">T&#304;TRE&#350;İM SPEKTRUMU (mm/s RMS)</text>
+
+<!-- lifting capacity note -->
+<g class="ln"><path d="M1080 500 v-60 h100" /></g>
+<text x="1210" y="450" class="lbl lblO">10 TON KALDIRMA</text>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">MEKAN&#304;K MONTAJ &amp; T&#304;TRE&#350;İM ANAL&#304;Z&#304;</text>
+<text x="120" y="182">HİZALAMA &amp; BALANS AYARI</text>
+</g>
+</svg>

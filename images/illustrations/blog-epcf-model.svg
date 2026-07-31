@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EPC-F proje finansman modeli diyagramı">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.arw{stroke:#3A6A94;stroke-width:2;fill:none;marker-end:url(#ah)}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:15px;letter-spacing:.1em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+<marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#3A6A94"/></marker>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- 4 pillar boxes: E-P-C-F converging to single contract -->
+<g class="ln">
+<rect x="220" y="380" width="220" height="160"/>
+<rect x="500" y="380" width="220" height="160"/>
+<rect x="780" y="380" width="220" height="160"/>
+<rect x="1060" y="380" width="220" height="160" stroke="#E87722"/>
+</g>
+<g class="lbl lblM" text-anchor="middle" font-size="20">
+<text x="330" y="470">E</text><text x="610" y="470">P</text><text x="890" y="470">C</text>
+</g>
+<text x="1170" y="470" text-anchor="middle" class="lbl lblO" font-size="20">F</text>
+<g class="lbl" text-anchor="middle" font-size="13">
+<text x="330" y="510">M&#252;hendislik</text><text x="610" y="510">Tedarik</text>
+<text x="890" y="510">İn&#351;aat</text><text x="1170" y="510" class="lblO">Finansman</text>
+</g>
+
+<g class="arw"><path d="M330 540 v100 c0 40 40 40 80 40 h1000 c40 0 80 0 80 -40 v-100"/></g>
+
+<!-- single contract / single point of responsibility box -->
+<rect x="500" y="720" width="600" height="140" class="ln" stroke-width="2.5" fill="#fff" opacity=".9"/>
+<text x="800" y="780" text-anchor="middle" class="lbl lblM" font-size="18">TEK SORUMLULUK &#199;ATISI</text>
+<text x="800" y="812" text-anchor="middle" class="lbl" font-size="13">Tek muhatap &#8226; &#214;ng&#246;r&#252;lebilir maliyet &#8226; Azalt&#305;lm&#305;&#351; arayüz riski</text>
+
+<!-- investor / DFI node -->
+<circle cx="800" cy="960" r="46" class="ln" fill="#fff"/>
+<text x="800" y="966" text-anchor="middle" class="lbl" font-size="13">YATIRIMCI</text>
+<path class="arw" d="M800 860 v40"/>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">EPC-F PROJE F&#304;NANSMAN MODEL&#304;</text>
+<text x="120" y="182">M&#220;HEND&#304;SL&#304;K &#8226; TEDAR&#304;K &#8226; İN&#350;AAT &#8226; F&#304;NANSMAN</text>
+</g>
+</svg>

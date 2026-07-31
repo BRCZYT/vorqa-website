@@ -2,3 +2,4 @@ node_modules/
 temporary screenshots/
 *.log
 scripts-archive/
+vorqa-blog/config.json

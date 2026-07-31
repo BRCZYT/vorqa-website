@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EPC projelerinde kazanılmış değer yönetimi (EVM) grafiği">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- axes -->
+<g class="ln" stroke-width="2"><path d="M300 900 v-520 M300 900 h1000"/></g>
+<g class="lnT"><path d="M300 780 h1000 M300 660 h1000 M300 540 h1000 M300 420 h1000"/></g>
+
+<!-- PV curve (planned value) -->
+<path class="ln" stroke="#3A6A94" stroke-width="3" d="M300 880 C 550 820 750 620 1300 400" fill="none"/>
+<!-- EV curve (earned value) -->
+<path class="ln" stroke="#0A2540" stroke-width="3" d="M300 880 C 520 840 720 700 980 560" fill="none"/>
+<!-- AC curve (actual cost) -->
+<path class="ln" stroke="#E87722" stroke-width="3" d="M300 880 C 500 820 700 640 980 460" fill="none"/>
+
+<!-- schedule/cost variance markers -->
+<circle cx="980" cy="560" r="7" fill="#0A2540"/>
+<circle cx="980" cy="460" r="7" fill="#E87722"/>
+<path class="lnT" d="M980 560 v-100" stroke-dasharray="4 5"/>
+<text x="1010" y="510" class="lbl lblO" font-size="14">CV</text>
+
+<g class="lbl" font-size="15">
+<text x="1320" y="405">PV</text>
+<text x="1000" y="555" fill="#0A2540">EV</text>
+<text x="1000" y="455" class="lblO">AC</text>
+</g>
+
+<text x="800" y="960" text-anchor="middle" class="lbl">PROJE ZAMAN &#199;İZELGES&#304;</text>
+
+<!-- risk matrix mini table -->
+<g class="ln" stroke-width="1.5"><rect x="1160" y="620" width="300" height="220" fill="#fff" opacity=".92"/></g>
+<g class="lnT"><path d="M1160 680 h300 M1160 740 h300 M1160 800 h300 M1310 620 v220"/></g>
+<g class="lbl" font-size="13">
+<text x="1175" y="655">WBS R&#304;SK KATEGOR&#304;S&#304;</text><text x="1330" y="655">SEV&#304;YE</text>
+<text x="1175" y="715">Tedarik gecikmesi</text><text x="1330" y="715" class="lblO">Y&#252;ksek</text>
+<text x="1175" y="775">Zemin/tasarım</text><text x="1330" y="775">Orta</text>
+<text x="1175" y="825">İzleme eksikliği</text><text x="1330" y="825">Orta</text>
+</g>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">KAZANILMI&#350; DE&#286;ER Y&#214;NET&#304;M&#304; (EVM)</text>
+<text x="120" y="182">EPC PROJELER&#304;NDE R&#304;SK MATR&#304;S&#304;</text>
+</g>
+</svg>

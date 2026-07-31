@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Küresel tedarik zinciri ağ diyagramı">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:1.6;fill:none;stroke-opacity:.55}
+.node{fill:#fff;stroke:#3A6A94;stroke-width:2.5}
+.hub{fill:#E87722;stroke:#0A2540;stroke-width:2}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- central hub -->
+<circle cx="800" cy="620" r="34" class="hub"/>
+<text x="800" y="626" text-anchor="middle" font-size="13" fill="#fff" font-family="'JetBrains Mono','JetBrains Mono Variable',monospace">HUB</text>
+
+<!-- supplier nodes (dual-qualified pairs) -->
+<g>
+<circle cx="420" cy="380" r="20" class="node"/><circle cx="480" cy="340" r="20" class="node"/>
+<circle cx="360" cy="620" r="20" class="node"/><circle cx="340" cy="720" r="20" class="node"/>
+<circle cx="480" cy="880" r="20" class="node"/><circle cx="560" cy="940" r="20" class="node"/>
+<circle cx="1180" cy="380" r="20" class="node"/><circle cx="1120" cy="340" r="20" class="node"/>
+<circle cx="1240" cy="620" r="20" class="node"/><circle cx="1260" cy="720" r="20" class="node"/>
+<circle cx="1120" cy="880" r="20" class="node"/><circle cx="1040" cy="940" r="20" class="node"/>
+</g>
+<!-- connecting lines -->
+<g class="ln">
+<path d="M800 620 L420 380 M800 620 L480 340 M800 620 L360 620 M800 620 L340 720 M800 620 L480 880 M800 620 L560 940"/>
+<path d="M800 620 L1180 380 M800 620 L1120 340 M800 620 L1240 620 M800 620 L1260 720 M800 620 L1120 880 M800 620 L1040 940"/>
+</g>
+
+<!-- dual-qualified pairing brackets -->
+<g class="ln" stroke="#E87722" stroke-opacity=".6" stroke-width="1.5">
+<path d="M420 380 L480 340" stroke-dasharray="4 5"/>
+<path d="M1180 380 L1120 340" stroke-dasharray="4 5"/>
+</g>
+
+<text x="800" y="700" text-anchor="middle" class="lbl lblO">&#199;İFT ONAYLI TEDAR&#304;K&#199;İ MODEL&#304;</text>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">TEDAR&#304;K Z&#304;NC&#304;R&#304; A&#286;I</text>
+<text x="120" y="182">&#199;E&#350;İTLEND&#304;RME &amp; NEARSHOR&#304;NG STRATEJ&#304;S&#304;</text>
+</g>
+</svg>

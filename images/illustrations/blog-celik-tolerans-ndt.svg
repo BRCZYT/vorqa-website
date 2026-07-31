@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EN 1090-2 çelik yapı dikeylik toleransı ve NDT muayene diyagramı">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.stl{stroke:#0A2540;stroke-opacity:.8}
+.dim{stroke:#3A6A94;stroke-width:1;stroke-opacity:.5;fill:none}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- Column with slight tilt exaggeration + tolerance envelope -->
+<path class="lnT" d="M640 300 v600 M960 300 v600" stroke-dasharray="6 8"/>
+<path class="ln stl" stroke-width="6" d="M760 900 l40 -600"/>
+<path class="lnT" d="M640 300 h320 M640 900 h320"/>
+
+<!-- Weld symbol + NDT probe at base -->
+<g class="ln" stroke-width="2.5">
+<path d="M700 900 l60 -30 l60 30"/>
+<circle cx="920" cy="840" r="18"/>
+<path d="M920 822 v-40 M900 802 l40 0"/>
+</g>
+<text x="990" y="846" class="lbl lblO">NDT &#8226; UT/MT/PT</text>
+
+<!-- dimension: verticality tolerance H/300 -->
+<path class="dim" d="M1060 300 v600 M1052 300 h16 M1052 900 h16"/>
+<text x="1080" y="610" class="lbl lblO">H</text>
+<path class="dim" d="M600 300 l-160 0 M600 900 l-160 0"/>
+<text x="360" y="610" text-anchor="end" class="lbl">TOLERANS H/300</text>
+
+<!-- weld quality level table -->
+<g class="ln" stroke-width="1.5">
+<rect x="1140" y="300" width="300" height="240" fill="#fff" opacity=".9"/>
+</g>
+<g class="lnT"><path d="M1140 360 h300 M1140 420 h300 M1140 480 h300 M1290 300 v240"/></g>
+<g class="lbl" font-size="14">
+<text x="1160" y="332">EN ISO 5817</text><text x="1310" y="332">SEV&#304;YE</text>
+<text x="1160" y="392">Kritik kaynak</text><text x="1310" y="392" class="lblO">B</text>
+<text x="1160" y="452">Standart</text><text x="1310" y="452">C</text>
+<text x="1160" y="512">İkincil</text><text x="1310" y="512">D</text>
+</g>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">&#199;EL&#304;K YAPI TOLERANSLARI &amp; NDT</text>
+<text x="120" y="182">EN 1090-2 &#8226; EXC1&#8211;EXC4 Y&#220;R&#220;TME SINIFLARI</text>
+</g>
+</svg>

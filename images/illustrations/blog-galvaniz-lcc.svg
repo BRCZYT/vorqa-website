@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Galvaniz kaplama ve boya kaplama yaşam döngüsü maliyeti karşılaştırma grafiği">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- axes -->
+<g class="ln" stroke-width="2"><path d="M300 900 v-560 M300 900 h1080"/></g>
+<g class="lnT"><path d="M300 780 h1080 M300 660 h1080 M300 540 h1080 M300 420 h1080"/></g>
+
+<!-- Galvanizing: one upfront cost, flat maintenance line -->
+<path class="ln" stroke="#3A6A94" stroke-width="3" d="M300 780 L1380 760" fill="none"/>
+<circle cx="300" cy="780" r="7" fill="#3A6A94"/>
+<text x="1400" y="765" class="lbl">GALVAN&#304;Z</text>
+
+<!-- Paint: lower upfront but stepped recoat costs -->
+<path class="ln" stroke="#E87722" stroke-width="3" d="M300 860 L560 860 L560 700 L820 700 L820 560 L1080 560 L1080 440 L1380 440" fill="none"/>
+<circle cx="300" cy="860" r="7" fill="#E87722"/>
+<text x="1400" y="445" class="lbl lblO">BOYA (Yeniden Kaplama)</text>
+
+<!-- recoat markers -->
+<g fill="#E87722">
+<circle cx="560" cy="860" r="5"/><circle cx="820" cy="700" r="5"/><circle cx="1080" cy="560" r="5"/>
+</g>
+<g class="lbl" font-size="12">
+<text x="560" y="895" text-anchor="middle">Yıl 8</text>
+<text x="820" y="895" text-anchor="middle">Yıl 16</text>
+<text x="1080" y="895" text-anchor="middle">Yıl 24</text>
+</g>
+
+<text x="840" y="960" text-anchor="middle" class="lbl">HİZMET &#214;MR&#220; (YIL)</text>
+
+<!-- crossover callout -->
+<path class="lnT" d="M560 860 v-100" stroke-dasharray="4 5"/>
+<text x="1420" y="600" writing-mode="tb" class="lbl" font-size="13" fill-opacity=".5">TOPLAM MAL&#304;YET (LCC)</text>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">GALVAN&#304;Z vs BOYA KAPLAMA</text>
+<text x="120" y="182">YA&#350;AM D&#214;NG&#220;S&#220; MAL&#304;YET&#304; (LCC) ANAL&#304;Z&#304;</text>
+</g>
+</svg>

@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sıcak daldırma galvaniz kaplama katmanları kesit diyagramı">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.dim{stroke:#3A6A94;stroke-width:1;stroke-opacity:.5;fill:none}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- Cross-section: steel core + 4 intermetallic layers, stacked bands -->
+<g transform="translate(500,300)">
+<rect x="0" y="0" width="600" height="120" fill="#0A2540" opacity=".85"/>
+<text x="300" y="70" text-anchor="middle" class="lbl" fill="#fff" font-size="18">&#199;EL&#304;K &#199;EK&#304;RDEK</text>
+
+<rect x="0" y="120" width="600" height="60" fill="#8a5a2e" opacity=".9"/>
+<rect x="0" y="180" width="600" height="140" fill="#C96315" opacity=".8"/>
+<rect x="0" y="320" width="600" height="90" fill="#E0893A" opacity=".85"/>
+<rect x="0" y="410" width="600" height="50" fill="#F4B678" opacity=".95"/>
+</g>
+
+<!-- labels with leader lines -->
+<g class="dim">
+<path d="M1100 420 h80"/><path d="M1100 480 h80"/><path d="M1100 600 h80"/><path d="M1100 665 h80"/><path d="M1100 720 h80"/>
+</g>
+<g class="lbl">
+<text x="1195" y="426" class="lblO">&#915; FAZI (Gamma) &#8226; ~25% Fe</text>
+<text x="1195" y="486">&#948;&#8321; FAZI (Delta) &#8226; ~7&#8211;11% Fe</text>
+<text x="1195" y="606">&#950; FAZI (Zeta) &#8226; ~6% Fe</text>
+<text x="1195" y="671">&#951; FAZI (Eta) &#8226; Saf &#231;inko</text>
+<text x="1195" y="726" font-size="14" fill-opacity=".6">En dış y&#252;zey, parlak g&#246;r&#252;n&#252;m</text>
+</g>
+
+<!-- thickness dimension -->
+<path class="dim" d="M440 300 v460 M432 300 h16 M432 760 h16"/>
+<text x="420" y="530" text-anchor="end" class="lbl lblO">70&#8211;85 &#181;m</text>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">GALVAN&#304;Z KAPLAMA KATMANLARI</text>
+<text x="120" y="182">ISO 1461 &#8226; INTERMETAL&#304;K FAZ YAPISI</text>
+</g>
+</svg>

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mobil ve sabit beton santrali karşılaştırma diyagramı">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8EEF4"/></linearGradient>
+<pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3A6A94" stroke-opacity=".06"/></pattern>
+<style>
+.ln{stroke:#3A6A94;stroke-width:2;fill:none;stroke-opacity:.9}
+.lnT{stroke:#3A6A94;stroke-width:1;fill:none;stroke-opacity:.4}
+.stl{stroke:#0A2540;stroke-opacity:.8}
+.lbl{font-family:'JetBrains Mono','JetBrains Mono Variable',monospace;font-size:16px;letter-spacing:.14em;fill:#3A6A94}
+.lblO{fill:#E87722}.lblM{fill:#0A2540;fill-opacity:.855}
+</style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/>
+<rect width="1600" height="1200" fill="url(#g2)"/>
+
+<!-- divider -->
+<path class="lnT" d="M800 200 v760"/>
+
+<!-- LEFT: Stationary plant (silo tower + fixed frame) -->
+<g class="ln" stroke-width="2.5">
+<rect x="280" y="420" width="140" height="380" />
+<path d="M350 420 l0 -80"/>
+<circle cx="350" cy="330" r="26"/>
+<rect x="460" y="620" width="160" height="180"/>
+<path d="M420 780 h280"/>
+</g>
+<g class="lnT"><path d="M300 480 h100 M300 560 h100 M300 640 h100 M300 720 h100"/></g>
+<text x="470" y="870" text-anchor="middle" class="lbl lblM">SAB&#304;T SANTRAL</text>
+<text x="470" y="900" text-anchor="middle" class="lbl" font-size="13">Y&#252;ksek kapasite &#8226; Uzun vadeli saha</text>
+
+<!-- RIGHT: Mobile plant (trailer + wheels) -->
+<g class="ln" stroke-width="2.5">
+<rect x="1000" y="560" width="360" height="180"/>
+<path d="M1000 640 h-60 l-40 60 h100"/>
+<circle cx="1060" cy="760" r="34"/><circle cx="1160" cy="760" r="34"/>
+<circle cx="1060" cy="760" r="10"/><circle cx="1160" cy="760" r="10"/>
+</g>
+<g class="lnT"><path d="M1030 590 h300 M1030 650 h300 M1030 700 h300"/></g>
+<text x="1180" y="870" text-anchor="middle" class="lbl lblM">MOB&#304;L SANTRAL</text>
+<text x="1180" y="900" text-anchor="middle" class="lbl" font-size="13">Hızlı kurulum &#8226; Saha değişikliği</text>
+
+<!-- ROI comparison arrows -->
+<g class="ln lblO" stroke="#E87722" stroke-width="2">
+<path d="M470 950 c 100 40 630 40 730 0" fill="none"/>
+</g>
+<text x="800" y="1000" text-anchor="middle" class="lbl lblO">TCO / ROI KARŞILAŞTIRMASI</text>
+
+<!-- title block -->
+<g class="lbl">
+<text x="120" y="150" class="lblO">//</text><text x="152" y="150" class="lblM" font-size="19">MOB&#304;L vs SAB&#304;T BETON SANTRAL&#304;</text>
+<text x="120" y="182">PROJE HACM&#304; VE S&#220;RES&#304;NE G&#214;RE KARAR</text>
+</g>
+</svg>
