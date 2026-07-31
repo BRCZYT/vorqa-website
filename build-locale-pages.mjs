@@ -82,7 +82,7 @@ function pathFor(lang, file) {
 }
 
 for (const file of Object.keys(SLUGS)) {
-  const src = fs.readFileSync(file, 'utf8');
+  const src = fs.readFileSync(file, 'utf8').replace(/^﻿/, '');
   const m = [...src.matchAll(/const T\s*=\s*\{([\s\S]*?)\n\};/g)];
   const T = new Function('return {' + m[0][1] + '}')();
   const meta = PAGES[file];
