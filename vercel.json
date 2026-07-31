@@ -4,6 +4,11 @@
       "source": "/atik-donusum.html",
       "destination": "/celik-yapi-mekanik-imalat.html",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "/en/",
+      "permanent": false
     }
   ]
 }

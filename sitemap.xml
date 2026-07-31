@@ -2,12 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Ana Sayfalar -->
+  <!-- Ana Sayfalar (çok dilli — pilot: sadece ana sayfa, docs §8.1) -->
+  <url>
+    <loc>https://www.vorqaglobal.com/tr/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.vorqaglobal.com/en/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.vorqaglobal.com/ar/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/"/>
+  </url>
+  <!-- TODO: kalan 18 sayfa Faz 5 onaylanınca /tr/ /en/ /ar/ yapısına taşınacak; eski düz URL'ler o zamana kadar geçerli kalır -->
   <url>
     <loc>https://www.vorqaglobal.com/</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/akademi.html</loc>
