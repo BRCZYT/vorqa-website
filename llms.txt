@@ -18,17 +18,17 @@
 - Hedef pazarlar: Libya, Mısır, Irak, Körfez (MENA) ve Afrika
 - Diller: Türkçe, İngilizce, Arapça
 
-## Sayfalar
-- Ana Sayfa: https://www.vorqaglobal.com/
-- Hakkımızda: https://www.vorqaglobal.com/hakkimizda.html
-- Beton Santralleri: https://www.vorqaglobal.com/beton.html
-- Galvaniz Tesisleri: https://www.vorqaglobal.com/galvaniz.html
-- Atık-Enerji Dönüşümü: https://www.vorqaglobal.com/enerji.html
-- Çelik Yapı & Mekanik İmalat: https://www.vorqaglobal.com/celik-yapi-mekanik-imalat.html
-- Tedarik Zinciri Yönetimi: https://www.vorqaglobal.com/tedarik-zinciri.html
-- Referanslar: https://www.vorqaglobal.com/referanslar.html
-- Akademi (Blog): https://www.vorqaglobal.com/akademi.html
-- İletişim: https://www.vorqaglobal.com/iletisim.html
+## Sayfalar (TR / EN / AR)
+- Ana Sayfa: https://www.vorqaglobal.com/tr/ · /en/ · /ar/
+- Hakkımızda: https://www.vorqaglobal.com/tr/hakkimizda/ · /en/about/ · /ar/about/
+- Beton Santralleri: https://www.vorqaglobal.com/tr/beton/ · /en/concrete/ · /ar/concrete/
+- Galvaniz Tesisleri: https://www.vorqaglobal.com/tr/galvaniz/ · /en/galvanizing/ · /ar/galvanizing/
+- Atık-Enerji Dönüşümü: https://www.vorqaglobal.com/tr/enerji/ · /en/waste-to-energy/ · /ar/waste-to-energy/
+- Çelik Yapı & Mekanik İmalat: https://www.vorqaglobal.com/tr/celik-yapi/ · /en/steel-fabrication/ · /ar/steel-fabrication/
+- Tedarik Zinciri Yönetimi: https://www.vorqaglobal.com/tr/tedarik-zinciri/ · /en/supply-chain/ · /ar/supply-chain/
+- Referanslar: https://www.vorqaglobal.com/tr/referanslar/ · /en/references/ · /ar/references/
+- Akademi (Blog): https://www.vorqaglobal.com/tr/akademi/ · /en/academy/ · /ar/academy/
+- İletişim: https://www.vorqaglobal.com/tr/iletisim/ · /en/contact/ · /ar/contact/
 
 ## İletişim
 - Adres: Ankara, Türkiye ([GERÇEK AÇIK ADRES — doldurulacak])
