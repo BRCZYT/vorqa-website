@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.zytindustry.com/sitemap.xml
+Sitemap: https://www.vorqaglobal.com/sitemap.xml

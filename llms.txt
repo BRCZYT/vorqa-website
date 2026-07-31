@@ -1,4 +1,4 @@
-# ZYT Industry
+# Vorqa Global
 
 > Türkiye (Ankara) merkezli teknik tedarik ve proje entegrasyon partneri.
 > Türk uzman üreticilerin mühendislik gücünü, MENA ve Afrika projeleri
@@ -19,19 +19,19 @@
 - Diller: Türkçe, İngilizce, Arapça
 
 ## Sayfalar
-- Ana Sayfa: https://www.zytindustry.com/
-- Hakkımızda: https://www.zytindustry.com/hakkimizda.html
-- Beton Santralleri: https://www.zytindustry.com/beton.html
-- Galvaniz Tesisleri: https://www.zytindustry.com/galvaniz.html
-- Atık-Enerji Dönüşümü: https://www.zytindustry.com/enerji.html
-- Çelik Yapı & Mekanik İmalat: https://www.zytindustry.com/atik-donusum.html
-- Tedarik Zinciri Yönetimi: https://www.zytindustry.com/tedarik-zinciri.html
-- Referanslar: https://www.zytindustry.com/referanslar.html
-- Akademi (Blog): https://www.zytindustry.com/akademi.html
-- İletişim: https://www.zytindustry.com/iletisim.html
+- Ana Sayfa: https://www.vorqaglobal.com/
+- Hakkımızda: https://www.vorqaglobal.com/hakkimizda.html
+- Beton Santralleri: https://www.vorqaglobal.com/beton.html
+- Galvaniz Tesisleri: https://www.vorqaglobal.com/galvaniz.html
+- Atık-Enerji Dönüşümü: https://www.vorqaglobal.com/enerji.html
+- Çelik Yapı & Mekanik İmalat: https://www.vorqaglobal.com/celik-yapi-mekanik-imalat.html
+- Tedarik Zinciri Yönetimi: https://www.vorqaglobal.com/tedarik-zinciri.html
+- Referanslar: https://www.vorqaglobal.com/referanslar.html
+- Akademi (Blog): https://www.vorqaglobal.com/akademi.html
+- İletişim: https://www.vorqaglobal.com/iletisim.html
 
 ## İletişim
 - Adres: Ankara, Türkiye ([GERÇEK AÇIK ADRES — doldurulacak])
 - Telefon: [GERÇEK TELEFON — doldurulacak]
-- E-posta: info@zytindustry.com
-- Web: https://www.zytindustry.com
+- E-posta: info@vorqaglobal.com
+- Web: https://www.vorqaglobal.com

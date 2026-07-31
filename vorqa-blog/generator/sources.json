@@ -1,6 +1,6 @@
 {
   "galvaniz": {
-    "label_tr": "ZYT Galvaniz",
+    "label_tr": "Vorqa Galvaniz",
     "page": "galvaniz.html",
     "rss": "https://news.google.com/rss/search?q=galvaniz+%C3%A7inko+kaplama+s%C4%B1cak+dald%C4%B1rma&hl=tr&gl=TR&ceid=TR:tr",
     "rss_en": "https://news.google.com/rss/search?q=hot+dip+galvanizing+zinc+coating+steel&hl=en&gl=TR&ceid=TR:en",
@@ -10,7 +10,7 @@
     "cover_alt": "Sıcak Daldırma Galvanizleme Tesisi"
   },
   "beton": {
-    "label_tr": "ZYT Beton",
+    "label_tr": "Vorqa Beton",
     "page": "beton.html",
     "rss": "https://news.google.com/rss/search?q=beton+santrali+haz%C4%B1r+beton+in%C5%9Faat&hl=tr&gl=TR&ceid=TR:tr",
     "rss_en": "https://news.google.com/rss/search?q=concrete+batching+plant+ready+mix+construction&hl=en&gl=TR&ceid=TR:en",
@@ -20,7 +20,7 @@
     "cover_alt": "Beton Santrali"
   },
   "enerji": {
-    "label_tr": "ZYT Enerji",
+    "label_tr": "Vorqa Enerji",
     "page": "enerji.html",
     "rss": "https://news.google.com/rss/search?q=EPC+anahtar+teslim+enerji+tesisi+sanayi&hl=tr&gl=TR&ceid=TR:tr",
     "rss_en": "https://news.google.com/rss/search?q=EPC+turnkey+industrial+plant+energy+project&hl=en&gl=TR&ceid=TR:en",
@@ -30,7 +30,7 @@
     "cover_alt": "EPC Anahtar Teslim Sanayi Tesisi"
   },
   "tedarik": {
-    "label_tr": "ZYT Tedarik",
+    "label_tr": "Vorqa Tedarik",
     "page": "tedarik-zinciri.html",
     "rss": "https://news.google.com/rss/search?q=tedarik+zinciri+lojistik+global+k%C3%BCresel&hl=tr&gl=TR&ceid=TR:tr",
     "rss_en": "https://news.google.com/rss/search?q=supply+chain+logistics+global+disruption+2025&hl=en&gl=TR&ceid=TR:en",
@@ -40,7 +40,7 @@
     "cover_alt": "Küresel Lojistik ve Tedarik Zinciri"
   },
   "makina": {
-    "label_tr": "ZYT Makina",
+    "label_tr": "Vorqa Makina",
     "page": "atik-donusum.html",
     "rss": "https://news.google.com/rss/search?q=at%C4%B1k+enerji+d%C3%B6n%C3%BC%C5%9F%C3%BCm+WtE+T%C3%BCrkiye&hl=tr&gl=TR&ceid=TR:tr",
     "rss_en": "https://news.google.com/rss/search?q=waste+to+energy+WtE+steel+fabrication+manufacturing&hl=en&gl=TR&ceid=TR:en",
