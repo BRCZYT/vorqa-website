@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Ana Sayfalar (çok dilli — Faz 5, docs §8.1) -->
+  <!-- Home (Faz C — site 3 sayfaya indirildi: Home / Academy / Contact) -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
@@ -33,232 +33,13 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/"/>
   </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
 
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/hakkimizda/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/hakkimizda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/about/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/about/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/hakkimizda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/about/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/about/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/hakkimizda/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/about/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/about/"/>
-  </url>
-
-  <!-- Çözüm Alanları -->
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/beton/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/beton/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/concrete/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/concrete/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/concrete/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/concrete/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/beton/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/concrete/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/concrete/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/concrete/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/concrete/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/beton/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/concrete/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/concrete/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/concrete/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/galvaniz/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/galvaniz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/galvanizing/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/galvanizing/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/galvanizing/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/galvanizing/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/galvaniz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/galvanizing/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/galvanizing/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/galvanizing/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/galvanizing/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/galvaniz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/galvanizing/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/galvanizing/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/galvanizing/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/enerji/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/enerji/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/waste-to-energy/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/waste-to-energy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/waste-to-energy/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/waste-to-energy/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/enerji/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/waste-to-energy/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/waste-to-energy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/waste-to-energy/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/waste-to-energy/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/enerji/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/waste-to-energy/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/waste-to-energy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/waste-to-energy/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/celik-yapi/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/celik-yapi/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/steel-fabrication/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/steel-fabrication/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/steel-fabrication/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/steel-fabrication/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/celik-yapi/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/steel-fabrication/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/steel-fabrication/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/steel-fabrication/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/steel-fabrication/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/celik-yapi/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/steel-fabrication/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/steel-fabrication/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/steel-fabrication/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/tedarik-zinciri/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/tedarik-zinciri/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/supply-chain/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/supply-chain/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/supply-chain/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/supply-chain/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/tedarik-zinciri/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/supply-chain/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/supply-chain/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/supply-chain/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/supply-chain/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/tedarik-zinciri/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/supply-chain/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/supply-chain/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/supply-chain/"/>
-  </url>
-
-  <url>
-    <loc>https://www.vorqaglobal.com/tr/referanslar/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/referanslar/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/references/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/references/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/references/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/en/references/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/referanslar/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/references/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/references/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/references/"/>
-  </url>
-  <url>
-    <loc>https://www.vorqaglobal.com/ar/references/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/referanslar/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/references/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/references/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/references/"/>
-  </url>
-
+  <!-- Academy -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/akademi/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/"/>
@@ -266,9 +47,9 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/academy/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/"/>
@@ -276,20 +57,21 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/academy/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/academy/"/>
   </url>
 
+  <!-- Contact -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/iletisim/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/iletisim/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/contact/"/>
@@ -297,9 +79,9 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/contact/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/iletisim/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/contact/"/>
@@ -307,16 +89,16 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/contact/</loc>
-    <lastmod>2026-07-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/iletisim/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/contact/"/>
   </url>
 
-  <!-- Blog Yazıları (henüz tek dilde — Türkçe; TR/EN/AR yapısına taşınmadı, ayrı bir çeviri işi gerektirir) -->
+  <!-- Academy blog posts (vorqa-blog/) -->
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html</loc>
     <lastmod>2026-05-10</lastmod>
@@ -377,4 +159,5 @@
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
+
 </urlset>
