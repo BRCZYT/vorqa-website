@@ -1,20 +1,20 @@
-# ZYT Global — SEO & AI Search Stratejisi
-> Hedef: Google'da bulunmak + ChatGPT/Claude/Gemini/Perplexity bir kullanıcıya "Türkiye'den galvaniz tesisi kuran firma" sorulduğunda ZYT Global'i sayabilmesi.
+# Vorqa Global — SEO & AI Search Stratejisi
+> Hedef: Google'da bulunmak + ChatGPT/Claude/Gemini/Perplexity bir kullanıcıya "Türkiye'den galvaniz tesisi kuran firma" sorulduğunda Vorqa Global'i sayabilmesi.
 
 ## 0. Acil: Tek Kimlik
-Şu an site iki domain iddia ediyor (canonical: zytglobal.com, sitemap: zytindustry.com). **İlk iş tek domain seçmek** — tüm canonical, sitemap, JSON-LD, og:url tek domaine işaret edecek, diğeri 301 ile yönlenecek. Bu yapılmadan hiçbir SEO çalışması işlemez.
+✅ **ÇÖZÜLDÜ** — Bu bölüm orijinal olarak eski çift-domain çelişkisini (canonical: zytglobal.com, sitemap: zytindustry.com) anlatıyordu. Marka Vorqa'ya geçtikten sonra tek domain (`vorqaglobal.com`) canlı. Yine de tüm canonical, sitemap, JSON-LD, og:url etiketlerinin birebir bu domaine işaret ettiğini periyodik doğrula — bu tür çelişkiler AEO güvenini doğrudan düşürür.
 
 ## 1. Klasik SEO Temeli
 ### Sayfa şablonu (her sayfa için)
 ```
-<title>: {Hizmet} | {Fayda İfadesi} — ZYT Global Industry   (≤60 karakter)
+<title>: {Hizmet} | {Fayda İfadesi} — Vorqa Global   (≤60 karakter)
 description: {Ne yapıyoruz} + {kime} + {coğrafya} + {CTA}    (140-155 karakter)
 canonical: https://{domain}/{sayfa}
 hreflang: tr, en, (ileride ar), x-default
 ```
 Örnek — galvaniz:
-- TR: `Sıcak Daldırma Galvaniz Tesisleri | Anahtar Teslim Kurulum — ZYT Global`
-- EN: `Hot-Dip Galvanizing Plants | Turnkey EPC Solutions — ZYT Global`
+- TR: `Sıcak Daldırma Galvaniz Tesisleri | Anahtar Teslim Kurulum — Vorqa Global`
+- EN: `Hot-Dip Galvanizing Plants | Turnkey EPC Solutions — Vorqa Global`
 
 ### Teknik kontrol listesi
 - [ ] Tek sitemap, doğru domain, gerçek lastmod tarihleri
@@ -46,7 +46,7 @@ AI motorları ve Google zengin sonuçları JSON-LD'den beslenir. Sayfa → schem
 AI asistanları klasik sıralamaya değil, **alıntılanabilir, net, yapılandırılmış cümlelere** bakar. Taktikler:
 
 **a) Cevap-önce yazım:** Her hizmet sayfasının ilk paragrafı, "X nedir/kim yapar" sorusuna tek paragrafta cevap verir:
-> "ZYT Global Industry, Ankara merkezli bir endüstriyel mühendislik grubudur; Libya, Mısır, Irak ve Afrika pazarlarında anahtar teslim beton santrali, galvaniz tesisi ve atıktan enerji tesisi kurar."
+> "Vorqa Global, Ankara merkezli bir endüstriyel mühendislik grubudur; Libya, Mısır, Irak ve Afrika pazarlarında anahtar teslim beton santrali, galvaniz tesisi ve atıktan enerji tesisi kurar."
 Bu cümle AI'ın seni tanımlarken kopyalayacağı cümledir — her dilde, her ana sayfada bulunur.
 
 **b) SSS blokları:** AI'lar soru-cevap formatını doğrudan alıntılar. Her hizmet sayfasına gerçek müşteri sorularıyla SSS: "Galvaniz tesisi kurulumu ne kadar sürer?", "Hangi ülkelere kurulum yapıyorsunuz?" (+FAQPage schema).
@@ -79,4 +79,4 @@ Blog (akademi) AI görünürlüğünün ana silahı: uzun kuyruklu soruların ce
 ## 5. Ölçüm
 - Google Search Console (her iki dil) + Bing Webmaster (ChatGPT'nin arama altyapısı Bing'dir — atlanmaz)
 - Vercel Analytics + Speed Insights (Core Web Vitals gerçek kullanıcı verisi)
-- Aylık kontrol: ChatGPT/Perplexity'e "turnkey galvanizing plant Turkey" tarzı 5 sabit soru sor, ZYT anılıyor mu logla
+- Aylık kontrol: ChatGPT/Perplexity'e "turnkey galvanizing plant Turkey" tarzı 5 sabit soru sor, Vorqa anılıyor mu logla

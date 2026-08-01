@@ -1,5 +1,5 @@
 \# LANGUAGE\_RULES.md  
-\# ZYT Global Industry — Language & Writing Rules
+\# Vorqa Global — Language & Writing Rules
 
 \---
 
@@ -31,7 +31,7 @@ Good (Mira):
 "Three things happen when a batching plant is over-specified. First, it runs at 50% load. Second, wear patterns become unpredictable. Third, maintenance costs compound every year. The right spec isn't the biggest one available — it's the one matched to your actual peak demand."
 
 Bad (not Mira):  
-"ZYT Global Industry is pleased to offer world-class concrete batching plant solutions that leverage our cutting-edge technology to deliver value-added outcomes for our esteemed clients across the MENA region."
+"Vorqa Global is pleased to offer world-class concrete batching plant solutions that leverage our cutting-edge technology to deliver value-added outcomes for our esteemed clients across the MENA region."
 
 Good (Mira humor, 1/10 posts):  
 "Procurement rule \#31: Every delivery is urgent. Except when it's time to sign the purchase order."

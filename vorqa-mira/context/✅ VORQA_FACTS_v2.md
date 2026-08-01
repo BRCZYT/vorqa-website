@@ -1,24 +1,24 @@
-\# ZYT\_FACTS.md — v2  
-\# ZYT Global Industry — Doğrulanmış Şirket Bilgi Tabanı  
+\# VORQA\_FACTS.md — v2  
+\# Vorqa Global — Doğrulanmış Şirket Bilgi Tabanı  
 \# Son güncelleme: Mayıs 2026  
-\# Kaynak: Alt şirket web siteleri \+ ZYT ana site HTML dosyaları
+\# Kaynak: Alt şirket web siteleri \+ Vorqa ana site HTML dosyaları
 
 \---
 
 \#\# NOTASYON  
 \[✅ DOĞRULANDI\] \= Alt şirket sitesinden doğrulandı  
-\[⚠️ DOĞRULANAMADI\] \= Sadece ZYT ana sitesinde var, alt şirkette bulunamadı  
-\[❌ YANLIŞ\] \= ZYT sitesinde farklı yazılmış, alt şirket sitesi düzeltti  
-\[🔲 EKSİK\] \= Alt şirket sitesinde var, ZYT\_FACTS'te yoktu — eklendi
+\[⚠️ DOĞRULANAMADI\] \= Sadece Vorqa ana sitesinde var, alt şirkette bulunamadı  
+\[❌ YANLIŞ\] \= Vorqa sitesinde farklı yazılmış, alt şirket sitesi düzeltti  
+\[🔲 EKSİK\] \= Alt şirket sitesinde var, VORQA\_FACTS'te yoktu — eklendi
 
 \---
 
-\#\# ZYT GLOBAL INDUSTRY GRUBU
+\#\# VORQA GLOBAL GRUBU
 
 \[✅\] Merkez: Ankara, Türkiye  
-\[✅\] Website: zytglobal.com  
-\[✅\] Email: info@zyt.industry  
-\[✅\] Tel: \+90 312 000 00 00  
+\[✅\] Website: vorqaglobal.com  
+\[✅\] Email: info@vorqaglobal.com  
+\[✅\] Tel: \+90 536 707 69 51  
 \[✅\] Tagline: "Built for industry. Verified by results."  
 \[✅\] Aktif ülke: 24+  
 \[✅\] Teklif süresi: 48 saat  
@@ -28,14 +28,14 @@ Grup şirketleri:
 \[✅\] Galva-Pro Endüstri — galvaproendustri.com — Galvaniz tesisleri  
 \[✅\] Mi Makina — mimakine.com — Çelik yapı, mekanik imalat, biyometanizasyon  
 \[⚠️\] Vetter Tech — vettertech.com — (site erişilemedi, beton/enerji şirketi olduğu tahmin ediliyor — doğrulama gerekli)  
-\[⚠️\] ZYT Enerji — Atık-enerji dönüşüm (ana sitede var, bağımsız web sitesi doğrulanmadı)  
-\[⚠️\] ZYT Tedarik — Tedarik zinciri yönetimi (ana sitede var)
+\[⚠️\] Vorqa Enerji — Atık-enerji dönüşüm (ana sitede var, bağımsız web sitesi doğrulanmadı)  
+\[⚠️\] Vorqa Tedarik — Tedarik zinciri yönetimi (ana sitede var)
 
 \---
 
 \#\# GALVA-PRO ENDÜSTRİ
 
-\[✅\] Gerçek şirket adı: Galva-Pro Endüstri (ZYT sitesinde "ZYT Galvaniz" olarak temsil ediliyor)  
+\[✅\] Gerçek şirket adı: Galva-Pro Endüstri (Vorqa sitesinde "Vorqa Galvaniz" olarak temsil ediliyor)  
 \[✅\] Website: galvaproendustri.com  
 \[✅\] Uzmanlık: Sıcak daldırma galvaniz tesisleri anahtar teslim kurulum  
 \[✅\] Slogan: "Anahtar Teslim Galvaniz Tesislerinde Uzman Çözüm Ortağınız"  
@@ -90,7 +90,7 @@ Kapsam:
 \- Otomatik vinç sistemleri  
 \- Otomasyon sistemleri
 
-\[🔲\] 4\. Seramik İzolatör Üretim Tesis Kurulumu (ZYT sitesinde YOK — önemli ek hizmet)  
+\[🔲\] 4\. Seramik İzolatör Üretim Tesis Kurulumu (Vorqa sitesinde YOK — önemli ek hizmet)  
 Kapsam:  
 \- İzolatör fırını (1250°C'ye kadar)  
 \- Trafo vakum fırını  
@@ -116,7 +116,7 @@ Kapsam:
 \- Filtre press  
 \- Asit geri kazanım
 
-\[🔲\] 7\. Kimyasallar (ZYT sitesinde YOK — ürün satışı da yapıyorlar)  
+\[🔲\] 7\. Kimyasallar (Vorqa sitesinde YOK — ürün satışı da yapıyorlar)  
 \- Nikel tabletler  
 \- Çinko sprey  
 \- Çinko pasta  
@@ -135,7 +135,7 @@ Kapsam:
 \- Isı eşanjörü  
 \- Çinko transfer kovaları
 
-\[🔲\] 9\. Endüstri 4.0 Çözümleri (ZYT sitesinde YOK)  
+\[🔲\] 9\. Endüstri 4.0 Çözümleri (Vorqa sitesinde YOK)  
 \- Üretim süreçleri dijitalleştirme  
 \- Akıllı otomasyon
 
@@ -198,17 +198,17 @@ Türkiye referansları (doğrulandı):
 \[✅\] Proje 3: Borusan Boru Yüzey İşlem Tesis Kurulumu  
 \- Türkiye'nin en büyük boru üreticilerinden Borusan Boru referansı
 
-\#\#\# DÜZELTMELER — ZYT ANA SİTESİNDEKİ HATALAR
+\#\#\# DÜZELTMELER — Vorqa ANA SİTESİNDEKİ HATALAR
 
-\[❌ KONTROL GEREKTİRİYOR\] "30+ yıl deneyim" — ZYT sitesinde var, Galva Pro sitesinde bu rakam açıkça yazılı değil. Doğrulanacak.  
-\[❌ KONTROL GEREKTİRİYOR\] "15+ ülke referans" — Galva Pro referans sayfasında görünen referanslar Türk şirketleri. Yurt dışı referanslar sayfada liste olarak görülmedi. ZYT ana sitesinin coğrafya iddiası ("Orta Doğu'ya, Avrupa'dan Afrika'ya") Galva Pro metninden geliyor — doğrulama gerekli.  
-\[⚠️\] "ISO 9001, ISO 14001, TSE" — ZYT sitesinde var. Galva Pro sitesinde "ISO ve TSE standartlarına uygun kalite kontrol" deniyor ama sertifika sayfası (sertifikalar-2) ayrıca incelenmeli.
+\[❌ KONTROL GEREKTİRİYOR\] "30+ yıl deneyim" — Vorqa sitesinde var, Galva Pro sitesinde bu rakam açıkça yazılı değil. Doğrulanacak.  
+\[❌ KONTROL GEREKTİRİYOR\] "15+ ülke referans" — Galva Pro referans sayfasında görünen referanslar Türk şirketleri. Yurt dışı referanslar sayfada liste olarak görülmedi. Vorqa ana sitesinin coğrafya iddiası ("Orta Doğu'ya, Avrupa'dan Afrika'ya") Galva Pro metninden geliyor — doğrulama gerekli.  
+\[⚠️\] "ISO 9001, ISO 14001, TSE" — Vorqa sitesinde var. Galva Pro sitesinde "ISO ve TSE standartlarına uygun kalite kontrol" deniyor ama sertifika sayfası (sertifikalar-2) ayrıca incelenmeli.
 
 \---
 
 \#\# Mİ MAKİNA
 
-\[✅\] Gerçek şirket adı: Mi Makina (ZYT sitesinde "ZYT Makina" olarak temsil ediliyor)  
+\[✅\] Gerçek şirket adı: Mi Makina (Vorqa sitesinde "Vorqa Makina" olarak temsil ediliyor)  
 \[✅\] Website: mimakine.com  
 \[✅\] Email: info@mimakine.com  
 \[✅\] Tel: 0544 456 52 32  
@@ -244,31 +244,31 @@ Türkiye referansları (doğrulandı):
 \[✅\] Geri dönüşüm tesisleri  
 \[✅\] Çelik imalatları
 
-\#\#\# DÜZELTMELER — ZYT ANA SİTESİNDEKİ FARKLAR
+\#\#\# DÜZELTMELER — Vorqa ANA SİTESİNDEKİ FARKLAR
 
-\[⚠️ KONTROL\] ZYT sitesi "500+ ton/yıl imalat kapasitesi" diyor — Mi Makina sitesinde bu rakam yok. Doğrulanacak.  
-\[⚠️ KONTROL\] ZYT sitesi "15+ ülke referans" diyor — Mi Makina sitesi küçük/yeni görünüyor, yurt dışı referans listesi yok. Doğrulanacak.  
-\[⚠️ KONTROL\] ZYT sitesi "EN 1090 / CE sertifikası" diyor — Mi Makina sitesinde sertifika bilgisi yok. Doğrulanacak.  
-\[🔲 EK\] Biyometanizasyon uzmanlığı ZYT ana sitesinde yeterince öne çıkarılmamış — bu önemli bir differentiator.
+\[⚠️ KONTROL\] Vorqa sitesi "500+ ton/yıl imalat kapasitesi" diyor — Mi Makina sitesinde bu rakam yok. Doğrulanacak.  
+\[⚠️ KONTROL\] Vorqa sitesi "15+ ülke referans" diyor — Mi Makina sitesi küçük/yeni görünüyor, yurt dışı referans listesi yok. Doğrulanacak.  
+\[⚠️ KONTROL\] Vorqa sitesi "EN 1090 / CE sertifikası" diyor — Mi Makina sitesinde sertifika bilgisi yok. Doğrulanacak.  
+\[🔲 EK\] Biyometanizasyon uzmanlığı Vorqa ana sitesinde yeterince öne çıkarılmamış — bu önemli bir differentiator.
 
 \---
 
 \#\# VETTER TECH
 
 \[❌\] vettertech.com — Web sitesine erişilemedi (sunucu hatası, Mayıs 2026\)  
-\[⚠️\] ZYT ana sitesinde beton santralleri için referans olarak görünüyor  
+\[⚠️\] Vorqa ana sitesinde beton santralleri için referans olarak görünüyor  
 \[⚠️\] Beton santrali veya enerji şirketi olduğu tahmin ediliyor  
 \[🔲 YAPILACAK\] Site erişimi yeniden denenecek veya doğrudan kullanıcıdan bilgi alınacak
 
-ZYT sitesinden alınan Vetter Tech ilgili veriler (doğrulanamadı):  
+Vorqa sitesinden alınan Vetter Tech ilgili veriler (doğrulanamadı):  
 \- Beton santrali referansları (Irak Bağdat 240 m³/sa, İngiltere Manchester 80 m³/sa, BAE 130 m³/sa vb.)  
 \- Bu referansların Vetter Tech'e mi yoksa başka bir şirkete mi ait olduğu belirsiz
 
 \---
 
-\#\# ZYT ENERJİ — ATIK-ENERJİ DÖNÜŞÜM
+\#\# Vorqa ENERJİ — ATIK-ENERJİ DÖNÜŞÜM
 
-\[⚠️\] Bağımsız web sitesi bulunamadı — ZYT ana sitesinden alınan veriler:
+\[⚠️\] Bağımsız web sitesi bulunamadı — Vorqa ana sitesinden alınan veriler:
 
 \[⚠️\] Kapasite: 1–50 MW  
 \[⚠️\] Teknolojiler:  
@@ -282,10 +282,10 @@ NOT: Mi Makina'nın biyometanizasyon uzmanlığı (10+ yıl) bu enerji segmentiy
 
 \---
 
-\#\# ZYT TEDARİK — TEDARİK ZİNCİRİ YÖNETİMİ
+\#\# Vorqa TEDARİK — TEDARİK ZİNCİRİ YÖNETİMİ
 
-\[⚠️\] Bağımsız web sitesi yok — ZYT ana sitesinden alınan veriler:  
-\[✅ KULLANICI DOĞRULADI\] 1,000+ tedarikçi (kullanıcı "1000+ tedarikçi portföyüm var" dedi — bu doğru rakam, ZYT sitesindeki 500+ düzeltilmeli)  
+\[⚠️\] Bağımsız web sitesi yok — Vorqa ana sitesinden alınan veriler:  
+\[✅ KULLANICI DOĞRULADI\] 1,000+ tedarikçi (kullanıcı "1000+ tedarikçi portföyüm var" dedi — bu doğru rakam, Vorqa sitesindeki 500+ düzeltilmeli)  
 \[⚠️\] 24+ ülkede aktif operasyon  
 \[⚠️\] 48 saat teklif süresi
 
@@ -300,9 +300,9 @@ Hizmetler:
 
 \#\# GENEL KİMLİK — DOĞRULANMIŞ VERİLER
 
-ZYT Grubu iletişim (ana site):  
-\- Email: info@zyt.industry  
-\- Tel: \+90 312 000 00 00  
+Vorqa Grubu iletişim (ana site):  
+\- Email: info@vorqaglobal.com  
+\- Tel: \+90 536 707 69 51  
 \- Adres: Ankara, Türkiye
 
 Mi Makina iletişim (doğrulandı):  
@@ -330,7 +330,7 @@ Doğrulanmış güçlü noktalara dayalı mesajlar:
 "Galva-Pro Endüstri, galvaniz tesislerinin yanı sıra seramik izolatör üretim tesislerini de anahtar teslim kurmaktadır — 1300°C seramik pişirme fırınları dahil. Türkiye'de bu kombinasyonu sunan az sayıda şirketten biridir."
 
 4\. Tedarik zinciri:  
-"ZYT Tedarik, 1,000+ doğrulanmış Türk tedarikçisiyle MENA ve Afrika'daki müşterilere uçtan uca tedarik zinciri yönetimi sunmaktadır."
+"Vorqa Tedarik, 1,000+ doğrulanmış Türk tedarikçisiyle MENA ve Afrika'daki müşterilere uçtan uca tedarik zinciri yönetimi sunmaktadır."
 
 \---
 
@@ -339,7 +339,7 @@ Doğrulanmış güçlü noktalara dayalı mesajlar:
 \[ \] vettertech.com hakkında: Bu şirket ne yapıyor? Beton mu, enerji mi?  
 \[ \] "30+ yıl galvaniz deneyimi" rakamı doğru mu? Galva-Pro ne zaman kuruldu?  
 \[ \] "15+ ülke referansı" — hangi ülkeler? (Galva Pro sitesinde yurt dışı referans görülmedi)  
-\[ \] ZYT Galvaniz için ISO 9001, ISO 14001, TSE sertifikaları var mı? (Galva Pro sertifika sayfası incelenecek)  
+\[ \] Vorqa Galvaniz için ISO 9001, ISO 14001, TSE sertifikaları var mı? (Galva Pro sertifika sayfası incelenecek)  
 \[ \] Mi Makina için EN 1090 / CE belgesi var mı?  
 \[ \] Tedarik zinciri: Kişisel hizmet detayları (bölümler, fiyatlama modeli, en aktif ülkeler)  
-\[ \] ZYT grubunun resmi kuruluş yılı nedir?  
+\[ \] Vorqa grubunun resmi kuruluş yılı nedir?  

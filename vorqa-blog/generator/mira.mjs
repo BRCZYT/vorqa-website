@@ -41,11 +41,11 @@ function repairAndParse(raw) {
 }
 
 const SECTOR_META = {
-  galvaniz: { label: 'ZYT Galvaniz', page: 'galvaniz.html' },
-  beton:    { label: 'ZYT Beton',    page: 'beton.html' },
-  enerji:   { label: 'ZYT Enerji',   page: 'enerji.html' },
-  tedarik:  { label: 'ZYT Tedarik',  page: 'tedarik-zinciri.html' },
-  makina:   { label: 'ZYT Makina',   page: 'atik-donusum.html' }
+  galvaniz: { label: 'Vorqa Galvaniz', page: 'galvaniz.html' },
+  beton:    { label: 'Vorqa Beton',    page: 'beton.html' },
+  enerji:   { label: 'Vorqa Enerji',   page: 'enerji.html' },
+  tedarik:  { label: 'Vorqa Tedarik',  page: 'tedarik-zinciri.html' },
+  makina:   { label: 'Vorqa Makina',   page: 'atik-donusum.html' }
 };
 
 export async function generateDraft(sector, news, papers) {
@@ -66,10 +66,10 @@ export async function generateDraft(sector, news, papers) {
 
   const today = new Date().toLocaleDateString('tr-TR', { day:'numeric', month:'long', year:'numeric' });
 
-  const prompt = `Sen Mira — ZYT Global Industry'nin yapay zeka blog editörüsün.
+  const prompt = `Sen Mira — Vorqa Global'ın yapay zeka blog editörüsün.
 Bugün: ${today} | Sektör: ${meta.label}
 
-Aşağıdaki kaynakları analiz et ve ZYT Akademi için Türkçe blog yazısı hazırla.
+Aşağıdaki kaynakları analiz et ve Vorqa Akademi için Türkçe blog yazısı hazırla.
 
 ═══ HABERLER ═══
 ${newsBlock}

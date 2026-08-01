@@ -1,4 +1,4 @@
-# ZYT Global Industry — Yaratıcı Redesign Brief (Claude Code için)
+# Vorqa Global — Yaratıcı Redesign Brief (Claude Code için)
 
 ## Bağlam
 Bu site `website/` klasöründe, düz HTML + Tailwind CDN + vanilla JS ile yazılmış (framework yok). Sayfalar: `index.html`, `galvaniz.html`, `enerji.html`, `tedarik-zinciri.html` (ve muhtemelen beton/mühendislik sayfaları). Zaten preloader, grain doku, nav hover mikro-animasyonları ve dil (tr/en) sistemi var. Amaç bunu **tamamen değiştirmek değil**, mevcut altyapı üzerine daha yaratıcı, akıcı ve "wow" hissi veren bir katman eklemek.
@@ -7,7 +7,7 @@ Bu site `website/` klasöründe, düz HTML + Tailwind CDN + vanilla JS ile yazı
 - Renkler: navy `#0A2540`, mid `#051728`, blue `#2874B2`, steel `#5C8DB8`, graph `#3A4858`, mist `#E8EEF4`, orange `#E87722`
 - Fontlar: Sora Variable (display), Manrope Variable (body), JetBrains Mono Variable (etiket/mono)
 - Ton: koyu, mühendislik hissi veren, "§ 01 —" tarzı teknik numaralandırma, `//` prefix'li eyebrow etiketler
-- Alt marka isimleri (Galva-Pro, Mi Makina, Vetter Tech) **hiçbir yerde görünmeyecek** — her şey ZYT Global anlatısı
+- Alt marka isimleri (Galva-Pro, Mi Makina, Vetter Tech) **hiçbir yerde görünmeyecek** — her şey Vorqa Global anlatısı
 
 ## Hedef His
 Klasik/kurumsal "endüstriyel şirket sitesi" değil; scroll ettikçe hikaye anlatan, mühendislik hassasiyetini yansıtan ama modern bir dijital ajans/teknoloji şirketi gibi hissettiren bir deneyim. Referans: Linear, Vercel, Stripe'ın "teknik ama şık" estetiği + ağır sanayi/mühendislik motifleri (grid çizgileri, blueprint izleri, sayaçlar, teknik etiketler).

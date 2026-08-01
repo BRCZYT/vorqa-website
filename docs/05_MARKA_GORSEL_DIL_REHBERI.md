@@ -1,10 +1,10 @@
-# ZYT Global — Marka ve Görsel Dil Rehberi
+# Vorqa Global — Marka ve Görsel Dil Rehberi
 > Bu belge Claude Opus, Claude Code, Midjourney, tasarımcı — kim çalışırsa çalışsın aynı görsel dili üretmesi için tek kaynak.
 
 ## 1. Marka Özü
 - **Kimlik cümlesi:** "Ankara merkezli, MENA odaklı, anahtar teslim endüstriyel mühendislik grubu."
 - **Kişilik:** Mühendis ciddiyeti + küresel özgüven. Konuşkan değil, kanıtlı. Süslü değil, hassas.
-- **MUTLAK KURAL:** Alt şirket isimleri (Galva-Pro, Mi Makina, Vetter Tech) hiçbir görselde, metinde, alt etikette, dosya adında geçmez. Tüm tarih ve uzmanlık ZYT Global'in tekil hikayesidir.
+- **MUTLAK KURAL:** Alt şirket isimleri (Galva-Pro, Mi Makina, Vetter Tech) hiçbir görselde, metinde, alt etikette, dosya adında geçmez. Tüm tarih ve uzmanlık Vorqa Global'in tekil hikayesidir.
 
 ## 2. Renk Sistemi
 | Rol | İsim | Hex | Kullanım |

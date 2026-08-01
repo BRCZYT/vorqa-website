@@ -1,11 +1,11 @@
-# ZYT Global — Yapılacaklar Listesi (Öncelik Sırasıyla)
-> Kaynak: 4 Temmuz 2026 tam kod analizi (repo: BRCZYT/ZYT-website, canlı: zyt-website.vercel.app)
+# Vorqa Global — Yapılacaklar Listesi (Öncelik Sırasıyla)
+> Kaynak: 4 Temmuz 2026 tam kod analizi (repo: BRCZYT/ZYT-website — repo klasör adı henüz Vorqa'ya yeniden adlandırılmadı, canlı: zyt-website.vercel.app — marka içerik/domain Vorqa'ya geçti ama Vercel proje adı kontrol edilmedi)
 > Kural: Her faz bitmeden sonrakine geçme. Her madde tek commit/PR olarak yapılır ve tarayıcıda doğrulanır.
 
 ## FAZ 0 — Kritik Düzeltmeler (1 gün, sıfır tasarım riski)
 | # | İş | Neden | Kabul kriteri |
 |---|---|---|---|
-| 0.1 | Domain kararı: `zytglobal.com` mu `zytindustry.com` mi? TEK domain seç | Canonical (zytglobal) ile sitemap (zytindustry) çelişiyor; Google iki kimlik görüyor | Tüm dosyalarda tek domain; sitemap + canonical + JSON-LD aynı |
+| 0.1 | ✅ **ÇÖZÜLDÜ** — Domain kararı: eski çelişki (`zytglobal.com` vs `zytindustry.com`) artık geçersiz; marka Vorqa'ya geçti ve tek domain (`vorqaglobal.com`) canlı. Yine de canonical/sitemap/JSON-LD'nin hepsinin birebir bu domaine işaret ettiğini doğrula | Canonical ile sitemap iki farklı domain gösterirse Google iki kimlik görür | Tüm dosyalarda tek domain; sitemap + canonical + JSON-LD aynı |
 | 0.2 | Favicon seti ekle (SVG + PNG 32/180 + manifest) | Konsol 404'ü; sekmede boş ikon güvensizlik verir | Konsolda 404 yok; sekmede logo |
 | 0.3 | `og:image` (1200×630) + `twitter:card` tüm sayfalara | LinkedIn/WhatsApp paylaşımında boş önizleme = B2B'de ölüm | LinkedIn Post Inspector'da görselli kart |
 | 0.4 | `node_modules/`, `temporary screenshots/`, `*.mjs` patch scriptlerini repodan çıkar (`.gitignore`) | 36MB gereksiz yük, profesyonellik | Repo < 5MB (görseller hariç) |
@@ -26,8 +26,8 @@
 | # | İş | Neden |
 |---|---|---|
 | 2.1 | JSON-LD genişlet: her hizmet sayfasına `Service`, iletişime `ContactPage`+`LocalBusiness`, blog yazılarına `Article`, tümüne `BreadcrumbList` | AI aramaları (ChatGPT/Perplexity/Gemini) yapılandırılmış veriyi doğrudan tüketir |
-| 2.2 | Blog'u (ZYT-blog) akademi.html hub'ına resmen bağla; her yazıya meta + Article schema + iç link | İçerik var ama keşfedilemez durumda |
-| 2.3 | Her sayfa için benzersiz `<title>` + `description` şablonu: "{Hizmet} | Anahtar Teslim {Sektör} Çözümleri — ZYT Global" | Şu an başlıklar jenerik |
+| 2.2 | Blog'u (vorqa-blog) akademi.html hub'ına resmen bağla; her yazıya meta + Article schema + iç link | İçerik var ama keşfedilemez durumda |
+| 2.3 | Her sayfa için benzersiz `<title>` + `description` şablonu: "{Hizmet} | Anahtar Teslim {Sektör} Çözümleri — Vorqa Global" | Şu an başlıklar jenerik |
 | 2.4 | `llms.txt` + genişletilmiş `robots.txt` ekle | AI crawler'larına içerik haritası sunar (detay: 03_SEO belgesi) |
 | 2.5 | Görsellere anlamlı `alt` (index'te 1 eksik) + `loading="lazy"` + WebP dönüşümü | Performans + erişilebilirlik + görsel arama |
 

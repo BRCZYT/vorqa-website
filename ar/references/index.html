@@ -575,8 +575,8 @@ const T={
     'rc8.cat':'تحويل النفايات إلى طاقة · 2024 · كازاخستان','rc8.title':'محطة طاقة من النفايات الصلبة — 12 ميجاوات','rc8.excerpt':'محطة توليد كهرباء من النفايات الصلبة في كازاخستان. طاقة مركبة 12 ميجاوات، عقد EPC بنظام تسليم مفتاح، دعم هندسي كامل يشمل الاعتماد المحلي.','rc8.date':'// تحويل نفايات · 2024',
   }
 };
-function setLang(l){const t=T[l];if(!t)return;document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(e=>{const v=t[e.dataset.i18n];if(v!==undefined)e.textContent=v});document.querySelectorAll('[data-i18n-html]').forEach(e=>{const v=t[e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));localStorage.setItem('zyt-lang',l)}
-const _l=localStorage.getItem('zyt-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
+function setLang(l){const t=T[l];if(!t)return;document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(e=>{const v=t[e.dataset.i18n];if(v!==undefined)e.textContent=v});document.querySelectorAll('[data-i18n-html]').forEach(e=>{const v=t[e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));localStorage.setItem('vorqa-lang',l)}
+const _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
 setLang(_l);
 document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>60);const _p=document.getElementById('scroll-prog');if(_p)_p.style.transform='scaleX('+(scrollY/(document.documentElement.scrollHeight-innerHeight))+')'});

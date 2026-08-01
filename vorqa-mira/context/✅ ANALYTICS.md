@@ -1,5 +1,5 @@
 \# ANALYTICS.md  
-\# ZYT Global Industry — Performance Metrics & Decision Triggers
+\# Vorqa Global — Performance Metrics & Decision Triggers
 
 \---
 
@@ -127,7 +127,7 @@ Decisions:
 Every 3 months, reassess:  
 \- Which platform is generating most qualified leads? → Increase investment there  
 \- Which target country is showing most engagement? → Create country-specific content  
-\- Which ZYT service generates most interest? → Feature it more heavily for 90 days  
+\- Which Vorqa service generates most interest? → Feature it more heavily for 90 days  
 \- Is the content-to-lead funnel working? If not, what is the bottleneck?
 
 \---
@@ -138,5 +138,5 @@ Likes alone (without comments or DMs): A post can get 50 likes from irrelevant a
 Follower count from wrong audience: 5,000 followers who are not CEOs / Procurement Managers \= worse than 500 who are.  
 Video views from outside target geography: TikTok virality from irrelevant countries has zero business value.
 
-The only metric that matters for ZYT at this stage:  
+The only metric that matters for Vorqa at this stage:  
 Qualified leads (Stage 3+) per month — everything else is in service of this number.  

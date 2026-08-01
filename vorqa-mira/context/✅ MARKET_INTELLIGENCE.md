@@ -1,5 +1,5 @@
 \# MARKET\_INTELLIGENCE.md  
-\# ZYT Global Industry — Market Monitoring System
+\# Vorqa Global — Market Monitoring System
 
 \---
 
@@ -7,7 +7,7 @@
 
 \#\#\# 1\. MENA Construction & Infrastructure Projects  
 What: New EPC tenders, government infrastructure announcements, World Bank / IFC / ADB funded projects  
-Why: These are direct procurement opportunities for ZYT's entire portfolio  
+Why: These are direct procurement opportunities for Vorqa's entire portfolio  
 Sources:  
 \- Zawya.com (MENA business & projects news)  
 \- MEED.com (Middle East Economic Digest — paid, but free summaries available)  
@@ -47,7 +47,7 @@ Frequency: Monthly
 
 \#\#\# 5\. Turkey Industrial Export News  
 What: Turkish export incentives, trade agreements, industrial equipment export data  
-Why: Understanding Turkey's export policy helps position ZYT's supply chain advantage  
+Why: Understanding Turkey's export policy helps position Vorqa's supply chain advantage  
 Sources:  
 \- TÜİK (Turkish Statistical Institute — tuik.gov.tr) — monthly export data  
 \- TOBB (Union of Chambers) news  
@@ -67,7 +67,7 @@ Frequency: Monthly
 
 \#\# HOW TO USE INTELLIGENCE
 
-Step 1 — Capture: When you find a relevant news item, note: What, Where, When, Why it matters to ZYT
+Step 1 — Capture: When you find a relevant news item, note: What, Where, When, Why it matters to Vorqa
 
 Step 2 — Content: Convert intelligence into Mira content  
 \- Project announcement in Iraq → Mira posts insight: "Iraq announces $X infrastructure investment. What this means for concrete demand in 2025-2026."  
@@ -77,7 +77,7 @@ Step 2 — Content: Convert intelligence into Mira content
 Step 3 — Lead activation: If intelligence identifies a specific company or tender:  
 \- Find the procurement contact on LinkedIn  
 \- Connect with personalized note referencing the news item  
-\- Offer ZYT-relevant insight or reference
+\- Offer Vorqa-relevant insight or reference
 
 Step 4 — Log to KNOWLEDGE\_BASE: Save significant market developments for future reference
 
@@ -85,11 +85,11 @@ Step 4 — Log to KNOWLEDGE\_BASE: Save significant market developments for futu
 
 \#\# INTELLIGENCE → CONTENT FORMULA
 
-News item \+ ZYT relevance \+ 1 actionable insight for audience \= Mira post
+News item \+ Vorqa relevance \+ 1 actionable insight for audience \= Mira post
 
 Example:  
 News: "Egypt announces $2B construction stimulus for 2025"  
-ZYT relevance: Concrete plant demand will increase 6–18 months after announcement  
+Vorqa relevance: Concrete plant demand will increase 6–18 months after announcement  
 Insight: "Most manufacturers wait for the RFQ. Smart procurement managers start supplier qualification now."  
 Result: LinkedIn post educating procurement managers about lead time planning.
 

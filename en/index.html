@@ -2104,7 +2104,7 @@ function setLang(lang) {
   document.querySelectorAll('.l-btn, .mob-l-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.lang === lang);
   });
-  localStorage.setItem('zyt-lang', lang);
+  localStorage.setItem('vorqa-lang', lang);
   if (window.__prjRelang) window.__prjRelang(lang);
 }
 setLang('en');

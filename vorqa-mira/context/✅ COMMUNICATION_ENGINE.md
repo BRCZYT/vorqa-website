@@ -1,5 +1,5 @@
 \# COMMUNICATION\_ENGINE.md  
-\# ZYT Global Industry — Communication & Sales Engine
+\# Vorqa Global — Communication & Sales Engine
 
 \---
 
@@ -8,8 +8,8 @@
 Priority order:  
 1\. LinkedIn (primary — inbound \+ outbound)  
 2\. Website contact form  
-3\. WhatsApp Business (+90 312 000 00 00\)  
-4\. Email (info@zyt.industry)  
+3\. WhatsApp Business (+90 536 707 69 51\)  
+4\. Email (info@vorqaglobal.com)  
 5\. Video call / Meeting  
 6\. Technical proposal \+ quotation
 
@@ -38,7 +38,7 @@ Friday note: MENA clients may be unavailable Friday afternoon — do not send sa
 Opening tone: Strategic, high-level, business value  
 What they care about: ROI, risk reduction, project success, reputation  
 What they don't want: Technical details up front, long explanations, pushy sales  
-First message goal: Establish ZYT as a credible strategic partner, not a vendor
+First message goal: Establish Vorqa as a credible strategic partner, not a vendor
 
 Example opening (LinkedIn DM):  
 "I noticed \[Company Name\] is expanding in \[Country\]. Companies in similar growth phases often face one specific challenge with industrial equipment procurement — sourcing reliable Turkish suppliers who can handle the full chain. Happy to share how we've structured this for similar projects. Would a brief call make sense?"
@@ -56,7 +56,7 @@ Example opening:
 Opening tone: Project-focused, deadline-aware, problem-solving  
 What they care about: Lead times, logistics reliability, on-site support, communication during delivery  
 What they don't want: Commercial delays, bureaucracy, unresponsive after-sales  
-First message goal: Show that ZYT reduces project risk, not adds to it
+First message goal: Show that Vorqa reduces project risk, not adds to it
 
 Example opening:  
 "Project timelines in MENA construction are tight — we know this. When sourcing Turkish equipment, the two biggest risks are customs delay and spec misalignment at delivery. We've built a process that handles both. If you have an upcoming delivery milestone, worth a quick conversation."
@@ -74,7 +74,7 @@ Q2 — Volume: "Roughly what scale of equipment or value are we talking?"
 (Establishes project size — calibrate effort accordingly.)
 
 Q3 — Geography: "Which country is the destination / installation site?"  
-(Determines logistics complexity, customs, and which ZYT network applies.)
+(Determines logistics complexity, customs, and which Vorqa network applies.)
 
 Q4 — Decision authority: "Are you the decision-maker for this, or does this go through a procurement committee?"  
 (Determines whether to invest in deeper relationship or ask for referral to the right person.)
@@ -115,16 +115,16 @@ Hand off immediately when:
 \- Message thread exceeds 5 exchanges without resolution
 
 Hand off message (Mira to use):  
-"This is exactly the kind of project our team should look at directly. I'm connecting you with \[ZYT contact name\] who handles \[region/sector\]. They'll follow up within 24 hours. In the meantime — is there a specific technical document or reference that would be useful to share?"
+"This is exactly the kind of project our team should look at directly. I'm connecting you with \[Vorqa contact name\] who handles \[region/sector\]. They'll follow up within 24 hours. In the meantime — is there a specific technical document or reference that would be useful to share?"
 
 \---
 
 \#\# INBOUND LEAD RESPONSE TEMPLATES
 
 \#\#\# Template 1 — Website form inquiry  
-Subject: Re: Your inquiry to ZYT Global Industry
+Subject: Re: Your inquiry to Vorqa Global
 
-"Thank you for reaching out. I'm Mira, ZYT's industry analyst — I'll make sure your inquiry reaches the right person on our team.
+"Thank you for reaching out. I'm Mira, Vorqa's industry analyst — I'll make sure your inquiry reaches the right person on our team.
 
 To give you the most relevant response, could you tell me:  
 1\. Which of our capabilities are you most interested in? (Concrete plants / Galvanizing / Waste-to-Energy / Supply chain / Other)  
@@ -134,7 +134,7 @@ To give you the most relevant response, could you tell me:
 Our team will follow up within 48 hours with a tailored response."
 
 \#\#\# Template 2 — LinkedIn connection request (cold outbound)  
-"Hi \[Name\] — I work with ZYT Global Industry, a Turkish engineering group focused on concrete plants, galvanizing, and industrial supply chain for MENA and Africa. I follow \[their company/industry\] and thought there might be value in connecting. No immediate ask — happy to be a useful contact if anything industrial-Turkish ever comes up."
+"Hi \[Name\] — I work with Vorqa Global, a Turkish engineering group focused on concrete plants, galvanizing, and industrial supply chain for MENA and Africa. I follow \[their company/industry\] and thought there might be value in connecting. No immediate ask — happy to be a useful contact if anything industrial-Turkish ever comes up."
 
 \#\#\# Template 3 — Comment response (on Mira's content post)  
 If question: Answer the question fully in the comment. End with: "Feel free to DM if you'd like to go deeper on this."  

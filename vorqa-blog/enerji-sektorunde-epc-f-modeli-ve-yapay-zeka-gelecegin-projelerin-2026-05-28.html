@@ -258,9 +258,9 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
     document.documentElement.lang=l;
     document.documentElement.dir=l==='ar'?'rtl':'ltr';
     document.querySelectorAll('.l-btn,.mob-l-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    localStorage.setItem('zyt-lang',l);
+    localStorage.setItem('vorqa-lang',l);
   }
-  var _l=localStorage.getItem('zyt-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
+  var _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
   setLang(_l);
   document.querySelectorAll('.l-btn,.mob-l-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
 })();

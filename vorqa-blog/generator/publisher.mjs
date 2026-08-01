@@ -4,8 +4,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const BLOG_DIR  = path.join(__dirname, '../');          // ZYT-blog/
-const SITE_ROOT = path.join(__dirname, '../../');       // ZYT-website/
+const BLOG_DIR  = path.join(__dirname, '../');          // vorqa-blog/
+const SITE_ROOT = path.join(__dirname, '../../');       // ZYT-website/ (repo folder name unchanged)
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -50,7 +50,7 @@ function generatePostHTML(draft, slug, date, coverImg) {
           reading_time = 6, category_label, sector_page = 'index.html', sector } = draft;
 
   const isoDate  = `${date}T08:00:00+03:00`;
-  const url      = `https://www.zytindustry.com/ZYT-blog/${slug}.html`;
+  const url      = `https://www.vorqaglobal.com/vorqa-blog/${slug}.html`;
   const dateTR   = formatDateTR(date);
 
   const refsHtml = references.length
@@ -69,7 +69,7 @@ function generatePostHTML(draft, slug, date, coverImg) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>${esc(title)} — ZYT Akademi</title>
+<title>${esc(title)} — Vorqa Akademi</title>
 <meta name="description" content="${esc(meta_description || excerpt)}">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="article">
@@ -90,8 +90,8 @@ function generatePostHTML(draft, slug, date, coverImg) {
   "@type":"BlogPosting",
   "headline":${JSON.stringify(title)},
   "datePublished":"${isoDate}",
-  "author":{"@type":"Person","name":"Mira","jobTitle":"ZYT Global Industry AI Editörü"},
-  "publisher":{"@type":"Organization","name":"ZYT Global Industry","url":"https://www.zytindustry.com"},
+  "author":{"@type":"Person","name":"Mira","jobTitle":"Vorqa Global AI Editörü"},
+  "publisher":{"@type":"Organization","name":"Vorqa Global","url":"https://www.vorqaglobal.com"},
   "mainEntityOfPage":{"@type":"WebPage","@id":"${url}"},
   "image":"${coverImg}",
   "description":${JSON.stringify(meta_description || excerpt)}
@@ -186,14 +186,10 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <nav id="nav">
   <a href="../index.html" class="nav-logo">
-    <svg width="58" height="22" viewBox="140 65 400 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M150,70 L250,70 L260,80 L260,86 L180,164 L260,164 L260,180 L160,180 L150,170 L150,164 L158,164 L238,86 L150,86 Z" fill="#0a2540"/>
-      <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${catColor}"/>
-      <path d="M420,80 L430,70 L520,70 L530,80 L530,86 L483,86 L483,180 L467,180 L467,86 L420,86 Z" fill="#0a2540"/>
-    </svg>
+    <!-- TODO: Burcu — gerçek VORQA vektör logosu gelince bu geçici metin wordmark değiştirilecek -->
+    <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:17px;letter-spacing:-.02em;color:#0a2540">VORQA</span>
     <div style="border-left:1px solid rgba(10,37,64,.14);padding-left:12px">
       <div style="font-family:'JetBrains Mono Variable',monospace;font-size:7.5px;letter-spacing:2px;color:rgba(10,37,64,.4);text-transform:uppercase;line-height:1.8">Global</div>
-      <div style="font-family:'JetBrains Mono Variable',monospace;font-size:7.5px;letter-spacing:2px;color:rgba(10,37,64,.4);text-transform:uppercase;line-height:1.8">Industry</div>
     </div>
   </a>
   <div class="nav-links">
@@ -210,7 +206,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 </nav>
 
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${catColor};text-transform:uppercase;margin-bottom:20px">ZYT Global Industry</div>
+  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${catColor};text-transform:uppercase;margin-bottom:20px">Vorqa Global</div>
   <a href="../akademi.html" class="mob-link" style="color:${catColor}">Akademi</a>
   <div class="mob-sep"></div>
   <a href="../iletisim.html" class="mob-link">İletişim</a>
@@ -234,7 +230,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
       <span class="post-meta-sep"></span>
       <span>${reading_time} dakika okuma</span>
       <span class="post-meta-sep"></span>
-      <span>Mira · ZYT Akademi</span>
+      <span>Mira · Vorqa Akademi</span>
     </div>
     <img src="${coverImg}" alt="${esc(title)}" class="cover-img" loading="eager">
   </div>
@@ -251,12 +247,12 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
   </div>` : ''}
 
   <div class="author-card rv">
-    <img src="../ZYT-mira/Mira.png" alt="Mira" class="author-img">
+    <img src="../vorqa-mira/Mira.png" alt="Mira" class="author-img">
     <div>
       <div class="author-name">Mira</div>
-      <div class="author-role">ZYT Global Industry AI Editörü</div>
+      <div class="author-role">Vorqa Global AI Editörü</div>
       <div style="font-size:13px;color:rgba(10,37,64,.5);margin-top:6px;line-height:1.6">
-        Sektör haberlerini, akademik yayınları ve standart güncellemelerini ZYT Akademi için analiz eden yapay zeka editörü.
+        Sektör haberlerini, akademik yayınları ve standart güncellemelerini Vorqa Akademi için analiz eden yapay zeka editörü.
       </div>
     </div>
   </div>
@@ -275,20 +271,17 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 <footer id="foot">
   <div class="foot-inner">
     <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:12px">
-      <svg width="44" viewBox="140 60 400 130" xmlns="http://www.w3.org/2000/svg">
-        <path d="M150,70 L250,70 L260,80 L260,86 L180,164 L260,164 L260,180 L160,180 L150,170 L150,164 L158,164 L238,86 L150,86 Z" fill="#fff"/>
-        <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${catColor}"/>
-        <path d="M420,80 L430,70 L520,70 L530,80 L530,86 L483,86 L483,180 L467,180 L467,86 L420,86 Z" fill="#fff"/>
-      </svg>
-      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase">ZYT Global Industry</span>
+      <!-- TODO: Burcu — gerçek VORQA vektör logosu gelince bu geçici metin wordmark değiştirilecek -->
+      <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em;color:#fff">VORQA</span>
+      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase">Global</span>
     </a>
     <a href="../akademi.html" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:6px 12px">← Tüm Yazılar</a>
     <div class="ft-social">
-      <a href="https://linkedin.com/company/zyt-global-industry" class="ft-soc-link" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://linkedin.com/company/vorqa-global" class="ft-soc-link" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
     </div>
   </div>
   <div style="max-width:820px;margin:20px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)">
-    <span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.5px;color:rgba(255,255,255,.15);text-transform:uppercase">© 2026 ZYT Global Industry Grubu — Tüm Hakları Saklıdır</span>
+    <span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.5px;color:rgba(255,255,255,.15);text-transform:uppercase">© 2026 Vorqa Global — Tüm Hakları Saklıdır</span>
   </div>
 </footer>
 
@@ -318,9 +311,9 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
     document.documentElement.lang=l;
     document.documentElement.dir=l==='ar'?'rtl':'ltr';
     document.querySelectorAll('.l-btn,.mob-l-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
-    localStorage.setItem('zyt-lang',l);
+    localStorage.setItem('vorqa-lang',l);
   }
-  var _l=localStorage.getItem('zyt-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
+  var _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
   setLang(_l);
   document.querySelectorAll('.l-btn,.mob-l-btn').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
 })();
@@ -340,7 +333,7 @@ async function updateBlogHtml(draft, slug, date, coverImg) {
 
   const newCard = `
       <!-- POST: ${title.slice(0, 60)} -->
-      <div class="blog-card rv d1" data-cat="${sector}" onclick="location.href='ZYT-blog/${slug}.html'">
+      <div class="blog-card rv d1" data-cat="${sector}" onclick="location.href='vorqa-blog/${slug}.html'">
         <div class="blog-img-wrap">
           <img class="blog-img" src="${coverImg}" alt="${esc(title)}" loading="lazy">
           <div class="blog-img-overlay"></div>
@@ -350,7 +343,7 @@ async function updateBlogHtml(draft, slug, date, coverImg) {
           <div class="blog-title">${title}</div>
           <div class="blog-meta">
             <span class="blog-date">${dateTR} &middot; ${reading_time} dak.</span>
-            <a href="ZYT-blog/${slug}.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+            <a href="vorqa-blog/${slug}.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
           </div>
         </div>
       </div>`;
@@ -373,7 +366,7 @@ async function updateSitemap(slug, date) {
   if (!fs.existsSync(sitemapPath)) return;
 
   let xml = await fsp.readFile(sitemapPath, 'utf8');
-  const newUrl = `\n  <url>\n    <loc>https://www.zytindustry.com/ZYT-blog/${slug}.html</loc>\n    <lastmod>${date}</lastmod>\n    <changefreq>never</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+  const newUrl = `\n  <url>\n    <loc>https://www.vorqaglobal.com/vorqa-blog/${slug}.html</loc>\n    <lastmod>${date}</lastmod>\n    <changefreq>never</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
 
   xml = xml.replace('</urlset>', newUrl + '</urlset>');
   await fsp.writeFile(sitemapPath, xml, 'utf8');
@@ -399,5 +392,5 @@ export async function publishDraft(draft) {
   // 3. Update sitemap.xml
   await updateSitemap(slug, date);
 
-  return `ZYT-blog/${slug}.html`;
+  return `vorqa-blog/${slug}.html`;
 }

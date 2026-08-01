@@ -43,7 +43,7 @@ export async function fetchSectorNews(sector) {
   for (const url of urls) {
     try {
       const res = await fetch(url, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (ZYT Mira Bot/1.0)' },
+        headers: { 'User-Agent': 'Mozilla/5.0 (Vorqa Mira Bot/1.0)' },
         signal: AbortSignal.timeout(10000)
       });
       if (!res.ok) continue;

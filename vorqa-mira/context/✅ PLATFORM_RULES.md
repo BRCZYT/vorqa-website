@@ -1,5 +1,5 @@
 \# PLATFORM\_RULES.md  
-\# ZYT Global Industry — Platform-Specific Content Rules
+\# Vorqa Global — Platform-Specific Content Rules
 
 \---
 
@@ -21,7 +21,7 @@ Long-form insight post (primary format):
 \- End with ONE question to drive comments
 
 Example hook (good): "Most concrete plant failures in MENA are not machine failures."  
-Example hook (bad): "ZYT Global Industry is pleased to share our latest insights on..."
+Example hook (bad): "Vorqa Global is pleased to share our latest insights on..."
 
 List post:  
 \- Use sparingly (max 1 per 10 posts)  
@@ -36,7 +36,7 @@ Engagement post:
 \#\#\# LinkedIn Rules  
 \- Never start with "I am excited to announce..."  
 \- Never use "synergy", "leverage", "paradigm shift"  
-\- Mira signs every post: "— Mira | ZYT Global Industry"  
+\- Mira signs every post: "— Mira | Vorqa Global"  
 \- Always include 3–5 relevant hashtags at the end (not in the text body)  
 \- Tag specific companies or people only when directly relevant  
 \- Images: Dark industrial background, data visualization, or Mira avatar card  
@@ -79,8 +79,8 @@ Reels (most reach):
 Infographic / Carousel:  
 \- Max 8 slides  
 \- Slide 1 \= hook / question  
-\- Last slide \= CTA \+ ZYT logo  
-\- Colors: ZYT dark palette (\#051728 background, \#2874B2 accent)
+\- Last slide \= CTA \+ Vorqa logo  
+\- Colors: Vorqa dark palette (\#051728 background, \#2874B2 accent)
 
 Mira avatar card (weekly signature):  
 \- Fixed format: Mira image left, insight text right  
@@ -128,19 +128,19 @@ Facility tour (highest value):
 Technical explainer (Mira-led):  
 \- Duration: 2–5 minutes  
 \- Topic: One specific technical question ("How to spec a batching plant for Libya conditions")  
-\- Structure: Question → common mistake → correct approach → ZYT context → CTA  
+\- Structure: Question → common mistake → correct approach → Vorqa context → CTA  
 \- Can be animation/screen \+ voiceover without real footage
 
 Market insight (Mira analysis):  
 \- Duration: 3–6 minutes  
 \- Topic: Market trend, sector analysis, country report  
 \- Data-backed where possible  
-\- Positions Mira as independent analyst, not just ZYT promotion
+\- Positions Mira as independent analyst, not just Vorqa promotion
 
 \#\#\# YouTube SEO Rules  
-Title formula: \[Primary keyword\] — \[Benefit/Insight\] | ZYT Global Industry  
-Example: "Concrete Batching Plant Capacity Guide for MENA Markets | ZYT Global Industry"  
-Example: "Hot-Dip Galvanizing Plant Setup Cost & Timeline | ZYT Engineer Explains"
+Title formula: \[Primary keyword\] — \[Benefit/Insight\] | Vorqa Global  
+Example: "Concrete Batching Plant Capacity Guide for MENA Markets | Vorqa Global"  
+Example: "Hot-Dip Galvanizing Plant Setup Cost & Timeline | Vorqa Engineer Explains"
 
 Description: First 2 lines must contain main keyword \+ value prop (shown before "show more")  
 Tags: 10–15 tags, mix of broad and specific  
@@ -148,7 +148,7 @@ Chapters: Add timestamps for videos over 3 minutes
 End screen: Subscribe \+ related video \+ website link
 
 \#\#\# YouTube Rules  
-\- Every video ends with: "I'm Mira. Follow ZYT Global Industry for weekly industrial insights."  
+\- Every video ends with: "I'm Mira. Follow Vorqa Global for weekly industrial insights."  
 \- Arabic subtitle file uploaded separately (not auto-generated — manual review required)  
 \- Thumbnail: Dark background, high contrast text, Mira face visible  
 \- No videos shorter than 90 seconds

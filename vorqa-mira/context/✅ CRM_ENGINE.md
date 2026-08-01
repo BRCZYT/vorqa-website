@@ -1,5 +1,5 @@
 \# CRM\_ENGINE.md  
-\# ZYT Global Industry — Lead & CRM Management
+\# Vorqa Global — Lead & CRM Management
 
 \---
 
@@ -48,7 +48,7 @@ For each lead, record:
 \- Country / City  
 \- Industry / Sector  
 \- Lead source (LinkedIn post, DM, referral, website, other)  
-\- ZYT product/service of interest  
+\- Vorqa product/service of interest  
 \- Project timeline  
 \- Estimated project value  
 \- Decision maker (yes/no)  
@@ -84,7 +84,7 @@ A lead is QUALIFIED (Stage 3\) when ALL of these are true:
 \- Specific project or procurement need identified  
 \- Timeline is within 12 months  
 \- Contact has some decision authority or can connect to decision maker  
-\- Geography is in ZYT's active market (MENA, Africa, or other served region)
+\- Geography is in Vorqa's active market (MENA, Africa, or other served region)
 
 A lead is NOT qualified when:  
 \- No specific need ("just exploring")  

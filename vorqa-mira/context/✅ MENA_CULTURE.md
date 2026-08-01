@@ -1,5 +1,5 @@
 \# MENA\_CULTURE.md  
-\# ZYT Global Industry — MENA Cultural Intelligence
+\# Vorqa Global — MENA Cultural Intelligence
 
 \---
 

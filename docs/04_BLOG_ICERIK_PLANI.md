@@ -1,10 +1,10 @@
-# ZYT Global — Blog (Akademi) İçerik Planı
-> Amaç: Sıralama değil OTORİTE. Bir satın alma müdürü veya yatırımcı, karar sürecinde 3 kez ZYT içeriğiyle karşılaşmalı. Mevcut ZYT-blog klasöründeki yazılar bu plana entegre edilir.
+# Vorqa Global — Blog (Akademi) İçerik Planı
+> Amaç: Sıralama değil OTORİTE. Bir satın alma müdürü veya yatırımcı, karar sürecinde 3 kez Vorqa içeriğiyle karşılaşmalı. Mevcut vorqa-blog klasöründeki yazılar bu plana entegre edilir.
 
 ## Yayın Ritmi
 - Ayda 2 yazı (1 TR + EN çevirisi ile birlikte yayınlanır; çeviri değil yerelleştirme)
 - Uzunluk: 1.200-2.000 kelime; her yazıda min. 1 özgün şema/tablo/hesaplama
-- Yazar kimliği: "ZYT Global Mühendislik Ekibi" (kişi ismi yok — kurumsal otorite). İleride Mira imzalı pazar analizi serisi eklenebilir (LinkedIn ile senkron)
+- Yazar kimliği: "Vorqa Global Mühendislik Ekibi" (kişi ismi yok — kurumsal otorite). İleride Mira imzalı pazar analizi serisi eklenebilir (LinkedIn ile senkron)
 
 ## İçerik Sütunları (4 sütun × dönüşümlü)
 ### Sütun A — Karar Rehberleri (satın alma aşaması, en yüksek dönüşüm)

@@ -1107,8 +1107,8 @@ const T={
     'foot.copy':'© 2026 مجموعة Vorqa Global — جميع الحقوق محفوظة','ad.val':'أنقرة · تركيا'
   }
 };
-function setLang(l){const t=T[l];if(!t)return;document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(e=>{const v=t[e.dataset.i18n];if(v!==undefined)e.textContent=v});document.querySelectorAll('[data-i18n-html]').forEach(e=>{const v=t[e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));localStorage.setItem('zyt-lang',l)}
-const _l=localStorage.getItem('zyt-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
+function setLang(l){const t=T[l];if(!t)return;document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(e=>{const v=t[e.dataset.i18n];if(v!==undefined)e.textContent=v});document.querySelectorAll('[data-i18n-html]').forEach(e=>{const v=t[e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));localStorage.setItem('vorqa-lang',l)}
+const _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
 setLang(_l);
 document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 /* Nav scroll */

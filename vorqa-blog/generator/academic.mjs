@@ -10,7 +10,7 @@ async function fetchSemanticScholar(query) {
   const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${q}&limit=3&fields=title,abstract,year,authors,externalIds`;
   try {
     const res = await fetch(url, {
-      headers: { 'User-Agent': 'ZYT-Mira-Academic/1.0' },
+      headers: { 'User-Agent': 'Vorqa-Mira-Academic/1.0' },
       signal: AbortSignal.timeout(12000)
     });
     if (!res.ok) return [];

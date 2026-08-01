@@ -1410,9 +1410,9 @@ function setLang(lang){
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=t[el.dataset.i18nPh];if(v!==undefined)el.placeholder=v;});
   document.querySelectorAll('[data-i18n-aria]').forEach(el=>{const v=t[el.dataset.i18nAria];if(v!==undefined)el.setAttribute('aria-label',v);});
   document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
-  localStorage.setItem('zyt-lang',lang);
+  localStorage.setItem('vorqa-lang',lang);
 }
-const _initLang=localStorage.getItem('zyt-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
+const _initLang=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
 setLang(_initLang);
 document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 

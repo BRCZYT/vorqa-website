@@ -1,4 +1,4 @@
-# ZYT Global — Tasarım Prensipleri
+# Vorqa Global — Tasarım Prensipleri
 > Bu belge her tasarım kararının hakemi. Bir öneri bu prensiplerle çelişiyorsa yapılmaz.
 > Referans estetik: Stripe'ın netliği + Linear'ın disiplini + ağır sanayi ciddiyeti. Apple sadeliği, sirk animasyonu değil.
 
