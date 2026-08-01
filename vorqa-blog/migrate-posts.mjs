@@ -16,7 +16,7 @@ const POSTS = [
     title: 'ISO 1461: Sıcak Daldırma Galvanizlemede Kaplama Kalınlığı ve Ömür',
     dateTR: '22 Nis 2026', isoDate: '2026-04-22T08:00:00+03:00', reading_time: 6,
     cover: 'https://images.unsplash.com/photo-1565197261854-57f69e7028c6?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html',
     metaDesc: 'ISO 1461:2022 standardına göre sıcak daldırma galvanizlemede çinko kaplama kalınlıkları, yüzey hazırlığı ve 50+ yıl korozyon ömrü rehberi.'
   },
   {
@@ -25,7 +25,7 @@ const POSTS = [
     title: 'Atıktan Enerjiye: WtE Teknolojileri ve Türkiye 2030 Hedefleri',
     dateTR: '08 Nis 2026', isoDate: '2026-04-08T08:00:00+03:00', reading_time: 7,
     cover: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html',
     metaDesc: 'TÜİK 2024: Türkiye yıllık 32,3 milyon ton atık üretiyor. Moving grate WtE teknolojisi 500–650 kWh/ton üretiyor. 2030 Ulusal Atık Yönetimi Eylem Planı hedefleri.'
   },
   {
@@ -34,7 +34,7 @@ const POSTS = [
     title: 'EN 1090-2 Kapsamında Çelik Yapı Toleransları ve NDT Zorunlulukları',
     dateTR: '20 Mar 2026', isoDate: '2026-03-20T08:00:00+03:00', reading_time: 9,
     cover: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html',
     metaDesc: 'EN 1090-2:2018 EXC1-4 yürütme sınıfları, dikeylik toleransları H/300, EN ISO 5817 kaynak seviyeleri ve zorunlu NDT muayene gereksinimleri.'
   },
   {
@@ -43,7 +43,7 @@ const POSTS = [
     title: 'Küresel Tedarik Zincirinde 2026 Kırılganlıkları ve Çeşitlendirme Stratejileri',
     dateTR: '05 Mar 2026', isoDate: '2026-03-05T08:00:00+03:00', reading_time: 5,
     cover: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html',
     metaDesc: 'World Bank LPI 2023 ve McKinsey 2023 verilerine göre küresel tedarik zinciri kırılganlıkları, nearshoring trendleri ve çift onaylı tedarikçi modeli.'
   },
   {
@@ -52,7 +52,7 @@ const POSTS = [
     title: 'Mobil mi, Sabit mi? Proje Hacmi ve Süresine Göre ROI Analizi',
     dateTR: '14 Şub 2026', isoDate: '2026-02-14T08:00:00+03:00', reading_time: 5,
     cover: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html',
     metaDesc: 'Sabit ve mobil beton santrali karşılaştırması: teknik parametreler, TCO analizi ve 18 ay / 50.000 m³ eşiğine göre ROI rehberi. ERMCO 2024 verileri.'
   },
   {
@@ -61,7 +61,7 @@ const POSTS = [
     title: 'Anahtar Teslim Tesislerde EPC Yönetimi: Kazanılmış Değer ve Risk Matrisi',
     dateTR: '28 Oca 2026', isoDate: '2026-01-28T08:00:00+03:00', reading_time: 6,
     cover: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html',
     metaDesc: 'McKinsey analizi: büyük projelerin %79\'u bütçeyi, %52\'si takvimi aşıyor. FIDIC Sarı Kitap, EVM metrikleri (CPI/SPI) ve WBS risk kategorileri.'
   },
   {
@@ -70,7 +70,7 @@ const POSTS = [
     title: 'Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek',
     dateTR: '28 May 2026', isoDate: '2026-05-28T08:00:00+03:00', reading_time: 4,
     cover: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html',
     metaDesc: 'Enerji projelerinde EPC-F modelinin yükselişini ve yapay zekanın dönüştürücü gücünü keşfedin. Çoklu ajan sistemleri ve PEFT ile sektördeki verimlilik ve sürdürülebilirlik artıyor.'
   },
   {
@@ -79,7 +79,7 @@ const POSTS = [
     title: 'Beton Santrali Kapasitesi Nasıl Doğru Hesaplanır? Adım Adım Metodoloji',
     dateTR: '10 May 2026', isoDate: '2026-05-10T08:00:00+03:00', reading_time: 8,
     cover: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&h=600&q=80',
-    url: 'https://www.zytindustry.com/ZYT-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html',
+    url: 'https://www.vorqaglobal.com/ZYT-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html',
     metaDesc: 'Q = P / (T × η × f) formülüyle beton santrali kapasitesi hesaplama. η=0.82 ZYT standardı, iklim ve irtifa düzeltme faktörleri. ACI 304R-00 referanslı.'
   }
 ];
@@ -193,7 +193,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 <meta name="twitter:description" content="${p.metaDesc}">
 <meta name="twitter:image" content="${p.cover}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":${JSON.stringify(p.title)},"datePublished":"${p.isoDate}","author":{"@type":"Person","name":"Mira","jobTitle":"ZYT Global Industry AI Editörü"},"publisher":{"@type":"Organization","name":"ZYT Global Industry","url":"https://www.zytindustry.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"${p.url}"},"image":"${p.cover}","description":${JSON.stringify(p.metaDesc)}}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":${JSON.stringify(p.title)},"datePublished":"${p.isoDate}","author":{"@type":"Person","name":"Mira","jobTitle":"Vorqa Global AI Editörü"},"publisher":{"@type":"Organization","name":"Vorqa Global","url":"https://www.vorqaglobal.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"${p.url}"},"image":"${p.cover}","description":${JSON.stringify(p.metaDesc)}}
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
@@ -230,7 +230,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 </nav>
 
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${p.catColor};text-transform:uppercase;margin-bottom:20px">ZYT Global Industry</div>
+  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${p.catColor};text-transform:uppercase;margin-bottom:20px">Vorqa Global</div>
   <a href="../akademi.html" class="mob-link" style="color:${p.catColor}">Akademi</a>
   <div class="mob-sep"></div>
   <a href="../iletisim.html" class="mob-link">İletişim</a>
@@ -274,7 +274,7 @@ function buildHTML(p, articleHTML, refsHTML) {
     <img src="../ZYT-mira/Mira.png" alt="Mira" class="author-img">
     <div>
       <div class="author-name">Mira</div>
-      <div class="author-role">ZYT Global Industry AI Editörü</div>
+      <div class="author-role">Vorqa Global AI Editörü</div>
       <div style="font-size:13px;color:rgba(10,37,64,.5);margin-top:6px;line-height:1.6">Sektör haberlerini, akademik yayınları ve standart güncellemelerini ZYT Akademi için analiz eden yapay zeka editörü.</div>
     </div>
   </div>
@@ -299,7 +299,7 @@ function buildHTML(p, articleHTML, refsHTML) {
           <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${p.catColor}"/>
           <path d="M420,80 L430,70 L520,70 L530,80 L530,86 L483,86 L483,180 L467,180 L467,86 L420,86 Z" fill="#fff"/>
         </svg>
-        <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">ZYT Global Industry</span>
+        <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">Vorqa Global</span>
       </a>
       <a href="../akademi.html" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">← Tüm Yazılar</a>
       <div class="ft-social">
@@ -310,7 +310,7 @@ function buildHTML(p, articleHTML, refsHTML) {
     </div>
     <div style="height:1px;background:linear-gradient(to right,transparent,rgba(40,116,178,.18),transparent);margin-bottom:20px;position:relative;z-index:1"></div>
     <div class="foot-bottom">
-      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.18);text-transform:uppercase">© 2026 ZYT Global Industry Grubu — Tüm Hakları Saklıdır</span>
+      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.18);text-transform:uppercase">© 2026 Vorqa Global Grubu — Tüm Hakları Saklıdır</span>
       <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.18);text-transform:uppercase">Ankara · Türkiye</span>
     </div>
   </div>

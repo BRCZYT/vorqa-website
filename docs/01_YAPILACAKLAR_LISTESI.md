@@ -1,5 +1,5 @@
 # Vorqa Global — Yapılacaklar Listesi (Öncelik Sırasıyla)
-> Kaynak: 4 Temmuz 2026 tam kod analizi (repo: BRCZYT/ZYT-website — repo klasör adı henüz Vorqa'ya yeniden adlandırılmadı, canlı: zyt-website.vercel.app — marka içerik/domain Vorqa'ya geçti ama Vercel proje adı kontrol edilmedi)
+> Kaynak: 4 Temmuz 2026 tam kod analizi (repo: BRCZYT/ZYT-website — repo klasör adı henüz Vorqa'ya yeniden adlandırılmadı, canlı: vorqaglobal.com — marka içerik/domain Vorqa'ya geçti ama Vercel proje adı kontrol edilmedi)
 > Kural: Her faz bitmeden sonrakine geçme. Her madde tek commit/PR olarak yapılır ve tarayıcıda doğrulanır.
 
 ## FAZ 0 — Kritik Düzeltmeler (1 gün, sıfır tasarım riski)
