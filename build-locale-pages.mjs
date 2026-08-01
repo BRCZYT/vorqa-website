@@ -19,41 +19,6 @@ const PAGES = {
     en: { title: 'Industrial Sourcing & Project Supply Partner — MENA & Africa | Vorqa Global', desc: 'VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.' },
     ar: { title: 'شريك التوريد الصناعي وتنسيق المشاريع — الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل لمحطات الخرسانة ومنشآت الجلفنة الكاملة وتحويل النفايات إلى طاقة ومنشآت التكسير والغربلة — الشرق الأوسط وأفريقيا.' },
   },
-  'hakkimizda.html': {
-    tr: { title: 'Hakkımızda — Vorqa Global', desc: 'Vorqa Global hakkında. Beton santralleri, galvaniz tesisleri, enerji dönüşüm ve mühendislik alanlarında doğrulanmış tedarikçi ağımızla küresel ölçekte proje koordinasyonu.' },
-    en: { title: 'About Us — Technical Sourcing Partner for MENA & Africa | Vorqa Global', desc: 'About Vorqa Global. A technical sourcing & project coordination partner delivering concrete plants, galvanizing facilities, energy conversion and engineering projects through our verified supplier network, at global scale.' },
-    ar: { title: 'من نحن — شريك التوريد التقني لمنطقة الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'عن Vorqa Global. شريك توريد وتنسيق مشاريع تقني يقدّم محطات الخرسانة ومصانع الجلفنة ومشاريع تحويل الطاقة والهندسة عبر شبكة موردينا المعتمدة، على المستوى العالمي.' },
-  },
-  'beton.html': {
-    tr: { title: 'Beton Santrali Tedarik & Kurulum — Türkiye | Vorqa Global', desc: 'Sabit, mobil ve kompakt beton santrali tedariki ve kurulum koordinasyonu — doğrulanmış Türk üretici ağımızla, 60-240 m³/sa kapasite aralığında MENA projeleri için.' },
-    en: { title: 'Concrete Batching Plant Supplier — Turkey to MENA | Vorqa Global', desc: 'Stationary, mobile and compact concrete batching plant supply and installation coordination — through our verified Turkish manufacturer network, 60-240 m³/h capacity range, for MENA projects.' },
-    ar: { title: 'توريد محطات خلط الخرسانة — من تركيا إلى الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'توريد وتنسيق تركيب محطات خلط الخرسانة الثابتة والمتنقلة والمدمجة — عبر شبكة المصنّعين الأتراك المعتمدة لدينا، بطاقة إنتاجية من 60 إلى 240 م³/ساعة، لمشاريع الشرق الأوسط وأفريقيا.' },
-  },
-  'galvaniz.html': {
-    tr: { title: 'Sıcak Daldırma Galvaniz Tesisi Tedariki — Türkiye | Vorqa Global', desc: 'Sıcak daldırma, merkezkaç ve boru galvaniz tesislerinin tedarik ve kurulum koordinasyonu — doğrulanmış Türk üretici ağımızla, MENA projeleri için.' },
-    en: { title: 'Hot-Dip Galvanizing Plant Supplier — Turkey to MENA | Vorqa Global', desc: 'Hot-dip, centrifugal and pipe galvanizing plant supply and installation coordination — through our verified Turkish manufacturer network, for MENA projects.' },
-    ar: { title: 'توريد منشآت الجلفنة بالغمس الساخن — من تركيا إلى الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'توريد وتنسيق تركيب منشآت الجلفنة بالغمس الساخن والطرد المركزي والأنابيب — عبر شبكة المصنّعين الأتراك المعتمدة لدينا، لمشاريع الشرق الأوسط وأفريقيا.' },
-  },
-  'enerji.html': {
-    tr: { title: 'Atıktan Enerji & Biyogaz Tesisi Tedariki | Vorqa Global', desc: 'Kentsel atık, biyogaz, atık ısı ve depolama gazından enerji dönüşüm tesisi tedarik ve koordinasyonu — doğrulanmış üretici ağımız aracılığıyla, projeye özel kapasite.' },
-    en: { title: 'Waste-to-Energy & Biogas Plant Sourcing — MENA | Vorqa Global', desc: 'Municipal waste, biogas, waste heat and landfill gas energy conversion plant supply and coordination — through our verified manufacturer network, project-specific capacity.' },
-    ar: { title: 'توريد منشآت تحويل النفايات إلى طاقة والغاز الحيوي — الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'توريد وتنسيق منشآت تحويل النفايات البلدية والغاز الحيوي وحرارة النفايات وغاز المكبات إلى طاقة — عبر شبكة التصنيع المعتمدة لدينا، بطاقة خاصة بكل مشروع.' },
-  },
-  'celik-yapi-mekanik-imalat.html': {
-    tr: { title: 'Çelik Konstrüksiyon & Mekanik İmalat Tedariki | Vorqa Global', desc: 'Endüstriyel çelik yapı imalatı, mekanik proje tasarımı ve montaj tedarik koordinasyonu — atık işleme, geri dönüşüm ve proses tesisleri için, doğrulanmış üretici ağımızla.' },
-    en: { title: 'Steel Fabrication Supplier — Turkey | Vorqa Global', desc: 'Industrial steel structure fabrication, mechanical project design and installation coordination — for waste processing, recycling and process facilities, through our verified manufacturer network.' },
-    ar: { title: 'توريد التصنيع الفولاذي — تركيا | Vorqa Global', desc: 'تصنيع الهياكل الفولاذية الصناعية وتصميم المشاريع الميكانيكية وتنسيق التركيب — لمنشآت معالجة النفايات وإعادة التدوير والمعالجة، عبر شبكة التصنيع المعتمدة لدينا.' },
-  },
-  'tedarik-zinciri.html': {
-    tr: { title: 'Endüstriyel Tedarik & Proje Koordinasyonu — Türkiye | Vorqa Global', desc: 'Endüstriyel ekipman temini, lojistik koordinasyonu ve 1.000+ doğrulanmış Türk tedarikçiden oluşan ağ yönetimi — MENA ve Afrika projeleri için tek muhatap.' },
-    en: { title: 'Industrial Procurement Partner — Turkey & MENA | Vorqa Global', desc: 'Industrial equipment procurement, logistics coordination and management of our network of 1,000+ verified Turkish suppliers — single point of contact for MENA and Africa projects.' },
-    ar: { title: 'شريك التوريد الصناعي — تركيا والشرق الأوسط وأفريقيا | Vorqa Global', desc: 'توريد المعدات الصناعية وتنسيق اللوجستيات وإدارة شبكتنا التي تضم أكثر من 1.000 مورد تركي معتمد — بمرجعية واحدة لمشاريع الشرق الأوسط وأفريقيا.' },
-  },
-  'referanslar.html': {
-    tr: { title: 'Referanslar — Vorqa Global', desc: 'Vorqa Global Grubu tamamlanan proje referansları. Beton santralleri, galvaniz tesisleri, çelik yapı ve atık-enerji projeleri.' },
-    en: { title: 'Delivered Project Capacity — Concrete, Galvanizing, Steel & Energy | Vorqa Global', desc: 'Capacity delivered through our network. Concrete plants, galvanizing facilities, steel structures and waste-to-energy projects across MENA and Africa.' },
-    ar: { title: 'الطاقة المُسلَّمة للمشاريع — الخرسانة والجلفنة والفولاذ والطاقة | Vorqa Global', desc: 'طاقة تم تسليمها عبر شبكتنا. محطات الخرسانة ومنشآت الجلفنة والهياكل الفولاذية ومشاريع تحويل النفايات إلى طاقة في الشرق الأوسط وأفريقيا.' },
-  },
   'akademi.html': {
     tr: { title: 'Akademi — Vorqa Global', desc: 'Vorqa Akademi — beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında Mira editörlüğünde teknik içerikler, akademik araştırmalar ve sektör analizleri.' },
     en: { title: 'Academy — Technical Insights on Concrete, Galvanizing & Energy | Vorqa Global', desc: 'Vorqa Academy — technical articles, research and industry analysis on concrete plants, galvanizing, energy conversion and supply chain, edited by Mira.' },
