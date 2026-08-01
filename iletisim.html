@@ -385,41 +385,38 @@ html[dir="rtl"] #hero{text-align:right}
     <div class="rv d2" style="background:#fff;border-radius:12px;padding:40px;box-shadow:0 8px 40px rgba(10,37,64,.1)">
       <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#E87722;margin-bottom:8px" data-i18n="form.tag">§ 02 / Mesaj Gönder</div>
       <h3 style="font-family:'Sora Variable',Sora,sans-serif;font-size:22px;font-weight:400;color:#0A2540;margin-bottom:28px;letter-spacing:-.02em" data-i18n="form.title">Teklif ve proje sorguları</h3>
-      <form id="contact-form" style="display:flex;flex-direction:column;gap:16px" onsubmit="handleSubmit(event)">
+      <form id="contact-form" style="display:flex;flex-direction:column;gap:16px" action="https://formspree.io/f/TODO_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <div><label class="f-lbl" data-i18n="form.name.lbl">Ad Soyad</label><input type="text" class="f-inp" data-i18n-ph="form.name.ph" placeholder="Adınız Soyadınız" required></div>
-          <div><label class="f-lbl" data-i18n="form.company.lbl">Şirket</label><input type="text" class="f-inp" data-i18n-ph="form.company.ph" placeholder="Şirket Adı"></div>
+          <div><label class="f-lbl" data-i18n="form.name.lbl">Ad Soyad</label><input type="text" name="name" class="f-inp" data-i18n-ph="form.name.ph" placeholder="Adınız Soyadınız" required></div>
+          <div><label class="f-lbl" data-i18n="form.company.lbl">Şirket</label><input type="text" name="company" class="f-inp" data-i18n-ph="form.company.ph" placeholder="Şirket Adı"></div>
         </div>
         <div class="form-row">
-          <div><label class="f-lbl" data-i18n="form.email.lbl">E-Posta</label><input type="email" class="f-inp" data-i18n-ph="form.email.ph" placeholder="email@sirket.com" required></div>
-          <div><label class="f-lbl" data-i18n="form.phone.lbl">Telefon</label><input type="tel" class="f-inp" placeholder="+90 5__ ___ __ __"></div>
+          <div><label class="f-lbl" data-i18n="form.email.lbl">E-Posta</label><input type="email" name="email" class="f-inp" data-i18n-ph="form.email.ph" placeholder="email@sirket.com" required></div>
+          <div><label class="f-lbl" data-i18n="form.phone.lbl">Telefon</label><input type="tel" name="phone" class="f-inp" placeholder="+90 5__ ___ __ __"></div>
         </div>
         <div>
-          <label class="f-lbl" data-i18n="form.sector.lbl">İlgili Şirket / Sektör</label>
-          <select class="f-inp">
-            <option value="">Seçin…</option>
-            <option>Beton Santralleri — Beton Santralleri</option>
-            <option>Galvaniz Tesisleri — Galvaniz Tesisleri</option>
-            <option>Atık-Enerji Dönüşümü — Atık-Enerji Dönüşüm</option>
-            <option>Çelik Yapı & Mekanik İmalat — Çelik Yapı & Mekanik İmalat</option>
-            <option>Tedarik Zinciri Yönetimi — Tedarik Zinciri Yönetimi</option>
-            <option>Genel Bilgi</option>
-          </select>
+          <label class="f-lbl" data-i18n="form.country.lbl">Ülke</label>
+          <input type="text" name="country" class="f-inp" data-i18n-ph="form.country.ph" placeholder="Ülkeniz">
         </div>
         <div>
-          <label class="f-lbl" data-i18n="form.topic.lbl">Konu</label>
-          <select class="f-inp">
-            <option value="">Seçin…</option>
-            <option>Fiyat Teklifi</option>
-            <option>Teknik Bilgi</option>
-            <option>Proje Değerlendirmesi</option>
-            <option>Ortaklık / İşbirliği</option>
-            <option>Diğer</option>
+          <label class="f-lbl" data-i18n="form.sector.lbl">İlgili Alan</label>
+          <select class="f-inp" name="sector">
+            <option value="" data-i18n="form.sector.opt0">Seçin…</option>
+            <option data-i18n="form.sector.opt1">Beton Santralleri</option>
+            <option data-i18n="form.sector.opt2">Komple Galvaniz Tesisleri</option>
+            <option data-i18n="form.sector.opt3">Atık-Enerji Dönüşüm Tesisleri</option>
+            <option data-i18n="form.sector.opt4">Kırma &amp; Eleme Tesisleri</option>
+            <option data-i18n="form.sector.opt5">Endüstriyel Tedarik Grupları</option>
+            <option data-i18n="form.sector.opt6">Genel Bilgi</option>
           </select>
         </div>
         <div>
           <label class="f-lbl" data-i18n="form.msg.lbl">Mesajınız</label>
-          <textarea class="f-inp" rows="5" data-i18n-ph="form.msg.ph" placeholder="Projenizi kısaca anlatın — kapasite, lokasyon, bütçe aralığı veya diğer gereksinimlerinizi belirtin." required></textarea>
+          <textarea class="f-inp" name="message" rows="5" data-i18n-ph="form.msg.ph" placeholder="Projenizi kısaca anlatın — kapasite, lokasyon, bütçe aralığı veya diğer gereksinimlerinizi belirtin." required></textarea>
+        </div>
+        <div>
+          <label class="f-lbl" data-i18n="form.file.lbl">Dosya Ekle (opsiyonel)</label>
+          <input type="file" name="attachment" class="f-inp" style="padding:10px 14px" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.dwg">
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
           <button type="submit" class="btn-p">
@@ -429,6 +426,9 @@ html[dir="rtl"] #hero{text-align:right}
         </div>
         <div id="form-success" style="display:none;padding:14px 18px;background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.3);border-radius:6px;font-family:'JetBrains Mono Variable',monospace;font-size:11px;letter-spacing:1px;color:#1a8a40">
           <span data-i18n="form.success">✓ Mesajınız alındı — en geç 48 saat içinde dönüş yapılacak.</span>
+        </div>
+        <div id="form-error" style="display:none;padding:14px 18px;background:rgba(226,75,74,.08);border:1px solid rgba(226,75,74,.3);border-radius:6px;font-family:'JetBrains Mono Variable',monospace;font-size:11px;letter-spacing:1px;color:#b3261e">
+          <span data-i18n="form.error">✗ Bir sorun oluştu — lütfen tekrar deneyin veya doğrudan e-posta ile ulaşın.</span>
         </div>
       </form>
     </div>
@@ -605,18 +605,35 @@ const _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar'
 setLang(_l);
 document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 
-/* Form submit */
+/* Form submit — posts to Formspree (see form action="...TODO_FORMSPREE_ENDPOINT") */
 function handleSubmit(e){
   e.preventDefault();
-  const btn=e.target.querySelector('button[type="submit"]');
-  btn.textContent='Gönderiliyor…';
+  const form=e.target;
+  const btn=form.querySelector('button[type="submit"]');
+  const successBox=document.getElementById('form-success');
+  const errorBox=document.getElementById('form-error');
+  successBox.style.display='none';
+  errorBox.style.display='none';
+  const originalBtnHtml=btn.innerHTML;
   btn.disabled=true;
-  setTimeout(()=>{
-    document.getElementById('form-success').style.display='block';
-    e.target.reset();
-    btn.innerHTML='Gönder <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  btn.textContent='…';
+  fetch(form.action,{
+    method:'POST',
+    body:new FormData(form),
+    headers:{'Accept':'application/json'}
+  }).then(res=>{
+    if(res.ok){
+      successBox.style.display='block';
+      form.reset();
+    } else {
+      errorBox.style.display='block';
+    }
+  }).catch(()=>{
+    errorBox.style.display='block';
+  }).finally(()=>{
     btn.disabled=false;
-  },900);
+    btn.innerHTML=originalBtnHtml;
+  });
 }
 </script>
 
