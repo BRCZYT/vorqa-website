@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/atik-donusum.html",
-      "destination": "/tr/celik-yapi/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
@@ -12,37 +12,42 @@
     },
     {
       "source": "/hakkimizda.html",
-      "destination": "/tr/hakkimizda/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
       "source": "/beton.html",
-      "destination": "/tr/beton/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
       "source": "/galvaniz.html",
-      "destination": "/tr/galvaniz/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
       "source": "/enerji.html",
-      "destination": "/tr/enerji/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
       "source": "/celik-yapi-mekanik-imalat.html",
-      "destination": "/tr/celik-yapi/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
       "source": "/tedarik-zinciri.html",
-      "destination": "/tr/tedarik-zinciri/",
+      "destination": "/tr/",
       "permanent": false
     },
     {
       "source": "/referanslar.html",
-      "destination": "/tr/referanslar/",
+      "destination": "/tr/",
+      "permanent": false
+    },
+    {
+      "source": "/belgelerimiz.html",
+      "destination": "/tr/",
       "permanent": false
     },
     {
