@@ -2,7 +2,7 @@
 > Hedef: Google'da bulunmak + ChatGPT/Claude/Gemini/Perplexity bir kullanıcıya "Türkiye'den galvaniz tesisi kuran firma" sorulduğunda Vorqa Global'i sayabilmesi.
 
 ## 0. Acil: Tek Kimlik
-✅ **ÇÖZÜLDÜ** — Bu bölüm orijinal olarak eski çift-domain çelişkisini (canonical: zytglobal.com, sitemap: zytindustry.com) anlatıyordu. Marka Vorqa'ya geçtikten sonra tek domain (`vorqaglobal.com`) canlı. Yine de tüm canonical, sitemap, JSON-LD, og:url etiketlerinin birebir bu domaine işaret ettiğini periyodik doğrula — bu tür çelişkiler AEO güvenini doğrudan düşürür.
+✅ **ÇÖZÜLDÜ** — Bu bölüm orijinal olarak eski çift-domain çelişkisini (canonical ve sitemap'in iki farklı ZYT-dönemi alan adı göstermesi) anlatıyordu. Marka Vorqa'ya geçtikten sonra tek domain (`vorqaglobal.com`) canlı. Yine de tüm canonical, sitemap, JSON-LD, og:url etiketlerinin birebir bu domaine işaret ettiğini periyodik doğrula — bu tür çelişkiler AEO güvenini doğrudan düşürür.
 
 ## 1. Klasik SEO Temeli
 ### Sayfa şablonu (her sayfa için)

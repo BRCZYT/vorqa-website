@@ -5,7 +5,7 @@
 ## FAZ 0 — Kritik Düzeltmeler (1 gün, sıfır tasarım riski)
 | # | İş | Neden | Kabul kriteri |
 |---|---|---|---|
-| 0.1 | ✅ **ÇÖZÜLDÜ** — Domain kararı: eski çelişki (`zytglobal.com` vs `zytindustry.com`) artık geçersiz; marka Vorqa'ya geçti ve tek domain (`vorqaglobal.com`) canlı. Yine de canonical/sitemap/JSON-LD'nin hepsinin birebir bu domaine işaret ettiğini doğrula | Canonical ile sitemap iki farklı domain gösterirse Google iki kimlik görür | Tüm dosyalarda tek domain; sitemap + canonical + JSON-LD aynı |
+| 0.1 | ✅ **ÇÖZÜLDÜ** — Domain kararı: eski çift-domain çelişkisi (iki farklı ZYT-dönemi alan adı) artık geçersiz; marka Vorqa'ya geçti ve tek domain (`vorqaglobal.com`) canlı. Yine de canonical/sitemap/JSON-LD'nin hepsinin birebir bu domaine işaret ettiğini doğrula | Canonical ile sitemap iki farklı domain gösterirse Google iki kimlik görür | Tüm dosyalarda tek domain; sitemap + canonical + JSON-LD aynı |
 | 0.2 | Favicon seti ekle (SVG + PNG 32/180 + manifest) | Konsol 404'ü; sekmede boş ikon güvensizlik verir | Konsolda 404 yok; sekmede logo |
 | 0.3 | `og:image` (1200×630) + `twitter:card` tüm sayfalara | LinkedIn/WhatsApp paylaşımında boş önizleme = B2B'de ölüm | LinkedIn Post Inspector'da görselli kart |
 | 0.4 | `node_modules/`, `temporary screenshots/`, `*.mjs` patch scriptlerini repodan çıkar (`.gitignore`) | 36MB gereksiz yük, profesyonellik | Repo < 5MB (görseller hariç) |
