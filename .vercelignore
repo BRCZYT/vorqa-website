@@ -1,0 +1,31 @@
+# Internal docs, tooling and dev files — never linked from published pages.
+# See docs/VORQA_Global_Website_Revision_Brief_for_Claude.md task history for scope rationale.
+
+docs/
+Claude.md
+Vorqa_Creative_Redesign_Brief.md
+.vscode
+.claude
+package.json
+package-lock.json
+
+# Root-level build/dev scripts and misc dev files (not referenced by any deployed page)
+*.mjs
+*.bat
+*.zip
+
+# Mira internal tooling — the persona studio, LinkedIn content kit and its
+# planning context are dev-only. The avatar images (Mira.webp, Mira-fallback.png)
+# ARE used live on academy/contact/blog pages and must stay deployed.
+vorqa-mira/mira.html
+vorqa-mira/vorqa_mira_linkedin_content_starter_kit.html
+vorqa-mira/context/
+vorqa-mira/Mira.png
+
+# Blog publishing tooling — the published post .html files at the root of
+# vorqa-blog/ ARE linked live from every academy page and must stay deployed.
+vorqa-blog/generator/
+vorqa-blog/panel/
+vorqa-blog/drafts/
+vorqa-blog/migrate-posts.mjs
+vorqa-blog/server.mjs
