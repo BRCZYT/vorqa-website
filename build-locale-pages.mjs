@@ -64,9 +64,9 @@ const PAGES = {
     ar: { title: 'الأكاديمية — رؤى تقنية حول الخرسانة والجلفنة والطاقة | Vorqa Global', desc: 'أكاديمية Vorqa — مقالات تقنية وأبحاث وتحليلات صناعية حول محطات الخرسانة والجلفنة وتحويل الطاقة وسلسلة التوريد، بإشراف ميرا التحريري.' },
   },
   'iletisim.html': {
-    tr: { title: 'İletişim — Vorqa Global', desc: 'Vorqa Global ile iletişime geçin. Beton santrali, galvaniz tesisi, enerji dönüşüm ve tedarik zinciri projeleriniz için teklif alın.' },
-    en: { title: 'Contact Us — Request a Quote | Vorqa Global', desc: 'Contact Vorqa Global. Get a quote for your concrete plant, galvanizing facility, energy conversion or supply chain project.' },
-    ar: { title: 'اتصل بنا — اطلب عرض سعر | Vorqa Global', desc: 'تواصل مع Vorqa Global. احصل على عرض سعر لمشروعك في محطات الخرسانة أو منشآت الجلفنة أو تحويل الطاقة أو سلسلة التوريد.' },
+    tr: { title: 'İletişim — Teklif Alın | Vorqa Global', desc: 'Vorqa Global ile iletişime geçin. Beton, komple galvaniz, atık-enerji ve kırma-eleme tesisi projeleriniz için teklif alın.' },
+    en: { title: 'Contact Us — Request a Quote | Vorqa Global', desc: 'Contact VORQA Global. Request a quote for your concrete, complete galvanizing, waste-to-energy or crushing & screening plant project.' },
+    ar: { title: 'اتصل بنا — اطلب عرض سعر | Vorqa Global', desc: 'تواصل مع VORQA Global. اطلب عرض سعر لمشروعك في محطات الخرسانة أو منشآت الجلفنة الكاملة أو تحويل النفايات إلى طاقة أو التكسير والغربلة.' },
   },
 };
 
