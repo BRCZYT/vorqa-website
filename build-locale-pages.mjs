@@ -19,9 +19,9 @@ const SLUGS = {
 // Per-page title/description overrides (TR pulled from already-live meta; EN/AR authored fresh).
 const PAGES = {
   'index.html': {
-    tr: { title: 'Türk Endüstriyel Üretici Tedarik Partneri — MENA & Afrika | Vorqa Global', desc: 'Türk uzman üreticilerin mühendislik gücünü MENA ve Afrika projeleri için birleştiren teknik tedarik & koordinasyon partneri. Beton, galvaniz, enerji ve çelik dikeylerinde 1.000+ tedarikçi ağı. Ankara, Türkiye.' },
-    en: { title: 'Turkish Industrial Sourcing Partner for MENA & Africa | Vorqa Global', desc: 'A technical sourcing & coordination partner uniting the engineering power of expert Turkish manufacturers for MENA and Africa projects. Network of 1,000+ suppliers across concrete, galvanizing, energy and steel. Ankara, Turkey.' },
-    ar: { title: 'شريك التوريد الصناعي التركي لمنطقة الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'شريك توريد وتنسيق تقني يجمع القوة الهندسية للمصنّعين الأتراك الخبراء لمشاريع الشرق الأوسط وأفريقيا. شبكة من أكثر من 1.000 مورد في قطاعات الخرسانة والجلفنة والطاقة والفولاذ. أنقرة، تركيا.' },
+    tr: { title: 'Endüstriyel Tedarik & Proje Koordinasyon Partneri — MENA & Afrika | Vorqa Global', desc: 'VORQA; beton, komple galvaniz, atık-enerji ve kırma-eleme tesisleri için müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — MENA & Afrika.' },
+    en: { title: 'Industrial Sourcing & Project Supply Partner — MENA & Africa | Vorqa Global', desc: 'VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.' },
+    ar: { title: 'شريك التوريد الصناعي وتنسيق المشاريع — الشرق الأوسط وأفريقيا | Vorqa Global', desc: 'VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل لمحطات الخرسانة ومنشآت الجلفنة الكاملة وتحويل النفايات إلى طاقة ومنشآت التكسير والغربلة — الشرق الأوسط وأفريقيا.' },
   },
   'hakkimizda.html': {
     tr: { title: 'Hakkımızda — Vorqa Global', desc: 'Vorqa Global hakkında. Beton santralleri, galvaniz tesisleri, enerji dönüşüm ve mühendislik alanlarında doğrulanmış tedarikçi ağımızla küresel ölçekte proje koordinasyonu.' },
