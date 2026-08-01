@@ -348,25 +348,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
     <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px;color:rgba(255,255,255,.35)">Global</span>
   </a>
   <div class="nav-links">
-    <div class="has-dd">
-      <span class="nav-link dd-tog"><span>Vorqa Group</span> <svg class="dd-caret" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-      <div class="dd-menu">
-        <a href="/en/about/" class="dd-item"><span class="dd-item-num">01</span><span>About Us</span></a>
-        <a href="/belgelerimiz.html" class="dd-item"><span class="dd-item-num">02</span><span>Our Documents</span></a>
-        <a href="/en/references/" class="dd-item"><span class="dd-item-num">03</span><span>References</span></a>
-        <a href="/en/academy/" class="dd-item"><span class="dd-item-num">04</span><span>Academy</span></a>
-      </div>
-    </div>
-    <div class="has-dd">
-      <span class="nav-link dd-tog"><span>Areas of Expertise</span> <svg class="dd-caret" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
-      <div class="dd-menu">
-        <a href="/en/concrete/" class="dd-item"><span class="dd-item-num">01</span><span>Concrete Plants</span></a>
-        <a href="/en/galvanizing/" class="dd-item"><span class="dd-item-num">02</span><span>Galvanizing Plants</span></a>
-        <a href="/en/waste-to-energy/" class="dd-item"><span class="dd-item-num">03</span><span>Waste-Energy Conversion</span></a>
-        <a href="/en/steel-fabrication/" class="dd-item"><span class="dd-item-num">04</span><span>Steel Structure &amp; Mechanical Fabrication</span></a>
-        <a href="/en/supply-chain/" class="dd-item"><span class="dd-item-num">05</span><span>Supply Chain Management</span></a>
-      </div>
-    </div>
+    <a href="/en/" class="nav-link">Home</a>
+    <a href="/en/academy/" class="nav-link">Academy</a>
     <a href="/en/contact/" class="nav-link">Contact</a>
   </div>
   <div class="lang-sw" id="lang-sw">
@@ -382,26 +365,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 <!-- MOBILE NAV -->
 <div id="mob-nav" aria-hidden="true">
   <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:#2874B2;text-transform:uppercase;margin-bottom:24px">Vorqa Global</div>
-  <div class="mob-dd-wrap">
-    <button class="mob-link mob-dd-tog" onclick="toggleMobDd(this)"><span>Vorqa Group</span> <span class="mob-dd-arr">+</span></button>
-    <div class="mob-dd-inner">
-      <a href="/en/about/" class="mob-sub-link" onclick="closeMobNav()"><span>About Us</span></a>
-      <a href="/belgelerimiz.html" class="mob-sub-link" onclick="closeMobNav()"><span>Our Documents</span></a>
-      <a href="/en/references/" class="mob-sub-link" onclick="closeMobNav()"><span>References</span></a>
-      <a href="/en/academy/" class="mob-sub-link" onclick="closeMobNav()"><span>Academy</span></a>
-    </div>
-  </div>
-  <div class="mob-sep"></div>
-  <div class="mob-dd-wrap">
-    <button class="mob-link mob-dd-tog" onclick="toggleMobDd(this)"><span>Areas of Expertise</span> <span class="mob-dd-arr">+</span></button>
-    <div class="mob-dd-inner">
-      <a href="/en/concrete/" class="mob-sub-link" onclick="closeMobNav()"><span>Concrete Plants</span></a>
-      <a href="/en/galvanizing/" class="mob-sub-link" onclick="closeMobNav()"><span>Galvanizing Plants</span></a>
-      <a href="/en/waste-to-energy/" class="mob-sub-link" onclick="closeMobNav()"><span>Waste-Energy Conversion</span></a>
-      <a href="/en/steel-fabrication/" class="mob-sub-link" onclick="closeMobNav()"><span>Steel Structure &amp; Mechanical Fabrication</span></a>
-      <a href="/en/supply-chain/" class="mob-sub-link" onclick="closeMobNav()"><span>Supply Chain Management</span></a>
-    </div>
-  </div>
+  <a href="/en/" class="mob-link" onclick="closeMobNav()">Home</a>
   <div class="mob-sep"></div>
   <a href="/en/academy/" class="mob-link" style="color:#2874B2" onclick="closeMobNav()">Academy</a>
   <div class="mob-sep"></div>
@@ -937,7 +901,7 @@ function filterPosts(cat,btn){
 /* ── i18n ── */
 const T={
   tr:{
-    'co1.tag':'Beton Santralleri','co2.tag':'Atık-Enerji Dönüşüm','co3.tag':'Galvaniz Tesisleri','co4.name':'Tedarik Zinciri Yönetimi','co5.name':'Çelik Yapı & Mekanik İmalat','nav.group':'Vorqa Grup','nav.companies':'Uzmanlık Alanlarımız','nav.contact':'İletişim',
+    'co1.tag':'Beton Santralleri','co2.tag':'Atık-Enerji Dönüşüm','co3.tag':'Galvaniz Tesisleri','co4.name':'Tedarik Zinciri Yönetimi','co5.name':'Çelik Yapı & Mekanik İmalat','nav.home':'Ana Sayfa','nav.group':'Vorqa Grup','nav.companies':'Uzmanlık Alanlarımız','nav.contact':'İletişim',
     'dd.about':'Hakkımızda','dd.docs':'Belgelerimiz','dd.refs':'Referanslar','dd.academy':'Akademi',
       'cta.h':'Projeniz için konuşalım.',
       'cta.p':'Uzman ekibimiz teknik ihtiyaçlarınızı dinlemeye hazır.','cta.btn1':'Teklif Al →','cta.btn2':'Uzmanlık Alanlarımız →',
@@ -961,7 +925,7 @@ const T={
       'pag.next':'Sonraki <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
       'foot.copy':'© 2026 Vorqa Global Grubu — Tüm Hakları Saklıdır','ad.val':'Ankara · Türkiye'},
   en:{
-    'co1.tag':'Concrete Plants','co2.tag':'Waste-Energy Conversion','co3.tag':'Galvanizing Plants','co4.name':'Supply Chain Management','co5.name':'Steel Structure & Mechanical Fabrication','nav.group':'Vorqa Group','nav.companies':'Areas of Expertise','nav.contact':'Contact',
+    'co1.tag':'Concrete Plants','co2.tag':'Waste-Energy Conversion','co3.tag':'Galvanizing Plants','co4.name':'Supply Chain Management','co5.name':'Steel Structure & Mechanical Fabrication','nav.home':'Home','nav.group':'Vorqa Group','nav.companies':'Areas of Expertise','nav.contact':'Contact',
     'dd.about':'About Us','dd.docs':'Our Documents','dd.refs':'References','dd.academy':'Academy',
       'cta.h':"Let's talk about your project.",
       'cta.p':'Our expert team is ready to hear your technical requirements.','cta.btn1':'Get a Quote →','cta.btn2':'Areas of Expertise →',
@@ -985,7 +949,7 @@ const T={
       'pag.next':'Next <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
       'foot.copy':'© 2026 Vorqa Global Group — All Rights Reserved','ad.val':'Ankara · Turkey'},
   ar:{
-    'co1.tag':'محطات الخرسانة','co2.tag':'تحويل النفايات إلى طاقة','co3.tag':'مصانع الجلفنة','co4.name':'إدارة سلسلة التوريد','co5.name':'الهياكل الفولاذية والتصنيع الميكانيكي','nav.group':'مجموعة Vorqa','nav.companies':'مجالات خبرتنا','nav.contact':'اتصل بنا',
+    'co1.tag':'محطات الخرسانة','co2.tag':'تحويل النفايات إلى طاقة','co3.tag':'مصانع الجلفنة','co4.name':'إدارة سلسلة التوريد','co5.name':'الهياكل الفولاذية والتصنيع الميكانيكي','nav.home':'الرئيسية','nav.group':'مجموعة Vorqa','nav.companies':'مجالات خبرتنا','nav.contact':'اتصل بنا',
     'dd.about':'من نحن','dd.docs':'وثائقنا','dd.refs':'المراجع','dd.academy':'الأكاديمية',
       'cta.h':'لنتحدث عن مشروعك.',
       'cta.p':'فريق خبرائنا جاهز للاستماع إلى متطلباتك التقنية.','cta.btn1':'احصل على عرض ←','cta.btn2':'مجالات خبرتنا ←',
