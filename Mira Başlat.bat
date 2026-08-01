@@ -1,13 +1,13 @@
 ﻿@echo off
 chcp 65001 >nul 2>&1
-title Mira - ZYT Akademi
+title Mira - Vorqa Akademi
 color 0A
 
 cd /d "%~dp0"
 
 echo.
 echo  ================================================
-echo   Mira Blog Generator - ZYT Akademi
+echo   Mira Blog Generator - Vorqa Akademi
 echo  ================================================
 echo.
 
@@ -25,8 +25,8 @@ for /f "tokens=*" %%v in ('node --version') do set NODEVER=%%v
 echo  Node.js bulundu: %NODEVER%
 
 :: server.mjs dosyasi var mi?
-if not exist "ZYT-blog\server.mjs" (
-    echo  [HATA] ZYT-blog\server.mjs bulunamadi!
+if not exist "vorqa-blog\server.mjs" (
+    echo  [HATA] vorqa-blog\server.mjs bulunamadi!
     pause
     exit /b 1
 )
@@ -64,7 +64,7 @@ echo.
 start "" cmd /c "timeout /t 2 /nobreak >nul & start http://localhost:3001"
 
 :: Mira sunucusunu baslat (on planda - loglar burada gorunur)
-node ZYT-blog\server.mjs
+node vorqa-blog\server.mjs
 
 echo.
 echo  Mira durduruldu.

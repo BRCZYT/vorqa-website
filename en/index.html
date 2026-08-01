@@ -695,15 +695,20 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   <div class="pl-stage">
     <div class="pl-seq-label" id="pl-label">STARTING SEQUENCE</div>
     <div class="pl-letters-row">
-      <!-- TODO: Burcu — gerçek VORQA vektör logosu/animasyonu gelince bu 3 harflik geçici yükleme dizisi (V-O-R) yeniden tasarlanacak (5 harfli VORQA) -->
-      <div class="pl-seq-letter" id="pl-z">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(90px,15vw,200px);line-height:1;color:#fff">V</span>
+      <div class="pl-seq-letter" id="pl-v">
+        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">V</span>
       </div>
-      <div class="pl-seq-letter" id="pl-y">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(90px,15vw,200px);line-height:1;color:#2874B2">O</span>
+      <div class="pl-seq-letter" id="pl-o">
+        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">O</span>
       </div>
-      <div class="pl-seq-letter" id="pl-t">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(90px,15vw,200px);line-height:1;color:#fff">R</span>
+      <div class="pl-seq-letter" id="pl-r">
+        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">R</span>
+      </div>
+      <div class="pl-seq-letter" id="pl-q">
+        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#2874B2">Q</span>
+      </div>
+      <div class="pl-seq-letter" id="pl-a2">
+        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">A</span>
       </div>
     </div>
     <div class="pl-status-line" id="pl-status">
@@ -723,7 +728,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 ════════════════════════════════════ -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px">Global</span><!-- TODO: Burcu — gerçek VORQA vektör logosu gelince bu geçici metin wordmark değiştirilecek -->
+    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px">Global</span>
   </a>
   <div class="nav-links">
     <div class="has-dd">
@@ -1689,7 +1694,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   <div style="max-width:1160px;margin:0 auto">
     <div class="foot-inner" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:26px">
       <a href="#" style="text-decoration:none;display:flex;align-items:center;gap:13px">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:18px;letter-spacing:-.02em;color:#fff">V</span>
+        <img src="/brand_assets/vorqa_amblem_white.png" alt="" width="20" height="20" style="display:block;flex-shrink:0">
         <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">Vorqa Global</span>
       </a>
       <a href="/en/academy/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">Academy</a>
@@ -1720,9 +1725,11 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 <script>
 /* ── Starting Sequence Preloader ─────────── */
 const pl          = document.getElementById('pl');
-const plZ         = document.getElementById('pl-z');
-const plY         = document.getElementById('pl-y');
-const plT         = document.getElementById('pl-t');
+const plV         = document.getElementById('pl-v');
+const plO         = document.getElementById('pl-o');
+const plR         = document.getElementById('pl-r');
+const plQ         = document.getElementById('pl-q');
+const plA2        = document.getElementById('pl-a2');
 const plLabel     = document.getElementById('pl-label');
 const plStatus    = document.getElementById('pl-status');
 const plStatusTxt = document.getElementById('pl-status-txt');
@@ -1734,34 +1741,36 @@ const plCorners   = document.querySelectorAll('.pl-corner');
 setTimeout(()=>{ plCorners.forEach(c=>c.classList.add('show')); plLabel.classList.add('show'); }, 80);
 
 // Letters rise in sequentially
-setTimeout(()=> plZ.classList.add('in'), 200);
-setTimeout(()=> plY.classList.add('in'), 430);
-setTimeout(()=> plT.classList.add('in'), 620);
+setTimeout(()=> plV.classList.add('in'), 200);
+setTimeout(()=> plO.classList.add('in'), 400);
+setTimeout(()=> plR.classList.add('in'), 600);
+setTimeout(()=> plQ.classList.add('in'), 800);
+setTimeout(()=> plA2.classList.add('in'), 1000);
 
 // Status line + progress bar
-setTimeout(()=>{ plStatus.classList.add('show'); plProg.classList.add('go'); }, 760);
+setTimeout(()=>{ plStatus.classList.add('show'); plProg.classList.add('go'); }, 1140);
 
 // Scanline sweep
-setTimeout(()=> plScanline.classList.add('go'), 1000);
+setTimeout(()=> plScanline.classList.add('go'), 1380);
 
 // Status text update
-setTimeout(()=> plStatusTxt.textContent='System Ready', 1400);
+setTimeout(()=> plStatusTxt.textContent='System Ready', 1780);
 
 // Exit: letters fade + slight scale
 setTimeout(()=>{
-  [plZ,plY,plT].forEach(el=>el.classList.add('exit'));
+  [plV,plO,plR,plQ,plA2].forEach(el=>el.classList.add('exit'));
   plLabel.style.transition='opacity .3s'; plLabel.style.opacity='0';
   plStatus.style.transition='opacity .3s'; plStatus.style.opacity='0';
-}, 1780);
+}, 2160);
 
 // Overlay fades out
-setTimeout(()=> pl.classList.add('out'), 2020);
+setTimeout(()=> pl.classList.add('out'), 2400);
 
 // Remove preloader, enable scroll
 setTimeout(()=>{
   pl.classList.add('done');
   document.body.classList.remove('loading');
-}, 2750);
+}, 3130);
 
 /* ── Nav scroll ───────────────────────────── */
 window.addEventListener('scroll', ()=>{

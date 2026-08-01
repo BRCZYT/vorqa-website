@@ -1,4 +1,4 @@
-<svg viewBox="0 0 2560 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ZYT Global endüstriyel tesis panoraması — teknik çizim">
+<svg viewBox="0 0 2560 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vorqa Global endüstriyel tesis panoraması — teknik çizim">
 <defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#F4F8FB"/><stop offset="1" stop-color="#E8EEF4"/>
@@ -124,7 +124,7 @@
 
 <!-- callouts -->
 <g class="lbl">
-<text x="120" y="120" class="lblO">//</text><text x="150" y="120" class="lblM">ZYT — SAHA GENEL YERLESIM</text>
+<text x="120" y="120" class="lblO">//</text><text x="150" y="120" class="lblM">VORQA — SAHA GENEL YERLESIM</text>
 <text x="120" y="150">OLCEK 1:500 · KESIT A—A</text>
 <text x="2440" y="120" text-anchor="end" class="lblM">EPC · ANAHTAR TESLIM</text>
 <text x="2440" y="150" text-anchor="end">REV.2026-07</text>
