@@ -202,11 +202,18 @@ for (const file of Object.keys(SLUGS)) {
       }
     });
 
-    // img/src referencing project-relative assets need the extra ../ removed since we're now 2 levels deep (/lang/slug/)
+    // img/src and source/srcset referencing project-relative assets need the
+    // extra ../ removed since we're now 2 levels deep (/lang/slug/)
     $('img[src], source[src]').each((_, elImg) => {
       const s = $(elImg).attr('src');
       if (s && !/^(https?:)?\/\//.test(s) && !s.startsWith('/')) {
         $(elImg).attr('src', '/' + s);
+      }
+    });
+    $('source[srcset], img[srcset]').each((_, el) => {
+      const s = $(el).attr('srcset');
+      if (s && !/^(https?:)?\/\//.test(s) && !s.startsWith('/')) {
+        $(el).attr('srcset', '/' + s);
       }
     });
     const outPath = pathFor(lang, file);
