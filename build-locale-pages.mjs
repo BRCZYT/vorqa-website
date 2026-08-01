@@ -3,15 +3,11 @@ import * as cheerio from 'cheerio';
 
 // Master slug map: legacy flat file -> translated slug per language.
 // Empty string slug = site root for that language (/{lang}/).
+// Site reduced to Home / Academy / Contact (see docs/VORQA_Global_Website_Revision_Brief_for_Claude.md).
+// About, Concrete, Galvanizing, Waste-to-Energy, Steel-Fabrication, Supply-Chain and
+// References no longer exist as separate pages — their content lives inside Home now.
 const SLUGS = {
   'index.html': { tr: '', en: '', ar: '' },
-  'hakkimizda.html': { tr: 'hakkimizda', en: 'about', ar: 'about' },
-  'beton.html': { tr: 'beton', en: 'concrete', ar: 'concrete' },
-  'galvaniz.html': { tr: 'galvaniz', en: 'galvanizing', ar: 'galvanizing' },
-  'enerji.html': { tr: 'enerji', en: 'waste-to-energy', ar: 'waste-to-energy' },
-  'celik-yapi-mekanik-imalat.html': { tr: 'celik-yapi', en: 'steel-fabrication', ar: 'steel-fabrication' },
-  'tedarik-zinciri.html': { tr: 'tedarik-zinciri', en: 'supply-chain', ar: 'supply-chain' },
-  'referanslar.html': { tr: 'referanslar', en: 'references', ar: 'references' },
   'akademi.html': { tr: 'akademi', en: 'academy', ar: 'academy' },
   'iletisim.html': { tr: 'iletisim', en: 'contact', ar: 'contact' },
 };
