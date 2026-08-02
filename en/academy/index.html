@@ -993,9 +993,7 @@ function setLang(l){
   document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
   localStorage.setItem('vorqa-lang',l);
 }
-const _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar')?'ar':navigator.language.startsWith('tr')?'tr':'en');
-setLang(_l);
-document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+setLang('en');
 </script>
 
 

@@ -129,7 +129,7 @@ for (const file of Object.keys(SLUGS)) {
     // lang/dir attributes client-side based on stale localStorage or the visitor's browser locale.
     $('script').each((_, el) => {
       const code = $(el).html();
-      if (code && code.includes('const T = {') && code.includes('function setLang')) {
+      if (code && /const T\s*=\s*\{/.test(code) && code.includes('function setLang')) {
         let newCode = code
           .replace(/const _(?:initLang|l)\s*=\s*localStorage\.getItem\('vorqa-lang'\)[\s\S]*?setLang\(_(?:initLang|l)\);\s*/, `setLang('${lang}');\n`)
           .replace(/document\.querySelectorAll\('\.l-btn,\s*\.mob-l-btn'\)\.forEach\(b\s*=>\s*\{?\s*b\.addEventListener\('click',\s*\(\)\s*=>\s*setLang\(b\.dataset\.lang\)\);?\s*\}?\);\s*/, '');
