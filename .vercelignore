@@ -30,3 +30,9 @@ vorqa-blog/panel/
 vorqa-blog/drafts/
 vorqa-blog/migrate-posts.mjs
 vorqa-blog/server.mjs
+
+# Galvanizing card image: only the optimized galvaniz1.jpg is used live
+# (index.html Industries section). The source PNG (unused, 1.4MB) and a
+# 64MB spec-sheet PDF (not linked from any page) stay out of the deploy.
+images/galvaniz/galvaniz1.png
+images/galvaniz/galvapro-Ek-2.pdf
