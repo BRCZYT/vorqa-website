@@ -343,6 +343,113 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 @media(max-width:768px){.co-hx-link{opacity:1;transform:none}}
 
 /* ══════════════════════════════════════════
+   §01 HOW WE WORK — vertical spine + zigzag nodes (light)
+══════════════════════════════════════════ */
+.spine{position:relative;padding:20px 0;margin-top:44px}
+.spine::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);
+  background:linear-gradient(180deg,transparent,var(--line-light) 8%,var(--line-light) 92%,transparent)}
+.step{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:150px;align-items:center}
+.step-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--line-light);display:flex;align-items:center;justify-content:center;z-index:2;transition:border-color .3s}
+.step-node .n{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:1.35rem;color:var(--ink);transition:color .3s}
+.step-node::after{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid var(--orange);opacity:0;transition:opacity .3s}
+.step:hover .step-node{border-color:var(--orange)}
+.step:hover .step-node .n{color:var(--orange)}
+.step:hover .step-node::after{opacity:.5}
+.step-node.done{border-color:var(--orange);background:var(--orange)}
+.step-node.done .n{color:#fff}
+.step-c{padding:0 clamp(28px,4.5vw,64px);position:relative}
+.step-c .tag{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-bottom:8px;display:block}
+.step-c h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
+.step-c p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:.88rem;line-height:1.55}
+.step-empty{grid-column:2}
+.step.step-l .step-c{grid-column:1;text-align:right}
+.step.step-l .step-empty{grid-column:2}
+.step.step-r .step-c{grid-column:2}
+.step.step-r .step-empty{grid-column:1}
+.step.step-l .step-c::after{content:'';position:absolute;right:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(100%,-50%)}
+.step.step-r .step-c::after{content:'';position:absolute;left:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(-100%,-50%)}
+html[dir="rtl"] .step{direction:rtl}
+@media(max-width:820px){
+  .spine::before{left:36px}
+  .step{grid-template-columns:1fr;min-height:auto;padding:18px 0 18px 88px;direction:ltr !important}
+  .step-node{left:36px;top:28px;transform:translate(-50%,0);width:56px;height:56px}
+  .step-node .n{font-size:1rem}
+  .step.step-l .step-c,.step.step-r .step-c{grid-column:1;text-align:left;padding:0}
+  .step-empty{display:none}
+  .step.step-l .step-c::after,.step.step-r .step-c::after{display:none}
+  html[dir="rtl"] .spine::before{left:auto;right:36px}
+  html[dir="rtl"] .step{padding:18px 88px 18px 0}
+  html[dir="rtl"] .step-node{left:auto;right:36px;transform:translate(50%,0)}
+  html[dir="rtl"] .step.step-l .step-c,html[dir="rtl"] .step.step-r .step-c{text-align:right}
+}
+
+/* ══════════════════════════════════════════
+   §02 WHAT WE DO — light-alt background, hollow big numbers
+══════════════════════════════════════════ */
+.wwd-rows{display:flex;flex-direction:column;margin-top:20px}
+.wwd-row{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(18px,3.5vw,44px);align-items:center;
+  padding:30px 0;border-top:1px solid var(--line-light);position:relative;transition:background .3s}
+.wwd-row:last-child{border-bottom:1px solid var(--line-light)}
+.wwd-row .bignum{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.8;
+  color:transparent;-webkit-text-stroke:1.5px var(--steel);transition:-webkit-text-stroke .3s,color .3s;letter-spacing:-.03em;margin-left:-.06em}
+.wwd-row .wwd-info h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.3rem);margin-bottom:6px;color:var(--ink)}
+.wwd-row .wwd-info p{color:var(--ink-soft);font-size:.9rem;line-height:1.55;max-width:52ch}
+.wwd-row .wwd-arrow{color:var(--steel);font-size:1.3rem;transition:color .3s,transform .3s}
+.wwd-row:hover{background:linear-gradient(90deg,rgba(232,119,34,.07),transparent)}
+.wwd-row:hover .bignum{-webkit-text-stroke:1.5px var(--orange);color:rgba(232,119,34,.14)}
+.wwd-row:hover .wwd-arrow{color:var(--orange);transform:translateX(6px)}
+html[dir="rtl"] .wwd-row:hover .wwd-arrow{transform:translateX(-6px)}
+@media(max-width:820px){.wwd-row{grid-template-columns:auto 1fr;gap:16px}.wwd-row .wwd-arrow{display:none}}
+
+/* ══════════════════════════════════════════
+   §03 INDUSTRIES — diagonal scroll-snap photo rail (light)
+══════════════════════════════════════════ */
+.ind-rail{display:flex;gap:14px;padding:0 clamp(24px,5vw,80px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.ind-rail::-webkit-scrollbar{height:4px}
+.ind-rail::-webkit-scrollbar-thumb{background:var(--line-light);border-radius:2px}
+.ind-panel{position:relative;flex:0 0 clamp(210px,23vw,280px);height:clamp(380px,46vw,480px);scroll-snap-align:start;
+  border:1px solid var(--line-light);overflow:hidden;cursor:pointer;text-decoration:none;display:block;
+  transition:flex-basis .5s cubic-bezier(.2,.8,.2,1),border-color .3s;background:var(--card)}
+.ind-panel:hover{flex-basis:clamp(320px,40vw,480px);border-color:var(--orange)}
+.ind-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;z-index:3;background:linear-gradient(90deg,var(--orange),transparent);opacity:.75}
+.ind-panel .ind-img{position:absolute;inset:0;z-index:0}
+.ind-panel .ind-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);opacity:.72;transition:opacity .5s,filter .5s,transform 8s linear;transform:scale(1.04)}
+.ind-panel:hover .ind-img img{opacity:1;filter:saturate(1);transform:scale(1.1)}
+.ind-panel .ind-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(5,23,40,.72) 0%,rgba(5,23,40,.28) 45%,rgba(5,23,40,.42) 100%);transition:background .5s}
+.ind-panel:hover .ind-veil{background:linear-gradient(0deg,rgba(5,23,40,.82) 0%,rgba(5,23,40,.05) 55%,rgba(5,23,40,.2) 100%)}
+.ind-panel .ind-pnum{position:absolute;top:20px;right:20px;z-index:2;font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:2.1rem;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.4);opacity:.6;transition:.4s}
+.ind-panel:hover .ind-pnum{-webkit-text-stroke:1px var(--orange);opacity:.85}
+.ind-panel .ind-lbl{position:absolute;left:0;bottom:0;right:0;padding:20px;z-index:2}
+.ind-panel .ind-t{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.02rem;color:#fff;line-height:1.2;margin-bottom:6px}
+.ind-panel .ind-d{font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.4;max-height:0;overflow:hidden;opacity:0;transition:.5s}
+.ind-panel:hover .ind-d{max-height:90px;opacity:1;margin-bottom:12px}
+.ind-panel .ind-go{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);display:inline-flex;align-items:center;gap:7px;opacity:0;transition:opacity .5s .1s}
+.ind-panel:hover .ind-go{opacity:1}
+html[dir="rtl"] .ind-rail{direction:rtl}
+@media(max-width:768px){
+  .ind-panel{flex-basis:78vw;height:400px}
+  .ind-panel:hover{flex-basis:82vw}
+  .ind-panel .ind-d{max-height:90px;opacity:1;margin-bottom:12px}
+  .ind-panel .ind-go{opacity:1}
+}
+
+/* ══════════════════════════════════════════
+   §04 ABOUT — oversized watermark + orange stat rail (light-alt)
+══════════════════════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(40px,6vw,80px);align-items:start;position:relative}
+.about-mark{position:absolute;right:-4%;bottom:-8%;font-family:'Sora Variable',Sora,sans-serif;font-weight:800;
+  font-size:clamp(6rem,18vw,16rem);color:var(--ink);opacity:.035;line-height:.7;pointer-events:none;letter-spacing:-.04em;z-index:0}
+html[dir="rtl"] .about-mark{right:auto;left:-4%}
+.about-rail{border-left:2px solid var(--orange);padding-left:24px;position:relative;z-index:1}
+html[dir="rtl"] .about-rail{border-left:none;border-right:2px solid var(--orange);padding-left:0;padding-right:24px}
+.about-rail .item{margin-bottom:24px}
+.about-rail .item:last-child{margin-bottom:0}
+.about-rail .k{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:1.9rem;color:var(--ink);line-height:1}
+.about-rail .v{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--steel);margin-top:5px}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:40px}.about-mark{display:none}}
+
+/* ══════════════════════════════════════════
    STATS BAND
 ══════════════════════════════════════════ */
 .stats-band{background:#051728;padding:56px 80px;border-top:1px solid rgba(40,116,178,.1);border-bottom:1px solid rgba(40,116,178,.1)}
