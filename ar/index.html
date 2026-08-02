@@ -36,6 +36,7 @@ tailwind.config={theme:{extend:{colors:{navy:'#0A2540',mid:'#051728',blue:'#2874
 :root{
   --bg-light:#F7FAFC;
   --bg-light-2:#EDF3F8;
+  --bg-warm:#FBF1E6;
   --card:#FFFFFF;
   --ink:#0A2540;
   --ink-soft:#3A4858;
@@ -290,13 +291,13 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 /* ══════════════════════════════════════════
    GROUP COMPANIES — CHIPSA HOVER-EXPAND
 ══════════════════════════════════════════ */
-.co-hx-section{background:var(--bg-light-2);border-top:1px solid var(--line-light)}
+.co-hx-section{background:var(--bg-warm);border-top:1px solid rgba(232,119,34,.18)}
 .ind-sub-label{font-family:'JetBrains Mono Variable',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#2874B2;font-weight:600}
 .sg-grid{display:flex;flex-wrap:wrap;gap:10px}
 .sg-chip{font-family:'Manrope Variable',Manrope,sans-serif;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line-light);border-radius:100px;padding:10px 20px;transition:border-color .2s,background .2s}
 .sg-chip:hover{border-color:#2874B2;background:var(--bg-light-2)}
 .sg-note{font-family:'Manrope Variable',Manrope,sans-serif;font-size:13px;line-height:1.7;color:var(--ink-soft);max-width:760px;margin-top:24px}
-.co-hx-header{padding:22px 80px 24px;border-bottom:1px solid var(--line-light)}
+.co-hx-header{padding:22px 80px 24px;border-bottom:1px solid rgba(232,119,34,.18)}
 @media(max-width:768px){.co-hx-header{padding:18px 24px 20px}}
 /* 4-col grid — hovered column expands 3× */
 .co-hx-panel{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;height:84vh;overflow:hidden;transition:grid-template-columns .52s cubic-bezier(.37,0,.63,1)}
@@ -879,12 +880,89 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 <!-- ════════════════════════════════════
-     ABOUT  (light) — §03, immediately before footer
+     INDUSTRIES — §03, warm/orange-tinted band (deliberately distinct
+     from the plain light/dark rhythm above and below)
+════════════════════════════════════ -->
+<div class="block-sep-light"></div>
+<section id="industries" class="co-hx-section">
+  <!-- Header -->
+  <div class="co-hx-header rv">
+    <div class="sec-num">§ 03 / القطاعات</div>
+  </div>
+
+  <div style="padding:0 80px 8px" class="rv d1">
+    <div class="ind-sub-label">حلول المنشآت الشريكة</div>
+  </div>
+
+  <!-- 4-col hover-expand panel — Partner Plant Solutions -->
+  <div class="co-hx-panel">
+
+    <!-- 01 — Concrete Plants -->
+    <a href="/ar/contact/" class="co-hx-card" data-co-idx="0">
+      <div class="co-hx-img">
+        <img src="/images/beton/prj-4.jpg" alt="Concrete batching plant" loading="lazy" width="1600" height="1200">
+      </div>
+      <div class="co-hx-overlay"></div>
+      <div class="co-hx-content">
+        <p class="co-hx-desc">حلول محطات خرسانة جاهزة كاملة — من توضيح المتطلبات إلى اختيار الشريك وتنسيق المشروع.</p>
+        <h3 class="co-hx-name">محطات الخرسانة</h3>
+        <span class="co-hx-tag">حل منشأة شريكة</span>
+        <span class="co-hx-link"><span>اطلب عرض سعر</span> <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span>
+      </div>
+    </a>
+
+    <!-- 02 — Complete Galvanizing Plants -->
+    <a href="/ar/contact/" class="co-hx-card" data-co-idx="1">
+      <div class="co-hx-img">
+        <img src="/images/galvaniz/galvaniz1.jpg" alt="Hot-dip galvanizing line" loading="lazy" width="1270" height="604">
+      </div>
+      <div class="co-hx-overlay"></div>
+      <div class="co-hx-content">
+        <p class="co-hx-desc">حلول منشآت جلفنة بالغمس الساخن الكاملة، تُقدّم عبر شريك تصنيع متخصص وتُنسّق من قبل VORQA.</p>
+        <h3 class="co-hx-name">منشآت الجلفنة الكاملة</h3>
+        <span class="co-hx-tag">حل منشأة شريكة</span>
+        <span class="co-hx-link"><span>اطلب عرض سعر</span> <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span>
+      </div>
+    </a>
+
+    <!-- 03 — Waste-to-Energy Plants -->
+    <a href="/ar/contact/" class="co-hx-card" data-co-idx="2">
+      <div class="co-hx-img">
+        <img src="/images/dönüşüm/waste-to-energy.jpg" alt="Waste-to-energy plant" loading="lazy" width="1672" height="941">
+      </div>
+      <div class="co-hx-overlay"></div>
+      <div class="co-hx-content">
+        <p class="co-hx-desc">حلول منشآت تحويل النفايات إلى طاقة الكاملة، تُقدّم عبر شريك تصنيع متخصص وتُنسّق من الطلب حتى التسليم.</p>
+        <h3 class="co-hx-name">منشآت تحويل النفايات إلى طاقة</h3>
+        <span class="co-hx-tag">حل منشأة شريكة</span>
+        <span class="co-hx-link"><span>اطلب عرض سعر</span> <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span>
+      </div>
+    </a>
+
+    <!-- 04 — Crushing & Screening Plants -->
+    <a href="/ar/contact/" class="co-hx-card" data-co-idx="3">
+      <div class="co-hx-img">
+        <img src="/images/kırma/mobile-crushing-screening-plant-1.jpeg" alt="Mobile crushing and screening plant" loading="lazy" width="1600" height="900">
+      </div>
+      <div class="co-hx-overlay"></div>
+      <div class="co-hx-content">
+        <p class="co-hx-desc">حلول منشآت تكسير وغربلة كاملة تُطابَق مع متطلبات المشروع عبر شريك تصنيع متخصص.</p>
+        <h3 class="co-hx-name">منشآت التكسير والغربلة</h3>
+        <span class="co-hx-tag">حل منشأة شريكة</span>
+        <span class="co-hx-link"><span>اطلب عرض سعر</span> <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span>
+      </div>
+    </a>
+
+  </div><!-- /co-hx-panel -->
+</section>
+
+<!-- ════════════════════════════════════
+     ABOUT  (light) — §04, immediately before footer
 ════════════════════════════════════ -->
 <div class="block-sep-light"></div>
 <section id="about" class="sec sec-light">
   <div style="max-width:900px;margin:0 auto">
-    <div style="margin-bottom:28px"><div class="sec-num rv">§ 03 / عن VORQA</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
+    <div style="margin-bottom:28px"><div class="sec-num rv">§ 04 / عن VORQA</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
     <p class="intro-text-l rv d2">VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل — وليست وسيطاً أو شركة تجارة عامة. نقوم بتوضيح المتطلبات الفنية، واختيار المصنّع أو شريك المنشأة المتخصص المناسب، ومقارنة العروض الفنية والتجارية، وتنسيق حزم المشاريع متعددة الموردين من الطلب حتى التسليم.</p>
     <p class="intro-text-l rv d3" style="margin-top:20px">تمر كل توصية عبر شبكتنا المكوّنة من أكثر من 1000 مورّد تركي معتمد، لتحويل سلسلة توريد صناعية متفرقة وعالية المخاطر إلى نقطة اتصال واحدة مسؤولة — من التوضيح إلى متابعة الإنتاج والتوثيق والتسليم.</p>
     <div class="btn-row rv d4" style="margin-top:36px">
@@ -1081,7 +1159,7 @@ const T = {
 
 
 
-  "about.num": "§ 03 / VORQA Hakkında",
+  "about.num": "§ 04 / VORQA Hakkında",
   "about.p1": "VORQA; müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — komisyoncu ya da genel bir trading firması değildir. Teknik ihtiyacı netleştirir, doğru üretici veya uzman tesis partnerini seçer, teknik ve ticari teklifleri karşılaştırır; çok tedarikçili proje paketlerini talepten teslimata kadar koordine eder.",
   "about.p2": "Her öneri, 1.000+ doğrulanmış Türk tedarikçiden oluşan ağımızdan geçer; dağınık ve riskli bir endüstriyel tedarik zincirini — netleştirmeden üretim takibine, dokümantasyona ve teslimata kadar — tek ve sorumlu bir temas noktasına dönüştürür.",
   "btn.contact": "Bize Ulaşın",
@@ -1099,6 +1177,18 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "Uluslararası Teslimat Koordinasyonu",
   "svc4.body": "Üretim takibi, konsolidasyon, ihracat dokümantasyonu ve teslimat planlaması hedefe kadar koordine edilir.",
+  "ind.num": "§ 03 / Sektörler",
+  "ind.partners.label": "Partner Tesis Çözümleri",
+  "co.partner.tag": "Partner Tesis Çözümü",
+  "btn.explore": "Teklif Al",
+  "co1.tag": "Beton Santralleri",
+  "co1.desc": "Komple beton santrali çözümleri — ihtiyacın netleştirilmesinden partner seçimine ve proje koordinasyonuna kadar.",
+  "co2.tag": "Komple Galvaniz Tesisleri",
+  "co2.desc": "Uzman üretici partner üzerinden sunulan, VORQA tarafından koordine edilen komple sıcak daldırma galvaniz tesisi çözümleri.",
+  "co3.tag": "Atık-Enerji Dönüşüm Tesisleri",
+  "co3.desc": "Uzman üretici partner üzerinden sunulan, talepten teslimata koordine edilen komple atık-enerji tesisi çözümleri.",
+  "co4.tag": "Kırma & Eleme Tesisleri",
+  "co4.desc": "Uzman üretici partner üzerinden proje ihtiyacına uygun eşleştirilen komple kırma-eleme tesisi çözümleri.",
   "how.num": "§ 01 / Nasıl Çalışırız",
   "how.title": "Talepten teslime, tek muhatap.",
   "how1.num": "01",
@@ -1138,7 +1228,7 @@ const T = {
 
 
 
-  "about.num": "§ 03 / About VORQA",
+  "about.num": "§ 04 / About VORQA",
   "about.p1": "VORQA is a customer-side industrial sourcing, project supply and coordination partner — not a broker, not a general trading firm. We clarify technical requirements, select the right manufacturer or specialized plant partner, compare technical and commercial offers, and coordinate multi-vendor project packages from request to delivery.",
   "about.p2": "Every recommendation runs through a network of 1,000+ verified Turkish suppliers, turning a scattered and high-risk industrial supply chain into a single, accountable point of contact — from clarification through production follow-up, documentation and delivery.",
   "btn.contact": "Contact Us",
@@ -1156,6 +1246,18 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "International Delivery Coordination",
   "svc4.body": "Production follow-up, consolidation, export documentation and delivery planning coordinated to destination.",
+  "ind.num": "§ 03 / Industries",
+  "ind.partners.label": "Partner Plant Solutions",
+  "co.partner.tag": "Partner Plant Solution",
+  "btn.explore": "Request a Quote",
+  "co1.tag": "Concrete Plants",
+  "co1.desc": "Complete concrete batching plant solutions — from requirement clarification to partner selection and project coordination.",
+  "co2.tag": "Complete Galvanizing Plants",
+  "co2.desc": "Complete hot-dip galvanizing plant solutions, delivered through a specialized manufacturing partner and coordinated by VORQA.",
+  "co3.tag": "Waste-to-Energy Plants",
+  "co3.desc": "Complete waste-to-energy plant solutions delivered through a specialized manufacturing partner, coordinated from request to delivery.",
+  "co4.tag": "Crushing & Screening Plants",
+  "co4.desc": "Complete crushing and screening plant solutions matched to project requirements through a specialized manufacturing partner.",
   "how.num": "§ 01 / How We Work",
   "how.title": "From request to delivery, one accountable partner.",
   "how1.num": "01",
@@ -1195,7 +1297,7 @@ const T = {
 
 
 
-  "about.num": "§ 03 / عن VORQA",
+  "about.num": "§ 04 / عن VORQA",
   "about.p1": "VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل — وليست وسيطاً أو شركة تجارة عامة. نقوم بتوضيح المتطلبات الفنية، واختيار المصنّع أو شريك المنشأة المتخصص المناسب، ومقارنة العروض الفنية والتجارية، وتنسيق حزم المشاريع متعددة الموردين من الطلب حتى التسليم.",
   "about.p2": "تمر كل توصية عبر شبكتنا المكوّنة من أكثر من 1000 مورّد تركي معتمد، لتحويل سلسلة توريد صناعية متفرقة وعالية المخاطر إلى نقطة اتصال واحدة مسؤولة — من التوضيح إلى متابعة الإنتاج والتوثيق والتسليم.",
   "btn.contact": "تواصل معنا",
@@ -1213,6 +1315,18 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "تنسيق التسليم الدولي",
   "svc4.body": "متابعة الإنتاج والتجميع ووثائق التصدير وتخطيط التسليم، منسقة حتى الوجهة.",
+  "ind.num": "§ 03 / القطاعات",
+  "ind.partners.label": "حلول المنشآت الشريكة",
+  "co.partner.tag": "حل منشأة شريكة",
+  "btn.explore": "اطلب عرض سعر",
+  "co1.tag": "محطات الخرسانة",
+  "co1.desc": "حلول محطات خرسانة جاهزة كاملة — من توضيح المتطلبات إلى اختيار الشريك وتنسيق المشروع.",
+  "co2.tag": "منشآت الجلفنة الكاملة",
+  "co2.desc": "حلول منشآت جلفنة بالغمس الساخن الكاملة، تُقدّم عبر شريك تصنيع متخصص وتُنسّق من قبل VORQA.",
+  "co3.tag": "منشآت تحويل النفايات إلى طاقة",
+  "co3.desc": "حلول منشآت تحويل النفايات إلى طاقة الكاملة، تُقدّم عبر شريك تصنيع متخصص وتُنسّق من الطلب حتى التسليم.",
+  "co4.tag": "منشآت التكسير والغربلة",
+  "co4.desc": "حلول منشآت تكسير وغربلة كاملة تُطابَق مع متطلبات المشروع عبر شريك تصنيع متخصص.",
   "how.num": "§ 01 / كيف نعمل",
   "how.title": "من الطلب حتى التسليم، شريك واحد مسؤول.",
   "how1.num": "01",

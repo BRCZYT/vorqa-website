@@ -54,6 +54,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 /* Master logo is navy-on-white — not suited to the dark nav/footer as-is,
    so it sits on a small light plaque for contrast instead. */
 .nav-logo-img{display:block;height:52px;width:auto}
+/* This page's nav goes from a dark hero overlay to a white scrolled bar
+   (unlike index.html/iletisim.html, which stay dark) — the white logo
+   variant disappears against that white bar, so swap to the navy-on-white
+   variant once #nav.scrolled is applied. */
+.logo-on-light{display:none}
+#nav.scrolled .logo-on-dark{display:none}
+#nav.scrolled .logo-on-light{display:block}
 .foot-logo-img{display:block;height:40px;width:auto}
 .nl-z,.nl-y,.nl-t{transition:transform .35s cubic-bezier(.34,1.56,.64,1);transform-box:fill-box;transform-origin:center}
 .nav-logo:hover .nl-z{transform:translateX(-4px)}
@@ -361,7 +368,8 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
 <!-- NAV -->
 <nav id="nav" class="dark-hero">
   <a href="/en/" class="nav-logo">
-    <img class="nav-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+    <img class="nav-logo-img logo-on-dark" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+    <img class="nav-logo-img logo-on-light" src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global">
   </a>
   <div class="nav-links">
     <a href="/en/" class="nav-link">Home</a>
