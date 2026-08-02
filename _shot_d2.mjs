@@ -3,6 +3,7 @@ const browser = await puppeteer.launch({ headless: 'new' });
 const page = await browser.newPage();
 await page.setViewport({ width: 1440, height: 900 });
 await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0' });
+await new Promise(r => setTimeout(r, 2000));
 await page.evaluate(() => document.querySelector('#about').scrollIntoView());
 await page.mouse.wheel({ deltaY: 300 });
 await new Promise(r => setTimeout(r, 900));
