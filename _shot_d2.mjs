@@ -1,0 +1,10 @@
+import puppeteer from 'puppeteer';
+const browser = await puppeteer.launch({ headless: 'new' });
+const page = await browser.newPage();
+await page.setViewport({ width: 1440, height: 900 });
+await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0' });
+await page.evaluate(() => document.querySelector('#about').scrollIntoView());
+await page.mouse.wheel({ deltaY: 300 });
+await new Promise(r => setTimeout(r, 900));
+await page.screenshot({ path: 'temporary screenshots/d-about-footer.png' });
+await browser.close();
