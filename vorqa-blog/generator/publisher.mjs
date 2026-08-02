@@ -172,8 +172,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 .ft-soc-link{color:rgba(255,255,255,.28);transition:color .2s;display:flex}
 .ft-soc-link:hover{color:#2874B2}
 .ft-social{display:flex;gap:14px;align-items:center}
-.foot-logo-plaque{display:inline-flex;align-items:center;background:#fff;border-radius:5px;padding:5px 12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
-.foot-logo-plaque img{display:block;height:22px;width:auto}
+.foot-logo-img{display:block;height:40px;width:auto}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .rv.on{opacity:1;transform:none}
 @media(max-width:768px){
@@ -188,7 +187,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <nav id="nav">
   <a href="../index.html" class="nav-logo">
-    <img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global" style="display:block;height:28px;width:auto">
+    <img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global" style="display:block;height:40px;width:auto">
   </a>
   <div class="nav-links">
     <a href="../index.html" class="nav-link">Ana Sayfa</a>
@@ -271,7 +270,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 <footer id="foot">
   <div class="foot-inner">
     <a href="../index.html" style="text-decoration:none;display:flex;align-items:center">
-      <span class="foot-logo-plaque"><img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global"></span>
+      <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
     </a>
     <a href="../akademi.html" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:6px 12px">← Tüm Yazılar</a>
     <div class="ft-social">
