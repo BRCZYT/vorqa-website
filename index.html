@@ -222,10 +222,15 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
              linear-gradient(to top,rgba(5,23,40,.7) 0%,transparent 22%)}
 
 .hero-content-wrap{position:absolute;left:56px;bottom:150px;z-index:10;max-width:600px}
-.hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
 .hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.08;letter-spacing:-.03em;text-transform:uppercase;animation:fade-up .7s .9s both}
 .hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.2vw,16px);color:rgba(255,255,255,.6);line-height:1.7;max-width:480px;margin:16px 0 0;animation:fade-up .7s 1s both}
-.hero-h1 .accent{color:#E87722}
+/* Line-level differentiation for hero hierarchy: line1 keeps the base
+   Sora 700, accent (line2) adds italic + orange, line3 switches to
+   Manrope for contrast. Arabic keeps upright italic looks broken on
+   Arabic script, so it's reset back to normal under dir="rtl". */
+.hero-h1 .accent{color:#E87722;font-style:italic}
+.hero-h1 .line3{font-family:'Manrope Variable',Manrope,'Noto Sans Arabic Variable',sans-serif;font-weight:600;letter-spacing:-.01em}
+html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 
 /* ── Sector tabs ── */
 .sector-bar{position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;padding:16px 0 22px}
