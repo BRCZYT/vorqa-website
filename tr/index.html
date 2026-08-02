@@ -19,9 +19,9 @@
 
 
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=2" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Vorqa Global","url":"https://www.vorqaglobal.com","description":"VORQA; beton, komple galvaniz, atık-enerji ve kırma-eleme tesisleri için müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — MENA & Afrika.","email":"info@vorqaglobal.com","telephone":"+90 536 707 69 51","address":{"@type":"PostalAddress","streetAddress":"Uzay Çağı Caddesi, OSTİM","addressLocality":"Yenimahalle","addressRegion":"Ankara","addressCountry":"TR"},"areaServed":["TR","LY","EG","IQ"],"sameAs":["https://linkedin.com/company/vorqa-global"]}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
@@ -104,12 +104,8 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 #nav.scrolled{background:rgba(5,23,40,.97);padding:14px 56px}
 
 .nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}
-/* Master logo is navy-on-white — not suited to the dark nav/footer as-is,
-   so it sits on a small light plaque for contrast instead. */
-.logo-plaque{display:inline-flex;align-items:center;background:#fff;border-radius:6px;padding:7px 14px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
-.logo-plaque img{display:block;height:34px;width:auto}
-.foot-logo-plaque{display:inline-flex;align-items:center;background:#fff;border-radius:5px;padding:5px 12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
-.foot-logo-plaque img{display:block;height:22px;width:auto}
+.nav-logo-img{display:block;height:52px;width:auto}
+.foot-logo-img{display:block;height:40px;width:auto}
 /* Letter groups animate in after preloader */
 .nl-z,.nl-y,.nl-t{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
 .nl-z{transform-box:fill-box;transform-origin:center}
@@ -752,7 +748,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 ════════════════════════════════════ -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <span class="logo-plaque"><img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global"></span>
+    <img class="nav-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
   </a>
   <div class="nav-links">
     <a href="#" class="nav-link" style="color:rgba(255,255,255,.8)">Ana Sayfa</a>
@@ -972,7 +968,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
   <div style="max-width:1160px;margin:0 auto">
     <div class="foot-inner" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:26px">
       <a href="#" style="text-decoration:none;display:flex;align-items:center">
-        <span class="foot-logo-plaque"><img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global"></span>
+        <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
       </a>
       <a href="/tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">Akademi</a>
       <div class="ft-social">
