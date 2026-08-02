@@ -249,7 +249,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
   </div>` : ''}
 
   <div class="author-card rv">
-    <img src="../vorqa-mira/Mira.png" alt="Mira" class="author-img">
+    <picture><source srcset="../vorqa-mira/Mira_vorqaglobal.webp" type="image/webp"><img src="../vorqa-mira/Mira_vorqaglobal-fallback.png" alt="Mira" class="author-img" width="1000" height="400"></picture>
     <div>
       <div class="author-name">Mira</div>
       <div class="author-role">Vorqa Global AI Editörü</div>
