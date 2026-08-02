@@ -36,3 +36,7 @@ vorqa-blog/server.mjs
 # 64MB spec-sheet PDF (not linked from any page) stay out of the deploy.
 images/galvaniz/galvaniz1.png
 images/galvaniz/galvapro-Ek-2.pdf
+
+# Waste-to-Energy card image: only the optimized waste-to-energy.jpg is
+# used live. The source PNG (unused, 2.2MB) stays out of the deploy.
+images/dönüşüm/Waste-to-Energy.png

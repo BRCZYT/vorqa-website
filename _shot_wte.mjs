@@ -1,0 +1,15 @@
+import puppeteer from 'puppeteer';
+const browser = await puppeteer.launch({ headless: 'new' });
+const page = await browser.newPage();
+await page.setViewport({ width: 1440, height: 900 });
+await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0' });
+await page.evaluate(() => document.querySelector('#industries').scrollIntoView());
+await page.mouse.wheel({ deltaY: 300 });
+await new Promise(r => setTimeout(r, 800));
+const el = await page.$('#industries');
+await el.screenshot({ path: 'C:/Users/Satınalma/AppData/Local/Temp/claude/c-----yedek-brc-ZYT-website/2a94e919-465e-4642-b42d-3c4641ab7553/scratchpad/wte_industries.png' });
+const cards = await page.$$('.co-hx-card');
+await cards[2].hover();
+await new Promise(r => setTimeout(r, 700));
+await el.screenshot({ path: 'C:/Users/Satınalma/AppData/Local/Temp/claude/c-----yedek-brc-ZYT-website/2a94e919-465e-4642-b42d-3c4641ab7553/scratchpad/wte_hover.png' });
+await browser.close();
