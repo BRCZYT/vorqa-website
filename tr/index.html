@@ -203,23 +203,24 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* ══════════════════════════════════════════
    HERO
 ══════════════════════════════════════════ */
-#hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#051728;overflow:hidden;padding-top:64px;padding-bottom:72px}
+#hero{position:relative;min-height:100svh;overflow:hidden;background:#051728;padding-top:64px;padding-bottom:72px}
 .hero-grid-bg{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:linear-gradient(rgba(40,116,178,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(40,116,178,.4) 1px,transparent 1px);background-size:80px 80px}
 .hero-orb{position:absolute;pointer-events:none;border-radius:50%}
 .hero-orb-1{top:-10%;right:-6%;width:55%;aspect-ratio:1;background:radial-gradient(circle,rgba(40,116,178,.1),transparent 65%)}
 .hero-orb-2{bottom:-22%;left:-10%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(40,116,178,.07),transparent 65%)}
-.hero-main-illus{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;opacity:.55;pointer-events:none;z-index:0}
-.hero-legibility-veil{position:absolute;left:0;right:0;bottom:0;height:65%;background:linear-gradient(to bottom,transparent 0%,rgba(5,23,40,.55) 55%,rgba(5,23,40,.88) 100%);pointer-events:none;z-index:0}
 
+/* ── Earth background photo — earth stays right (never mirrored), text sits over the dark left ── */
+.hero-earth-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-earth-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;opacity:.9}
+.hero-earth-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to right,rgba(5,23,40,.96) 0%,rgba(5,23,40,.88) 32%,rgba(5,23,40,.5) 55%,rgba(5,23,40,.1) 75%,transparent 100%),
+             linear-gradient(to top,rgba(5,23,40,.7) 0%,transparent 22%)}
+
+.hero-content-wrap{position:absolute;left:56px;bottom:150px;z-index:10;max-width:600px}
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
-.hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,6rem);line-height:1.02;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
-.hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.3vw,17px);color:rgba(255,255,255,.55);line-height:1.7;max-width:640px;text-align:center;margin:18px auto 0;animation:fade-up .7s 1s both}
+.hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.08;letter-spacing:-.03em;text-transform:uppercase;animation:fade-up .7s .9s both}
+.hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.2vw,16px);color:rgba(255,255,255,.6);line-height:1.7;max-width:480px;margin:16px 0 0;animation:fade-up .7s 1s both}
 .hero-h1 .accent{color:#E87722}
-
-/* ── Wheel ── */
-.wheel-wrap{position:relative;width:min(400px,64vw);height:min(400px,64vw);margin:14px 0 8px;animation:fade-up .8s .3s both}
-.wheel-svg{position:absolute;inset:0;width:100%;height:100%}
-.wheel-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 
 /* ── Sector tabs ── */
 .sector-bar{position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;padding:16px 0 22px}
@@ -501,7 +502,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   #foot{padding:36px 20px}
 
   .g2{grid-template-columns:1fr;gap:10px}
-  .wheel-wrap{width:min(280px,78vw);height:min(280px,78vw)}
+  .hero-content-wrap{left:32px;max-width:min(460px,calc(100% - 64px))}
 
   /* 3-col → 2-col */
   /* .co-grid removed — replaced by .co-hx-panel */
@@ -526,8 +527,10 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 ══════════════════════════════════════════ */
 @media(max-width:600px){
   #hero{padding-top:56px;padding-bottom:64px}
-  .wheel-wrap{width:min(250px,76vw);height:min(250px,76vw)}
-  .hero-h1{font-size:clamp(2rem,9vw,2.6rem)}
+  .hero-content-wrap{left:20px;max-width:calc(100% - 40px);bottom:180px}
+  .hero-earth-bg img{object-position:28% center}
+  .hero-earth-overlay{background:linear-gradient(to right,rgba(5,23,40,.97) 0%,rgba(5,23,40,.9) 45%,rgba(5,23,40,.65) 70%,rgba(5,23,40,.3) 100%),linear-gradient(to top,rgba(5,23,40,.7) 0%,transparent 22%)}
+  .hero-h1{font-size:clamp(1.7rem,8vw,2.3rem)}
   .hero-eyebrow{font-size:8.5px;letter-spacing:2px}
 
   /* All major grids → 1 col */
@@ -788,69 +791,25 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
   <div class="hero-grid-bg"></div>
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
-  <img class="hero-main-illus" src="/images/illustrations/hero-main.svg" alt="Vorqa Global endüstriyel tesis panoraması — teknik çizim" width="2560" height="1100">
-  <div class="hero-legibility-veil" aria-hidden="true"></div>
 
-  <!-- Rotating Wheel — FIRST, above the text -->
-  <div class="wheel-wrap">
-    <svg class="wheel-svg spin-cw" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
-      <defs><path id="tp1" d="M240,240 m-210,0 a210,210 0 1,1 420,0 a210,210 0 1,1 -420,0"></path></defs>
-      <circle cx="240" cy="240" r="210" fill="none" stroke="rgba(40,116,178,.18)" stroke-width="1"></circle>
-      <g stroke="rgba(40,116,178,.45)" stroke-width="1">
-        <line x1="240" y1="32" x2="240" y2="46"></line><line x1="240" y1="434" x2="240" y2="448"></line>
-        <line x1="32" y1="240" x2="46" y2="240"></line><line x1="434" y1="240" x2="448" y2="240"></line>
-        <line x1="92" y1="92" x2="102" y2="102"></line><line x1="388" y1="92" x2="378" y2="102"></line>
-        <line x1="92" y1="388" x2="102" y2="378"></line><line x1="388" y1="388" x2="378" y2="378"></line>
-      </g>
-      <text font-family="'JetBrains Mono Variable',monospace" font-size="11" fill="rgba(255,255,255,.35)" letter-spacing="4">
-        <textPath href="#tp1">CONCRETE · GALVANIZING · WASTE-TO-ENERGY · CRUSHING &amp; SCREENING · INDUSTRIAL SOURCING · &nbsp;</textPath>
-      </text>
-    </svg>
-    <svg class="wheel-svg spin-ccw" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
-      <defs><path id="tp2" d="M240,240 m-158,0 a158,158 0 1,1 316,0 a158,158 0 1,1 -316,0"></path></defs>
-      <circle cx="240" cy="240" r="158" fill="none" stroke="rgba(40,116,178,.25)" stroke-width="1"></circle>
-      <circle cx="240" cy="82" r="3.5" fill="#2874B2"></circle>
-      <circle cx="240" cy="398" r="3.5" fill="#2874B2"></circle>
-      <circle cx="82" cy="240" r="3.5" fill="#2874B2"></circle>
-      <circle cx="398" cy="240" r="3.5" fill="#2874B2"></circle>
-      <text font-family="'JetBrains Mono Variable',monospace" font-size="9.5" fill="rgba(92,141,184,.6)" letter-spacing="3.2">
-        <textPath href="#tp2">PROJECT SUPPLY · COORDINATION · QUALIFIED PARTNERS · &nbsp;&nbsp;&nbsp;</textPath>
-      </text>
-    </svg>
-    <svg class="wheel-svg" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="240" cy="240" r="108" fill="rgba(10,37,64,.8)" stroke="rgba(40,116,178,.35)" stroke-width="1"></circle>
-      <g stroke="rgba(40,116,178,.22)" stroke-width=".75">
-        <line x1="240" y1="133" x2="240" y2="158"></line><line x1="240" y1="322" x2="240" y2="347"></line>
-        <line x1="133" y1="240" x2="158" y2="240"></line><line x1="322" y1="240" x2="347" y2="240"></line>
-      </g>
-    </svg>
-    <svg class="wheel-svg spin-med" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="240" cy="240" r="125" fill="none" stroke="rgba(40,116,178,.18)" stroke-width="1" stroke-dasharray="6 9"></circle>
-    </svg>
-    <div class="wheel-center">
-      <svg width="100" viewBox="130 55 420 175" xmlns="http://www.w3.org/2000/svg">
-        <!-- TODO: Burcu — gerçek VORQA vektör logosu gelince bu geçici metin değiştirilecek -->
-        <text x="340" y="140" text-anchor="middle" font-family="'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif" font-weight="700" font-size="72" fill="#fff" letter-spacing="2">VORQA</text>
-        <line x1="150" y1="196" x2="530" y2="196" stroke="#2874B2" stroke-width=".75"></line>
-        <text x="340" y="214" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="10" fill="#2874B2" letter-spacing="5">GLOBAL</text>
-      </svg>
-    </div>
-  </div>
+  <picture class="hero-earth-bg" aria-hidden="true">
+    <source srcset="/images/hero-earth.webp" type="image/webp">
+    <img src="/images/hero-earth.jpg" alt="" width="1672" height="941">
+  </picture>
+  <div class="hero-earth-overlay" aria-hidden="true"></div>
 
-  <!-- Title — BELOW the wheel -->
-  <div style="position:relative;z-index:10;text-align:center;padding:0 32px;margin-top:6px">
+  <div class="hero-content-wrap">
     <p class="hero-eyebrow">// Ankara, Türkiye · Endüstriyel Tedarik &amp; Proje Koordinasyon Partneri · MENA &amp; Afrika</p>
     <h1 class="hero-h1">ENDÜSTRİYEL TEDARİK.<br><span class="accent">PROJE TEDARİĞİ.</span><br>TEK MUHATAP PARTNER.</h1>
     <p class="hero-sub">VORQA, endüstriyel ihtiyaçları doğrulanmış tedarikçiler ve uzman tesis partnerleriyle buluşturur; teknik, ticari ve teslimat koordinasyonunu talepten hedefe kadar yönetir.</p>
-    <div class="btn-row" style="justify-content:center;margin-top:26px;animation:fade-up .7s 1.05s both">
+    <div class="btn-row" style="justify-content:left;margin-top:26px;animation:fade-up .7s 1.05s both">
       <a href="/tr/iletisim/" class="btn-p" style="text-decoration:none">Teklif Al</a>
       <a href="#industries" class="btn-g" style="text-decoration:none">Yetkinliklerimizi Keşfedin</a>
     </div>
-  </div>
-
-  <div style="display:flex;align-items:center;gap:10px;margin-top:14px;margin-bottom:28px;animation:fade-up .7s 1.1s both">
-    <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">Koordine Ettiklerimiz</span>
-    <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l5 4-5 4" stroke="rgba(40,116,178,.7)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:24px;animation:fade-up .7s 1.1s both">
+      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">Koordine Ettiklerimiz</span>
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l5 4-5 4" stroke="rgba(40,116,178,.7)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </div>
   </div>
 
   <div class="sector-bar">
