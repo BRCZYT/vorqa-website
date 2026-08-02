@@ -385,7 +385,7 @@ html[dir="rtl"] #hero{text-align:right}
     <div class="rv d2" style="background:#fff;border-radius:12px;padding:40px;box-shadow:0 8px 40px rgba(10,37,64,.1)">
       <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#E87722;margin-bottom:8px" data-i18n="form.tag">§ 02 / Mesaj Gönder</div>
       <h3 style="font-family:'Sora Variable',Sora,sans-serif;font-size:22px;font-weight:400;color:#0A2540;margin-bottom:28px;letter-spacing:-.02em" data-i18n="form.title">Teklif ve proje sorguları</h3>
-      <form id="contact-form" style="display:flex;flex-direction:column;gap:16px" action="https://formspree.io/f/TODO_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
+      <form id="contact-form" style="display:flex;flex-direction:column;gap:16px" action="https://formspree.io/f/xkodlyby" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div><label class="f-lbl" data-i18n="form.name.lbl">Ad Soyad</label><input type="text" name="name" class="f-inp" data-i18n-ph="form.name.ph" placeholder="Adınız Soyadınız" required></div>
           <div><label class="f-lbl" data-i18n="form.company.lbl">Şirket</label><input type="text" name="company" class="f-inp" data-i18n-ph="form.company.ph" placeholder="Şirket Adı"></div>
@@ -659,7 +659,7 @@ const _l=localStorage.getItem('vorqa-lang')||(navigator.language.startsWith('ar'
 setLang(_l);
 document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 
-/* Form submit — posts to Formspree (see form action="...TODO_FORMSPREE_ENDPOINT") */
+/* Form submit — posts to Formspree (see form action="...xkodlyby") */
 function handleSubmit(e){
   e.preventDefault();
   const form=e.target;
