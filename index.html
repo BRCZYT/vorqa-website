@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans-arabic@5.3.0/index.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config={theme:{extend:{colors:{navy:'#0A2540',mid:'#051728',blue:'#2874B2',steel:'#5C8DB8',graph:'#3A4858',mist:'#E8EEF4',orange:'#E87722'},fontFamily:{display:["'Sora Variable'","Sora","sans-serif"],body:["'Manrope Variable'","Manrope","sans-serif"],mono:["'JetBrains Mono Variable'","'JetBrains Mono'","monospace"]}}}}
@@ -162,7 +163,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* MOBILE DROPDOWN */
 .mob-dd-inner{overflow:hidden;max-height:0;transition:max-height .32s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;padding-left:0}
 .mob-dd-wrap.open .mob-dd-inner{max-height:320px}
-.mob-sub-link{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(255,255,255,.38);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
+.mob-sub-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(255,255,255,.38);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
 .mob-sub-link:hover{color:#2874B2}
 .mob-dd-arr{font-family:'JetBrains Mono Variable',monospace;font-size:14px;color:rgba(40,116,178,.7);transition:transform .25s cubic-bezier(.22,1,.36,1);display:inline-block;margin-left:8px}
 .mob-dd-wrap.open .mob-dd-arr{transform:rotate(45deg)}
@@ -214,7 +215,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .hero-legibility-veil{position:absolute;left:0;right:0;bottom:0;height:65%;background:linear-gradient(to bottom,transparent 0%,rgba(5,23,40,.55) 55%,rgba(5,23,40,.88) 100%);pointer-events:none;z-index:0}
 
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
-.hero-h1{font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,6rem);line-height:1.02;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
+.hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,6rem);line-height:1.02;letter-spacing:-.04em;text-transform:uppercase;text-align:center;animation:fade-up .7s .9s both}
 .hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.3vw,17px);color:rgba(255,255,255,.55);line-height:1.7;max-width:640px;text-align:center;margin:18px auto 0;animation:fade-up .7s 1s both}
 .hero-h1 .accent{color:#E87722}
 
@@ -252,9 +253,9 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .g2{display:grid;grid-template-columns:220px 1fr;gap:64px;align-items:baseline}
 
 /* Dark section headings */
-.sec-title-d{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:#fff}
+.sec-title-d{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:#fff}
 /* Light section headings */
-.sec-title-l{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:var(--ink)}
+.sec-title-l{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;letter-spacing:-.025em;color:var(--ink)}
 
 /* ── Light section base ── */
 .sec-light{background:var(--bg-light)}
@@ -264,11 +265,11 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* ══════════════════════════════════════════
    ABOUT (light)
 ══════════════════════════════════════════ */
-.intro-text-l{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.25rem,2.1vw,1.7rem);font-weight:300;line-height:1.45;letter-spacing:-.012em;color:var(--ink);max-width:680px}
+.intro-text-l{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.25rem,2.1vw,1.7rem);font-weight:300;line-height:1.45;letter-spacing:-.012em;color:var(--ink);max-width:680px}
 .intro-text-l em{color:#2874B2;font-style:normal;font-weight:500}
 .pillar{background:var(--card);border:1px solid var(--line-light);border-radius:8px;padding:28px;box-shadow:0 2px 16px rgba(10,37,64,.07),0 1px 3px rgba(10,37,64,.04)}
 .pillar-num{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;color:#2874B2;text-transform:uppercase;margin-bottom:10px}
-.pillar-title{font-family:'Sora Variable',Sora,sans-serif;font-size:16px;font-weight:500;color:var(--ink);letter-spacing:-.01em;margin-bottom:8px}
+.pillar-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:16px;font-weight:500;color:var(--ink);letter-spacing:-.01em;margin-bottom:8px}
 .pillar-body{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;color:var(--ink-soft);line-height:1.65}
 
 /* ══════════════════════════════════════════
@@ -310,7 +311,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .co-hx-badge{position:absolute;top:24px;left:28px;z-index:6;font-family:'JetBrains Mono Variable',monospace;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#2874B2;opacity:.8}
 /* Content block at bottom */
 .co-hx-content{position:relative;z-index:6;display:flex;flex-direction:column;gap:6px}
-.co-hx-name{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(14px,1.3vw,25px);font-weight:500;color:var(--ink);letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1}
+.co-hx-name{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(14px,1.3vw,25px);font-weight:500;color:var(--ink);letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1}
 .co-hx-tag{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.8px;color:#2874B2;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .co-hx-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;line-height:1.65;color:var(--ink-soft);max-width:300px;opacity:0;transform:translateY(8px);order:-1;transition:opacity .42s .06s cubic-bezier(.16,1,.3,1),transform .42s .06s cubic-bezier(.16,1,.3,1)}
 .co-hx-card:hover .co-hx-desc{opacity:1;transform:translateY(0)}
@@ -323,7 +324,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
    STATS BAND
 ══════════════════════════════════════════ */
 .stats-band{background:#051728;padding:56px 80px;border-top:1px solid rgba(40,116,178,.1);border-bottom:1px solid rgba(40,116,178,.1)}
-.stat-n{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;letter-spacing:-.035em;color:#fff;line-height:1}
+.stat-n{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;letter-spacing:-.035em;color:#fff;line-height:1}
 .stat-n sup{font-size:.55em;color:#2874B2;font-weight:500}
 .stat-lbl{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:6px}
 /* ── Stats-band tagline ── */
@@ -370,7 +371,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .ind-card-l::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#2874B2,#5C8DB8);opacity:0;transition:opacity .25s}
 .ind-card-l:hover::before{opacity:1}
 .ind-num-l{font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;color:#2874B2;text-transform:uppercase;margin-bottom:8px}
-.ind-title-l{font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:500;color:#0A2540;letter-spacing:-.01em;margin-bottom:10px}
+.ind-title-l{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:18px;font-weight:500;color:#0A2540;letter-spacing:-.01em;margin-bottom:10px}
 .ind-body-l{font-family:'Manrope Variable',Manrope,sans-serif;font-size:13px;color:#3A4858;line-height:1.65}
 
 /* CTA card light */
@@ -395,7 +396,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .proj-img{width:100%;object-fit:cover;filter:saturate(.55) brightness(.8);display:block}
 .proj-over{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(5,23,40,.88))}
 .proj-meta{font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;color:#2874B2;text-transform:uppercase;margin-bottom:7px}
-.proj-title{font-family:'Sora Variable',Sora,sans-serif;font-size:19px;font-weight:500;color:#fff;letter-spacing:-.015em}
+.proj-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:19px;font-weight:500;color:#fff;letter-spacing:-.015em}
 .proj-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6;margin-top:7px}
 
 /* ══════════════════════════════════════════
@@ -451,7 +452,7 @@ select.f-inp option{background:#fff;color:#0A2540}
 }
 #mob-nav.open{opacity:1;pointer-events:all}
 .mob-link{
-  font-family:'Sora Variable',Sora,sans-serif;
+  font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;
   font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;
   letter-spacing:-.025em;color:rgba(255,255,255,.55);
   text-decoration:none;padding:10px 0;
@@ -584,6 +585,16 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
   transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1)}
 .rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
+
+/* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
+   glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
+html[dir="rtl"] .hero-h1,
+html[dir="rtl"] .sec-title-d,
+html[dir="rtl"] .sec-title-l,
+html[dir="rtl"] .co-hx-name,
+html[dir="rtl"] .ind-title-l,
+html[dir="rtl"] .pillar-title,
+html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 .d4{transition-delay:.40s}.d5{transition-delay:.50s}.d6{transition-delay:.60s}
 
 /* ── Light sections ── */
@@ -640,7 +651,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 .prj-pin-side-r{right:0;background:radial-gradient(ellipse 80% 70% at 100% 50%,rgba(92,141,184,.14) 0%,transparent 65%);animation:prj-side-drift 18s ease-in-out infinite reverse}
 .prj-pin-hdr{position:absolute;top:0;left:0;right:0;padding:clamp(18px,2.5vh,32px) clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(10,37,64,.1);z-index:4}
 .prj-pin-counter{font-family:'JetBrains Mono Variable',monospace;font-size:11px;letter-spacing:2.5px;color:rgba(10,37,64,.38)}
-.prj-ghost{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(.3rem,.67vw,.52rem);font-weight:300;letter-spacing:-.02em;color:rgba(10,37,64,.15);text-align:center;pointer-events:none;user-select:none;min-height:1.2em;line-height:1.2;transition:opacity .35s;padding:0 clamp(20px,5vw,100px)}
+.prj-ghost{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(.3rem,.67vw,.52rem);font-weight:300;letter-spacing:-.02em;color:rgba(10,37,64,.15);text-align:center;pointer-events:none;user-select:none;min-height:1.2em;line-height:1.2;transition:opacity .35s;padding:0 clamp(20px,5vw,100px)}
 .prj-ghost--prev{margin-bottom:clamp(14px,2.2vh,28px)}
 .prj-ghost--next{margin-top:clamp(14px,2.2vh,28px)}
 .prj-stage{display:flex;flex-direction:column;align-items:center;position:relative;z-index:3}
@@ -648,7 +659,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 .prj-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
 .prj-current{text-align:center;will-change:opacity,transform}
 .prj-curr-meta{font-family:'JetBrains Mono Variable',monospace;font-size:3.5px;letter-spacing:1px;color:#2874B2;text-transform:uppercase;margin-bottom:4px}
-.prj-curr-title{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(.52rem,1.27vw,1.07rem);font-weight:300;letter-spacing:-.03em;color:var(--ink);line-height:1.05;margin-bottom:clamp(3px,.5vh,5px);max-width:680px}
+.prj-curr-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(.52rem,1.27vw,1.07rem);font-weight:300;letter-spacing:-.03em;color:var(--ink);line-height:1.05;margin-bottom:clamp(3px,.5vh,5px);max-width:680px}
 .prj-curr-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(4px,.32vw,4.7px);color:var(--ink-soft);line-height:1.68;max-width:450px;margin:0 auto}
 .prj-pin-bot{position:absolute;bottom:clamp(20px,3.2vh,38px);left:0;right:0;display:flex;align-items:center;justify-content:center;gap:30px;z-index:4}
 .prj-dots{display:flex;gap:8px;align-items:center}
@@ -699,19 +710,19 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <div class="pl-seq-label" id="pl-label">STARTING SEQUENCE</div>
     <div class="pl-letters-row">
       <div class="pl-seq-letter" id="pl-v">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">V</span>
+        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">V</span>
       </div>
       <div class="pl-seq-letter" id="pl-o">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">O</span>
+        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">O</span>
       </div>
       <div class="pl-seq-letter" id="pl-r">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">R</span>
+        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">R</span>
       </div>
       <div class="pl-seq-letter" id="pl-q">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#2874B2">Q</span>
+        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#2874B2">Q</span>
       </div>
       <div class="pl-seq-letter" id="pl-a2">
-        <span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">A</span>
+        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">A</span>
       </div>
     </div>
     <div class="pl-status-line" id="pl-status">
@@ -731,7 +742,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 ════════════════════════════════════ -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px">Global</span>
+    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px">Global</span>
   </a>
   <div class="nav-links">
     <a href="#" class="nav-link" style="color:rgba(255,255,255,.8)" data-i18n="nav.home">Home</a>
@@ -819,7 +830,7 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
     <div class="wheel-center">
       <svg width="100" viewBox="130 55 420 175" xmlns="http://www.w3.org/2000/svg">
         <!-- TODO: Burcu — gerçek VORQA vektör logosu gelince bu geçici metin değiştirilecek -->
-        <text x="340" y="140" text-anchor="middle" font-family="'Sora Variable',Sora,sans-serif" font-weight="700" font-size="72" fill="#fff" letter-spacing="2">VORQA</text>
+        <text x="340" y="140" text-anchor="middle" font-family="'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif" font-weight="700" font-size="72" fill="#fff" letter-spacing="2">VORQA</text>
         <line x1="150" y1="196" x2="530" y2="196" stroke="#2874B2" stroke-width=".75"/>
         <text x="340" y="214" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="10" fill="#2874B2" letter-spacing="5">GLOBAL</text>
       </svg>

@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans-arabic@5.3.0/index.css">
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
@@ -92,7 +93,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .ham-btn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 #mob-nav{position:fixed;inset:0;background:#fff;z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(.22,1,.36,1)}
 #mob-nav.open{opacity:1;pointer-events:all}
-.mob-link{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;letter-spacing:-.025em;color:rgba(10,37,64,.45);text-decoration:none;padding:10px 0;transition:color .2s,transform .2s;background:transparent;border:none;cursor:pointer;text-align:center;width:100%}
+.mob-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;letter-spacing:-.025em;color:rgba(10,37,64,.45);text-decoration:none;padding:10px 0;transition:color .2s,transform .2s;background:transparent;border:none;cursor:pointer;text-align:center;width:100%}
 .mob-link:hover{color:#0a2540;transform:translateX(6px)}
 .mob-sep{width:40px;height:1px;background:rgba(40,116,178,.18);margin:8px 0}
 .mob-lang{display:flex;gap:12px;margin-top:24px}
@@ -100,7 +101,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .mob-l-btn.active{color:#2874B2;border-color:#2874B2}
 .mob-dd-inner{overflow:hidden;max-height:0;transition:max-height .32s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;padding-left:0}
 .mob-dd-wrap.open .mob-dd-inner{max-height:320px}
-.mob-sub-link{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(10,37,64,.35);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
+.mob-sub-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(10,37,64,.35);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
 .mob-sub-link:hover{color:#2874B2}
 .mob-dd-arr{font-family:'JetBrains Mono Variable',monospace;font-size:14px;color:rgba(40,116,178,.7);transition:transform .25s cubic-bezier(.22,1,.36,1);display:inline-block;margin-left:8px}
 .mob-dd-wrap.open .mob-dd-arr{transform:rotate(45deg)}
@@ -136,12 +137,12 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:rgba(92,163,255,.8);margin-bottom:20px;display:flex;align-items:center;gap:10px}
 .hero-eyebrow::before{background:rgba(92,163,255,.6) !important}
 .hero-eyebrow::before{content:'';width:28px;height:1px;background:#2874B2}
-.hero-h1{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:300;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:28px}
+.hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:300;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:28px}
 .hero-h1 em{font-style:normal;color:#2874B2;font-weight:600}
 .hero-desc{font-size:16px;color:rgba(255,255,255,.55);line-height:1.8;max-width:440px;margin-bottom:36px}
 .hero-stats{display:flex;gap:32px;flex-wrap:wrap}
 .hero-stat-item{display:flex;flex-direction:column;gap:4px}
-.hero-stat-num{font-family:'Sora Variable',Sora,sans-serif;font-size:2rem;font-weight:300;color:#0a2540;letter-spacing:-.03em}
+.hero-stat-num{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:2rem;font-weight:300;color:#0a2540;letter-spacing:-.03em}
 .hero-stat-label{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(10,37,64,.4)}
 
 /* MIRA PORTRAIT PANEL */
@@ -150,7 +151,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 @keyframes mira-float{from{transform:translateY(0) rotate(0deg)}to{transform:translateY(-14px) rotate(.5deg)}}
 .mira-hero-img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top center}
 .mira-hero-badge{position:absolute;bottom:0;left:0;right:0;padding:28px 24px;background:linear-gradient(to top,rgba(10,37,64,.92) 0%,rgba(10,37,64,.6) 60%,transparent 100%)}
-.mira-hero-name{font-family:'Sora Variable',Sora,sans-serif;font-size:1.25rem;font-weight:300;color:#fff;letter-spacing:-.01em;margin-bottom:4px}
+.mira-hero-name{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:1.25rem;font-weight:300;color:#fff;letter-spacing:-.01em;margin-bottom:4px}
 .mira-hero-role{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(40,116,178,.9);display:flex;align-items:center;gap:6px}
 .live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:live-pulse 2s ease-in-out infinite}
 @keyframes live-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
@@ -171,11 +172,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .mira-strip-text{}
 .mira-strip-label{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:6px;display:flex;align-items:center;gap:8px}
 .mira-strip-label::after{content:'';flex:1;height:1px;background:rgba(40,116,178,.2);max-width:120px}
-.mira-strip-quote{font-family:'Sora Variable',Sora,sans-serif;font-size:1.05rem;font-weight:400;color:#0a2540;letter-spacing:-.01em;line-height:1.5}
+.mira-strip-quote{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:1.05rem;font-weight:400;color:#0a2540;letter-spacing:-.01em;line-height:1.5}
 .mira-strip-quote em{font-style:normal;color:#2874B2}
 .mira-strip-meta{display:flex;align-items:center;gap:12px;margin-left:auto;flex-shrink:0}
 .mira-strip-stat{text-align:center}
-.mira-strip-stat-n{font-family:'Sora Variable',Sora,sans-serif;font-size:1.8rem;font-weight:300;color:#0a2540;letter-spacing:-.03em;line-height:1}
+.mira-strip-stat-n{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:1.8rem;font-weight:300;color:#0a2540;letter-spacing:-.03em;line-height:1}
 .mira-strip-stat-l{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(10,37,64,.4);margin-top:3px}
 .mira-strip-divider{width:1px;height:40px;background:rgba(10,37,64,.1)}
 
@@ -189,7 +190,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;gap:24px;flex-wrap:wrap}
 .sec-head-left{}
 .sec-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#2874B2;margin-bottom:10px}
-.sec-title{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:#0a2540;letter-spacing:-.025em;line-height:1.1}
+.sec-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:#0a2540;letter-spacing:-.025em;line-height:1.1}
 .sec-title strong{font-weight:600;color:#2874B2}
 
 /* FILTER TABS */
@@ -221,7 +222,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .featured-text-panel::before{content:'';position:absolute;top:0;bottom:0;left:0;width:3px;background:linear-gradient(to bottom,#2874B2,#5ba3e0)}
 .featured-cat-tag{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:16px;display:inline-flex;align-items:center;gap:8px}
 .featured-cat-tag::before{content:'';width:16px;height:1px;background:#2874B2}
-.featured-title{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.25rem,2.2vw,1.8rem);font-weight:400;line-height:1.25;letter-spacing:-.02em;color:#0a2540;margin-bottom:16px}
+.featured-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.25rem,2.2vw,1.8rem);font-weight:400;line-height:1.25;letter-spacing:-.02em;color:#0a2540;margin-bottom:16px}
 .featured-meta{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(10,37,64,.35);margin-bottom:18px}
 .featured-excerpt{font-size:14px;color:rgba(10,37,64,.55);line-height:1.8;margin-bottom:32px}
 
@@ -256,7 +257,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 [data-cat="tedarik"] .blog-cat-chip{color:#dc2626}
 [data-cat="tedarik"] .blog-cat-chip::before{background:#dc2626}
 
-.blog-title{font-family:'Sora Variable',Sora,sans-serif;font-size:16px;font-weight:400;line-height:1.35;letter-spacing:-.01em;color:#0a2540;margin-bottom:12px;flex:1}
+.blog-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:16px;font-weight:400;line-height:1.35;letter-spacing:-.01em;color:#0a2540;margin-bottom:12px;flex:1}
 .blog-excerpt{font-size:13px;color:rgba(10,37,64,.5);line-height:1.75;margin-bottom:20px}
 .blog-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(10,37,64,.06)}
 .blog-date{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(10,37,64,.3)}
@@ -273,6 +274,17 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .rv{opacity:0;transform:translateY(32px) scale(.98);filter:blur(4px);
   transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1),filter .75s cubic-bezier(.22,1,.36,1)}
 .rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+
+/* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
+   glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
+html[dir="rtl"] .hero-h1,
+html[dir="rtl"] .sec-title,
+html[dir="rtl"] .featured-title,
+html[dir="rtl"] .blog-title,
+html[dir="rtl"] .mira-hero-name,
+html[dir="rtl"] .hero-stat-num,
+html[dir="rtl"] .mira-strip-stat-n,
+html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 .d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}
 
@@ -345,7 +357,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 <!-- NAV -->
 <nav id="nav" class="dark-hero">
   <a href="/tr/" class="nav-logo">
-    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px;color:rgba(255,255,255,.35)">Global</span>
+    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px;color:rgba(255,255,255,.35)">Global</span>
   </a>
   <div class="nav-links">
     <a href="/tr/" class="nav-link">Ana Sayfa</a>
@@ -446,7 +458,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
     </div>
 
     <!-- FEATURED -->
-    <div class="featured-card rv d1" data-cat="beton" id="featured-post" onclick="location.href='vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html'" style="cursor:pointer">
+    <div class="featured-card rv d1" data-cat="beton" id="featured-post" onclick="location.href='/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html'" style="cursor:pointer">
       <div class="featured-img-wrap">
         <img class="img-ph" src="/images/illustrations/blog-beton-formul.svg" alt="Beton santrali kapasitesi — teknik çizim" loading="lazy" width="1600" height="1200">
         <div class="featured-img-overlay"></div>
@@ -457,14 +469,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
         <h2 class="featured-title">Beton Santrali Kapasitesi Nasıl Doğru Hesaplanır? Adım Adım Metodoloji</h2>
         <div class="featured-meta">10 May 2026 · 8 dak. okuma · Mira</div>
         <p class="featured-excerpt">Santral kapasitesi Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;×&nbsp;η&nbsp;×&nbsp;f) formülüyle belirlenir; burada η mixer verimliliği (Vorqa standart: 0.82), f çevre faktörüdür. 500&nbsp;m³/gün hedefi ve 8&nbsp;saatlik vardiya için Q = 80.3&nbsp;m³/sa. ACI 304R-00 ve ERMCO 2024 referanslarıyla desteklenmiş 6 adımlı metodoloji.</p>
-        <a href="/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html" class="btn-p" style="align-self:flex-start">Devamını Oku <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <a href="//vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html" class="btn-p" style="align-self:flex-start">Devamını Oku <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
       </div>
     </div>
 
     <!-- BLOG GRID -->
     <div class="blog-grid" id="blog-grid">
       <!-- POST: Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Proj -->
-      <div class="blog-card rv d1" data-pg="1" data-cat="enerji" onclick="location.href='vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html'">
+      <div class="blog-card rv d1" data-pg="1" data-cat="enerji" onclick="location.href='/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html'">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-epcf-model.svg" alt="Enerji sektöründe EPC-F modeli — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -474,13 +486,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek</div>
           <div class="blog-meta">
             <span class="blog-date">28 May 2026 · 5 dak.</span>
-            <a href="/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
       <!-- POST 1: Galvaniz -->
-      <div class="blog-card rv d1" data-cat="galvaniz" onclick="location.href='vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html'">
+      <div class="blog-card rv d1" data-cat="galvaniz" onclick="location.href='/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html'">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-galvaniz-katmanlar.svg" alt="Sıcak daldırma galvanizleme — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -490,13 +502,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">ISO 1461: Sıcak Daldırma Galvanizlemede Kaplama Kalınlığı ve Ömür</div>
           <div class="blog-meta">
             <span class="blog-date">22 Nis 2026 · 6 dak.</span>
-            <a href="/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
       <!-- POST 2: WtE -->
-      <div class="blog-card rv d2" data-cat="enerji" onclick="location.href='vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html'">
+      <div class="blog-card rv d2" data-cat="enerji" onclick="location.href='/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html'">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-wte-akis.svg" alt="Atık-enerji dönüşüm tesisi — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -506,13 +518,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Atıktan Enerjiye: WtE Teknolojileri ve Türkiye 2030 Hedefleri</div>
           <div class="blog-meta">
             <span class="blog-date">08 Nis 2026 · 7 dak.</span>
-            <a href="/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
       <!-- POST 3: EN 1090-2 -->
-      <div class="blog-card rv d3" data-cat="makina" onclick="location.href='vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html'">
+      <div class="blog-card rv d3" data-cat="makina" onclick="location.href='/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html'">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-celik-tolerans-ndt.svg" alt="Çelik yapı imalatı — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -522,13 +534,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">EN 1090-2 Kapsamında Çelik Yapı Toleransları ve NDT Zorunlulukları</div>
           <div class="blog-meta">
             <span class="blog-date">20 Mar 2026 · 9 dak.</span>
-            <a href="/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
       <!-- POST 4: Tedarik -->
-      <div class="blog-card rv d4" data-cat="tedarik" onclick="location.href='vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html'">
+      <div class="blog-card rv d4" data-cat="tedarik" onclick="location.href='/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html'">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-tedarik-ag.svg" alt="Küresel lojistik — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -538,13 +550,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Küresel Tedarik Zincirinde 2026 Kırılganlıkları ve Çeşitlendirme Stratejileri</div>
           <div class="blog-meta">
             <span class="blog-date">05 Mar 2026 · 5 dak.</span>
-            <a href="/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
       <!-- POST 5: Mobil vs Sabit -->
-      <div class="blog-card rv d5" data-cat="beton" onclick="location.href='vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html'">
+      <div class="blog-card rv d5" data-cat="beton" onclick="location.href='/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html'">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-beton-mobil-sabit.svg" alt="Sabit ve mobil beton santrali — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -554,13 +566,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Mobil mi, Sabit mi? Proje Hacmi ve Süresine Göre ROI Analizi</div>
           <div class="blog-meta">
             <span class="blog-date">14 Şub 2026 · 5 dak.</span>
-            <a href="/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
       <!-- PAGE 2 POSTS (hidden on load) -->
-      <div class="blog-card rv d1" data-pg="2" data-cat="enerji" onclick="location.href='vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html'" style="display:none">
+      <div class="blog-card rv d1" data-pg="2" data-cat="enerji" onclick="location.href='/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html'" style="display:none">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-epc-evm.svg" alt="EPC anahtar teslim projeler — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -570,12 +582,12 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Anahtar Teslim Tesislerde EPC Yönetimi: Kazanılmış Değer ve Risk Matrisi</div>
           <div class="blog-meta">
             <span class="blog-date">28 Oca 2026 · 6 dak.</span>
-            <a href="/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
-      <div class="blog-card rv d2" data-pg="2" data-cat="makina" onclick="location.href='vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html'" style="display:none">
+      <div class="blog-card rv d2" data-pg="2" data-cat="makina" onclick="location.href='/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html'" style="display:none">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-mekanik-titresim.svg" alt="Mekanik montaj ve titreşim analizi — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -585,12 +597,12 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Endüstriyel Ekipmanlarda Titreşim Analizi ve Şaft Hizalaması: Mekanik Montajın Gizli Maliyeti</div>
           <div class="blog-meta">
             <span class="blog-date">11 Haz 2026 · 6 dak.</span>
-            <a href="/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
 
-      <div class="blog-card rv d3" data-pg="2" data-cat="galvaniz" onclick="location.href='vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html'" style="display:none">
+      <div class="blog-card rv d3" data-pg="2" data-cat="galvaniz" onclick="location.href='/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html'" style="display:none">
         <div class="blog-img-wrap">
           <img class="blog-img img-ph" src="/images/illustrations/blog-galvaniz-lcc.svg" alt="Galvaniz ve boya kaplama yaşam döngüsü maliyeti — teknik çizim" loading="lazy" width="1600" height="1200">
           <div class="blog-img-overlay"></div>
@@ -600,7 +612,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
           <div class="blog-title">Sıcak Daldırma Galvaniz ile Boya Kaplama Karşılaştırması: Yaşam Döngüsü Maliyeti (LCC) Analizi</div>
           <div class="blog-meta">
             <span class="blog-date">25 Haz 2026 · 6 dak.</span>
-            <a href="/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+            <a href="//vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
       </div>
@@ -621,7 +633,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
   <div style="max-width:1200px;margin:0 auto">
     <div class="rv" style="background:linear-gradient(135deg,#0f3d72 0%,#06193a 100%);border-radius:16px;padding:56px 40px;text-align:center;box-shadow:0 20px 60px rgba(10,37,64,.18)">
       <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(40,116,178,.7);margin-bottom:14px">// Vorqa Global</div>
-      <h2 style="font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;letter-spacing:-.03em;color:#fff;margin-bottom:12px">Projeniz için konuşalım.</h2>
+      <h2 class="hdg-ar-fix" style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;letter-spacing:-.03em;color:#fff;margin-bottom:12px">Projeniz için konuşalım.</h2>
       <p style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:15px;color:rgba(255,255,255,.45);line-height:1.7;max-width:440px;margin:0 auto 28px">Uzman ekibimiz teknik ihtiyaçlarınızı dinlemeye hazır.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <a href="/tr/iletisim/" class="btn-p">Teklif Al →</a>

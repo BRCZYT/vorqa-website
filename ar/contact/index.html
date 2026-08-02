@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans-arabic@5.3.0/index.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{navy:'#0A2540',mid:'#051728',blue:'#2874B2'},fontFamily:{display:["'Sora Variable'","Sora","sans-serif"],body:["'Manrope Variable'","Manrope","sans-serif"],mono:["'JetBrains Mono Variable'","monospace"]}}}}</script>
 <style>
@@ -81,7 +82,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .ham-btn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 #mob-nav{position:fixed;inset:0;background:#051728;z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(.22,1,.36,1)}
 #mob-nav.open{opacity:1;pointer-events:all}
-.mob-link{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;letter-spacing:-.025em;color:rgba(255,255,255,.55);text-decoration:none;padding:10px 0;transition:color .2s,transform .2s;background:transparent;border:none;cursor:pointer;text-align:center;width:100%}
+.mob-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;letter-spacing:-.025em;color:rgba(255,255,255,.55);text-decoration:none;padding:10px 0;transition:color .2s,transform .2s;background:transparent;border:none;cursor:pointer;text-align:center;width:100%}
 .mob-link:hover{color:#fff;transform:translateX(6px)}
 .mob-sep{width:40px;height:1px;background:rgba(40,116,178,.3);margin:8px 0}
 .mob-lang{display:flex;gap:12px;margin-top:24px}
@@ -103,7 +104,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 /* MOBILE DROPDOWN */
 .mob-dd-inner{overflow:hidden;max-height:0;transition:max-height .32s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;padding-left:0}
 .mob-dd-wrap.open .mob-dd-inner{max-height:320px}
-.mob-sub-link{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(255,255,255,.38);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
+.mob-sub-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(255,255,255,.38);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
 .mob-sub-link:hover{color:#2874B2}
 .mob-dd-arr{font-family:'JetBrains Mono Variable',monospace;font-size:14px;color:rgba(40,116,178,.7);transition:transform .25s cubic-bezier(.22,1,.36,1);display:inline-block;margin-left:8px}
 .mob-dd-wrap.open .mob-dd-arr{transform:rotate(45deg)}
@@ -113,7 +114,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(40,116,178,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(40,116,178,.14) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 40%,transparent 100%)}
 .hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 .hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(40,116,178,.7);margin-bottom:16px}
-.hero-title{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(3rem,8vw,6rem);font-weight:300;line-height:.95;letter-spacing:-.04em;margin-bottom:20px}
+.hero-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(3rem,8vw,6rem);font-weight:300;line-height:.95;letter-spacing:-.04em;margin-bottom:20px}
 .hero-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.7;max-width:520px}
 
 /* SECTIONS */
@@ -162,7 +163,7 @@ textarea.f-inp{resize:vertical;line-height:1.65;min-height:120px}
 .quick-card:hover{background:rgba(40,116,178,.12);border-color:rgba(40,116,178,.3)}
 .qc-icon{width:44px;height:44px;border-radius:10px;background:rgba(40,116,178,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .qc-label{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(40,116,178,.8);margin-bottom:8px}
-.qc-val{font-family:'Sora Variable',Sora,sans-serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px}
+.qc-val{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:15px;font-weight:400;color:#fff;margin-bottom:4px}
 .qc-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:12px;color:rgba(255,255,255,.35)}
 
 /* MIRA AVATAR */
@@ -239,6 +240,11 @@ html[dir="rtl"] #hero{text-align:right}
 .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
 .d4{transition-delay:.40s}.d5{transition-delay:.50s}.d6{transition-delay:.60s}
 
+/* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
+   glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
+
 /* ── Light sections — gradient texture ── */
 .sec-light{background:linear-gradient(160deg,#dce8f5 0%,#E8EEF4 55%,#d8e5f2 100%)}
 
@@ -266,7 +272,7 @@ html[dir="rtl"] #hero{text-align:right}
 <!-- NAV -->
 <nav id="nav">
   <a href="/ar/" class="nav-logo">
-    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px">Global</span>
+    <img src="/brand_assets/vorqa_amblem_white.png" alt="Vorqa Global" width="24" height="24" style="display:block;flex-shrink:0"><span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:#fff;margin-left:10px">VORQA</span><span style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-left:10px;border-left:1px solid rgba(255,255,255,.13);padding-left:10px">Global</span>
   </a>
   <div class="nav-links">
     <a href="/ar/" class="nav-link" style="color:rgba(255,255,255,.8)">الرئيسية</a>
@@ -320,7 +326,7 @@ html[dir="rtl"] #hero{text-align:right}
     <!-- LEFT: INFO + WHATSAPP + SOCIAL -->
     <div style="padding-top:40px">
       <div class="rv" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#E87722;margin-bottom:16px">§ 01 / تواصل معنا</div>
-      <h2 class="rv d1" style="font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:300;line-height:1.1;letter-spacing:-.03em;color:#0A2540;margin-bottom:12px">ابدأ مع <span style="color:#2874B2;font-weight:500">ميرا.</span></h2>
+      <h2 class="rv d1 hdg-ar-fix" style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:300;line-height:1.1;letter-spacing:-.03em;color:#0A2540;margin-bottom:12px">ابدأ مع <span style="color:#2874B2;font-weight:500">ميرا.</span></h2>
       <p class="rv d2" style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:14px;color:#3A4858;line-height:1.75;margin-bottom:28px;max-width:420px">ميرا هي المساعدة الرقمية المدعومة بالذكاء الاصطناعي من VORQA Global. تفهم مشروعك وتجمع المعلومات اللازمة وتربطك بالفريق أو الخبير المناسب.</p>
 
       <!-- Mira avatar -->
@@ -330,7 +336,7 @@ html[dir="rtl"] #hero{text-align:right}
         </div>
         <div>
           <div style="font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:4px">Vorqa AI · Dijital Asistan</div>
-          <div style="font-family:'Sora Variable',Sora,sans-serif;font-size:20px;font-weight:400;color:#0A2540;letter-spacing:-.025em">Mira</div>
+          <div style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:20px;font-weight:400;color:#0A2540;letter-spacing:-.025em">Mira</div>
           <div style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:12px;color:rgba(58,72,88,.55);margin-top:2px;line-height:1.5">تفهم مشروعك،<br>وتربطك بالفريق المناسب.</div>
         </div>
       </div>
@@ -379,7 +385,7 @@ html[dir="rtl"] #hero{text-align:right}
     <!-- RIGHT: FORM -->
     <div class="rv d2" style="background:#fff;border-radius:12px;padding:40px;box-shadow:0 8px 40px rgba(10,37,64,.1)">
       <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#E87722;margin-bottom:8px">§ 02 / أرسل رسالة</div>
-      <h3 style="font-family:'Sora Variable',Sora,sans-serif;font-size:22px;font-weight:400;color:#0A2540;margin-bottom:28px;letter-spacing:-.02em">استفسارات العروض والمشاريع</h3>
+      <h3 class="hdg-ar-fix" style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:22px;font-weight:400;color:#0A2540;margin-bottom:28px;letter-spacing:-.02em">استفسارات العروض والمشاريع</h3>
       <form id="contact-form" style="display:flex;flex-direction:column;gap:16px" action="https://formspree.io/f/xkodlyby" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div><label class="f-lbl">الاسم الكامل</label><input type="text" name="name" class="f-inp" placeholder="اسمك الكامل" required=""></div>
@@ -557,7 +563,7 @@ const T={
   "wa.btn": "Write on WhatsApp",
   "soc.title": "Social Media",
   "form.tag": "§ 02 / Send a Message",
-  "form.title": "Quote &amp; project enquiries",
+  "form.title": "Quote & project enquiries",
   "form.name.lbl": "Full Name",
   "form.name.ph": "Your Name",
   "form.company.lbl": "Company",
