@@ -1471,15 +1471,29 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
     window.__lenis = lenis;
   }
 
-  /* §2 — Hero heading: split into characters, staggered entrance */
+  /* §2 — Hero heading: split into characters, staggered entrance.
+     Arabic is cursive — splitting into chars breaks letter joining
+     (e.g. "التوريد" fragments into disconnected glyphs), so Arabic
+     splits at word level only; TR/EN keep the char-level stagger. */
   var heroH1 = document.querySelector('.hero-h1');
-  if(heroH1 && !reduceMotion && window.SplitType && window.gsap){
+  function applyHeroSplit(lang){
+    if(!heroH1 || reduceMotion || !window.SplitType || !window.gsap) return;
     try{
-      var split = new SplitType(heroH1, { types: 'words,chars' });
-      gsap.set(split.chars, { opacity: 0, y: 18 });
-      gsap.to(split.chars, { opacity: 1, y: 0, duration: .7, stagger: .018, ease: 'power3.out', delay: 1.1 });
+      /* No heroSplit.revert() here: setLang() already replaced heroH1's
+         innerHTML with fresh, unwrapped text for the new language before
+         calling this hook, so the previous split's wrapper spans are
+         already gone. Calling revert() at this point would instead
+         restore SplitType's OWN cached pre-split HTML from the previous
+         language, clobbering the text setLang just set. */
+      var isAr = lang === 'ar';
+      var heroSplit = new SplitType(heroH1, { types: isAr ? 'words' : 'words,chars' });
+      var targets = isAr ? heroSplit.words : heroSplit.chars;
+      gsap.set(targets, { opacity: 0, y: 18 });
+      gsap.to(targets, { opacity: 1, y: 0, duration: .7, stagger: isAr ? .05 : .018, ease: 'power3.out', delay: 1.1 });
     }catch(e){}
   }
+  applyHeroSplit(document.documentElement.lang);
+  window.__prjRelang = function(lang){ applyHeroSplit(lang); };
 
   /* §2 — Hero: slight scale + fade as it scrolls away (parallax depth) */
   var heroSec = document.querySelector('#hero');
