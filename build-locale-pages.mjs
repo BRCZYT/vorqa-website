@@ -122,13 +122,17 @@ for (const file of Object.keys(SLUGS)) {
       } catch (e) { /* leave non-JSON scripts alone */ }
     });
 
-    // Force setLang(lang) once (fires window.__prjRelang etc.); drop auto-detect + click-binding lines
+    // Force setLang(lang) once (fires window.__prjRelang etc.); drop auto-detect + click-binding lines.
+    // Source files use two different codegen styles for this block (spaced/multi-line `_initLang`
+    // in index.html vs compact `_l` in akademi.html/iletisim.html) — match both, otherwise the
+    // auto-detect line survives into the generated static page and overrides the correct baked-in
+    // lang/dir attributes client-side based on stale localStorage or the visitor's browser locale.
     $('script').each((_, el) => {
       const code = $(el).html();
       if (code && code.includes('const T = {') && code.includes('function setLang')) {
         let newCode = code
-          .replace(/const _initLang[\s\S]*?setLang\(_initLang\);\s*/, `setLang('${lang}');\n`)
-          .replace(/document\.querySelectorAll\('\.l-btn, \.mob-l-btn'\)\.forEach\(b => \{\s*b\.addEventListener\('click', \(\) => setLang\(b\.dataset\.lang\)\);\s*\}\);\s*/, '');
+          .replace(/const _(?:initLang|l)\s*=\s*localStorage\.getItem\('vorqa-lang'\)[\s\S]*?setLang\(_(?:initLang|l)\);\s*/, `setLang('${lang}');\n`)
+          .replace(/document\.querySelectorAll\('\.l-btn,\s*\.mob-l-btn'\)\.forEach\(b\s*=>\s*\{?\s*b\.addEventListener\('click',\s*\(\)\s*=>\s*setLang\(b\.dataset\.lang\)\);?\s*\}?\);\s*/, '');
         $(el).text(newCode);
       }
     });
