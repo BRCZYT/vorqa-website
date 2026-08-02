@@ -216,7 +216,14 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
 /* ── Earth background photo — earth stays right (never mirrored), text sits over the dark left ── */
 .hero-earth-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero-earth-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;opacity:.9}
+/* The globe is cropped to the bottom-right corner, not an isolated centered
+   sphere, so a literal 360deg spin would just look like a rectangular photo
+   card rotating (edges swinging into view). A slow drift reads as "the
+   earth turning" without that artifact. Disabled entirely under
+   prefers-reduced-motion. */
+.hero-earth-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;opacity:.9;transform:scale(1.05);animation:earthDrift 100s ease-in-out infinite alternate}
+@keyframes earthDrift{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.1) translate(-1.5%,-1%)}}
+@media(prefers-reduced-motion:reduce){.hero-earth-bg img{animation:none}}
 .hero-earth-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(to right,rgba(5,23,40,.96) 0%,rgba(5,23,40,.88) 32%,rgba(5,23,40,.5) 55%,rgba(5,23,40,.1) 75%,transparent 100%),
              linear-gradient(to top,rgba(5,23,40,.7) 0%,transparent 22%)}

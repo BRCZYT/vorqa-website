@@ -213,16 +213,31 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
 /* ── Earth background photo — earth stays right (never mirrored), text sits over the dark left ── */
 .hero-earth-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero-earth-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;opacity:.9}
+/* The globe is cropped to the bottom-right corner, not an isolated centered
+   sphere, so a literal 360deg spin would just look like a rectangular photo
+   card rotating (edges swinging into view). A slow drift reads as "the
+   earth turning" without that artifact. Disabled entirely under
+   prefers-reduced-motion. */
+.hero-earth-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;opacity:.9;transform:scale(1.05);animation:earthDrift 100s ease-in-out infinite alternate}
+@keyframes earthDrift{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.1) translate(-1.5%,-1%)}}
+@media(prefers-reduced-motion:reduce){.hero-earth-bg img{animation:none}}
 .hero-earth-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(to right,rgba(5,23,40,.96) 0%,rgba(5,23,40,.88) 32%,rgba(5,23,40,.5) 55%,rgba(5,23,40,.1) 75%,transparent 100%),
              linear-gradient(to top,rgba(5,23,40,.7) 0%,transparent 22%)}
 
-.hero-content-wrap{position:absolute;left:56px;bottom:150px;z-index:10;max-width:600px}
-.hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3px;color:rgba(40,116,178,.9);text-transform:uppercase;margin-bottom:10px;animation:fade-up .6s .8s both}
+/* Guaranteed clearance from the fixed nav regardless of zoom level or
+   content length — top-anchored, not vertically centered, so the first
+   line of the heading never creeps in behind #nav. */
+.hero-content-wrap{position:absolute;left:56px;top:clamp(110px,14vh,160px);z-index:10;max-width:600px}
 .hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.08;letter-spacing:-.03em;text-transform:uppercase;animation:fade-up .7s .9s both}
 .hero-sub{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(14px,1.2vw,16px);color:rgba(255,255,255,.6);line-height:1.7;max-width:480px;margin:16px 0 0;animation:fade-up .7s 1s both}
-.hero-h1 .accent{color:#E87722}
+/* Line-level differentiation for hero hierarchy: line1 keeps the base
+   Sora 700, accent (line2) adds italic + orange, line3 switches to
+   Manrope for contrast. Arabic keeps upright italic looks broken on
+   Arabic script, so it's reset back to normal under dir="rtl". */
+.hero-h1 .accent{color:#E87722;font-style:italic}
+.hero-h1 .line3{font-family:'Manrope Variable',Manrope,'Noto Sans Arabic Variable',sans-serif;font-weight:600;letter-spacing:-.01em}
+html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 
 /* ── Sector tabs ── */
 .sector-bar{position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;padding:16px 0 22px}
@@ -487,7 +502,7 @@ html[dir="rtl"] .f-lbl,html[dir="rtl"] .f-inp,html[dir="rtl"] select.f-inp{direc
 html[dir="rtl"] .btn-row{flex-direction:row-reverse}
 html[dir="rtl"] .mob-link:hover{transform:translateX(-6px)}
 html[dir="rtl"] .foot-inner{flex-direction:row-reverse}
-html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
+html[dir="rtl"] .hero-h1{direction:rtl}
 
 /* ══════════════════════════════════════════
    RESPONSIVE  ≤ 960px
@@ -529,11 +544,10 @@ html[dir="rtl"] .hero-eyebrow,html[dir="rtl"] .hero-h1{direction:rtl}
 ══════════════════════════════════════════ */
 @media(max-width:600px){
   #hero{padding-top:56px;padding-bottom:64px}
-  .hero-content-wrap{left:20px;max-width:calc(100% - 40px);bottom:180px}
+  .hero-content-wrap{left:20px;max-width:calc(100% - 40px);top:clamp(90px,16vh,130px)}
   .hero-earth-bg img{object-position:28% center}
   .hero-earth-overlay{background:linear-gradient(to right,rgba(5,23,40,.97) 0%,rgba(5,23,40,.9) 45%,rgba(5,23,40,.65) 70%,rgba(5,23,40,.3) 100%),linear-gradient(to top,rgba(5,23,40,.7) 0%,transparent 22%)}
   .hero-h1{font-size:clamp(1.7rem,8vw,2.3rem)}
-  .hero-eyebrow{font-size:8.5px;letter-spacing:2px}
 
   /* All major grids → 1 col */
   .pil-grid,.ind-grid,.st-grid,.spec-grid{grid-template-columns:1fr}
@@ -801,14 +815,9 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
   <div class="hero-earth-overlay" aria-hidden="true"></div>
 
   <div class="hero-content-wrap">
-    <p class="hero-eyebrow">// Ankara, Türkiye · Industrial Sourcing &amp; Project Supply Partner · MENA &amp; Africa</p>
-    <h1 class="hero-h1">INDUSTRIAL SOURCING.<br><span class="accent">PROJECT SUPPLY.</span><br>ONE ACCOUNTABLE PARTNER.</h1>
+    <h1 class="hero-h1"><span class="line1">INDUSTRIAL SOURCING</span><br><span class="accent">PROJECT SUPPLY</span><br><span class="line3">ONE ACCOUNTABLE PARTNER</span></h1>
     <p class="hero-sub">VORQA connects industrial requirements with qualified suppliers and specialized plant partners, managing technical, commercial and delivery coordination from request to destination.</p>
-    <div class="btn-row" style="justify-content:left;margin-top:26px;animation:fade-up .7s 1.05s both">
-      <a href="/en/contact/" class="btn-p" style="text-decoration:none">Request a Quote</a>
-      <a href="#industries" class="btn-g" style="text-decoration:none">Explore Our Capabilities</a>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;margin-top:24px;animation:fade-up .7s 1.1s both">
+    <div style="display:flex;align-items:center;gap:10px;margin-top:30px;animation:fade-up .7s 1.05s both">
       <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">What We Coordinate</span>
       <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5h14M10 1l5 4-5 4" stroke="rgba(40,116,178,.7)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </div>
@@ -1135,11 +1144,8 @@ const T = {
   "nav.contact": "İletişim",
   "mob.cta": "Teklif Al →",
   "ham.label": "Menüyü Aç",
-  "hero.eyebrow": "// Ankara, Türkiye · Endüstriyel Tedarik & Proje Koordinasyon Partneri · MENA & Afrika",
-  "hero.h1": "ENDÜSTRİYEL TEDARİK.<br><span class=\"accent\">PROJE TEDARİĞİ.</span><br>TEK MUHATAP PARTNER.",
+  "hero.h1": "<span class=\"line1\">ENDÜSTRİYEL TEDARİK</span><br><span class=\"accent\">PROJE TEDARİĞİ</span><br><span class=\"line3\">TEK MUHATAP PARTNER</span>",
   "hero.sub": "VORQA, endüstriyel ihtiyaçları doğrulanmış tedarikçiler ve uzman tesis partnerleriyle buluşturur; teknik, ticari ve teslimat koordinasyonunu talepten hedefe kadar yönetir.",
-  "hero.cta1": "Teklif Al",
-  "hero.cta2": "Yetkinliklerimizi Keşfedin",
   "hero.eco": "Koordine Ettiklerimiz",
   "hero.scroll": "Kaydır",
   "tab.1": "Beton Santralleri",
@@ -1207,11 +1213,8 @@ const T = {
   "nav.contact": "Contact",
   "mob.cta": "Request a Quote →",
   "ham.label": "Open Menu",
-  "hero.eyebrow": "// Ankara, Türkiye · Industrial Sourcing & Project Supply Partner · MENA & Africa",
-  "hero.h1": "INDUSTRIAL SOURCING.<br><span class=\"accent\">PROJECT SUPPLY.</span><br>ONE ACCOUNTABLE PARTNER.",
+  "hero.h1": "<span class=\"line1\">INDUSTRIAL SOURCING</span><br><span class=\"accent\">PROJECT SUPPLY</span><br><span class=\"line3\">ONE ACCOUNTABLE PARTNER</span>",
   "hero.sub": "VORQA connects industrial requirements with qualified suppliers and specialized plant partners, managing technical, commercial and delivery coordination from request to destination.",
-  "hero.cta1": "Request a Quote",
-  "hero.cta2": "Explore Our Capabilities",
   "hero.eco": "What We Coordinate",
   "hero.scroll": "Scroll",
   "tab.1": "Concrete Plants",
@@ -1279,11 +1282,8 @@ const T = {
   "nav.contact": "تواصل معنا",
   "mob.cta": "اطلب عرض سعر ←",
   "ham.label": "افتح القائمة",
-  "hero.eyebrow": "// أنقرة، تركيا · شريك التوريد الصناعي وتنسيق المشاريع · الشرق الأوسط وأفريقيا",
-  "hero.h1": "التوريد الصناعي.<br><span class=\"accent\">تزويد المشاريع.</span><br>شريك واحد مسؤول.",
+  "hero.h1": "<span class=\"line1\">التوريد الصناعي</span><br><span class=\"accent\">تزويد المشاريع</span><br><span class=\"line3\">شريك واحد مسؤول</span>",
   "hero.sub": "تربط VORQA المتطلبات الصناعية بموردين مؤهلين وشركاء تصنيع متخصصين، وتدير التنسيق الفني والتجاري وتنسيق التسليم من الطلب حتى الوجهة.",
-  "hero.cta1": "اطلب عرض سعر",
-  "hero.cta2": "استكشف قدراتنا",
   "hero.eco": "ما ننسقه",
   "hero.scroll": "مرر للأسفل",
   "tab.1": "محطات الخرسانة",
