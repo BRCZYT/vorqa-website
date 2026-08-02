@@ -748,7 +748,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
     <a href="#" class="nav-link" style="color:rgba(255,255,255,.8)" data-i18n="nav.home">Home</a>
     <a href="akademi.html" class="nav-link" style="color:rgba(255,255,255,.8)" data-i18n="dd.academy">Academy</a>
     <a href="iletisim.html" class="nav-link" style="color:rgba(255,255,255,.8)" data-i18n="nav.contact">Contact</a>
-    <a href="iletisim.html" class="btn-p" style="font-size:10px;padding:10px 20px;text-decoration:none;display:inline-flex;align-items:center;gap:7px" data-i18n="mob.cta">Request a Quote →</a>
   </div>
   <div class="lang-sw" id="lang-sw">
     <button class="l-btn active" data-lang="tr">TR</button>
@@ -868,16 +867,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 
-<!-- ════════════════════════════════════
-     TICKER
-════════════════════════════════════ -->
-<div class="ticker-outer" aria-hidden="true">
-  <div class="ticker-inner" id="ticker-inner">
-    <div class="ticker-item"><span data-i18n="tick.1">Concrete Plants</span><div class="ticker-dot"></div><span data-i18n="tick.2">Complete Galvanizing</span><div class="ticker-dot"></div><span data-i18n="tick.3">Waste-to-Energy</span><div class="ticker-dot"></div><span data-i18n="tick.4">Crushing &amp; Screening</span><div class="ticker-dot"></div><span data-i18n="tick.5">Industrial Sourcing</span><div class="ticker-dot"></div><span>Vorqa Global</span><div class="ticker-dot"></div></div>
-    <div class="ticker-item"><span data-i18n="tick.1">Concrete Plants</span><div class="ticker-dot"></div><span data-i18n="tick.2">Complete Galvanizing</span><div class="ticker-dot"></div><span data-i18n="tick.3">Waste-to-Energy</span><div class="ticker-dot"></div><span data-i18n="tick.4">Crushing &amp; Screening</span><div class="ticker-dot"></div><span data-i18n="tick.5">Industrial Sourcing</span><div class="ticker-dot"></div><span>Vorqa Global</span><div class="ticker-dot"></div></div>
-  </div>
-</div>
-
 
 <!-- ════════════════════════════════════
      ABOUT  (light)
@@ -892,24 +881,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
     </div>
   </div>
 </section>
-
-<!-- ════════════════════════════════════
-     STATS (verified only)
-════════════════════════════════════ -->
-<div class="stats-band">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="st-grid">
-      <div style="padding-left:20px;border-left:2px solid rgba(40,116,178,.45)" class="rv d1">
-        <div class="stat-n"><span class="counter" data-target="1000">0</span><sup>+</sup></div>
-        <div class="stat-lbl" data-i18n="s1.lbl">Verified Supplier Network</div>
-      </div>
-      <div style="padding-left:20px;border-left:2px solid rgba(40,116,178,.45)" class="rv d2">
-        <div class="stat-n" style="font-size:clamp(1.4rem,2.6vw,2rem)" data-i18n="s2.val">MENA &amp; Africa</div>
-        <div class="stat-lbl" data-i18n="s2.lbl">Target Markets</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ════════════════════════════════════
      SERVICES
@@ -1006,27 +977,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 
   </div><!-- /co-hx-panel -->
 </section>
-
-<!-- ════════════════════════════════════
-     INDUSTRIAL SUPPLY GROUPS
-════════════════════════════════════ -->
-<div class="block-sep-light"></div>
-<section id="supply-groups" class="sec sec-light">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="rv" style="margin-bottom:24px"><div class="ind-sub-label" data-i18n="sg.label">Industrial Supply Groups</div></div>
-    <div class="sg-grid rv d1">
-      <div class="sg-chip" data-i18n="sg1">Industrial Spare Parts &amp; MRO</div>
-      <div class="sg-chip" data-i18n="sg2">Technical Equipment Sourcing</div>
-      <div class="sg-chip" data-i18n="sg3">Project-Based Supply Packages</div>
-      <div class="sg-chip" data-i18n="sg4">Electrical, Automation &amp; Instrumentation Components</div>
-      <div class="sg-chip" data-i18n="sg5">Industrial Piping, Valves &amp; Flow-Control Components</div>
-      <div class="sg-chip" data-i18n="sg6">Insulation, HVAC &amp; Project Support Materials</div>
-      <div class="sg-chip" data-i18n="sg7">Custom Fabrication &amp; Project-Specific Requirements</div>
-    </div>
-    <p class="sg-note rv d2" data-i18n="sg.note">These groups are not a closed product catalog — VORQA manages manufacturer, distributor, OEM and technically verified equivalent channels on request.</p>
-  </div>
-</section>
-
 
 <!-- ════════════════════════════════════
      HOW WE WORK
@@ -1251,19 +1201,15 @@ const T = {
   "tab.3": "Atık-Enerji Dönüşümü",
   "tab.4": "Kırma & Eleme",
   "tab.5": "Endüstriyel Tedarik",
-  "tick.1": "Beton Santralleri",
-  "tick.2": "Komple Galvaniz Tesisleri",
-  "tick.3": "Atık-Enerji Dönüşümü",
-  "tick.4": "Kırma & Eleme",
-  "tick.5": "Endüstriyel Tedarik",
+
+
+
+
   "about.num": "§ 01 / VORQA Hakkında",
   "about.p1": "VORQA; müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — komisyoncu ya da genel bir trading firması değildir. Teknik ihtiyacı netleştirir, doğru üretici veya uzman tesis partnerini seçer, teknik ve ticari teklifleri karşılaştırır; çok tedarikçili proje paketlerini talepten teslimata kadar koordine eder.",
   "about.p2": "Her öneri, 1.000+ doğrulanmış Türk tedarikçiden oluşan ağımızdan geçer; dağınık ve riskli bir endüstriyel tedarik zincirini — netleştirmeden üretim takibine, dokümantasyona ve teslimata kadar — tek ve sorumlu bir temas noktasına dönüştürür.",
   "btn.contact": "Bize Ulaşın",
-  "s1.lbl": "Doğrulanmış Tedarikçi Ağı",
-  "s2.val": "MENA & Afrika",
-  "s2.lbl": "Hedef Pazarlar",
-  "svc.num": "§ 02 / Hizmetler",
+  "svc.num": "§ 02 / Ne Yapıyoruz",
   "svc.title": "Projenizi nasıl destekliyoruz.",
   "svc1.num": "01",
   "svc1.title": "Endüstriyel Tedarik",
@@ -1277,7 +1223,7 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "Uluslararası Teslimat Koordinasyonu",
   "svc4.body": "Üretim takibi, konsolidasyon, ihracat dokümantasyonu ve teslimat planlaması hedefe kadar koordine edilir.",
-  "ind.num": "§ 03 / Sektörler & Tedarik Grupları",
+  "ind.num": "§ 03 / Sektörler",
   "ind.partners.label": "Partner Tesis Çözümleri",
   "co.partner.tag": "Partner Tesis Çözümü",
   "btn.explore": "Teklif Al",
@@ -1289,15 +1235,6 @@ const T = {
   "co3.desc": "Uzman üretici partner üzerinden sunulan, talepten teslimata koordine edilen komple atık-enerji tesisi çözümleri.",
   "co4.tag": "Kırma & Eleme Tesisleri",
   "co4.desc": "Uzman üretici partner üzerinden proje ihtiyacına uygun eşleştirilen komple kırma-eleme tesisi çözümleri.",
-  "sg.label": "Endüstriyel Tedarik Grupları",
-  "sg1": "Endüstriyel Yedek Parça & MRO",
-  "sg2": "Teknik Ekipman Tedariği",
-  "sg3": "Proje Bazlı Tedarik Paketleri",
-  "sg4": "Elektrik, Otomasyon & Enstrümantasyon Bileşenleri",
-  "sg5": "Endüstriyel Boru Hattı, Vana & Akış Kontrol Bileşenleri",
-  "sg6": "Yalıtım, HVAC & Proje Destek Malzemeleri",
-  "sg7": "Özel İmalat & Projeye Özel Gereksinimler",
-  "sg.note": "Bu gruplar kapalı bir ürün kataloğu değildir — VORQA, talebe göre üretici, distribütör, OEM ve teknik olarak doğrulanmış muadil kanalları yönetir.",
   "how.num": "§ 04 / Nasıl Çalışırız",
   "how.title": "Talepten teslime, tek muhatap.",
   "how1.num": "01",
@@ -1340,19 +1277,15 @@ const T = {
   "tab.3": "Waste-to-Energy",
   "tab.4": "Crushing & Screening",
   "tab.5": "Industrial Sourcing",
-  "tick.1": "Concrete Plants",
-  "tick.2": "Complete Galvanizing",
-  "tick.3": "Waste-to-Energy",
-  "tick.4": "Crushing & Screening",
-  "tick.5": "Industrial Sourcing",
+
+
+
+
   "about.num": "§ 01 / About VORQA",
   "about.p1": "VORQA is a customer-side industrial sourcing, project supply and coordination partner — not a broker, not a general trading firm. We clarify technical requirements, select the right manufacturer or specialized plant partner, compare technical and commercial offers, and coordinate multi-vendor project packages from request to delivery.",
   "about.p2": "Every recommendation runs through a network of 1,000+ verified Turkish suppliers, turning a scattered and high-risk industrial supply chain into a single, accountable point of contact — from clarification through production follow-up, documentation and delivery.",
   "btn.contact": "Contact Us",
-  "s1.lbl": "Verified Supplier Network",
-  "s2.val": "MENA & Africa",
-  "s2.lbl": "Target Markets",
-  "svc.num": "§ 02 / Services",
+  "svc.num": "§ 02 / What We Do",
   "svc.title": "How we support your project.",
   "svc1.num": "01",
   "svc1.title": "Industrial Sourcing",
@@ -1366,7 +1299,7 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "International Delivery Coordination",
   "svc4.body": "Production follow-up, consolidation, export documentation and delivery planning coordinated to destination.",
-  "ind.num": "§ 03 / Industries & Supply Groups",
+  "ind.num": "§ 03 / Industries",
   "ind.partners.label": "Partner Plant Solutions",
   "co.partner.tag": "Partner Plant Solution",
   "btn.explore": "Request a Quote",
@@ -1378,15 +1311,6 @@ const T = {
   "co3.desc": "Complete waste-to-energy plant solutions delivered through a specialized manufacturing partner, coordinated from request to delivery.",
   "co4.tag": "Crushing & Screening Plants",
   "co4.desc": "Complete crushing and screening plant solutions matched to project requirements through a specialized manufacturing partner.",
-  "sg.label": "Industrial Supply Groups",
-  "sg1": "Industrial Spare Parts & MRO",
-  "sg2": "Technical Equipment Sourcing",
-  "sg3": "Project-Based Supply Packages",
-  "sg4": "Electrical, Automation & Instrumentation Components",
-  "sg5": "Industrial Piping, Valves & Flow-Control Components",
-  "sg6": "Insulation, HVAC & Project Support Materials",
-  "sg7": "Custom Fabrication & Project-Specific Requirements",
-  "sg.note": "These groups are not a closed product catalog — VORQA manages manufacturer, distributor, OEM and technically verified equivalent channels on request.",
   "how.num": "§ 04 / How We Work",
   "how.title": "From request to delivery, one accountable partner.",
   "how1.num": "01",
@@ -1429,19 +1353,15 @@ const T = {
   "tab.3": "تحويل النفايات إلى طاقة",
   "tab.4": "التكسير والغربلة",
   "tab.5": "التوريد الصناعي",
-  "tick.1": "محطات الخرسانة",
-  "tick.2": "منشآت الجلفنة الكاملة",
-  "tick.3": "تحويل النفايات إلى طاقة",
-  "tick.4": "التكسير والغربلة",
-  "tick.5": "التوريد الصناعي",
+
+
+
+
   "about.num": "§ 01 / عن VORQA",
   "about.p1": "VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل — وليست وسيطاً أو شركة تجارة عامة. نقوم بتوضيح المتطلبات الفنية، واختيار المصنّع أو شريك المنشأة المتخصص المناسب، ومقارنة العروض الفنية والتجارية، وتنسيق حزم المشاريع متعددة الموردين من الطلب حتى التسليم.",
   "about.p2": "تمر كل توصية عبر شبكتنا المكوّنة من أكثر من 1000 مورّد تركي معتمد، لتحويل سلسلة توريد صناعية متفرقة وعالية المخاطر إلى نقطة اتصال واحدة مسؤولة — من التوضيح إلى متابعة الإنتاج والتوثيق والتسليم.",
   "btn.contact": "تواصل معنا",
-  "s1.lbl": "شبكة موردين معتمدة",
-  "s2.val": "الشرق الأوسط وأفريقيا",
-  "s2.lbl": "الأسواق المستهدفة",
-  "svc.num": "§ 02 / خدماتنا",
+  "svc.num": "§ 02 / ماذا نقدّم",
   "svc.title": "كيف ندعم مشروعك",
   "svc1.num": "01",
   "svc1.title": "التوريد الصناعي",
@@ -1455,7 +1375,7 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "تنسيق التسليم الدولي",
   "svc4.body": "متابعة الإنتاج والتجميع ووثائق التصدير وتخطيط التسليم، منسقة حتى الوجهة.",
-  "ind.num": "§ 03 / القطاعات ومجموعات التوريد",
+  "ind.num": "§ 03 / القطاعات",
   "ind.partners.label": "حلول المنشآت الشريكة",
   "co.partner.tag": "حل منشأة شريكة",
   "btn.explore": "اطلب عرض سعر",
@@ -1467,15 +1387,6 @@ const T = {
   "co3.desc": "حلول منشآت تحويل النفايات إلى طاقة الكاملة، تُقدّم عبر شريك تصنيع متخصص وتُنسّق من الطلب حتى التسليم.",
   "co4.tag": "منشآت التكسير والغربلة",
   "co4.desc": "حلول منشآت تكسير وغربلة كاملة تُطابَق مع متطلبات المشروع عبر شريك تصنيع متخصص.",
-  "sg.label": "مجموعات التوريد الصناعي",
-  "sg1": "قطع الغيار الصناعية وصيانة المعدات (MRO)",
-  "sg2": "توريد المعدات التقنية",
-  "sg3": "حزم التوريد حسب المشروع",
-  "sg4": "مكونات الكهرباء والأتمتة والقياس والتحكم",
-  "sg5": "مكونات الأنابيب الصناعية والصمامات والتحكم بالتدفق",
-  "sg6": "مواد العزل والتكييف ودعم المشاريع",
-  "sg7": "التصنيع المخصص ومتطلبات المشاريع الخاصة",
-  "sg.note": "هذه المجموعات ليست كتالوج منتجات مغلقاً — تدير VORQA قنوات المصنّعين والموزّعين والمعدات الأصلية والبدائل الموثقة فنياً حسب الطلب.",
   "how.num": "§ 04 / كيف نعمل",
   "how.title": "من الطلب حتى التسليم، شريك واحد مسؤول.",
   "how1.num": "01",
