@@ -18,7 +18,7 @@ const MIME = {
 };
 
 const server = http.createServer((req, res) => {
-  let url = req.url.split('?')[0];
+  let url = decodeURIComponent(req.url.split('?')[0]);
   if (url.endsWith('/')) url += 'index.html';
 
   const filePath = path.join(__dirname, url);
