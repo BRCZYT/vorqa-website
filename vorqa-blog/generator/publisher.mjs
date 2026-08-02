@@ -193,8 +193,8 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
     </div>
   </a>
   <div class="nav-links">
+    <a href="../index.html" class="nav-link">Ana Sayfa</a>
     <a href="../akademi.html" class="nav-link active">Akademi</a>
-    <a href="../${sector_page}" class="nav-link">${category_label}</a>
     <a href="../iletisim.html" class="nav-link">İletişim</a>
   </div>
   <div class="lang-sw" id="lang-sw">

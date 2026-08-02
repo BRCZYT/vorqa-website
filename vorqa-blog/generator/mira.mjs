@@ -40,12 +40,15 @@ function repairAndParse(raw) {
   return JSON.parse(repaired);
 }
 
+// Site reduced to Home/Academy/Contact (docs/VORQA_Global_Website_Revision_Brief_for_Claude.md) —
+// there are no more standalone sector pages, so every sector links back to Home's
+// Industries & Supply Groups section. Labels dropped the "Vorqa X" fake-subsidiary framing.
 const SECTOR_META = {
-  galvaniz: { label: 'Vorqa Galvaniz', page: 'galvaniz.html' },
-  beton:    { label: 'Vorqa Beton',    page: 'beton.html' },
-  enerji:   { label: 'Vorqa Enerji',   page: 'enerji.html' },
-  tedarik:  { label: 'Vorqa Tedarik',  page: 'tedarik-zinciri.html' },
-  makina:   { label: 'Vorqa Makina',   page: 'atik-donusum.html' }
+  galvaniz: { label: 'Complete Galvanizing', page: 'index.html#industries' },
+  beton:    { label: 'Concrete',             page: 'index.html#industries' },
+  enerji:   { label: 'Waste-to-Energy',      page: 'index.html#industries' },
+  tedarik:  { label: 'Industrial Supply',    page: 'index.html#industries' },
+  makina:   { label: 'Custom Fabrication',   page: 'index.html#industries' }
 };
 
 export async function generateDraft(sector, news, papers) {
