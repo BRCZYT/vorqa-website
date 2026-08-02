@@ -153,8 +153,8 @@ for (const file of Object.keys(SLUGS)) {
     $('a[href]').each((_, elA) => {
       const href = $(elA).attr('href');
       if (!href) return;
-      if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-        return; // same-page anchor, external, or contact link: leave untouched
+      if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('/')) {
+        return; // same-page anchor, external, contact link, or already-absolute site path: leave untouched
       }
       const [bare, hash] = href.split('#');
       if (bare === '' || bare === 'index.html') {
