@@ -76,7 +76,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .pl-corner-br{bottom:32px;right:32px;border-width:0 1px 1px 0}
 
 .pl-stage{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;gap:24px}
-.pl-letters-row{display:flex;align-items:center;gap:clamp(10px,2vw,24px)}
+/* Brand letter sequence must stay V-O-R-Q-A regardless of page language —
+   without this, an RTL page's inherited direction reverses flex item order
+   to A-Q-R-O-V. */
+.pl-letters-row{display:flex;align-items:center;gap:clamp(10px,2vw,24px);direction:ltr}
 .pl-seq-letter{opacity:0;transform:translateY(10px);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
 .pl-seq-letter.in{opacity:1;transform:translateY(0)}
 .pl-seq-letter.exit{opacity:0;transform:scale(1.1) translateY(-6px);transition:opacity .4s ease-in,transform .4s ease-in}
@@ -893,7 +896,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 
 <!-- Mobile full-screen nav -->
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px">Vorqa Global</div>
+  <div dir="ltr" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px">Vorqa Global</div>
   <a href="#" class="mob-link" onclick="closeMobNav()">Ana Sayfa</a>
   <div class="mob-sep"></div>
   <a href="/tr/akademi/" class="mob-link" onclick="closeMobNav()">Akademi</a>
@@ -1070,7 +1073,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 ════════════════════════════════════ -->
 <div class="block-sep-light"></div>
 <section id="about" class="sec" style="background:var(--bg2)">
-  <div class="about-mark">VORQA</div>
+  <div class="about-mark" dir="ltr">VORQA</div>
   <div style="max-width:1160px;margin:0 auto" class="about-grid">
     <div>
       <div style="margin-bottom:28px"><div class="sec-num rv">§ 04 / VORQA Hakkında</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
