@@ -347,13 +347,7 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
    No pin/ScrollTrigger yet — the vitrine flows on its own via CSS
    keyframes, independent of scroll position.
 ══════════════════════════════════════════ */
-.showroom-grid{display:grid;grid-template-columns:2fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
-.showroom-copy p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:1rem;line-height:1.65;max-width:56ch;margin-top:18px}
-.showroom-stats{display:flex;gap:clamp(28px,4vw,52px);margin-top:32px;flex-wrap:wrap}
-.showroom-stats .item{border-left:2px solid var(--orange);padding-left:14px}
-html[dir="rtl"] .showroom-stats .item{border-left:none;border-right:2px solid var(--orange);padding-left:0;padding-right:14px}
-.showroom-stats .k{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:1.7rem;color:var(--ink);line-height:1}
-.showroom-stats .v{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--steel);margin-top:4px}
+.showroom-grid{display:grid;grid-template-columns:2fr 1fr;gap:clamp(30px,5vw,70px);align-items:start}
 
 .showroom-vitrine{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:min(72vh,620px);overflow:hidden;position:relative;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);
@@ -986,20 +980,44 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 <!-- ════════════════════════════════════
-     SHOWROOM  (light-alt --bg2) — §01, copy + auto-scrolling vitrine
-     (static for now — pin/ScrollTrigger comes in a later pass)
+     SHOWROOM + HOW WE WORK — merged, pinned scene. §01.
+     Left 2/3: How We Work's spine (unchanged). Right 1/3: the
+     showroom vitrine (untouched). Structure + pin only in this pass —
+     step-by-step reveal, mobile pin-disable, RTL mirror and
+     reduced-motion guards land in later passes.
 ════════════════════════════════════ -->
-<section id="showroom" class="sec" style="background:var(--bg2)">
+<section id="showroom-how" class="sec" style="background:var(--bg2)">
   <div class="hero-grid-bg" style="opacity:.05"></div>
   <div class="showroom-grid" style="max-width:1160px;margin:0 auto;position:relative">
-    <div class="showroom-copy">
-      <div class="rv"><div class="sec-num">§ 01 / Vitrin</div></div>
-      <div class="rv d1"><h2 class="sec-title-l">Her çözüm, tek vitrin.</h2></div>
-      <p class="rv d2">VORQA'nın partner ağı üzerinden tedarik ettiği ve koordine ettiği tesis, ekipman ve ürün gruplarından canlı bir kesit.</p>
-      <div class="showroom-stats rv d3">
-        <div class="item"><div class="k">✓</div><div class="v">Doğrulanmış ağ</div></div>
-        <div class="item"><div class="k">✓</div><div class="v">Çok sektörlü kapsam</div></div>
-        <div class="item"><div class="k">MENA</div><div class="v">&amp; Afrika kapsamı</div></div>
+    <div class="showroom-how-col">
+      <div class="rv"><div class="sec-num">§ 01 / Nasıl Çalışırız</div></div>
+      <div class="rv d1"><h2 class="sec-title-l">Talepten teslime, tek muhatap.</h2></div>
+      <div class="spine">
+        <div class="step step-r rv d1">
+          <div class="step-empty"></div>
+          <div class="step-c"><span class="tag">01</span><h3>Talep İncelemesi</h3><p>Proje ihtiyacınızı ve teknik kapsamı birlikte inceleriz.</p></div>
+          <div class="step-node"><span class="n">1</span></div>
+        </div>
+        <div class="step step-l rv d2">
+          <div class="step-c"><span class="tag">02</span><h3>Teknik Netleştirme</h3><p>Herhangi bir teklif karşılaştırılmadan önce açık sorular, şartname ve kısıtlar netleştirilir.</p></div>
+          <div class="step-empty"></div>
+          <div class="step-node"><span class="n">2</span></div>
+        </div>
+        <div class="step step-r rv d3">
+          <div class="step-empty"></div>
+          <div class="step-c"><span class="tag">03</span><h3>Tedarikçi / Partner Seçimi</h3><p>Doğrulanmış ağımızdan doğru üretici, tedarikçi veya uzman tesis partneri eşleştirilir.</p></div>
+          <div class="step-node"><span class="n">3</span></div>
+        </div>
+        <div class="step step-l rv d4">
+          <div class="step-c"><span class="tag">04</span><h3>Teklif &amp; Sipariş Koordinasyonu</h3><p>Teknik ve ticari teklifler karşılaştırılır, tek koordine edilen siparişte birleştirilir.</p></div>
+          <div class="step-empty"></div>
+          <div class="step-node"><span class="n">4</span></div>
+        </div>
+        <div class="step step-r rv d5">
+          <div class="step-empty"></div>
+          <div class="step-c"><span class="tag">05</span><h3>Üretim, Dokümantasyon &amp; Teslimat Takibi</h3><p>Üretim, kalite dokümantasyonu, lojistik ve teslimat hedefe ulaşana kadar takip edilir.</p></div>
+          <div class="step-node done"><span class="n">✓</span></div>
+        </div>
       </div>
     </div>
     <div class="showroom-vitrine rv d2">
@@ -1031,53 +1049,13 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </script>
 
 <!-- ════════════════════════════════════
-     HOW WE WORK  (light --bg) — §02, vertical spine + zigzag
-════════════════════════════════════ -->
-<div class="block-sep-light"></div>
-<section id="how" class="sec" style="background:var(--bg)">
-  <div style="max-width:1160px;margin:0 auto">
-    <div class="g2" style="margin-bottom:0">
-      <div class="rv"><div class="sec-num">§ 02 / Nasıl Çalışırız</div></div>
-      <div class="rv d1"><h2 class="sec-title-l">Talepten teslime, tek muhatap.</h2></div>
-    </div>
-    <div class="spine">
-      <div class="step step-r rv d1">
-        <div class="step-empty"></div>
-        <div class="step-c"><span class="tag">01</span><h3>Talep İncelemesi</h3><p>Proje ihtiyacınızı ve teknik kapsamı birlikte inceleriz.</p></div>
-        <div class="step-node"><span class="n">1</span></div>
-      </div>
-      <div class="step step-l rv d2">
-        <div class="step-c"><span class="tag">02</span><h3>Teknik Netleştirme</h3><p>Herhangi bir teklif karşılaştırılmadan önce açık sorular, şartname ve kısıtlar netleştirilir.</p></div>
-        <div class="step-empty"></div>
-        <div class="step-node"><span class="n">2</span></div>
-      </div>
-      <div class="step step-r rv d3">
-        <div class="step-empty"></div>
-        <div class="step-c"><span class="tag">03</span><h3>Tedarikçi / Partner Seçimi</h3><p>Doğrulanmış ağımızdan doğru üretici, tedarikçi veya uzman tesis partneri eşleştirilir.</p></div>
-        <div class="step-node"><span class="n">3</span></div>
-      </div>
-      <div class="step step-l rv d4">
-        <div class="step-c"><span class="tag">04</span><h3>Teklif &amp; Sipariş Koordinasyonu</h3><p>Teknik ve ticari teklifler karşılaştırılır, tek koordine edilen siparişte birleştirilir.</p></div>
-        <div class="step-empty"></div>
-        <div class="step-node"><span class="n">4</span></div>
-      </div>
-      <div class="step step-r rv d5">
-        <div class="step-empty"></div>
-        <div class="step-c"><span class="tag">05</span><h3>Üretim, Dokümantasyon &amp; Teslimat Takibi</h3><p>Üretim, kalite dokümantasyonu, lojistik ve teslimat hedefe ulaşana kadar takip edilir.</p></div>
-        <div class="step-node done"><span class="n">✓</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
      WHAT WE DO  (light-alt --bg2) — §02, distinct tone, hollow big numbers
 ════════════════════════════════════ -->
 <div class="block-sep-light"></div>
 <section id="services" class="sec" style="background:var(--bg2)">
   <div style="max-width:1160px;margin:0 auto">
     <div class="g2" style="margin-bottom:0">
-      <div><div class="sec-num rv">§ 03 / Ne Yapıyoruz</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
+      <div><div class="sec-num rv">§ 02 / Ne Yapıyoruz</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
       <div class="rv d2"><h2 class="sec-title-l">Projenizi nasıl destekliyoruz.</h2></div>
     </div>
     <div class="wwd-rows">
@@ -1095,7 +1073,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 <div class="block-sep-light"></div>
 <section id="industries" class="sec" style="background:var(--bg);padding-left:0;padding-right:0">
   <div class="co-hx-header rv" style="max-width:1160px;margin:0 auto;padding-left:clamp(24px,5vw,80px);padding-right:clamp(24px,5vw,80px)">
-    <div class="sec-num">§ 04 / Sektörler</div>
+    <div class="sec-num">§ 03 / Sektörler</div>
   </div>
   <div style="max-width:1160px;margin:0 auto;padding:0 clamp(24px,5vw,80px) 28px" class="rv d1">
     <div class="ind-sub-label">Partner Tesis Çözümleri</div>
@@ -1153,7 +1131,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
   <div class="about-mark" dir="ltr">VORQA</div>
   <div style="max-width:1160px;margin:0 auto" class="about-grid">
     <div>
-      <div style="margin-bottom:28px"><div class="sec-num rv">§ 05 / VORQA Hakkında</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
+      <div style="margin-bottom:28px"><div class="sec-num rv">§ 04 / VORQA Hakkında</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
       <p class="intro-text-l rv d2">VORQA, müşteri tarafında çalışan bir teknik tedarik ve proje koordinasyon partneridir. Endüstriyel tedarik ve proje yönetiminde 15+ yıllık birleşik tecrübeye sahip mühendisler tarafından kurulmuştur. Teknik gereksinimleri netleştirir, doğru üreticiyi veya uzman tesis partnerini seçer, teklifleri karşılaştırır ve çok sektörlü proje paketlerini — netleştirmeden üretim takibine, dokümantasyon ve teslimata kadar — koordine ederiz.</p>
       <div class="btn-row rv d4" style="margin-top:36px">
         <a href="/tr/iletisim/" class="btn-g" style="text-decoration:none">Bize Ulaşın</a>
@@ -1356,7 +1334,7 @@ const T = {
 
 
 
-  "about.num": "§ 05 / VORQA Hakkında",
+  "about.num": "§ 04 / VORQA Hakkında",
   "about.p1": "VORQA, müşteri tarafında çalışan bir teknik tedarik ve proje koordinasyon partneridir. Endüstriyel tedarik ve proje yönetiminde 15+ yıllık birleşik tecrübeye sahip mühendisler tarafından kurulmuştur. Teknik gereksinimleri netleştirir, doğru üreticiyi veya uzman tesis partnerini seçer, teklifleri karşılaştırır ve çok sektörlü proje paketlerini — netleştirmeden üretim takibine, dokümantasyon ve teslimata kadar — koordine ederiz.",
   "about.stat1.k": "15+",
   "about.stat1.v": "Yıllık birleşik tecrübe",
@@ -1367,7 +1345,7 @@ const T = {
   "about.stat4.k": "MENA",
   "about.stat4.v": "& Afrika kapsamı",
   "btn.contact": "Bize Ulaşın",
-  "svc.num": "§ 03 / Ne Yapıyoruz",
+  "svc.num": "§ 02 / Ne Yapıyoruz",
   "svc.title": "Projenizi nasıl destekliyoruz.",
   "svc1.num": "01",
   "svc1.title": "Endüstriyel Tedarik",
@@ -1381,7 +1359,7 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "Uluslararası Teslimat Koordinasyonu",
   "svc4.body": "Üretim takibi, konsolidasyon, ihracat dokümantasyonu ve teslimat planlaması hedefe kadar koordine edilir.",
-  "ind.num": "§ 04 / Sektörler",
+  "ind.num": "§ 03 / Sektörler",
   "ind.partners.label": "Partner Tesis Çözümleri",
   "btn.explore": "Teklif Al",
   "co1.tag": "Beton Santralleri",
@@ -1392,16 +1370,7 @@ const T = {
   "co3.desc": "Uzman üretici partner üzerinden sunulan, talepten teslimata koordine edilen komple atık-enerji tesisi çözümleri.",
   "co4.tag": "Kırma & Eleme Tesisleri",
   "co4.desc": "Uzman üretici partner üzerinden proje ihtiyacına uygun eşleştirilen komple kırma-eleme tesisi çözümleri.",
-  "show.num": "§ 01 / Vitrin",
-  "show.title": "Her çözüm, tek vitrin.",
-  "show.desc": "VORQA'nın partner ağı üzerinden tedarik ettiği ve koordine ettiği tesis, ekipman ve ürün gruplarından canlı bir kesit.",
-  "show.stat1.k": "✓",
-  "show.stat1.v": "Doğrulanmış ağ",
-  "show.stat2.k": "✓",
-  "show.stat2.v": "Çok sektörlü kapsam",
-  "show.stat3.k": "MENA",
-  "show.stat3.v": "& Afrika kapsamı",
-  "how.num": "§ 02 / Nasıl Çalışırız",
+  "how.num": "§ 01 / Nasıl Çalışırız",
   "how.title": "Talepten teslime, tek muhatap.",
   "how1.num": "01",
   "how1.title": "Talep İncelemesi",
@@ -1440,7 +1409,7 @@ const T = {
 
 
 
-  "about.num": "§ 05 / About VORQA",
+  "about.num": "§ 04 / About VORQA",
   "about.p1": "VORQA is a customer-side technical sourcing and project coordination partner. Founded by engineers with 15+ years of combined experience in industrial procurement and project delivery, we clarify technical requirements, select the right manufacturer or specialized plant partner, compare offers, and coordinate multi-sector project packages — from clarification through production follow-up, documentation and delivery.",
   "about.stat1.k": "15+",
   "about.stat1.v": "Years combined experience",
@@ -1451,7 +1420,7 @@ const T = {
   "about.stat4.k": "MENA",
   "about.stat4.v": "& Africa reach",
   "btn.contact": "Contact Us",
-  "svc.num": "§ 03 / What We Do",
+  "svc.num": "§ 02 / What We Do",
   "svc.title": "How we support your project.",
   "svc1.num": "01",
   "svc1.title": "Industrial Sourcing",
@@ -1465,7 +1434,7 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "International Delivery Coordination",
   "svc4.body": "Production follow-up, consolidation, export documentation and delivery planning coordinated to destination.",
-  "ind.num": "§ 04 / Industries",
+  "ind.num": "§ 03 / Industries",
   "ind.partners.label": "Partner Plant Solutions",
   "btn.explore": "Request a Quote",
   "co1.tag": "Concrete Plants",
@@ -1476,16 +1445,7 @@ const T = {
   "co3.desc": "Complete waste-to-energy plant solutions delivered through a specialized manufacturing partner, coordinated from request to delivery.",
   "co4.tag": "Crushing & Screening Plants",
   "co4.desc": "Complete crushing and screening plant solutions matched to project requirements through a specialized manufacturing partner.",
-  "show.num": "§ 01 / Showroom",
-  "show.title": "Every solution, one showroom.",
-  "show.desc": "A running snapshot of the plants, equipment and product lines VORQA sources and coordinates across our partner network.",
-  "show.stat1.k": "✓",
-  "show.stat1.v": "Verified network",
-  "show.stat2.k": "✓",
-  "show.stat2.v": "Multi-sector coverage",
-  "show.stat3.k": "MENA",
-  "show.stat3.v": "& Africa reach",
-  "how.num": "§ 02 / How We Work",
+  "how.num": "§ 01 / How We Work",
   "how.title": "From request to delivery, one accountable partner.",
   "how1.num": "01",
   "how1.title": "Requirement Review",
@@ -1524,7 +1484,7 @@ const T = {
 
 
 
-  "about.num": "§ 05 / عن VORQA",
+  "about.num": "§ 04 / عن VORQA",
   "about.p1": "VORQA شريك في التوريد الفني وتنسيق المشاريع يعمل لصالح العميل. تأسست على يد مهندسين يمتلكون خبرة مشتركة تتجاوز 15 عامًا في التوريد الصناعي وإدارة المشاريع. نوضّح المتطلبات الفنية، ونختار الشركة المصنّعة أو الشريك المتخصص المناسب، ونقارن العروض، وننسّق حزم المشاريع متعددة القطاعات — من التوضيح حتى متابعة الإنتاج والتوثيق والتسليم.",
   "about.stat1.k": "+15",
   "about.stat1.v": "عامًا خبرة مشتركة",
@@ -1535,7 +1495,7 @@ const T = {
   "about.stat4.k": "MENA",
   "about.stat4.v": "وأفريقيا",
   "btn.contact": "تواصل معنا",
-  "svc.num": "§ 03 / ماذا نقدّم",
+  "svc.num": "§ 02 / ماذا نقدّم",
   "svc.title": "كيف ندعم مشروعك",
   "svc1.num": "01",
   "svc1.title": "التوريد الصناعي",
@@ -1549,7 +1509,7 @@ const T = {
   "svc4.num": "04",
   "svc4.title": "تنسيق التسليم الدولي",
   "svc4.body": "متابعة الإنتاج والتجميع ووثائق التصدير وتخطيط التسليم، منسقة حتى الوجهة.",
-  "ind.num": "§ 04 / القطاعات",
+  "ind.num": "§ 03 / القطاعات",
   "ind.partners.label": "حلول المنشآت الشريكة",
   "btn.explore": "اطلب عرض سعر",
   "co1.tag": "محطات الخرسانة",
@@ -1560,16 +1520,7 @@ const T = {
   "co3.desc": "حلول منشآت تحويل النفايات إلى طاقة الكاملة، تُقدّم عبر شريك تصنيع متخصص وتُنسّق من الطلب حتى التسليم.",
   "co4.tag": "منشآت التكسير والغربلة",
   "co4.desc": "حلول منشآت تكسير وغربلة كاملة تُطابَق مع متطلبات المشروع عبر شريك تصنيع متخصص.",
-  "show.num": "§ 01 / صالة العرض",
-  "show.title": "كل حل، في صالة عرض واحدة.",
-  "show.desc": "لمحة حية عن المنشآت والمعدات وخطوط المنتجات التي تورّدها VORQA وتنسّقها عبر شبكة شركائنا.",
-  "show.stat1.k": "✓",
-  "show.stat1.v": "شبكة معتمدة",
-  "show.stat2.k": "✓",
-  "show.stat2.v": "تغطية متعددة القطاعات",
-  "show.stat3.k": "MENA",
-  "show.stat3.v": "وأفريقيا",
-  "how.num": "§ 02 / كيف نعمل",
+  "how.num": "§ 01 / كيف نعمل",
   "how.title": "من الطلب حتى التسليم، شريك واحد مسؤول.",
   "how1.num": "01",
   "how1.title": "مراجعة المتطلبات",
@@ -1720,6 +1671,23 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
       scale: .94, opacity: .5, ease: 'none', transformOrigin: 'center top',
       scrollTrigger: { trigger: heroSec, start: 'top top', end: 'bottom top', scrub: .4 }
     });
+  }
+
+  /* §2b — Showroom + How-We-Work pinned scene. Structure/pin only for
+     now: no mobile pin-disable, no RTL mirror, no reduced-motion guard
+     and no step-by-step reveal yet — those land in later passes. The
+     vitrine keeps flowing via its own CSS animation the whole time the
+     scene is pinned; only the scroll POSITION is held in place. */
+  var showroomHowScene = document.querySelector('#showroom-how');
+  if(showroomHowScene && window.gsap && window.ScrollTrigger){
+    ScrollTrigger.create({
+      trigger: showroomHowScene,
+      start: 'top top',
+      end: '+=1500',
+      pin: true,
+      pinSpacing: true
+    });
+    ScrollTrigger.refresh();
   }
 
   /* §5 — Card 3D tilt + shimmer sheen (desktop hover only; index.html's
