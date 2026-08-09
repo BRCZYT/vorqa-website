@@ -1755,6 +1755,7 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
       onUpdate: function(self){
         if(!howSteps.length) return;
         var idx = Math.min(howSteps.length - 1, Math.floor(self.progress * howSteps.length));
+        console.log('DEBUG onUpdate progress=' + self.progress + ' idx=' + idx);
         setActiveStep(idx);
       }
     });
