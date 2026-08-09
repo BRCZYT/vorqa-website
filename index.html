@@ -406,22 +406,44 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 }
 
 /* ══════════════════════════════════════════
-   §03 WHAT WE DO — light-alt background, hollow big numbers
+   §02 WHAT WE DO — dark, watermark + zigzag rows
 ══════════════════════════════════════════ */
-.wwd-rows{display:flex;flex-direction:column;margin-top:20px}
-.wwd-row{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(18px,3.5vw,44px);align-items:center;
-  padding:30px 0;border-top:1px solid var(--line-light);position:relative;transition:background .3s}
-.wwd-row:last-child{border-bottom:1px solid var(--line-light)}
-.wwd-row .bignum{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.8;
-  color:transparent;-webkit-text-stroke:1.5px var(--steel);transition:-webkit-text-stroke .3s,color .3s;letter-spacing:-.03em;margin-left:-.06em}
-.wwd-row .wwd-info h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.3rem);margin-bottom:6px;color:var(--ink)}
-.wwd-row .wwd-info p{color:var(--ink-soft);font-size:.9rem;line-height:1.55;max-width:52ch}
-.wwd-row .wwd-arrow{color:var(--steel);font-size:1.3rem;transition:color .3s,transform .3s}
-.wwd-row:hover{background:linear-gradient(90deg,rgba(232,119,34,.07),transparent)}
-.wwd-row:hover .bignum{-webkit-text-stroke:1.5px var(--orange);color:rgba(232,119,34,.14)}
-.wwd-row:hover .wwd-arrow{color:var(--orange);transform:translateX(6px)}
-html[dir="rtl"] .wwd-row:hover .wwd-arrow{transform:translateX(-6px)}
-@media(max-width:820px){.wwd-row{grid-template-columns:auto 1fr;gap:16px}.wwd-row .wwd-arrow{display:none}}
+/* Giant hollow "VORQA" behind the rows — decorative only (aria-hidden,
+   pointer-events:none), kept faint enough not to fight legibility.
+   Vertically centered via margin-top in em (scales with the font's own
+   clamp'd size) rather than transform:translateY, since transform is
+   reserved for the JS scroll-parallax drift on the x axis only. */
+.wwd-mark{position:absolute;top:50%;left:-4%;margin-top:-.35em;font-family:'Sora Variable',Sora,sans-serif;font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(5rem,22vw,20rem);line-height:.7;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;pointer-events:none;z-index:0}
+.wwd-rows{display:flex;flex-direction:column;margin-top:20px;position:relative;z-index:1}
+.wwd-row{display:flex;align-items:center;gap:clamp(18px,3.5vw,44px);padding:32px 0;border-top:1px solid rgba(255,255,255,.08);position:relative;transition:background .3s}
+.wwd-row:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
+.wwd-row .wwd-info{max-width:480px}
+/* Zigzag: odd rows keep normal flex order (bignum outer-left, arrow
+   outer-right, text leaning left); even rows reverse the whole triplet
+   (arrow ends up outer-left, bignum outer-right, text leaning right).
+   flex-direction is direction-relative, so this mirrors again on its
+   own under html[dir="rtl"] — no extra RTL rule needed here. */
+.wwd-row:nth-child(odd){flex-direction:row}
+.wwd-row:nth-child(odd) .wwd-info{margin-right:auto;text-align:left}
+.wwd-row:nth-child(even){flex-direction:row-reverse}
+.wwd-row:nth-child(even) .wwd-info{margin-left:auto;text-align:right}
+.wwd-row .bignum{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.8;flex-shrink:0;
+  color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.14);transition:-webkit-text-stroke .3s,color .3s;letter-spacing:-.03em}
+.wwd-row .wwd-info h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.3rem);margin-bottom:6px;color:#fff}
+.wwd-row .wwd-info p{color:rgba(255,255,255,.5);font-size:.9rem;line-height:1.55}
+.wwd-row .wwd-arrow{color:var(--steel);font-size:1.3rem;transition:color .3s,transform .3s;flex-shrink:0}
+.wwd-row:nth-child(odd):hover{background:linear-gradient(90deg,rgba(232,119,34,.06),transparent)}
+.wwd-row:nth-child(even):hover{background:linear-gradient(270deg,rgba(232,119,34,.06),transparent)}
+.wwd-row:hover .bignum{-webkit-text-stroke:1.5px var(--orange);color:rgba(232,119,34,.16)}
+.wwd-row:nth-child(odd):hover .wwd-arrow{color:var(--orange);transform:translateX(6px)}
+.wwd-row:nth-child(even):hover .wwd-arrow{color:var(--orange);transform:translateX(-6px)}
+@media(max-width:820px){
+  .wwd-mark{font-size:clamp(3.2rem,20vw,7rem)}
+  .wwd-row,.wwd-row:nth-child(even){flex-direction:row;gap:16px}
+  .wwd-row:nth-child(odd) .wwd-info,.wwd-row:nth-child(even) .wwd-info{margin:0;text-align:left;max-width:none}
+  .wwd-row .wwd-arrow{display:none}
+}
 
 /* ══════════════════════════════════════════
    §04 INDUSTRIES — diagonal scroll-snap photo rail (light)
