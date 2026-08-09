@@ -1540,6 +1540,9 @@ const T = {
   "ad.val": "أنقرة، تركيا"
 }
 };
+window.T = T; /* exposed so the showroom card-population script (runs in a
+  later <script> tag, after this const's own block scope) can read
+  per-language captions without duplicating the dictionary. */
 
 function setLang(lang) {
   const t = T[lang];
