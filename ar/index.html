@@ -403,22 +403,44 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 }
 
 /* ══════════════════════════════════════════
-   §03 WHAT WE DO — light-alt background, hollow big numbers
+   §02 WHAT WE DO — dark, watermark + zigzag rows
 ══════════════════════════════════════════ */
-.wwd-rows{display:flex;flex-direction:column;margin-top:20px}
-.wwd-row{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(18px,3.5vw,44px);align-items:center;
-  padding:30px 0;border-top:1px solid var(--line-light);position:relative;transition:background .3s}
-.wwd-row:last-child{border-bottom:1px solid var(--line-light)}
-.wwd-row .bignum{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.8;
-  color:transparent;-webkit-text-stroke:1.5px var(--steel);transition:-webkit-text-stroke .3s,color .3s;letter-spacing:-.03em;margin-left:-.06em}
-.wwd-row .wwd-info h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.3rem);margin-bottom:6px;color:var(--ink)}
-.wwd-row .wwd-info p{color:var(--ink-soft);font-size:.9rem;line-height:1.55;max-width:52ch}
-.wwd-row .wwd-arrow{color:var(--steel);font-size:1.3rem;transition:color .3s,transform .3s}
-.wwd-row:hover{background:linear-gradient(90deg,rgba(232,119,34,.07),transparent)}
-.wwd-row:hover .bignum{-webkit-text-stroke:1.5px var(--orange);color:rgba(232,119,34,.14)}
-.wwd-row:hover .wwd-arrow{color:var(--orange);transform:translateX(6px)}
-html[dir="rtl"] .wwd-row:hover .wwd-arrow{transform:translateX(-6px)}
-@media(max-width:820px){.wwd-row{grid-template-columns:auto 1fr;gap:16px}.wwd-row .wwd-arrow{display:none}}
+/* Giant hollow "VORQA" behind the rows — decorative only (aria-hidden,
+   pointer-events:none), kept faint enough not to fight legibility.
+   Vertically centered via margin-top in em (scales with the font's own
+   clamp'd size) rather than transform:translateY, since transform is
+   reserved for the JS scroll-parallax drift on the x axis only. */
+.wwd-mark{position:absolute;top:50%;left:-4%;margin-top:-.35em;font-family:'Sora Variable',Sora,sans-serif;font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(5rem,22vw,20rem);line-height:.7;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;pointer-events:none;z-index:0}
+.wwd-rows{display:flex;flex-direction:column;margin-top:20px;position:relative;z-index:1}
+.wwd-row{display:flex;align-items:center;gap:clamp(18px,3.5vw,44px);padding:32px 0;border-top:1px solid rgba(255,255,255,.08);position:relative;transition:background .3s}
+.wwd-row:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
+.wwd-row .wwd-info{max-width:480px}
+/* Zigzag: odd rows keep normal flex order (bignum outer-left, arrow
+   outer-right, text leaning left); even rows reverse the whole triplet
+   (arrow ends up outer-left, bignum outer-right, text leaning right).
+   flex-direction is direction-relative, so this mirrors again on its
+   own under html[dir="rtl"] — no extra RTL rule needed here. */
+.wwd-row:nth-child(odd){flex-direction:row}
+.wwd-row:nth-child(odd) .wwd-info{margin-right:auto;text-align:left}
+.wwd-row:nth-child(even){flex-direction:row-reverse}
+.wwd-row:nth-child(even) .wwd-info{margin-left:auto;text-align:right}
+.wwd-row .bignum{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:.8;flex-shrink:0;
+  color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.14);transition:-webkit-text-stroke .3s,color .3s;letter-spacing:-.03em}
+.wwd-row .wwd-info h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.3rem);margin-bottom:6px;color:#fff}
+.wwd-row .wwd-info p{color:rgba(255,255,255,.5);font-size:.9rem;line-height:1.55}
+.wwd-row .wwd-arrow{color:var(--steel);font-size:1.3rem;transition:color .3s,transform .3s;flex-shrink:0}
+.wwd-row:nth-child(odd):hover{background:linear-gradient(90deg,rgba(232,119,34,.06),transparent)}
+.wwd-row:nth-child(even):hover{background:linear-gradient(270deg,rgba(232,119,34,.06),transparent)}
+.wwd-row:hover .bignum{-webkit-text-stroke:1.5px var(--orange);color:rgba(232,119,34,.16)}
+.wwd-row:nth-child(odd):hover .wwd-arrow{color:var(--orange);transform:translateX(6px)}
+.wwd-row:nth-child(even):hover .wwd-arrow{color:var(--orange);transform:translateX(-6px)}
+@media(max-width:820px){
+  .wwd-mark{font-size:clamp(3.2rem,20vw,7rem)}
+  .wwd-row,.wwd-row:nth-child(even){flex-direction:row;gap:16px}
+  .wwd-row:nth-child(odd) .wwd-info,.wwd-row:nth-child(even) .wwd-info{margin:0;text-align:left;max-width:none}
+  .wwd-row .wwd-arrow{display:none}
+}
 
 /* ══════════════════════════════════════════
    §04 INDUSTRIES — diagonal scroll-snap photo rail (light)
@@ -998,20 +1020,23 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 <!-- ════════════════════════════════════
-     WHAT WE DO  (light-alt --bg2) — §02, distinct tone, hollow big numbers
+     WHAT WE DO  (dark) — §02, watermark + zigzag rows
+     No block-sep-light before/after: the dark-gradient background
+     itself is the transition, softened by .sec-dark's inset glow
+     instead of a hard line against the light sections on either side.
 ════════════════════════════════════ -->
-<div class="block-sep-light"></div>
-<section id="services" class="sec" style="background:var(--bg2)">
-  <div style="max-width:1160px;margin:0 auto">
+<section id="services" class="sec sec-dark" style="background:linear-gradient(160deg,#0A2540 0%,#051728 100%);position:relative;overflow:hidden">
+  <div class="wwd-mark" dir="ltr" aria-hidden="true">VORQA</div>
+  <div style="max-width:1160px;margin:0 auto;position:relative;z-index:1">
     <div class="g2" style="margin-bottom:0">
       <div><div class="sec-num rv">§ 02 / ماذا نقدّم</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
-      <div class="rv d2"><h2 class="sec-title-l">كيف ندعم مشروعك</h2></div>
+      <div class="rv d2"><h2 class="sec-title-d">كيف ندعم مشروعك</h2></div>
     </div>
     <div class="wwd-rows">
-      <div class="wwd-row rv d1"><div class="bignum">01</div><div class="wwd-info"><h3>التوريد الصناعي</h3><p>مطابقة المتطلبات الفنية بمصنّعين وموردين مؤهلين.</p></div><div class="wwd-arrow">→</div></div>
-      <div class="wwd-row rv d2"><div class="bignum">02</div><div class="wwd-info"><h3>تزويد المشاريع والدمج</h3><p>إدارة منتجات وموردين متعددين كحزمة توريد واحدة منسقة.</p></div><div class="wwd-arrow">→</div></div>
-      <div class="wwd-row rv d3"><div class="bignum">03</div><div class="wwd-info"><h3>التنسيق الفني والتجاري</h3><p>التوضيحات ومقارنة العروض والتوثيق ومتابعة الموردين، كلها عبر فريق واحد مسؤول.</p></div><div class="wwd-arrow">→</div></div>
-      <div class="wwd-row rv d4"><div class="bignum">04</div><div class="wwd-info"><h3>تنسيق التسليم الدولي</h3><p>متابعة الإنتاج والتجميع ووثائق التصدير وتخطيط التسليم، منسقة حتى الوجهة.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum">01</div><div class="wwd-info"><h3>التوريد الصناعي</h3><p>مطابقة المتطلبات الفنية بمصنّعين وموردين مؤهلين.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum">02</div><div class="wwd-info"><h3>تزويد المشاريع والدمج</h3><p>إدارة منتجات وموردين متعددين كحزمة توريد واحدة منسقة.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum">03</div><div class="wwd-info"><h3>التنسيق الفني والتجاري</h3><p>التوضيحات ومقارنة العروض والتوثيق ومتابعة الموردين، كلها عبر فريق واحد مسؤول.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum">04</div><div class="wwd-info"><h3>تنسيق التسليم الدولي</h3><p>متابعة الإنتاج والتجميع ووثائق التصدير وتخطيط التسليم، منسقة حتى الوجهة.</p></div><div class="wwd-arrow">→</div></div>
     </div>
   </div>
 </section>
@@ -1019,7 +1044,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 <!-- ════════════════════════════════════
      INDUSTRIES  (light --bg) — §03, diagonal scroll-snap photo rail
 ════════════════════════════════════ -->
-<div class="block-sep-light"></div>
 <section id="industries" class="sec" style="background:var(--bg);padding-left:0;padding-right:0">
   <div class="co-hx-header rv" style="max-width:1160px;margin:0 auto;padding-left:clamp(24px,5vw,80px);padding-right:clamp(24px,5vw,80px)">
     <div class="sec-num">§ 03 / القطاعات</div>
@@ -1761,6 +1785,66 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
     });
     ScrollTrigger.refresh();
   }
+
+  /* §2d — What We Do: zigzag row reveal (left/right alternating,
+     matching each row's own text-alignment) + a very slow horizontal
+     watermark drift tied to scroll position within the section.
+     Under reduced-motion both are skipped entirely and everything
+     just sits at its final state (gsap.set, no ScrollTrigger). The
+     watermark drift is additionally gated by heavyOK (touch/narrow
+     skip it too) since it's pure decoration, same convention as the
+     hero's own scrub parallax above — the row reveal itself is NOT
+     gated by heavyOK, only by reduceMotion, since it's how the
+     content actually appears. */
+  (function(){
+    var svc = document.querySelector('#services');
+    if(!svc || !window.gsap) return;
+    var rows = Array.prototype.slice.call(svc.querySelectorAll('.wwd-row'));
+    var mark = svc.querySelector('.wwd-mark');
+    if(!rows.length) return;
+
+    if(reduceMotion){
+      gsap.set(rows, { opacity: 1, x: 0, y: 0 });
+      rows.forEach(function(row){ var bn = row.querySelector('.bignum'); if(bn) gsap.set(bn, { scale: 1 }); });
+      return;
+    }
+    if(!window.ScrollTrigger) return;
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 821px)': function(){
+        var triggers = [];
+        rows.forEach(function(row, i){
+          var fromLeft = i % 2 === 0;
+          var bignum = row.querySelector('.bignum');
+          gsap.set(row, { opacity: 0, x: fromLeft ? -70 : 70 });
+          if(bignum) gsap.set(bignum, { scale: .9 });
+          var tl = gsap.timeline({ scrollTrigger: { trigger: row, start: 'top 82%' } });
+          tl.to(row, { opacity: 1, x: 0, duration: .7, ease: 'power3.out' });
+          if(bignum) tl.to(bignum, { scale: 1, duration: .5, ease: 'power3.out' }, '-=.45');
+          triggers.push(tl.scrollTrigger);
+        });
+        return function(){ triggers.forEach(function(t){ t.kill(); }); };
+      },
+      '(max-width: 820px)': function(){
+        var triggers = [];
+        rows.forEach(function(row){
+          gsap.set(row, { opacity: 0, x: 0, y: 24 });
+          triggers.push(ScrollTrigger.create({
+            trigger: row, start: 'top 85%',
+            onEnter: function(){ gsap.to(row, { opacity: 1, y: 0, duration: .6, ease: 'power2.out' }); }
+          }));
+        });
+        return function(){ triggers.forEach(function(t){ t.kill(); }); };
+      }
+    });
+
+    if(mark && heavyOK){
+      gsap.fromTo(mark, { x: -40 }, {
+        x: 40, ease: 'none',
+        scrollTrigger: { trigger: svc, start: 'top bottom', end: 'bottom top', scrub: .6 }
+      });
+    }
+  })();
 
   /* §5 — Card 3D tilt + shimmer sheen (desktop hover only; index.html's
      co-hx-card keeps its own hover-expand animation untouched — only the
