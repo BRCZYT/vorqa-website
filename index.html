@@ -390,10 +390,15 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 /* ══════════════════════════════════════════
    §02 HOW WE WORK — vertical spine + zigzag nodes (light)
 ══════════════════════════════════════════ */
-.spine{position:relative;padding:20px 0;margin-top:44px}
+/* Fixed-height "stage": all 5 .step elements stack in the exact same
+   spot (position:absolute;inset:0) and cross-fade between each other
+   via JS-driven opacity/transform, instead of sitting one after
+   another in normal flow (which is what made the section taller than
+   the viewport in the first place). */
+.spine{position:relative;margin-top:32px;height:min(52vh,420px)}
 .spine::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);
   background:linear-gradient(180deg,transparent,var(--line-light) 8%,var(--line-light) 92%,transparent)}
-.step{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:150px;align-items:center}
+.step{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;pointer-events:none}
 .step-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;
   background:var(--bg);border:2px solid var(--line-light);display:flex;align-items:center;justify-content:center;z-index:2;transition:border-color .3s}
 .step-node .n{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:1.35rem;color:var(--ink);transition:color .3s}
