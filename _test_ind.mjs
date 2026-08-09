@@ -1,39 +1,54 @@
 import puppeteer from 'puppeteer';
 const browser = await puppeteer.launch({ headless: 'new' });
 
-async function testHoverSmoothness(width, height, wheelCount, wheelDelta, label) {
+async function scrollToPanel(page) {
+  for (let i = 0; i < 40; i++) {
+    const top = await page.evaluate(() => document.querySelector('.ind-panel').getBoundingClientRect().top);
+    if (top < 250 && top > -50) return true;
+    const delta = top > 250 ? 150 : -100;
+    await page.mouse.wheel({ deltaY: delta });
+    await new Promise(r => setTimeout(r, 450));
+  }
+  return false;
+}
+
+async function testHoverSmoothness(width, height, label) {
   const page = await browser.newPage();
   await page.setViewport({ width, height });
   const consoleErrors = [];
   page.on('console', (msg) => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
   page.on('pageerror', (err) => consoleErrors.push(err.message));
-  await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0' });
+  await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0', timeout: 60000 });
   await new Promise(r => setTimeout(r, 3500)); // preloader clears body.loading at 3130ms
 
-  for (let i = 0; i < wheelCount; i++) {
-    await page.mouse.wheel({ deltaY: wheelDelta });
-    await new Promise(r => setTimeout(r, 700)); // let Lenis inertia settle between notches
-  }
-  await new Promise(r => setTimeout(r, 800));
+  const found = await scrollToPanel(page);
+  await new Promise(r => setTimeout(r, 900));
+  console.log(`[${label}] scrolled into position:`, found);
+
+  // move far away first so we start from a genuinely un-hovered state
+  await page.mouse.move(5, 5);
+  await new Promise(r => setTimeout(r, 300));
 
   const box = await page.$eval('.ind-panel', el => { const r = el.getBoundingClientRect(); return { x: r.x + 30, y: r.y + r.height / 2 }; });
   console.log(`[${label}] hover target box:`, box);
   const scrollWidthBefore = await page.evaluate(() => document.querySelector('.ind-rail').scrollWidth);
+  const widthBeforeHover = await page.evaluate(() => document.querySelectorAll('.ind-panel')[0].getBoundingClientRect().width);
+  console.log(`[${label}] width before hover:`, widthBeforeHover);
 
-  await page.mouse.move(box.x - 100, box.y, { steps: 5 });
-  await page.mouse.move(box.x, box.y, { steps: 12 });
+  await page.mouse.move(box.x, box.y - 200, { steps: 3 });
+  await page.mouse.move(box.x, box.y, { steps: 8 });
 
   const widths = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 12; i++) {
     const w = await page.evaluate(() => document.querySelectorAll('.ind-panel')[0].getBoundingClientRect().width);
     widths.push(Math.round(w * 10) / 10);
-    await new Promise(r => setTimeout(r, 70));
+    await new Promise(r => setTimeout(r, 60));
   }
-  console.log(`[${label}] width samples during hover (every ~70ms):`, widths);
+  console.log(`[${label}] width samples during hover (every ~60ms):`, widths);
   const isGradual = new Set(widths).size > 3;
   console.log(`[${label}] gradual (not snap):`, isGradual);
 
-  await page.mouse.move(0, 0);
+  await page.mouse.move(5, 5);
   await new Promise(r => setTimeout(r, 800));
   const scrollWidthAfter = await page.evaluate(() => document.querySelector('.ind-rail').scrollWidth);
   console.log(`[${label}] rail scrollWidth before/after hover cycle:`, scrollWidthBefore, scrollWidthAfter, scrollWidthBefore === scrollWidthAfter ? '(stable, no jitter)' : '(MISMATCH!)');
@@ -42,6 +57,6 @@ async function testHoverSmoothness(width, height, wheelCount, wheelDelta, label)
   await page.close();
 }
 
-await testHoverSmoothness(1440, 900, 6, 600, 'desktop');
-await testHoverSmoothness(375, 800, 8, 500, 'mobile');
+await testHoverSmoothness(1440, 900, 'desktop');
+await testHoverSmoothness(375, 800, 'mobile');
 await browser.close();
