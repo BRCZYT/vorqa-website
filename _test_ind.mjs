@@ -21,7 +21,7 @@ async function testHoverSmoothness(width, height, label) {
   await new Promise(r => setTimeout(r, 3500)); // preloader clears body.loading at 3130ms
 
   const found = await scrollToIndustries(page);
-  await new Promise(r => setTimeout(r, 1200));
+  await new Promise(r => setTimeout(r, 1800)); // let Lenis inertia fully settle before measuring
   console.log(`[${label}] scrolled into position:`, found);
 
   const scrollWidthBefore = await page.evaluate(() => document.querySelector('.ind-rail').scrollWidth);
