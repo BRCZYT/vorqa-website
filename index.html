@@ -368,9 +368,19 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 .sr-cap{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;
   background:linear-gradient(to top,rgba(5,23,40,.82) 0%,transparent 100%);
   font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#fff}
-@media(max-width:820px){
+/* Tablet: pin still runs (see JS matchMedia), but 33% felt cramped for
+   the vitrine at this width — give it ~40% instead. */
+@media(min-width:768px) and (max-width:1024px){
+  .showroom-grid{grid-template-columns:3fr 2fr}
+}
+/* Mobile: pin is disabled entirely in JS (sticky/pin feels janky at
+   this size) — plain stacked flow instead, vitrine first via `order`
+   so it reads as the visual lead-in, steps below at full opacity
+   (the scroll-driven dim/highlight only exists at >=768px). */
+@media(max-width:767px){
   .showroom-grid{grid-template-columns:1fr;gap:36px}
-  .showroom-vitrine{height:56vh}
+  .showroom-vitrine{height:56vh;order:-1}
+  .showroom-how-col .step{opacity:1 !important;transform:none !important}
 }
 
 /* ══════════════════════════════════════════
