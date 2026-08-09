@@ -350,7 +350,11 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
    No pin/ScrollTrigger yet — the vitrine flows on its own via CSS
    keyframes, independent of scroll position.
 ══════════════════════════════════════════ */
-.showroom-grid{display:grid;grid-template-columns:2fr 1fr;gap:clamp(30px,5vw,70px);align-items:start}
+/* Capped so the whole pinned scene fits in one viewport — otherwise
+   steps 3-5 sit below the fold the entire time the section is pinned,
+   since pinning holds the section's TOP at the viewport's top but
+   does nothing about content taller than the viewport itself. */
+.showroom-grid{display:grid;grid-template-columns:2fr 1fr;gap:clamp(30px,5vw,70px);align-items:start;max-height:min(100vh,760px)}
 
 .showroom-vitrine{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:min(72vh,620px);overflow:hidden;position:relative;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);
@@ -995,7 +999,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
      step-by-step reveal, mobile pin-disable, RTL mirror and
      reduced-motion guards land in later passes.
 ════════════════════════════════════ -->
-<section id="showroom-how" class="sec" style="background:var(--bg2)">
+<section id="showroom-how" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(6vh,48px)">
   <div class="hero-grid-bg" style="opacity:.05"></div>
   <div class="showroom-grid" style="max-width:1160px;margin:0 auto;position:relative">
     <div class="showroom-how-col">
