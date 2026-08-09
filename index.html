@@ -384,60 +384,25 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 @media(max-width:767px){
   .showroom-grid{grid-template-columns:1fr;gap:36px}
   .showroom-vitrine{height:56vh;order:-1}
-  .showroom-how-col .step{opacity:1 !important;transform:none !important}
+  .showroom-how-col .step-cell{opacity:1 !important;transform:none !important}
 }
 
 /* ══════════════════════════════════════════
-   §02 HOW WE WORK — vertical spine + zigzag nodes (light)
+   §02 HOW WE WORK — 2×3 step grid (light)
 ══════════════════════════════════════════ */
-/* Fixed-height "stage": all 5 .step elements stack in the exact same
-   spot (position:absolute;inset:0) and cross-fade between each other
-   via JS-driven opacity/transform, instead of sitting one after
-   another in normal flow (which is what made the section taller than
-   the viewport in the first place). */
-.spine{position:relative;margin-top:32px;height:min(52vh,420px)}
-.spine::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);
-  background:linear-gradient(180deg,transparent,var(--line-light) 8%,var(--line-light) 92%,transparent)}
-.step{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;pointer-events:none}
-.step-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;
-  background:var(--bg);border:2px solid var(--line-light);display:flex;align-items:center;justify-content:center;z-index:2;transition:border-color .3s}
-.step-node .n{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:1.35rem;color:var(--ink);transition:color .3s}
-.step-node::after{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid var(--orange);opacity:0;transition:opacity .3s}
-.step:hover .step-node{border-color:var(--orange)}
-.step:hover .step-node .n{color:var(--orange)}
-.step:hover .step-node::after{opacity:.5}
-.step-node.done{border-color:var(--orange);background:var(--orange)}
-.step-node.done .n{color:#fff}
-.step-c{padding:0 clamp(28px,4.5vw,64px);position:relative}
-.step-c .tag{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-bottom:8px;display:block}
-.step-c h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
-.step-c p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:.88rem;line-height:1.55}
-.step-empty{grid-column:2}
-.step.step-l .step-c{grid-column:1;text-align:right}
-.step.step-l .step-empty{grid-column:2}
-.step.step-r .step-c{grid-column:2}
-.step.step-r .step-empty{grid-column:1}
-.step.step-l .step-c::after{content:'';position:absolute;right:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(100%,-50%)}
-.step.step-r .step-c::after{content:'';position:absolute;left:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(-100%,-50%)}
-html[dir="rtl"] .step{direction:rtl}
+/* Fixed-height frame so the whole pinned scene still fits in one
+   viewport: 6 cells in a plain 2-column/3-row grid (normal flow, no
+   absolute stacking) reveal two at a time — one full grid row per
+   scroll "page" — instead of the old zigzag/center-spine layout. */
+.spine{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:24px 40px;height:min(56vh,460px);margin-top:32px}
+.step-cell{display:flex;flex-direction:column;justify-content:center}
+.step-cell-num{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-bottom:8px;display:block}
+.step-cell h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
+.step-cell p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:.88rem;line-height:1.55}
 @media(max-width:767px){
-  /* Undo the desktop/tablet cross-fade stage: mobile keeps the plain
-     stacked-in-flow layout (pin is disabled here too, see the JS
-     matchMedia block), so steps need their normal document-flow
-     position back instead of overlapping at inset:0. */
-  .spine{height:auto}
-  .step{position:static;inset:auto;pointer-events:auto}
-  .spine::before{left:36px}
-  .step{grid-template-columns:1fr;min-height:auto;padding:18px 0 18px 88px;direction:ltr !important}
-  .step-node{left:36px;top:28px;transform:translate(-50%,0);width:56px;height:56px}
-  .step-node .n{font-size:1rem}
-  .step.step-l .step-c,.step.step-r .step-c{grid-column:1;text-align:left;padding:0}
-  .step-empty{display:none}
-  .step.step-l .step-c::after,.step.step-r .step-c::after{display:none}
-  html[dir="rtl"] .spine::before{left:auto;right:36px}
-  html[dir="rtl"] .step{padding:18px 88px 18px 0}
-  html[dir="rtl"] .step-node{left:auto;right:36px;transform:translate(50%,0)}
-  html[dir="rtl"] .step.step-l .step-c,html[dir="rtl"] .step.step-r .step-c{text-align:right}
+  /* Pin is disabled here too (see the JS matchMedia block) — plain
+     single-column stack, all 6 cells always at full opacity. */
+  .spine{grid-template-columns:1fr;grid-template-rows:none;height:auto;gap:22px}
 }
 
 /* ══════════════════════════════════════════
@@ -1005,10 +970,9 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 
 <!-- ════════════════════════════════════
      SHOWROOM + HOW WE WORK — merged, pinned scene. §01.
-     Left 2/3: How We Work's spine (unchanged). Right 1/3: the
-     showroom vitrine (untouched). Structure + pin only in this pass —
-     step-by-step reveal, mobile pin-disable, RTL mirror and
-     reduced-motion guards land in later passes.
+     Left 2/3: How We Work's 6-cell step grid (2 cols x 3 rows,
+     revealed two at a time per scroll page). Right 1/3: the showroom
+     vitrine (untouched). Pin disabled + plain stacked flow on mobile.
 ════════════════════════════════════ -->
 <section id="showroom-how" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(6vh,48px)">
   <div class="hero-grid-bg" style="opacity:.05"></div>
@@ -1017,31 +981,12 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
       <div class="rv"><div class="sec-num" data-i18n="how.num">§ 01 / How We Work</div></div>
       <div class="rv d1"><h2 class="sec-title-l" data-i18n="how.title">From request to delivery, one accountable partner.</h2></div>
       <div class="spine">
-        <div class="step step-r rv d1">
-          <div class="step-empty"></div>
-          <div class="step-c"><span class="tag" data-i18n="how1.num">01</span><h3 data-i18n="how1.title">Requirement Review</h3><p data-i18n="how1.body">We review your project requirement and technical scope together.</p></div>
-          <div class="step-node"><span class="n">1</span></div>
-        </div>
-        <div class="step step-l rv d2">
-          <div class="step-c"><span class="tag" data-i18n="how2.num">02</span><h3 data-i18n="how2.title">Technical Clarification</h3><p data-i18n="how2.body">Open questions, specifications and constraints are clarified before any offer is compared.</p></div>
-          <div class="step-empty"></div>
-          <div class="step-node"><span class="n">2</span></div>
-        </div>
-        <div class="step step-r rv d3">
-          <div class="step-empty"></div>
-          <div class="step-c"><span class="tag" data-i18n="how3.num">03</span><h3 data-i18n="how3.title">Supplier / Partner Selection</h3><p data-i18n="how3.body">The right manufacturer, supplier or specialized plant partner is matched from our verified network.</p></div>
-          <div class="step-node"><span class="n">3</span></div>
-        </div>
-        <div class="step step-l rv d4">
-          <div class="step-c"><span class="tag" data-i18n="how4.num">04</span><h3 data-i18n="how4.title">Offer &amp; Order Coordination</h3><p data-i18n="how4.body">Technical and commercial offers are compared and consolidated into one coordinated order.</p></div>
-          <div class="step-empty"></div>
-          <div class="step-node"><span class="n">4</span></div>
-        </div>
-        <div class="step step-r rv d5">
-          <div class="step-empty"></div>
-          <div class="step-c"><span class="tag" data-i18n="how5.num">05</span><h3 data-i18n="how5.title">Production, Documentation &amp; Delivery Follow-Up</h3><p data-i18n="how5.body">Production, quality documentation, logistics and delivery are followed through to destination.</p></div>
-          <div class="step-node done"><span class="n">✓</span></div>
-        </div>
+        <div class="step-cell rv d1"><span class="step-cell-num" data-i18n="how1.num">01</span><h3 data-i18n="how1.title">Requirement Review</h3><p data-i18n="how1.body">We review your project requirement and technical scope together.</p></div>
+        <div class="step-cell rv d1"><span class="step-cell-num" data-i18n="how2.num">02</span><h3 data-i18n="how2.title">Technical Clarification</h3><p data-i18n="how2.body">Open questions, specifications and constraints are clarified before any offer is compared.</p></div>
+        <div class="step-cell rv d2"><span class="step-cell-num" data-i18n="how3.num">03</span><h3 data-i18n="how3.title">Supplier / Partner Selection</h3><p data-i18n="how3.body">The right manufacturer, supplier or specialized plant partner is matched from our verified network.</p></div>
+        <div class="step-cell rv d2"><span class="step-cell-num" data-i18n="how4.num">04</span><h3 data-i18n="how4.title">Offer &amp; Order Coordination</h3><p data-i18n="how4.body">Technical and commercial offers are compared and consolidated into one coordinated order.</p></div>
+        <div class="step-cell rv d3"><span class="step-cell-num" data-i18n="how5.num">05</span><h3 data-i18n="how5.title">Production &amp; Quality Documentation</h3><p data-i18n="how5.body">Manufacturing progress and quality documentation are tracked and verified at each stage.</p></div>
+        <div class="step-cell rv d3"><span class="step-cell-num" data-i18n="how6.num">06</span><h3 data-i18n="how6.title">Logistics &amp; Delivery Follow-Up</h3><p data-i18n="how6.body">Consolidation, export documentation, shipping and delivery are followed through to destination.</p></div>
       </div>
     </div>
     <div class="showroom-vitrine rv d2">
@@ -1388,8 +1333,11 @@ const T = {
   "how4.title": "Teklif & Sipariş Koordinasyonu",
   "how4.body": "Teknik ve ticari teklifler karşılaştırılır, tek koordine edilen siparişte birleştirilir.",
   "how5.num": "05",
-  "how5.title": "Üretim, Dokümantasyon & Teslimat Takibi",
-  "how5.body": "Üretim, kalite dokümantasyonu, lojistik ve teslimat hedefe ulaşana kadar takip edilir.",
+  "how5.title": "Üretim ve Kalite Dokümantasyonu",
+  "how5.body": "Üretim ilerleyişi ve kalite dokümantasyonu her aşamada takip edilir ve doğrulanır.",
+  "how6.num": "06",
+  "how6.title": "Lojistik ve Teslimat Takibi",
+  "how6.body": "Konsolidasyon, ihracat dokümantasyonu, sevkiyat ve teslimat hedefe ulaşana kadar takip edilir.",
   "show.item1.name": "Hidrolik & Pnömatik",
   "show.item2.name": "Motor & Redüktör",
   "show.item3.name": "Pompa & Vana",
@@ -1471,8 +1419,11 @@ const T = {
   "how4.title": "Offer & Order Coordination",
   "how4.body": "Technical and commercial offers are compared and consolidated into one coordinated order.",
   "how5.num": "05",
-  "how5.title": "Production, Documentation & Delivery Follow-Up",
-  "how5.body": "Production, quality documentation, logistics and delivery are followed through to destination.",
+  "how5.title": "Production & Quality Documentation",
+  "how5.body": "Manufacturing progress and quality documentation are tracked and verified at each stage.",
+  "how6.num": "06",
+  "how6.title": "Logistics & Delivery Follow-Up",
+  "how6.body": "Consolidation, export documentation, shipping and delivery are followed through to destination.",
   "show.item1.name": "Hydraulic & Pneumatic",
   "show.item2.name": "Gear Motors & Reducers",
   "show.item3.name": "Pumps & Valves",
@@ -1554,8 +1505,11 @@ const T = {
   "how4.title": "تنسيق العروض والطلبات",
   "how4.body": "تُقارَن العروض الفنية والتجارية وتُدمَج في طلب واحد منسق.",
   "how5.num": "05",
-  "how5.title": "متابعة الإنتاج والتوثيق والتسليم",
-  "how5.body": "تُتابَع عمليات الإنتاج وتوثيق الجودة واللوجستيات والتسليم حتى الوجهة.",
+  "how5.title": "الإنتاج وتوثيق الجودة",
+  "how5.body": "يُتابَع تقدّم التصنيع وتُوثَّق الجودة وتُتحقَّق في كل مرحلة.",
+  "how6.num": "06",
+  "how6.title": "اللوجستيات ومتابعة التسليم",
+  "how6.body": "يُتابَع التجميع ووثائق التصدير والشحن والتسليم حتى الوجهة.",
   "show.item1.name": "الهيدروليك والهوائيات",
   "show.item2.name": "المحركات والمخفضات",
   "show.item3.name": "المضخات والصمامات",
