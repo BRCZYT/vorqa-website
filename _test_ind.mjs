@@ -3,9 +3,9 @@ const browser = await puppeteer.launch({ headless: 'new' });
 
 async function scrollToIndustries(page) {
   for (let i = 0; i < 40; i++) {
-    const y = await page.evaluate(() => document.querySelector('#industries').getBoundingClientRect().top);
-    if (y < 150 && y > -200) return true;
-    await page.mouse.wheel({ deltaY: y > 0 ? Math.min(500, Math.max(80, y * 0.6)) : -200 });
+    const y = await page.evaluate(() => document.querySelector('.ind-panel').getBoundingClientRect().top);
+    if (y < 100 && y > -50) return true;
+    await page.mouse.wheel({ deltaY: y > 0 ? Math.min(500, Math.max(80, y * 0.6)) : Math.max(-500, Math.min(-40, y * 0.6)) });
     await new Promise(r => setTimeout(r, 120));
   }
   return false;
