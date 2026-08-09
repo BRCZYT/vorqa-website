@@ -1730,48 +1730,66 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
     });
   }
 
-  /* §2b — Showroom + How-We-Work pinned scene. Still no mobile
-     pin-disable or RTL mirror of the merged layout — those land in a
-     later pass. The vitrine keeps flowing via its own CSS animation
-     the whole time the scene is pinned; only the scroll POSITION is
-     held in place. */
+  /* §2b/§2c — Showroom + How-We-Work pinned scene, responsive per
+     breakpoint via ScrollTrigger.matchMedia (which owns setup/teardown
+     itself on resize/rotation, so there's no manual cleanup to track):
+     - >=768px: pinned, step-by-step reveal driven by the pin's own
+       scroll progress (self.progress, 0->1 across start->end — the
+       same math getBoundingClientRect would give, without a second
+       scroll listener duplicating what ScrollTrigger already tracks).
+       Progress splits into as many equal windows as there are spine
+       steps (5 steps = 4 internal thresholds); only transform +
+       opacity animate, with a light spring ease on the way in. Under
+       reduced-motion the same end states apply instantly instead of
+       tweening. The vitrine's own CSS keyframe animation keeps
+       running throughout, untouched by any of this.
+     - <768px: no pin at all (sticky/pin feels janky at this size —
+       see CLAUDE.md-adjacent brief); steps go back to plain flow at
+       full opacity via clearProps, so nothing here fights the
+       `!important` CSS fallback in the mobile media query.
+     RTL: self.progress is a vertical scroll fraction, identical
+     regardless of text direction, so no logic here needs to change
+     for Arabic — only the CSS column order mirrors (inherited
+     direction:rtl on the auto-placement grid, same mechanism as the
+     What We Do rows / About stat rail). */
   var showroomHowScene = document.querySelector('#showroom-how');
-
-  /* §2c — Step-by-step reveal driven by the pin's own scroll progress
-     (self.progress, 0->1 across start->end — the same math
-     getBoundingClientRect would give, without a second scroll
-     listener duplicating what ScrollTrigger already tracks). Progress
-     is split into as many equal windows as there are spine steps (5
-     steps = 4 internal thresholds); only transform + opacity are
-     animated, with a light spring ease on the way in. Under
-     reduced-motion the same state changes apply instantly instead of
-     being skipped, since the active step should still track scroll
-     position for anyone following along. */
   var howSteps = showroomHowScene ? Array.prototype.slice.call(showroomHowScene.querySelectorAll('.spine .step')) : [];
-  var activeStepIndex = -1;
-  function setActiveStep(idx){
-    if(idx === activeStepIndex || !howSteps.length || !window.gsap) return;
-    activeStepIndex = idx;
-    howSteps.forEach(function(el, i){
-      var isActive = i === idx;
-      var vars = { opacity: isActive ? 1 : .35, scale: isActive ? 1.02 : 1, y: isActive ? -3 : 0 };
-      if(reduceMotion){ gsap.set(el, vars); }
-      else { gsap.to(el, Object.assign({ duration: .5, ease: isActive ? 'back.out(1.6)' : 'power2.out' }, vars)); }
-    });
-  }
-  if(howSteps.length && window.gsap){ gsap.set(howSteps, { opacity: .35 }); setActiveStep(0); }
 
-  if(showroomHowScene && window.gsap && window.ScrollTrigger){
-    ScrollTrigger.create({
-      trigger: showroomHowScene,
-      start: 'top top',
-      end: '+=750',
-      pin: true,
-      pinSpacing: true,
-      onUpdate: function(self){
-        if(!howSteps.length) return;
-        var idx = Math.min(howSteps.length - 1, Math.floor(self.progress * howSteps.length));
-        setActiveStep(idx);
+  if(showroomHowScene && howSteps.length && window.gsap && window.ScrollTrigger){
+    var activeStepIndex = -1;
+    function setActiveStep(idx){
+      if(idx === activeStepIndex) return;
+      activeStepIndex = idx;
+      howSteps.forEach(function(el, i){
+        var isActive = i === idx;
+        var vars = { opacity: isActive ? 1 : .35, scale: isActive ? 1.02 : 1, y: isActive ? -3 : 0 };
+        if(reduceMotion){ gsap.set(el, vars); }
+        else { gsap.to(el, Object.assign({ duration: .5, ease: isActive ? 'back.out(1.6)' : 'power2.out' }, vars)); }
+      });
+    }
+
+    ScrollTrigger.matchMedia({
+      '(min-width: 768px)': function(){
+        activeStepIndex = -1;
+        gsap.set(howSteps, { opacity: .35, scale: 1, y: 0 });
+        setActiveStep(0);
+        var st = ScrollTrigger.create({
+          trigger: showroomHowScene,
+          start: 'top top',
+          end: '+=750',
+          pin: true,
+          pinSpacing: true,
+          onUpdate: function(self){
+            var idx = Math.min(howSteps.length - 1, Math.floor(self.progress * howSteps.length));
+            setActiveStep(idx);
+          }
+        });
+        return function(){ st.kill(); };
+      },
+      '(max-width: 767px)': function(){
+        activeStepIndex = -1;
+        gsap.set(howSteps, { clearProps: 'opacity,scale,transform' });
+        return function(){};
       }
     });
     ScrollTrigger.refresh();
