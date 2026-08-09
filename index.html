@@ -997,20 +997,23 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 <!-- ════════════════════════════════════
-     WHAT WE DO  (light-alt --bg2) — §02, distinct tone, hollow big numbers
+     WHAT WE DO  (dark) — §02, watermark + zigzag rows
+     No block-sep-light before/after: the dark-gradient background
+     itself is the transition, softened by .sec-dark's inset glow
+     instead of a hard line against the light sections on either side.
 ════════════════════════════════════ -->
-<div class="block-sep-light"></div>
-<section id="services" class="sec" style="background:var(--bg2)">
-  <div style="max-width:1160px;margin:0 auto">
+<section id="services" class="sec sec-dark" style="background:linear-gradient(160deg,#0A2540 0%,#051728 100%);position:relative;overflow:hidden">
+  <div class="wwd-mark" dir="ltr" aria-hidden="true">VORQA</div>
+  <div style="max-width:1160px;margin:0 auto;position:relative;z-index:1">
     <div class="g2" style="margin-bottom:0">
       <div><div class="sec-num rv" data-i18n="svc.num">§ 02 / What We Do</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
-      <div class="rv d2"><h2 class="sec-title-l" data-i18n="svc.title">How we support your project.</h2></div>
+      <div class="rv d2"><h2 class="sec-title-d" data-i18n="svc.title">How we support your project.</h2></div>
     </div>
     <div class="wwd-rows">
-      <div class="wwd-row rv d1"><div class="bignum" data-i18n="svc1.num">01</div><div class="wwd-info"><h3 data-i18n="svc1.title">Industrial Sourcing</h3><p data-i18n="svc1.body">Technical requirements matched with qualified manufacturers and suppliers.</p></div><div class="wwd-arrow">→</div></div>
-      <div class="wwd-row rv d2"><div class="bignum" data-i18n="svc2.num">02</div><div class="wwd-info"><h3 data-i18n="svc2.title">Project Supply &amp; Consolidation</h3><p data-i18n="svc2.body">Multiple products and vendors managed as one coordinated supply package.</p></div><div class="wwd-arrow">→</div></div>
-      <div class="wwd-row rv d3"><div class="bignum" data-i18n="svc3.num">03</div><div class="wwd-info"><h3 data-i18n="svc3.title">Technical &amp; Commercial Coordination</h3><p data-i18n="svc3.body">Clarifications, offer comparison, documentation and supplier follow-up handled through one accountable team.</p></div><div class="wwd-arrow">→</div></div>
-      <div class="wwd-row rv d4"><div class="bignum" data-i18n="svc4.num">04</div><div class="wwd-info"><h3 data-i18n="svc4.title">International Delivery Coordination</h3><p data-i18n="svc4.body">Production follow-up, consolidation, export documentation and delivery planning coordinated to destination.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum" data-i18n="svc1.num">01</div><div class="wwd-info"><h3 data-i18n="svc1.title">Industrial Sourcing</h3><p data-i18n="svc1.body">Technical requirements matched with qualified manufacturers and suppliers.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum" data-i18n="svc2.num">02</div><div class="wwd-info"><h3 data-i18n="svc2.title">Project Supply &amp; Consolidation</h3><p data-i18n="svc2.body">Multiple products and vendors managed as one coordinated supply package.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum" data-i18n="svc3.num">03</div><div class="wwd-info"><h3 data-i18n="svc3.title">Technical &amp; Commercial Coordination</h3><p data-i18n="svc3.body">Clarifications, offer comparison, documentation and supplier follow-up handled through one accountable team.</p></div><div class="wwd-arrow">→</div></div>
+      <div class="wwd-row"><div class="bignum" data-i18n="svc4.num">04</div><div class="wwd-info"><h3 data-i18n="svc4.title">International Delivery Coordination</h3><p data-i18n="svc4.body">Production follow-up, consolidation, export documentation and delivery planning coordinated to destination.</p></div><div class="wwd-arrow">→</div></div>
     </div>
   </div>
 </section>
@@ -1018,7 +1021,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 <!-- ════════════════════════════════════
      INDUSTRIES  (light --bg) — §03, diagonal scroll-snap photo rail
 ════════════════════════════════════ -->
-<div class="block-sep-light"></div>
 <section id="industries" class="sec" style="background:var(--bg);padding-left:0;padding-right:0">
   <div class="co-hx-header rv" style="max-width:1160px;margin:0 auto;padding-left:clamp(24px,5vw,80px);padding-right:clamp(24px,5vw,80px)">
     <div class="sec-num" data-i18n="ind.num">§ 03 / Industries</div>
