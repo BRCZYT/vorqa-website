@@ -8,13 +8,17 @@ async function run(width, height, wheelCount, wheelDelta, label) {
   page.on('console', (msg) => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
   page.on('pageerror', (err) => consoleErrors.push(err.message));
   await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0' });
-  await new Promise(r => setTimeout(r, 1500));
+  await new Promise(r => setTimeout(r, 3500)); // let the preloader fully finish (removes body.loading at 3130ms)
 
   for (let i = 0; i < wheelCount; i++) {
     await page.mouse.wheel({ deltaY: wheelDelta });
     await new Promise(r => setTimeout(r, 150));
   }
   await new Promise(r => setTimeout(r, 1200));
+
+  const bodyLoading = await page.evaluate(() => document.body.classList.contains('loading'));
+  const panelClass = await page.evaluate(() => document.querySelectorAll('.ind-panel')[0].className);
+  console.log(`[${label}] body still loading:`, bodyLoading, ' panel class:', panelClass);
 
   const rail = await page.$('.ind-rail');
   await rail.screenshot({ path: `_shot_${label}_0_before.png` });
