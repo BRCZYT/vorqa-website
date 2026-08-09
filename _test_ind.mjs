@@ -1,7 +1,17 @@
 import puppeteer from 'puppeteer';
 const browser = await puppeteer.launch({ headless: 'new' });
 
-async function testHoverSmoothness(width, height, wheelCount, wheelDelta, label) {
+async function scrollToIndustries(page) {
+  for (let i = 0; i < 40; i++) {
+    const y = await page.evaluate(() => document.querySelector('#industries').getBoundingClientRect().top);
+    if (y < 150 && y > -200) return true;
+    await page.mouse.wheel({ deltaY: y > 0 ? Math.min(500, Math.max(80, y * 0.6)) : -200 });
+    await new Promise(r => setTimeout(r, 120));
+  }
+  return false;
+}
+
+async function testHoverSmoothness(width, height, label) {
   const page = await browser.newPage();
   await page.setViewport({ width, height });
   const consoleErrors = [];
@@ -10,16 +20,15 @@ async function testHoverSmoothness(width, height, wheelCount, wheelDelta, label)
   await page.goto('http://localhost:3000/en/', { waitUntil: 'networkidle0' });
   await new Promise(r => setTimeout(r, 3500)); // preloader clears body.loading at 3130ms
 
-  for (let i = 0; i < wheelCount; i++) {
-    await page.mouse.wheel({ deltaY: wheelDelta });
-    await new Promise(r => setTimeout(r, 150));
-  }
+  const found = await scrollToIndustries(page);
   await new Promise(r => setTimeout(r, 1200));
+  console.log(`[${label}] scrolled into position:`, found);
 
   const scrollWidthBefore = await page.evaluate(() => document.querySelector('.ind-rail').scrollWidth);
 
-  const box = await page.$eval('.ind-panel', el => { const r = el.getBoundingClientRect(); return { x: r.x + 40, y: r.y + r.height / 2 }; });
-  await page.mouse.move(box.x - 150, box.y, { steps: 5 });
+  const box = await page.$eval('.ind-panel', el => { const r = el.getBoundingClientRect(); return { x: r.x + 30, y: r.y + r.height / 2 }; });
+  console.log(`[${label}] hover target box:`, box);
+  await page.mouse.move(box.x - 100, box.y, { steps: 5 });
   await page.mouse.move(box.x, box.y, { steps: 12 });
 
   const widths = [];
@@ -41,6 +50,6 @@ async function testHoverSmoothness(width, height, wheelCount, wheelDelta, label)
   await page.close();
 }
 
-await testHoverSmoothness(1440, 900, 6, 600, 'desktop');
-await testHoverSmoothness(375, 800, 10, 500, 'mobile');
+await testHoverSmoothness(1440, 900, 'desktop');
+await testHoverSmoothness(375, 800, 'mobile');
 await browser.close();
