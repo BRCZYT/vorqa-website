@@ -381,60 +381,25 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 @media(max-width:767px){
   .showroom-grid{grid-template-columns:1fr;gap:36px}
   .showroom-vitrine{height:56vh;order:-1}
-  .showroom-how-col .step{opacity:1 !important;transform:none !important}
+  .showroom-how-col .step-cell{opacity:1 !important;transform:none !important}
 }
 
 /* ══════════════════════════════════════════
-   §02 HOW WE WORK — vertical spine + zigzag nodes (light)
+   §02 HOW WE WORK — 2×3 step grid (light)
 ══════════════════════════════════════════ */
-/* Fixed-height "stage": all 5 .step elements stack in the exact same
-   spot (position:absolute;inset:0) and cross-fade between each other
-   via JS-driven opacity/transform, instead of sitting one after
-   another in normal flow (which is what made the section taller than
-   the viewport in the first place). */
-.spine{position:relative;margin-top:32px;height:min(52vh,420px)}
-.spine::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);
-  background:linear-gradient(180deg,transparent,var(--line-light) 8%,var(--line-light) 92%,transparent)}
-.step{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;pointer-events:none}
-.step-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;
-  background:var(--bg);border:2px solid var(--line-light);display:flex;align-items:center;justify-content:center;z-index:2;transition:border-color .3s}
-.step-node .n{font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:1.35rem;color:var(--ink);transition:color .3s}
-.step-node::after{content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid var(--orange);opacity:0;transition:opacity .3s}
-.step:hover .step-node{border-color:var(--orange)}
-.step:hover .step-node .n{color:var(--orange)}
-.step:hover .step-node::after{opacity:.5}
-.step-node.done{border-color:var(--orange);background:var(--orange)}
-.step-node.done .n{color:#fff}
-.step-c{padding:0 clamp(28px,4.5vw,64px);position:relative}
-.step-c .tag{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-bottom:8px;display:block}
-.step-c h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
-.step-c p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:.88rem;line-height:1.55}
-.step-empty{grid-column:2}
-.step.step-l .step-c{grid-column:1;text-align:right}
-.step.step-l .step-empty{grid-column:2}
-.step.step-r .step-c{grid-column:2}
-.step.step-r .step-empty{grid-column:1}
-.step.step-l .step-c::after{content:'';position:absolute;right:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(100%,-50%)}
-.step.step-r .step-c::after{content:'';position:absolute;left:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(-100%,-50%)}
-html[dir="rtl"] .step{direction:rtl}
+/* Fixed-height frame so the whole pinned scene still fits in one
+   viewport: 6 cells in a plain 2-column/3-row grid (normal flow, no
+   absolute stacking) reveal two at a time — one full grid row per
+   scroll "page" — instead of the old zigzag/center-spine layout. */
+.spine{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:24px 40px;height:min(56vh,460px);margin-top:32px}
+.step-cell{display:flex;flex-direction:column;justify-content:center}
+.step-cell-num{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-bottom:8px;display:block}
+.step-cell h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
+.step-cell p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:.88rem;line-height:1.55}
 @media(max-width:767px){
-  /* Undo the desktop/tablet cross-fade stage: mobile keeps the plain
-     stacked-in-flow layout (pin is disabled here too, see the JS
-     matchMedia block), so steps need their normal document-flow
-     position back instead of overlapping at inset:0. */
-  .spine{height:auto}
-  .step{position:static;inset:auto;pointer-events:auto}
-  .spine::before{left:36px}
-  .step{grid-template-columns:1fr;min-height:auto;padding:18px 0 18px 88px;direction:ltr !important}
-  .step-node{left:36px;top:28px;transform:translate(-50%,0);width:56px;height:56px}
-  .step-node .n{font-size:1rem}
-  .step.step-l .step-c,.step.step-r .step-c{grid-column:1;text-align:left;padding:0}
-  .step-empty{display:none}
-  .step.step-l .step-c::after,.step.step-r .step-c::after{display:none}
-  html[dir="rtl"] .spine::before{left:auto;right:36px}
-  html[dir="rtl"] .step{padding:18px 88px 18px 0}
-  html[dir="rtl"] .step-node{left:auto;right:36px;transform:translate(50%,0)}
-  html[dir="rtl"] .step.step-l .step-c,html[dir="rtl"] .step.step-r .step-c{text-align:right}
+  /* Pin is disabled here too (see the JS matchMedia block) — plain
+     single-column stack, all 6 cells always at full opacity. */
+  .spine{grid-template-columns:1fr;grid-template-rows:none;height:auto;gap:22px}
 }
 
 /* ══════════════════════════════════════════
@@ -1006,10 +971,9 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 
 <!-- ════════════════════════════════════
      SHOWROOM + HOW WE WORK — merged, pinned scene. §01.
-     Left 2/3: How We Work's spine (unchanged). Right 1/3: the
-     showroom vitrine (untouched). Structure + pin only in this pass —
-     step-by-step reveal, mobile pin-disable, RTL mirror and
-     reduced-motion guards land in later passes.
+     Left 2/3: How We Work's 6-cell step grid (2 cols x 3 rows,
+     revealed two at a time per scroll page). Right 1/3: the showroom
+     vitrine (untouched). Pin disabled + plain stacked flow on mobile.
 ════════════════════════════════════ -->
 <section id="showroom-how" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(6vh,48px)">
   <div class="hero-grid-bg" style="opacity:.05"></div>
@@ -1018,31 +982,12 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
       <div class="rv"><div class="sec-num">§ 01 / كيف نعمل</div></div>
       <div class="rv d1"><h2 class="sec-title-l">من الطلب حتى التسليم، شريك واحد مسؤول.</h2></div>
       <div class="spine">
-        <div class="step step-r rv d1">
-          <div class="step-empty"></div>
-          <div class="step-c"><span class="tag">01</span><h3>مراجعة المتطلبات</h3><p>نراجع معك متطلبات مشروعك ونطاقه الفني.</p></div>
-          <div class="step-node"><span class="n">1</span></div>
-        </div>
-        <div class="step step-l rv d2">
-          <div class="step-c"><span class="tag">02</span><h3>التوضيح الفني</h3><p>تُوضّح الأسئلة المفتوحة والمواصفات والقيود قبل مقارنة أي عرض.</p></div>
-          <div class="step-empty"></div>
-          <div class="step-node"><span class="n">2</span></div>
-        </div>
-        <div class="step step-r rv d3">
-          <div class="step-empty"></div>
-          <div class="step-c"><span class="tag">03</span><h3>اختيار المورد / الشريك</h3><p>يُختار المصنّع أو المورد أو شريك المنشأة المتخصص المناسب من شبكتنا المعتمدة.</p></div>
-          <div class="step-node"><span class="n">3</span></div>
-        </div>
-        <div class="step step-l rv d4">
-          <div class="step-c"><span class="tag">04</span><h3>تنسيق العروض والطلبات</h3><p>تُقارَن العروض الفنية والتجارية وتُدمَج في طلب واحد منسق.</p></div>
-          <div class="step-empty"></div>
-          <div class="step-node"><span class="n">4</span></div>
-        </div>
-        <div class="step step-r rv d5">
-          <div class="step-empty"></div>
-          <div class="step-c"><span class="tag">05</span><h3>متابعة الإنتاج والتوثيق والتسليم</h3><p>تُتابَع عمليات الإنتاج وتوثيق الجودة واللوجستيات والتسليم حتى الوجهة.</p></div>
-          <div class="step-node done"><span class="n">✓</span></div>
-        </div>
+        <div class="step-cell rv d1"><span class="step-cell-num">01</span><h3>مراجعة المتطلبات</h3><p>نراجع معك متطلبات مشروعك ونطاقه الفني.</p></div>
+        <div class="step-cell rv d1"><span class="step-cell-num">02</span><h3>التوضيح الفني</h3><p>تُوضّح الأسئلة المفتوحة والمواصفات والقيود قبل مقارنة أي عرض.</p></div>
+        <div class="step-cell rv d2"><span class="step-cell-num">03</span><h3>اختيار المورد / الشريك</h3><p>يُختار المصنّع أو المورد أو شريك المنشأة المتخصص المناسب من شبكتنا المعتمدة.</p></div>
+        <div class="step-cell rv d2"><span class="step-cell-num">04</span><h3>تنسيق العروض والطلبات</h3><p>تُقارَن العروض الفنية والتجارية وتُدمَج في طلب واحد منسق.</p></div>
+        <div class="step-cell rv d3"><span class="step-cell-num">05</span><h3>الإنتاج وتوثيق الجودة</h3><p>يُتابَع تقدّم التصنيع وتُوثَّق الجودة وتُتحقَّق في كل مرحلة.</p></div>
+        <div class="step-cell rv d3"><span class="step-cell-num">06</span><h3>اللوجستيات ومتابعة التسليم</h3><p>يُتابَع التجميع ووثائق التصدير والشحن والتسليم حتى الوجهة.</p></div>
       </div>
     </div>
     <div class="showroom-vitrine rv d2">
@@ -1389,8 +1334,11 @@ const T = {
   "how4.title": "Teklif & Sipariş Koordinasyonu",
   "how4.body": "Teknik ve ticari teklifler karşılaştırılır, tek koordine edilen siparişte birleştirilir.",
   "how5.num": "05",
-  "how5.title": "Üretim, Dokümantasyon & Teslimat Takibi",
-  "how5.body": "Üretim, kalite dokümantasyonu, lojistik ve teslimat hedefe ulaşana kadar takip edilir.",
+  "how5.title": "Üretim ve Kalite Dokümantasyonu",
+  "how5.body": "Üretim ilerleyişi ve kalite dokümantasyonu her aşamada takip edilir ve doğrulanır.",
+  "how6.num": "06",
+  "how6.title": "Lojistik ve Teslimat Takibi",
+  "how6.body": "Konsolidasyon, ihracat dokümantasyonu, sevkiyat ve teslimat hedefe ulaşana kadar takip edilir.",
   "show.item1.name": "Hidrolik & Pnömatik",
   "show.item2.name": "Motor & Redüktör",
   "show.item3.name": "Pompa & Vana",
@@ -1472,8 +1420,11 @@ const T = {
   "how4.title": "Offer & Order Coordination",
   "how4.body": "Technical and commercial offers are compared and consolidated into one coordinated order.",
   "how5.num": "05",
-  "how5.title": "Production, Documentation & Delivery Follow-Up",
-  "how5.body": "Production, quality documentation, logistics and delivery are followed through to destination.",
+  "how5.title": "Production & Quality Documentation",
+  "how5.body": "Manufacturing progress and quality documentation are tracked and verified at each stage.",
+  "how6.num": "06",
+  "how6.title": "Logistics & Delivery Follow-Up",
+  "how6.body": "Consolidation, export documentation, shipping and delivery are followed through to destination.",
   "show.item1.name": "Hydraulic & Pneumatic",
   "show.item2.name": "Gear Motors & Reducers",
   "show.item3.name": "Pumps & Valves",
@@ -1555,8 +1506,11 @@ const T = {
   "how4.title": "تنسيق العروض والطلبات",
   "how4.body": "تُقارَن العروض الفنية والتجارية وتُدمَج في طلب واحد منسق.",
   "how5.num": "05",
-  "how5.title": "متابعة الإنتاج والتوثيق والتسليم",
-  "how5.body": "تُتابَع عمليات الإنتاج وتوثيق الجودة واللوجستيات والتسليم حتى الوجهة.",
+  "how5.title": "الإنتاج وتوثيق الجودة",
+  "how5.body": "يُتابَع تقدّم التصنيع وتُوثَّق الجودة وتُتحقَّق في كل مرحلة.",
+  "how6.num": "06",
+  "how6.title": "اللوجستيات ومتابعة التسليم",
+  "how6.body": "يُتابَع التجميع ووثائق التصدير والشحن والتسليم حتى الوجهة.",
   "show.item1.name": "الهيدروليك والهوائيات",
   "show.item2.name": "المحركات والمخفضات",
   "show.item3.name": "المضخات والصمامات",
@@ -1742,68 +1696,66 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
   /* §2b/§2c — Showroom + How-We-Work pinned scene, responsive per
      breakpoint via ScrollTrigger.matchMedia (which owns setup/teardown
      itself on resize/rotation, so there's no manual cleanup to track):
-     - >=768px: pinned. The 5 .step elements are stacked exactly on top
-       of each other (CSS position:absolute;inset:0 on a fixed-height
-       .spine "stage" — see the CSS above) and cross-fade in place:
-       only the current step is opacity 1 (others 0, not a dim .35,
-       since .35 on stacked-overlapping elements would show all 5
-       superimposed at once); inactive steps also get pointer-events
-       none so they can't be clicked/selected while invisible. Driven
-       by the pin's own scroll progress (self.progress, 0->1 across
-       start->end — the same math getBoundingClientRect would give,
-       without a second scroll listener duplicating what ScrollTrigger
-       already tracks), split into as many equal windows as there are
-       steps. Only transform + opacity animate, with a light spring
-       ease on the way in. Under reduced-motion the same end states
-       apply instantly instead of tweening. The vitrine's own CSS
-       keyframe animation keeps running throughout, untouched by any
-       of this.
+     - >=768px: pinned. The 6 .step-cell elements sit in a plain
+       2-col/3-row grid (normal flow, no absolute stacking) and reveal
+       one ROW PAIR at a time as the user scrolls: row 1 (cells 0-1)
+       is visible from the start, row 2 (cells 2-3) joins it, then row
+       3 (cells 4-5) — cumulative, nothing disappears once shown.
+       Driven by the pin's own scroll progress (self.progress, 0->1
+       across start->end — the same math getBoundingClientRect would
+       give, without a second scroll listener duplicating what
+       ScrollTrigger already tracks), split into 3 equal windows (one
+       per row). Both cells of a row animate together (no stagger).
+       Only transform + opacity animate, with a light spring ease on
+       the way in. Under reduced-motion the same end states apply
+       instantly instead of tweening. The vitrine's own CSS keyframe
+       animation keeps running throughout, untouched by any of this.
      - <768px: no pin at all (sticky/pin feels janky at this size);
-       steps go back to plain stacked-in-flow layout at full opacity
-       via clearProps (CSS also resets position:static there), so
-       nothing here fights the mobile media query.
+       cells go back to plain stacked-in-flow layout at full opacity
+       via clearProps, so nothing here fights the mobile media query.
      RTL: self.progress is a vertical scroll fraction, identical
      regardless of text direction, so no logic here needs to change
      for Arabic — only the CSS column order mirrors (inherited
      direction:rtl on the auto-placement grid, same mechanism as the
      What We Do rows / About stat rail). */
   var showroomHowScene = document.querySelector('#showroom-how');
-  var howSteps = showroomHowScene ? Array.prototype.slice.call(showroomHowScene.querySelectorAll('.spine .step')) : [];
+  var howSteps = showroomHowScene ? Array.prototype.slice.call(showroomHowScene.querySelectorAll('.spine .step-cell')) : [];
+  var HOW_ROWS = 3; // 6 cells / 2 per row
 
   if(showroomHowScene && howSteps.length && window.gsap && window.ScrollTrigger){
-    var activeStepIndex = -1;
-    function setActiveStep(idx){
-      if(idx === activeStepIndex) return;
-      activeStepIndex = idx;
+    var visiblePairs = -1;
+    function setVisiblePairs(pairs){
+      if(pairs === visiblePairs) return;
+      visiblePairs = pairs;
       howSteps.forEach(function(el, i){
-        var isActive = i === idx;
-        var vars = { opacity: isActive ? 1 : 0, scale: isActive ? 1.02 : 1, y: isActive ? 0 : 12, pointerEvents: isActive ? 'auto' : 'none' };
+        var isVisible = Math.floor(i / 2) < pairs;
+        var vars = { opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 12 };
         if(reduceMotion){ gsap.set(el, vars); }
-        else { gsap.to(el, Object.assign({ duration: .5, ease: isActive ? 'back.out(1.6)' : 'power2.out' }, vars)); }
+        else { gsap.to(el, Object.assign({ duration: .5, ease: isVisible ? 'back.out(1.6)' : 'power2.out' }, vars)); }
       });
     }
 
     ScrollTrigger.matchMedia({
       '(min-width: 768px)': function(){
-        activeStepIndex = -1;
-        gsap.set(howSteps, { opacity: 0, scale: 1, y: 12, pointerEvents: 'none' });
-        setActiveStep(0);
+        visiblePairs = -1;
+        gsap.set(howSteps, { opacity: 0, y: 12 });
+        setVisiblePairs(1);
         var st = ScrollTrigger.create({
           trigger: showroomHowScene,
           start: 'top top',
-          end: '+=1000',
+          end: '+=900',
           pin: true,
           pinSpacing: true,
           onUpdate: function(self){
-            var idx = Math.min(howSteps.length - 1, Math.floor(self.progress * howSteps.length));
-            setActiveStep(idx);
+            var pairs = Math.min(HOW_ROWS, Math.floor(self.progress * HOW_ROWS) + 1);
+            setVisiblePairs(pairs);
           }
         });
         return function(){ st.kill(); };
       },
       '(max-width: 767px)': function(){
-        activeStepIndex = -1;
-        gsap.set(howSteps, { clearProps: 'opacity,scale,transform,pointerEvents' });
+        visiblePairs = -1;
+        gsap.set(howSteps, { clearProps: 'opacity,transform' });
         return function(){};
       }
     });

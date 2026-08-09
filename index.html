@@ -1702,68 +1702,66 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
   /* §2b/§2c — Showroom + How-We-Work pinned scene, responsive per
      breakpoint via ScrollTrigger.matchMedia (which owns setup/teardown
      itself on resize/rotation, so there's no manual cleanup to track):
-     - >=768px: pinned. The 5 .step elements are stacked exactly on top
-       of each other (CSS position:absolute;inset:0 on a fixed-height
-       .spine "stage" — see the CSS above) and cross-fade in place:
-       only the current step is opacity 1 (others 0, not a dim .35,
-       since .35 on stacked-overlapping elements would show all 5
-       superimposed at once); inactive steps also get pointer-events
-       none so they can't be clicked/selected while invisible. Driven
-       by the pin's own scroll progress (self.progress, 0->1 across
-       start->end — the same math getBoundingClientRect would give,
-       without a second scroll listener duplicating what ScrollTrigger
-       already tracks), split into as many equal windows as there are
-       steps. Only transform + opacity animate, with a light spring
-       ease on the way in. Under reduced-motion the same end states
-       apply instantly instead of tweening. The vitrine's own CSS
-       keyframe animation keeps running throughout, untouched by any
-       of this.
+     - >=768px: pinned. The 6 .step-cell elements sit in a plain
+       2-col/3-row grid (normal flow, no absolute stacking) and reveal
+       one ROW PAIR at a time as the user scrolls: row 1 (cells 0-1)
+       is visible from the start, row 2 (cells 2-3) joins it, then row
+       3 (cells 4-5) — cumulative, nothing disappears once shown.
+       Driven by the pin's own scroll progress (self.progress, 0->1
+       across start->end — the same math getBoundingClientRect would
+       give, without a second scroll listener duplicating what
+       ScrollTrigger already tracks), split into 3 equal windows (one
+       per row). Both cells of a row animate together (no stagger).
+       Only transform + opacity animate, with a light spring ease on
+       the way in. Under reduced-motion the same end states apply
+       instantly instead of tweening. The vitrine's own CSS keyframe
+       animation keeps running throughout, untouched by any of this.
      - <768px: no pin at all (sticky/pin feels janky at this size);
-       steps go back to plain stacked-in-flow layout at full opacity
-       via clearProps (CSS also resets position:static there), so
-       nothing here fights the mobile media query.
+       cells go back to plain stacked-in-flow layout at full opacity
+       via clearProps, so nothing here fights the mobile media query.
      RTL: self.progress is a vertical scroll fraction, identical
      regardless of text direction, so no logic here needs to change
      for Arabic — only the CSS column order mirrors (inherited
      direction:rtl on the auto-placement grid, same mechanism as the
      What We Do rows / About stat rail). */
   var showroomHowScene = document.querySelector('#showroom-how');
-  var howSteps = showroomHowScene ? Array.prototype.slice.call(showroomHowScene.querySelectorAll('.spine .step')) : [];
+  var howSteps = showroomHowScene ? Array.prototype.slice.call(showroomHowScene.querySelectorAll('.spine .step-cell')) : [];
+  var HOW_ROWS = 3; // 6 cells / 2 per row
 
   if(showroomHowScene && howSteps.length && window.gsap && window.ScrollTrigger){
-    var activeStepIndex = -1;
-    function setActiveStep(idx){
-      if(idx === activeStepIndex) return;
-      activeStepIndex = idx;
+    var visiblePairs = -1;
+    function setVisiblePairs(pairs){
+      if(pairs === visiblePairs) return;
+      visiblePairs = pairs;
       howSteps.forEach(function(el, i){
-        var isActive = i === idx;
-        var vars = { opacity: isActive ? 1 : 0, scale: isActive ? 1.02 : 1, y: isActive ? 0 : 12, pointerEvents: isActive ? 'auto' : 'none' };
+        var isVisible = Math.floor(i / 2) < pairs;
+        var vars = { opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 12 };
         if(reduceMotion){ gsap.set(el, vars); }
-        else { gsap.to(el, Object.assign({ duration: .5, ease: isActive ? 'back.out(1.6)' : 'power2.out' }, vars)); }
+        else { gsap.to(el, Object.assign({ duration: .5, ease: isVisible ? 'back.out(1.6)' : 'power2.out' }, vars)); }
       });
     }
 
     ScrollTrigger.matchMedia({
       '(min-width: 768px)': function(){
-        activeStepIndex = -1;
-        gsap.set(howSteps, { opacity: 0, scale: 1, y: 12, pointerEvents: 'none' });
-        setActiveStep(0);
+        visiblePairs = -1;
+        gsap.set(howSteps, { opacity: 0, y: 12 });
+        setVisiblePairs(1);
         var st = ScrollTrigger.create({
           trigger: showroomHowScene,
           start: 'top top',
-          end: '+=1000',
+          end: '+=900',
           pin: true,
           pinSpacing: true,
           onUpdate: function(self){
-            var idx = Math.min(howSteps.length - 1, Math.floor(self.progress * howSteps.length));
-            setActiveStep(idx);
+            var pairs = Math.min(HOW_ROWS, Math.floor(self.progress * HOW_ROWS) + 1);
+            setVisiblePairs(pairs);
           }
         });
         return function(){ st.kill(); };
       },
       '(max-width: 767px)': function(){
-        activeStepIndex = -1;
-        gsap.set(howSteps, { clearProps: 'opacity,scale,transform,pointerEvents' });
+        visiblePairs = -1;
+        gsap.set(howSteps, { clearProps: 'opacity,transform' });
         return function(){};
       }
     });
