@@ -1025,27 +1025,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
     </div>
   </div>
 </section>
-<script>
-(function(){
-  /* Flexible card count: reads whatever is listed here, splits it
-     alternately into the two columns, then duplicates each column's
-     list so the CSS keyframe loop (translateY 0 <-> -50%) is seamless
-     regardless of how many images actually exist. */
-  var SHOWROOM_IMAGES = ['product-01.jpg','product-02.jpg','product-03.jpg','product-04.jpg','product-05.jpg','product-06.jpg','product-07.jpg','product-08.jpg'];
-  var t1 = document.getElementById('sr-track-1');
-  var t2 = document.getElementById('sr-track-2');
-  if(!t1 || !t2 || !SHOWROOM_IMAGES.length) return;
-  function cardHTML(src, idx){
-    var label = 'PRODUCT ' + String(idx + 1).padStart(2, '0');
-    return '<div class="sr-card"><img src="/images/showroom/' + src + '" alt="' + label + '" loading="lazy" width="800" height="1000"><span class="sr-cap">' + label + '</span></div>';
-  }
-  var col1 = [], col2 = [];
-  SHOWROOM_IMAGES.forEach(function(src, i){ (i % 2 === 0 ? col1 : col2).push(cardHTML(src, i)); });
-  if(!col2.length) col2 = col1.slice();
-  t1.innerHTML = col1.join('') + col1.join('');
-  t2.innerHTML = col2.join('') + col2.join('');
-})();
-</script>
 
 <!-- ════════════════════════════════════
      WHAT WE DO  (light-alt --bg2) — §02, distinct tone, hollow big numbers
@@ -1630,6 +1609,41 @@ window.toggleMobDd = toggleMobDd;
 window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(b)b.classList.toggle('vis',scrollY>400);},{passive:true});
 </script>
 
+<script>
+(function(){
+  /* Showroom vitrine cards. Runs after the T-object script above (needs
+     window.T + the already-set document.documentElement.lang), so it can
+     show each card's real, translated name instead of a generic label.
+     Flexible card count: reads whatever is listed here, splits it
+     alternately into the two columns, then duplicates each column's list
+     so the CSS keyframe loop (translateY 0 <-> -50%) is seamless regardless
+     of how many images actually exist. */
+  var SHOWROOM_ITEMS = [
+    { file: 'hydraulic-pneumatic-products.png', nameKey: 'show.item1.name', alt: 'Hydraulic and pneumatic components — VORQA Global' },
+    { file: 'gear-motor-reducer.png',           nameKey: 'show.item2.name', alt: 'Gear motors and reducers — VORQA Global' },
+    { file: 'pump-valve.png',                   nameKey: 'show.item3.name', alt: 'Industrial pumps and valves — VORQA Global' },
+    { file: 'metal-raw-materials.png',          nameKey: 'show.item4.name', alt: 'Steel profiles and metal raw materials — VORQA Global' },
+    { file: 'fitting-piping-products.png',      nameKey: 'show.item5.name', alt: 'Pipe fittings and piping components — VORQA Global' },
+    { file: 'insulation-materials.png',         nameKey: 'show.item6.name', alt: 'Thermal insulation materials — VORQA Global' },
+    { file: 'electrical-automation.png',        nameKey: 'show.item7.name', alt: 'Electrical and automation equipment — VORQA Global' },
+    { file: 'silo-equipment.png',               nameKey: 'show.item8.name', alt: 'Silo and bulk handling equipment — VORQA Global' }
+  ];
+  var t1 = document.getElementById('sr-track-1');
+  var t2 = document.getElementById('sr-track-2');
+  if(!t1 || !t2 || !SHOWROOM_ITEMS.length) return;
+  var lang = document.documentElement.lang || 'en';
+  var dict = (window.T && window.T[lang]) || {};
+  function cardHTML(item){
+    var name = dict[item.nameKey] || item.alt;
+    return '<div class="sr-card"><img src="/images/showroom/' + item.file + '" alt="' + item.alt + '" loading="lazy" width="800" height="1000"><span class="sr-cap">' + name + '</span></div>';
+  }
+  var col1 = [], col2 = [];
+  SHOWROOM_ITEMS.forEach(function(item, i){ (i % 2 === 0 ? col1 : col2).push(cardHTML(item)); });
+  if(!col2.length) col2 = col1.slice();
+  t1.innerHTML = col1.join('') + col1.join('');
+  t2.innerHTML = col2.join('') + col2.join('');
+})();
+</script>
 
 <!-- BACK TO TOP -->
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Yukarı Git" aria-label="Yukarı Git">
