@@ -449,8 +449,7 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 .ind-rail::-webkit-scrollbar{height:4px}
 .ind-rail::-webkit-scrollbar-thumb{background:var(--line-light);border-radius:2px}
 .ind-panel{position:relative;flex:0 0 clamp(210px,23vw,280px);height:clamp(380px,46vw,480px);scroll-snap-align:start;
-  border:1px solid var(--line-light);overflow:hidden;cursor:pointer;text-decoration:none;display:block;
-  transition:flex-basis .5s cubic-bezier(.2,.8,.2,1),border-color .3s;background:var(--card)}
+  border:1px solid var(--line-light);overflow:hidden;cursor:pointer;text-decoration:none;display:block;background:var(--card)}
 .ind-panel:hover{flex-basis:clamp(320px,40vw,480px);border-color:var(--orange)}
 .ind-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;z-index:3;background:linear-gradient(90deg,var(--orange),transparent);opacity:.75}
 .ind-panel .ind-img{position:absolute;inset:0;z-index:0}
@@ -755,6 +754,41 @@ html[dir="rtl"] .hero-h1{direction:rtl}
   transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1)}
 .rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
+
+/* ── Industries rail panels: .rv's own `transition` shorthand above
+   fully replaces .ind-panel's hover transition (flex-basis/border-
+   color) wherever the two rules tie on specificity — CSS `transition`
+   doesn't merge across rules, the winning declaration replaces the
+   whole list. This selector is deliberately more specific than plain
+   .rv/.rv.on so it wins regardless of source order, and lists every
+   property both hover AND reveal need animated so neither one snaps. */
+.ind-rail .ind-panel{
+  transition:
+    flex-basis .55s cubic-bezier(.2,.8,.2,1),
+    border-color .3s,
+    opacity .9s cubic-bezier(.22,1,.36,1),
+    transform .9s cubic-bezier(.22,1,.36,1),
+    filter .9s cubic-bezier(.22,1,.36,1);
+}
+/* Directional entrance on top of .rv's translateY+scale+blur: panels
+   also drift in from the left so the rail reads as a left-to-right
+   cascade rather than every panel fading in place at once. transform
+   never affects layout/scrollWidth, so this can't jitter the rail's
+   own horizontal scrollbar. RTL: panels drift in from the right
+   instead, matching direction:rtl already reversing the rail's visual
+   order — first-DOM-panel (shortest delay) is now the rightmost panel,
+   so the cascade still starts at the true reading-order edge without
+   needing to renumber the delays themselves. */
+.ind-rail .ind-panel.rv{transform:translateY(44px) scale(.972) translateX(-24px)}
+.ind-rail .ind-panel.rv.on{transform:translateY(0) scale(1) translateX(0)}
+html[dir="rtl"] .ind-rail .ind-panel.rv{transform:translateY(44px) scale(.972) translateX(24px)}
+/* More pronounced stagger than the sitewide .d1-d4 (shared/reused
+   everywhere else) so the cascade reads as ritmik/one-by-one rather
+   than "everything nearly at once" across a wide horizontal rail. */
+.ind-rail .ind-panel.d1{transition-delay:.12s}
+.ind-rail .ind-panel.d2{transition-delay:.24s}
+.ind-rail .ind-panel.d3{transition-delay:.36s}
+.ind-rail .ind-panel.d4{transition-delay:.48s}
 
 /* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
    glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
