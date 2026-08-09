@@ -421,6 +421,12 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 .step.step-r .step-c::after{content:'';position:absolute;left:0;top:50%;width:clamp(28px,4.5vw,64px);height:1px;background:var(--line-light);transform:translate(-100%,-50%)}
 html[dir="rtl"] .step{direction:rtl}
 @media(max-width:767px){
+  /* Undo the desktop/tablet cross-fade stage: mobile keeps the plain
+     stacked-in-flow layout (pin is disabled here too, see the JS
+     matchMedia block), so steps need their normal document-flow
+     position back instead of overlapping at inset:0. */
+  .spine{height:auto}
+  .step{position:static;inset:auto;pointer-events:auto}
   .spine::before{left:36px}
   .step{grid-template-columns:1fr;min-height:auto;padding:18px 0 18px 88px;direction:ltr !important}
   .step-node{left:36px;top:28px;transform:translate(-50%,0);width:56px;height:56px}
