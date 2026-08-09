@@ -1748,20 +1748,26 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
   /* §2b/§2c — Showroom + How-We-Work pinned scene, responsive per
      breakpoint via ScrollTrigger.matchMedia (which owns setup/teardown
      itself on resize/rotation, so there's no manual cleanup to track):
-     - >=768px: pinned, step-by-step reveal driven by the pin's own
-       scroll progress (self.progress, 0->1 across start->end — the
-       same math getBoundingClientRect would give, without a second
-       scroll listener duplicating what ScrollTrigger already tracks).
-       Progress splits into as many equal windows as there are spine
-       steps (5 steps = 4 internal thresholds); only transform +
-       opacity animate, with a light spring ease on the way in. Under
-       reduced-motion the same end states apply instantly instead of
-       tweening. The vitrine's own CSS keyframe animation keeps
-       running throughout, untouched by any of this.
-     - <768px: no pin at all (sticky/pin feels janky at this size —
-       see CLAUDE.md-adjacent brief); steps go back to plain flow at
-       full opacity via clearProps, so nothing here fights the
-       `!important` CSS fallback in the mobile media query.
+     - >=768px: pinned. The 5 .step elements are stacked exactly on top
+       of each other (CSS position:absolute;inset:0 on a fixed-height
+       .spine "stage" — see the CSS above) and cross-fade in place:
+       only the current step is opacity 1 (others 0, not a dim .35,
+       since .35 on stacked-overlapping elements would show all 5
+       superimposed at once); inactive steps also get pointer-events
+       none so they can't be clicked/selected while invisible. Driven
+       by the pin's own scroll progress (self.progress, 0->1 across
+       start->end — the same math getBoundingClientRect would give,
+       without a second scroll listener duplicating what ScrollTrigger
+       already tracks), split into as many equal windows as there are
+       steps. Only transform + opacity animate, with a light spring
+       ease on the way in. Under reduced-motion the same end states
+       apply instantly instead of tweening. The vitrine's own CSS
+       keyframe animation keeps running throughout, untouched by any
+       of this.
+     - <768px: no pin at all (sticky/pin feels janky at this size);
+       steps go back to plain stacked-in-flow layout at full opacity
+       via clearProps (CSS also resets position:static there), so
+       nothing here fights the mobile media query.
      RTL: self.progress is a vertical scroll fraction, identical
      regardless of text direction, so no logic here needs to change
      for Arabic — only the CSS column order mirrors (inherited
@@ -1777,7 +1783,7 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
       activeStepIndex = idx;
       howSteps.forEach(function(el, i){
         var isActive = i === idx;
-        var vars = { opacity: isActive ? 1 : .35, scale: isActive ? 1.02 : 1, y: isActive ? -3 : 0 };
+        var vars = { opacity: isActive ? 1 : 0, scale: isActive ? 1.02 : 1, y: isActive ? 0 : 12, pointerEvents: isActive ? 'auto' : 'none' };
         if(reduceMotion){ gsap.set(el, vars); }
         else { gsap.to(el, Object.assign({ duration: .5, ease: isActive ? 'back.out(1.6)' : 'power2.out' }, vars)); }
       });
@@ -1786,12 +1792,12 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
     ScrollTrigger.matchMedia({
       '(min-width: 768px)': function(){
         activeStepIndex = -1;
-        gsap.set(howSteps, { opacity: .35, scale: 1, y: 0 });
+        gsap.set(howSteps, { opacity: 0, scale: 1, y: 12, pointerEvents: 'none' });
         setActiveStep(0);
         var st = ScrollTrigger.create({
           trigger: showroomHowScene,
           start: 'top top',
-          end: '+=750',
+          end: '+=1000',
           pin: true,
           pinSpacing: true,
           onUpdate: function(self){
@@ -1803,7 +1809,7 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
       },
       '(max-width: 767px)': function(){
         activeStepIndex = -1;
-        gsap.set(howSteps, { clearProps: 'opacity,scale,transform' });
+        gsap.set(howSteps, { clearProps: 'opacity,scale,transform,pointerEvents' });
         return function(){};
       }
     });
