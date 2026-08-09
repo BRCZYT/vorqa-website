@@ -2,8 +2,12 @@ import puppeteer from 'puppeteer';
 const browser = await puppeteer.launch({ headless: 'new' });
 
 async function shot(page, path) {
-  const rail = await page.$('.ind-rail'); // re-query fresh each time — stale handles cache their bounding box
-  await rail.screenshot({ path });
+  const clip = await page.evaluate(() => {
+    const rail = document.querySelector('.ind-rail');
+    const r = rail.getBoundingClientRect();
+    return { x: r.x, y: r.y + window.scrollY, width: r.width, height: r.height };
+  });
+  await page.screenshot({ path, clip });
 }
 
 async function run(width, height, wheelCount, wheelDelta, label) {
@@ -35,6 +39,12 @@ async function run(width, height, wheelCount, wheelDelta, label) {
 
   await new Promise(r => setTimeout(r, 400));
   await shot(page, `_shot_${label}_3_770ms.png`);
+
+  const hoverInfo = await page.evaluate(() => {
+    const p = document.querySelectorAll('.ind-panel')[0];
+    return { matches: p.matches(':hover'), flexBasis: getComputedStyle(p).flexBasis, width: p.getBoundingClientRect().width };
+  });
+  console.log(`[${label}] hoverInfo:`, hoverInfo);
 
   const railScrollWidth = await page.evaluate(() => document.querySelector('.ind-rail').scrollWidth);
   console.log(`[${label}] rail scrollWidth after hover:`, railScrollWidth);
