@@ -453,18 +453,18 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 .ind-rail::-webkit-scrollbar-thumb{background:var(--line-light);border-radius:2px}
 .ind-panel{position:relative;flex:0 0 clamp(210px,23vw,280px);height:clamp(380px,46vw,480px);scroll-snap-align:start;
   border:1px solid var(--line-light);overflow:hidden;cursor:pointer;text-decoration:none;display:block;background:var(--card)}
-.ind-panel:hover{flex-basis:clamp(320px,40vw,480px);border-color:var(--orange)}
+.ind-panel:hover{flex-basis:clamp(300px,32vw,400px);border-color:var(--orange)}
 .ind-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;z-index:3;background:linear-gradient(90deg,var(--orange),transparent);opacity:.75}
 .ind-panel .ind-img{position:absolute;inset:0;z-index:0}
-.ind-panel .ind-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);opacity:.72;transition:opacity .5s,filter .5s,transform 8s linear;transform:scale(1.04)}
+.ind-panel .ind-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);opacity:.72;transition:opacity .6s,filter .6s,transform 8s linear;transform:scale(1.04)}
 .ind-panel:hover .ind-img img{opacity:1;filter:saturate(1);transform:scale(1.1)}
-.ind-panel .ind-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(5,23,40,.72) 0%,rgba(5,23,40,.28) 45%,rgba(5,23,40,.42) 100%);transition:background .5s}
+.ind-panel .ind-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(5,23,40,.72) 0%,rgba(5,23,40,.28) 45%,rgba(5,23,40,.42) 100%);transition:background .6s}
 .ind-panel:hover .ind-veil{background:linear-gradient(0deg,rgba(5,23,40,.82) 0%,rgba(5,23,40,.05) 55%,rgba(5,23,40,.2) 100%)}
 .ind-panel .ind-pnum{position:absolute;top:20px;right:20px;z-index:2;font-family:'Sora Variable',Sora,sans-serif;font-weight:800;font-size:2.1rem;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.4);opacity:.6;transition:.4s}
 .ind-panel:hover .ind-pnum{-webkit-text-stroke:1px var(--orange);opacity:.85}
 .ind-panel .ind-lbl{position:absolute;left:0;bottom:0;right:0;padding:20px;z-index:2}
 .ind-panel .ind-t{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.02rem;color:#fff;line-height:1.2;margin-bottom:6px}
-.ind-panel .ind-d{font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.4;max-height:0;overflow:hidden;opacity:0;transition:.5s}
+.ind-panel .ind-d{font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.4;max-height:0;overflow:hidden;opacity:0;transition:.6s}
 .ind-panel:hover .ind-d{max-height:90px;opacity:1;margin-bottom:12px}
 .ind-panel .ind-go{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);display:inline-flex;align-items:center;gap:7px;opacity:0;transition:opacity .5s .1s}
 .ind-panel:hover .ind-go{opacity:1}
@@ -767,7 +767,7 @@ html[dir="rtl"] .hero-h1{direction:rtl}
    property both hover AND reveal need animated so neither one snaps. */
 .ind-rail .ind-panel{
   transition:
-    flex-basis .55s cubic-bezier(.2,.8,.2,1),
+    flex-basis .7s cubic-bezier(.33,0,.2,1),
     border-color .3s,
     opacity .9s cubic-bezier(.22,1,.36,1),
     transform .9s cubic-bezier(.22,1,.36,1),
@@ -782,9 +782,9 @@ html[dir="rtl"] .hero-h1{direction:rtl}
    order — first-DOM-panel (shortest delay) is now the rightmost panel,
    so the cascade still starts at the true reading-order edge without
    needing to renumber the delays themselves. */
-.ind-rail .ind-panel.rv{transform:translateY(44px) scale(.972) translateX(-24px)}
+.ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(-24px);filter:blur(4px)}
 .ind-rail .ind-panel.rv.on{transform:translateY(0) scale(1) translateX(0)}
-html[dir="rtl"] .ind-rail .ind-panel.rv{transform:translateY(44px) scale(.972) translateX(24px)}
+html[dir="rtl"] .ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(24px)}
 /* More pronounced stagger than the sitewide .d1-d4 (shared/reused
    everywhere else) so the cascade reads as ritmik/one-by-one rather
    than "everything nearly at once" across a wide horizontal rail. */
