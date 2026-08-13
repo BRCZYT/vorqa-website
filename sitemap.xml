@@ -98,13 +98,40 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/contact/"/>
   </url>
 
-  <!-- Academy blog posts (vorqa-blog/) -->
+  <!-- Beton Santrali post — fully localized tr/en/ar (unlike the other flat
+       vorqa-blog/ posts below), served under each language's Academy path. -->
   <url>
-    <loc>https://www.vorqaglobal.com/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>never</changefreq>
+    <loc>https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
   </url>
+  <url>
+    <loc>https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+  </url>
+  <url>
+    <loc>https://www.vorqaglobal.com/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
+  </url>
+
+  <!-- Academy blog posts (vorqa-blog/) -->
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html</loc>
     <lastmod>2026-04-22</lastmod>
