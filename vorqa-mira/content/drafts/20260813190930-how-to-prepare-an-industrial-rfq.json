@@ -1,0 +1,138 @@
+{
+  "version": "3.1",
+  "id": "20260813190930-how-to-prepare-an-industrial-rfq",
+  "created_at": "2026-08-13T19:09:30.893964+00:00",
+  "updated_at": "2026-08-13T19:09:30.893964+00:00",
+  "topic": "How to prepare an industrial RFQ",
+  "persona": "MIRA",
+  "persona_label": "Mira | VORQA AI Industry Analyst",
+  "content_type": "RFQ Guidance",
+  "platform_goal": "LinkedIn education",
+  "master_language": "EN",
+  "master_content": "How to prepare an industrial RFQ\n\nA sound industrial procurement decision is not made by comparing price alone. Technical fit, scope clarity, documentation needs, lead-time assumptions, and coordination responsibilities should be reviewed together.\n\nThat makes supplier comparison more useful because it shows risk before the purchase decision.\n\nWhat would you clarify first before comparing supplier offers?\n\nMira | VORQA AI Industry Analyst",
+  "sources_used": [
+    "BRAND_RULES.md",
+    "CONTENT_TYPES.md",
+    "LANGUAGE_RULES.md",
+    "MARKET_INTELLIGENCE.md",
+    "MENA_CULTURE.md",
+    "PLATFORM_RULES.md",
+    "SALES_RULES.md",
+    "VORQA_TRUTH.md"
+  ],
+  "platform_targets": [
+    "linkedin",
+    "instagram",
+    "facebook"
+  ],
+  "fact_validation": {
+    "prohibited": [],
+    "verify_before_use": [],
+    "passed": true,
+    "human_review_required": true
+  },
+  "platform_adaptations": {
+    "linkedin": {
+      "status": "DRAFT",
+      "copy": "How to prepare an industrial RFQ\n\nA sound industrial procurement decision is not made by comparing price alone.\n\nTechnical fit, scope clarity, documentation needs, lead-time assumptions, and coordination responsibilities should be reviewed together. That makes supplier comparison more useful because it shows risk before the purchase decision.\n\nWhat would you clarify first before comparing options?\n\nMira | VORQA AI Industry Analyst\n#Procurement #IndustrialSourcing #B2B #RFQ",
+      "continuity": {
+        "score": 1.0,
+        "missing_terms": []
+      },
+      "visual_brief": {
+        "format": "carousel",
+        "aspect_ratio": "1200x1200 or carousel",
+        "headline": "How to prepare an industrial RFQ",
+        "supporting_text": "One clear procurement insight per slide or graphic.",
+        "image_type": "branded diagram, component graphic, process visual, or typography-led industrial visual",
+        "real_imagery_required": false,
+        "canva_template_category": "educational-industrial",
+        "language_version": "EN",
+        "cta_placement": "final slide or caption ending"
+      },
+      "notes": [
+        "Derived from master_content. Human review required."
+      ]
+    },
+    "instagram": {
+      "status": "DRAFT",
+      "copy": "How to prepare an industrial RFQ\n\nA sound industrial procurement decision is not made by comparing price alone.\n\nA sound industrial procurement decision is not made by comparing price alone. Technical fit, scope clarity, documentation needs, lead-time assumptions, and coordination responsibilities should be reviewed together.\n\nThat makes supplier comparison more useful because it shows risk before the purchase decision.\n\nMira | VORQA AI Industry Analyst\n#Procurement #IndustrialSourcing #B2B #RFQ",
+      "continuity": {
+        "score": 1.0,
+        "missing_terms": []
+      },
+      "visual_brief": {
+        "format": "carousel",
+        "aspect_ratio": "1080x1350",
+        "headline": "How to prepare an industrial RFQ",
+        "supporting_text": "One clear procurement insight per slide or graphic.",
+        "image_type": "branded diagram, component graphic, process visual, or typography-led industrial visual",
+        "real_imagery_required": false,
+        "canva_template_category": "educational-industrial",
+        "language_version": "EN",
+        "cta_placement": "final slide or caption ending"
+      },
+      "notes": [
+        "Derived from master_content. Human review required."
+      ]
+    },
+    "facebook": {
+      "status": "DRAFT",
+      "copy": "How to prepare an industrial RFQ\n\nA sound industrial procurement decision is not made by comparing price alone. Technical fit, scope clarity, documentation needs, lead-time assumptions, and coordination responsibilities should be reviewed together.\n\nThat makes supplier comparison more useful because it shows risk before the purchase decision.\n\nHuman approval required before publishing.",
+      "continuity": {
+        "score": 1.0,
+        "missing_terms": []
+      },
+      "visual_brief": {
+        "format": "static post graphic",
+        "aspect_ratio": "1200x630",
+        "headline": "How to prepare an industrial RFQ",
+        "supporting_text": "One clear procurement insight per slide or graphic.",
+        "image_type": "branded diagram, component graphic, process visual, or typography-led industrial visual",
+        "real_imagery_required": false,
+        "canva_template_category": "educational-industrial",
+        "language_version": "EN",
+        "cta_placement": "final slide or caption ending"
+      },
+      "notes": [
+        "Derived from master_content. Human review required."
+      ]
+    }
+  },
+  "visual_brief": {
+    "format": "carousel or static educational graphic",
+    "aspect_ratio": {
+      "linkedin": "1200x1200 or carousel",
+      "instagram": "1080x1350 preferred feed portrait",
+      "facebook": "1200x630"
+    },
+    "headline": "How to prepare an industrial RFQ",
+    "supporting_text": "Use concise educational wording from the approved/adapted copy.",
+    "image_type": "branded diagram, component graphic, process visual, or typography-led industrial visual",
+    "real_imagery_required": false,
+    "canva_template_category": "rfq-guidance",
+    "language_version": "EN",
+    "cta_placement": "caption ending or final carousel slide",
+    "warnings": [
+      "Do not use invented or non-approved project images.",
+      "If real industrial imagery is used, confirm source and approval before publishing."
+    ]
+  },
+  "generation": {
+    "mode": "MOCK",
+    "provider": "mock",
+    "model": "local-template",
+    "error": null
+  },
+  "status": "DRAFT",
+  "human_approved": false,
+  "approval": {
+    "approved_by": null,
+    "approved_at": null,
+    "notes": []
+  },
+  "source_class": "PUBLIC",
+  "source_material_stored": true,
+  "source_material": "Public educational topic for buyers: clarify scope, documentation, lead-time assumptions, and comparison criteria.",
+  "source_summary": "Public educational topic for buyers: clarify scope, documentation, lead-time assumptions, and comparison criteria."
+}
