@@ -6,8 +6,10 @@ from scipy import ndimage
 
 
 def detect_blue_mask(arr, min_alpha=150):
-    r, g, b, a = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2], arr[:, :, 3]
-    return (a > min_alpha) & (b > 140) & (b.astype(int) - r.astype(int) > 50) & (g > 40) & (b > g)
+    r, g, b, a = arr[:, :, 0].astype(int), arr[:, :, 1].astype(int), arr[:, :, 2].astype(int), arr[:, :, 3]
+    mask = (a > min_alpha) & (b > 150) & (r < 100) & (b - r > 80) & (g > 40) & (g < 180)
+    # opening removes isolated antialiasing-edge speckle noise while keeping the solid checkmark blob
+    return ndimage.binary_opening(mask, iterations=2)
 
 
 def detect_letter_mask(arr, letter_color, min_alpha=150, tol=60):
