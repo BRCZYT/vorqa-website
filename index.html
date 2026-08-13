@@ -417,13 +417,14 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 /* ══════════════════════════════════════════
    §02 WHAT WE DO — dark, watermark + zigzag rows
 ══════════════════════════════════════════ */
-/* Giant hollow "VORQA" behind the rows — decorative only (aria-hidden,
+/* Giant VORQA logo behind the rows — decorative only (aria-hidden,
    pointer-events:none), kept faint enough not to fight legibility.
-   Vertically centered via margin-top in em (scales with the font's own
-   clamp'd size) rather than transform:translateY, since transform is
-   reserved for the JS scroll-parallax drift on the x axis only. */
-.wwd-mark{position:absolute;top:50%;left:-4%;margin-top:-.35em;font-family:'Sora Variable',Sora,sans-serif;font-weight:800;letter-spacing:-.02em;
-  font-size:clamp(5rem,22vw,20rem);line-height:.7;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);white-space:nowrap;pointer-events:none;z-index:0}
+   Vertically centered via top:50%+translateY(-50%); GSAP's own x-only
+   scroll-parallax drift (see script §2d) composes with that translateY
+   fine since GSAP reads/preserves the existing transform's y-component. */
+.wwd-mark-wrap{position:relative}
+.wwd-mark{position:absolute;top:50%;left:-4%;transform:translateY(-50%);
+  width:clamp(20rem,58vw,88rem);height:auto;opacity:.05;pointer-events:none;z-index:0}
 .wwd-rows{display:flex;flex-direction:column;margin-top:20px;position:relative;z-index:1}
 .wwd-row{display:flex;align-items:center;gap:clamp(18px,3.5vw,44px);padding:32px 0;border-top:1px solid rgba(255,255,255,.08);position:relative;transition:background .3s}
 .wwd-row:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
@@ -1053,7 +1054,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
      instead of a hard line against the light sections on either side.
 ════════════════════════════════════ -->
 <section id="services" class="sec sec-dark" style="background:linear-gradient(160deg,#0A2540 0%,#051728 100%);position:relative;overflow:hidden">
-  <div class="wwd-mark" dir="ltr" aria-hidden="true">VOR<span style="position:relative;display:inline-block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05)">O<svg viewBox="0 0 40 50" aria-hidden="true" style="position:absolute;overflow:visible;width:.6em;height:.72em;right:-.05em;bottom:.02em"><path d="M6 30 L15 40 L33 5" fill="none" stroke="rgba(92,141,184,.10)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A</div>
+  <div class="wwd-mark-wrap" aria-hidden="true"><img class="wwd-mark" src="/brand_assets/vorqa_logo_white_cropped.png" alt=""></div>
   <div style="max-width:1160px;margin:0 auto;position:relative;z-index:1">
     <div class="g2" style="margin-bottom:0">
       <div><div class="sec-num rv" data-i18n="svc.num">§ 02 / What We Do</div><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
