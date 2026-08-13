@@ -90,6 +90,11 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 .pl-seq-letter.in{opacity:1;transform:translateY(0)}
 .pl-seq-letter.exit{opacity:0;transform:scale(1.1) translateY(-6px);transition:opacity .4s ease-in,transform .4s ease-in}
 
+.pl-logo-row{opacity:0;transform:translateY(10px);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
+.pl-logo-row.in{opacity:1;transform:translateY(0)}
+.pl-logo-row.exit{opacity:0;transform:scale(1.1) translateY(-6px);transition:opacity .4s ease-in,transform .4s ease-in}
+.pl-logo-row img{display:block;height:clamp(56px,9vw,110px);width:auto}
+
 .pl-seq-label{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.14);opacity:0;transition:opacity .55s;order:-1}
 .pl-seq-label.show{opacity:1}
 
@@ -918,22 +923,8 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
   <div class="pl-corner pl-corner-br"></div>
   <div class="pl-stage">
     <div class="pl-seq-label" id="pl-label">STARTING SEQUENCE</div>
-    <div class="pl-letters-row">
-      <div class="pl-seq-letter" id="pl-v">
-        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">V</span>
-      </div>
-      <div class="pl-seq-letter" id="pl-o">
-        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">O</span>
-      </div>
-      <div class="pl-seq-letter" id="pl-r">
-        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">R</span>
-      </div>
-      <div class="pl-seq-letter" id="pl-q">
-        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff;position:relative;display:inline-block">O<svg viewBox="0 0 40 46" aria-hidden="true" style="position:absolute;overflow:visible;width:.62em;height:.7em;right:-.04em;bottom:.02em"><path d="M7 27 L16 37 L34 7" fill="none" stroke="#2874B2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
-      <div class="pl-seq-letter" id="pl-a2">
-        <span style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:700;font-size:clamp(60px,10vw,140px);line-height:1;color:#fff">A</span>
-      </div>
+    <div class="pl-logo-row" id="pl-logo">
+      <img src="/brand_assets/vorqa_logo_white_cropped.png" alt="VORQA">
     </div>
     <div class="pl-status-line" id="pl-status">
       <div class="pl-dot"></div>
@@ -1193,11 +1184,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 <script>
 /* ── Starting Sequence Preloader ─────────── */
 const pl          = document.getElementById('pl');
-const plV         = document.getElementById('pl-v');
-const plO         = document.getElementById('pl-o');
-const plR         = document.getElementById('pl-r');
-const plQ         = document.getElementById('pl-q');
-const plA2        = document.getElementById('pl-a2');
+const plLogo      = document.getElementById('pl-logo');
 const plLabel     = document.getElementById('pl-label');
 const plStatus    = document.getElementById('pl-status');
 const plStatusTxt = document.getElementById('pl-status-txt');
@@ -1208,12 +1195,8 @@ const plCorners   = document.querySelectorAll('.pl-corner');
 // Corners + label appear
 setTimeout(()=>{ plCorners.forEach(c=>c.classList.add('show')); plLabel.classList.add('show'); }, 80);
 
-// Letters rise in sequentially
-setTimeout(()=> plV.classList.add('in'), 200);
-setTimeout(()=> plO.classList.add('in'), 400);
-setTimeout(()=> plR.classList.add('in'), 600);
-setTimeout(()=> plQ.classList.add('in'), 800);
-setTimeout(()=> plA2.classList.add('in'), 1000);
+// Logo rises in
+setTimeout(()=> plLogo.classList.add('in'), 200);
 
 // Status line + progress bar
 setTimeout(()=>{ plStatus.classList.add('show'); plProg.classList.add('go'); }, 1140);
@@ -1224,9 +1207,9 @@ setTimeout(()=> plScanline.classList.add('go'), 1380);
 // Status text update
 setTimeout(()=> plStatusTxt.textContent='System Ready', 1780);
 
-// Exit: letters fade + slight scale
+// Exit: logo fades + slight scale
 setTimeout(()=>{
-  [plV,plO,plR,plQ,plA2].forEach(el=>el.classList.add('exit'));
+  plLogo.classList.add('exit');
   plLabel.style.transition='opacity .3s'; plLabel.style.opacity='0';
   plStatus.style.transition='opacity .3s'; plStatus.style.opacity='0';
 }, 2160);
