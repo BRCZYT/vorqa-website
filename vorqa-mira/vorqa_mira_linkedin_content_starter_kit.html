@@ -1,443 +1,226 @@
-
 <style>
 h2.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 *{box-sizing:border-box;margin:0;padding:0}
 .tabs{display:flex;gap:4px;margin-bottom:20px;flex-wrap:wrap}
-.tab{padding:7px 14px;font-size:13px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);cursor:pointer;background:var(--color-background-primary);color:var(--color-text-secondary);transition:all .15s}
-.tab.active{background:var(--color-background-info);color:var(--color-text-info);border-color:var(--color-border-info);font-weight:500}
-.tab:hover:not(.active){background:var(--color-background-secondary)}
+.tab{padding:7px 14px;font-size:13px;border:0.5px solid var(--color-border-tertiary,#D5E0EA);border-radius:6px;cursor:pointer;background:var(--color-background-primary,#fff);color:var(--color-text-secondary,#53657A);transition:all .15s}
+.tab.active{background:var(--color-background-info,#E8F1FA);color:var(--color-text-info,#2874B2);border-color:var(--color-border-info,#9BC4E6);font-weight:500}
+.tab:hover:not(.active){background:var(--color-background-secondary,#F5F8FB)}
 .panel{display:none}.panel.active{display:block}
-.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:16px 20px;margin-bottom:12px}
-.label{font-size:11px;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;font-weight:500}
-.title{font-size:15px;font-weight:500;color:var(--color-text-primary)}
-.sub{font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.card{background:var(--color-background-primary,#fff);border:0.5px solid var(--color-border-tertiary,#D5E0EA);border-radius:8px;padding:16px 20px;margin-bottom:12px}
+.label{font-size:11px;color:var(--color-text-tertiary,#708195);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;font-weight:600}
+.title{font-size:15px;font-weight:650;color:var(--color-text-primary,#0A2540)}
+.sub{font-size:13px;color:var(--color-text-secondary,#53657A);line-height:1.6}
 .badge{display:inline-block;font-size:11px;padding:3px 9px;border-radius:20px;font-weight:500;margin:2px}
-.badge-blue{background:var(--color-background-info);color:var(--color-text-info)}
-.badge-green{background:var(--color-background-success);color:var(--color-text-success)}
-.badge-amber{background:var(--color-background-warning);color:var(--color-text-warning)}
-.badge-gray{background:var(--color-background-secondary);color:var(--color-text-secondary)}
-.copy-box{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:14px 16px;font-size:13px;color:var(--color-text-primary);line-height:1.7;white-space:pre-wrap;font-family:var(--font-sans);margin:8px 0;position:relative}
-.copy-box[dir="rtl"]{text-align:right;font-family:var(--font-sans)}
-.copy-btn{position:absolute;top:8px;right:8px;padding:4px 10px;font-size:11px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-secondary);cursor:pointer;transition:all .15s}
-.copy-btn:hover{background:var(--color-background-secondary);color:var(--color-text-primary)}
-.copy-btn.done{color:var(--color-text-success);border-color:var(--color-border-success)}
+.badge-blue{background:var(--color-background-info,#E8F1FA);color:var(--color-text-info,#2874B2)}
+.badge-green{background:var(--color-background-success,#E8F7EF);color:var(--color-text-success,#178A55)}
+.badge-amber{background:var(--color-background-warning,#FFF3E7);color:var(--color-text-warning,#C65F13)}
+.badge-gray{background:var(--color-background-secondary,#F5F8FB);color:var(--color-text-secondary,#53657A)}
+.copy-box{background:var(--color-background-secondary,#F5F8FB);border:0.5px solid var(--color-border-tertiary,#D5E0EA);border-radius:6px;padding:14px 16px;font-size:13px;color:var(--color-text-primary,#0A2540);line-height:1.7;white-space:pre-wrap;font-family:var(--font-sans,inherit);margin:8px 0;position:relative}
+.copy-box[dir="rtl"]{text-align:right}
+.copy-btn{position:absolute;top:8px;right:8px;padding:4px 10px;font-size:11px;border:0.5px solid var(--color-border-secondary,#C8D5E2);border-radius:6px;background:var(--color-background-primary,#fff);color:var(--color-text-secondary,#53657A);cursor:pointer;transition:all .15s}
+.copy-btn:hover{background:var(--color-background-secondary,#F5F8FB);color:var(--color-text-primary,#0A2540)}
+.copy-btn.done{color:var(--color-text-success,#178A55);border-color:var(--color-border-success,#9FD8B9)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:12px}
 .trait-row{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
-.trait-icon{font-size:18px;width:28px;flex-shrink:0;padding-top:1px;color:var(--color-text-info)}
-.post-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--color-background-info);color:var(--color-text-info);font-size:11px;font-weight:500;flex-shrink:0;margin-right:8px}
+.trait-icon{font-size:18px;width:28px;flex-shrink:0;padding-top:1px;color:var(--color-text-info,#2874B2)}
+.post-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--color-background-info,#E8F1FA);color:var(--color-text-info,#2874B2);font-size:11px;font-weight:600;flex-shrink:0;margin-right:8px}
 .post-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-.week-check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.week-check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary,#D5E0EA)}
 .week-check:last-child{border-bottom:none}
-.check-num{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--color-border-secondary);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--color-text-tertiary);flex-shrink:0;cursor:pointer;transition:all .2s}
-.check-num.done{background:var(--color-background-success);border-color:var(--color-border-success);color:var(--color-text-success)}
-.mira-avatar{width:72px;height:72px;border-radius:50%;background:var(--color-background-info);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+.check-num{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--color-border-secondary,#C8D5E2);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--color-text-tertiary,#708195);flex-shrink:0;cursor:pointer;transition:all .2s}
+.check-num.done{background:var(--color-background-success,#E8F7EF);border-color:var(--color-border-success,#9FD8B9);color:var(--color-text-success,#178A55)}
+.mira-avatar{width:72px;height:72px;border-radius:8px;background:var(--color-background-info,#E8F1FA);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;color:#2874B2;font-weight:700}
 .lang-divider{display:flex;align-items:center;gap:10px;margin:12px 0}
-.lang-divider::before,.lang-divider::after{content:'';flex:1;height:0.5px;background:var(--color-border-tertiary)}
-.lang-divider span{font-size:11px;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.04em}
-.tone-bar{height:6px;border-radius:3px;margin-top:6px;background:var(--color-border-tertiary);overflow:hidden}
-.tone-fill{height:100%;border-radius:3px;background:var(--color-background-info)}
-.section-head{font-size:13px;font-weight:500;color:var(--color-text-primary);margin:16px 0 8px;display:flex;align-items:center;gap:8px}
+.lang-divider::before,.lang-divider::after{content:'';flex:1;height:0.5px;background:var(--color-border-tertiary,#D5E0EA)}
+.lang-divider span{font-size:11px;color:var(--color-text-tertiary,#708195);text-transform:uppercase;letter-spacing:.04em}
+.section-head{font-size:13px;font-weight:650;color:var(--color-text-primary,#0A2540);margin:16px 0 8px;display:flex;align-items:center;gap:8px}
+.warning{border-left:3px solid #E87722;background:#FFF8F1;color:#74410F;border-radius:6px;padding:10px 12px;font-size:12px;line-height:1.55;margin-top:10px}
 </style>
 
-<h2 class="sr-only">Vorqa Global — Mira Persona ve LinkedIn İçerik Starter Kit</h2>
+<h2 class="sr-only">VORQA Global - Mira V3 Starter Kit</h2>
 
 <div class="tabs">
-  <div class="tab active" onclick="showP('mira')">🤖 Mira Karakter</div>
-  <div class="tab" onclick="showP('linkedin')">💼 LinkedIn Biyografi</div>
-  <div class="tab" onclick="showP('posts')">✍️ İlk 5 Post</div>
-  <div class="tab" onclick="showP('checklist')">✅ Hafta 1-2 Plan</div>
+  <div class="tab active" onclick="showP('mira')">Mira Role</div>
+  <div class="tab" onclick="showP('linkedin')">LinkedIn Bio</div>
+  <div class="tab" onclick="showP('posts')">Starter Drafts</div>
+  <div class="tab" onclick="showP('checklist')">Review Plan</div>
 </div>
 
-<!-- MIRA PANELİ -->
 <div class="panel active" id="p-mira">
-  <div class="card" style="margin-bottom:12px">
+  <div class="card">
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
-      <div class="mira-avatar">🤖</div>
+      <div class="mira-avatar">M</div>
       <div>
-        <div style="font-size:20px;font-weight:500;color:var(--color-text-primary)">Mira</div>
-        <div class="sub">Vorqa Global — AI Endüstri Analisti</div>
+        <div style="font-size:20px;font-weight:650;color:var(--color-text-primary,#0A2540)">Mira</div>
+        <div class="sub">VORQA AI Industry Analyst</div>
         <div style="margin-top:6px">
-          <span class="badge badge-blue">Industrial AI</span>
+          <span class="badge badge-blue">Educational</span>
           <span class="badge badge-green">Multilingual</span>
-          <span class="badge badge-amber">B2B Expert</span>
+          <span class="badge badge-amber">Approval-Gated</span>
         </div>
       </div>
     </div>
-    <div class="label">Temel Kimlik</div>
+    <div class="label">Role Boundary</div>
     <div class="trait-row">
-      <i class="ti ti-user-circle trait-icon" aria-hidden="true"></i>
-      <div><div class="sub" style="color:var(--color-text-primary);font-weight:500;margin-bottom:2px">Kim?</div><div class="sub">Mira, Vorqa Global'ın yapay zeka destekli endüstri analistidir. Sektörü içerden bilen, teknik konuları herkesin anlayacağı dile çeviren bir endüstri sesidiir. Gerçek bir kişi değil — ama gerçek uzmanlık bilgisiyle konuşur.</div></div>
-    </div>
-    <div class="trait-row">
-      <i class="ti ti-world trait-icon" aria-hidden="true"></i>
-      <div><div class="sub" style="color:var(--color-text-primary);font-weight:500;margin-bottom:2px">Hangi dillerde?</div><div class="sub">Türkçe · İngilizce · Arapça — her dilde aynı ses tonu, aynı uzmanlık. İleride Rusça ve Farsça eklenir.</div></div>
+      <div class="trait-icon">01</div>
+      <div><div class="title">VORQA is the corporate voice.</div><div class="sub">Announcements, offers, RFQs, project statements, pricing, commitments, and commercial claims must stay under VORQA and human review.</div></div>
     </div>
     <div class="trait-row">
-      <i class="ti ti-video trait-icon" aria-hidden="true"></i>
-      <div><div class="sub" style="color:var(--color-text-primary);font-weight:500;margin-bottom:2px">Video persona nasıl?</div><div class="sub">ElevenLabs ile üretilen Arapça + İngilizce voiceover. Görsel için Canva'da Mira'ya ait sabit bir "avatar kartı" tasarlanır — her videonun intro/outro'sunda görünür. AI avatar animasyon için HeyGen ücretsiz deneme.</div></div>
+      <div class="trait-icon">02</div>
+      <div><div class="title">Mira educates.</div><div class="sub">Mira covers procurement education, sourcing from Turkiye, technical-commercial comparison, supply-chain insights, industrial terminology, and RFQ clarity.</div></div>
     </div>
-  </div>
-
-  <div class="card" style="margin-bottom:12px">
-    <div class="label">Ses Tonu Profili</div>
-    <div style="margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;margin-bottom:3px"><span class="sub">Teknik ↔ Erişilebilir</span><span style="font-size:11px;color:var(--color-text-tertiary)">60% teknik</span></div>
-      <div class="tone-bar"><div class="tone-fill" style="width:60%"></div></div>
+    <div class="trait-row">
+      <div class="trait-icon">03</div>
+      <div><div class="title">Facts come first.</div><div class="sub">Mira uses only approved VORQA facts unless a current source or human reviewer verifies the claim for that draft.</div></div>
     </div>
-    <div style="margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;margin-bottom:3px"><span class="sub">Resmi ↔ Samimi</span><span style="font-size:11px;color:var(--color-text-tertiary)">45% resmi</span></div>
-      <div class="tone-bar"><div class="tone-fill" style="width:45%"></div></div>
-    </div>
-    <div>
-      <div style="display:flex;justify-content:space-between;margin-bottom:3px"><span class="sub">Tanıtımcı ↔ Eğitici</span><span style="font-size:11px;color:var(--color-text-tertiary)">70% eğitici</span></div>
-      <div class="tone-bar"><div class="tone-fill" style="width:70%"></div></div>
-    </div>
-    <div class="sub" style="margin-top:12px;font-style:italic">"Mira satmaz, öğretir. Güven kazanır, sonra satış gelir."</div>
   </div>
 
   <div class="card">
-    <div class="label">Mira'nın İmza Konuları</div>
-    <div class="grid2" style="margin-top:4px">
-      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px">
-        <div style="font-weight:500;font-size:13px;margin-bottom:4px">Beton Santralleri</div>
-        <div class="sub" style="font-size:12px">"Kapasite seçerken hangi 3 hatayı yapıyorsunuz?" tarzı içerikler</div>
-      </div>
-      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px">
-        <div style="font-weight:500;font-size:13px;margin-bottom:4px">Galvaniz Tesisleri</div>
-        <div class="sub" style="font-size:12px">"EN 1461 standardı neden önemli?" teknik explainer'lar</div>
-      </div>
-      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px">
-        <div style="font-weight:500;font-size:13px;margin-bottom:4px">Tedarik Zinciri</div>
-        <div class="sub" style="font-size:12px">"Türkiye'den nasıl satın alınır?" pratik rehberler</div>
-      </div>
-      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px">
-        <div style="font-weight:500;font-size:13px;margin-bottom:4px">Pazar Analizi</div>
-        <div class="sub" style="font-size:12px">Libya, Mısır, Irak inşaat sektörü trend raporları</div>
-      </div>
-    </div>
-    <div style="margin-top:12px">
-      <button style="padding:8px 16px;font-size:13px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);cursor:pointer" onclick="sendPrompt('Mira için ElevenLabs voiceover kurulumu ve HeyGen AI avatar nasıl yapılır? Adım adım ücretsiz kurulum rehberi ver.')">Mira voiceover kurulumu ↗</button>
+    <div class="label">Signature Topics</div>
+    <div class="grid2">
+      <div><div class="title">RFQ Education</div><div class="sub">How to clarify requirements, scope, compliance points, and commercial comparison criteria.</div></div>
+      <div><div class="title">Supplier Coordination</div><div class="sub">How buyers can compare supplier responses without relying only on price.</div></div>
+      <div><div class="title">Sourcing from Turkiye</div><div class="sub">Buyer-side guidance on documentation, communication, and lead-time visibility.</div></div>
+      <div><div class="title">Partner Capabilities</div><div class="sub">Educational explainers about partner or supplier-network capabilities without implying VORQA ownership.</div></div>
     </div>
   </div>
 </div>
 
-<!-- LİNKEDİN PANELİ -->
 <div class="panel" id="p-linkedin">
   <div class="card">
-    <div class="label">Vorqa Global — Şirket Sayfası Biyografisi</div>
-    <div class="sub" style="margin-bottom:12px">LinkedIn'de "About" bölümüne yapıştır. Hem İngilizce hem Arapça versiyonu aynı sayfada kullan (LinkedIn çok dil destekler).</div>
+    <div class="label">Safe English About Draft</div>
+    <div class="copy-box" id="bio-en">VORQA Global Supply is a Turkiye-based industrial procurement and project-supply coordination partner.
 
-    <div class="section-head"><i class="ti ti-flag" aria-hidden="true" style="font-size:16px;color:var(--color-text-info)"></i> İngilizce — About Section</div>
-    <div class="copy-box" id="bio-en">Vorqa Global is a Türkiye-based industrial engineering group delivering turnkey solutions across five sectors:
+We support industrial buyers from requirement clarification to supplier identification, technical-commercial comparison, specification compliance review, lead-time analysis, and logistics or customs coordination where applicable.
 
-→ Concrete Batching Plants (60–240 m³/h)
-→ Hot-Dip Galvanizing Facilities
-→ Waste-to-Energy Conversion Plants (1–50 MW)
-→ Steel Construction & Mechanical Fabrication
-→ Global Supply Chain Management
+Our role is to help buyers compare options clearly and coordinate multi-supplier project supply through a single point of contact.
 
-We design, engineer, and commission industrial facilities to European standards — and deliver them anywhere in the world.
+Follow VORQA for practical procurement education, sourcing guidance from Turkiye, and industry insights from Mira, the VORQA AI Industry Analyst.
 
-Our supply chain division manages 1,000+ verified Turkish suppliers, giving clients in Libya, Egypt, Iraq, Syria, and across Africa direct access to Turkish industrial products with full logistics coordination.
+From Requirement to Delivery.
 
-Follow us for weekly industry insights from Mira, Vorqa's AI industry analyst — technical content in English and Arabic.
+vorqaglobal.com</div>
+    <button class="copy-btn" onclick="copyText('bio-en',this)">Copy</button>
 
-📍 Ankara, Türkiye  |  🌍 Active in 24+ countries
-🌐 vorqaglobal.com  |  ✉ info@vorqaglobal.com</div>
-    <button class="copy-btn" onclick="copyText('bio-en',this)"><i class="ti ti-copy" aria-hidden="true"></i> Kopyala</button>
+    <div class="lang-divider"><span>Arabic draft</span></div>
 
-    <div class="lang-divider"><span>Arapça versiyon</span></div>
+    <div class="label">Safe Arabic About Draft</div>
+    <div class="copy-box" dir="rtl" id="bio-ar">VORQA Global Supply هي شريك لتنسيق المشتريات الصناعية وتوريد المشاريع من تركيا.
 
-    <div class="section-head"><i class="ti ti-flag" aria-hidden="true" style="font-size:16px;color:var(--color-text-success)"></i> Arabic — نبذة عن الشركة</div>
-    <div class="copy-box" dir="rtl" id="bio-ar">Vorqa Global مجموعة هندسية صناعية تركية متخصصة في تقديم حلول متكاملة في خمسة قطاعات:
+ندعم المشترين الصناعيين من مرحلة توضيح المتطلبات إلى تحديد الموردين، والمقارنة الفنية والتجارية، ومراجعة توافق المواصفات، وتحليل مدد التوريد، وتنسيق الخدمات اللوجستية والجمارك عند الحاجة.
 
-← محطات الخرسانة الجاهزة (60–240 م³/ساعة)
-← منشآت الغلفنة بالغمس الساخن
-← محطات تحويل النفايات إلى طاقة (1–50 ميغاواط)
-← الإنشاءات الفولاذية والتصنيع الميكانيكي
-← إدارة سلاسل التوريد العالمية
+دورنا هو مساعدة المشترين على مقارنة الخيارات بوضوح وتنسيق توريد المشاريع متعددة الموردين من خلال نقطة اتصال واحدة.
 
-نصمم ونُنفّذ المنشآت الصناعية وفق المعايير الأوروبية، ونُسلّمها جاهزة للتشغيل في أي مكان في العالم.
+تابعوا VORQA للحصول على محتوى تعليمي في المشتريات الصناعية ورؤى من Mira، محللة الصناعة الذكية لدى VORQA.
 
-يضمّ قسم سلاسل التوريد لدينا أكثر من 1000 مورّد تركي معتمد، مما يتيح للعملاء في ليبيا ومصر والعراق وسوريا وأفريقيا الوصول المباشر إلى المنتجات الصناعية التركية مع التنسيق اللوجستي الكامل.
+From Requirement to Delivery.
 
-تابعونا للاطلاع على رؤى صناعية أسبوعية مع ميرا، المحللة الذكية لـ Vorqa Global.
-
-📍 أنقرة، تركيا  |  🌍 نشطون في أكثر من 24 دولة
-🌐 vorqaglobal.com</div>
-    <button class="copy-btn" onclick="copyText('bio-ar',this)" style="left:8px;right:auto"><i class="ti ti-copy" aria-hidden="true"></i> نسخ</button>
+vorqaglobal.com</div>
+    <button class="copy-btn" onclick="copyText('bio-ar',this)" style="left:8px;right:auto">نسخ</button>
+    <div class="warning">Do not add countries, capacities, supplier counts, certifications, response times, customer names, or project references unless verified for the exact public use.</div>
   </div>
 
   <div class="card">
-    <div class="label">Tagline (Headline / Slogan)</div>
-    <div class="section-head" style="margin-top:0"><i class="ti ti-bolt" aria-hidden="true" style="font-size:16px;color:var(--color-text-warning)"></i> En güçlü 3 seçenek</div>
-    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;margin-bottom:8px">
-      <div style="font-weight:500;font-size:13px;margin-bottom:4px">Seçenek A — Güç odaklı</div>
-      <div style="font-size:14px;color:var(--color-text-primary)">Turnkey Industrial Plants. Built in Türkiye. Delivered Worldwide.</div>
+    <div class="label">Safe Tagline Options</div>
+    <div class="grid2">
+      <div><div class="title">From Requirement to Delivery</div><div class="sub">Approved core message.</div></div>
+      <div><div class="title">Industrial Procurement & Project Solutions</div><div class="sub">Approved positioning line.</div></div>
+      <div><div class="title">Industrial sourcing, coordinated clearly.</div><div class="sub">Safe supporting line.</div></div>
+      <div><div class="title">Technical-commercial clarity for industrial buyers.</div><div class="sub">Mira-friendly educational line.</div></div>
     </div>
-    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;margin-bottom:8px">
-      <div style="font-weight:500;font-size:13px;margin-bottom:4px">Seçenek B — Çözüm odaklı</div>
-      <div style="font-size:14px;color:var(--color-text-primary)">From Design to Commissioning — Concrete, Galvanizing, Energy & Supply Chain.</div>
-    </div>
-    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px">
-      <div style="font-weight:500;font-size:13px;margin-bottom:4px">Seçenek C — Pazar odaklı</div>
-      <div style="font-size:14px;color:var(--color-text-primary)">Türkiye's Industrial Engineering Group for MENA & Africa.</div>
-    </div>
-    <div class="sub" style="margin-top:12px">Öneri: A seçeneği. Kısa, net, hatırlanabilir. Her platformda kullanılabilir.</div>
   </div>
 </div>
 
-<!-- POSTLAR PANELİ -->
 <div class="panel" id="p-posts">
-  <div class="sub" style="margin-bottom:16px">Her post EN + AR olarak yazıldı. LinkedIn'de aynı gönderiye her iki versiyonu ekle — aralarına bir ayırıcı çiz (———). Haftada 3-4 post için bu 5 post ilk 2 haftayı kapsar.</div>
+  <div class="sub" style="margin-bottom:16px">These are draft starters. Validate and review before publishing.</div>
 
-  <!-- POST 1 -->
   <div class="card">
     <div class="post-meta">
       <span class="post-num">1</span>
       <span class="badge badge-blue">LinkedIn</span>
-      <span class="badge badge-gray">1. Hafta</span>
-      <span class="badge badge-green">Tanıtım / Launch</span>
+      <span class="badge badge-green">Procurement Education</span>
+      <span class="badge badge-gray">DRAFT</span>
     </div>
-    <div class="copy-box" id="p1-en">Something new is launching at Vorqa Global.
+    <div class="copy-box" id="p1-en">A clear RFQ does more than ask for a price.
 
-We've been building industrial facilities across the MENA region and Africa for years — concrete batching plants, galvanizing facilities, waste-to-energy plants, steel fabrication, and supply chain solutions from Türkiye to the world.
+It helps every supplier respond to the same requirement.
 
-Today, we're going digital. And we're bringing Mira with us.
+For industrial procurement, that matters because the lowest offer is not always the clearest offer. A useful comparison should show technical fit, documentation readiness, lead-time assumptions, logistics responsibilities, and any open compliance questions.
 
-Mira is Vorqa's AI industry analyst. She'll be sharing weekly insights on industrial markets, technical deep-dives, and procurement intelligence — in English and Arabic.
+That is where buyer-side coordination creates value: not by making the decision for the buyer, but by making the decision easier to inspect.
 
-If you're involved in infrastructure, construction, or industrial procurement in Libya, Egypt, Iraq, Syria, or across Africa — this page is for you.
+What is the first detail you check before comparing supplier offers?
 
-Follow Vorqa Global. Big things are being built.
-
-🏗 vorqaglobal.com
-
-#IndustrialEngineering #MENA #ConcreteIndustry #Galvanizing #WasteToEnergy #SupplyChain #Türkiye #Africa</div>
-    <button class="copy-btn" onclick="copyText('p1-en',this)"><i class="ti ti-copy" aria-hidden="true"></i> EN</button>
-
-    <div class="lang-divider"><span>Arapça</span></div>
-    <div class="copy-box" dir="rtl" id="p1-ar">شيء جديد ينطلق من Vorqa Global.
-
-لسنوات ونحن نبني منشآت صناعية في منطقة الشرق الأوسط وأفريقيا — محطات خرسانة، منشآت غلفنة، محطات طاقة من النفايات، إنشاءات فولاذية، وسلاسل توريد من تركيا إلى العالم.
-
-اليوم، ننتقل إلى الفضاء الرقمي. ومعنا ميرا.
-
-ميرا هي المحللة الذكية لـ Vorqa — ستشارككم أسبوعياً رؤى السوق الصناعي، والتحليلات التقنية، ومعلومات المشتريات — بالعربية والإنجليزية.
-
-إن كنتم في مجال البنية التحتية أو البناء أو المشتريات الصناعية في ليبيا أو مصر أو العراق أو سوريا أو أفريقيا — هذه الصفحة لكم.
-
-تابعوا Vorqa Global. المشاريع الكبرى قادمة.
-
-🏗 vorqaglobal.com
-
-#الهندسة_الصناعية #الشرق_الأوسط #الخرسانة #سلاسل_التوريد #تركيا #أفريقيا</div>
-    <button class="copy-btn" onclick="copyText('p1-ar',this)" style="left:8px;right:auto"><i class="ti ti-copy" aria-hidden="true"></i> AR</button>
+Mira | VORQA AI Industry Analyst
+#Procurement #IndustrialSourcing #SupplyChain #B2B</div>
+    <button class="copy-btn" onclick="copyText('p1-en',this)">Copy</button>
   </div>
 
-  <!-- POST 2 -->
   <div class="card">
     <div class="post-meta">
       <span class="post-num">2</span>
-      <span class="badge badge-blue">LinkedIn</span>
-      <span class="badge badge-gray">1. Hafta</span>
-      <span class="badge badge-amber">Tedarik Zinciri</span>
+      <span class="badge badge-blue">Instagram</span>
+      <span class="badge badge-amber">Carousel Brief</span>
+      <span class="badge badge-gray">DRAFT</span>
     </div>
-    <div class="copy-box" id="p2-en">3 questions every procurement manager in MENA should ask before buying industrial equipment from Türkiye.
+    <div class="copy-box" id="p2-en">Carousel brief:
 
-— Mira, Vorqa Global Analyst
+Slide 1: Before comparing prices, compare the requirement.
+Slide 2: Is the technical scope clear?
+Slide 3: Are compliance documents defined?
+Slide 4: Are lead-time assumptions visible?
+Slide 5: Clear RFQs create clearer supplier comparisons.
 
-1. Does the supplier have an export track record in your country?
-Not "can they ship" — but have they actually done it, cleared customs, managed documentation for your specific market?
+Caption:
+A strong RFQ helps buyers see technical and commercial differences before the purchase decision.
 
-2. Is the price FOB, CIF, or DDP?
-The difference can be 15–25% of total cost. Many buyers are surprised after signing.
-
-3. Who handles the warranty claim if something fails after installation?
-A supplier 3,000 km away with no local partner is a risk. Make sure there's a service chain.
-
-At Vorqa, our supply chain division manages 1,000+ Turkish suppliers and handles the full process — from sourcing to delivery, documentation to after-sales coordination.
-
-What other questions do you have about industrial procurement from Türkiye? Drop them below — Mira will answer.
-
-#SupplyChain #Procurement #IndustrialEquipment #MENA #Türkiye #B2B</div>
-    <button class="copy-btn" onclick="copyText('p2-en',this)"><i class="ti ti-copy" aria-hidden="true"></i> EN</button>
-
-    <div class="lang-divider"><span>Arapça</span></div>
-    <div class="copy-box" dir="rtl" id="p2-ar">3 أسئلة يجب على كل مدير مشتريات في منطقة الشرق الأوسط طرحها قبل شراء معدات صناعية من تركيا.
-
-— ميرا، محللة Vorqa الصناعية
-
-1. هل للمورّد سجل تصدير فعلي إلى بلدك؟
-ليس "هل يستطيع الشحن" — بل هل نفّذ فعلاً عمليات التخليص الجمركي وأتمّ التوثيق لسوقك تحديداً؟
-
-2. هل السعر FOB أم CIF أم DDP؟
-الفرق قد يصل إلى 15–25% من التكلفة الإجمالية. كثير من المشترين يُفاجأون بعد التوقيع.
-
-3. من يتولى مطالبة الضمان إذا حدث عطل بعد التركيب؟
-مورّد على بعد 3000 كيلومتر دون شريك محلي يمثّل خطراً حقيقياً. تأكد من وجود سلسلة خدمة.
-
-في Vorqa، يُدير قسم سلاسل التوريد لدينا أكثر من 1000 مورّد تركي، ويتولى العملية كاملة — من التوريد إلى التسليم والتوثيق وتنسيق ما بعد البيع.
-
-ما الأسئلة الأخرى التي تودّ طرحها حول المشتريات الصناعية من تركيا؟ اتركها في التعليقات — ميرا ستُجيب.
-
-#سلاسل_التوريد #المشتريات #المعدات_الصناعية #الشرق_الأوسط #تركيا</div>
-    <button class="copy-btn" onclick="copyText('p2-ar',this)" style="left:8px;right:auto"><i class="ti ti-copy" aria-hidden="true"></i> AR</button>
+Mira | VORQA AI Industry Analyst
+#Procurement #IndustrialSourcing #B2B</div>
+    <button class="copy-btn" onclick="copyText('p2-en',this)">Copy</button>
   </div>
 
-  <!-- POST 3 -->
   <div class="card">
     <div class="post-meta">
       <span class="post-num">3</span>
-      <span class="badge badge-blue">LinkedIn</span>
-      <span class="badge badge-gray">2. Hafta</span>
-      <span class="badge badge-green">Beton / Teknik</span>
+      <span class="badge badge-blue">Facebook</span>
+      <span class="badge badge-green">Educational</span>
+      <span class="badge badge-gray">DRAFT</span>
     </div>
-    <div class="copy-box" id="p3-en">Why do concrete batching plants in Libya and Egypt fail within 3 years?
+    <div class="copy-box" id="p3-en">Industrial procurement becomes easier when the requirement is clear.
 
-— Mira, Vorqa Global Analyst
+Before selecting a supplier, buyers should compare technical fit, commercial terms, documentation needs, lead-time assumptions, and coordination responsibilities.
 
-It's rarely the machine. It's the spec.
-
-The three most common mismatches we see:
-
-1. Capacity over-specified
-A 120 m³/h plant ordered for a project that needs 60 m³/h peak. Result: the plant runs at 50% load, components wear unevenly, maintenance becomes unpredictable.
-
-2. Aggregate moisture not accounted for
-MENA aggregates often have higher moisture variability than the plant was calibrated for. No moisture compensation system = inconsistent mix quality.
-
-3. No commissioning support in-country
-The plant arrives, gets assembled, and the supplier leaves. Operators are trained for 2 days. 6 months later, calibration drifts and nobody knows why.
-
-A batching plant is a 15-year investment. The spec matters more than the price.
-
-We've commissioned plants across the region. Happy to answer technical questions below.
-
-#ConcreteBatchingPlant #ConcreteIndustry #MENA #Libya #Egypt #Construction #VorqaBeton</div>
-    <button class="copy-btn" onclick="copyText('p3-en',this)"><i class="ti ti-copy" aria-hidden="true"></i> EN</button>
+Mira content is designed to support this kind of practical procurement education. Any project-specific claim or commercial commitment must be reviewed by the VORQA team before publication.</div>
+    <button class="copy-btn" onclick="copyText('p3-en',this)">Copy</button>
   </div>
-
-  <!-- POST 4 -->
-  <div class="card">
-    <div class="post-meta">
-      <span class="post-num">4</span>
-      <span class="badge badge-blue">LinkedIn</span>
-      <span class="badge badge-gray">2. Hafta</span>
-      <span class="badge badge-amber">Galvaniz / Teknik</span>
-    </div>
-    <div class="copy-box" id="p4-en">Hot-dip galvanizing: what buyers in infrastructure projects get wrong.
-
-— Mira, Vorqa Global Analyst
-
-Galvanizing is specified by the engineer. Bought by procurement. Installed by the contractor. And nobody in the chain has seen the inside of a galvanizing plant.
-
-Here's what gets missed:
-
-The coating thickness is not just a quality indicator — it's a service life predictor.
-EN 1461 specifies minimum coating thickness by material type. A 45 μm coating on structural steel in a coastal environment (Libya, Alexandria, Basra) gives you maybe 15 years. 85 μm gives you 40+.
-
-The difference in cost? About 8–12% of the galvanizing price.
-The difference in lifecycle cost? Orders of magnitude.
-
-At Vorqa Galvaniz, we help clients spec correctly before commissioning a galvanizing facility — or help them evaluate galvanizing service providers before placing orders.
-
-What questions do you have about galvanizing standards for your project?
-
-#Galvanizing #HotDipGalvanizing #EN1461 #Infrastructure #SteelProtection #MENA #VorqaGalvaniz</div>
-    <button class="copy-btn" onclick="copyText('p4-en',this)"><i class="ti ti-copy" aria-hidden="true"></i> EN</button>
-  </div>
-
-  <!-- POST 5 -->
-  <div class="card">
-    <div class="post-meta">
-      <span class="post-num">5</span>
-      <span class="badge badge-blue">LinkedIn</span>
-      <span class="badge badge-gray">2. Hafta</span>
-      <span class="badge badge-blue">Tedarik / Güven</span>
-    </div>
-    <div class="copy-box" id="p5-en">Türkiye exports $250B+ in goods every year.
-
-A small fraction of that goes to Libya, Iraq, Egypt, and Syria — even though these markets need exactly what Turkish industry produces.
-
-Why the gap?
-
-Mostly trust and friction.
-
-Buyers don't know which Turkish suppliers are reliable, which certifications are real, and what happens when something goes wrong.
-
-Suppliers don't know how to navigate the import requirements, payment structures, and logistics challenges of each specific country.
-
-This is what Vorqa's supply chain division exists to solve.
-
-We're not a trading company. We're a supply chain management partner — we sit on your side of the table, find the right Turkish supplier for your specific need, manage quality control, documentation, logistics, and after-sales.
-
-If you're sourcing industrial equipment, machinery, or construction materials from Türkiye — let's talk.
-
-📧 info@vorqaglobal.com | 🌐 vorqaglobal.com/tedarik-zinciri
-
-#SupplyChain #Turkey #MENA #Libya #Iraq #Egypt #Procurement #B2B #IndustrialSourcing</div>
-    <button class="copy-btn" onclick="copyText('p5-en',this)"><i class="ti ti-copy" aria-hidden="true"></i> EN</button>
-    <div class="sub" style="margin-top:8px;padding:8px 12px;background:var(--color-background-secondary);border-radius:var(--border-radius-md)">
-      <i class="ti ti-info-circle" aria-hidden="true" style="font-size:14px;color:var(--color-text-info);margin-right:4px"></i>
-      Bu post için Arapça çeviriyi birlikte yapabiliriz — tedarik zinciri sayfasını netleştirdiğinde içerik de kişiselleşecek.
-    </div>
-  </div>
-
-  <button style="margin-top:4px;padding:9px 18px;font-size:13px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);cursor:pointer" onclick="sendPrompt('Bu 5 LinkedIn postun Arapça versiyonlarını tamamla. Post 3, 4 ve 5 için Modern Standart Arapça çevirisi yap, hashtag\'leri de ekle.')">Tüm Arapça versiyonları tamamla ↗</button>
 </div>
 
-<!-- CHECKLIST PANELİ -->
 <div class="panel" id="p-checklist">
-  <div class="card" style="margin-bottom:12px">
-    <div class="label">1. Hafta — Temel Kurulum</div>
+  <div class="card">
+    <div class="label">Review Plan</div>
     <div class="week-check" id="c1" onclick="toggleCheck('c1')">
       <div class="check-num">1</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">LinkedIn şirket sayfası oluştur</div><div class="sub" style="font-size:12px">vorqaglobal.com alan adıyla. Yukarıdaki biyografi ve tagline'ı ekle.</div></div>
+      <div><div class="title">Read VORQA_TRUTH.md</div><div class="sub">Confirm the draft uses approved facts only.</div></div>
     </div>
     <div class="week-check" id="c2" onclick="toggleCheck('c2')">
       <div class="check-num">2</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">LinkedIn banner (1584×396px) tasarla</div><div class="sub" style="font-size:12px">Canva'da. Tagline + 5 sektör ikonları + web site adresi. Vorqa renk paleti: #051728 arka plan, #2874B2 vurgu.</div></div>
+      <div><div class="title">Run fact validation</div><div class="sub">Check for prohibited and verify-before-use patterns.</div></div>
     </div>
     <div class="week-check" id="c3" onclick="toggleCheck('c3')">
       <div class="check-num">3</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">YouTube kanalı aç</div><div class="sub" style="font-size:12px">"Vorqa Global" adıyla. Aynı biyografi, web site linki. Kanal banner'ı Canva'dan adapte et.</div></div>
+      <div><div class="title">Review language versions</div><div class="sub">Check English, Turkish, and Arabic tone separately.</div></div>
     </div>
     <div class="week-check" id="c4" onclick="toggleCheck('c4')">
       <div class="check-num">4</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">Instagram hesabı aç (Business)</div><div class="sub" style="font-size:12px">@vorqaglobal. Bio: "Turnkey Industrial Plants 🏗 Concrete · Galvanizing · Energy · Supply Chain 🌍 Türkiye → MENA & Africa 🔗 vorqaglobal.com"</div></div>
+      <div><div class="title">Approve visuals</div><div class="sub">Use only approved brand assets or clearly sourced real visuals.</div></div>
     </div>
     <div class="week-check" id="c5" onclick="toggleCheck('c5')">
       <div class="check-num">5</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">Buffer ücretsiz hesap kur</div><div class="sub" style="font-size:12px">LinkedIn + Instagram + YouTube bağla. İlk 5 postu sıraya koy (Pazartesi-Çarşamba-Cuma ritmi).</div></div>
+      <div><div class="title">Human approval</div><div class="sub">Only then move content to APPROVED or scheduling queue.</div></div>
     </div>
-    <div class="week-check" id="c6" onclick="toggleCheck('c6')">
-      <div class="check-num">6</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">Post 1 yayınla — "Launch" duyurusu</div><div class="sub" style="font-size:12px">EN + AR versiyonunu aynı post'a koy. ———— ile ayır. İlk 48 saat yorumları kendine cevapla.</div></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="label">2. Hafta — İçerik Motoru</div>
-    <div class="week-check" id="c7" onclick="toggleCheck('c7')">
-      <div class="check-num">7</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">Canva şablon seti oluştur</div><div class="sub" style="font-size:12px">3 farklı LinkedIn post görseli şablonu. 1 Instagram kare şablonu. Vorqa renkleri + Mira imzası köşede.</div></div>
-    </div>
-    <div class="week-check" id="c8" onclick="toggleCheck('c8')">
-      <div class="check-num">8</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">Alan çekimi planla</div><div class="sub" style="font-size:12px">En yakın tesis için çekim günü ayarla. Çekilecekler: genel tesis turu (60-90sn), ekipman yakın çekimleri, çalışma anları. Ham materyal = aylarca içerik.</div></div>
-    </div>
-    <div class="week-check" id="c9" onclick="toggleCheck('c9')">
-      <div class="check-num">9</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">ElevenLabs'te Mira'nın sesini ayarla</div><div class="sub" style="font-size:12px">Ücretsiz hesap. "Professional" ses kategorisinden Arapça + İngilizce için iki ses seç. İsim: "Mira – Vorqa Global Analyst".</div></div>
-    </div>
-    <div class="week-check" id="c10" onclick="toggleCheck('c10')">
-      <div class="check-num">10</div>
-      <div><div style="font-size:13px;font-weight:500;color:var(--color-text-primary)">Post 2-4'ü yayınla + etkileşim takibi</div><div class="sub" style="font-size:12px">Hangi post en çok tepki aldı? O konuyu bir sonraki ayda 3x daha fazla işle. Algoritma sana ne işe yaradığını söylüyor.</div></div>
-    </div>
-    <div id="progress-area" style="margin-top:16px;padding:14px;background:var(--color-background-secondary);border-radius:var(--border-radius-md)">
-      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="sub">Tamamlanan görevler</span><span id="prog-txt" style="font-size:13px;font-weight:500;color:var(--color-text-primary)">0 / 10</span></div>
-      <div style="height:6px;border-radius:3px;background:var(--color-border-tertiary);overflow:hidden"><div id="prog-bar" style="height:100%;width:0%;border-radius:3px;background:var(--color-background-success);transition:width .3s"></div></div>
+    <div id="progress-area" style="margin-top:16px;padding:14px;background:var(--color-background-secondary,#F5F8FB);border-radius:6px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="sub">Completed</span><span id="prog-txt" style="font-size:13px;font-weight:650;color:var(--color-text-primary,#0A2540)">0 / 5</span></div>
+      <div style="height:6px;border-radius:3px;background:var(--color-border-tertiary,#D5E0EA);overflow:hidden"><div id="prog-bar" style="height:100%;width:0%;border-radius:3px;background:var(--color-background-success,#178A55);transition:width .3s"></div></div>
     </div>
   </div>
 </div>
@@ -453,8 +236,9 @@ function copyText(id,btn){
   const t=document.getElementById(id).innerText;
   navigator.clipboard.writeText(t).then(()=>{
     btn.classList.add('done');
-    btn.innerHTML='<i class="ti ti-check" aria-hidden="true"></i> Kopyalandı';
-    setTimeout(()=>{btn.classList.remove('done');btn.innerHTML='<i class="ti ti-copy" aria-hidden="true"></i> Kopyala';},2000);
+    const old=btn.innerHTML;
+    btn.innerHTML='Copied';
+    setTimeout(()=>{btn.classList.remove('done');btn.innerHTML=old;},1800);
   });
 }
 let checked=new Set();
@@ -462,9 +246,9 @@ function toggleCheck(id){
   const el=document.getElementById(id);
   const num=el.querySelector('.check-num');
   if(checked.has(id)){checked.delete(id);num.classList.remove('done');num.innerHTML=num.getAttribute('data-n');}
-  else{num.setAttribute('data-n',num.innerText);checked.add(id);num.classList.add('done');num.innerHTML='<i class="ti ti-check" aria-label="Tamamlandı"></i>';}
-  const pct=Math.round(checked.size/10*100);
+  else{num.setAttribute('data-n',num.innerText);checked.add(id);num.classList.add('done');num.innerHTML='✓';}
+  const pct=Math.round(checked.size/5*100);
   document.getElementById('prog-bar').style.width=pct+'%';
-  document.getElementById('prog-txt').textContent=checked.size+' / 10';
+  document.getElementById('prog-txt').textContent=checked.size+' / 5';
 }
 </script>
