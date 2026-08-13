@@ -107,6 +107,78 @@ class MiraValidationTests(unittest.TestCase):
             finally:
                 path.unlink(missing_ok=True)
 
+    def test_confidential_source_material_not_persisted(self) -> None:
+        raw = "CONFIDENTIAL-RFQ-ALPHA customer ACME price 12345 private@example.com"
+        env = os.environ.copy()
+        env["MIRA_AI_PROVIDER"] = "mock"
+        proc = subprocess.run(
+            [
+                sys.executable,
+                str(AUTOMATION / "generate_content.py"),
+                "--topic",
+                "Confidential RFQ learning",
+                "--source-class",
+                "CONFIDENTIAL",
+                "--source-material",
+                raw,
+            ],
+            cwd=REPO,
+            env=env,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        path = Path(proc.stdout.strip())
+        try:
+            text = path.read_text(encoding="utf-8")
+            data = json.loads(text)
+            self.assertEqual(data["source_class"], "CONFIDENTIAL")
+            self.assertFalse(data["source_material_stored"])
+            self.assertIsNone(data["source_summary"])
+            self.assertNotIn(raw, text)
+            self.assertNotIn("private@example.com", text)
+        finally:
+            path.unlink(missing_ok=True)
+
+    def test_client_confidential_source_material_not_in_json_or_index(self) -> None:
+        raw = "CLIENT-CONFIDENTIAL-BETA RFQ pump quotation margin 42% client@example.com +90 555 111 2233"
+        env = os.environ.copy()
+        env["MIRA_AI_PROVIDER"] = "mock"
+        proc = subprocess.run(
+            [
+                sys.executable,
+                str(AUTOMATION / "generate_content.py"),
+                "--topic",
+                "Client confidential RFQ learning",
+                "--source-class",
+                "CLIENT_CONFIDENTIAL",
+                "--source-material",
+                raw,
+            ],
+            cwd=REPO,
+            env=env,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        path = Path(proc.stdout.strip())
+        try:
+            text = path.read_text(encoding="utf-8")
+            data = json.loads(text)
+            self.assertEqual(data["source_class"], "CLIENT_CONFIDENTIAL")
+            self.assertFalse(data["source_material_stored"])
+            self.assertIsNone(data["source_summary"])
+            self.assertNotIn(raw, text)
+            self.assertNotIn("client@example.com", text)
+
+            subprocess.run([sys.executable, str(AUTOMATION / "build_content_index.py")], cwd=REPO, check=True)
+            index_text = (ROOT / "content" / "index.json").read_text(encoding="utf-8")
+            self.assertNotIn(raw, index_text)
+            self.assertNotIn("client@example.com", index_text)
+        finally:
+            path.unlink(missing_ok=True)
+            subprocess.run([sys.executable, str(AUTOMATION / "build_content_index.py")], cwd=REPO, check=True)
+
     def test_instagram_facebook_not_active(self) -> None:
         truth = load_truth()
         self.assertEqual(truth["platform_status"]["instagram"], "PLANNED")

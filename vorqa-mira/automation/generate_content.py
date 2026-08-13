@@ -34,6 +34,7 @@ CONTENT_TYPES = {
 }
 
 SOURCE_CLASSES = {"PUBLIC", "INTERNAL_SAFE", "CONFIDENTIAL", "CLIENT_CONFIDENTIAL"}
+SENSITIVE_SOURCE_CLASSES = {"CONFIDENTIAL", "CLIENT_CONFIDENTIAL"}
 
 
 def slugify(value: str) -> str:
@@ -113,6 +114,50 @@ def build_visual_brief(topic: str, language: str, content_type: str, visual_inte
     }
 
 
+def should_store_source_material(source_class: str) -> bool:
+    return source_class not in SENSITIVE_SOURCE_CLASSES
+
+
+def persisted_source_fields(args: argparse.Namespace) -> dict:
+    if should_store_source_material(args.source_class):
+        return {
+            "source_class": args.source_class,
+            "source_material_stored": bool(args.source_material),
+            "source_material": args.source_material,
+            "source_summary": args.source_material[:500] if args.source_material else None,
+        }
+    return {
+        "source_class": args.source_class,
+        "source_material_stored": False,
+        "source_summary": None,
+    }
+
+
+def confidential_snippets(source_material: str) -> list[str]:
+    snippets = []
+    clean = source_material.strip()
+    if clean:
+        snippets.append(clean)
+    for line in source_material.splitlines():
+        stripped = line.strip()
+        if len(stripped) >= 8:
+            snippets.append(stripped)
+    return sorted(set(snippets), key=len, reverse=True)
+
+
+def redact_confidential_echo(text: str, source_material: str) -> str:
+    redacted = text
+    for snippet in confidential_snippets(source_material):
+        redacted = redacted.replace(snippet, "[redacted confidential source detail]")
+    return redacted
+
+
+def redact_confidential_adaptations(adaptations: dict, source_material: str) -> dict:
+    encoded = json.dumps(adaptations, ensure_ascii=False)
+    encoded = redact_confidential_echo(encoded, source_material)
+    return json.loads(encoded)
+
+
 def create_draft(args: argparse.Namespace) -> dict:
     now = datetime.now(timezone.utc).isoformat()
     context = read_context_files()
@@ -124,12 +169,16 @@ def create_draft(args: argparse.Namespace) -> dict:
             f"{args.topic}\n\n"
             "AI generation is unavailable. Add a human-written draft here, then run fact validation and platform adaptation."
         )
+    if args.source_class in SENSITIVE_SOURCE_CLASSES:
+        master = redact_confidential_echo(master, args.source_material)
     platform_targets = [p.strip().lower() for p in args.platform_targets.split(",") if p.strip()]
     platform_adaptations = adapt(master, args.topic, args.persona, args.language, args.content_type, args.cta)
     platform_adaptations = {k: v for k, v in platform_adaptations.items() if k in platform_targets}
+    if args.source_class in SENSITIVE_SOURCE_CLASSES:
+        platform_adaptations = redact_confidential_adaptations(platform_adaptations, args.source_material)
     validation = validate_text(master + "\n" + json.dumps(platform_adaptations, ensure_ascii=False))
     status = "NEEDS_REVIEW" if validation["verify_before_use"] or validation["prohibited"] else "DRAFT"
-    return {
+    draft = {
         "version": "3.1",
         "id": f"{datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S')}-{slugify(args.topic)}",
         "created_at": now,
@@ -141,8 +190,6 @@ def create_draft(args: argparse.Namespace) -> dict:
         "platform_goal": args.platform_goal,
         "master_language": args.language,
         "master_content": master,
-        "source_class": args.source_class,
-        "source_material": args.source_material,
         "sources_used": sorted(context.keys()),
         "platform_targets": platform_targets,
         "fact_validation": validation,
@@ -162,6 +209,8 @@ def create_draft(args: argparse.Namespace) -> dict:
             "notes": []
         }
     }
+    draft.update(persisted_source_fields(args))
+    return draft
 
 
 def main() -> int:

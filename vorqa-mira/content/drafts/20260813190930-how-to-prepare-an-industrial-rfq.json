@@ -1,8 +1,8 @@
 {
   "version": "3.1",
-  "id": "20260813185832-how-to-prepare-an-industrial-rfq",
-  "created_at": "2026-08-13T18:58:32.237226+00:00",
-  "updated_at": "2026-08-13T18:58:32.237226+00:00",
+  "id": "20260813190930-how-to-prepare-an-industrial-rfq",
+  "created_at": "2026-08-13T19:09:30.893964+00:00",
+  "updated_at": "2026-08-13T19:09:30.893964+00:00",
   "topic": "How to prepare an industrial RFQ",
   "persona": "MIRA",
   "persona_label": "Mira | VORQA AI Industry Analyst",
@@ -10,8 +10,6 @@
   "platform_goal": "LinkedIn education",
   "master_language": "EN",
   "master_content": "How to prepare an industrial RFQ\n\nA sound industrial procurement decision is not made by comparing price alone. Technical fit, scope clarity, documentation needs, lead-time assumptions, and coordination responsibilities should be reviewed together.\n\nThat makes supplier comparison more useful because it shows risk before the purchase decision.\n\nWhat would you clarify first before comparing supplier offers?\n\nMira | VORQA AI Industry Analyst",
-  "source_class": "PUBLIC",
-  "source_material": "Public educational topic for buyers: clarify scope, documentation, lead-time assumptions, and comparison criteria.",
   "sources_used": [
     "BRAND_RULES.md",
     "CONTENT_TYPES.md",
@@ -132,5 +130,9 @@
     "approved_by": null,
     "approved_at": null,
     "notes": []
-  }
+  },
+  "source_class": "PUBLIC",
+  "source_material_stored": true,
+  "source_material": "Public educational topic for buyers: clarify scope, documentation, lead-time assumptions, and comparison criteria.",
+  "source_summary": "Public educational topic for buyers: clarify scope, documentation, lead-time assumptions, and comparison criteria."
 }

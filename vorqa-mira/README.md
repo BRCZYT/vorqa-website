@@ -101,3 +101,14 @@ No content should move to `approved/`, `SCHEDULED`, or `PUBLISHED` without human
 - `CLIENT_CONFIDENTIAL`: never expose publicly without explicit approval.
 
 Never expose customer names, supplier prices, quotations, private emails, phone numbers, commercial margins, bank/payment data, or confidential RFQ documents unless explicitly approved.
+
+## Source Persistence Rule
+
+Generated draft JSON may persist source material only for repository-safe classes:
+
+- `PUBLIC`: source material may be stored normally.
+- `INTERNAL_SAFE`: source material may be stored only when it is explicitly intended for repository-safe use.
+- `CONFIDENTIAL`: raw source material may be used transiently in memory for generation, but JSON must store only `source_class`, `source_material_stored: false`, and `source_summary: null` or a sanitized non-sensitive summary.
+- `CLIENT_CONFIDENTIAL`: same as `CONFIDENTIAL`, with stricter protection for customer names, RFQ text, prices, emails, phone numbers, project-specific commercial data, supplier quotations, payment data, margins, and attachments.
+
+`content/index.json` and the dashboard must never expose raw confidential or client-confidential source material.

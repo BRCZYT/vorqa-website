@@ -30,6 +30,8 @@ def read_item(path: Path, fallback_status: str) -> dict:
         "content_type": data.get("content_type", ""),
         "master_language": data.get("master_language") or data.get("language", ""),
         "platform_targets": data.get("platform_targets", []),
+        "source_class": data.get("source_class"),
+        "source_material_stored": data.get("source_material_stored", False),
         "human_approved": data.get("human_approved") is True,
         "fact_validation": data.get("fact_validation", {}),
         "generation": data.get("generation", {}),
