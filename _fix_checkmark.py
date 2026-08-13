@@ -37,7 +37,8 @@ def nearest_cluster_tip(letter_mask, region_box, near_point, exclude_mask=None, 
 
 def fix_checkmark(in_path, out_path, letter_color, bg_fill, new_width, region_pad=20,
                    erase_dilate=2, blue_color=(13, 110, 210, 255), extend_px=6,
-                   min_alpha=150, verbose=True):
+                   min_alpha=150, tip_search_radius=50, verbose=True,
+                   manual_left_tip=None, manual_right_tip=None):
     im = Image.open(in_path).convert('RGBA')
     arr = np.array(im).astype(int)
     arr_u8_view = np.array(im)
@@ -59,9 +60,16 @@ def fix_checkmark(in_path, out_path, letter_color, bg_fill, new_width, region_pa
     leftmost = pts[np.argmin(pts[:, 0])].astype(float)
     rightmost = pts[np.argmax(pts[:, 0])].astype(float)
 
-    letter_mask = detect_letter_mask(arr_u8_view, letter_color, min_alpha=min_alpha)
-    left_tip = nearest_cluster_tip(letter_mask, (y0, y1, x0, x1), leftmost, exclude_mask=erase_mask)
-    right_tip = nearest_cluster_tip(letter_mask, (y0, y1, x0, x1), rightmost, exclude_mask=erase_mask)
+    if manual_left_tip is not None:
+        left_tip = np.array(manual_left_tip)
+    else:
+        letter_mask = detect_letter_mask(arr_u8_view, letter_color, min_alpha=min_alpha)
+        left_tip = nearest_cluster_tip(letter_mask, (y0, y1, x0, x1), leftmost, exclude_mask=erase_mask, max_radius=tip_search_radius)
+    if manual_right_tip is not None:
+        right_tip = np.array(manual_right_tip)
+    else:
+        letter_mask = detect_letter_mask(arr_u8_view, letter_color, min_alpha=min_alpha)
+        right_tip = nearest_cluster_tip(letter_mask, (y0, y1, x0, x1), rightmost, exclude_mask=erase_mask, max_radius=tip_search_radius)
 
     def extend(p_from, p_toward, extra):
         d = p_toward - p_from
