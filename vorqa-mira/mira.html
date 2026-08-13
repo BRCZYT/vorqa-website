@@ -3,109 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mira V3 - Content Operations Dashboard</title>
+<title>Mira V3.1 - Content Operations Dashboard</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.3.0/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
 <style>
-:root{
-  --navy:#0A2540;
-  --mid:#051728;
-  --blue:#2874B2;
-  --steel:#5C8DB8;
-  --mist:#E8EEF4;
-  --paper:#F7FAFC;
-  --line:#D5E0EA;
-  --orange:#E87722;
-  --green:#178A55;
-  --red:#B42318;
-  --ink:#102235;
-}
+:root{--navy:#0A2540;--mid:#051728;--blue:#2874B2;--steel:#5C8DB8;--mist:#E8EEF4;--paper:#F7FAFC;--line:#D5E0EA;--orange:#E87722;--green:#178A55;--red:#B42318;--ink:#102235}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:var(--paper);color:var(--ink);font-family:'Manrope Variable',Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 button,input,select,textarea{font:inherit}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .app{min-height:100vh;display:grid;grid-template-columns:300px minmax(0,1fr)}
 .side{background:var(--mid);color:white;padding:24px 20px;display:flex;flex-direction:column;gap:24px;position:sticky;top:0;height:100vh}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:34px;height:34px;object-fit:contain}
-.brand-name{font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:700;letter-spacing:.02em}
-.brand-sub{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#8fb7d8;margin-top:2px}
-.persona{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:14px;background:rgba(255,255,255,.04)}
-.persona-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.persona img{width:48px;height:48px;border-radius:8px;object-fit:cover;background:#102235}
-.persona-name{font-family:'Sora Variable',Sora,sans-serif;font-size:15px;font-weight:600}
-.persona-role{font-size:12px;color:rgba(255,255,255,.7);line-height:1.4}
-.truth-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(23,138,85,.35);background:rgba(23,138,85,.12);color:#B8F0D2;border-radius:999px;padding:6px 9px;font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px}
-.nav{display:grid;gap:8px}
-.nav button{height:40px;border:0;border-radius:6px;background:transparent;color:rgba(255,255,255,.68);text-align:left;padding:0 12px;cursor:pointer}
-.nav button.on,.nav button:hover{background:rgba(40,116,178,.2);color:#fff}
-.side-note{margin-top:auto;font-size:12px;line-height:1.6;color:rgba(255,255,255,.62)}
-.main{padding:28px;display:grid;gap:20px;align-content:start}
-.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
-h1{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(26px,4vw,42px);font-weight:650;letter-spacing:0;color:var(--navy);line-height:1.05}
-.lead{max-width:760px;color:#3A4858;font-size:15px;line-height:1.7;margin-top:10px}
-.actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-.btn{height:38px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--navy);padding:0 13px;cursor:pointer;box-shadow:0 1px 2px rgba(10,37,64,.06)}
-.btn.primary{background:var(--blue);border-color:var(--blue);color:white}
-.btn:disabled{opacity:.45;cursor:not-allowed}
-.metrics{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:12px}
-.metric{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;min-height:96px}
-.metric-k{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#5C8DB8}
-.metric-v{font-family:'Sora Variable',Sora,sans-serif;font-size:28px;font-weight:650;color:var(--navy);margin-top:8px}
-.metric-s{font-size:12px;color:#607084;margin-top:2px}
-.panel{display:none}
-.panel.on{display:grid;gap:16px}
-.section-title{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:4px}
-.section-title h2{font-family:'Sora Variable',Sora,sans-serif;font-size:18px;color:var(--navy)}
-.section-title span{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;color:#708195;text-transform:uppercase;letter-spacing:1.5px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.item{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:12px;min-height:170px}
-.item-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.item-title{font-family:'Sora Variable',Sora,sans-serif;font-size:15px;font-weight:620;color:var(--navy);line-height:1.35}
-.item-meta{font-size:12px;color:#65768A;line-height:1.5}
-.badge{display:inline-flex;align-items:center;height:24px;border-radius:999px;padding:0 9px;font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
-.IDEA{background:#EEF2F7;color:#3A4858}.DRAFT{background:#E8F1FA;color:#2874B2}.NEEDS_REVIEW{background:#FFF3E7;color:#C65F13}.APPROVED{background:#E8F7EF;color:#178A55}.SCHEDULED{background:#F1EBFF;color:#6D4CC2}.PUBLISHED{background:#E7F7F7;color:#217B82}.REJECTED{background:#FDECEC;color:#B42318}
-.small-row{display:flex;gap:8px;flex-wrap:wrap}
-.tag{border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;color:#53657A;background:#FBFDFF}
-.warn{border-left:3px solid var(--orange);padding:10px 12px;background:#FFF8F1;border-radius:6px;color:#74410F;font-size:12px;line-height:1.5}
-.ok{border-left:3px solid var(--green);padding:10px 12px;background:#F0FAF4;border-radius:6px;color:#0F5F39;font-size:12px;line-height:1.5}
-.flow{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:10px}
-.step{background:white;border:1px solid var(--line);border-radius:8px;padding:12px;min-height:82px}
-.step-n{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;color:var(--blue)}
-.step-t{font-size:13px;font-weight:650;margin-top:8px;color:var(--navy);line-height:1.35}
-.preview-layout{display:grid;grid-template-columns:360px minmax(0,1fr);gap:16px}
-.editor{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:12px;align-content:start}
-label{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:#5C8DB8}
-textarea,select,input{width:100%;border:1px solid var(--line);border-radius:6px;background:#FBFDFF;color:var(--ink);padding:10px 12px;outline:none}
-textarea{min-height:128px;resize:vertical;line-height:1.55}
-textarea:focus,select:focus,input:focus{border-color:rgba(40,116,178,.55);box-shadow:0 0 0 3px rgba(40,116,178,.1)}
-.preview{background:white;border:1px solid var(--line);border-radius:8px;display:grid;grid-template-rows:auto 1fr}
-.preview-tabs{display:flex;border-bottom:1px solid var(--line);overflow:auto}
-.preview-tabs button{height:42px;border:0;background:transparent;border-right:1px solid var(--line);padding:0 14px;color:#607084;cursor:pointer;white-space:nowrap}
-.preview-tabs button.on{color:var(--navy);background:#F2F7FB}
-.post{padding:18px;display:grid;gap:14px}
-.post-copy{border:1px solid var(--line);background:#FBFDFF;border-radius:8px;padding:16px;white-space:pre-wrap;line-height:1.65;color:#17283A;min-height:220px}
-.post-copy[dir="rtl"]{text-align:right}
-.visual{border:1px dashed #98AABD;border-radius:8px;background:#FAFCFE;padding:16px;display:grid;gap:8px;color:#53657A;font-size:13px;line-height:1.5}
-.gate{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gate-box{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;min-height:140px}
-.gate-box h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px}
-.gate-box p{font-size:13px;color:#53657A;line-height:1.55}
-.footline{font-size:12px;color:#708195;line-height:1.6}
-@media(max-width:1060px){
-  .app{grid-template-columns:1fr}
-  .side{height:auto;position:relative}
-  .metrics,.grid,.gate{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .preview-layout{grid-template-columns:1fr}
-  .flow{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-@media(max-width:680px){
-  .main{padding:18px}
-  .metrics,.grid,.gate,.flow{grid-template-columns:1fr}
-  .topbar{display:grid}
-  .actions{justify-content:flex-start}
-}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:34px;height:34px;object-fit:contain}.brand-name{font-family:'Sora Variable',Sora,sans-serif;font-size:18px;font-weight:700}.brand-sub{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#8fb7d8;margin-top:2px}
+.persona{border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:14px;background:rgba(255,255,255,.04)}.persona-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}.persona img{width:48px;height:48px;border-radius:8px;object-fit:cover;background:#102235}.persona-name{font-family:'Sora Variable',Sora,sans-serif;font-size:15px;font-weight:600}.persona-role{font-size:12px;color:rgba(255,255,255,.7);line-height:1.4}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 9px;font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1px}.truth-pill{border:1px solid rgba(23,138,85,.35);background:rgba(23,138,85,.12);color:#B8F0D2}.mode-pill{border:1px solid rgba(232,119,34,.35);background:rgba(232,119,34,.12);color:#FFD8B8;margin-top:8px}
+.nav{display:grid;gap:8px}.nav button{height:40px;border:0;border-radius:6px;background:transparent;color:rgba(255,255,255,.68);text-align:left;padding:0 12px;cursor:pointer}.nav button.on,.nav button:hover{background:rgba(40,116,178,.2);color:#fff}.side-note{margin-top:auto;font-size:12px;line-height:1.6;color:rgba(255,255,255,.62)}
+.main{padding:28px;display:grid;gap:20px;align-content:start}.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}h1{font-family:'Sora Variable',Sora,sans-serif;font-size:clamp(26px,4vw,42px);font-weight:650;color:var(--navy);line-height:1.05}.lead{max-width:820px;color:#3A4858;font-size:15px;line-height:1.7;margin-top:10px}.actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.btn{height:38px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--navy);padding:0 13px;cursor:pointer;box-shadow:0 1px 2px rgba(10,37,64,.06)}.btn.primary{background:var(--blue);border-color:var(--blue);color:white}.btn:disabled{opacity:.45;cursor:not-allowed}
+.metrics{display:grid;grid-template-columns:repeat(6,minmax(110px,1fr));gap:12px}.metric{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;min-height:92px}.metric-k{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#5C8DB8}.metric-v{font-family:'Sora Variable',Sora,sans-serif;font-size:26px;font-weight:650;color:var(--navy);margin-top:8px}.metric-s{font-size:12px;color:#607084;margin-top:2px}
+.panel{display:none}.panel.on{display:grid;gap:16px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:4px}.section-title h2{font-family:'Sora Variable',Sora,sans-serif;font-size:18px;color:var(--navy)}.section-title span{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;color:#708195;text-transform:uppercase;letter-spacing:1.5px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.item{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:12px;min-height:170px}.item-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.item-title{font-family:'Sora Variable',Sora,sans-serif;font-size:15px;font-weight:620;color:var(--navy);line-height:1.35}.item-meta{font-size:12px;color:#65768A;line-height:1.5}.badge{display:inline-flex;align-items:center;height:24px;border-radius:999px;padding:0 9px;font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}.IDEA{background:#EEF2F7;color:#3A4858}.DRAFT{background:#E8F1FA;color:#2874B2}.NEEDS_REVIEW{background:#FFF3E7;color:#C65F13}.APPROVED{background:#E8F7EF;color:#178A55}.SCHEDULED{background:#F1EBFF;color:#6D4CC2}.PUBLISHED{background:#E7F7F7;color:#217B82}.REJECTED{background:#FDECEC;color:#B42318}
+.small-row{display:flex;gap:8px;flex-wrap:wrap}.tag{border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;color:#53657A;background:#FBFDFF}.warn{border-left:3px solid var(--orange);padding:10px 12px;background:#FFF8F1;border-radius:6px;color:#74410F;font-size:12px;line-height:1.5}.ok{border-left:3px solid var(--green);padding:10px 12px;background:#F0FAF4;border-radius:6px;color:#0F5F39;font-size:12px;line-height:1.5}.bad{border-left:3px solid var(--red);padding:10px 12px;background:#FDECEC;border-radius:6px;color:#7A1A13;font-size:12px;line-height:1.5}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:10px}.step{background:white;border:1px solid var(--line);border-radius:8px;padding:12px;min-height:82px}.step-n{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;color:var(--blue)}.step-t{font-size:13px;font-weight:650;margin-top:8px;color:var(--navy);line-height:1.35}
+.preview-layout{display:grid;grid-template-columns:370px minmax(0,1fr);gap:16px}.editor{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:12px;align-content:start}label{font-family:'JetBrains Mono Variable','JetBrains Mono',monospace;font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:#5C8DB8}textarea,select,input{width:100%;border:1px solid var(--line);border-radius:6px;background:#FBFDFF;color:var(--ink);padding:10px 12px;outline:none}textarea{min-height:116px;resize:vertical;line-height:1.55}textarea:focus,select:focus,input:focus{border-color:rgba(40,116,178,.55);box-shadow:0 0 0 3px rgba(40,116,178,.1)}
+.preview{background:white;border:1px solid var(--line);border-radius:8px;display:grid;grid-template-rows:auto 1fr}.preview-tabs{display:flex;border-bottom:1px solid var(--line);overflow:auto}.preview-tabs button{height:42px;border:0;background:transparent;border-right:1px solid var(--line);padding:0 14px;color:#607084;cursor:pointer;white-space:nowrap}.preview-tabs button.on{color:var(--navy);background:#F2F7FB}.post{padding:18px;display:grid;gap:14px}.post-copy{border:1px solid var(--line);background:#FBFDFF;border-radius:8px;padding:16px;white-space:pre-wrap;line-height:1.65;color:#17283A;min-height:220px}.post-copy[dir="rtl"]{text-align:right}.visual{border:1px dashed #98AABD;border-radius:8px;background:#FAFCFE;padding:16px;display:grid;gap:8px;color:#53657A;font-size:13px;line-height:1.5}.gate{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gate-box{background:white;border:1px solid var(--line);border-radius:8px;padding:16px;min-height:140px}.gate-box h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px}.gate-box p{font-size:13px;color:#53657A;line-height:1.55}.footline{font-size:12px;color:#708195;line-height:1.6}
+@media(max-width:1120px){.app{grid-template-columns:1fr}.side{height:auto;position:relative}.metrics,.grid,.gate{grid-template-columns:repeat(2,minmax(0,1fr))}.preview-layout{grid-template-columns:1fr}.flow{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:680px){.main{padding:18px}.metrics,.grid,.gate,.flow{grid-template-columns:1fr}.topbar{display:grid}.actions{justify-content:flex-start}}
 </style>
 </head>
 <body>
@@ -113,278 +34,165 @@ textarea:focus,select:focus,input:focus{border-color:rgba(40,116,178,.55);box-sh
   <aside class="side">
     <div class="brand">
       <img src="../brand_assets/vorqa_amblem_transparent.png" alt="">
-      <div>
-        <div class="brand-name">VORQA</div>
-        <div class="brand-sub">Mira V3</div>
-      </div>
+      <div><div class="brand-name">VORQA</div><div class="brand-sub">Mira V3.1</div></div>
     </div>
-
     <div class="persona">
       <div class="persona-top">
-        <picture>
-          <source srcset="Mira_vorqaglobal.webp" type="image/webp">
-          <img src="Mira_vorqaglobal-fallback.png" alt="Mira">
-        </picture>
-        <div>
-          <div class="persona-name">Mira</div>
-          <div class="persona-role">VORQA AI Industry Analyst</div>
-        </div>
+        <picture><source srcset="Mira_vorqaglobal.webp" type="image/webp"><img src="Mira_vorqaglobal-fallback.png" alt="Mira"></picture>
+        <div><div class="persona-name">Mira</div><div class="persona-role">VORQA AI Industry Analyst</div></div>
       </div>
-      <span class="truth-pill">Truth file required</span>
+      <span class="pill truth-pill">Truth file required</span>
+      <span class="pill mode-pill" id="indexMode">Index loading</span>
     </div>
-
     <nav class="nav" aria-label="Dashboard">
       <button class="on" data-panel="overview">Overview</button>
       <button data-panel="content">Content Board</button>
-      <button data-panel="studio">Adaptation Preview</button>
+      <button data-panel="studio">Content Studio</button>
       <button data-panel="approval">Approval Gate</button>
     </nav>
-
-    <p class="side-note">
-      VORQA is the corporate voice. Mira educates, validates, and prepares drafts. Publishing stays human-approved.
-    </p>
+    <p class="side-note">LinkedIn is active. Instagram and Facebook are planned. WhatsApp Business is a conversation channel. Publishing stays human-approved.</p>
   </aside>
 
   <main class="main">
     <section class="topbar">
       <div>
         <h1>Content Operations Dashboard</h1>
-        <p class="lead">From verified sources to multilingual drafts, platform adaptations, visual briefs, approval, queue, and analytics.</p>
+        <p class="lead">Real local content index, provider-neutral AI generation architecture, platform adaptations, visual briefs, fact warnings, and approval controls.</p>
       </div>
       <div class="actions">
-        <button class="btn" id="validateBtn">Run Local Check</button>
-        <button class="btn primary" id="approvalBtn" disabled>Approve Selected</button>
+        <button class="btn" id="reloadBtn">Reload Index</button>
+        <button class="btn primary" id="approvalBtn" disabled>Approval Requires Human</button>
       </div>
     </section>
 
     <section class="metrics" aria-label="Content status">
-      <div class="metric"><div class="metric-k">Ideas</div><div class="metric-v" id="mIdeas">0</div><div class="metric-s">Topic backlog</div></div>
-      <div class="metric"><div class="metric-k">Drafts</div><div class="metric-v" id="mDrafts">0</div><div class="metric-s">Needs validation</div></div>
+      <div class="metric"><div class="metric-k">Ideas</div><div class="metric-v" id="mIdeas">0</div><div class="metric-s">Backlog</div></div>
+      <div class="metric"><div class="metric-k">Drafts</div><div class="metric-v" id="mDrafts">0</div><div class="metric-s">Generated/manual</div></div>
+      <div class="metric"><div class="metric-k">Review</div><div class="metric-v" id="mReview">0</div><div class="metric-s">Warnings</div></div>
       <div class="metric"><div class="metric-k">Approved</div><div class="metric-v" id="mApproved">0</div><div class="metric-s">Human-gated</div></div>
-      <div class="metric"><div class="metric-k">Queue</div><div class="metric-v" id="mQueue">0</div><div class="metric-s">Not auto-published</div></div>
+      <div class="metric"><div class="metric-k">Scheduled</div><div class="metric-v" id="mScheduled">0</div><div class="metric-s">Queue</div></div>
+      <div class="metric"><div class="metric-k">Published</div><div class="metric-v" id="mPublished">0</div><div class="metric-s">Records</div></div>
     </section>
 
     <section class="panel on" id="overview">
-      <div class="section-title">
-        <h2>V3 Workflow</h2>
-        <span>No automatic publishing</span>
-      </div>
+      <div class="section-title"><h2>V3.1 Workflow</h2><span>No automatic publishing</span></div>
       <div class="flow" id="flow"></div>
       <div class="gate">
-        <div class="gate-box">
-          <h3>Approved Claims</h3>
-          <p>Use only facts from `context/VORQA_TRUTH.md` marked `[APPROVED]` unless a human verifies a source for the current draft.</p>
-        </div>
-        <div class="gate-box">
-          <h3>Partner Capability</h3>
-          <p>Concrete, galvanizing, waste-to-energy, and crushing/screening must be worded as supplier or specialized partner capabilities.</p>
-        </div>
-        <div class="gate-box">
-          <h3>Mira Boundary</h3>
-          <p>Mira covers education and analysis. VORQA handles corporate announcements, offers, project statements, and RFQs.</p>
-        </div>
+        <div class="gate-box"><h3>Platform Status</h3><p>LinkedIn ACTIVE. Instagram and Facebook PLANNED. YouTube FUTURE. TikTok NOT_PRIORITIZED. WhatsApp Business CONVERSATION_CHANNEL.</p></div>
+        <div class="gate-box"><h3>AI Generation</h3><p>Use the CLI or local backend bridge. Browser HTML never stores API keys and does not use localStorage for secrets.</p></div>
+        <div class="gate-box"><h3>Content Index</h3><p>The board reads `content/index.json`, generated by `automation/build_content_index.py` from local content JSON files.</p></div>
       </div>
     </section>
 
     <section class="panel" id="content">
-      <div class="section-title">
-        <h2>Content Board</h2>
-        <span>IDEA -> DRAFT -> APPROVED</span>
-      </div>
+      <div class="section-title"><h2>Content Board</h2><span id="indexStamp">content/index.json</span></div>
       <div class="grid" id="cards"></div>
     </section>
 
     <section class="panel" id="studio">
-      <div class="section-title">
-        <h2>Adaptation Preview</h2>
-        <span>EN / TR / AR</span>
-      </div>
+      <div class="section-title"><h2>Content Studio</h2><span>CLI/backend generation</span></div>
       <div class="preview-layout">
         <form class="editor" id="draftForm">
-          <label for="topic">Topic</label>
-          <input id="topic" value="RFQ clarity for industrial procurement">
-          <label for="language">Language Version</label>
-          <select id="language">
-            <option>EN</option>
-            <option>TR</option>
-            <option>AR</option>
-          </select>
-          <label for="master">Master Content</label>
-          <textarea id="master">A clear RFQ helps suppliers quote on the same basis. For industrial procurement, the useful comparison is not only price; it is technical fit, documentation readiness, lead-time risk, and responsibility split.</textarea>
-          <button class="btn primary" type="submit">Update Preview</button>
-          <div class="ok">Status remains DRAFT until a human reviewer approves it.</div>
+          <label for="topic">Topic</label><input id="topic" value="How to prepare an industrial RFQ">
+          <label for="persona">Persona</label><select id="persona"><option>MIRA</option><option>VORQA</option></select>
+          <label for="language">Language</label><select id="language"><option>EN</option><option>TR</option><option>AR</option></select>
+          <label for="ctype">Content Type</label><select id="ctype"><option>RFQ Guidance</option><option>Procurement Education</option><option>Technical-Commercial Comparison</option><option>Supplier Evaluation</option><option>Sourcing from Türkiye</option><option>Partner Capability</option><option>VORQA Corporate</option></select>
+          <label for="sourceNotes">Source Notes</label><textarea id="sourceNotes" placeholder="PUBLIC or approved INTERNAL_SAFE notes only"></textarea>
+          <label for="targets">Platform Targets</label><input id="targets" value="linkedin,instagram,facebook">
+          <button class="btn primary" type="submit">Prepare Local Command</button>
+          <div class="warn" id="backendState">AI generation unavailable in static dashboard - local backend not running. Use the generated CLI command below.</div>
         </form>
-
         <div class="preview">
           <div class="preview-tabs">
-            <button class="on" data-platform="linkedin">LinkedIn</button>
-            <button data-platform="instagram">Instagram</button>
-            <button data-platform="facebook">Facebook</button>
-            <button data-platform="visual">Visual Brief</button>
+            <button class="on" data-platform="command">CLI Command</button><button data-platform="linkedin">LinkedIn</button><button data-platform="instagram">Instagram</button><button data-platform="facebook">Facebook</button><button data-platform="visual">Visual Brief</button>
           </div>
-          <div class="post">
-            <div class="post-copy" id="postCopy"></div>
-            <div class="visual" id="visualBrief"></div>
-          </div>
+          <div class="post"><div class="post-copy" id="postCopy"></div><div class="visual" id="visualBrief"></div></div>
         </div>
       </div>
     </section>
 
     <section class="panel" id="approval">
-      <div class="section-title">
-        <h2>Approval Gate</h2>
-        <span>Manual review required</span>
-      </div>
+      <div class="section-title"><h2>Approval Gate</h2><span>Manual review required</span></div>
       <div class="gate">
-        <div class="gate-box">
-          <h3>Fact Validation</h3>
-          <p id="factState">Run the local check to see warnings for prohibited or verify-before-use claims.</p>
-        </div>
-        <div class="gate-box">
-          <h3>Publishing Queue</h3>
-          <p>Only human-approved content can enter `calendar/social_calendar.json`. Buffer integration is a future placeholder.</p>
-        </div>
-        <div class="gate-box">
-          <h3>Credential Safety</h3>
-          <p>No API key inputs are stored in this dashboard. Future credentials belong in environment variables only.</p>
-        </div>
+        <div class="gate-box"><h3>Fact Validation</h3><p>Generated drafts carry `passed`, `verify_before_use`, and `prohibited` validation details. Prohibited items block eligibility.</p></div>
+        <div class="gate-box"><h3>Buffer Readiness</h3><p>Queue inspection exists. Live publishing is disabled unless a future approved implementation changes it.</p></div>
+        <div class="gate-box"><h3>Canva Readiness</h3><p>Visual brief fields define format, aspect ratio, headline, image type, Canva category, language, and CTA placement.</p></div>
       </div>
-      <p class="footline">Local scripts live in `automation/`. Use `validate_facts.py` before moving any content into approved or scheduled status.</p>
+      <p class="footline">Approval cannot be silently applied in this dashboard. Move files to `content/approved/` only after human review.</p>
     </section>
   </main>
 </div>
 
 <script>
-const statuses = ["IDEA","DRAFT","NEEDS_REVIEW","APPROVED","SCHEDULED","PUBLISHED","REJECTED"];
-const workflow = [
-  "Verified sources","Topic generation","Fact validation","Master content","LinkedIn adaptation","Instagram adaptation",
-  "Facebook adaptation","Visual brief","DRAFT","HUMAN APPROVAL","APPROVED","Publishing queue","Analytics"
-];
-const items = [
-  {
-    title:"RFQ checklist for industrial buyers",
-    status:"DRAFT",
-    platform:["LinkedIn","Instagram","Facebook"],
-    language:["EN","TR","AR"],
-    warning:"Verify before use: any examples, numbers, countries, or supplier claims."
-  },
-  {
-    title:"Sourcing from Turkiye: comparison basics",
-    status:"IDEA",
-    platform:["LinkedIn"],
-    language:["EN","AR"],
-    warning:"Keep as procurement education; avoid market-size claims."
-  },
-  {
-    title:"Supplier vs partner capability wording",
-    status:"APPROVED",
-    platform:["LinkedIn","Facebook"],
-    language:["EN","TR"],
-    warning:"Approved for educational framing only."
-  },
-  {
-    title:"Specification compliance review explainer",
-    status:"NEEDS_REVIEW",
-    platform:["Instagram"],
-    language:["EN","TR","AR"],
-    warning:"Needs Arabic technical-term review."
-  }
-];
-let activePlatform = "linkedin";
-
-function countBy(status){return items.filter(item => item.status === status).length}
+const workflow=["Verified sources","Topic generation","AI/provider mode","Fact validation","Master content","LinkedIn adaptation","Instagram planned adaptation","Facebook planned adaptation","Visual brief","DRAFT","HUMAN APPROVAL","APPROVED","Queue inspection","Analytics"];
+let indexData={version:"3.1",items:[],counts:{}};
+let activePlatform="command";
+function setText(id,value){document.getElementById(id).textContent=value}
 function setMetrics(){
-  document.getElementById("mIdeas").textContent = countBy("IDEA");
-  document.getElementById("mDrafts").textContent = countBy("DRAFT") + countBy("NEEDS_REVIEW");
-  document.getElementById("mApproved").textContent = countBy("APPROVED");
-  document.getElementById("mQueue").textContent = countBy("SCHEDULED");
+  const c=indexData.counts||{};
+  setText("mIdeas",c.IDEA||0);setText("mDrafts",c.DRAFT||0);setText("mReview",c.NEEDS_REVIEW||0);setText("mApproved",c.APPROVED||0);setText("mScheduled",c.SCHEDULED||0);setText("mPublished",c.PUBLISHED||0);
 }
-function renderFlow(){
-  document.getElementById("flow").innerHTML = workflow.map((label,index) => `
-    <div class="step">
-      <div class="step-n">${String(index + 1).padStart(2,"0")}</div>
-      <div class="step-t">${label}</div>
-    </div>
-  `).join("");
+function renderFlow(){document.getElementById("flow").innerHTML=workflow.map((label,index)=>`<div class="step"><div class="step-n">${String(index+1).padStart(2,"0")}</div><div class="step-t">${label}</div></div>`).join("")}
+function itemWarning(item){
+  const fv=item.fact_validation||{};
+  if((fv.prohibited||[]).length) return `<div class="bad">Prohibited warnings: ${(fv.prohibited||[]).length}</div>`;
+  if((fv.verify_before_use||[]).length) return `<div class="warn">Verify-before-use warnings: ${(fv.verify_before_use||[]).length}</div>`;
+  return `<div class="ok">No validation warnings in index.</div>`;
 }
 function renderCards(){
-  document.getElementById("cards").innerHTML = items.map(item => `
+  const items=indexData.items||[];
+  document.getElementById("cards").innerHTML=items.length?items.map(item=>`
     <article class="item">
-      <div class="item-head">
-        <div>
-          <div class="item-title">${item.title}</div>
-          <div class="item-meta">${item.platform.join(" / ")}</div>
-        </div>
-        <span class="badge ${item.status}">${item.status}</span>
-      </div>
-      <div class="small-row">${item.language.map(lang => `<span class="tag">${lang}</span>`).join("")}</div>
-      <div class="${item.status === "APPROVED" ? "ok" : "warn"}">${item.warning}</div>
-    </article>
-  `).join("");
+      <div class="item-head"><div><div class="item-title">${item.topic||item.id}</div><div class="item-meta">${item.path||""}</div></div><span class="badge ${item.status}">${item.status}</span></div>
+      <div class="small-row"><span class="tag">${item.master_language||"LANG?"}</span><span class="tag">${item.persona||"persona?"}</span>${(item.platform_targets||[]).map(p=>`<span class="tag">${p}</span>`).join("")}</div>
+      ${itemWarning(item)}
+    </article>`).join(""):`<div class="warn">No content JSON found yet. Run generate_content.py, then build_content_index.py.</div>`;
 }
-function makeCopy(){
-  const topic = document.getElementById("topic").value.trim();
-  const master = document.getElementById("master").value.trim();
-  const lang = document.getElementById("language").value;
-  const signature = lang === "AR" ? "Mira | محللة VORQA الصناعية" : "Mira | VORQA AI Industry Analyst";
-  const intro = {
-    linkedin:`${topic}\n\n${master}\n\nWhat detail do you check first before comparing supplier offers?\n\n${signature}\n#Procurement #IndustrialSourcing #SupplyChain #B2B`,
-    instagram:`${topic}\n\nBefore comparing prices, compare the requirement.\n\n${master}\n\n${signature}\n#Procurement #B2B #IndustrialSourcing`,
-    facebook:`${topic}\n\n${master}\n\nHuman approval required before publishing.`,
-    visual:`Visual brief for: ${topic}`
-  };
-  return intro[activePlatform];
+async function loadIndex(){
+  try{
+    const res=await fetch("content/index.json",{cache:"no-store"});
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    indexData=await res.json();
+    document.getElementById("indexMode").textContent="Index loaded";
+    document.getElementById("indexMode").className="pill truth-pill";
+    setText("indexStamp","Generated "+(indexData.generated_at||""));
+  }catch(err){
+    indexData={version:"3.1",items:[],counts:{}};
+    document.getElementById("indexMode").textContent="Index unavailable";
+    document.getElementById("indexMode").className="pill mode-pill";
+    setText("indexStamp","Run automation/build_content_index.py");
+  }
+  setMetrics();renderCards();
+}
+function shellQuote(value){return `"${String(value).replace(/"/g,'\\"')}"`}
+function makeCommand(){
+  const topic=document.getElementById("topic").value.trim();
+  const persona=document.getElementById("persona").value;
+  const lang=document.getElementById("language").value;
+  const ctype=document.getElementById("ctype").value;
+  const source=document.getElementById("sourceNotes").value.trim();
+  const targets=document.getElementById("targets").value.trim();
+  return `python vorqa-mira/automation/generate_content.py --topic ${shellQuote(topic)} --language ${lang} --persona ${persona} --content-type ${shellQuote(ctype)} --platform-targets ${shellQuote(targets)}${source?` --source-material ${shellQuote(source)} --source-class PUBLIC`:""}\npython vorqa-mira/automation/build_content_index.py`;
 }
 function renderPreview(){
-  const copy = document.getElementById("postCopy");
-  const visual = document.getElementById("visualBrief");
-  const lang = document.getElementById("language").value;
-  copy.dir = lang === "AR" ? "rtl" : "ltr";
-  copy.textContent = makeCopy();
-  visual.style.display = activePlatform === "visual" ? "grid" : "none";
-  visual.innerHTML = [
-    "<strong>Visual Brief</strong>",
-    "Format: educational carousel or static social graphic.",
-    "Use approved VORQA brand assets.",
-    "Do not show fake facilities, products, projects, customers, or certificates.",
-    "Flag required real images for human approval."
-  ].join("<br>");
+  const copy=document.getElementById("postCopy"), visual=document.getElementById("visualBrief");
+  const topic=document.getElementById("topic").value.trim();
+  const source=document.getElementById("sourceNotes").value.trim()||"No source notes supplied.";
+  const lang=document.getElementById("language").value;
+  copy.dir=lang==="AR"?"rtl":"ltr";
+  visual.style.display=activePlatform==="visual"?"grid":"none";
+  if(activePlatform==="command") copy.textContent=makeCommand();
+  if(activePlatform==="linkedin") copy.textContent=`${topic}\n\nPreview will be generated from master_content by adapt_platforms.py. Static dashboard does not fake AI output.\n\nSource notes: ${source}`;
+  if(activePlatform==="instagram") copy.textContent=`${topic}\n\nPlanned Instagram adaptation preview. Account status: PLANNED, not active.`;
+  if(activePlatform==="facebook") copy.textContent=`${topic}\n\nPlanned Facebook adaptation preview. Account status: PLANNED, not active.`;
+  if(activePlatform==="visual") copy.textContent=`${topic}\n\nVisual brief preview only.`;
+  visual.innerHTML=["<strong>Visual Brief Contract</strong>","format","aspect_ratio","headline","supporting_text","image_type","real_imagery_required","canva_template_category","language_version","cta_placement"].join("<br>");
 }
-function runLocalCheck(){
-  const text = `${document.getElementById("topic").value}\n${document.getElementById("master").value}`;
-  const blocked = [/24\+\s*countries/i,/48\s*hour\s*quotation/i,/turnkey\s*EPC/i,/engineering\s*group/i,/ISO\s*9001/i,/\bFAT\b/i,/\b1,?000\+\b/i,/60\s*[-–]\s*240/i,/1\s*[-–]\s*50\s*MW/i].filter(rx => rx.test(text));
-  const state = document.getElementById("factState");
-  if(blocked.length){
-    state.textContent = `Warnings found: ${blocked.length}. Keep this in NEEDS_REVIEW until claims are removed or verified.`;
-  }else{
-    state.textContent = "No known prohibited pattern found in the preview text. Human approval is still required.";
-  }
-}
-document.querySelectorAll(".nav button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".nav button").forEach(b => b.classList.remove("on"));
-    document.querySelectorAll(".panel").forEach(p => p.classList.remove("on"));
-    btn.classList.add("on");
-    document.getElementById(btn.dataset.panel).classList.add("on");
-  });
-});
-document.querySelectorAll(".preview-tabs button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".preview-tabs button").forEach(b => b.classList.remove("on"));
-    btn.classList.add("on");
-    activePlatform = btn.dataset.platform;
-    renderPreview();
-  });
-});
-document.getElementById("draftForm").addEventListener("submit", event => {
-  event.preventDefault();
-  renderPreview();
-});
-document.getElementById("validateBtn").addEventListener("click", runLocalCheck);
-setMetrics();
-renderFlow();
-renderCards();
-renderPreview();
+document.querySelectorAll(".nav button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("on"));document.querySelectorAll(".panel").forEach(p=>p.classList.remove("on"));btn.classList.add("on");document.getElementById(btn.dataset.panel).classList.add("on")}));
+document.querySelectorAll(".preview-tabs button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".preview-tabs button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");activePlatform=btn.dataset.platform;renderPreview()}));
+document.getElementById("draftForm").addEventListener("submit",event=>{event.preventDefault();renderPreview()});
+document.getElementById("reloadBtn").addEventListener("click",loadIndex);
+renderFlow();renderPreview();loadIndex();
 </script>
 </body>
 </html>

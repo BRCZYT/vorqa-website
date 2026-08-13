@@ -1,20 +1,21 @@
 # PLATFORM_RULES.md
 
-## Active Platforms
+## Platform Status
 
-V3 active platforms:
+Use these exact status values in content operations:
 
-1. LinkedIn
-2. Instagram
-3. Facebook
+- LinkedIn: `ACTIVE`
+- Instagram: `PLANNED`
+- Facebook: `PLANNED`
+- YouTube: `FUTURE`
+- TikTok: `NOT_PRIORITIZED`
+- WhatsApp Business: `CONVERSATION_CHANNEL`
 
-Prepare for YouTube later, but do not assume an active VORQA YouTube account.
-
-Do not prioritize TikTok in V3.
-
-WhatsApp Business is a lead/conversation channel, not a public publishing channel.
+Do not state or imply that Instagram or Facebook accounts already exist. They are planned channels only until a human confirms creation.
 
 ## LinkedIn
+
+Status: `ACTIVE`
 
 Purpose: B2B credibility, procurement education, authority building, qualified lead support.
 
@@ -24,7 +25,7 @@ Recommended content:
 - RFQ and specification checklists.
 - Technical-commercial comparison explainers.
 - Procurement risk and coordination posts.
-- Sourcing from Turkiye guidance.
+- Sourcing from Türkiye guidance.
 
 Rules:
 
@@ -36,9 +37,11 @@ Rules:
 
 ## Instagram
 
-Purpose: visual credibility, simplified educational explainers, brand familiarity.
+Status: `PLANNED`
 
-Recommended content:
+Purpose after account creation: visual credibility, simplified educational explainers, brand familiarity.
+
+Recommended future content:
 
 - Carousel summaries.
 - Short visual tips.
@@ -47,6 +50,7 @@ Recommended content:
 
 Rules:
 
+- Do not refer to an active account until a human confirms account creation.
 - Do not use fake facility photos or invented project visuals.
 - Captions should be shorter than LinkedIn.
 - Avoid dense technical claims in image text.
@@ -54,9 +58,11 @@ Rules:
 
 ## Facebook
 
-Purpose: accessible B2B visibility and regional trust.
+Status: `PLANNED`
 
-Recommended content:
+Purpose after account creation: accessible B2B visibility and regional trust.
+
+Recommended future content:
 
 - Clear procurement guidance.
 - Shorter versions of LinkedIn educational posts.
@@ -64,19 +70,35 @@ Recommended content:
 
 Rules:
 
+- Do not refer to an active account until a human confirms account creation.
 - Keep language straightforward.
 - Avoid heavy hashtag blocks.
 - Human approval required before posting.
 
 ## Future YouTube
 
-Allowed in V3 only as future planning:
+Status: `FUTURE`
+
+Allowed in V3.1 only as future planning:
 
 - Topic backlog.
 - Script outline placeholders.
 - Thumbnail or visual brief ideas.
+- Handle reservation notes.
 
 Do not create instructions that assume the account is already live.
+
+## TikTok
+
+Status: `NOT_PRIORITIZED`
+
+Do not prioritize TikTok in V3.1.
+
+## WhatsApp Business
+
+Status: `CONVERSATION_CHANNEL`
+
+WhatsApp Business is active as a lead/conversation channel, not a public publishing platform.
 
 ## Workflow Rule
 

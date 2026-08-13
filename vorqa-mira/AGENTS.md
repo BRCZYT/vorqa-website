@@ -20,6 +20,7 @@ Hard rules:
 - Prefer factual procurement expertise over exaggerated marketing.
 - Never auto-publish unapproved content.
 - Maintain a human approval gate before publishing or scheduling.
+- Platform status: LinkedIn is `ACTIVE`; Instagram and Facebook are `PLANNED`; YouTube is `FUTURE`; TikTok is `NOT_PRIORITIZED`; WhatsApp Business is `CONVERSATION_CHANNEL`.
 - Avoid deleting useful existing assets unless they are clearly obsolete or unsafe.
 - Inspect the existing implementation before creating replacements.
 

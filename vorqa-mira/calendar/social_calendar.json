@@ -1,10 +1,19 @@
 {
-  "version": "3.0",
+  "version": "3.1",
   "timezone": "Europe/Istanbul",
+  "platform_status": {
+    "linkedin": "ACTIVE",
+    "instagram": "PLANNED",
+    "facebook": "PLANNED",
+    "youtube": "FUTURE",
+    "tiktok": "NOT_PRIORITIZED",
+    "whatsapp_business": "CONVERSATION_CHANNEL"
+  },
   "publishing_policy": {
     "auto_publish": false,
     "human_approval_required": true,
-    "active_platforms": ["linkedin", "instagram", "facebook"],
+    "active_public_platforms": ["linkedin"],
+    "planned_public_platforms": ["instagram", "facebook"],
     "future_platforms": ["youtube"],
     "not_prioritized": ["tiktok"],
     "conversation_channels": ["whatsapp_business"]

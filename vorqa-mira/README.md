@@ -1,8 +1,8 @@
-# VORQA Mira V3
+# VORQA Mira V3.1
 
-Mira V3 is a safe, low-maintenance social-media content and automation operating system for VORQA Global Supply.
+Mira V3.1 is a safe, AI-assisted, low-maintenance social-media content operating system for VORQA Global Supply.
 
-It is not an auto-publishing bot. It is a controlled workflow for turning verified VORQA sources into reviewed multilingual social content.
+It is not an auto-publishing bot. It generates and organizes drafts, validates facts, prepares platform adaptations and visual briefs, and keeps human approval mandatory.
 
 ## Current Positioning
 
@@ -11,7 +11,18 @@ INDUSTRIAL PROCUREMENT & PROJECT SOLUTIONS
 
 Main message: From Requirement to Delivery
 
-VORQA is an international industrial procurement and project-supply coordination partner based in Turkiye.
+VORQA is an international industrial procurement and project-supply coordination partner based in Türkiye.
+
+## Platform Status
+
+- LinkedIn: `ACTIVE`
+- Instagram: `PLANNED`
+- Facebook: `PLANNED`
+- YouTube: `FUTURE`
+- TikTok: `NOT_PRIORITIZED`
+- WhatsApp Business: `CONVERSATION_CHANNEL`
+
+Do not state or imply that Instagram or Facebook accounts already exist.
 
 ## Workflow
 
@@ -20,8 +31,8 @@ VORQA is an international industrial procurement and project-supply coordination
 3. Fact validation
 4. Master content
 5. LinkedIn adaptation
-6. Instagram adaptation
-7. Facebook adaptation
+6. Instagram adaptation for planned account
+7. Facebook adaptation for planned account
 8. Visual brief
 9. DRAFT
 10. HUMAN APPROVAL
@@ -39,27 +50,54 @@ Statuses: `IDEA`, `DRAFT`, `NEEDS_REVIEW`, `APPROVED`, `SCHEDULED`, `PUBLISHED`,
 - `content/approved/`: human-approved content ready for scheduling.
 - `content/published/`: records of content that was actually published.
 - `content/archive/`: retired content and superseded notes.
-- `calendar/social_calendar.json`: planned publishing queue.
+- `content/index.json`: generated static dashboard index.
+- `calendar/social_calendar.json`: planned queue and platform policy.
 - `assets/templates/`: reusable visual/content templates.
 - `assets/generated/`: generated visual briefs or approved generated assets.
-- `automation/`: local scripts for content generation, validation, platform adaptation, and future Buffer integration.
+- `automation/`: local scripts.
 - `analytics/performance.json`: lightweight performance tracking.
+- `tests/`: dependency-light test suite.
 
 Existing root-level Mira image files are preserved for backward compatibility with existing site paths.
 
-## Automation
+## AI Generation
 
-All scripts are local-first and safe by default.
+Generation is provider-neutral and local/backend oriented:
+
+`mira.html -> local/backend generation endpoint or CLI bridge -> AI provider -> draft JSON -> fact validation -> platform adaptation -> content/index.json -> dashboard preview`
+
+Environment variables:
 
 ```powershell
-python vorqa-mira/automation/generate_content.py --topic "RFQ checklist for industrial buyers"
-python vorqa-mira/automation/validate_facts.py vorqa-mira/content/drafts/example.json
+$env:MIRA_AI_PROVIDER="mock"      # openai | anthropic | mock | disabled
+$env:MIRA_AI_MODE="MOCK"          # LIVE | MOCK | DISABLED | AUTO
+$env:OPENAI_API_KEY=""
+$env:ANTHROPIC_API_KEY=""
+```
+
+No API key belongs in browser HTML, localStorage, or committed files.
+
+Examples:
+
+```powershell
+python vorqa-mira/automation/generate_content.py --topic "How to prepare an industrial RFQ" --language EN --persona MIRA
 python vorqa-mira/automation/adapt_platforms.py vorqa-mira/content/drafts/example.json
+python vorqa-mira/automation/build_content_index.py
+python vorqa-mira/automation/validate_facts.py vorqa-mira/content/drafts/example.json
 python vorqa-mira/automation/publish_buffer.py --dry-run
 ```
 
-`publish_buffer.py` does not publish unless a future implementation explicitly adds authenticated API behavior and the content is already `APPROVED` or `SCHEDULED`.
+`MOCK` output is clearly marked as mock. `LIVE` requires environment credentials. `DISABLED` creates no AI output.
 
 ## Approval Gate
 
-No content should move to `approved/`, `SCHEDULED`, or `PUBLISHED` without human review. Do not store secrets in this repository.
+No content should move to `approved/`, `SCHEDULED`, or `PUBLISHED` without human review. Buffer live publishing remains disabled.
+
+## Source Classification
+
+- `PUBLIC`: may be used in public content with normal validation.
+- `INTERNAL_SAFE`: may feed public drafts only after human approval for that use.
+- `CONFIDENTIAL`: never expose publicly.
+- `CLIENT_CONFIDENTIAL`: never expose publicly without explicit approval.
+
+Never expose customer names, supplier prices, quotations, private emails, phone numbers, commercial margins, bank/payment data, or confidential RFQ documents unless explicitly approved.

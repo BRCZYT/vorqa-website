@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Future Buffer integration placeholder.
+"""Inspect future Buffer publishing eligibility.
 
-V3 intentionally does not auto-publish. This script only inspects approved or
-scheduled content and reports what would be eligible for a future Buffer queue.
+Live Buffer publishing remains disabled in V3.1. This script separates queue
+inspection, validation, and future API-readiness without posting anything.
 """
 
 from __future__ import annotations
@@ -22,34 +22,50 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def eligible_items() -> list[dict]:
+def has_clean_validation(data: dict) -> bool:
+    validation = data.get("fact_validation", {})
+    return not validation.get("prohibited")
+
+
+def inspect_approved_files() -> list[dict]:
     items = []
     for path in sorted(APPROVED.glob("*.json")):
         data = load_json(path)
-        if data.get("status") in {"APPROVED", "SCHEDULED"} and data.get("human_approved") is True:
-            items.append({"path": str(path), "id": data.get("id"), "status": data.get("status")})
+        status_ok = data.get("status") in {"APPROVED", "SCHEDULED"}
+        approval_ok = data.get("human_approved") is True
+        validation_ok = has_clean_validation(data)
+        items.append(
+            {
+                "path": str(path),
+                "id": data.get("id"),
+                "status": data.get("status"),
+                "human_approved": data.get("human_approved") is True,
+                "fact_validation_clean": validation_ok,
+                "eligible": status_ok and approval_ok and validation_ok,
+            }
+        )
     return items
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Dry-run future Buffer publishing queue.")
-    parser.add_argument("--dry-run", action="store_true", default=True, help="Only print eligible items.")
+    parser = argparse.ArgumentParser(description="Inspect future Buffer publishing queue.")
+    parser.add_argument("--dry-run", action="store_true", default=True)
+    parser.add_argument("--publish", action="store_true", help="Rejected in V3.1; live publishing is disabled.")
     args = parser.parse_args()
 
-    token_present = bool(os.getenv("BUFFER_API_TOKEN"))
     calendar = load_json(CALENDAR)
-    items = eligible_items()
-
+    items = inspect_approved_files()
     report = {
-        "auto_publish": False,
-        "dry_run": args.dry_run,
-        "buffer_token_present": token_present,
+        "live_publishing_enabled": False,
+        "requested_publish": args.publish,
+        "buffer_token_present": bool(os.getenv("BUFFER_API_TOKEN")),
         "calendar_queue_count": len(calendar.get("queue", [])),
-        "eligible_approved_files": items,
-        "message": "No content was published. Buffer API behavior is intentionally not implemented in V3."
+        "eligible_items": [item for item in items if item["eligible"]],
+        "all_items": items,
+        "message": "No content was published. V3.1 supports queue inspection only."
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    return 0
+    return 2 if args.publish else 0
 
 
 if __name__ == "__main__":

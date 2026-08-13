@@ -13,10 +13,10 @@ VORQA Mira supports Turkish, English, and Arabic.
 
 ## Turkish
 
-- Tone: net, profesyonel, guven veren.
-- Kamuya acik icerikte abartili reklam dili kullanma.
-- "Tedarik", "proje tedariği", "teknik-ticari karsilastirma", "tedarikci koordinasyonu" gibi ifadeleri tercih et.
-- "Uretiyoruz", "kuruyoruz", "anahtar teslim EPC yapiyoruz" gibi ifadeleri yalnizca dogrulanmis kaynak varsa kullan.
+- Tone: net, profesyonel, güven veren.
+- Kamuya açık içerikte abartılı reklam dili kullanma.
+- "Tedarik", "proje tedariği", "teknik-ticari karşılaştırma", "tedarikçi koordinasyonu" gibi ifadeleri tercih et.
+- "Üretiyoruz", "kuruyoruz", "anahtar teslim EPC yapıyoruz" gibi ifadeleri yalnızca doğrulanmış kaynak varsa kullan.
 
 ## Arabic
 
@@ -25,11 +25,12 @@ VORQA Mira supports Turkish, English, and Arabic.
 - Avoid colloquial dialects in public posts unless a human requests a specific local adaptation.
 - Avoid humor that may not travel culturally.
 - Arabic posts should be adapted, not translated word-for-word.
+- Technical terms that are uncertain must be flagged for human terminology review.
 
 ## Multilingual Workflow
 
 1. Write or approve the master message.
-2. Validate facts against `VORQA_TRUTH.md`.
+2. Validate facts against `VORQA_TRUTH.md` and `vorqa_truth.json`.
 3. Adapt separately for EN, TR, and AR.
 4. Review Arabic technical terms for clarity.
 5. Human approval before publication.
