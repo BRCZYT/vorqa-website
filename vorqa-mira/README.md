@@ -1,6 +1,6 @@
-# VORQA Mira V3.1
+# VORQA Mira V3.2
 
-Mira V3.1 is a safe, AI-assisted, low-maintenance social-media content operating system for VORQA Global Supply.
+Mira V3.2 is a safe, AI-assisted, low-maintenance social-media content operating system for VORQA Global Supply.
 
 It is not an auto-publishing bot. It generates and organizes drafts, validates facts, prepares platform adaptations and visual briefs, and keeps human approval mandatory.
 
@@ -62,20 +62,30 @@ Existing root-level Mira image files are preserved for backward compatibility wi
 
 ## AI Generation
 
-Generation is provider-neutral and local/backend oriented:
+V3.2 adds a live browser generation path without replacing the controlled local workflow.
 
-`mira.html -> local/backend generation endpoint or CLI bridge -> AI provider -> draft JSON -> fact validation -> platform adaptation -> content/index.json -> dashboard preview`
+Browser workflow:
+
+`mira.html -> /api/mira-generate -> OpenAI Responses API -> server-side validation -> previews -> HUMAN REVIEW`
+
+Controlled/local workflow:
+
+`Python workflow -> draft JSON -> content/index.json -> dashboard board`
 
 Environment variables:
 
 ```powershell
-$env:MIRA_AI_PROVIDER="mock"      # openai | anthropic | mock | disabled
-$env:MIRA_AI_MODE="MOCK"          # LIVE | MOCK | DISABLED | AUTO
+$env:MIRA_AI_PROVIDER="mock"      # local workflow: openai | anthropic | mock | disabled
+$env:MIRA_AI_MODE="MOCK"          # local workflow: LIVE | MOCK | DISABLED | AUTO
 $env:OPENAI_API_KEY=""
-$env:ANTHROPIC_API_KEY=""
+$env:OPENAI_MODEL="gpt-5"
 ```
 
-No API key belongs in browser HTML, localStorage, or committed files.
+No API key belongs in browser HTML, client JavaScript, localStorage, generated JSON, logs, API responses, or committed files.
+
+The browser endpoint accepts only `PUBLIC` and `INTERNAL_SAFE` source classes. Do not paste confidential RFQs, prices, customer data, emails, phone numbers, margins, quotations, project-specific commercial data, supplier quotations, payment data, or attachments into the browser Mira Studio.
+
+`CONFIDENTIAL` and `CLIENT_CONFIDENTIAL` material must stay in controlled/local workflows and must not be submitted through `/api/mira-generate`.
 
 Examples:
 
@@ -87,11 +97,13 @@ python vorqa-mira/automation/validate_facts.py vorqa-mira/content/drafts/example
 python vorqa-mira/automation/publish_buffer.py --dry-run
 ```
 
-`MOCK` output is clearly marked as mock. `LIVE` requires environment credentials. `DISABLED` creates no AI output.
+`MOCK` output is clearly marked as mock and is for local Python tests/workflows only. The public dashboard does not silently fall back to mock content. If `OPENAI_API_KEY` is absent, `/api/mira-generate` returns `AI_NOT_CONFIGURED`.
+
+The web endpoint uses the OpenAI Responses API with `OPENAI_API_KEY` and optional `OPENAI_MODEL`; when `OPENAI_MODEL` is not set, it defaults to `gpt-5`.
 
 ## Approval Gate
 
-No content should move to `approved/`, `SCHEDULED`, or `PUBLISHED` without human review. Buffer live publishing remains disabled.
+No content should move to `approved/`, `SCHEDULED`, or `PUBLISHED` without human review. Browser generation always returns `human_approved: false`. Buffer live publishing remains disabled. Canva live integration remains pending.
 
 ## Source Classification
 
