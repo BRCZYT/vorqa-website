@@ -195,7 +195,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","headline":${JSON.stringify(p.title)},"datePublished":"${p.isoDate}","author":{"@type":"Person","name":"Mira","jobTitle":"Vorqa Global AI Editörü"},"publisher":{"@type":"Organization","name":"Vorqa Global","url":"https://www.vorqaglobal.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"${p.url}"},"image":"${p.cover}","description":${JSON.stringify(p.metaDesc)}}
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.3.0/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
 <script src="https://cdn.tailwindcss.com"></script>

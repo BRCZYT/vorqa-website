@@ -97,7 +97,7 @@ function generatePostHTML(draft, slug, date, coverImg) {
   "description":${JSON.stringify(meta_description || excerpt)}
 }
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.0.21/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.3.0/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
 <script src="https://cdn.tailwindcss.com"></script>
