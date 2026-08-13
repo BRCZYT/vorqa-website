@@ -186,13 +186,13 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 <div id="scroll-prog"></div>
 
 <nav id="nav">
-  <a href="../index.html" class="nav-logo">
+  <a href="../tr/" class="nav-logo">
     <img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global" style="display:block;height:40px;width:auto">
   </a>
   <div class="nav-links">
-    <a href="../index.html" class="nav-link">Ana Sayfa</a>
-    <a href="../akademi.html" class="nav-link active">Akademi</a>
-    <a href="../iletisim.html" class="nav-link">İletişim</a>
+    <a href="../tr/" class="nav-link">Ana Sayfa</a>
+    <a href="../tr/akademi/" class="nav-link active">Akademi</a>
+    <a href="../tr/iletisim/" class="nav-link">İletişim</a>
   </div>
   <div class="lang-sw" id="lang-sw">
     <button class="l-btn active" data-lang="tr">TR</button>
@@ -204,11 +204,11 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <div id="mob-nav" aria-hidden="true">
   <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${catColor};text-transform:uppercase;margin-bottom:20px">Vorqa Global</div>
-  <a href="../index.html" class="mob-link">Ana Sayfa</a>
+  <a href="../tr/" class="mob-link">Ana Sayfa</a>
   <div class="mob-sep"></div>
-  <a href="../akademi.html" class="mob-link" style="color:${catColor}">Akademi</a>
+  <a href="../tr/akademi/" class="mob-link" style="color:${catColor}">Akademi</a>
   <div class="mob-sep"></div>
-  <a href="../iletisim.html" class="mob-link">İletişim</a>
+  <a href="../tr/iletisim/" class="mob-link">İletişim</a>
   <div class="mob-lang">
     <button class="mob-l-btn active" data-lang="tr">TR</button>
     <button class="mob-l-btn" data-lang="en">EN</button>
@@ -218,7 +218,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <section id="hero-post">
   <div class="hero-post-inner">
-    <a href="../akademi.html" class="back-link">
+    <a href="../tr/akademi/" class="back-link">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M11 6H1M5 2L1 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Akademi'ye Dön
     </a>
@@ -261,7 +261,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
     <h2 style="font-family:'Sora Variable',Sora,sans-serif;font-size:1.6rem;font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:10px">Projeniz için görüşelim.</h2>
     <p style="color:rgba(255,255,255,.45);font-size:14px;margin-bottom:24px">Uzman ekibimiz teknik ihtiyaçlarınızı dinlemeye hazır.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="../iletisim.html" class="btn-p">Teklif Al →</a>
+      <a href="../tr/iletisim/" class="btn-p">Teklif Al →</a>
       <a href="../${sector_page}" class="btn-o">${category_label} →</a>
     </div>
   </div>
@@ -269,10 +269,10 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <footer id="foot">
   <div class="foot-inner">
-    <a href="../index.html" style="text-decoration:none;display:flex;align-items:center">
+    <a href="../tr/" style="text-decoration:none;display:flex;align-items:center">
       <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
     </a>
-    <a href="../akademi.html" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:6px 12px">← Tüm Yazılar</a>
+    <a href="../tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:6px 12px">← Tüm Yazılar</a>
     <div class="ft-social">
       <a href="https://linkedin.com/company/vorqa-global" class="ft-soc-link" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
     </div>

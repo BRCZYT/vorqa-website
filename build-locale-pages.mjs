@@ -31,6 +31,21 @@ const PAGES = {
   },
 };
 
+// JSON-LD BreadcrumbList item names and ContactPage.name are hand-authored
+// Turkish literals in the source files (Schema.org has no per-language
+// mechanism of its own) — translate them per output locale so English/Arabic
+// pages don't ship Turkish breadcrumb labels in their structured data.
+const NAV_LABELS = {
+  tr: { home: 'Ana Sayfa', akademi: 'Akademi', iletisim: 'İletişim' },
+  en: { home: 'Home', akademi: 'Academy', iletisim: 'Contact' },
+  ar: { home: 'الرئيسية', akademi: 'الأكاديمية', iletisim: 'تواصل معنا' },
+};
+const CONTACT_PAGE_NAME = {
+  tr: 'İletişim — Vorqa Global',
+  en: 'Contact — Vorqa Global',
+  ar: 'تواصل معنا — Vorqa Global',
+};
+
 function urlFor(lang, file) {
   const slug = SLUGS[file] ? SLUGS[file][lang] : null;
   if (slug === null || slug === undefined) return null; // not migrated
@@ -107,6 +122,9 @@ for (const file of Object.keys(SLUGS)) {
           if (node['@type'] === 'Organization' || node['@type'] === 'AboutPage' || node['@type'] === 'ContactPage' || node['@type'] === 'Service') {
             if (node.description !== undefined) node.description = meta[lang].desc;
           }
+          if (node['@type'] === 'ContactPage' && node.name !== undefined) {
+            node.name = CONTACT_PAGE_NAME[lang];
+          }
           if (node['@type'] === 'BreadcrumbList' && Array.isArray(node.itemListElement)) {
             for (const item of node.itemListElement) {
               if (item.item === 'https://www.vorqaglobal.com/') item.item = urlFor(lang, 'index.html');
@@ -115,6 +133,8 @@ for (const file of Object.keys(SLUGS)) {
                   if (item.item === `https://www.vorqaglobal.com/${legacyFile}`) { item.item = urlFor(lang, legacyFile); break; }
                 }
               }
+              if (item.position === 1) item.name = NAV_LABELS[lang].home;
+              else if (item.position === 2) item.name = NAV_LABELS[lang][file.replace('.html', '')];
             }
           }
         }

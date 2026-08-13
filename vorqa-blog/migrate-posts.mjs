@@ -205,7 +205,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 <div id="scroll-prog"></div>
 
 <nav id="nav">
-  <a href="../index.html" class="nav-logo">
+  <a href="../tr/" class="nav-logo">
     <svg width="58" height="22" viewBox="140 65 400 120" xmlns="http://www.w3.org/2000/svg">
       <path d="M150,70 L250,70 L260,80 L260,86 L180,164 L260,164 L260,180 L160,180 L150,170 L150,164 L158,164 L238,86 L150,86 Z" fill="#0a2540"/>
       <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${p.catColor}"/>
@@ -217,9 +217,9 @@ function buildHTML(p, articleHTML, refsHTML) {
     </div>
   </a>
   <div class="nav-links">
-    <a href="../akademi.html" class="nav-link active">Akademi</a>
+    <a href="../tr/akademi/" class="nav-link active">Akademi</a>
     <a href="../${p.page}" class="nav-link">${p.label}</a>
-    <a href="../iletisim.html" class="nav-link">İletişim</a>
+    <a href="../tr/iletisim/" class="nav-link">İletişim</a>
   </div>
   <div class="lang-sw" id="lang-sw">
     <button class="l-btn active" data-lang="tr">TR</button>
@@ -231,9 +231,9 @@ function buildHTML(p, articleHTML, refsHTML) {
 
 <div id="mob-nav" aria-hidden="true">
   <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${p.catColor};text-transform:uppercase;margin-bottom:20px">Vorqa Global</div>
-  <a href="../akademi.html" class="mob-link" style="color:${p.catColor}">Akademi</a>
+  <a href="../tr/akademi/" class="mob-link" style="color:${p.catColor}">Akademi</a>
   <div class="mob-sep"></div>
-  <a href="../iletisim.html" class="mob-link">İletişim</a>
+  <a href="../tr/iletisim/" class="mob-link">İletişim</a>
   <div class="mob-lang">
     <button class="mob-l-btn active" data-lang="tr">TR</button>
     <button class="mob-l-btn" data-lang="en">EN</button>
@@ -243,7 +243,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 
 <section id="hero-post">
   <div class="hero-post-inner">
-    <a href="../akademi.html" class="back-link">
+    <a href="../tr/akademi/" class="back-link">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M11 6H1M5 2L1 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Akademi'ye Dön
     </a>
@@ -284,7 +284,7 @@ function buildHTML(p, articleHTML, refsHTML) {
     <h2 style="font-family:'Sora Variable',Sora,sans-serif;font-size:1.6rem;font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:10px">Projeniz için görüşelim.</h2>
     <p style="color:rgba(255,255,255,.45);font-size:14px;margin-bottom:24px">Uzman ekibimiz teknik ihtiyaçlarınızı dinlemeye hazır.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="../iletisim.html" class="btn-p">Teklif Al →</a>
+      <a href="../tr/iletisim/" class="btn-p">Teklif Al →</a>
       <a href="../${p.page}" class="btn-o">${p.label} →</a>
     </div>
   </div>
@@ -293,7 +293,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 <footer id="foot">
   <div style="max-width:1160px;margin:0 auto">
     <div class="foot-inner">
-      <a href="../index.html" style="text-decoration:none;display:flex;align-items:center;gap:13px">
+      <a href="../tr/" style="text-decoration:none;display:flex;align-items:center;gap:13px">
         <svg width="50" viewBox="140 60 400 130" xmlns="http://www.w3.org/2000/svg">
           <path d="M150,70 L250,70 L260,80 L260,86 L180,164 L260,164 L260,180 L160,180 L150,170 L150,164 L158,164 L238,86 L150,86 Z" fill="#fff"/>
           <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${p.catColor}"/>
@@ -301,7 +301,7 @@ function buildHTML(p, articleHTML, refsHTML) {
         </svg>
         <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">Vorqa Global</span>
       </a>
-      <a href="../akademi.html" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">← Tüm Yazılar</a>
+      <a href="../tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">← Tüm Yazılar</a>
       <div class="ft-social">
         <a href="https://linkedin.com/company/zyt-global-industry" class="ft-soc-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         <a href="https://youtube.com/@zytglobalindustry" class="ft-soc-link" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>

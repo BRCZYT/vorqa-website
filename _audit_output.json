@@ -1,0 +1,2192 @@
+{
+ "pages": {
+  "/tr/": {
+   "title": "Endüstriyel Tedarik & Proje Koordinasyon Partneri — MENA & Afrika | Vorqa Global",
+   "metaDesc": "VORQA; beton, komple galvaniz, atık-enerji ve kırma-eleme tesisleri için müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — MENA & Afrika.",
+   "canonical": "https://www.vorqaglobal.com/tr/",
+   "ogTitle": "Endüstriyel Tedarik & Proje Koordinasyon Partneri — MENA & Afrika | Vorqa Global",
+   "ogDesc": "VORQA; beton, komple galvaniz, atık-enerji ve kırma-eleme tesisleri için müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — MENA & Afrika.",
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/tr/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/",
+    "en=>https://www.vorqaglobal.com/en/",
+    "ar=>https://www.vorqaglobal.com/ar/",
+    "x-default=>https://www.vorqaglobal.com/en/"
+   ],
+   "htmlLang": "tr",
+   "htmlDir": "ltr",
+   "h1s": [
+    "ENDÜSTRİYEL TEDARİKPROJE TEDARİĞİTEK MUHATAP PARTNER"
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA; beton, komple galvaniz, atık-enerji ve kırma-eleme tesisleri için müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — MENA & Afrika.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/tr/#",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/#",
+     "text": "Ana Sayfa",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "İletişim",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/#",
+     "text": "Ana Sayfa",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "İletişim",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "Teklif Al →",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "01\n      \n        Beton Santralleri\n    ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "02\n      \n        Komple Galvaniz Tesisl",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "03\n      \n        Atık-Enerji Dönüşüm Te",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "04\n      \n        Kırma & Eleme Tesisler",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "Bize Ulaşın",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/#",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "prev-sec",
+     "cls": "s-arrow",
+     "hasOnclick": false
+    },
+    {
+     "text": "Beton Santralleri",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab active",
+     "hasOnclick": false
+    },
+    {
+     "text": "Komple Galvaniz Tesisleri",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "Atık-Enerji Dönüşümü",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "Kırma & Eleme",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "Endüstriyel Tedarik",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "next-sec",
+     "cls": "s-arrow",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [],
+   "consoleErrors": []
+  },
+  "/en/": {
+   "title": "Industrial Sourcing & Project Supply Partner — MENA & Africa | Vorqa Global",
+   "metaDesc": "VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.",
+   "canonical": "https://www.vorqaglobal.com/en/",
+   "ogTitle": "Industrial Sourcing & Project Supply Partner — MENA & Africa | Vorqa Global",
+   "ogDesc": "VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.",
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/en/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/",
+    "en=>https://www.vorqaglobal.com/en/",
+    "ar=>https://www.vorqaglobal.com/ar/",
+    "x-default=>https://www.vorqaglobal.com/en/"
+   ],
+   "htmlLang": "en",
+   "htmlDir": "ltr",
+   "h1s": [
+    "INDUSTRIAL SOURCINGPROJECT SUPPLYONE ACCOUNTABLE PARTNER"
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/en/#",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/#",
+     "text": "Home",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/#",
+     "text": "Home",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Request a Quote →",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "01\n      \n        Concrete Plants\n      ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "02\n      \n        Complete Galvanizing P",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "03\n      \n        Waste-to-Energy Plants",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "04\n      \n        Crushing & Screening P",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact Us",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/#",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "prev-sec",
+     "cls": "s-arrow",
+     "hasOnclick": false
+    },
+    {
+     "text": "Concrete Plants",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab active",
+     "hasOnclick": false
+    },
+    {
+     "text": "Complete Galvanizing",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "Waste-to-Energy",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "Crushing & Screening",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "Industrial Sourcing",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "next-sec",
+     "cls": "s-arrow",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [],
+   "consoleErrors": []
+  },
+  "/ar/": {
+   "title": "شريك التوريد الصناعي وتنسيق المشاريع — الشرق الأوسط وأفريقيا | Vorqa Global",
+   "metaDesc": "VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل لمحطات الخرسانة ومنشآت الجلفنة الكاملة وتحويل النفايات إلى طاقة ومنشآت التكسير والغربلة — الشرق الأوسط وأفريقيا.",
+   "canonical": "https://www.vorqaglobal.com/ar/",
+   "ogTitle": "شريك التوريد الصناعي وتنسيق المشاريع — الشرق الأوسط وأفريقيا | Vorqa Global",
+   "ogDesc": "VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل لمحطات الخرسانة ومنشآت الجلفنة الكاملة وتحويل النفايات إلى طاقة ومنشآت التكسير والغربلة — الشرق الأوسط وأفريقيا.",
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/ar/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/",
+    "en=>https://www.vorqaglobal.com/en/",
+    "ar=>https://www.vorqaglobal.com/ar/",
+    "x-default=>https://www.vorqaglobal.com/en/"
+   ],
+   "htmlLang": "ar",
+   "htmlDir": "rtl",
+   "h1s": [
+    "التوريد الصناعيتزويد المشاريعشريك واحد مسؤول"
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل لمحطات الخرسانة ومنشآت الجلفنة الكاملة وتحويل النفايات إلى طاقة ومنشآت التكسير والغربلة — الشرق الأوسط وأفريقيا.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/ar/#",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/#",
+     "text": "الرئيسية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "تواصل معنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/#",
+     "text": "الرئيسية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "تواصل معنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "اطلب عرض سعر ←",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "01\n      \n        محطات الخرسانة\n       ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "02\n      \n        منشآت الجلفنة الكاملة\n",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "03\n      \n        منشآت تحويل النفايات إ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "04\n      \n        منشآت التكسير والغربلة",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "تواصل معنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/#",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "prev-sec",
+     "cls": "s-arrow",
+     "hasOnclick": false
+    },
+    {
+     "text": "محطات الخرسانة",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab active",
+     "hasOnclick": false
+    },
+    {
+     "text": "منشآت الجلفنة الكاملة",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "تحويل النفايات إلى طاقة",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "التكسير والغربلة",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "التوريد الصناعي",
+     "type": "submit",
+     "id": "",
+     "cls": "s-tab",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "next-sec",
+     "cls": "s-arrow",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [],
+   "consoleErrors": []
+  },
+  "/tr/akademi/": {
+   "title": "Akademi — Vorqa Global",
+   "metaDesc": "Vorqa Akademi — beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında Mira editörlüğünde teknik içerikler, akademik araştırmalar ve sektör analizleri.",
+   "canonical": "https://www.vorqaglobal.com/tr/akademi/",
+   "ogTitle": null,
+   "ogDesc": null,
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/tr/akademi/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/akademi/",
+    "en=>https://www.vorqaglobal.com/en/academy/",
+    "ar=>https://www.vorqaglobal.com/ar/academy/",
+    "x-default=>https://www.vorqaglobal.com/en/academy/"
+   ],
+   "htmlLang": "tr",
+   "htmlDir": "ltr",
+   "h1s": [
+    "Teknik Derinlik,Gerçek Verilerle"
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/tr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Akademi\",\"item\":\"https://www.vorqaglobal.com/tr/akademi/\"}]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "Ana Sayfa",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "İletişim",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/akademi/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/academy/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/academy/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "Ana Sayfa",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "İletişim",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/akademi/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/academy/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/academy/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html",
+     "text": "Devamını Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+     "text": "Oku",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "Teklif Al →",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/#companies",
+     "text": "Uzmanlık Alanlarımız →",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "Tümü",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab active",
+     "hasOnclick": true
+    },
+    {
+     "text": "Beton",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Galvaniz",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Enerji",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Mekanik",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Tedarik",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "1",
+     "type": "submit",
+     "id": "",
+     "cls": "pag-btn active",
+     "hasOnclick": true
+    },
+    {
+     "text": "2",
+     "type": "submit",
+     "id": "",
+     "cls": "pag-btn",
+     "hasOnclick": true
+    },
+    {
+     "text": "Sonraki",
+     "type": "submit",
+     "id": "pag-next",
+     "cls": "pag-btn",
+     "hasOnclick": true
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [],
+   "consoleErrors": []
+  },
+  "/en/academy/": {
+   "title": "Academy — Technical Insights on Concrete, Galvanizing & Energy | Vorqa Global",
+   "metaDesc": "Vorqa Academy — technical articles, research and industry analysis on concrete plants, galvanizing, energy conversion and supply chain, edited by Mira.",
+   "canonical": "https://www.vorqaglobal.com/en/academy/",
+   "ogTitle": null,
+   "ogDesc": null,
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/en/academy/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/akademi/",
+    "en=>https://www.vorqaglobal.com/en/academy/",
+    "ar=>https://www.vorqaglobal.com/ar/academy/",
+    "x-default=>https://www.vorqaglobal.com/en/academy/"
+   ],
+   "htmlLang": "en",
+   "htmlDir": "ltr",
+   "h1s": [
+    "Technical Depth,Real Data"
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/en/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Akademi\",\"item\":\"https://www.vorqaglobal.com/en/academy/\"}]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "Home",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/akademi/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/academy/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/academy/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "Home",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/akademi/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/academy/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/academy/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html",
+     "text": "Read More",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+     "text": "Read",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Get a Quote →",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/#companies",
+     "text": "Areas of Expertise →",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "All",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab active",
+     "hasOnclick": true
+    },
+    {
+     "text": "Concrete",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Galvanizing",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Energy",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Mechanical",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "Supply Chain",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "1",
+     "type": "submit",
+     "id": "",
+     "cls": "pag-btn active",
+     "hasOnclick": true
+    },
+    {
+     "text": "2",
+     "type": "submit",
+     "id": "",
+     "cls": "pag-btn",
+     "hasOnclick": true
+    },
+    {
+     "text": "Next",
+     "type": "submit",
+     "id": "pag-next",
+     "cls": "pag-btn",
+     "hasOnclick": true
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [],
+   "consoleErrors": []
+  },
+  "/ar/academy/": {
+   "title": "الأكاديمية — رؤى تقنية حول الخرسانة والجلفنة والطاقة | Vorqa Global",
+   "metaDesc": "أكاديمية Vorqa — مقالات تقنية وأبحاث وتحليلات صناعية حول محطات الخرسانة والجلفنة وتحويل الطاقة وسلسلة التوريد، بإشراف ميرا التحريري.",
+   "canonical": "https://www.vorqaglobal.com/ar/academy/",
+   "ogTitle": null,
+   "ogDesc": null,
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/ar/academy/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/akademi/",
+    "en=>https://www.vorqaglobal.com/en/academy/",
+    "ar=>https://www.vorqaglobal.com/ar/academy/",
+    "x-default=>https://www.vorqaglobal.com/en/academy/"
+   ],
+   "htmlLang": "ar",
+   "htmlDir": "rtl",
+   "h1s": [
+    "عمق تقني،بيانات حقيقية"
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/ar/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Akademi\",\"item\":\"https://www.vorqaglobal.com/ar/academy/\"}]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "الرئيسية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "اتصل بنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/akademi/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/academy/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/academy/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "الرئيسية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "اتصل بنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/akademi/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/academy/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/academy/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html",
+     "text": "اقرأ المزيد",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+     "text": "اقرأ",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "احصل على عرض ←",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/#companies",
+     "text": "مجالات خبرتنا ←",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "الكل",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab active",
+     "hasOnclick": true
+    },
+    {
+     "text": "الخرسانة",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "الجلفنة",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "الطاقة",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "الميكانيكا",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "التوريد",
+     "type": "submit",
+     "id": "",
+     "cls": "filter-tab",
+     "hasOnclick": true
+    },
+    {
+     "text": "1",
+     "type": "submit",
+     "id": "",
+     "cls": "pag-btn active",
+     "hasOnclick": true
+    },
+    {
+     "text": "2",
+     "type": "submit",
+     "id": "",
+     "cls": "pag-btn",
+     "hasOnclick": true
+    },
+    {
+     "text": "التالي",
+     "type": "submit",
+     "id": "pag-next",
+     "cls": "pag-btn",
+     "hasOnclick": true
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [],
+   "consoleErrors": []
+  },
+  "/tr/iletisim/": {
+   "title": "İletişim — Teklif Alın | Vorqa Global",
+   "metaDesc": "Vorqa Global ile iletişime geçin. Beton, komple galvaniz, atık-enerji ve kırma-eleme tesisi projeleriniz için teklif alın.",
+   "canonical": "https://www.vorqaglobal.com/tr/iletisim/",
+   "ogTitle": null,
+   "ogDesc": null,
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/tr/iletisim/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/iletisim/",
+    "en=>https://www.vorqaglobal.com/en/contact/",
+    "ar=>https://www.vorqaglobal.com/ar/contact/",
+    "x-default=>https://www.vorqaglobal.com/en/contact/"
+   ],
+   "htmlLang": "tr",
+   "htmlDir": "ltr",
+   "h1s": [
+    "Projenizi konuşalım."
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ContactPage\",\"name\":\"İletişim — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/tr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"İletişim\",\"item\":\"https://www.vorqaglobal.com/tr/iletisim/\"}]}]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "Ana Sayfa",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "İletişim",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/iletisim/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/contact/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/contact/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "Ana Sayfa",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/iletisim/",
+     "text": "İletişim",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/iletisim/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/contact/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/contact/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://wa.me/905367076951?text=Merhaba%2C%20Vorqa%20Global%20ile%20ileti%C5%9Fime%20ge%C3%A7mek%20istiyorum.",
+     "text": "WhatsApp ile Yaz",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "tel:+905367076951",
+     "text": "+90 536 707 69 51",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "mailto:info@vorqaglobal.com",
+     "text": "info@vorqaglobal.com",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "mailto:sales@vorqaglobal.com",
+     "text": "sales@vorqaglobal.com",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/tr/akademi/",
+     "text": "Akademi",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "Gönder",
+     "type": "submit",
+     "id": "",
+     "cls": "btn-p",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [
+    {
+     "action": "https://formspree.io/f/xkodlyby",
+     "method": "post"
+    }
+   ],
+   "consoleErrors": []
+  },
+  "/en/contact/": {
+   "title": "Contact Us — Request a Quote | Vorqa Global",
+   "metaDesc": "Contact VORQA Global. Request a quote for your concrete, complete galvanizing, waste-to-energy or crushing & screening plant project.",
+   "canonical": "https://www.vorqaglobal.com/en/contact/",
+   "ogTitle": null,
+   "ogDesc": null,
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/en/contact/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/iletisim/",
+    "en=>https://www.vorqaglobal.com/en/contact/",
+    "ar=>https://www.vorqaglobal.com/ar/contact/",
+    "x-default=>https://www.vorqaglobal.com/en/contact/"
+   ],
+   "htmlLang": "en",
+   "htmlDir": "ltr",
+   "h1s": [
+    "Let’s discuss your project."
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ContactPage\",\"name\":\"İletişim — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/en/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"İletişim\",\"item\":\"https://www.vorqaglobal.com/en/contact/\"}]}]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "Home",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/iletisim/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/contact/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/contact/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "Home",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/contact/",
+     "text": "Contact",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/iletisim/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/contact/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/contact/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://wa.me/905367076951?text=Merhaba%2C%20Vorqa%20Global%20ile%20ileti%C5%9Fime%20ge%C3%A7mek%20istiyorum.",
+     "text": "Write on WhatsApp",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "tel:+905367076951",
+     "text": "+90 536 707 69 51",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "mailto:info@vorqaglobal.com",
+     "text": "info@vorqaglobal.com",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "mailto:sales@vorqaglobal.com",
+     "text": "sales@vorqaglobal.com",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/en/academy/",
+     "text": "Academy",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "Send",
+     "type": "submit",
+     "id": "",
+     "cls": "btn-p",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [
+    {
+     "action": "https://formspree.io/f/xkodlyby",
+     "method": "post"
+    }
+   ],
+   "consoleErrors": []
+  },
+  "/ar/contact/": {
+   "title": "اتصل بنا — اطلب عرض سعر | Vorqa Global",
+   "metaDesc": "تواصل مع VORQA Global. اطلب عرض سعر لمشروعك في محطات الخرسانة أو منشآت الجلفنة الكاملة أو تحويل النفايات إلى طاقة أو التكسير والغربلة.",
+   "canonical": "https://www.vorqaglobal.com/ar/contact/",
+   "ogTitle": null,
+   "ogDesc": null,
+   "ogImage": "https://www.vorqaglobal.com/og-default.png",
+   "ogUrl": "https://www.vorqaglobal.com/ar/contact/",
+   "hreflangs": [
+    "tr=>https://www.vorqaglobal.com/tr/iletisim/",
+    "en=>https://www.vorqaglobal.com/en/contact/",
+    "ar=>https://www.vorqaglobal.com/ar/contact/",
+    "x-default=>https://www.vorqaglobal.com/en/contact/"
+   ],
+   "htmlLang": "ar",
+   "htmlDir": "rtl",
+   "h1s": [
+    "لنتحدث عن مشروعك."
+   ],
+   "jsonLdRaw": [
+    "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ContactPage\",\"name\":\"İletişim — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/ar/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"İletişim\",\"item\":\"https://www.vorqaglobal.com/ar/contact/\"}]}]}"
+   ],
+   "imgsNoAlt": [],
+   "imgsBroken": [],
+   "links": [
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "الرئيسية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "تواصل معنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/iletisim/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/contact/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/contact/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "الرئيسية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/contact/",
+     "text": "تواصل معنا",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/tr/iletisim/",
+     "text": "TR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/en/contact/",
+     "text": "EN",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://www.vorqaglobal.com/ar/contact/",
+     "text": "AR",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://wa.me/905367076951?text=Merhaba%2C%20Vorqa%20Global%20ile%20ileti%C5%9Fime%20ge%C3%A7mek%20istiyorum.",
+     "text": "اكتب عبر واتساب",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "tel:+905367076951",
+     "text": "+90 536 707 69 51",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "mailto:info@vorqaglobal.com",
+     "text": "info@vorqaglobal.com",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "mailto:sales@vorqaglobal.com",
+     "text": "sales@vorqaglobal.com",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/",
+     "text": "",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "http://localhost:3000/ar/academy/",
+     "text": "الأكاديمية",
+     "target": "",
+     "rel": ""
+    },
+    {
+     "href": "https://linkedin.com/company/vorqa-global",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://youtube.com/@vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    },
+    {
+     "href": "https://instagram.com/vorqaglobal",
+     "text": "",
+     "target": "_blank",
+     "rel": "noopener"
+    }
+   ],
+   "buttons": [
+    {
+     "text": "",
+     "type": "submit",
+     "id": "ham-btn",
+     "cls": "ham-btn",
+     "hasOnclick": false
+    },
+    {
+     "text": "إرسال",
+     "type": "submit",
+     "id": "",
+     "cls": "btn-p",
+     "hasOnclick": false
+    },
+    {
+     "text": "",
+     "type": "submit",
+     "id": "btt",
+     "cls": "",
+     "hasOnclick": true
+    }
+   ],
+   "forms": [
+    {
+     "action": "https://formspree.io/f/xkodlyby",
+     "method": "post"
+    }
+   ],
+   "consoleErrors": []
+  }
+ },
+ "linkStatus": {
+  "http://localhost:3000/tr/#": 200,
+  "http://localhost:3000/tr/akademi/": 200,
+  "http://localhost:3000/tr/iletisim/": 200,
+  "https://www.vorqaglobal.com/tr/": "ERR:read ECONNRESET",
+  "https://www.vorqaglobal.com/en/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://www.vorqaglobal.com/ar/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://linkedin.com/company/vorqa-global": 403,
+  "https://youtube.com/@vorqaglobal": 301,
+  "https://instagram.com/vorqaglobal": 301,
+  "http://localhost:3000/en/#": 200,
+  "http://localhost:3000/en/academy/": 200,
+  "http://localhost:3000/en/contact/": 200,
+  "http://localhost:3000/ar/#": 200,
+  "http://localhost:3000/ar/academy/": 200,
+  "http://localhost:3000/ar/contact/": 200,
+  "http://localhost:3000/tr/": 200,
+  "https://www.vorqaglobal.com/tr/akademi/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://www.vorqaglobal.com/en/academy/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://www.vorqaglobal.com/ar/academy/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "http://localhost:3000/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html": 200,
+  "http://localhost:3000/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html": 200,
+  "http://localhost:3000/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html": 200,
+  "http://localhost:3000/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html": 200,
+  "http://localhost:3000/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html": 200,
+  "http://localhost:3000/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html": 200,
+  "http://localhost:3000/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html": 200,
+  "http://localhost:3000/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html": 200,
+  "http://localhost:3000/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html": 200,
+  "http://localhost:3000/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html": 200,
+  "http://localhost:3000/tr/#companies": 200,
+  "http://localhost:3000/en/": 200,
+  "http://localhost:3000/en/#companies": 200,
+  "http://localhost:3000/ar/": 200,
+  "http://localhost:3000/ar/#companies": 200,
+  "https://www.vorqaglobal.com/tr/iletisim/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://www.vorqaglobal.com/en/contact/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://www.vorqaglobal.com/ar/contact/": "ERR:unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca",
+  "https://wa.me/905367076951?text=Merhaba%2C%20Vorqa%20Global%20ile%20ileti%C5%9Fime%20ge%C3%A7mek%20istiyorum.": 302,
+  "tel:+905367076951": "ERR:Protocol \"tel:\" not supported. Expected \"http:\"",
+  "mailto:info@vorqaglobal.com": "ERR:Protocol \"mailto:\" not supported. Expected \"http:\"",
+  "mailto:sales@vorqaglobal.com": "ERR:Protocol \"mailto:\" not supported. Expected \"http:\""
+ }
+}
