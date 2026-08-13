@@ -1,0 +1,45 @@
+{
+  "version": "3.1",
+  "generated_at": "2026-08-13T19:09:45.515137+00:00",
+  "items": [
+    {
+      "id": "20260813190930-how-to-prepare-an-industrial-rfq",
+      "path": "content/drafts/20260813190930-how-to-prepare-an-industrial-rfq.json",
+      "topic": "How to prepare an industrial RFQ",
+      "status": "DRAFT",
+      "persona": "MIRA",
+      "content_type": "RFQ Guidance",
+      "master_language": "EN",
+      "platform_targets": [
+        "linkedin",
+        "instagram",
+        "facebook"
+      ],
+      "source_class": "PUBLIC",
+      "source_material_stored": true,
+      "human_approved": false,
+      "fact_validation": {
+        "prohibited": [],
+        "verify_before_use": [],
+        "passed": true,
+        "human_review_required": true
+      },
+      "generation": {
+        "mode": "MOCK",
+        "provider": "mock",
+        "model": "local-template",
+        "error": null
+      },
+      "updated_at": "2026-08-13T19:09:30.893964+00:00"
+    }
+  ],
+  "counts": {
+    "IDEA": 0,
+    "DRAFT": 1,
+    "NEEDS_REVIEW": 0,
+    "APPROVED": 0,
+    "SCHEDULED": 0,
+    "PUBLISHED": 0,
+    "REJECTED": 0
+  }
+}
