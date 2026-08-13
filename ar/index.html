@@ -420,7 +420,7 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
    scroll-parallax drift (see script §2d) composes with that translateY
    fine since GSAP reads/preserves the existing transform's y-component. */
 .wwd-mark-wrap{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none;z-index:0}
-.wwd-mark{width:clamp(600px,95vw,1500px);height:auto;margin-left:-4%;opacity:.08;flex-shrink:0}
+.wwd-mark{width:clamp(600px,95vw,1500px);max-width:none;height:auto;margin-left:-4%;opacity:.08;flex-shrink:0}
 .wwd-rows{display:flex;flex-direction:column;margin-top:20px;position:relative;z-index:1}
 .wwd-row{display:flex;align-items:center;gap:clamp(18px,3.5vw,44px);padding:32px 0;border-top:1px solid rgba(255,255,255,.08);position:relative;transition:background .3s}
 .wwd-row:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
