@@ -44,6 +44,29 @@ const VERIFY_PATTERNS = [
 const GEO_OPERATION_PATTERN = /\bVORQA\b[^.\n]{0,120}\b(operates?|active|served|serves|customers?|references?|projects?|deliver(?:ed|s)?|offices?|presence|completed|faaliyet|aktif|müşteri|musteri|referans|proje|teslim|ofis)\b[^.\n]{0,120}\b(Libya|Egypt|Iraq|Syria|Africa|MENA|GCC|Middle East|Mısır|Misir|Irak|Suriye|Afrika|Orta Doğu|Orta Dogu)\b/i;
 const PARTNER_TERMS = ["concrete batching plant", "complete hot-dip galvanizing", "waste-to-energy", "crushing and screening", "beton santrali", "galvaniz", "atık", "atik"];
 const PARTNER_SAFE_WORDS = ["partner", "supplier", "network", "coordinated", "through qualified", "through specialized", "tedarikçi", "tedarikci", "partner üzerinden", "partner uzerinden", "koordine"];
+const DEFAULT_CTA = {
+  EN: "What would you clarify first before comparing options?",
+  TR: "Teklifleri karşılaştırmadan önce siz hangi noktayı netleştirirsiniz?",
+  AR: "ما النقطة التي توضحونها أولاً قبل مقارنة العروض؟",
+};
+const VISUAL_BRIEF_TEXT = {
+  EN: {
+    supporting_text: "One clear procurement insight per slide or graphic.",
+    cta_placement: "final slide or caption ending",
+  },
+  TR: {
+    supporting_text: "Her slayt veya görselde tek ve net bir satın alma içgörüsü.",
+    cta_placement: "son slayt veya açıklama sonu",
+  },
+  AR: {
+    supporting_text: "فكرة واضحة واحدة عن المشتريات في كل شريحة أو تصميم.",
+    cta_placement: "الشريحة الأخيرة أو نهاية النص",
+  },
+};
+const INTERNAL_COPY_PATTERNS = [
+  /\bhuman approval required before publishing\.?/gi,
+  /\bhuman review required before publishing\.?/gi,
+];
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -175,6 +198,24 @@ function trimWords(text, limit) {
   return parts.slice(0, limit).join(" ").replace(/[.,;:]$/, "") + "...";
 }
 
+function defaultCta(language) {
+  return DEFAULT_CTA[language] || DEFAULT_CTA.EN;
+}
+
+function cleanPlatformCopy(text) {
+  let clean = text;
+  for (const pattern of INTERNAL_COPY_PATTERNS) {
+    clean = clean.replace(pattern, "");
+  }
+  return clean
+    .split(/\n/)
+    .map((line) => line.trimEnd())
+    .filter((line, index, lines) => line.trim() || (index > 0 && index < lines.length - 1))
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function buildHashtags(topic, contentType) {
   const tags = ["#Procurement", "#IndustrialSourcing", "#B2B"];
   const lower = `${topic} ${contentType}`.toLowerCase();
@@ -186,24 +227,25 @@ function buildHashtags(topic, contentType) {
 
 function visualBrief(topic, language, contentType, platform) {
   const aspect = { linkedin: "1200x1200 or carousel", instagram: "1080x1350", facebook: "1200x630" }[platform];
+  const localized = VISUAL_BRIEF_TEXT[language] || VISUAL_BRIEF_TEXT.EN;
   return {
     format: platform === "facebook" ? "static post graphic" : "carousel",
     aspect_ratio: aspect,
     headline: trimWords(topic, 10),
-    supporting_text: "One clear procurement insight per slide or graphic.",
+    supporting_text: localized.supporting_text,
     image_type: "branded industrial process visual, component graphic, or typography-led educational visual",
     real_imagery_required: false,
     canva_template_category: "educational-industrial",
     language_version: language,
     content_type: contentType,
-    cta_placement: "final slide or caption ending",
+    cta_placement: localized.cta_placement,
   };
 }
 
 function adaptPlatforms(master, payload, truth) {
   const signature = payload.persona === "MIRA" ? "Mira | VORQA AI Industry Analyst" : "VORQA Global Supply";
   const hashtags = buildHashtags(payload.topic, payload.content_type);
-  const cta = payload.cta || "What would you clarify first before comparing options?";
+  const cta = payload.cta || defaultCta(payload.language);
   const first = trimWords(master, 36);
   const body = trimWords(master, 110);
   const statuses = truth.platform_status || {};
@@ -211,19 +253,19 @@ function adaptPlatforms(master, payload, truth) {
   return {
     linkedin: {
       platform_status: statuses.linkedin || "ACTIVE",
-      copy: `${payload.topic}\n\n${first}\n\n${cta}\n\n${signature}\n${hashtags}`.trim(),
+      copy: cleanPlatformCopy(`${payload.topic}\n\n${first}\n\n${cta}\n\n${signature}\n${hashtags}`),
       visual_brief: visualBrief(payload.topic, payload.language, payload.content_type, "linkedin"),
       notes: ["LinkedIn is active. Human approval required before publishing."],
     },
     instagram: {
       platform_status: statuses.instagram || "PLANNED",
-      copy: `${payload.topic}\n\n${trimWords(body, 65)}\n\n${signature}\n${hashtags}`.trim(),
+      copy: cleanPlatformCopy(`${payload.topic}\n\n${trimWords(body, 65)}\n\n${cta}\n\n${signature}\n${hashtags}`),
       visual_brief: visualBrief(payload.topic, payload.language, payload.content_type, "instagram"),
       notes: ["Planned-account adaptation only. Do not imply an active Instagram account."],
     },
     facebook: {
       platform_status: statuses.facebook || "PLANNED",
-      copy: `${payload.topic}\n\n${trimWords(body, 85)}\n\nHuman approval required before publishing.`.trim(),
+      copy: cleanPlatformCopy(`${payload.topic}\n\n${trimWords(body, 85)}\n\n${cta}`),
       visual_brief: visualBrief(payload.topic, payload.language, payload.content_type, "facebook"),
       notes: ["Planned-account adaptation only. Do not imply an active Facebook account."],
     },
@@ -366,6 +408,8 @@ module.exports = handler;
 module.exports._private = {
   adaptPlatforms,
   buildInstructions,
+  cleanPlatformCopy,
+  defaultCta,
   extractOutputText,
   validateInput,
   validateText,

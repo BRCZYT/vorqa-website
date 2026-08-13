@@ -29,6 +29,7 @@ class MiraValidationTests(unittest.TestCase):
             env=env or os.environ.copy(),
             capture_output=True,
             text=True,
+            encoding="utf-8",
             check=True,
         )
         return json.loads(proc.stdout.strip())
@@ -309,7 +310,58 @@ handler(req, res);
         self.assertEqual(body["platform_adaptations"]["linkedin"]["platform_status"], "ACTIVE")
         self.assertEqual(body["platform_adaptations"]["instagram"]["platform_status"], "PLANNED")
         self.assertEqual(body["platform_adaptations"]["facebook"]["platform_status"], "PLANNED")
+        for platform in ("linkedin", "instagram", "facebook"):
+            copy = body["platform_adaptations"][platform]["copy"]
+            self.assertNotIn("Human approval required before publishing.", copy)
+            self.assertNotIn("Human review required before publishing.", copy)
         self.assertNotIn("unit-test-placeholder", result["raw"])
+
+    def test_browser_endpoint_removes_internal_instructions_from_platform_copy(self) -> None:
+        env = os.environ.copy()
+        env["OPENAI_API_KEY"] = "unit-test-placeholder"
+        script = r"""
+const handler = require("./api/mira-generate.js");
+global.fetch = async () => ({
+  ok: true,
+  status: 200,
+  json: async () => ({
+    id: "resp_clean",
+    model: "gpt-5",
+    output_text: "Public RFQ guidance. Human approval required before publishing."
+  })
+});
+const req = { method: "POST", body: { topic: "Public RFQ guidance", persona: "MIRA", language: "EN", content_type: "RFQ Guidance", source_class: "PUBLIC" } };
+const res = { statusCode: 0, headers: {}, setHeader(k,v){ this.headers[k]=v; }, end(body){ console.log(JSON.stringify(JSON.parse(body))); } };
+handler(req, res);
+"""
+        body = self.run_endpoint_case(script, env=env)
+        copies = [body["platform_adaptations"][platform]["copy"] for platform in ("linkedin", "instagram", "facebook")]
+        for copy in copies:
+            self.assertNotIn("Human approval required before publishing.", copy)
+            self.assertNotIn("Human review required before publishing.", copy)
+        self.assertIn("Human approval required before publishing.", body["platform_adaptations"]["linkedin"]["notes"][0])
+
+    def test_browser_endpoint_default_cta_is_language_aware(self) -> None:
+        script = r"""
+const { adaptPlatforms } = require("./api/mira-generate.js")._private;
+const truth = { platform_status: { linkedin: "ACTIVE", instagram: "PLANNED", facebook: "PLANNED" } };
+const base = { topic: "RFQ guidance", persona: "MIRA", content_type: "RFQ Guidance", source_class: "PUBLIC", source_material: "" };
+const tr = adaptPlatforms("Satın alma ekipleri kapsamı netleştirmelidir.", {...base, language: "TR", cta: ""}, truth);
+const ar = adaptPlatforms("ينبغي توضيح نطاق الطلب قبل المقارنة.", {...base, language: "AR", cta: ""}, truth);
+const custom = adaptPlatforms("Buyers should clarify scope.", {...base, language: "TR", cta: "Custom CTA stays."}, truth);
+console.log(JSON.stringify({ tr, ar, custom }));
+"""
+        result = self.run_endpoint_case(script)
+        english = "What would you clarify first before comparing options?"
+        for platform in ("linkedin", "instagram", "facebook"):
+            self.assertNotIn(english, result["tr"][platform]["copy"])
+            self.assertNotIn(english, result["ar"][platform]["copy"])
+            self.assertIn("Custom CTA stays.", result["custom"][platform]["copy"])
+        self.assertIn("Teklifleri karşılaştırmadan önce", result["tr"]["linkedin"]["copy"])
+        self.assertIn("ما النقطة التي توضحونها", result["ar"]["linkedin"]["copy"])
+        self.assertNotIn("Teklifleri karşılaştırmadan önce", result["custom"]["linkedin"]["copy"])
+        self.assertNotEqual(result["tr"]["linkedin"]["visual_brief"]["supporting_text"], "One clear procurement insight per slide or graphic.")
+        self.assertNotEqual(result["ar"]["linkedin"]["visual_brief"]["cta_placement"], "final slide or caption ending")
 
     def test_no_browser_side_api_keys_or_direct_openai_calls(self) -> None:
         html = (ROOT / "mira.html").read_text(encoding="utf-8")
