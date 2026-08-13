@@ -49,8 +49,11 @@ def fix_checkmark(in_path, out_path, letter_color, bg_fill, new_width, region_pa
         raise ValueError('no checkmark found in ' + in_path)
     y0, y1, x0, x1 = max(0, ys.min() - region_pad), ys.max() + region_pad, max(0, xs.min() - region_pad), xs.max() + region_pad
 
-    # widen the blue mask slightly to include faint AA fringe within the region, for clean erase
-    fringe = (arr_u8_view[:, :, 3] > 30) & (arr_u8_view[:, :, 2].astype(int) - arr_u8_view[:, :, 0].astype(int) > 15) & (arr_u8_view[:, :, 2] > arr_u8_view[:, :, 1])
+    # a tighter blue-only fringe (excludes navy/white-letter antialiasing, which
+    # also reads as faintly "blue-ish" under a loose threshold) plus dilation
+    # covers the checkmark's own AA edge without eating into nearby letter strokes
+    r_, g_, b_ = arr_u8_view[:, :, 0].astype(int), arr_u8_view[:, :, 1].astype(int), arr_u8_view[:, :, 2].astype(int)
+    fringe = (arr_u8_view[:, :, 3] > 30) & (r_ < g_ * 0.75) & (b_ > r_) & (b_ > 90)
     region = np.zeros_like(blue_mask)
     region[y0:y1, x0:x1] = True
     erase_mask = ndimage.binary_dilation((blue_mask | fringe) & region, iterations=erase_dilate)
