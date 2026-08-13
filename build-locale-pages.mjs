@@ -46,6 +46,19 @@ const CONTACT_PAGE_NAME = {
   ar: 'تواصل معنا — Vorqa Global',
 };
 
+// One-off: this blog post (unlike the other flat vorqa-blog/*.html posts) has
+// a fully localized tr/en/ar version living under each language's Academy
+// path, with proper hreflang alternates cross-linking them. Point Academy's
+// featured-post links straight at the localized page for the visitor's own
+// language instead of the flat (Turkish-only) vorqa-blog/ URL.
+const FEATURED_POST_LOCALIZED = {
+  '/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html': {
+    tr: '/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/',
+    en: '/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/',
+    ar: '/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/',
+  },
+};
+
 function urlFor(lang, file) {
   const slug = SLUGS[file] ? SLUGS[file][lang] : null;
   if (slug === null || slug === undefined) return null; // not migrated
@@ -68,6 +81,12 @@ for (const file of Object.keys(SLUGS)) {
     const dict = T[lang];
     const dir = lang === 'ar' ? 'rtl' : 'ltr';
     const selfUrl = urlFor(lang, file);
+
+    for (const [flatUrl, locales] of Object.entries(FEATURED_POST_LOCALIZED)) {
+      const target = locales[lang];
+      $(`a[href="${flatUrl}"]`).attr('href', target);
+      $(`[onclick*="${flatUrl}"]`).attr('onclick', `location.href='${target}'`);
+    }
 
     $('[data-i18n]').each((_, el) => {
       const key = $(el).attr('data-i18n');

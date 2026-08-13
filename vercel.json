@@ -71,6 +71,11 @@
       "source": "/iletisim.html",
       "destination": "/tr/iletisim/",
       "permanent": true
+    },
+    {
+      "source": "/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html",
+      "destination": "/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/",
+      "permanent": true
     }
   ]
 }
