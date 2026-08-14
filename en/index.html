@@ -25,7 +25,7 @@
 <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png?v=2" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Vorqa Global","url":"https://www.vorqaglobal.com","description":"VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.","email":"info@vorqaglobal.com","telephone":"+90 536 707 69 51","address":{"@type":"PostalAddress","streetAddress":"Uzay Çağı Caddesi, OSTİM","addressLocality":"Yenimahalle","addressRegion":"Ankara","addressCountry":"TR"},"areaServed":["TR","LY","EG","IQ"],"sameAs":["https://linkedin.com/company/vorqa-global"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Vorqa Global","url":"https://www.vorqaglobal.com","description":"VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.","email":"info@vorqaglobal.com","telephone":"+90 540 008 67 72","address":{"@type":"PostalAddress","streetAddress":"Uzay Çağı Caddesi, OSTİM","addressLocality":"Yenimahalle","addressRegion":"Ankara","addressCountry":"TR"},"areaServed":["TR","LY","EG","IQ"],"sameAs":["https://linkedin.com/company/vorqa-global"]}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.3.0/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
@@ -1006,7 +1006,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
   </div>
 
   <div class="sector-bar">
-    <button class="s-arrow" id="prev-sec"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8 2L3 6.5l5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
+    <button class="s-arrow" id="prev-sec" aria-label="Previous sector"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8 2L3 6.5l5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
     <div class="s-tabs" id="s-tabs">
       <button class="s-tab active">Concrete Plants</button>
       <button class="s-tab">Complete Galvanizing</button>
@@ -1014,7 +1014,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
       <button class="s-tab">Crushing &amp; Screening</button>
       <button class="s-tab">Industrial Sourcing</button>
     </div>
-    <button class="s-arrow" id="next-sec"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M5 2l5 4.5L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
+    <button class="s-arrow" id="next-sec" aria-label="Next sector"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M5 2l5 4.5L5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
   </div>
   <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
@@ -1141,7 +1141,7 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
     <div class="about-rail rv d3">
       <div class="item"><div class="k">15+</div><div class="v">Years combined experience</div></div>
       <div class="item"><div class="k">✓</div><div class="v">Multi-sector coverage</div></div>
-      <div class="item"><div class="k">&lt;48h</div><div class="v">Response time</div></div>
+      <div class="item"><div class="k">Direct</div><div class="v">Communication &amp; coordination</div></div>
       <div class="item"><div class="k">MENA</div><div class="v">&amp; Africa reach</div></div>
     </div>
   </div>
@@ -1314,6 +1314,8 @@ const T = {
   "nav.contact": "İletişim",
   "mob.cta": "Teklif Al →",
   "ham.label": "Menüyü Aç",
+  "sec.prev": "Önceki sektör",
+  "sec.next": "Sonraki sektör",
   "hero.h1": "<span class=\"line1\">ENDÜSTRİYEL TEDARİK</span><br><span class=\"accent\">PROJE TEDARİĞİ</span><br><span class=\"line3\">TEK MUHATAP PARTNER</span>",
   "hero.sub": "VORQA, endüstriyel ihtiyaçları doğrulanmış tedarikçiler ve uzman tesis partnerleriyle buluşturur; teknik, ticari ve teslimat koordinasyonunu talepten hedefe kadar yönetir.",
   "hero.eco": "Koordine Ettiklerimiz",
@@ -1333,8 +1335,8 @@ const T = {
   "about.stat1.v": "Yıllık birleşik tecrübe",
   "about.stat2.k": "✓",
   "about.stat2.v": "Çok sektörlü kapsam",
-  "about.stat3.k": "<48s",
-  "about.stat3.v": "Yanıt süresi",
+  "about.stat3.k": "Doğrudan",
+  "about.stat3.v": "İletişim ve koordinasyon",
   "about.stat4.k": "MENA",
   "about.stat4.v": "& Afrika kapsamı",
   "btn.contact": "Bize Ulaşın",
@@ -1400,6 +1402,8 @@ const T = {
   "nav.contact": "Contact",
   "mob.cta": "Request a Quote →",
   "ham.label": "Open Menu",
+  "sec.prev": "Previous sector",
+  "sec.next": "Next sector",
   "hero.h1": "<span class=\"line1\">INDUSTRIAL SOURCING</span><br><span class=\"accent\">PROJECT SUPPLY</span><br><span class=\"line3\">ONE ACCOUNTABLE PARTNER</span>",
   "hero.sub": "VORQA connects industrial requirements with qualified suppliers and specialized plant partners, managing technical, commercial and delivery coordination from request to destination.",
   "hero.eco": "What We Coordinate",
@@ -1419,8 +1423,8 @@ const T = {
   "about.stat1.v": "Years combined experience",
   "about.stat2.k": "✓",
   "about.stat2.v": "Multi-sector coverage",
-  "about.stat3.k": "<48h",
-  "about.stat3.v": "Response time",
+  "about.stat3.k": "Direct",
+  "about.stat3.v": "Communication & coordination",
   "about.stat4.k": "MENA",
   "about.stat4.v": "& Africa reach",
   "btn.contact": "Contact Us",
@@ -1486,6 +1490,8 @@ const T = {
   "nav.contact": "تواصل معنا",
   "mob.cta": "اطلب عرض سعر ←",
   "ham.label": "افتح القائمة",
+  "sec.prev": "القطاع السابق",
+  "sec.next": "القطاع التالي",
   "hero.h1": "<span class=\"line1\">التوريد الصناعي</span><br><span class=\"accent\">تزويد المشاريع</span><br><span class=\"line3\">شريك واحد مسؤول</span>",
   "hero.sub": "تربط VORQA المتطلبات الصناعية بموردين مؤهلين وشركاء تصنيع متخصصين، وتدير التنسيق الفني والتجاري وتنسيق التسليم من الطلب حتى الوجهة.",
   "hero.eco": "ما ننسقه",
@@ -1505,8 +1511,8 @@ const T = {
   "about.stat1.v": "عامًا خبرة مشتركة",
   "about.stat2.k": "✓",
   "about.stat2.v": "تغطية متعددة القطاعات",
-  "about.stat3.k": "<48 س",
-  "about.stat3.v": "زمن الاستجابة",
+  "about.stat3.k": "تواصل",
+  "about.stat3.v": "مباشر ومنسّق",
   "about.stat4.k": "MENA",
   "about.stat4.v": "وأفريقيا",
   "btn.contact": "تواصل معنا",

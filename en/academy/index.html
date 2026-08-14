@@ -278,6 +278,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .blog-excerpt{font-size:13px;color:rgba(10,37,64,.5);line-height:1.75;margin-bottom:20px}
 .blog-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(10,37,64,.06)}
 .blog-date{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(10,37,64,.3)}
+/* Shown only on EN/AR output (empty string on TR, hidden via :empty) —
+   this article's full text is Turkish-only, no localized version exists
+   yet, so readers are told before they click through. */
+.blog-lang-badge{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(10,37,64,.4);background:rgba(10,37,64,.06);border-radius:3px;padding:2px 6px;margin-inline-start:8px}
+.blog-lang-badge:empty{display:none;margin:0;padding:0}
 .blog-link{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#2874B2;text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .2s}
 .blog-link:hover{gap:9px}
 
@@ -503,7 +508,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Waste-Energy Conversion</div>
           <div class="blog-title">The EPC-F Model and AI in the Energy Sector: Shaping Future Projects</div>
           <div class="blog-meta">
-            <span class="blog-date">May 28, 2026 · 5 min</span>
+            <span class="blog-date">May 28, 2026 · 5 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -519,7 +524,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Galvanizing Plants</div>
           <div class="blog-title">ISO 1461: Coating Thickness and Service Life in Hot-Dip Galvanizing</div>
           <div class="blog-meta">
-            <span class="blog-date">Apr 22, 2026 · 6 min</span>
+            <span class="blog-date">Apr 22, 2026 · 6 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -535,7 +540,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Waste-Energy Conversion</div>
           <div class="blog-title">Waste-to-Energy: WtE Technologies and Turkey's 2030 Targets</div>
           <div class="blog-meta">
-            <span class="blog-date">Apr 08, 2026 · 7 min</span>
+            <span class="blog-date">Apr 08, 2026 · 7 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -551,7 +556,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Steel Structure &amp; Mechanical Fabrication</div>
           <div class="blog-title">Steel Structure Tolerances and NDT Requirements under EN 1090-2</div>
           <div class="blog-meta">
-            <span class="blog-date">Mar 20, 2026 · 9 min</span>
+            <span class="blog-date">Mar 20, 2026 · 9 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -567,7 +572,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Supply Chain Management</div>
           <div class="blog-title">2026 Vulnerabilities in Global Supply Chains and Diversification Strategies</div>
           <div class="blog-meta">
-            <span class="blog-date">Mar 05, 2026 · 5 min</span>
+            <span class="blog-date">Mar 05, 2026 · 5 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -583,7 +588,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Concrete Plants</div>
           <div class="blog-title">Mobile or Stationary? An ROI Analysis by Project Volume and Duration</div>
           <div class="blog-meta">
-            <span class="blog-date">Feb 14, 2026 · 5 min</span>
+            <span class="blog-date">Feb 14, 2026 · 5 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -599,7 +604,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Waste-Energy Conversion</div>
           <div class="blog-title">EPC Management for Turnkey Facilities: Earned Value and Risk Matrix</div>
           <div class="blog-meta">
-            <span class="blog-date">Jan 28, 2026 · 6 min</span>
+            <span class="blog-date">Jan 28, 2026 · 6 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -614,7 +619,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Steel Structure &amp; Mechanical Fabrication</div>
           <div class="blog-title">Vibration Analysis and Shaft Alignment in Industrial Equipment: The Hidden Cost of Mechanical Assembly</div>
           <div class="blog-meta">
-            <span class="blog-date">Jun 11, 2026 · 6 min</span>
+            <span class="blog-date">Jun 11, 2026 · 6 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -629,7 +634,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           <div class="blog-cat-chip">Galvanizing Plants</div>
           <div class="blog-title">Hot-Dip Galvanizing vs. Paint Coating: A Life Cycle Cost (LCC) Analysis</div>
           <div class="blog-meta">
-            <span class="blog-date">Jun 25, 2026 · 6 min</span>
+            <span class="blog-date">Jun 25, 2026 · 6 min</span><span class="blog-lang-badge">Turkish article</span>
             <a href="/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html" class="blog-link">Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
           </div>
         </div>
@@ -942,6 +947,7 @@ const T={
       'ft.excerpt':'Santral kapasitesi Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;&times;&nbsp;&eta;&nbsp;&times;&nbsp;f) formülüyle belirlenir; burada &eta; mixer verimliliği (Vorqa standart: 0.82), f çevre faktörüdür. 500&nbsp;m³/gün hedefi ve 8&nbsp;saatlik vardiya için Q = 80.3&nbsp;m³/sa. ACI 304R-00 ve ERMCO 2024 referanslarıyla desteklenmiş 6 adımlı metodoloji.',
       'ft.cta':'Devamını Oku <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       'blog.read':'Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'blog.trBadge':'',
       'bp1.title':'Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek','bp1.date':'28 May 2026 &middot; 5 dak.',
       'bp2.title':'ISO 1461: Sıcak Daldırma Galvanizlemede Kaplama Kalınlığı ve Ömür','bp2.date':'22 Nis 2026 &middot; 6 dak.',
       'bp3.title':'Atıktan Enerjiye: WtE Teknolojileri ve Türkiye 2030 Hedefleri','bp3.date':'08 Nis 2026 &middot; 7 dak.',
@@ -966,6 +972,7 @@ const T={
       'ft.excerpt':'Plant capacity is determined by the formula Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;&times;&nbsp;&eta;&nbsp;&times;&nbsp;f), where &eta; is mixer efficiency (Vorqa standard: 0.82) and f is the environmental factor. For a 500&nbsp;m³/day target over an 8-hour shift, Q = 80.3&nbsp;m³/h. A 6-step methodology backed by ACI 304R-00 and ERMCO 2024 references.',
       'ft.cta':'Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       'blog.read':'Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'blog.trBadge':'Turkish article',
       'bp1.title':'The EPC-F Model and AI in the Energy Sector: Shaping Future Projects','bp1.date':'May 28, 2026 &middot; 5 min',
       'bp2.title':'ISO 1461: Coating Thickness and Service Life in Hot-Dip Galvanizing','bp2.date':'Apr 22, 2026 &middot; 6 min',
       'bp3.title':'Waste-to-Energy: WtE Technologies and Turkey\'s 2030 Targets','bp3.date':'Apr 08, 2026 &middot; 7 min',
@@ -990,6 +997,7 @@ const T={
       'ft.excerpt':'تُحدَّد طاقة المحطة بالمعادلة Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;&times;&nbsp;&eta;&nbsp;&times;&nbsp;f)، حيث &eta; كفاءة الخلاط (معيار Vorqa: 0.82) وf هو عامل البيئة. لهدف 500&nbsp;م³/يوم على مدار وردية 8&nbsp;ساعات، Q = 80.3&nbsp;م³/س. منهجية من 6 خطوات مدعومة بمراجع ACI 304R-00 وERMCO 2024.',
       'ft.cta':'اقرأ المزيد <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       'blog.read':'اقرأ <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'blog.trBadge':'مقال بالتركية',
       'bp1.title':'نموذج EPC-F والذكاء الاصطناعي في قطاع الطاقة: تشكيل مشاريع المستقبل','bp1.date':'28 مايو 2026 &middot; 5 دقائق',
       'bp2.title':'ISO 1461: سماكة الطلاء وعمر الخدمة في الجلفنة بالغمس الساخن','bp2.date':'22 أبريل 2026 &middot; 6 دقائق',
       'bp3.title':'من النفايات إلى الطاقة: تقنيات WtE وأهداف تركيا لعام 2030','bp3.date':'08 أبريل 2026 &middot; 7 دقائق',
