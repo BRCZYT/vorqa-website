@@ -1,9 +1,9 @@
 # Vorqa Global
 
 > Türkiye (Ankara) merkezli teknik tedarik ve proje entegrasyon partneri.
-> Türk uzman üreticilerin mühendislik gücünü, MENA ve Afrika projeleri
-> için, şeffaf ve tek muhatap bir teknik tedarik & koordinasyon
-> modelinde birleştirir.
+> Türk uzman üreticilere, MENA ve Afrika projeleri için şeffaf ve
+> tek muhatap bir teknik tedarik & koordinasyon modeliyle erişim
+> sağlar.
 
 ## Ne yapıyoruz
 - Endüstriyel ekipman ve tesisler için teknik tedarik ve tedarikçi koordinasyonu
@@ -14,7 +14,7 @@
 
 ## Kimiz
 - Kurucu: Burcu Adıgüzel
-- 1.000+ doğrulanmış Türk tedarikçiden oluşan ağ
+- Doğrulanmış Türk tedarikçilerden oluşan bir ağ
 - Hedef pazarlar: Libya, Mısır, Irak, Körfez (MENA) ve Afrika
 - Diller: Türkçe, İngilizce, Arapça
 
@@ -29,6 +29,6 @@ About) yer alır.
 
 ## İletişim
 - Adres: Uzay Çağı Caddesi, OSTİM, Yenimahalle, Ankara, Türkiye
-- Telefon: +90 536 707 69 51
-- E-posta: info@vorqaglobal.com (genel) · sales@vorqaglobal.com (satış)
+- Telefon: +90 540 008 67 72
+- E-posta: purchasing@vorqaglobal.com (satın alma) · info@vorqaglobal.com (genel)
 - Web: https://www.vorqaglobal.com
