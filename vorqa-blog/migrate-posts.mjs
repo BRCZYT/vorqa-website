@@ -206,15 +206,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 
 <nav id="nav">
   <a href="../tr/" class="nav-logo">
-    <svg width="58" height="22" viewBox="140 65 400 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M150,70 L250,70 L260,80 L260,86 L180,164 L260,164 L260,180 L160,180 L150,170 L150,164 L158,164 L238,86 L150,86 Z" fill="#0a2540"/>
-      <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${p.catColor}"/>
-      <path d="M420,80 L430,70 L520,70 L530,80 L530,86 L483,86 L483,180 L467,180 L467,86 L420,86 Z" fill="#0a2540"/>
-    </svg>
-    <div style="border-left:1px solid rgba(10,37,64,.14);padding-left:12px">
-      <div style="font-family:'JetBrains Mono Variable',monospace;font-size:7.5px;letter-spacing:2px;color:rgba(10,37,64,.4);text-transform:uppercase;line-height:1.8">Global</div>
-      <div style="font-family:'JetBrains Mono Variable',monospace;font-size:7.5px;letter-spacing:2px;color:rgba(10,37,64,.4);text-transform:uppercase;line-height:1.8">Industry</div>
-    </div>
+    <img src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global Supply" style="display:block;height:40px;width:auto;max-width:min(190px,44vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px">
   </a>
   <div class="nav-links">
     <a href="../tr/akademi/" class="nav-link active">Akademi</a>
@@ -230,7 +222,7 @@ function buildHTML(p, articleHTML, refsHTML) {
 </nav>
 
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${p.catColor};text-transform:uppercase;margin-bottom:20px">Vorqa Global</div>
+  <img src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global Supply" style="display:block;height:38px;width:auto;max-width:min(180px,48vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px;margin-bottom:20px">
   <a href="../tr/akademi/" class="mob-link" style="color:${p.catColor}">Akademi</a>
   <div class="mob-sep"></div>
   <a href="../tr/iletisim/" class="mob-link">İletişim</a>
@@ -294,12 +286,7 @@ function buildHTML(p, articleHTML, refsHTML) {
   <div style="max-width:1160px;margin:0 auto">
     <div class="foot-inner">
       <a href="../tr/" style="text-decoration:none;display:flex;align-items:center;gap:13px">
-        <svg width="50" viewBox="140 60 400 130" xmlns="http://www.w3.org/2000/svg">
-          <path d="M150,70 L250,70 L260,80 L260,86 L180,164 L260,164 L260,180 L160,180 L150,170 L150,164 L158,164 L238,86 L150,86 Z" fill="#fff"/>
-          <path d="M285,76 L291,70 L303,70 L336,122 L344,122 L377,70 L389,70 L395,76 L348,130 L348,180 L332,180 L332,130 Z" fill="${p.catColor}"/>
-          <path d="M420,80 L430,70 L520,70 L530,80 L530,86 L483,86 L483,180 L467,180 L467,86 L420,86 Z" fill="#fff"/>
-        </svg>
-        <span style="font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.38);text-transform:uppercase">Vorqa Global</span>
+        <img class="foot-logo-img" src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global Supply" style="display:block;height:40px;width:auto;max-width:min(190px,44vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px">
       </a>
       <a href="../tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">← Tüm Yazılar</a>
       <div class="ft-social">
