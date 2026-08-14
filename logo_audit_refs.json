@@ -82,17 +82,17 @@
   {
     "file": "akademi.html",
     "line": 379,
-    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "akademi.html",
     "line": 380,
-    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "akademi.html",
     "line": 672,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "iletisim.html",
@@ -172,12 +172,12 @@
   {
     "file": "iletisim.html",
     "line": 290,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "iletisim.html",
     "line": 439,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "index.html",
@@ -257,7 +257,7 @@
   {
     "file": "index.html",
     "line": 927,
-    "text": "<img src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"VORQA\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
   },
   {
     "file": "index.html",
@@ -267,17 +267,17 @@
   {
     "file": "index.html",
     "line": 946,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "index.html",
     "line": 1056,
-    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"\"></div>"
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
   },
   {
     "file": "index.html",
     "line": 1157,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\index.html",
@@ -357,7 +357,7 @@
   {
     "file": "ar\\index.html",
     "line": 928,
-    "text": "<img src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"VORQA\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
   },
   {
     "file": "ar\\index.html",
@@ -367,17 +367,17 @@
   {
     "file": "ar\\index.html",
     "line": 947,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\index.html",
     "line": 1057,
-    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"\"></div>"
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
   },
   {
     "file": "ar\\index.html",
     "line": 1158,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
@@ -392,7 +392,7 @@
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 242,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"width:100%;max-width:340px;height:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:100%;max-width:340px;height:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
@@ -412,27 +412,27 @@
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 272,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 276,
-    "text": "<img src=\"vorqa_logo_transparent.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 280,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 284,
-    "text": "<img src=\"vorqa_logo_transparent.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 305,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"width:100%;max-width:200px;height:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:100%;max-width:200px;height:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
@@ -447,12 +447,12 @@
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 325,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"width:44px;height:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:44px;height:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 332,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"width:72px;height:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:72px;height:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
@@ -462,12 +462,12 @@
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 597,
-    "text": "<img src=\"vorqa_logo_white.png\" alt=\"Vorqa Global Supply logo\" style=\"width:104px;height:auto;display:block;margin-bottom:12px\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:104px;height:auto;display:block;margin-bottom:12px\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
     "line": 611,
-    "text": "<img src=\"vorqa_logo_transparent.png\" alt=\"Vorqa Global Supply logo\" style=\"width:104px;height:auto;display:block\">"
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:104px;height:auto;display:block\">"
   },
   {
     "file": "brand_assets\\vorqa_brand-kit.html",
@@ -602,7 +602,7 @@
   {
     "file": "en\\index.html",
     "line": 928,
-    "text": "<img src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"VORQA\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
   },
   {
     "file": "en\\index.html",
@@ -612,17 +612,17 @@
   {
     "file": "en\\index.html",
     "line": 947,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "en\\index.html",
     "line": 1057,
-    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"\"></div>"
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
   },
   {
     "file": "en\\index.html",
     "line": 1158,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\index.html",
@@ -702,7 +702,7 @@
   {
     "file": "tr\\index.html",
     "line": 928,
-    "text": "<img src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"VORQA\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
   },
   {
     "file": "tr\\index.html",
@@ -712,17 +712,17 @@
   {
     "file": "tr\\index.html",
     "line": 947,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\index.html",
     "line": 1057,
-    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"\"></div>"
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
   },
   {
     "file": "tr\\index.html",
     "line": 1158,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
@@ -757,12 +757,12 @@
   {
     "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
     "line": 281,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
@@ -797,12 +797,12 @@
   {
     "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
     "line": 261,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
@@ -837,12 +837,12 @@
   {
     "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
     "line": 225,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
@@ -877,12 +877,12 @@
   {
     "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
     "line": 264,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
@@ -917,12 +917,12 @@
   {
     "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
     "line": 256,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
@@ -957,12 +957,12 @@
   {
     "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
     "line": 287,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
@@ -997,12 +997,12 @@
   {
     "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
     "line": 255,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\migrate-posts.mjs",
@@ -1062,12 +1062,12 @@
   {
     "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
     "line": 256,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\server.mjs",
@@ -1107,12 +1107,12 @@
   {
     "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
     "line": 251,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
@@ -1147,12 +1147,12 @@
   {
     "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
     "line": 125,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
     "line": 264,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-mira\\mira.html",
@@ -1247,17 +1247,17 @@
   {
     "file": "ar\\academy\\index.html",
     "line": 377,
-    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\academy\\index.html",
     "line": 378,
-    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\academy\\index.html",
     "line": 670,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\contact\\index.html",
@@ -1337,12 +1337,12 @@
   {
     "file": "ar\\contact\\index.html",
     "line": 285,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\contact\\index.html",
     "line": 434,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
@@ -1457,17 +1457,17 @@
   {
     "file": "en\\academy\\index.html",
     "line": 377,
-    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "en\\academy\\index.html",
     "line": 378,
-    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "en\\academy\\index.html",
     "line": 670,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "en\\contact\\index.html",
@@ -1547,12 +1547,12 @@
   {
     "file": "en\\contact\\index.html",
     "line": 285,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "en\\contact\\index.html",
     "line": 434,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
@@ -1667,17 +1667,17 @@
   {
     "file": "tr\\akademi\\index.html",
     "line": 377,
-    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\akademi\\index.html",
     "line": 378,
-    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\akademi\\index.html",
     "line": 670,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\iletisim\\index.html",
@@ -1757,12 +1757,12 @@
   {
     "file": "tr\\iletisim\\index.html",
     "line": 285,
-    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\iletisim\\index.html",
     "line": 434,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
@@ -1827,12 +1827,12 @@
   {
     "file": "vorqa-blog\\generator\\publisher.mjs",
     "line": 190,
-    "text": "<img src=\"/brand_assets/vorqa_logo_main_cropped.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
   },
   {
     "file": "vorqa-blog\\generator\\publisher.mjs",
     "line": 273,
-    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_logo_white_cropped.png\" alt=\"Vorqa Global\">"
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
   },
   {
     "file": "vorqa-blog\\generator\\publisher.mjs",

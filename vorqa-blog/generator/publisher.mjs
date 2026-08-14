@@ -187,7 +187,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <nav id="nav">
   <a href="../tr/" class="nav-logo">
-    <img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global" style="display:block;height:40px;width:auto">
+    <img src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global" style="display:block;height:40px;width:auto">
   </a>
   <div class="nav-links">
     <a href="../tr/" class="nav-link">Ana Sayfa</a>
@@ -270,7 +270,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 <footer id="foot">
   <div class="foot-inner">
     <a href="../tr/" style="text-decoration:none;display:flex;align-items:center">
-      <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+      <img class="foot-logo-img" src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global">
     </a>
     <a href="../tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:6px 12px">← Tüm Yazılar</a>
     <div class="ft-social">
