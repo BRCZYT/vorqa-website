@@ -14,7 +14,10 @@ const SUPPORTED_LANGUAGES = new Set(["EN", "TR", "AR"]);
 const WEB_SOURCE_CLASSES = new Set(["PUBLIC", "INTERNAL_SAFE"]);
 const SENSITIVE_SOURCE_CLASSES = new Set(["CONFIDENTIAL", "CLIENT_CONFIDENTIAL"]);
 
-const TRUTH_PATH = path.join(process.cwd(), "vorqa-mira", "context", "vorqa_truth.json");
+const TRUTH_PATHS = [
+  path.join(__dirname, "vorqa_truth.json"),
+  path.join(process.cwd(), "vorqa-mira", "context", "vorqa_truth.json"),
+];
 
 const PROHIBITED_PATTERNS = [
   ["24+ countries", /\b24\+\s+(countries|ülke|ulke)\b/i],
@@ -76,7 +79,12 @@ function sendJson(res, statusCode, payload) {
 }
 
 function loadTruth() {
-  return JSON.parse(fs.readFileSync(TRUTH_PATH, "utf8"));
+  for (const truthPath of TRUTH_PATHS) {
+    if (fs.existsSync(truthPath)) {
+      return JSON.parse(fs.readFileSync(truthPath, "utf8"));
+    }
+  }
+  throw new Error("VORQA truth file could not be loaded.");
 }
 
 function readRequestBody(req) {
