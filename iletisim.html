@@ -385,20 +385,20 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
       <h3 class="hdg-ar-fix" style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:22px;font-weight:400;color:#0A2540;margin-bottom:28px;letter-spacing:-.02em" data-i18n="form.title">Teklif ve proje sorguları</h3>
       <form id="contact-form" style="display:flex;flex-direction:column;gap:16px" action="https://formspree.io/f/xkodlyby" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <div><label class="f-lbl" data-i18n="form.name.lbl">Ad Soyad</label><input type="text" name="name" class="f-inp" data-i18n-ph="form.name.ph" placeholder="Adınız Soyadınız" required></div>
-          <div><label class="f-lbl" data-i18n="form.company.lbl">Şirket</label><input type="text" name="company" class="f-inp" data-i18n-ph="form.company.ph" placeholder="Şirket Adı"></div>
+          <div><label class="f-lbl" for="ct-name" data-i18n="form.name.lbl">Ad Soyad</label><input id="ct-name" type="text" name="name" class="f-inp" data-i18n-ph="form.name.ph" placeholder="Adınız Soyadınız" required></div>
+          <div><label class="f-lbl" for="ct-company" data-i18n="form.company.lbl">Şirket</label><input id="ct-company" type="text" name="company" class="f-inp" data-i18n-ph="form.company.ph" placeholder="Şirket Adı"></div>
         </div>
         <div class="form-row">
-          <div><label class="f-lbl" data-i18n="form.email.lbl">E-Posta</label><input type="email" name="email" class="f-inp" data-i18n-ph="form.email.ph" placeholder="email@sirket.com" required></div>
-          <div><label class="f-lbl" data-i18n="form.phone.lbl">Telefon</label><input type="tel" name="phone" class="f-inp" placeholder="+90 5__ ___ __ __"></div>
+          <div><label class="f-lbl" for="ct-email" data-i18n="form.email.lbl">E-Posta</label><input id="ct-email" type="email" name="email" class="f-inp" data-i18n-ph="form.email.ph" placeholder="email@sirket.com" required></div>
+          <div><label class="f-lbl" for="ct-phone" data-i18n="form.phone.lbl">Telefon</label><input id="ct-phone" type="tel" name="phone" class="f-inp" placeholder="+90 5__ ___ __ __"></div>
         </div>
         <div>
-          <label class="f-lbl" data-i18n="form.country.lbl">Ülke</label>
-          <input type="text" name="country" class="f-inp" data-i18n-ph="form.country.ph" placeholder="Ülkeniz">
+          <label class="f-lbl" for="ct-country" data-i18n="form.country.lbl">Ülke</label>
+          <input id="ct-country" type="text" name="country" class="f-inp" data-i18n-ph="form.country.ph" placeholder="Ülkeniz">
         </div>
         <div>
-          <label class="f-lbl" data-i18n="form.sector.lbl">İlgili Alan</label>
-          <select class="f-inp" name="sector">
+          <label class="f-lbl" for="ct-sector" data-i18n="form.sector.lbl">İlgili Alan</label>
+          <select id="ct-sector" class="f-inp" name="sector">
             <option value="" data-i18n="form.sector.opt0">Seçin…</option>
             <option data-i18n="form.sector.opt1">Beton Santralleri</option>
             <option data-i18n="form.sector.opt2">Komple Galvaniz Tesisleri</option>
@@ -409,8 +409,8 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
           </select>
         </div>
         <div>
-          <label class="f-lbl" data-i18n="form.msg.lbl">Mesajınız</label>
-          <textarea class="f-inp" name="message" rows="5" data-i18n-ph="form.msg.ph" placeholder="Projenizi kısaca anlatın — kapasite, lokasyon, bütçe aralığı veya diğer gereksinimlerinizi belirtin." required></textarea>
+          <label class="f-lbl" for="ct-message" data-i18n="form.msg.lbl">Mesajınız</label>
+          <textarea id="ct-message" class="f-inp" name="message" rows="5" data-i18n-ph="form.msg.ph" placeholder="Projenizi kısaca anlatın — kapasite, lokasyon, bütçe aralığı veya diğer gereksinimlerinizi belirtin." required></textarea>
         </div>
         <p style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:12.5px;color:rgba(58,72,88,.65);line-height:1.6;margin:0" data-i18n="form.file.note">Teknik dokümanınız mı var? E-posta ile veya yanıtımızda iletebilirsiniz.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
