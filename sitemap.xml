@@ -5,7 +5,7 @@
   <!-- Home (Faz C — site 3 sayfaya indirildi: Home / Academy / Contact) -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/"/>
@@ -37,7 +37,7 @@
   <!-- Academy -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/akademi/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/academy/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/"/>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/academy/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/"/>
@@ -69,7 +69,7 @@
   <!-- Contact -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/iletisim/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/iletisim/"/>
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/contact/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/iletisim/"/>
@@ -89,7 +89,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/contact/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/iletisim/"/>
@@ -102,7 +102,7 @@
        vorqa-blog/ posts below), served under each language's Academy path. -->
   <url>
     <loc>https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
@@ -112,7 +112,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/"/>
@@ -134,55 +134,55 @@
   <!-- Academy blog posts (vorqa-blog/) -->
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html</loc>
-    <lastmod>2026-02-14</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.vorqaglobal.com/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
