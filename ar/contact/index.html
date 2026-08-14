@@ -672,6 +672,9 @@ function handleSubmit(e){
     if(res.ok){
       successBox.style.display='block';
       form.reset();
+      if(typeof gtag==='function'){
+        gtag('event','generate_lead',{form_name:'contact_form',page_language:document.documentElement.lang});
+      }
     } else {
       errorBox.style.display='block';
     }
