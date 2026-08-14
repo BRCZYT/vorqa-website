@@ -6,6 +6,15 @@
 - Mira is an AI Industry Analyst persona for educational content.
 - Do not let Mira replace or outrank VORQA's corporate voice.
 
+## Canonical Logo
+
+- The only approved primary VORQA logo is the navy `VORQA` wordmark with the distinctive blue Q tail and `GLOBAL SUPPLY` centered underneath on a white/transparent background.
+- Do not redraw, substitute, restyle, distort, crop, recolor, or replace the Q-tail geometry.
+- Do not use alternate VORQA wordmarks or generated logo variants unless the user explicitly approves a new master logo.
+- Canva canonical asset name: `VORQA_Official_Main_Logo.png`.
+- Canva asset ID: `MAHSQDrz2Fg`.
+- All future Canva/social-media designs must use this canonical asset when a VORQA logo is required.
+
 ## Corporate Voice
 
 Use for:
