@@ -41,7 +41,7 @@ module.exports = async function handler(req, res) {
       }));
     }
 
-    const smoke = await fetch("https://www.vorqaglobal.com/api/mira-generate", {
+    const smoke = await fetch("https://www.vorqaglobal.com/api/mira-generate-v2", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
