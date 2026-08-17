@@ -1,0 +1,36 @@
+name: Home Truth Cleanup
+
+on:
+  push:
+    branches:
+      - seo-home-truth-cleanup
+    paths:
+      - scripts/home-truth-cleanup.cjs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo-home-truth-cleanup
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply truth cleanup
+        run: node scripts/home-truth-cleanup.cjs
+      - name: Commit patched Home files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html en/index.html tr/index.html ar/index.html
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "seo: replace unsupported verified-network wording"
+            git push origin HEAD:seo-home-truth-cleanup
+          fi
