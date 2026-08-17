@@ -1,0 +1,36 @@
+name: P3 Safe Performance Patch
+
+on:
+  push:
+    branches:
+      - seo-performance-p3
+    paths:
+      - scripts/p3-safe-performance.cjs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo-performance-p3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply safe performance patch
+        run: node scripts/p3-safe-performance.cjs
+      - name: Commit patched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html en/index.html tr/index.html ar/index.html en/academy/index.html tr/akademi/index.html ar/academy/index.html
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "perf: reduce Academy repaint/CPU and bypass intro for reduced motion"
+            git push origin HEAD:seo-performance-p3
+          fi
