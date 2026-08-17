@@ -1793,56 +1793,66 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
   var HOW_STEPS = howSteps.length; // 6
 
   if(showroomHowScene && howSteps.length && window.gsap && window.ScrollTrigger){
-    var visibleCount = -1;
-    function setVisibleCount(count){
-      if(count === visibleCount) return;
-      visibleCount = count;
-      howSteps.forEach(function(el, i){
-        var isVisible = i < count;
-        var vars = { opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 };
-        if(reduceMotion){ gsap.set(el, vars); }
-        else {
+    if(reduceMotion){
+      /* Reveal (and the pin driving it) fully skipped under
+         reduced-motion — not just instant-jumped — so there's no
+         pin-scroll requirement at all for these users, matching the
+         mobile no-pin experience. Explicit opacity:1/y:0 (not
+         clearProps) because clearProps would hand control back to the
+         sitewide .rv CSS class every step-cell also carries, which
+         defaults to opacity:0 until its own IntersectionObserver fires
+         — invisible until scrolled near, not "visible from the start"
+         as required here. */
+      gsap.set(howSteps, { opacity: 1, y: 0 });
+      if(howSpineLine) gsap.set(howSpineLine, { scaleY: 1 });
+    } else {
+      var visibleCount = -1;
+      function setVisibleCount(count){
+        if(count === visibleCount) return;
+        visibleCount = count;
+        howSteps.forEach(function(el, i){
+          var isVisible = i < count;
+          var vars = { opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 };
           el.style.willChange = 'opacity,transform';
           gsap.to(el, Object.assign({
             duration: .5, ease: 'power2.out',
             onComplete: function(){ el.style.willChange = 'auto'; }
           }, vars));
+        });
+        if(howSpineLine){
+          var lineProgress = HOW_STEPS ? Math.min(1, count / HOW_STEPS) : 0;
+          gsap.to(howSpineLine, { scaleY: lineProgress, duration: .5, ease: 'power2.out' });
+        }
+      }
+
+      ScrollTrigger.matchMedia({
+        '(min-width: 821px)': function(){
+          visibleCount = -1;
+          gsap.set(howSteps, { opacity: 0, y: 20 });
+          if(howSpineLine) gsap.set(howSpineLine, { scaleY: 0 });
+          setVisibleCount(1);
+          var st = ScrollTrigger.create({
+            trigger: showroomHowScene,
+            start: 'top top',
+            end: '+=3600',
+            pin: true,
+            pinSpacing: true,
+            onUpdate: function(self){
+              var count = Math.min(HOW_STEPS, Math.floor(self.progress * HOW_STEPS) + 1);
+              setVisibleCount(count);
+            }
+          });
+          return function(){ st.kill(); };
+        },
+        '(max-width: 820px)': function(){
+          visibleCount = -1;
+          gsap.set(howSteps, { clearProps: 'opacity,transform' });
+          if(howSpineLine) gsap.set(howSpineLine, { clearProps: 'transform' });
+          return function(){};
         }
       });
-      if(howSpineLine){
-        var lineProgress = HOW_STEPS ? Math.min(1, count / HOW_STEPS) : 0;
-        if(reduceMotion){ gsap.set(howSpineLine, { scaleY: lineProgress }); }
-        else { gsap.to(howSpineLine, { scaleY: lineProgress, duration: .5, ease: 'power2.out' }); }
-      }
+      ScrollTrigger.refresh();
     }
-
-    ScrollTrigger.matchMedia({
-      '(min-width: 821px)': function(){
-        visibleCount = -1;
-        gsap.set(howSteps, { opacity: 0, y: 20 });
-        if(howSpineLine) gsap.set(howSpineLine, { scaleY: 0 });
-        setVisibleCount(1);
-        var st = ScrollTrigger.create({
-          trigger: showroomHowScene,
-          start: 'top top',
-          end: '+=3600',
-          pin: true,
-          pinSpacing: true,
-          onUpdate: function(self){
-            var count = Math.min(HOW_STEPS, Math.floor(self.progress * HOW_STEPS) + 1);
-            setVisibleCount(count);
-          }
-        });
-        return function(){ st.kill(); };
-      },
-      '(max-width: 820px)': function(){
-        visibleCount = -1;
-        gsap.set(howSteps, { clearProps: 'opacity,transform' });
-        if(howSpineLine) gsap.set(howSpineLine, { clearProps: 'transform' });
-        return function(){};
-      }
-    });
-    ScrollTrigger.refresh();
   }
 
   /* §2d — What We Do: zigzag row reveal (left/right alternating,
