@@ -27,6 +27,9 @@
     { "source": "/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html", "destination": "/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/en/academy/knowledge-map/", "destination": "/api/academy-map?lang=en" },
+    { "source": "/tr/akademi/bilgi-haritasi/", "destination": "/api/academy-map?lang=tr" },
+    { "source": "/ar/academy/knowledge-map/", "destination": "/api/academy-map?lang=ar" },
     { "source": "/en/academy/industrial-procurement-strategic-sourcing/", "destination": "/api/academy-hub?lang=en&topic=industrial-procurement" },
     { "source": "/tr/akademi/endustriyel-satinalma-stratejik-tedarik/", "destination": "/api/academy-hub?lang=tr&topic=industrial-procurement" },
     { "source": "/ar/academy/industrial-procurement/", "destination": "/api/academy-hub?lang=ar&topic=industrial-procurement" },
