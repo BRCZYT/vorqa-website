@@ -8,6 +8,8 @@
 
 ## Canonical Logo
 
+- VORQA logo must never be recreated, redrawn, typed, recolored, distorted, or AI-generated. Only the canonical approved logo asset may be used.
+- Canonical repository file path: `brand_assets/vorqa_official_logo.png`.
 - The only approved primary VORQA logo is the navy `VORQA` wordmark with the distinctive blue Q tail and `GLOBAL SUPPLY` centered underneath on a white/transparent background.
 - Do not redraw, substitute, restyle, distort, crop, recolor, or replace the Q-tail geometry.
 - Do not use alternate VORQA wordmarks or generated logo variants unless the user explicitly approves a new master logo.

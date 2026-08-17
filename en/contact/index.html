@@ -52,8 +52,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}
 /* Master logo is navy-on-white — not suited to the dark nav/footer as-is,
    so it sits on a small light plaque for contrast instead. */
-.nav-logo-img{display:block;height:52px;width:auto}
-.foot-logo-img{display:block;height:40px;width:auto}
+.nav-logo-img{display:block;height:52px;width:auto;max-width:min(220px,46vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px}
+.foot-logo-img{display:block;height:40px;width:auto;max-width:min(190px,44vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px}
 .nl-z,.nl-y,.nl-t{transition:transform .35s cubic-bezier(.34,1.56,.64,1);transform-box:fill-box;transform-origin:center}
 .nav-logo:hover .nl-z{transform:translateX(-4px)}
 .nav-logo:hover .nl-y{transform:translateY(-4px)}
@@ -291,7 +291,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
 <!-- NAV -->
 <nav id="nav">
   <a href="/en/" class="nav-logo">
-    <img class="nav-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+    <img class="nav-logo-img" src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global">
   </a>
   <div class="nav-links">
     <a href="/en/" class="nav-link" style="color:rgba(255,255,255,.8)">Home</a>
@@ -310,7 +310,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
 
 <!-- MOBILE NAV -->
 <div id="mob-nav" aria-hidden="true">
-  <div dir="ltr" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:rgba(40,116,178,.7);text-transform:uppercase;margin-bottom:24px">Vorqa Global</div>
+  <img src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global Supply" style="display:block;height:38px;width:auto;max-width:min(180px,48vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px;margin-bottom:24px">
   <a href="/en/" class="mob-link" onclick="closeMobNav()">Home</a>
   <div class="mob-sep"></div>
   <a href="/en/academy/" class="mob-link" onclick="closeMobNav()">Academy</a>
@@ -440,7 +440,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
   <div style="max-width:1160px;margin:0 auto">
     <div class="foot-inner">
       <a href="/en/" style="text-decoration:none;display:flex;align-items:center">
-        <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+        <img class="foot-logo-img" src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global">
       </a>
       <a href="/en/academy/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">Academy</a>
       <div class="ft-social">

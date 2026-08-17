@@ -1,4 +1,4 @@
-# CLAUDE.md — Frontend Website Rules
+﻿# CLAUDE.md â€” Frontend Website Rules
 
 ## Always Do First
 - **Invoke the `frontend-design` skill** before writing any frontend code, every session, no exceptions.
@@ -9,7 +9,7 @@
 - Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
 
 ## Local Server
-- **Always serve on localhost** — never screenshot a `file:///` URL.
+- **Always serve on localhost** â€” never screenshot a `file:///` URL.
 - Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
 - `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
 - If the server is already running, do not start a second instance.
@@ -24,7 +24,8 @@
 ## Brand Assets
 - Always check the `brand_assets/` folder before designing. It may contain logos, color guides, style guides, or images.
 - If assets exist there, use them. Do not use placeholders where real assets are available.
-- If a logo is present, use it. If a color palette is defined, use those exact values — do not invent brand colors.
+- If a logo is present, use it. If a color palette is defined, use those exact values â€” do not invent brand colors.
+- VORQA logo must never be recreated, redrawn, typed, recolored, distorted, or AI-generated. Only the canonical approved logo asset may be used: `brand_assets/vorqa_official_logo.png`.
 
 ## Anti-Generic Guardrails
 - **Colors:** Never use default Tailwind palette (indigo-500, blue-600, etc.). Pick a custom brand color and derive from it.
@@ -34,16 +35,16 @@
 - **Animations:** Only animate `transform` and `opacity`. Never `transition-all`. Use spring-style easing.
 - **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
 - **Images:** Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
-- **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
-- **Depth:** Surfaces should have a layering system (base → elevated → floating), not all sit at the same z-plane.
+- **Spacing:** Use intentional, consistent spacing tokens â€” not random Tailwind steps.
+- **Depth:** Surfaces should have a layering system (base â†’ elevated â†’ floating), not all sit at the same z-plane.
 
 ## Hard Rules
 - Do not add sections, features, or content not in the reference
-- Do not "improve" a reference design — match it
+- Do not "improve" a reference design â€” match it
 - Do not stop after one screenshot pass
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
-# CLAUDE.md — Project Rules
+# CLAUDE.md â€” Project Rules
 
 ## CSS Architecture
 - All global styles go in `master.css` only. Never create new global CSS files.
@@ -58,16 +59,16 @@
 
 ## Token System
 - All design tokens live in `tokens.css`.
-- Never hardcode values like `#3a3a3a`, `16px`, `1.5rem` — always use a token.
+- Never hardcode values like `#3a3a3a`, `16px`, `1.5rem` â€” always use a token.
 - If a token doesn't exist for a value, add it to `tokens.css` first.
 
-## Website ↔ Document System
+## Website â†” Document System
 - Shared layout components must be in `/shared` folder.
 - Routing between website and document system must use the same router.
 - Shared styles must come from `master.css` and `tokens.css` only.
 
 ## General
 - Before writing any code, check existing files to avoid duplication.
-- Never leave TODO comments — either implement it or create a GitHub issue.
+- Never leave TODO comments â€” either implement it or create a GitHub issue.
 - Always use existing components before creating new ones.
 Create all pages in turkish english and arabic

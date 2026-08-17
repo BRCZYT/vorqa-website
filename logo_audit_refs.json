@@ -1,0 +1,1872 @@
+[
+  {
+    "file": "akademi.html",
+    "line": 24,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 25,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 26,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 30,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 31,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 32,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 65,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 68,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 73,
+    "text": ".logo-on-light{display:none}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 74,
+    "text": "#nav.scrolled .logo-on-dark{display:none}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 75,
+    "text": "#nav.scrolled .logo-on-light{display:block}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 76,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 78,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 79,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 80,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "akademi.html",
+    "line": 378,
+    "text": "<a href=\"index.html\" class=\"nav-logo\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 379,
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 380,
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "akademi.html",
+    "line": 672,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 15,
+    "text": "{\"@type\":\"ContactPage\",\"name\":\"İletişim — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 27,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 28,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 29,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 33,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 34,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 35,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 52,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 55,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 56,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 58,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 59,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 60,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 89,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 289,
+    "text": "<a href=\"index.html\" class=\"nav-logo\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 290,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "iletisim.html",
+    "line": 439,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "index.html",
+    "line": 14,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "index.html",
+    "line": 15,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "index.html",
+    "line": 16,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "index.html",
+    "line": 26,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "index.html",
+    "line": 27,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "index.html",
+    "line": 28,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "index.html",
+    "line": 30,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA is a customer-side industrial sourcing, project supply and coordination partner, connecting industrial requirements with qualified suppliers and specialized plant partners across MENA and Africa.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}"
+  },
+  {
+    "file": "index.html",
+    "line": 124,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}"
+  },
+  {
+    "file": "index.html",
+    "line": 125,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "index.html",
+    "line": 126,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "index.html",
+    "line": 132,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "index.html",
+    "line": 133,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "index.html",
+    "line": 134,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "index.html",
+    "line": 165,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "index.html",
+    "line": 420,
+    "text": "/* Giant VORQA logo behind the rows — decorative only (aria-hidden,"
+  },
+  {
+    "file": "index.html",
+    "line": 927,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
+  },
+  {
+    "file": "index.html",
+    "line": 945,
+    "text": "<a href=\"#\" class=\"nav-logo\">"
+  },
+  {
+    "file": "index.html",
+    "line": 946,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "index.html",
+    "line": 1056,
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
+  },
+  {
+    "file": "index.html",
+    "line": 1157,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 14,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 15,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 26,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 27,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 28,
+    "text": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA شريك توريد صناعي وتزويد مشاريع وتنسيق يعمل لصالح العميل لمحطات الخرسانة ومنشآت الجلفنة الكاملة وتحويل النفايات إلى طاقة ومنشآت التكسير والغربلة — الشرق الأوسط وأفريقيا.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}</script>"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 121,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 122,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 123,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 129,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 130,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 131,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 162,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 417,
+    "text": "/* Giant VORQA logo behind the rows — decorative only (aria-hidden,"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 928,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 946,
+    "text": "<a href=\"#\" class=\"nav-logo\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 947,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 1057,
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
+  },
+  {
+    "file": "ar\\index.html",
+    "line": 1158,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 175,
+    "text": ".foot-logo{display:flex;align-items:center;gap:14px}"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 206,
+    "text": "<img src=\"vorqa_amblem_white.png\" alt=\"Vorqa Global Supply emblem\" style=\"height:80px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 242,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:100%;max-width:340px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 249,
+    "text": "<img src=\"vorqa_amblem_white.png\" alt=\"Vorqa Global Supply emblem\" style=\"width:104px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 253,
+    "text": "<span class=\"card-spec\">Avatar · favicon</span>"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 254,
+    "text": "<img src=\"vorqa_amblem_white.png\" alt=\"Vorqa Global Supply emblem\" style=\"width:44px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 272,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 276,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 280,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 284,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"height:56px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 305,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:100%;max-width:200px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 318,
+    "text": "<img src=\"vorqa_amblem_white.png\" alt=\"Vorqa Global Supply emblem\" style=\"height:24px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 321,
+    "text": "<p class=\"min-size-use\">Digital · favicon</p>"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 325,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:44px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 332,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:72px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 585,
+    "text": "<img src=\"vorqa_amblem_white.png\" alt=\"Vorqa Global Supply emblem\" style=\"height:40px;width:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 597,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:104px;height:auto;display:block;margin-bottom:12px\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 611,
+    "text": "<img src=\"vorqa_official_logo.png\" alt=\"Vorqa Global Supply logo\" style=\"width:104px;height:auto;display:block\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 657,
+    "text": "<div class=\"foot-logo\">"
+  },
+  {
+    "file": "brand_assets\\vorqa_brand-kit.html",
+    "line": 658,
+    "text": "<img src=\"vorqa_amblem_white.png\" alt=\"Vorqa Global Supply emblem\" style=\"height:34px;width:auto;display:block\">"
+  },
+  {
+    "file": "docs\\01_YAPILACAKLAR_LISTESI.md",
+    "line": 9,
+    "text": "| 0.2 | Favicon seti ekle (SVG + PNG 32/180 + manifest) | Konsol 404'ü; sekmede boş ikon güvensizlik verir | Konsolda 404 yok; sekmede logo |"
+  },
+  {
+    "file": "docs\\01_YAPILACAKLAR_LISTESI.md",
+    "line": 10,
+    "text": "| 0.3 | `og:image` (1200×630) + `twitter:card` tüm sayfalara | LinkedIn/WhatsApp paylaşımında boş önizleme = B2B'de ölüm | LinkedIn Post Inspector'da görselli kart |"
+  },
+  {
+    "file": "docs\\04_BLOG_ICERIK_PLANI.md",
+    "line": 46,
+    "text": "7. Meta: Article schema, og:image (yazıya özel), 2+ iç link, TR↔EN hreflang"
+  },
+  {
+    "file": "docs\\05_MARKA_GORSEL_DIL_REHBERI.md",
+    "line": 43,
+    "text": "**Teknik format:** Hero 21:9 (min 2560px), kart 4:3 (min 1200px), og:image 1200×630. WebP çıktı, kalite 80."
+  },
+  {
+    "file": "docs\\05_MARKA_GORSEL_DIL_REHBERI.md",
+    "line": 56,
+    "text": "8. **og:image şablonu:** `Minimal dark navy background #0A2540 with subtle blueprint grid, abstract industrial structure line art in steel blue` (üzerine tasarımda logo+başlık bindirilir)"
+  },
+  {
+    "file": "docs\\06_KONUMLANDIRMA_VE_SEO_SPEC.md",
+    "line": 222,
+    "text": "| Blog yazısı | `Article` (author, datePublished, publisher) + `BreadcrumbList` |"
+  },
+  {
+    "file": "docs\\06_KONUMLANDIRMA_VE_SEO_SPEC.md",
+    "line": 226,
+    "text": "*`LocalBusiness` yalnızca **gerçek, doğrulanabilir açık adres** girilince kullanılır (aksi halde `Organization` ile sınırlı kal). `Organization` içindeki `name` = \"Vorqa Global\", `url`, `logo`, `email`, `address` (PostalAddress, gerçek), `areaServed` (MENA/Afrika), `sameAs` (sosyal profiller — açılınca)."
+  },
+  {
+    "file": "docs\\06_KONUMLANDIRMA_VE_SEO_SPEC.md",
+    "line": 245,
+    "text": "- Hero 21:9, kart 4:3, og:image 1200×630."
+  },
+  {
+    "file": "docs\\06_KONUMLANDIRMA_VE_SEO_SPEC.md",
+    "line": 281,
+    "text": "1. **Marka taraması (her şeyden önce, durum: muhtemelen yapılmadı — tekrar kontrol et).** Bir marka vekiliyle TÜRKPATENT + WIPO Global Brand DB + EUIPO'da ilgili Nice sınıflarında (**6, 7, 37, 40, 42**) \"Vorqa\" (kelime + logo) taranır. Ucuz, hızlı, kesin. → *Not: Orijinal belgede burada ZYT'ye özgü bilinen çakışma örnekleri (Çinli ZYT çelik/enerji, ZYT Petroleum, ZYT otomotiv) vardı — bunlar \"Vorqa\" için geçerli DEĞİL ve uydurulmadı. \"Vorqa\" için sınıf 6/7/37/40/42'de gerçek bir çakışma taraması henüz yapılmamış olabilir; bu adım hâlâ gerekli.*"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 14,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 15,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 26,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 27,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 28,
+    "text": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA is a customer-side industrial sourcing, project supply and coordination partner for concrete, complete galvanizing, waste-to-energy and crushing & screening plants — MENA & Africa.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}</script>"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 121,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 122,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 123,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 129,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 130,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 131,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 162,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 417,
+    "text": "/* Giant VORQA logo behind the rows — decorative only (aria-hidden,"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 928,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 946,
+    "text": "<a href=\"#\" class=\"nav-logo\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 947,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 1057,
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
+  },
+  {
+    "file": "en\\index.html",
+    "line": 1158,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 14,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 15,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 26,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 27,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 28,
+    "text": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"description\":\"VORQA; beton, komple galvaniz, atık-enerji ve kırma-eleme tesisleri için müşteri tarafında çalışan bir endüstriyel tedarik, proje tedariği ve koordinasyon partneridir — MENA & Afrika.\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"},\"areaServed\":[\"TR\",\"LY\",\"EG\",\"IQ\"],\"sameAs\":[\"https://linkedin.com/company/vorqa-global\"]}</script>"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 121,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none;cursor:pointer}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 122,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 123,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 129,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 130,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 131,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 162,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 417,
+    "text": "/* Giant VORQA logo behind the rows — decorative only (aria-hidden,"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 928,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"VORQA\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 946,
+    "text": "<a href=\"#\" class=\"nav-logo\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 947,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 1057,
+    "text": "<div class=\"wwd-mark-wrap\" aria-hidden=\"true\"><img class=\"wwd-mark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"\"></div>"
+  },
+  {
+    "file": "tr\\index.html",
+    "line": 1158,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Beton Santrali Kapasitesi Nasıl Doğru Hesaplanır? Adım Adım Metodoloji\",\"datePublished\":\"2026-05-10T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"Q = P / (T × η × f) formülüyle beton santrali kapasitesi hesaplama. η=0.82 Vorqa standardı, iklim ve irtifa düzeltme faktörleri. ACI 304R-00 referanslı.\"}"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\beton-santrali-kapasite-hesaplama-2026-05-10.html",
+    "line": 281,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"EN 1090-2 Kapsamında Çelik Yapı Toleransları ve NDT Zorunlulukları\",\"datePublished\":\"2026-03-20T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"EN 1090-2:2018 EXC1-4 yürütme sınıfları, dikeylik toleransları H/300, EN ISO 5817 kaynak seviyeleri ve zorunlu NDT muayene gereksinimleri.\"}"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html",
+    "line": 261,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek\",\"datePublished\":\"2026-05-28T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"EPC-F modelinin enerji ve atık-enerji dönüşüm (WtE) projelerindeki yükselişi, yapay zeka destekli proje yönetimi araçları ve tedarik zinciri risk öngörüsü üzerine teknik analiz.\"}"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html",
+    "line": 225,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Anahtar Teslim Tesislerde EPC Yönetimi: Kazanılmış Değer ve Risk Matrisi\",\"datePublished\":\"2026-01-28T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"McKinsey analizi: büyük projelerin %79'u bütçeyi, %52'si takvimi aşıyor. FIDIC Sarı Kitap, EVM metrikleri (CPI/SPI) ve WBS risk kategorileri.\"}"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html",
+    "line": 264,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Sıcak Daldırma Galvaniz ile Boya Kaplama Karşılaştırması: Yaşam Döngüsü Maliyeti (LCC) Analizi\",\"datePublished\":\"2026-06-25T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"Galvaniz ve boya kaplama seçiminde yaşam döngüsü maliyeti (LCC) karşılaştırması: ilk yatırım, yeniden kaplama sıklığı ve toplam sahip olma maliyeti.\"}"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html",
+    "line": 256,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"ISO 1461: Sıcak Daldırma Galvanizlemede Kaplama Kalınlığı ve Ömür\",\"datePublished\":\"2026-04-22T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"ISO 1461:2022 standardına göre sıcak daldırma galvanizlemede çinko kaplama kalınlıkları, yüzey hazırlığı ve 50+ yıl korozyon ömrü rehberi.\"}"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html",
+    "line": 287,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Endüstriyel Ekipmanlarda Titreşim Analizi ve Şaft Hizalaması: Mekanik Montajın Gizli Maliyeti\",\"datePublished\":\"2026-06-11T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"ISO 10816/20816 titreşim şiddet sınıfları, lazer şaft hizalama toleransları ve öngörücü bakımın mekanik montaj projelerindeki toplam maliyet etkisi.\"}"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html",
+    "line": 255,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\migrate-posts.mjs",
+    "line": 95,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\migrate-posts.mjs",
+    "line": 186,
+    "text": "<meta property=\"og:image\" content=\"${p.cover}\">"
+  },
+  {
+    "file": "vorqa-blog\\migrate-posts.mjs",
+    "line": 194,
+    "text": "<meta name=\"twitter:image\" content=\"${p.cover}\">"
+  },
+  {
+    "file": "vorqa-blog\\migrate-posts.mjs",
+    "line": 196,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":${JSON.stringify(p.title)},\"datePublished\":\"${p.isoDate}\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"${p.url}\"},\"image\":\"${p.cover}\",\"description\":${JSON.stringify(p.metaDesc)}}"
+  },
+  {
+    "file": "vorqa-blog\\migrate-posts.mjs",
+    "line": 208,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Mobil mi, Sabit mi? Proje Hacmi ve Süresine Göre ROI Analizi\",\"datePublished\":\"2026-02-14T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"Sabit ve mobil beton santrali karşılaştırması: teknik parametreler, TCO analizi ve 18 ay / 50.000 m³ eşiğine göre ROI rehberi. ERMCO 2024 verileri.\"}"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\mobil-sabit-beton-santrali-roi-2026-02-14.html",
+    "line": 256,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\server.mjs",
+    "line": 193,
+    "text": "const { publishDraft } = await import('./generator/publisher.mjs');"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Küresel Tedarik Zincirinde 2026 Kırılganlıkları ve Çeşitlendirme Stratejileri\",\"datePublished\":\"2026-03-05T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"World Bank LPI 2023 ve McKinsey 2023 verilerine göre küresel tedarik zinciri kırılganlıkları, nearshoring trendleri ve çift onaylı tedarikçi modeli.\"}"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\tedarik-zinciri-2026-kirilganliklari-2026-03-05.html",
+    "line": 251,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 13,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 21,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 23,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Atıktan Enerjiye: WtE Teknolojileri ve Türkiye 2030 Hedefleri\",\"datePublished\":\"2026-04-08T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"TÜİK 2024: Türkiye yıllık 32,3 milyon ton atık üretiyor. Moving grate WtE teknolojisi 500–650 kWh/ton üretiyor. 2030 Ulusal Atık Yönetimi Eylem Planı hedefleri.\"}"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 41,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 110,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 124,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 125,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\wte-atiktan-enerjiye-teknolojiler-2026-04-08.html",
+    "line": 264,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-mira\\mira.html",
+    "line": 36,
+    "text": "<img src=\"../brand_assets/vorqa_amblem_transparent.png\" alt=\"\">"
+  },
+  {
+    "file": "vorqa-mira\\mira.html",
+    "line": 37,
+    "text": "<div><div class=\"brand-name\">VORQA</div><div class=\"brand-sub\">Mira V3.2</div></div>"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 19,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 20,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 24,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 26,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 59,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 62,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 67,
+    "text": ".logo-on-light{display:none}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 68,
+    "text": "#nav.scrolled .logo-on-dark{display:none}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 69,
+    "text": "#nav.scrolled .logo-on-light{display:block}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 70,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 72,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 73,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 74,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 376,
+    "text": "<a href=\"/ar/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 377,
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 378,
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\academy\\index.html",
+    "line": 670,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 12,
+    "text": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ContactPage\",\"name\":\"تواصل معنا — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"الرئيسية\",\"item\":\"https://www.vorqaglobal.com/ar/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"تواصل معنا\",\"item\":\"https://www.vorqaglobal.com/ar/contact/\"}]}]}</script>"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 19,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 20,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 24,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 26,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 43,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 46,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 47,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 49,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 50,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 51,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 80,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 284,
+    "text": "<a href=\"/ar/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 285,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\contact\\index.html",
+    "line": 434,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 26,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 28,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"كيف تُحسب طاقة محطة الخرسانة بشكل صحيح؟ منهجية خطوة بخطوة\",\"datePublished\":\"2026-05-10T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"محررة الذكاء الاصطناعي لدى Vorqa Global\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/ar/academy/beton-santrali-kapasite-hesaplama-2026-05-10/\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"حساب طاقة محطة الخرسانة باستخدام المعادلة Q = P / (T × η × f). معيار Vorqa η=0.82، عوامل تصحيح المناخ والارتفاع. بالرجوع إلى ACI 304R-00.\"}"
+  },
+  {
+    "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 47,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 125,
+    "text": "<a href=\"/ar/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "ar\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 276,
+    "text": "<img src=\"/brand_assets/vorqa_amblem_white.png\" alt=\"\" width=\"20\" height=\"20\" style=\"display:block;flex-shrink:0\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 19,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 20,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 24,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 26,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 59,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 62,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 67,
+    "text": ".logo-on-light{display:none}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 68,
+    "text": "#nav.scrolled .logo-on-dark{display:none}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 69,
+    "text": "#nav.scrolled .logo-on-light{display:block}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 70,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 72,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 73,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 74,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 376,
+    "text": "<a href=\"/en/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 377,
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 378,
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "en\\academy\\index.html",
+    "line": 670,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 12,
+    "text": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ContactPage\",\"name\":\"Contact — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.vorqaglobal.com/en/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Contact\",\"item\":\"https://www.vorqaglobal.com/en/contact/\"}]}]}</script>"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 19,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 20,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 24,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 26,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 43,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 46,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 47,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 49,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 50,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 51,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 80,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 284,
+    "text": "<a href=\"/en/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 285,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "en\\contact\\index.html",
+    "line": 434,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 26,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 28,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Correctly Calculate Concrete Plant Capacity: A Step-by-Step Methodology\",\"datePublished\":\"2026-05-10T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editor\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/en/academy/beton-santrali-kapasite-hesaplama-2026-05-10/\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"Calculate concrete batching plant capacity using Q = P / (T × η × f). Vorqa standard η=0.82, climate and altitude correction factors. Referenced to ACI 304R-00.\"}"
+  },
+  {
+    "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 46,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 124,
+    "text": "<a href=\"/en/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "en\\academy\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 275,
+    "text": "<img src=\"/brand_assets/vorqa_amblem_white.png\" alt=\"\" width=\"20\" height=\"20\" style=\"display:block;flex-shrink:0\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 19,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 20,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 24,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 26,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 59,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 62,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 67,
+    "text": ".logo-on-light{display:none}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 68,
+    "text": "#nav.scrolled .logo-on-dark{display:none}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 69,
+    "text": "#nav.scrolled .logo-on-light{display:block}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 70,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 72,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 73,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 74,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 376,
+    "text": "<a href=\"/tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 377,
+    "text": "<img class=\"nav-logo-img logo-on-dark\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 378,
+    "text": "<img class=\"nav-logo-img logo-on-light\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\akademi\\index.html",
+    "line": 670,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 12,
+    "text": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ContactPage\",\"name\":\"İletişim — Vorqa Global\",\"about\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\",\"email\":\"info@vorqaglobal.com\",\"telephone\":\"+90 536 707 69 51\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Uzay Çağı Caddesi, OSTİM\",\"addressLocality\":\"Yenimahalle\",\"addressRegion\":\"Ankara\",\"addressCountry\":\"TR\"}}},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Ana Sayfa\",\"item\":\"https://www.vorqaglobal.com/tr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"İletişim\",\"item\":\"https://www.vorqaglobal.com/tr/iletisim/\"}]}]}</script>"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 19,
+    "text": "<meta property=\"og:image:width\" content=\"1200\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 20,
+    "text": "<meta property=\"og:image:height\" content=\"630\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 24,
+    "text": "<link rel=\"icon\" href=\"/favicon.svg?v=2\" type=\"image/svg+xml\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 25,
+    "text": "<link rel=\"icon\" href=\"/favicon-32.png?v=2\" sizes=\"32x32\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 26,
+    "text": "<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png?v=2\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 43,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 46,
+    "text": ".nav-logo-img{display:block;height:52px;width:auto}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 47,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 49,
+    "text": ".nav-logo:hover .nl-z{transform:translateX(-4px)}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 50,
+    "text": ".nav-logo:hover .nl-y{transform:translateY(-4px)}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 51,
+    "text": ".nav-logo:hover .nl-t{transform:translateX(4px)}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 80,
+    "text": ".nav-logo{animation:logo-in .8s .9s both}"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 284,
+    "text": "<a href=\"/tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 285,
+    "text": "<img class=\"nav-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\iletisim\\index.html",
+    "line": 434,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 18,
+    "text": "<meta property=\"og:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 26,
+    "text": "<meta name=\"twitter:image\" content=\"https://www.vorqaglobal.com/og-default.png\">"
+  },
+  {
+    "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 28,
+    "text": "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Beton Santrali Kapasitesi Nasıl Doğru Hesaplanır? Adım Adım Metodoloji\",\"datePublished\":\"2026-05-10T08:00:00+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Mira\",\"jobTitle\":\"Vorqa Global AI Editörü\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://www.vorqaglobal.com/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/\"},\"image\":\"https://www.vorqaglobal.com/og-default.png\",\"description\":\"Q = P / (T × η × f) formülüyle beton santrali kapasitesi hesaplama. η=0.82 Vorqa standardı, iklim ve irtifa düzeltme faktörleri. ACI 304R-00 referanslı.\"}"
+  },
+  {
+    "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 46,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 124,
+    "text": "<a href=\"/tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "tr\\akademi\\beton-santrali-kapasite-hesaplama-2026-05-10\\index.html",
+    "line": 275,
+    "text": "<img src=\"/brand_assets/vorqa_amblem_white.png\" alt=\"\" width=\"20\" height=\"20\" style=\"display:block;flex-shrink:0\">"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 78,
+    "text": "<meta property=\"og:image\" content=\"${coverImg}\">"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 86,
+    "text": "<meta name=\"twitter:image\" content=\"${coverImg}\">"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 94,
+    "text": "\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vorqa Global\",\"url\":\"https://www.vorqaglobal.com\"},"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 110,
+    "text": ".nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 175,
+    "text": ".foot-logo-img{display:block;height:40px;width:auto}"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 189,
+    "text": "<a href=\"../tr/\" class=\"nav-logo\">"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 190,
+    "text": "<img src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\" style=\"display:block;height:40px;width:auto\">"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 273,
+    "text": "<img class=\"foot-logo-img\" src=\"/brand_assets/vorqa_official_logo.png\" alt=\"Vorqa Global\">"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 353,
+    "text": "console.log(`[Publisher] akademi.html updated`);"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 355,
+    "text": "console.warn('[Publisher] blog-grid marker not found — skipping akademi.html update');"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 370,
+    "text": "console.log(`[Publisher] sitemap.xml updated`);"
+  },
+  {
+    "file": "vorqa-blog\\generator\\publisher.mjs",
+    "line": 384,
+    "text": "console.log(`[Publisher] Post created: ${slug}.html`);"
+  },
+  {
+    "file": "vorqa-mira\\context\\BRAND_RULES.md",
+    "line": 11,
+    "text": "- The only approved primary VORQA logo is the navy `VORQA` wordmark with the distinctive blue Q tail and `GLOBAL SUPPLY` centered underneath on a white/transparent background."
+  },
+  {
+    "file": "vorqa-mira\\context\\BRAND_RULES.md",
+    "line": 13,
+    "text": "- Do not use alternate VORQA wordmarks or generated logo variants unless the user explicitly approves a new master logo."
+  },
+  {
+    "file": "vorqa-mira\\context\\BRAND_RULES.md",
+    "line": 16,
+    "text": "- All future Canva/social-media designs must use this canonical asset when a VORQA logo is required."
+  }
+]

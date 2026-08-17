@@ -172,7 +172,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 .ft-soc-link{color:rgba(255,255,255,.28);transition:color .2s;display:flex}
 .ft-soc-link:hover{color:#2874B2}
 .ft-social{display:flex;gap:14px;align-items:center}
-.foot-logo-img{display:block;height:40px;width:auto}
+.foot-logo-img{display:block;height:40px;width:auto;max-width:min(190px,44vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .rv.on{opacity:1;transform:none}
 @media(max-width:768px){
@@ -187,7 +187,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 
 <nav id="nav">
   <a href="../tr/" class="nav-logo">
-    <img src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global" style="display:block;height:40px;width:auto">
+    <img src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global" style="display:block;height:40px;width:auto;max-width:min(190px,44vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px">
   </a>
   <div class="nav-links">
     <a href="../tr/" class="nav-link">Ana Sayfa</a>
@@ -203,7 +203,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 </nav>
 
 <div id="mob-nav" aria-hidden="true">
-  <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:${catColor};text-transform:uppercase;margin-bottom:20px">Vorqa Global</div>
+  <img src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global Supply" style="display:block;height:38px;width:auto;max-width:min(180px,48vw);object-fit:contain;background:#fff;border-radius:6px;padding:5px 8px;margin-bottom:20px">
   <a href="../tr/" class="mob-link">Ana Sayfa</a>
   <div class="mob-sep"></div>
   <a href="../tr/akademi/" class="mob-link" style="color:${catColor}">Akademi</a>
@@ -270,7 +270,7 @@ body{background:#f5f9ff;color:#0a2540;font-family:'Manrope Variable',Manrope,san
 <footer id="foot">
   <div class="foot-inner">
     <a href="../tr/" style="text-decoration:none;display:flex;align-items:center">
-      <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+      <img class="foot-logo-img" src="/brand_assets/vorqa_official_logo.png" alt="Vorqa Global">
     </a>
     <a href="../tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:6px 12px">← Tüm Yazılar</a>
     <div class="ft-social">
