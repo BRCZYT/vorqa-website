@@ -16,3 +16,5 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://www.vorqaglobal.com/sitemap.xml
+Sitemap: https://www.vorqaglobal.com/sitemap-academy-hubs.xml
+Sitemap: https://www.vorqaglobal.com/sitemap-academy-map.xml
