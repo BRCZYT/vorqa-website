@@ -17,6 +17,11 @@
 ## VORQA Academy
 VORQA Academy bir ürün kataloğu değildir. Satınalma ve proje kararlarını destekleyen teknik bilgi merkezleri, uygulama rehberleri ve araştırma yazıları yayınlar. Bilgi merkezleri ilgili araştırmaları bir konu kümesi altında toplar ve canlı ihtiyaçları RFQ sürecine bağlar.
 
+### Academy Knowledge Maps
+- English: https://www.vorqaglobal.com/en/academy/knowledge-map/
+- Türkçe: https://www.vorqaglobal.com/tr/akademi/bilgi-haritasi/
+- العربية: https://www.vorqaglobal.com/ar/academy/knowledge-map/
+
 ### Academy Knowledge Hubs — English
 - Industrial Procurement & Strategic Sourcing: https://www.vorqaglobal.com/en/academy/industrial-procurement-strategic-sourcing/
 - Project Supply & Coordination: https://www.vorqaglobal.com/en/academy/project-supply-coordination/
