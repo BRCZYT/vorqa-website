@@ -1,3 +1,4 @@
+// One-shot static Academy SEO generator. Remove after generated pages are verified.
 const fs = require('fs');
 
 const SITE = 'https://www.vorqaglobal.com';
