@@ -771,10 +771,17 @@ html[dir="rtl"] .hero-h1{direction:rtl}
 .co-hx-section,#plant-sec{position:relative}
 .co-hx-section::before,#plant-sec::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.035;background-image:linear-gradient(rgba(40,116,178,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(40,116,178,.4) 1px,transparent 1px);background-size:80px 80px}
 
-/* ── Enhanced scroll reveal ── */
-.rv{opacity:0;transform:translateY(44px) scale(.972);filter:blur(6px);
-  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1)}
-.rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+/* ── Enhanced scroll reveal ──
+   No filter:blur — animating blur forces a repaint of the element every
+   frame of the transition (unlike opacity/transform, which the compositor
+   handles without touching pixels), and with 20+ .rv elements on a page,
+   several can cross the IntersectionObserver threshold in the same batch
+   (e.g. scrolling out of the hero into the next section) and all start
+   blurring at once. Measured: hero-exit scroll dropped to ~2-9 FPS with
+   blur; opacity+transform only is compositor-only and doesn't. */
+.rv{opacity:0;transform:translateY(16px);
+  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+.rv.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
 
 /* ── Industries rail panels: .rv's own `transition` shorthand above
@@ -789,20 +796,19 @@ html[dir="rtl"] .hero-h1{direction:rtl}
     flex-basis .7s cubic-bezier(.33,0,.2,1),
     border-color .3s,
     opacity .9s cubic-bezier(.22,1,.36,1),
-    transform .9s cubic-bezier(.22,1,.36,1),
-    filter .9s cubic-bezier(.22,1,.36,1);
+    transform .9s cubic-bezier(.22,1,.36,1);
 }
-/* Directional entrance on top of .rv's translateY+scale+blur: panels
-   also drift in from the left so the rail reads as a left-to-right
-   cascade rather than every panel fading in place at once. transform
-   never affects layout/scrollWidth, so this can't jitter the rail's
-   own horizontal scrollbar. RTL: panels drift in from the right
-   instead, matching direction:rtl already reversing the rail's visual
-   order — first-DOM-panel (shortest delay) is now the rightmost panel,
-   so the cascade still starts at the true reading-order edge without
-   needing to renumber the delays themselves. */
-.ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(-24px);filter:blur(4px)}
-.ind-rail .ind-panel.rv.on{transform:translateY(0) scale(1) translateX(0);filter:blur(0)}
+/* Directional entrance on top of .rv's translateY+scale (no blur — see
+   the .rv comment above): panels also drift in from the left so the
+   rail reads as a left-to-right cascade rather than every panel fading
+   in place at once. transform never affects layout/scrollWidth, so this
+   can't jitter the rail's own horizontal scrollbar. RTL: panels drift in
+   from the right instead, matching direction:rtl already reversing the
+   rail's visual order — first-DOM-panel (shortest delay) is now the
+   rightmost panel, so the cascade still starts at the true reading-order
+   edge without needing to renumber the delays themselves. */
+.ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(-24px)}
+.ind-rail .ind-panel.rv.on{transform:translateY(0) scale(1) translateX(0)}
 html[dir="rtl"] .ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(24px)}
 /* More pronounced stagger than the sitewide .d1-d4 (shared/reused
    everywhere else) so the cascade reads as ritmik/one-by-one rather
@@ -1234,8 +1240,29 @@ window.addEventListener('scroll', ()=>{
 }, {passive:true});
 
 /* ── Scroll reveal ────────────────────────── */
+/* will-change is applied only while an element is actually transitioning
+   (set right before .on, cleared on transitionend) rather than left on
+   permanently — a lingering will-change on 20+ elements site-wide would
+   keep that many GPU layers alive for no reason once revealed. Entries
+   that cross the threshold in the same observer callback (e.g. several
+   .rv elements becoming visible in one scroll tick) get a light index-
+   based stagger so they don't all start their transition in the same
+   frame. */
 const ro = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on') });
+  entries.forEach((e,i)=>{
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    if(el.classList.contains('on')) return;
+    el.style.willChange = 'opacity,transform';
+    setTimeout(()=>{
+      el.classList.add('on');
+      el.addEventListener('transitionend', function onRevealEnd(ev){
+        if(ev.target !== el) return;
+        el.style.willChange = 'auto';
+        el.removeEventListener('transitionend', onRevealEnd);
+      });
+    }, i * 40);
+  });
 }, {threshold:0.08});
 document.querySelectorAll('.rv').forEach(el=> ro.observe(el));
 
