@@ -1172,6 +1172,8 @@ const plStatusTxt = document.getElementById('pl-status-txt');
 const plProg      = document.getElementById('pl-prog');
 const plScanline  = document.getElementById('pl-scanline');
 const plCorners   = document.querySelectorAll('.pl-corner');
+const skipIntroMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(skipIntroMotion){ pl.classList.add('done'); document.body.classList.remove('loading'); }
 
 // Corners + label appear
 setTimeout(()=>{ plCorners.forEach(c=>c.classList.add('show')); plLabel.classList.add('show'); }, 80);
