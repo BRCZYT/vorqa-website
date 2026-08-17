@@ -332,7 +332,8 @@ async function callOpenAI(payload, truth) {
       model: process.env.OPENAI_MODEL || DEFAULT_MODEL,
       instructions: buildInstructions(truth),
       input: buildUserInput(payload),
-      max_output_tokens: 1200,
+      reasoning: { effort: "minimal" },
+      max_output_tokens: 1800,
     }),
   });
 
