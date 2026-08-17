@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="tr" dir="ltr"><head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K52VCM51N2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K52VCM51N2');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Akademi — Vorqa Global</title>
+<meta name="description" content="Vorqa Akademi — beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında Mira editörlüğünde teknik içerikler, akademik araştırmalar ve sektör analizleri.">
+<link rel="canonical" href="https://www.vorqaglobal.com/tr/akademi/">
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://www.vorqaglobal.com/tr/"},{"@type":"ListItem","position":2,"name":"Akademi","item":"https://www.vorqaglobal.com/tr/akademi/"}]}</script>
+<meta property="og:title" content="Akademi — Vorqa Global">
+<meta property="og:description" content="Vorqa Akademi — beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında Mira editörlüğünde teknik içerikler, akademik araştırmalar ve sektör analizleri.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vorqa Global">
+<meta property="og:url" content="https://www.vorqaglobal.com/tr/akademi/">
+<meta property="og:image" content="https://www.vorqaglobal.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Akademi — Vorqa Global">
+<meta name="twitter:description" content="Vorqa Akademi — beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında Mira editörlüğünde teknik içerikler, akademik araştırmalar ve sektör analizleri.">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=2" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/sora@5.3.0/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.0.21/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans-arabic@5.3.0/index.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#f0f5fc;color:#0a2540;font-family:'Manrope Variable',Manrope,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ── SCROLL PROGRESS ── */
+#scroll-prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:9999;
+  background:linear-gradient(90deg,#2874B2 0%,#5ba3e0 50%,#2874B2 100%);
+  background-size:200%;
+  transform-origin:left;transform:scaleX(0);
+  animation:prog-shimmer 2s linear infinite;
+  box-shadow:0 0 12px rgba(40,116,178,.6),0 0 28px rgba(40,116,178,.3)}
+@keyframes prog-shimmer{0%{background-position:0%}100%{background-position:200%}}
+
+/* ── GRAIN TEXTURE ── */
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ══════════════════════════════════════════
+   NAV
+══════════════════════════════════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:20px 56px;background:rgba(255,255,255,0);backdrop-filter:blur(0px);transition:background .35s,padding .3s,backdrop-filter .35s,box-shadow .35s}
+#nav.scrolled{background:rgba(255,255,255,.94);padding:13px 56px;box-shadow:0 1px 0 rgba(10,37,64,.08),0 4px 24px rgba(10,37,64,.06);backdrop-filter:blur(20px)}
+#nav.dark-hero{background:linear-gradient(to bottom,rgba(8,22,48,.85),transparent);backdrop-filter:blur(8px)}
+#nav.dark-hero.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(20px)}
+
+.nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}
+/* Master logo is navy-on-white — not suited to the dark nav/footer as-is,
+   so it sits on a small light plaque for contrast instead. */
+.nav-logo-img{display:block;height:52px;width:auto;max-width:100%;object-fit:contain;flex-shrink:0}
+/* This page's nav goes from a dark hero overlay to a white scrolled bar
+   (unlike index.html/iletisim.html, which stay dark) — the white logo
+   variant disappears against that white bar, so swap to the navy-on-white
+   variant once #nav.scrolled is applied. */
+.logo-on-light{display:none}
+#nav.scrolled .logo-on-dark{display:none}
+#nav.scrolled .logo-on-light{display:block}
+.foot-logo-img{display:block;height:40px;width:auto}
+.nl-z,.nl-y,.nl-t{transition:transform .35s cubic-bezier(.34,1.56,.64,1);transform-box:fill-box;transform-origin:center}
+.nav-logo:hover .nl-z{transform:translateX(-4px)}
+.nav-logo:hover .nl-y{transform:translateY(-4px)}
+.nav-logo:hover .nl-t{transform:translateX(4px)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-link{font-family:'JetBrains Mono Variable',monospace;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.nav-link:hover,.nav-link.active{color:#fff}
+#nav.scrolled .nav-link{color:rgba(10,37,64,.5)}
+#nav.scrolled .nav-link:hover,#nav.scrolled .nav-link.active{color:#0a2540}
+
+/* LANG SWITCH */
+.lang-sw{display:flex;align-items:center;border:1px solid rgba(255,255,255,.2);border-radius:4px;overflow:hidden;margin-left:12px;flex-shrink:0;transition:border-color .35s}
+#nav.scrolled .lang-sw{border-color:rgba(10,37,64,.15)}
+.l-btn{font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4);background:transparent;border:none;border-right:1px solid rgba(255,255,255,.12);padding:7px 10px;cursor:pointer;transition:color .15s,background .15s;line-height:1}
+.l-btn:last-child{border-right:none}
+.l-btn.active{color:#fff;background:rgba(40,116,178,.35)}
+.l-btn:hover:not(.active){color:rgba(255,255,255,.8)}
+#nav.scrolled .l-btn{color:rgba(10,37,64,.4);border-right-color:rgba(10,37,64,.1)}
+#nav.scrolled .l-btn.active{color:#fff;background:#2874B2}
+#nav.scrolled .l-btn:hover:not(.active){color:#0a2540}
+
+/* DROPDOWN */
+.has-dd{position:relative;display:flex;align-items:center}
+.dd-tog{cursor:default;user-select:none;display:flex;align-items:center;gap:4px}
+.dd-caret{transition:transform .22s cubic-bezier(.22,1,.36,1);flex-shrink:0}
+.has-dd:hover .dd-caret,.has-dd:focus-within .dd-caret{transform:rotate(180deg)}
+.dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(-8px);opacity:0;pointer-events:none;transition:opacity .18s,transform .22s cubic-bezier(.22,1,.36,1);background:rgba(255,255,255,.98);border:1px solid rgba(10,37,64,.1);border-radius:10px;min-width:230px;padding:10px 6px;backdrop-filter:blur(24px);box-shadow:0 20px 60px rgba(10,37,64,.12),0 0 0 1px rgba(10,37,64,.04);z-index:300}
+.has-dd:hover .dd-menu,.has-dd:focus-within .dd-menu{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
+.dd-menu::before{content:'';position:absolute;top:-14px;left:0;right:0;height:14px}
+.dd-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:6px;text-decoration:none;color:rgba(10,37,64,.55);font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;transition:color .15s,background .15s;white-space:nowrap}
+.dd-item:hover{color:#0a2540;background:rgba(40,116,178,.07)}
+.dd-item-num{color:rgba(40,116,178,.5);font-size:8px;min-width:18px;flex-shrink:0}
+
+/* HAMBURGER */
+.ham-btn{display:none;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:none;cursor:pointer;padding:6px;z-index:301;width:34px;height:34px}
+.ham-btn span{display:block;width:22px;height:1.5px;background:#fff;border-radius:1px;transition:transform .3s cubic-bezier(.22,1,.36,1),opacity .2s,background .35s}
+#nav.scrolled .ham-btn span{background:#0a2540}
+.ham-btn.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham-btn.open span:nth-child(2){opacity:0;transform:translateX(-6px)}
+.ham-btn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+#mob-nav{position:fixed;inset:0;background:#fff;z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(.22,1,.36,1)}
+#mob-nav.open{opacity:1;pointer-events:all}
+.mob-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,8vw,2.6rem);font-weight:300;letter-spacing:-.025em;color:rgba(10,37,64,.45);text-decoration:none;padding:10px 0;transition:color .2s,transform .2s;background:transparent;border:none;cursor:pointer;text-align:center;width:100%}
+.mob-link:hover{color:#0a2540;transform:translateX(6px)}
+.mob-sep{width:40px;height:1px;background:rgba(40,116,178,.18);margin:8px 0}
+.mob-lang{display:flex;gap:12px;margin-top:24px}
+.mob-l-btn{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(10,37,64,.3);background:transparent;border:1px solid rgba(10,37,64,.12);padding:8px 14px;border-radius:3px;cursor:pointer;transition:color .15s,border-color .15s}
+.mob-l-btn.active{color:#2874B2;border-color:#2874B2}
+.mob-dd-inner{overflow:hidden;max-height:0;transition:max-height .32s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;padding-left:0}
+.mob-dd-wrap.open .mob-dd-inner{max-height:320px}
+.mob-sub-link{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.1rem,5vw,1.6rem);font-weight:300;color:rgba(10,37,64,.35);text-decoration:none;padding:6px 0;transition:color .2s;display:block;text-align:center}
+.mob-sub-link:hover{color:#2874B2}
+.mob-dd-arr{font-family:'JetBrains Mono Variable',monospace;font-size:14px;color:rgba(40,116,178,.7);transition:transform .25s cubic-bezier(.22,1,.36,1);display:inline-block;margin-left:8px}
+.mob-dd-wrap.open .mob-dd-arr{transform:rotate(45deg)}
+
+/* ══════════════════════════════════════════
+   HERO — AYDИНLIK
+══════════════════════════════════════════ */
+#hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#050d1a 0%,#07111f 50%,#040b16 100%)}
+#neural-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+
+/* Animated aurora blobs */
+.aurora{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.aurora-blob{position:absolute;border-radius:50%;filter:blur(90px);animation:aurora-drift linear infinite}
+.aurora-blob:nth-child(1){width:700px;height:700px;background:radial-gradient(circle,rgba(40,116,178,.22) 0%,transparent 70%);top:-200px;left:-150px;animation-duration:18s;animation-direction:alternate}
+.aurora-blob:nth-child(2){width:550px;height:550px;background:radial-gradient(circle,rgba(92,163,224,.18) 0%,transparent 70%);top:100px;right:-100px;animation-duration:14s;animation-direction:alternate-reverse}
+.aurora-blob:nth-child(3){width:400px;height:400px;background:radial-gradient(circle,rgba(40,116,178,.14) 0%,transparent 70%);bottom:-100px;left:30%;animation-duration:20s;animation-direction:alternate}
+@keyframes aurora-drift{0%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-20px,50px) scale(.94)}100%{transform:translate(30px,20px) scale(1.05)}}
+
+/* Dot grid */
+.hero-dots{position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(circle,rgba(40,116,178,.25) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 85% 70% at 60% 50%,#000 10%,transparent 80%);
+  animation:dots-pulse 6s ease-in-out infinite alternate}
+@keyframes dots-pulse{from{opacity:.3}to{opacity:.55}}
+
+/* Scan line */
+.hero-scan{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(40,116,178,.4) 20%,rgba(92,163,224,.6) 50%,rgba(40,116,178,.4) 80%,transparent 100%);animation:scan 8s ease-in-out infinite;pointer-events:none;z-index:1}
+@keyframes scan{0%{top:-2px;opacity:0}5%{opacity:.8}90%{opacity:.3}100%{top:100%;opacity:0}}
+
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;padding:140px 80px 100px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-left{}
+.hero-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:rgba(92,163,255,.8);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{background:rgba(92,163,255,.6) !important}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:#2874B2}
+.hero-h1{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:300;line-height:.92;letter-spacing:-.04em;color:#fff;margin-bottom:28px}
+.hero-h1 em{font-style:normal;color:#2874B2;font-weight:600}
+.hero-desc{font-size:16px;color:rgba(255,255,255,.55);line-height:1.8;max-width:440px;margin-bottom:36px}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hero-stat-item{display:flex;flex-direction:column;gap:4px}
+.hero-stat-num{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:2rem;font-weight:300;color:#0a2540;letter-spacing:-.03em}
+.hero-stat-label{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(10,37,64,.4)}
+
+/* MIRA PORTRAIT PANEL */
+.hero-right{display:flex;justify-content:center;align-items:flex-end;position:relative}
+.mira-hero-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(10,37,64,.12),0 0 0 1px rgba(10,37,64,.06),0 0 0 6px rgba(40,116,178,.07);position:relative;width:100%;max-width:360px;animation:mira-float 5s ease-in-out infinite alternate}
+@keyframes mira-float{from{transform:translateY(0) rotate(0deg)}to{transform:translateY(-14px) rotate(.5deg)}}
+.mira-hero-img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top center}
+.mira-hero-badge{position:absolute;bottom:0;left:0;right:0;padding:28px 24px;background:linear-gradient(to top,rgba(10,37,64,.92) 0%,rgba(10,37,64,.6) 60%,transparent 100%)}
+.mira-hero-name{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:1.25rem;font-weight:300;color:#fff;letter-spacing:-.01em;margin-bottom:4px}
+.mira-hero-role{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(40,116,178,.9);display:flex;align-items:center;gap:6px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:live-pulse 2s ease-in-out infinite}
+@keyframes live-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+/* Floating tags around Mira card */
+.float-tag{position:absolute;background:#fff;border:1px solid rgba(10,37,64,.08);border-radius:8px;padding:8px 14px;font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#2874B2;box-shadow:0 8px 32px rgba(10,37,64,.1);white-space:nowrap;animation:tag-float linear infinite alternate}
+.float-tag:nth-child(2){top:20%;left:-80px;animation-duration:4s;animation-delay:0s}
+.float-tag:nth-child(3){top:55%;right:-90px;animation-duration:5s;animation-delay:1s}
+@keyframes tag-float{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+
+/* ══════════════════════════════════════════
+   MIRA EDITORIAL STRIP
+══════════════════════════════════════════ */
+#mira-strip{background:#fff;border-top:1px solid rgba(10,37,64,.07);border-bottom:1px solid rgba(10,37,64,.07);padding:40px 80px;position:relative;overflow:hidden}
+#mira-strip::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,#2874B2,#5ba3e0)}
+.mira-strip-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.mira-strip-avatar{width:auto;height:100%;min-height:90px;max-height:130px;align-self:stretch;border-radius:12px;display:block;flex-shrink:0;object-fit:contain;object-position:center;border:1px solid rgba(10,37,64,.07);box-shadow:0 4px 20px rgba(10,37,64,.1)}
+.mira-strip-text{}
+.mira-strip-label{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.mira-strip-label::after{content:'';flex:1;height:1px;background:rgba(40,116,178,.2);max-width:120px}
+.mira-strip-quote{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:1.05rem;font-weight:400;color:#0a2540;letter-spacing:-.01em;line-height:1.5}
+.mira-strip-quote em{font-style:normal;color:#2874B2}
+.mira-strip-meta{display:flex;align-items:center;gap:12px;margin-left:auto;flex-shrink:0}
+.mira-strip-stat{text-align:center}
+.mira-strip-stat-n{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:1.8rem;font-weight:300;color:#0a2540;letter-spacing:-.03em;line-height:1}
+.mira-strip-stat-l{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(10,37,64,.4);margin-top:3px}
+.mira-strip-divider{width:1px;height:40px;background:rgba(10,37,64,.1)}
+
+/* ══════════════════════════════════════════
+   CONTENT SECTION
+══════════════════════════════════════════ */
+#content{background:linear-gradient(180deg,#f0f5fc 0%,#f8faff 100%);padding:80px 80px}
+.content-inner{max-width:1200px;margin:0 auto}
+
+/* Section header */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;gap:24px;flex-wrap:wrap}
+.sec-head-left{}
+.sec-eyebrow{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#2874B2;margin-bottom:10px}
+.sec-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:#0a2540;letter-spacing:-.025em;line-height:1.1}
+.sec-title strong{font-weight:600;color:#2874B2}
+
+/* FILTER TABS */
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap}
+.filter-tab{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(10,37,64,.45);background:#fff;border:1px solid rgba(10,37,64,.1);border-radius:30px;padding:8px 18px;cursor:pointer;transition:color .2s,border-color .2s,background .2s,box-shadow .2s;display:flex;align-items:center;gap:6px}
+.filter-tab::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.4;transition:opacity .2s}
+.filter-tab:hover{color:#0a2540;border-color:rgba(40,116,178,.3);background:rgba(40,116,178,.04)}
+.filter-tab.active{color:#fff;background:#2874B2;border-color:#2874B2;box-shadow:0 4px 14px rgba(40,116,178,.3)}
+.filter-tab.active::before{opacity:1;background:#fff}
+
+/* Category colors on tab dots */
+.filter-tab[data-cat-color="beton"]::before{background:#f59e0b}
+.filter-tab[data-cat-color="galvaniz"]::before{background:#3b82f6}
+.filter-tab[data-cat-color="enerji"]::before{background:#22c55e}
+.filter-tab[data-cat-color="makina"]::before{background:#8b5cf6}
+.filter-tab[data-cat-color="tedarik"]::before{background:#ef4444}
+.filter-tab.active::before{background:#fff !important}
+
+/* FEATURED CARD */
+.featured-card{background:#fff;border:1px solid rgba(10,37,64,.07);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;margin-bottom:32px;transition:box-shadow .3s,transform .3s;box-shadow:0 4px 20px rgba(10,37,64,.07),0 0 0 1px rgba(10,37,64,.04)}
+.featured-card:hover{box-shadow:0 20px 60px rgba(10,37,64,.12),0 0 0 1px rgba(40,116,178,.12);transform:translateY(-4px)}
+.featured-img-wrap{position:relative;overflow:hidden;min-height:300px}
+.featured-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.featured-img-wrap img.img-ph{object-fit:contain;background:#E8EEF4;padding:40px}
+.featured-card:hover .featured-img-wrap img{transform:scale(1.04)}
+.featured-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,37,64,.3) 0%,rgba(40,116,178,.15) 100%)}
+.featured-badge{position:absolute;top:20px;left:20px;background:#2874B2;border-radius:20px;padding:5px 14px;font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:#fff;box-shadow:0 4px 14px rgba(40,116,178,.4)}
+.featured-text-panel{padding:48px 44px;background:#fff;display:flex;flex-direction:column;justify-content:center;position:relative}
+.featured-text-panel::before{content:'';position:absolute;top:0;bottom:0;left:0;width:3px;background:linear-gradient(to bottom,#2874B2,#5ba3e0)}
+.featured-cat-tag{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#2874B2;margin-bottom:16px;display:inline-flex;align-items:center;gap:8px}
+.featured-cat-tag::before{content:'';width:16px;height:1px;background:#2874B2}
+.featured-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.25rem,2.2vw,1.8rem);font-weight:400;line-height:1.25;letter-spacing:-.02em;color:#0a2540;margin-bottom:16px}
+.featured-meta{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(10,37,64,.35);margin-bottom:18px}
+.featured-excerpt{font-size:14px;color:rgba(10,37,64,.55);line-height:1.8;margin-bottom:32px}
+
+/* BLOG GRID */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* BLOG CARD */
+.blog-card{background:#fff;border:1px solid rgba(10,37,64,.07);border-radius:14px;overflow:hidden;transition:box-shadow .3s,transform .3s;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(10,37,64,.06),0 0 0 1px rgba(10,37,64,.03);position:relative;cursor:pointer}
+.blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity .25s}
+.blog-card[data-cat="beton"]::before{background:linear-gradient(90deg,#f59e0b,#fbbf24);opacity:1}
+.blog-card[data-cat="galvaniz"]::before{background:linear-gradient(90deg,#2874B2,#5ba3e0);opacity:1}
+.blog-card[data-cat="enerji"]::before{background:linear-gradient(90deg,#22c55e,#4ade80);opacity:1}
+.blog-card[data-cat="makina"]::before{background:linear-gradient(90deg,#8b5cf6,#a78bfa);opacity:1}
+.blog-card[data-cat="tedarik"]::before{background:linear-gradient(90deg,#ef4444,#f87171);opacity:1}
+.blog-card:hover{box-shadow:0 16px 48px rgba(10,37,64,.12),0 0 0 1px rgba(40,116,178,.12);transform:translateY(-6px)}
+.blog-card:hover .blog-img{transform:scale(1.05)}
+.blog-img-wrap{overflow:hidden;height:200px;position:relative}
+.blog-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.blog-img.img-ph{object-fit:contain;background:#E8EEF4;padding:28px}
+.blog-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,37,64,.25) 0%,transparent 50%)}
+.blog-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.blog-cat-chip{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:#2874B2;margin-bottom:12px}
+.blog-cat-chip::before{content:'';width:6px;height:6px;border-radius:50%;background:#2874B2;flex-shrink:0}
+[data-cat="beton"] .blog-cat-chip{color:#d97706}
+[data-cat="beton"] .blog-cat-chip::before{background:#d97706}
+[data-cat="galvaniz"] .blog-cat-chip{color:#2874B2}
+[data-cat="galvaniz"] .blog-cat-chip::before{background:#2874B2}
+[data-cat="enerji"] .blog-cat-chip{color:#16a34a}
+[data-cat="enerji"] .blog-cat-chip::before{background:#16a34a}
+[data-cat="makina"] .blog-cat-chip{color:#7c3aed}
+[data-cat="makina"] .blog-cat-chip::before{background:#7c3aed}
+[data-cat="tedarik"] .blog-cat-chip{color:#dc2626}
+[data-cat="tedarik"] .blog-cat-chip::before{background:#dc2626}
+
+.blog-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:16px;font-weight:400;line-height:1.35;letter-spacing:-.01em;color:#0a2540;margin-bottom:12px;flex:1}
+.blog-excerpt{font-size:13px;color:rgba(10,37,64,.5);line-height:1.75;margin-bottom:20px}
+.blog-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(10,37,64,.06)}
+.blog-date{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(10,37,64,.3)}
+/* Shown only on EN/AR output (empty string on TR, hidden via :empty) —
+   this article's full text is Turkish-only, no localized version exists
+   yet, so readers are told before they click through. */
+.blog-lang-badge{font-family:'JetBrains Mono Variable',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(10,37,64,.4);background:rgba(10,37,64,.06);border-radius:3px;padding:2px 6px;margin-inline-start:8px}
+.blog-lang-badge:empty{display:none;margin:0;padding:0}
+.blog-link{font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#2874B2;text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .2s}
+.blog-link:hover{gap:9px}
+
+/* BUTTONS */
+.btn-p{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#051728;background:#E87722;border:none;border-radius:6px;padding:13px 26px;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 16px rgba(232,119,34,.3)}
+.btn-p:hover{background:#C96315;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,119,34,.4)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono Variable',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#0a2540;background:transparent;border:1.5px solid rgba(10,37,64,.2);border-radius:6px;padding:13px 26px;cursor:pointer;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
+.btn-o:hover{color:#2874B2;border-color:#2874B2;background:rgba(40,116,178,.04)}
+
+/* SCROLL REVEAL */
+.rv{opacity:0;transform:translateY(32px) scale(.98);filter:blur(4px);
+  transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1),filter .75s cubic-bezier(.22,1,.36,1)}
+.rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+
+/* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
+   glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
+html[dir="rtl"] .hero-h1,
+html[dir="rtl"] .sec-title,
+html[dir="rtl"] .featured-title,
+html[dir="rtl"] .blog-title,
+html[dir="rtl"] .mira-hero-name,
+html[dir="rtl"] .hero-stat-num,
+html[dir="rtl"] .mira-strip-stat-n,
+html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}
+
+/* PAGINATION */
+.pag-btn{width:38px;height:38px;border-radius:8px;border:1.5px solid rgba(10,37,64,.12);background:#fff;color:rgba(10,37,64,.45);font-family:'JetBrains Mono Variable',monospace;font-size:11px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center}
+.pag-btn:hover{border-color:#2874B2;color:#2874B2}
+.pag-btn.active{background:#2874B2;border-color:#2874B2;color:#fff;box-shadow:0 4px 14px rgba(40,116,178,.3)}
+
+/* ══════════════════════════════════════════
+   CTA BAND (DARK)
+══════════════════════════════════════════ */
+.cta-band{background:linear-gradient(150deg,#0f3d72 0%,#09274a 40%,#061e3a 100%);padding:100px 80px;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 120% at 50% 50%,rgba(40,116,178,.35) 0%,transparent 55%),radial-gradient(ellipse 60% 200% at 0% 50%,rgba(40,116,178,.45) 0%,transparent 50%),radial-gradient(ellipse 50% 200% at 100% 50%,rgba(40,116,178,.32) 0%,transparent 50%);animation:cta-pulse 12s ease-in-out infinite alternate}
+@keyframes cta-pulse{from{opacity:.8}to{opacity:1}}
+
+/* ══════════════════════════════════════════
+   BLOCK SEPARATORS
+══════════════════════════════════════════ */
+.block-sep{height:2px;background:linear-gradient(90deg,transparent 0%,rgba(40,116,178,.5) 15%,rgba(100,180,255,.9) 35%,rgba(180,230,255,1) 50%,rgba(100,180,255,.9) 65%,rgba(40,116,178,.5) 85%,transparent 100%);box-shadow:0 0 20px 8px rgba(40,116,178,.22);animation:sep-pulse 3.5s ease-in-out infinite alternate;position:relative;z-index:2}
+@keyframes sep-pulse{from{opacity:.5}to{opacity:1}}
+.block-sep-soft{height:1px;background:linear-gradient(90deg,transparent,rgba(10,37,64,.1) 30%,rgba(10,37,64,.15) 50%,rgba(10,37,64,.1) 70%,transparent);margin:0}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+#foot{background:linear-gradient(180deg,#1e4f84 0%,#102d56 18%,#071e38 52%,#051728 100%);padding:44px 80px;border-top:1px solid rgba(40,116,178,.15);position:relative;overflow:hidden}
+#foot::before{content:'';position:absolute;top:0;left:0;right:0;height:220px;background:radial-gradient(ellipse 90% 100% at 50% 0%,rgba(40,116,178,.5) 0%,rgba(40,116,178,.18) 40%,transparent 70%);pointer-events:none;z-index:0;animation:foot-glow 6s ease-in-out infinite}
+@keyframes foot-glow{0%,100%{opacity:.7}50%{opacity:1}}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:24px;position:relative;z-index:1}
+.ft-social{display:flex;align-items:center;gap:16px}
+.ft-soc-link{color:rgba(255,255,255,.3);transition:color .2s,transform .2s;display:flex}
+.ft-soc-link:hover{color:#2874B2;transform:translateY(-2px)}
+
+/* BACK TO TOP */
+#btt{position:fixed;right:24px;bottom:32px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid rgba(10,37,64,.12);color:rgba(10,37,64,.6);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:190;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s,background .2s,box-shadow .2s;backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(10,37,64,.12)}
+#btt.vis{opacity:1;transform:none}
+#btt:hover{background:#2874B2;color:#fff;border-color:#2874B2;box-shadow:0 6px 28px rgba(40,116,178,.35)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;padding:120px 40px 80px}
+  .hero-right{display:none}
+  .hero-desc{max-width:100%}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .featured-card{grid-template-columns:1fr}
+  .featured-img-wrap{min-height:220px}
+}
+@media(max-width:768px){
+  /* #nav.scrolled{padding:13px 56px} above has no media query, so its
+     ID+class specificity beats the plain #nav{padding:14px 20px} rule
+     here even on mobile — nav silently reverted to desktop's 56px side
+     padding while scrolled, eating 72px of flex width. .lang-sw is
+     flex-shrink:0 (never shrinks), so the unprotected nav-logo-img took
+     the squeeze: flexbox shrank its rendered WIDTH while its CSS
+     height:52px stayed fixed, distorting the aspect ratio. Re-declaring
+     the mobile padding for the scrolled state here (same specificity,
+     later in source) restores the correct 20px and removes the squeeze. */
+  #nav.scrolled{padding:13px 20px}
+  #nav{padding:14px 20px}.nav-links{display:none}.ham-btn{display:flex}
+  .hero-inner{padding:100px 20px 70px}
+  #mira-strip{padding:28px 20px}
+  .mira-strip-meta{display:none}
+  #content{padding:60px 20px}
+  .cta-band{padding:70px 20px}
+  #foot{padding:36px 20px}
+  .blog-grid{grid-template-columns:1fr}
+  .sec-head{flex-direction:column;align-items:flex-start}
+  .hero-stats{gap:20px}
+  .float-tag{display:none}
+}
+</style>
+<meta property="og:locale" content="tr_TR"><link rel="alternate" hreflang="tr" href="https://www.vorqaglobal.com/tr/akademi/">
+<link rel="alternate" hreflang="en" href="https://www.vorqaglobal.com/en/academy/">
+<link rel="alternate" hreflang="ar" href="https://www.vorqaglobal.com/ar/academy/">
+<link rel="alternate" hreflang="x-default" href="https://www.vorqaglobal.com/en/academy/">
+</head>
+<body>
+<div id="scroll-prog"></div>
+
+<!-- NAV -->
+<nav id="nav" class="dark-hero">
+  <a href="/tr/" class="nav-logo">
+    <img class="nav-logo-img logo-on-dark" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+    <img class="nav-logo-img logo-on-light" src="/brand_assets/vorqa_logo_main_cropped.png" alt="Vorqa Global">
+  </a>
+  <div class="nav-links">
+    <a href="/tr/" class="nav-link">Ana Sayfa</a>
+    <a href="/tr/akademi/" class="nav-link">Akademi</a>
+    <a href="/tr/iletisim/" class="nav-link">İletişim</a>
+  </div>
+  <div class="lang-sw" id="lang-sw">
+    <a href="https://www.vorqaglobal.com/tr/akademi/" data-lang="tr" class="l-btn active">TR</a>
+    <a href="https://www.vorqaglobal.com/en/academy/" data-lang="en" class="l-btn">EN</a>
+    <a href="https://www.vorqaglobal.com/ar/academy/" data-lang="ar" class="l-btn">AR</a>
+  </div>
+  <button class="ham-btn" id="ham-btn" aria-label="Menüyü Aç">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div id="mob-nav" aria-hidden="true">
+  <div dir="ltr" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;color:#2874B2;text-transform:uppercase;margin-bottom:24px">Vorqa Global</div>
+  <a href="/tr/" class="mob-link" onclick="closeMobNav()">Ana Sayfa</a>
+  <div class="mob-sep"></div>
+  <a href="/tr/akademi/" class="mob-link" style="color:#2874B2" onclick="closeMobNav()">Akademi</a>
+  <div class="mob-sep"></div>
+  <a href="/tr/iletisim/" class="mob-link" onclick="closeMobNav()">İletişim</a>
+  <div class="mob-lang">
+    <a href="https://www.vorqaglobal.com/tr/akademi/" data-lang="tr" class="mob-l-btn active">TR</a>
+    <a href="https://www.vorqaglobal.com/en/academy/" data-lang="en" class="mob-l-btn">EN</a>
+    <a href="https://www.vorqaglobal.com/ar/academy/" data-lang="ar" class="mob-l-btn">AR</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="neural-canvas"></canvas>
+
+  <div class="hero-inner" style="grid-template-columns:1fr;text-align:center;padding:160px 80px 120px;position:relative;z-index:1">
+    <div class="hero-eyebrow" style="justify-content:center">Vorqa Akademi</div>
+    <h1 class="hero-h1" style="font-size:clamp(3.8rem,9vw,7.5rem)">Teknik <em>Derinlik,</em><br>Gerçek <em>Verilerle</em></h1>
+    <p class="hero-desc" style="max-width:580px;margin:0 auto 0">Beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında akademik araştırma, sektör analizi ve mühendislik perspektifleri. Editör: Mira.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MIRA EDITORIAL STRIP
+══════════════════════════════════════════ -->
+<div class="block-sep-soft"></div>
+<section id="mira-strip">
+  <div class="mira-strip-inner rv" style="gap:28px">
+    <!-- Fotoğraf: Sol -->
+    <picture><source srcset="/vorqa-mira/Mira_vorqaglobal.webp" type="image/webp"><img src="/vorqa-mira/Mira_vorqaglobal-fallback.png" alt="Mira" class="mira-strip-avatar" width="1000" height="400"></picture>
+    <!-- Kimlik + alıntı: Sağ -->
+    <div style="flex:1;min-width:0">
+      <div class="mira-strip-label">Editörden · Mira</div>
+      <div class="mira-strip-quote">Yazılar uygun olduğunda <em>standartlar, üretici dokümanları ve kaynak gösterilen çalışmalar</em> kullanılarak hazırlanır. Mühendislik <em>disiplini</em>, sektör pratiğiyle buluşur.</div>
+      <div style="display:flex;align-items:center;gap:20px;margin-top:14px;flex-wrap:wrap">
+        <div class="mira-strip-stat">
+          <div class="mira-strip-stat-n">Kaynaklı</div>
+          <div class="mira-strip-stat-l">Kaynak</div>
+        </div>
+        <div class="mira-strip-divider"></div>
+        <div class="mira-strip-stat">
+          <div class="mira-strip-stat-n">10</div>
+          <div class="mira-strip-stat-l">Makale</div>
+        </div>
+        <div class="mira-strip-divider"></div>
+        <div class="mira-strip-stat">
+          <div class="mira-strip-stat-n">5</div>
+          <div class="mira-strip-stat-l">Sektör</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="block-sep-soft"></div>
+
+<!-- ══════════════════════════════════════════
+     CONTENT SECTION
+══════════════════════════════════════════ -->
+<section id="knowledge-map-entry" aria-labelledby="knowledge-map-title" style="background:#071a2b;color:#fff;padding:54px 24px;border-top:1px solid rgba(40,116,178,.35);border-bottom:1px solid rgba(40,116,178,.25)"><div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center"><div><div style="font:600 11px/1.3 monospace;letter-spacing:.16em;color:#8fc0e7;margin-bottom:12px">AKADEMİ BİLGİ HARİTASI</div><h2 id="knowledge-map-title" style="font:400 clamp(1.7rem,4vw,2.7rem)/1.12 Arial,sans-serif;margin:0 0 12px">Üründen değil, vermeniz gereken karardan başlayın</h2><p style="max-width:760px;margin:0;color:#d3e2ef;line-height:1.7">Endüstriyel satınalma, proje tedariği veya teknik tesis kararından başlayın. Altı bilgi merkezi; pratik soruları, Academy araştırmalarını ve RFQ yolunu birbirine bağlar.</p></div><a data-ga="academy_map_open" href="/tr/akademi/bilgi-haritasi/" style="display:inline-block;background:#E87722;color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:8px;white-space:nowrap">Bilgi Haritasını Aç →</a></div></section><style>@media(max-width:760px){#knowledge-map-entry>div{grid-template-columns:1fr!important}#knowledge-map-entry a{justify-self:start}}</style><script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga="academy_map_open"]');if(a&&typeof gtag==='function')gtag('event','academy_map_open',{link_url:a.href,language:document.documentElement.lang||'tr'});});</script>
+<section id="content">
+  <div class="content-inner">
+
+    <!-- Section header + filters -->
+    <div class="sec-head rv">
+      <div class="sec-head-left">
+        <div class="sec-eyebrow">// Sektör İçgörüleri</div>
+        <h2 class="sec-title">Son <strong>Yayınlar</strong></h2>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-tab active" onclick="filterPosts('all',this)">Tümü</button>
+        <button class="filter-tab" data-cat-color="beton" onclick="filterPosts('beton',this)">Beton</button>
+        <button class="filter-tab" data-cat-color="galvaniz" onclick="filterPosts('galvaniz',this)">Galvaniz</button>
+        <button class="filter-tab" data-cat-color="enerji" onclick="filterPosts('enerji',this)">Enerji</button>
+        <button class="filter-tab" data-cat-color="makina" onclick="filterPosts('makina',this)">Mekanik</button>
+        <button class="filter-tab" data-cat-color="tedarik" onclick="filterPosts('tedarik',this)">Tedarik</button>
+      </div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="featured-card rv d1" data-cat="beton" id="featured-post" onclick="location.href='/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/'" style="cursor:pointer">
+      <div class="featured-img-wrap">
+        <img class="img-ph" src="/images/illustrations/blog-beton-formul.svg" alt="Beton santrali kapasitesi — teknik çizim" loading="lazy" width="1600" height="1200">
+        <div class="featured-img-overlay"></div>
+        <div class="featured-badge">Öne Çıkan</div>
+      </div>
+      <div class="featured-text-panel">
+        <div class="featured-cat-tag">Beton Santralleri · Teknik Rehber</div>
+        <h2 class="featured-title">Beton Santrali Kapasitesi Nasıl Doğru Hesaplanır? Adım Adım Metodoloji</h2>
+        <div class="featured-meta">10 May 2026 · 8 dak. okuma · Mira</div>
+        <p class="featured-excerpt">Santral kapasitesi Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;×&nbsp;η&nbsp;×&nbsp;f) formülüyle belirlenir; burada η mixer verimliliği (örnek mühendislik varsayımı: 0.82), f çevre faktörüdür. 500&nbsp;m³/gün hedefi ve 8&nbsp;saatlik vardiya için Q = 80.3&nbsp;m³/sa. ACI 304R-00 ve ERMCO 2024 referanslarıyla desteklenmiş 6 adımlı metodoloji.</p>
+        <a href="/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/" class="btn-p" style="align-self:flex-start">Devamını Oku <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+      </div>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid" id="blog-grid">
+      <!-- POST: Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Proj -->
+      <div class="blog-card rv d1" data-pg="1" data-cat="enerji" onclick="location.href='/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html'">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-epcf-model.svg" alt="Enerji sektöründe EPC-F modeli — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Atık-Enerji Dönüşüm</div>
+          <div class="blog-title">Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek</div>
+          <div class="blog-meta">
+            <span class="blog-date">28 May 2026 · 5 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/enerji-sektorunde-epc-f-modeli-ve-yapay-zeka-gelecegin-projelerin-2026-05-28.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- POST 1: Galvaniz -->
+      <div class="blog-card rv d1" data-cat="galvaniz" onclick="location.href='/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html'">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-galvaniz-katmanlar.svg" alt="Sıcak daldırma galvanizleme — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Galvaniz Tesisleri</div>
+          <div class="blog-title">ISO 1461: Sıcak Daldırma Galvanizlemede Kaplama Kalınlığı ve Ömür</div>
+          <div class="blog-meta">
+            <span class="blog-date">22 Nis 2026 · 6 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/iso-1461-galvaniz-kaplama-kalinligi-2026-04-22.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- POST 2: WtE -->
+      <div class="blog-card rv d2" data-cat="enerji" onclick="location.href='/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html'">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-wte-akis.svg" alt="Atık-enerji dönüşüm tesisi — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Atık-Enerji Dönüşüm</div>
+          <div class="blog-title">Atıktan Enerjiye: WtE Teknolojileri ve Türkiye 2030 Hedefleri</div>
+          <div class="blog-meta">
+            <span class="blog-date">08 Nis 2026 · 7 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/wte-atiktan-enerjiye-teknolojiler-2026-04-08.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- POST 3: EN 1090-2 -->
+      <div class="blog-card rv d3" data-cat="makina" onclick="location.href='/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html'">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-celik-tolerans-ndt.svg" alt="Çelik yapı imalatı — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Çelik Yapı &amp; Mekanik İmalat</div>
+          <div class="blog-title">EN 1090-2 Kapsamında Çelik Yapı Toleransları ve NDT Zorunlulukları</div>
+          <div class="blog-meta">
+            <span class="blog-date">20 Mar 2026 · 9 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/en-1090-2-celik-yapi-toleranslari-ndt-2026-03-20.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- POST 4: Tedarik -->
+      <div class="blog-card rv d4" data-cat="tedarik" onclick="location.href='/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html'">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-tedarik-ag.svg" alt="Küresel lojistik — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Tedarik Zinciri Yönetimi</div>
+          <div class="blog-title">Küresel Tedarik Zincirinde 2026 Kırılganlıkları ve Çeşitlendirme Stratejileri</div>
+          <div class="blog-meta">
+            <span class="blog-date">05 Mar 2026 · 5 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/tedarik-zinciri-2026-kirilganliklari-2026-03-05.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- POST 5: Mobil vs Sabit -->
+      <div class="blog-card rv d5" data-cat="beton" onclick="location.href='/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html'">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-beton-mobil-sabit.svg" alt="Sabit ve mobil beton santrali — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Beton Santralleri</div>
+          <div class="blog-title">Mobil mi, Sabit mi? Proje Hacmi ve Süresine Göre ROI Analizi</div>
+          <div class="blog-meta">
+            <span class="blog-date">14 Şub 2026 · 5 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/mobil-sabit-beton-santrali-roi-2026-02-14.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 2 POSTS (hidden on load) -->
+      <div class="blog-card rv d1" data-pg="2" data-cat="enerji" onclick="location.href='/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html'" style="display:none">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-epc-evm.svg" alt="EPC anahtar teslim projeler — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Atık-Enerji Dönüşüm</div>
+          <div class="blog-title">Anahtar Teslim Tesislerde EPC Yönetimi: Kazanılmış Değer ve Risk Matrisi</div>
+          <div class="blog-meta">
+            <span class="blog-date">28 Oca 2026 · 6 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/epc-yonetimi-kazanilmis-deger-risk-2026-01-28.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card rv d2" data-pg="2" data-cat="makina" onclick="location.href='/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html'" style="display:none">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-mekanik-titresim.svg" alt="Mekanik montaj ve titreşim analizi — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Çelik Yapı &amp; Mekanik İmalat</div>
+          <div class="blog-title">Endüstriyel Ekipmanlarda Titreşim Analizi ve Şaft Hizalaması: Mekanik Montajın Gizli Maliyeti</div>
+          <div class="blog-meta">
+            <span class="blog-date">11 Haz 2026 · 6 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/mekanik-montaj-titresim-analizi-hizalama-2026-06-11.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card rv d3" data-pg="2" data-cat="galvaniz" onclick="location.href='/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html'" style="display:none">
+        <div class="blog-img-wrap">
+          <img class="blog-img img-ph" src="/images/illustrations/blog-galvaniz-lcc.svg" alt="Galvaniz ve boya kaplama yaşam döngüsü maliyeti — teknik çizim" loading="lazy" width="1600" height="1200">
+          <div class="blog-img-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-cat-chip">Galvaniz Tesisleri</div>
+          <div class="blog-title">Sıcak Daldırma Galvaniz ile Boya Kaplama Karşılaştırması: Yaşam Döngüsü Maliyeti (LCC) Analizi</div>
+          <div class="blog-meta">
+            <span class="blog-date">25 Haz 2026 · 6 dak.</span><span class="blog-lang-badge"></span>
+            <a href="/vorqa-blog/galvaniz-boya-kaplama-yasam-dongusu-maliyeti-2026-06-25.html" class="blog-link">Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="rv" style="display:flex;justify-content:center;align-items:center;gap:8px;margin-top:56px">
+      <button class="pag-btn active" data-page="1" onclick="goPage(1)">1</button>
+      <button class="pag-btn" data-page="2" onclick="goPage(2)">2</button>
+      <button id="pag-next" class="pag-btn" style="width:auto;padding:0 16px;gap:6px;display:inline-flex;align-items:center" onclick="goPage(currentPage+1)">Sonraki <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#f0f5fc;padding:0 80px 80px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="rv" style="background:linear-gradient(135deg,#0f3d72 0%,#06193a 100%);border-radius:16px;padding:56px 40px;text-align:center;box-shadow:0 20px 60px rgba(10,37,64,.18)">
+      <div style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(40,116,178,.7);margin-bottom:14px">// Vorqa Global</div>
+      <h2 class="hdg-ar-fix" style="font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;letter-spacing:-.03em;color:#fff;margin-bottom:12px">Projeniz için konuşalım.</h2>
+      <p style="font-family:'Manrope Variable',Manrope,sans-serif;font-size:15px;color:rgba(255,255,255,.45);line-height:1.7;max-width:440px;margin:0 auto 28px">Uzman ekibimiz teknik ihtiyaçlarınızı dinlemeye hazır.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/tr/iletisim/" class="btn-p">Teklif Al →</a>
+        <a href="/tr/#companies" class="btn-o" style="color:rgba(255,255,255,.65);border-color:rgba(255,255,255,.2)">Uzmanlık Alanlarımız →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="block-sep"></div>
+<footer id="foot">
+  <div style="max-width:1160px;margin:0 auto;position:relative;z-index:1">
+    <div class="foot-inner">
+      <a href="/tr/" style="text-decoration:none;display:flex;align-items:center">
+        <img class="foot-logo-img" src="/brand_assets/vorqa_logo_white_cropped.png" alt="Vorqa Global">
+      </a>
+      <a href="/tr/akademi/" style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:6px 12px;transition:color .15s,border-color .15s" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(40,116,178,.5)'" onmouseout="this.style.color='rgba(255,255,255,.35)';this.style.borderColor='rgba(255,255,255,.1)'">Akademi</a>
+      <div class="ft-social">
+        <a href="https://www.linkedin.com/company/122724032/" class="ft-soc-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a>
+      </div>
+    </div>
+    <div style="height:1px;background:linear-gradient(to right,transparent,rgba(40,116,178,.18),transparent);margin-bottom:20px"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.18);text-transform:uppercase">© 2026 Vorqa Global Grubu — Tüm Hakları Saklıdır</span>
+      <span style="font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.18);text-transform:uppercase">Ankara · Türkiye</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Yukarı Git" aria-label="Yukarı Git">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 9.5L7 4.5L12 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+
+<script>
+/* ── Neural Network Canvas ── */
+(function(){
+  var canvas=document.getElementById('neural-canvas');
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d');
+  var W,H,nodes=[],packets=[],frame=0;
+  var NODE_COUNT=72,CONNECT=155;
+
+  function resize(){
+    W=canvas.width=canvas.offsetWidth;
+    H=canvas.height=canvas.offsetHeight;
+  }
+
+  function init(){
+    nodes=[];
+    for(var i=0;i<NODE_COUNT;i++){
+      nodes.push({
+        x:Math.random()*W, y:Math.random()*H,
+        vx:(Math.random()-.5)*.28, vy:(Math.random()-.5)*.28,
+        r:Math.random()*1.4+.6,
+        bright:Math.random()>.82,
+        phase:Math.random()*Math.PI*2,
+        spd:Math.random()*.022+.008
+      });
+    }
+  }
+
+  function drawGlobe(){
+    var cx=W*.68,cy=H*.46,rad=Math.min(W,H)*.29;
+    ctx.save();
+    ctx.globalAlpha=.055;
+    ctx.strokeStyle='#4899e0';
+    ctx.lineWidth=.7;
+    // circle
+    ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.stroke();
+    // latitude lines
+    for(var lt=-3;lt<=3;lt++){
+      var ly=cy+lt*(rad/3.2);
+      var rx=Math.sqrt(Math.max(0,rad*rad-(ly-cy)*(ly-cy)));
+      if(rx>2){
+        ctx.beginPath();
+        ctx.ellipse(cx,ly,rx*.92,rx*.22,0,0,Math.PI*2);
+        ctx.stroke();
+      }
+    }
+    // longitude lines
+    for(var lg=0;lg<9;lg++){
+      var a=(lg/9)*Math.PI+frame*.0012;
+      ctx.beginPath();
+      ctx.ellipse(cx,cy,Math.abs(Math.cos(a))*rad,rad,a,0,Math.PI*2);
+      ctx.stroke();
+    }
+    // city dots on globe
+    var cities=[[cx-rad*.3,cy-rad*.4],[cx+rad*.15,cy-rad*.2],[cx-rad*.1,cy+rad*.3],[cx+rad*.35,cy+rad*.1],[cx-rad*.45,cy+rad*.05]];
+    ctx.globalAlpha=.18;
+    cities.forEach(function(c){
+      ctx.beginPath();ctx.arc(c[0],c[1],3,0,Math.PI*2);
+      ctx.fillStyle='#7bc4ff';ctx.fill();
+    });
+    ctx.restore();
+  }
+
+  function drawNet(){
+    // connections
+    for(var i=0;i<nodes.length;i++){
+      for(var j=i+1;j<nodes.length;j++){
+        var dx=nodes[j].x-nodes[i].x,dy=nodes[j].y-nodes[i].y;
+        var d=Math.sqrt(dx*dx+dy*dy);
+        if(d<CONNECT){
+          var a=(1-d/CONNECT)*.32;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x,nodes[i].y);
+          ctx.lineTo(nodes[j].x,nodes[j].y);
+          ctx.strokeStyle='rgba(40,116,178,'+a+')';
+          ctx.lineWidth=.55;
+          ctx.stroke();
+        }
+      }
+    }
+    // nodes
+    nodes.forEach(function(n){
+      n.phase+=n.spd;
+      var p=Math.sin(n.phase)*.45+.55;
+      if(n.bright){
+        var g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r*10);
+        g.addColorStop(0,'rgba(100,190,255,'+(p*.55)+')');
+        g.addColorStop(1,'rgba(40,116,178,0)');
+        ctx.beginPath();ctx.arc(n.x,n.y,n.r*10,0,Math.PI*2);
+        ctx.fillStyle=g;ctx.fill();
+      }
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r+(n.bright?1:0),0,Math.PI*2);
+      ctx.fillStyle=n.bright?'rgba(130,210,255,'+(p*.85+.15)+')':'rgba(70,140,220,'+(p*.5+.15)+')';
+      ctx.fill();
+    });
+  }
+
+  function drawPackets(){
+    if(frame%14===0&&packets.length<20){
+      var i=Math.floor(Math.random()*nodes.length);
+      var j=Math.floor(Math.random()*nodes.length);
+      var dx=nodes[j].x-nodes[i].x,dy=nodes[j].y-nodes[i].y;
+      if(i!==j&&Math.sqrt(dx*dx+dy*dy)<CONNECT)
+        packets.push({i:i,j:j,t:0,spd:.009+Math.random()*.007});
+    }
+    packets=packets.filter(function(pk){
+      pk.t+=pk.spd;
+      if(pk.t>=1)return false;
+      var ni=nodes[pk.i],nj=nodes[pk.j];
+      var x=ni.x+(nj.x-ni.x)*pk.t,y=ni.y+(nj.y-ni.y)*pk.t;
+      var g=ctx.createRadialGradient(x,y,0,x,y,5);
+      g.addColorStop(0,'rgba(200,235,255,.95)');
+      g.addColorStop(1,'rgba(80,160,255,0)');
+      ctx.beginPath();ctx.arc(x,y,5,0,Math.PI*2);
+      ctx.fillStyle=g;ctx.fill();
+      return true;
+    });
+  }
+
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    frame++;
+    drawGlobe();
+    nodes.forEach(function(n){
+      n.x+=n.vx;n.y+=n.vy;
+      if(n.x<0||n.x>W)n.vx*=-1;
+      if(n.y<0||n.y>H)n.vy*=-1;
+      n.x=Math.max(0,Math.min(W,n.x));
+      n.y=Math.max(0,Math.min(H,n.y));
+    });
+    drawNet();
+    drawPackets();
+    requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('resize',function(){resize();init();});
+  resize();init();loop();
+})();
+
+/* ── Pagination ── */
+var currentPage = 1;
+var POSTS_PER_PAGE = 6;
+
+function goPage(page) {
+  var cards = Array.from(document.querySelectorAll('#blog-grid .blog-card'));
+  var p1cards = cards.filter(function(c){ return !c.dataset.pg || c.dataset.pg === '1'; });
+  var totalPages = Math.ceil(cards.length / POSTS_PER_PAGE) + (cards.length % POSTS_PER_PAGE > 0 ? 0 : 0);
+
+  // Compute max page from data-pg attributes
+  var maxPage = 1;
+  cards.forEach(function(c){ var pg = parseInt(c.dataset.pg||1); if(pg > maxPage) maxPage = pg; });
+
+  page = Math.max(1, Math.min(page, maxPage));
+  currentPage = page;
+
+  // Featured: only on page 1
+  var featured = document.getElementById('featured-post');
+  if(featured) featured.style.display = page === 1 ? '' : 'none';
+
+  // Show/hide cards by data-pg
+  cards.forEach(function(c){
+    var cardPage = parseInt(c.dataset.pg || 1);
+    c.style.display = cardPage === page ? 'flex' : 'none';
+  });
+
+  // Update button states
+  document.querySelectorAll('#pagination .pag-btn[data-page]').forEach(function(btn){
+    btn.classList.toggle('active', parseInt(btn.dataset.page) === page);
+  });
+
+  // Sonraki button: disable on last page
+  var nextBtn = document.getElementById('pag-next');
+  if(nextBtn) nextBtn.style.opacity = page >= maxPage ? '.35' : '1';
+
+  // Scroll to section top
+  document.getElementById('content').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ── Scroll progress ── */
+(function(){
+  var p=document.getElementById('scroll-prog');
+  if(!p)return;
+  window.addEventListener('scroll',function(){
+    var s=document.documentElement.scrollTop||document.body.scrollTop;
+    var h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    p.style.transform='scaleX('+(h?s/h:0)+')';
+  },{passive:true});
+})();
+
+/* ── Nav behaviour ── */
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('nav');
+  var scrolled=scrollY>60;
+  nav.classList.toggle('scrolled',scrolled);
+  document.getElementById('btt').classList.toggle('vis',scrollY>400);
+  /* swap logo SVG colors on scroll */
+  var zletter=nav.querySelector('.nl-z path');
+  var tletter=nav.querySelector('.nl-t path');
+  var logoDiv=nav.querySelector('[style*="border-left"]');
+  if(scrolled){
+    if(zletter)zletter.setAttribute('fill','#0a2540');
+    if(tletter)tletter.setAttribute('fill','#0a2540');
+    if(logoDiv){logoDiv.style.borderLeftColor='rgba(10,37,64,.18)';
+      logoDiv.querySelectorAll('div').forEach(d=>d.style.color='rgba(10,37,64,.45)');}
+  } else {
+    if(zletter)zletter.setAttribute('fill','#fff');
+    if(tletter)tletter.setAttribute('fill','#fff');
+    if(logoDiv){logoDiv.style.borderLeftColor='rgba(255,255,255,.18)';
+      logoDiv.querySelectorAll('div').forEach(d=>d.style.color='rgba(255,255,255,.4)');}
+  }
+},{passive:true});
+
+/* ── Mobile nav ── */
+const hamBtn=document.getElementById('ham-btn');
+const mobNav=document.getElementById('mob-nav');
+function closeMobNav(){mobNav.classList.remove('open');hamBtn.classList.remove('open');mobNav.setAttribute('aria-hidden','true');}
+hamBtn.addEventListener('click',()=>{const open=mobNav.classList.toggle('open');hamBtn.classList.toggle('open',open);mobNav.setAttribute('aria-hidden',String(!open));});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobNav();});
+function toggleMobDd(el){el.closest('.mob-dd-wrap').classList.toggle('open');}
+
+/* ── Scroll reveal ── */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');}});
+},{threshold:0.07});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+/* ── Filter ── */
+function filterPosts(cat,btn){
+  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  var featured=document.getElementById('featured-post');
+  var cards=document.querySelectorAll('#blog-grid .blog-card');
+  if(featured){featured.style.display=(cat==='all'||featured.dataset.cat===cat)?'':'none';}
+  cards.forEach(card=>{
+    card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none';
+  });
+}
+
+/* ── i18n ── */
+const T={
+  tr:{
+    'co1.tag':'Beton Santralleri','co2.tag':'Atık-Enerji Dönüşüm','co3.tag':'Galvaniz Tesisleri','co4.name':'Tedarik Zinciri Yönetimi','co5.name':'Çelik Yapı & Mekanik İmalat','nav.home':'Ana Sayfa','nav.group':'Vorqa Grup','nav.companies':'Uzmanlık Alanlarımız','nav.contact':'İletişim',
+    'dd.about':'Hakkımızda','dd.docs':'Belgelerimiz','dd.refs':'Referanslar','dd.academy':'Akademi',
+      'cta.h':'Projeniz için konuşalım.',
+      'cta.p':'Uzman ekibimiz teknik ihtiyaçlarınızı dinlemeye hazır.','cta.btn1':'Teklif Al →','cta.btn2':'Uzmanlık Alanlarımız →',
+      'hero.eyebrow':'Vorqa Akademi','hero.h1':'Teknik <em>Derinlik,</em><br>Gerçek <em>Verilerle</em>','hero.desc':'Beton santrali, galvaniz, enerji dönüşüm ve tedarik zinciri alanlarında akademik araştırma, sektör analizi ve mühendislik perspektifleri. Editör: Mira.',
+      'mira.label':'Editörden · Mira','mira.quote':'Yazılar uygun olduğunda <em>standartlar, üretici dokümanları ve kaynak gösterilen çalışmalar</em> kullanılarak hazırlanır. Mühendislik <em>disiplini</em>, sektör pratiğiyle buluşur.','mira.stat1':'Kaynak','mira.stat2':'Makale','mira.stat3':'Sektör',
+      'sec.eyebrow':'// Sektör İçgörüleri','sec.title':'Son <strong>Yayınlar</strong>',
+      'f.all':'Tümü','f.beton':'Beton','f.galvaniz':'Galvaniz','f.enerji':'Enerji','f.makina':'Mekanik','f.tedarik':'Tedarik',
+      'ft.badge':'Öne Çıkan','ft.cat':'Beton Santralleri · Teknik Rehber','ft.title':'Beton Santrali Kapasitesi Nasıl Doğru Hesaplanır? Adım Adım Metodoloji','ft.meta':'10 May 2026 &middot; 8 dak. okuma &middot; Mira',
+      'ft.excerpt':'Santral kapasitesi Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;&times;&nbsp;&eta;&nbsp;&times;&nbsp;f) formülüyle belirlenir; burada &eta; mixer verimliliği (örnek mühendislik varsayımı: 0.82), f çevre faktörüdür. 500&nbsp;m³/gün hedefi ve 8&nbsp;saatlik vardiya için Q = 80.3&nbsp;m³/sa. ACI 304R-00 ve ERMCO 2024 referanslarıyla desteklenmiş 6 adımlı metodoloji.',
+      'ft.cta':'Devamını Oku <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      'blog.read':'Oku <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'blog.trBadge':'',
+      'bp1.title':'Enerji Sektöründe EPC-F Modeli ve Yapay Zeka: Geleceğin Projelerini Şekillendirmek','bp1.date':'28 May 2026 &middot; 5 dak.',
+      'bp2.title':'ISO 1461: Sıcak Daldırma Galvanizlemede Kaplama Kalınlığı ve Ömür','bp2.date':'22 Nis 2026 &middot; 6 dak.',
+      'bp3.title':'Atıktan Enerjiye: WtE Teknolojileri ve Türkiye 2030 Hedefleri','bp3.date':'08 Nis 2026 &middot; 7 dak.',
+      'bp4.title':'EN 1090-2 Kapsamında Çelik Yapı Toleransları ve NDT Zorunlulukları','bp4.date':'20 Mar 2026 &middot; 9 dak.',
+      'bp5.title':'Küresel Tedarik Zincirinde 2026 Kırılganlıkları ve Çeşitlendirme Stratejileri','bp5.date':'05 Mar 2026 &middot; 5 dak.',
+      'bp6.title':'Mobil mi, Sabit mi? Proje Hacmi ve Süresine Göre ROI Analizi','bp6.date':'14 Şub 2026 &middot; 5 dak.',
+      'bp7.title':'Anahtar Teslim Tesislerde EPC Yönetimi: Kazanılmış Değer ve Risk Matrisi','bp7.date':'28 Oca 2026 &middot; 6 dak.',
+      'bp8.title':'Endüstriyel Ekipmanlarda Titreşim Analizi ve Şaft Hizalaması: Mekanik Montajın Gizli Maliyeti','bp8.date':'11 Haz 2026 &middot; 6 dak.',
+      'bp9.title':'Sıcak Daldırma Galvaniz ile Boya Kaplama Karşılaştırması: Yaşam Döngüsü Maliyeti (LCC) Analizi','bp9.date':'25 Haz 2026 &middot; 6 dak.',
+      'pag.next':'Sonraki <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'foot.copy':'© 2026 Vorqa Global Grubu — Tüm Hakları Saklıdır','ad.val':'Ankara · Türkiye'},
+  en:{
+    'co1.tag':'Concrete Plants','co2.tag':'Waste-Energy Conversion','co3.tag':'Galvanizing Plants','co4.name':'Supply Chain Management','co5.name':'Steel Structure & Mechanical Fabrication','nav.home':'Home','nav.group':'Vorqa Group','nav.companies':'Areas of Expertise','nav.contact':'Contact',
+    'dd.about':'About Us','dd.docs':'Our Documents','dd.refs':'References','dd.academy':'Academy',
+      'cta.h':"Let's talk about your project.",
+      'cta.p':'Our expert team is ready to hear your technical requirements.','cta.btn1':'Get a Quote →','cta.btn2':'Areas of Expertise →',
+      'hero.eyebrow':'Vorqa Academy','hero.h1':'Technical <em>Depth,</em><br>Real <em>Data</em>','hero.desc':'Academic research, sector analysis and engineering perspectives on concrete plants, galvanizing, energy conversion and supply chain. Editor: Mira.',
+      'mira.label':'From the Editor · Mira','mira.quote':'Articles are prepared using <em>standards, manufacturer documentation and cited sources</em> where applicable. Engineering <em>rigor</em> meets industry practice.','mira.stat1':'Sources','mira.stat2':'Articles','mira.stat3':'Sectors',
+      'sec.eyebrow':'// Industry Insights','sec.title':'Latest <strong>Articles</strong>',
+      'f.all':'All','f.beton':'Concrete','f.galvaniz':'Galvanizing','f.enerji':'Energy','f.makina':'Mechanical','f.tedarik':'Supply Chain',
+      'ft.badge':'Featured','ft.cat':'Concrete Plants · Technical Guide','ft.title':'How to Correctly Calculate Concrete Plant Capacity? A Step-by-Step Methodology','ft.meta':'May 10, 2026 &middot; 8 min read &middot; Mira',
+      'ft.excerpt':'Plant capacity is determined by the formula Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;&times;&nbsp;&eta;&nbsp;&times;&nbsp;f), where &eta; is mixer efficiency (example engineering assumption: 0.82) and f is the environmental factor. For a 500&nbsp;m³/day target over an 8-hour shift, Q = 80.3&nbsp;m³/h. A 6-step methodology backed by ACI 304R-00 and ERMCO 2024 references.',
+      'ft.cta':'Read More <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      'blog.read':'Read <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'blog.trBadge':'Turkish article',
+      'bp1.title':'The EPC-F Model and AI in the Energy Sector: Shaping Future Projects','bp1.date':'May 28, 2026 &middot; 5 min',
+      'bp2.title':'ISO 1461: Coating Thickness and Service Life in Hot-Dip Galvanizing','bp2.date':'Apr 22, 2026 &middot; 6 min',
+      'bp3.title':'Waste-to-Energy: WtE Technologies and Turkey\'s 2030 Targets','bp3.date':'Apr 08, 2026 &middot; 7 min',
+      'bp4.title':'Steel Structure Tolerances and NDT Requirements under EN 1090-2','bp4.date':'Mar 20, 2026 &middot; 9 min',
+      'bp5.title':'2026 Vulnerabilities in Global Supply Chains and Diversification Strategies','bp5.date':'Mar 05, 2026 &middot; 5 min',
+      'bp6.title':'Mobile or Stationary? An ROI Analysis by Project Volume and Duration','bp6.date':'Feb 14, 2026 &middot; 5 min',
+      'bp7.title':'EPC Management for Turnkey Facilities: Earned Value and Risk Matrix','bp7.date':'Jan 28, 2026 &middot; 6 min',
+      'bp8.title':'Vibration Analysis and Shaft Alignment in Industrial Equipment: The Hidden Cost of Mechanical Assembly','bp8.date':'Jun 11, 2026 &middot; 6 min',
+      'bp9.title':'Hot-Dip Galvanizing vs. Paint Coating: A Life Cycle Cost (LCC) Analysis','bp9.date':'Jun 25, 2026 &middot; 6 min',
+      'pag.next':'Next <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'foot.copy':'© 2026 Vorqa Global Group — All Rights Reserved','ad.val':'Ankara · Turkey'},
+  ar:{
+    'co1.tag':'محطات الخرسانة','co2.tag':'تحويل النفايات إلى طاقة','co3.tag':'مصانع الجلفنة','co4.name':'إدارة سلسلة التوريد','co5.name':'الهياكل الفولاذية والتصنيع الميكانيكي','nav.home':'الرئيسية','nav.group':'مجموعة Vorqa','nav.companies':'مجالات خبرتنا','nav.contact':'اتصل بنا',
+    'dd.about':'من نحن','dd.docs':'وثائقنا','dd.refs':'المراجع','dd.academy':'الأكاديمية',
+      'cta.h':'لنتحدث عن مشروعك.',
+      'cta.p':'فريق خبرائنا جاهز للاستماع إلى متطلباتك التقنية.','cta.btn1':'احصل على عرض ←','cta.btn2':'مجالات خبرتنا ←',
+      'hero.eyebrow':'أكاديمية Vorqa','hero.h1':'عمق <em>تقني،</em><br>بيانات <em>حقيقية</em>','hero.desc':'أبحاث أكاديمية وتحليلات قطاعية ووجهات نظر هندسية في مجالات محطات الخرسانة والجلفنة وتحويل الطاقة وسلسلة التوريد. المحررة: ميرا.',
+      'mira.label':'من المحررة · ميرا','mira.quote':'تُعد المقالات بالاعتماد على <em>المعايير ووثائق المصنع والمصادر المشار إليها</em> حيثما ينطبق ذلك. تلتقي <em>الدقة</em> الهندسية بالممارسة الصناعية.','mira.stat1':'مصدر','mira.stat2':'مقال','mira.stat3':'قطاع',
+      'sec.eyebrow':'// رؤى القطاع','sec.title':'أحدث <strong>المقالات</strong>',
+      'f.all':'الكل','f.beton':'الخرسانة','f.galvaniz':'الجلفنة','f.enerji':'الطاقة','f.makina':'الميكانيكا','f.tedarik':'التوريد',
+      'ft.badge':'مميز','ft.cat':'محطات الخرسانة · دليل تقني','ft.title':'كيف تُحسب طاقة محطة الخرسانة بشكل صحيح؟ منهجية خطوة بخطوة','ft.meta':'10 مايو 2026 &middot; 8 دقائق قراءة &middot; ميرا',
+      'ft.excerpt':'تُحدَّد طاقة المحطة بالمعادلة Q&nbsp;= P&nbsp;/&nbsp;(T&nbsp;&times;&nbsp;&eta;&nbsp;&times;&nbsp;f)، حيث &eta; كفاءة الخلاط (افتراض هندسي توضيحي: 0.82) وf هو عامل البيئة. لهدف 500&nbsp;م³/يوم على مدار وردية 8&nbsp;ساعات، Q = 80.3&nbsp;م³/س. منهجية من 6 خطوات مدعومة بمراجع ACI 304R-00 وERMCO 2024.',
+      'ft.cta':'اقرأ المزيد <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      'blog.read':'اقرأ <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'blog.trBadge':'مقال بالتركية',
+      'bp1.title':'نموذج EPC-F والذكاء الاصطناعي في قطاع الطاقة: تشكيل مشاريع المستقبل','bp1.date':'28 مايو 2026 &middot; 5 دقائق',
+      'bp2.title':'ISO 1461: سماكة الطلاء وعمر الخدمة في الجلفنة بالغمس الساخن','bp2.date':'22 أبريل 2026 &middot; 6 دقائق',
+      'bp3.title':'من النفايات إلى الطاقة: تقنيات WtE وأهداف تركيا لعام 2030','bp3.date':'08 أبريل 2026 &middot; 7 دقائق',
+      'bp4.title':'تفاوتات الهياكل الفولاذية ومتطلبات الفحص غير الإتلافي وفق EN 1090-2','bp4.date':'20 مارس 2026 &middot; 9 دقائق',
+      'bp5.title':'ثغرات سلاسل التوريد العالمية 2026 واستراتيجيات التنويع','bp5.date':'05 مارس 2026 &middot; 5 دقائق',
+      'bp6.title':'متنقلة أم ثابتة؟ تحليل العائد على الاستثمار حسب حجم المشروع ومدته','bp6.date':'14 فبراير 2026 &middot; 5 دقائق',
+      'bp7.title':'إدارة EPC للمنشآت بنظام تسليم مفتاح: القيمة المكتسبة ومصفوفة المخاطر','bp7.date':'28 يناير 2026 &middot; 6 دقائق',
+      'bp8.title':'تحليل الاهتزاز ومحاذاة الأعمدة في المعدات الصناعية: التكلفة الخفية للتجميع الميكانيكي','bp8.date':'11 يونيو 2026 &middot; 6 دقائق',
+      'bp9.title':'الجلفنة بالغمس الساخن مقابل الطلاء: تحليل تكلفة دورة الحياة (LCC)','bp9.date':'25 يونيو 2026 &middot; 6 دقائق',
+      'pag.next':'التالي <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+      'foot.copy':'© 2026 مجموعة Vorqa Global — جميع الحقوق محفوظة','ad.val':'أنقرة · تركيا'}
+};
+function setLang(l){
+  const t=T[l];if(!t)return;
+  document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(e=>{const v=t[e.dataset.i18n];if(v!==undefined)e.textContent=v});
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{const v=t[e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});
+  document.querySelectorAll('.l-btn,.mob-l-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  localStorage.setItem('vorqa-lang',l);
+}
+setLang('tr');
+</script>
+
+
+</body></html>
