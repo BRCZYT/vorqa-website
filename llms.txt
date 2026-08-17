@@ -1,34 +1,58 @@
-# Vorqa Global
+# VORQA Global
 
-> Türkiye (Ankara) merkezli teknik tedarik ve proje entegrasyon partneri.
-> Türk uzman üreticilere, MENA ve Afrika projeleri için şeffaf ve
-> tek muhatap bir teknik tedarik & koordinasyon modeliyle erişim
-> sağlar.
+> Türkiye (Ankara) merkezli, müşteri tarafında çalışan teknik tedarik, endüstriyel satınalma ve proje tedarik koordinasyon partneri.
+> VORQA; ihtiyacın netleştirilmesinden uygun tedarikçi rotalarının oluşturulmasına, teknik-ticari karşılaştırmadan dokümantasyon, kalite, lojistik ve teslimat koordinasyonuna kadar süreci yönetir.
 
-## Ne yapıyoruz
-- Endüstriyel ekipman ve tesisler için teknik tedarik ve tedarikçi koordinasyonu
-- Çok-kalemli projelerin tek sözleşme / tek muhatap altında konsolidasyonu
-- Kalite, termin, lojistik ve dokümantasyon yönetimi
-- Dikeyler: beton santralleri, sıcak daldırma galvaniz, atıktan enerji/biyogaz,
-  çelik konstrüksiyon ve mekanik imalat, tedarik zinciri yönetimi
+## Temel çalışma alanları
+- Endüstriyel satınalma ve stratejik tedarik
+- Proje tedariği ve çok tedarikçili koordinasyon
+- Teknik ve ticari teklif karşılaştırması
+- Tedarikçi araştırma ve değerlendirme
+- Kalite, termin, lojistik ve dokümantasyon koordinasyonu
+- Beton santralleri
+- Komple sıcak daldırma galvaniz tesisleri
+- Atıktan enerji projeleri
+- Kırma ve eleme tesisleri
 
-## Kimiz
-- Kurucu: Burcu Adıgüzel
-- Doğrulanmış Türk tedarikçilerden oluşan bir ağ
-- Hedef pazarlar: Libya, Mısır, Irak, Körfez (MENA) ve Afrika
-- Diller: Türkçe, İngilizce, Arapça
+## VORQA Academy
+VORQA Academy bir ürün kataloğu değildir. Satınalma ve proje kararlarını destekleyen teknik bilgi merkezleri, uygulama rehberleri ve araştırma yazıları yayınlar. Bilgi merkezleri ilgili araştırmaları bir konu kümesi altında toplar ve canlı ihtiyaçları RFQ sürecine bağlar.
 
-## Sayfalar (TR / EN / AR)
-Site 3 sayfaya konsolide edilmiştir — Hakkımızda, Beton, Galvaniz, Atık-Enerji,
-Çelik Yapı & Mekanik İmalat, Tedarik Zinciri ve Referanslar artık ayrı sayfalar
-değil; içerikleri Ana Sayfa'nın ilgili bölümlerinde (What We Do, Industries,
-About) yer alır.
-- Ana Sayfa (tüm dikeyler + hakkımızda bölümü dahil): https://www.vorqaglobal.com/tr/ · /en/ · /ar/
-- Akademi (Blog): https://www.vorqaglobal.com/tr/akademi/ · /en/academy/ · /ar/academy/
-- İletişim: https://www.vorqaglobal.com/tr/iletisim/ · /en/contact/ · /ar/contact/
+### Academy Knowledge Hubs — English
+- Industrial Procurement & Strategic Sourcing: https://www.vorqaglobal.com/en/academy/industrial-procurement-strategic-sourcing/
+- Project Supply & Coordination: https://www.vorqaglobal.com/en/academy/project-supply-coordination/
+- Concrete Plants: https://www.vorqaglobal.com/en/academy/concrete-plants/
+- Galvanizing Plants: https://www.vorqaglobal.com/en/academy/galvanizing-plants/
+- Waste-to-Energy: https://www.vorqaglobal.com/en/academy/waste-to-energy/
+- Crushing & Screening: https://www.vorqaglobal.com/en/academy/crushing-screening/
+
+### Academy Bilgi Merkezleri — Türkçe
+- Endüstriyel Satınalma & Stratejik Tedarik: https://www.vorqaglobal.com/tr/akademi/endustriyel-satinalma-stratejik-tedarik/
+- Proje Tedariği & Koordinasyon: https://www.vorqaglobal.com/tr/akademi/proje-tedariki-koordinasyon/
+- Beton Santralleri: https://www.vorqaglobal.com/tr/akademi/beton-santralleri/
+- Galvaniz Tesisleri: https://www.vorqaglobal.com/tr/akademi/galvaniz-tesisleri/
+- Atıktan Enerjiye: https://www.vorqaglobal.com/tr/akademi/atiktan-enerji/
+- Kırma & Eleme: https://www.vorqaglobal.com/tr/akademi/kirma-eleme/
+
+### مراكز معرفة الأكاديمية — العربية
+- المشتريات الصناعية والتوريد الاستراتيجي: https://www.vorqaglobal.com/ar/academy/industrial-procurement/
+- توريد المشاريع والتنسيق: https://www.vorqaglobal.com/ar/academy/project-supply/
+- محطات الخرسانة: https://www.vorqaglobal.com/ar/academy/concrete-plants/
+- مصانع الجلفنة: https://www.vorqaglobal.com/ar/academy/galvanizing-plants/
+- تحويل النفايات إلى طاقة: https://www.vorqaglobal.com/ar/academy/waste-to-energy/
+- التكسير والغربلة: https://www.vorqaglobal.com/ar/academy/crushing-screening/
+
+## Kaynak ve doğruluk ilkesi
+- Teknik iddialar standart, üretici dokümanı, proje verisi veya açıkça belirtilen mühendislik varsayımlarına dayanmalıdır.
+- Kanıtlanmamış müşteri, proje, tedarikçi sayısı, ülke deneyimi, süre garantisi veya ticari başarı iddiası kullanılmaz.
+- AI destekli içerik insan kontrolü ve VORQA truth kurallarıyla doğrulanmadan yayınlanmamalıdır.
+
+## Ana sayfalar
+- Ana Sayfa: https://www.vorqaglobal.com/tr/ · https://www.vorqaglobal.com/en/ · https://www.vorqaglobal.com/ar/
+- Academy: https://www.vorqaglobal.com/tr/akademi/ · https://www.vorqaglobal.com/en/academy/ · https://www.vorqaglobal.com/ar/academy/
+- İletişim / RFQ: https://www.vorqaglobal.com/tr/iletisim/ · https://www.vorqaglobal.com/en/contact/ · https://www.vorqaglobal.com/ar/contact/
 
 ## İletişim
 - Adres: Uzay Çağı Caddesi, OSTİM, Yenimahalle, Ankara, Türkiye
 - Telefon: +90 540 008 67 72
-- E-posta: purchasing@vorqaglobal.com (satın alma) · info@vorqaglobal.com (genel)
+- E-posta: purchasing@vorqaglobal.com · info@vorqaglobal.com
 - Web: https://www.vorqaglobal.com
