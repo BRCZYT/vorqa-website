@@ -1,52 +1,16 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
-      ]
-    }
-  ],
+  "headers": [{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"X-Frame-Options","value":"SAMEORIGIN"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},{"key":"Permissions-Policy","value":"camera=(), microphone=(), geolocation=(), payment=()"},{"key":"Strict-Transport-Security","value":"max-age=63072000; includeSubDomains; preload"}]}],
   "redirects": [
-    { "source": "/atik-donusum.html", "destination": "/tr/", "permanent": true },
-    { "source": "/", "destination": "/en/", "permanent": true },
-    { "source": "/hakkimizda.html", "destination": "/tr/", "permanent": true },
-    { "source": "/beton.html", "destination": "/tr/", "permanent": true },
-    { "source": "/galvaniz.html", "destination": "/tr/", "permanent": true },
-    { "source": "/enerji.html", "destination": "/tr/", "permanent": true },
-    { "source": "/celik-yapi-mekanik-imalat.html", "destination": "/tr/", "permanent": true },
-    { "source": "/tedarik-zinciri.html", "destination": "/tr/", "permanent": true },
-    { "source": "/referanslar.html", "destination": "/tr/", "permanent": true },
-    { "source": "/belgelerimiz.html", "destination": "/tr/", "permanent": true },
-    { "source": "/akademi.html", "destination": "/tr/akademi/", "permanent": true },
-    { "source": "/iletisim.html", "destination": "/tr/iletisim/", "permanent": true },
-    { "source": "/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html", "destination": "/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/", "permanent": true }
+    {"source":"/atik-donusum.html","destination":"/tr/","permanent":true},{"source":"/","destination":"/en/","permanent":true},{"source":"/hakkimizda.html","destination":"/tr/","permanent":true},{"source":"/beton.html","destination":"/tr/","permanent":true},{"source":"/galvaniz.html","destination":"/tr/","permanent":true},{"source":"/enerji.html","destination":"/tr/","permanent":true},{"source":"/celik-yapi-mekanik-imalat.html","destination":"/tr/","permanent":true},{"source":"/tedarik-zinciri.html","destination":"/tr/","permanent":true},{"source":"/referanslar.html","destination":"/tr/","permanent":true},{"source":"/belgelerimiz.html","destination":"/tr/","permanent":true},{"source":"/akademi.html","destination":"/tr/akademi/","permanent":true},{"source":"/iletisim.html","destination":"/tr/iletisim/","permanent":true},{"source":"/vorqa-blog/beton-santrali-kapasite-hesaplama-2026-05-10.html","destination":"/tr/akademi/beton-santrali-kapasite-hesaplama-2026-05-10/","permanent":true}
   ],
   "rewrites": [
-    { "source": "/en/academy/knowledge-map/", "destination": "/api/academy-map?lang=en" },
-    { "source": "/tr/akademi/bilgi-haritasi/", "destination": "/api/academy-map?lang=tr" },
-    { "source": "/ar/academy/knowledge-map/", "destination": "/api/academy-map?lang=ar" },
-    { "source": "/en/academy/industrial-procurement-strategic-sourcing/", "destination": "/api/academy-hub?lang=en&topic=industrial-procurement" },
-    { "source": "/tr/akademi/endustriyel-satinalma-stratejik-tedarik/", "destination": "/api/academy-hub?lang=tr&topic=industrial-procurement" },
-    { "source": "/ar/academy/industrial-procurement/", "destination": "/api/academy-hub?lang=ar&topic=industrial-procurement" },
-    { "source": "/en/academy/project-supply-coordination/", "destination": "/api/academy-hub?lang=en&topic=project-supply" },
-    { "source": "/tr/akademi/proje-tedariki-koordinasyon/", "destination": "/api/academy-hub?lang=tr&topic=project-supply" },
-    { "source": "/ar/academy/project-supply/", "destination": "/api/academy-hub?lang=ar&topic=project-supply" },
-    { "source": "/en/academy/concrete-plants/", "destination": "/api/academy-hub?lang=en&topic=concrete-plants" },
-    { "source": "/tr/akademi/beton-santralleri/", "destination": "/api/academy-hub?lang=tr&topic=concrete-plants" },
-    { "source": "/ar/academy/concrete-plants/", "destination": "/api/academy-hub?lang=ar&topic=concrete-plants" },
-    { "source": "/en/academy/galvanizing-plants/", "destination": "/api/academy-hub?lang=en&topic=galvanizing-plants" },
-    { "source": "/tr/akademi/galvaniz-tesisleri/", "destination": "/api/academy-hub?lang=tr&topic=galvanizing-plants" },
-    { "source": "/ar/academy/galvanizing-plants/", "destination": "/api/academy-hub?lang=ar&topic=galvanizing-plants" },
-    { "source": "/en/academy/waste-to-energy/", "destination": "/api/academy-hub?lang=en&topic=waste-to-energy" },
-    { "source": "/tr/akademi/atiktan-enerji/", "destination": "/api/academy-hub?lang=tr&topic=waste-to-energy" },
-    { "source": "/ar/academy/waste-to-energy/", "destination": "/api/academy-hub?lang=ar&topic=waste-to-energy" },
-    { "source": "/en/academy/crushing-screening/", "destination": "/api/academy-hub?lang=en&topic=crushing-screening" },
-    { "source": "/tr/akademi/kirma-eleme/", "destination": "/api/academy-hub?lang=tr&topic=crushing-screening" },
-    { "source": "/ar/academy/crushing-screening/", "destination": "/api/academy-hub?lang=ar&topic=crushing-screening" }
+    {"source":"/en/academy/","destination":"/api/academy-index?lang=en"},{"source":"/tr/akademi/","destination":"/api/academy-index?lang=tr"},{"source":"/ar/academy/","destination":"/api/academy-index?lang=ar"},
+    {"source":"/en/academy/knowledge-map/","destination":"/api/academy-map?lang=en"},{"source":"/tr/akademi/bilgi-haritasi/","destination":"/api/academy-map?lang=tr"},{"source":"/ar/academy/knowledge-map/","destination":"/api/academy-map?lang=ar"},
+    {"source":"/en/academy/industrial-procurement-strategic-sourcing/","destination":"/api/academy-hub?lang=en&topic=industrial-procurement"},{"source":"/tr/akademi/endustriyel-satinalma-stratejik-tedarik/","destination":"/api/academy-hub?lang=tr&topic=industrial-procurement"},{"source":"/ar/academy/industrial-procurement/","destination":"/api/academy-hub?lang=ar&topic=industrial-procurement"},
+    {"source":"/en/academy/project-supply-coordination/","destination":"/api/academy-hub?lang=en&topic=project-supply"},{"source":"/tr/akademi/proje-tedariki-koordinasyon/","destination":"/api/academy-hub?lang=tr&topic=project-supply"},{"source":"/ar/academy/project-supply/","destination":"/api/academy-hub?lang=ar&topic=project-supply"},
+    {"source":"/en/academy/concrete-plants/","destination":"/api/academy-hub?lang=en&topic=concrete-plants"},{"source":"/tr/akademi/beton-santralleri/","destination":"/api/academy-hub?lang=tr&topic=concrete-plants"},{"source":"/ar/academy/concrete-plants/","destination":"/api/academy-hub?lang=ar&topic=concrete-plants"},
+    {"source":"/en/academy/galvanizing-plants/","destination":"/api/academy-hub?lang=en&topic=galvanizing-plants"},{"source":"/tr/akademi/galvaniz-tesisleri/","destination":"/api/academy-hub?lang=tr&topic=galvanizing-plants"},{"source":"/ar/academy/galvanizing-plants/","destination":"/api/academy-hub?lang=ar&topic=galvanizing-plants"},
+    {"source":"/en/academy/waste-to-energy/","destination":"/api/academy-hub?lang=en&topic=waste-to-energy"},{"source":"/tr/akademi/atiktan-enerji/","destination":"/api/academy-hub?lang=tr&topic=waste-to-energy"},{"source":"/ar/academy/waste-to-energy/","destination":"/api/academy-hub?lang=ar&topic=waste-to-energy"},
+    {"source":"/en/academy/crushing-screening/","destination":"/api/academy-hub?lang=en&topic=crushing-screening"},{"source":"/tr/akademi/kirma-eleme/","destination":"/api/academy-hub?lang=tr&topic=crushing-screening"},{"source":"/ar/academy/crushing-screening/","destination":"/api/academy-hub?lang=ar&topic=crushing-screening"}
   ]
 }
