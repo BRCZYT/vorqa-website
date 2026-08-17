@@ -68,7 +68,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}
 /* Master logo is navy-on-white — not suited to the dark nav/footer as-is,
    so it sits on a small light plaque for contrast instead. */
-.nav-logo-img{display:block;height:52px;width:auto}
+.nav-logo-img{display:block;height:52px;width:auto;max-width:100%;object-fit:contain;flex-shrink:0}
 /* This page's nav goes from a dark hero overlay to a white scrolled bar
    (unlike index.html/iletisim.html, which stay dark) — the white logo
    variant disappears against that white bar, so swap to the navy-on-white
@@ -364,6 +364,16 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
   .featured-img-wrap{min-height:220px}
 }
 @media(max-width:768px){
+  /* #nav.scrolled{padding:13px 56px} above has no media query, so its
+     ID+class specificity beats the plain #nav{padding:14px 20px} rule
+     here even on mobile — nav silently reverted to desktop's 56px side
+     padding while scrolled, eating 72px of flex width. .lang-sw is
+     flex-shrink:0 (never shrinks), so the unprotected nav-logo-img took
+     the squeeze: flexbox shrank its rendered WIDTH while its CSS
+     height:52px stayed fixed, distorting the aspect ratio. Re-declaring
+     the mobile padding for the scrolled state here (same specificity,
+     later in source) restores the correct 20px and removes the squeeze. */
+  #nav.scrolled{padding:13px 20px}
   #nav{padding:14px 20px}.nav-links{display:none}.ham-btn{display:flex}
   .hero-inner{padding:100px 20px 70px}
   #mira-strip{padding:28px 20px}

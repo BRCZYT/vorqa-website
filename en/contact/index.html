@@ -52,7 +52,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;
 .nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}
 /* Master logo is navy-on-white — not suited to the dark nav/footer as-is,
    so it sits on a small light plaque for contrast instead. */
-.nav-logo-img{display:block;height:52px;width:auto}
+.nav-logo-img{display:block;height:52px;width:auto;max-width:100%;object-fit:contain;flex-shrink:0}
 .foot-logo-img{display:block;height:40px;width:auto}
 .nl-z,.nl-y,.nl-t{transition:transform .35s cubic-bezier(.34,1.56,.64,1);transform-box:fill-box;transform-origin:center}
 .nav-logo:hover .nl-z{transform:translateX(-4px)}
@@ -216,6 +216,16 @@ html[dir="rtl"] #hero{text-align:right}
   .quick-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
+  /* #nav.scrolled{padding:14px 56px} above has no media query, so its
+     ID+class specificity beats the plain #nav{padding:14px 20px} rule
+     here even on mobile — nav silently reverted to desktop's 56px side
+     padding while scrolled, eating 72px of flex width. .lang-sw is
+     flex-shrink:0 (never shrinks), so the unprotected nav-logo-img took
+     the squeeze: flexbox shrank its rendered WIDTH while its CSS
+     height:52px stayed fixed, distorting the aspect ratio. Re-declaring
+     the mobile padding for the scrolled state here (same specificity,
+     later in source) restores the correct 20px and removes the squeeze. */
+  #nav.scrolled{padding:14px 20px}
   #nav{padding:14px 20px}
   .nav-links{display:none}
   .ham-btn{display:flex}
