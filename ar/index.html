@@ -768,10 +768,17 @@ html[dir="rtl"] .hero-h1{direction:rtl}
 .co-hx-section,#plant-sec{position:relative}
 .co-hx-section::before,#plant-sec::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.035;background-image:linear-gradient(rgba(40,116,178,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(40,116,178,.4) 1px,transparent 1px);background-size:80px 80px}
 
-/* ── Enhanced scroll reveal ── */
-.rv{opacity:0;transform:translateY(44px) scale(.972);filter:blur(6px);
-  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1)}
-.rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+/* ── Enhanced scroll reveal ──
+   No filter:blur — animating blur forces a repaint of the element every
+   frame of the transition (unlike opacity/transform, which the compositor
+   handles without touching pixels), and with 20+ .rv elements on a page,
+   several can cross the IntersectionObserver threshold in the same batch
+   (e.g. scrolling out of the hero into the next section) and all start
+   blurring at once. Measured: hero-exit scroll dropped to ~2-9 FPS with
+   blur; opacity+transform only is compositor-only and doesn't. */
+.rv{opacity:0;transform:translateY(16px);
+  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+.rv.on{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.10s}.d2{transition-delay:.20s}.d3{transition-delay:.30s}
 
 /* ── Industries rail panels: .rv's own `transition` shorthand above
@@ -786,20 +793,19 @@ html[dir="rtl"] .hero-h1{direction:rtl}
     flex-basis .7s cubic-bezier(.33,0,.2,1),
     border-color .3s,
     opacity .9s cubic-bezier(.22,1,.36,1),
-    transform .9s cubic-bezier(.22,1,.36,1),
-    filter .9s cubic-bezier(.22,1,.36,1);
+    transform .9s cubic-bezier(.22,1,.36,1);
 }
-/* Directional entrance on top of .rv's translateY+scale+blur: panels
-   also drift in from the left so the rail reads as a left-to-right
-   cascade rather than every panel fading in place at once. transform
-   never affects layout/scrollWidth, so this can't jitter the rail's
-   own horizontal scrollbar. RTL: panels drift in from the right
-   instead, matching direction:rtl already reversing the rail's visual
-   order — first-DOM-panel (shortest delay) is now the rightmost panel,
-   so the cascade still starts at the true reading-order edge without
-   needing to renumber the delays themselves. */
-.ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(-24px);filter:blur(4px)}
-.ind-rail .ind-panel.rv.on{transform:translateY(0) scale(1) translateX(0);filter:blur(0)}
+/* Directional entrance on top of .rv's translateY+scale (no blur — see
+   the .rv comment above): panels also drift in from the left so the
+   rail reads as a left-to-right cascade rather than every panel fading
+   in place at once. transform never affects layout/scrollWidth, so this
+   can't jitter the rail's own horizontal scrollbar. RTL: panels drift in
+   from the right instead, matching direction:rtl already reversing the
+   rail's visual order — first-DOM-panel (shortest delay) is now the
+   rightmost panel, so the cascade still starts at the true reading-order
+   edge without needing to renumber the delays themselves. */
+.ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(-24px)}
+.ind-rail .ind-panel.rv.on{transform:translateY(0) scale(1) translateX(0)}
 html[dir="rtl"] .ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(24px)}
 /* More pronounced stagger than the sitewide .d1-d4 (shared/reused
    everywhere else) so the cascade reads as ritmik/one-by-one rather
@@ -840,59 +846,6 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 #foot{background:linear-gradient(180deg,#1e4f84 0%,#102d56 18%,#071e38 52%,#051728 100%) !important}
 #foot::after{content:'';position:absolute;top:0;left:0;right:0;height:220px;background:radial-gradient(ellipse 90% 100% at 50% 0%,rgba(40,116,178,.55) 0%,rgba(40,116,178,.22) 40%,transparent 70%);pointer-events:none;z-index:0;animation:foot-top-pulse 6s ease-in-out infinite}
 @keyframes foot-top-pulse{0%,100%{opacity:.75}50%{opacity:1}}
-
-/* ══════════════════════════════════════════
-   PROJECTS SCROLL-PIN  §04
-══════════════════════════════════════════ */
-
-/* §04 installation animation keyframes */
-@keyframes prj-side-drift{0%,100%{opacity:.5;transform:translateX(0) scale(1)}50%{opacity:.85;transform:translateX(60px) scale(1.12)}}
-@keyframes col-rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@keyframes beam-extend{from{stroke-dashoffset:var(--bl,400)}to{stroke-dashoffset:0}}
-@keyframes inst-appear{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
-@keyframes crane-arm{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
-@keyframes hook-travel{0%,100%{transform:translateY(0)}45%,55%{transform:translateY(68px)}}
-@keyframes pipe-flow{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
-@keyframes inst-belt{stroke-dashoffset:0;animation:belt-flow .5s linear infinite}
-@keyframes chimney-rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@keyframes worker-walk{0%{transform:translateX(0)}100%{transform:translateX(80px)}}
-@keyframes dot-pulse{0%,100%{opacity:.4}50%{opacity:1}}
-
-/* light background + install SVG container */
-.prj-pin-root{position:relative;background:var(--bg-light-2)}
-.prj-pin-stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:clamp(80px,13vh,130px);padding-bottom:clamp(36px,5vh,60px);background:linear-gradient(135deg,#f2f7fc 0%,#bcd6f2 18%,#e8eef4 35%,#90bae3 52%,#d8e8f6 68%,#a8c8ec 84%,#edf3f9 100%);background-size:360% 360%;animation:prj-bg-morph 22s ease-in-out infinite}
-@keyframes prj-bg-morph{0%{background-position:0% 50%}33%{background-position:100% 20%}66%{background-position:50% 100%}100%{background-position:0% 50%}}
-.prj-install-anim{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-.prj-install-svg{position:absolute;inset:0;width:100%;height:100%}
-
-/* keep existing bg div (unused but harmless) */
-.prj-pin-bg{position:absolute;inset:0;pointer-events:none}
-.prj-pin-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(10,37,64,.03) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(10,37,64,.03) 60px)}
-.prj-pin-bg::after{display:none}
-.prj-pin-side-l,.prj-pin-side-r{position:absolute;top:0;bottom:0;width:38%;pointer-events:none;z-index:0}
-.prj-pin-side-l{left:0;background:radial-gradient(ellipse 80% 70% at 0% 50%,rgba(40,116,178,.18) 0%,transparent 65%);animation:prj-side-drift 14s ease-in-out infinite}
-.prj-pin-side-r{right:0;background:radial-gradient(ellipse 80% 70% at 100% 50%,rgba(92,141,184,.14) 0%,transparent 65%);animation:prj-side-drift 18s ease-in-out infinite reverse}
-.prj-pin-hdr{position:absolute;top:0;left:0;right:0;padding:clamp(18px,2.5vh,32px) clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(10,37,64,.1);z-index:4}
-.prj-pin-counter{font-family:'JetBrains Mono Variable',monospace;font-size:11px;letter-spacing:2.5px;color:rgba(10,37,64,.38)}
-.prj-ghost{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(.3rem,.67vw,.52rem);font-weight:300;letter-spacing:-.02em;color:rgba(10,37,64,.15);text-align:center;pointer-events:none;user-select:none;min-height:1.2em;line-height:1.2;transition:opacity .35s;padding:0 clamp(20px,5vw,100px)}
-.prj-ghost--prev{margin-bottom:clamp(14px,2.2vh,28px)}
-.prj-ghost--next{margin-top:clamp(14px,2.2vh,28px)}
-.prj-stage{display:flex;flex-direction:column;align-items:center;position:relative;z-index:3}
-.prj-img-wrap{width:clamp(360px,60vh,630px);height:clamp(360px,60vh,630px);border-radius:50%;overflow:hidden;border:2px solid rgba(40,116,178,.3);box-shadow:0 0 0 10px rgba(40,116,178,.07),0 20px 60px rgba(10,37,64,.18);margin:0 auto clamp(10px,1.4vh,16px);flex-shrink:0;will-change:opacity,transform;transition:opacity .22s}
-.prj-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.prj-current{text-align:center;will-change:opacity,transform}
-.prj-curr-meta{font-family:'JetBrains Mono Variable',monospace;font-size:3.5px;letter-spacing:1px;color:#2874B2;text-transform:uppercase;margin-bottom:4px}
-.prj-curr-title{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-size:clamp(.52rem,1.27vw,1.07rem);font-weight:300;letter-spacing:-.03em;color:var(--ink);line-height:1.05;margin-bottom:clamp(3px,.5vh,5px);max-width:680px}
-.prj-curr-desc{font-family:'Manrope Variable',Manrope,sans-serif;font-size:clamp(4px,.32vw,4.7px);color:var(--ink-soft);line-height:1.68;max-width:450px;margin:0 auto}
-.prj-pin-bot{position:absolute;bottom:clamp(20px,3.2vh,38px);left:0;right:0;display:flex;align-items:center;justify-content:center;gap:30px;z-index:4}
-.prj-dots{display:flex;gap:8px;align-items:center}
-.prj-dot{width:6px;height:6px;border-radius:50%;background:rgba(10,37,64,.2);transition:background .3s cubic-bezier(.22,1,.36,1),width .3s cubic-bezier(.22,1,.36,1),border-radius .3s;cursor:default}
-.prj-dot.active{background:#2874B2;width:18px;border-radius:3px}
-.prj-scroll-hint{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono Variable',monospace;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(10,37,64,.3)}
-.prj-prog-rail{position:absolute;right:clamp(14px,2.8vw,44px);top:50%;transform:translateY(-50%);width:2px;height:clamp(66px,10vh,100px);background:rgba(10,37,64,.1);border-radius:2px;overflow:hidden;z-index:4}
-.prj-prog-fill{width:100%;height:0%;background:linear-gradient(180deg,transparent,#2874B2 40%,#5C8DB8);border-radius:2px;transition:height .5s cubic-bezier(.4,0,.2,1)}
-.prj-pin-step{height:100vh}
-@media(max-width:600px){.prj-curr-title{font-size:clamp(.4rem,1.83vw,.63rem)}.prj-ghost{font-size:clamp(.27rem,1.17vw,.37rem)}.prj-img-wrap{width:clamp(285px,48vh,450px);height:clamp(285px,48vh,450px)}.prj-prog-rail{display:none}.prj-scroll-hint{display:none}.prj-install-anim{display:none}}
 
 /* CREATIVE-REFRESH CSS — brief §1-5, §7 (index.html only, for review) */
 .hero-grid-bg{animation:cr-grid-drift 26s linear infinite}
@@ -1235,8 +1188,29 @@ window.addEventListener('scroll', ()=>{
 }, {passive:true});
 
 /* ── Scroll reveal ────────────────────────── */
+/* will-change is applied only while an element is actually transitioning
+   (set right before .on, cleared on transitionend) rather than left on
+   permanently — a lingering will-change on 20+ elements site-wide would
+   keep that many GPU layers alive for no reason once revealed. Entries
+   that cross the threshold in the same observer callback (e.g. several
+   .rv elements becoming visible in one scroll tick) get a light index-
+   based stagger so they don't all start their transition in the same
+   frame. */
 const ro = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on') });
+  entries.forEach((e,i)=>{
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    if(el.classList.contains('on')) return;
+    el.style.willChange = 'opacity,transform';
+    setTimeout(()=>{
+      el.classList.add('on');
+      el.addEventListener('transitionend', function onRevealEnd(ev){
+        if(ev.target !== el) return;
+        el.style.willChange = 'auto';
+        el.removeEventListener('transitionend', onRevealEnd);
+      });
+    }, i * 40);
+  });
 }, {threshold:0.08});
 document.querySelectorAll('.rv').forEach(el=> ro.observe(el));
 

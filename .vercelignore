@@ -40,3 +40,14 @@ images/galvaniz/galvapro-Ek-2.pdf
 # Waste-to-Energy card image: only the optimized waste-to-energy.jpg is
 # used live. The source PNG (unused, 2.2MB) stays out of the deploy.
 images/dönüşüm/Waste-to-Energy.png
+
+# Stray JSON dumps (debug traces, etc.) shouldn't ship by default — a raw
+# Chrome performance trace briefly leaked to production this way. Explicit
+# exceptions: vercel.json is Vercel's own deploy config (redirects/headers)
+# and must stay; package*.json are already listed above; api/vorqa_truth.json
+# is read at runtime by api/mira-generate.js (the live serverless function).
+*.json
+!vercel.json
+!package.json
+!package-lock.json
+!api/vorqa_truth.json
