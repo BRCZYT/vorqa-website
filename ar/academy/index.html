@@ -302,9 +302,9 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 .btn-o:hover{color:#2874B2;border-color:#2874B2;background:rgba(40,116,178,.04)}
 
 /* SCROLL REVEAL */
-.rv{opacity:0;transform:translateY(32px) scale(.98);filter:blur(4px);
-  transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1),filter .75s cubic-bezier(.22,1,.36,1)}
-.rv.on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+.rv{opacity:0;transform:translateY(32px) scale(.98);
+  transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+.rv.on{opacity:1;transform:translateY(0) scale(1)}
 
 /* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
    glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
@@ -717,6 +717,7 @@ html[dir="rtl"] .hdg-ar-fix{letter-spacing:normal;text-transform:none}
 (function(){
   var canvas=document.getElementById('neural-canvas');
   if(!canvas)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 768){canvas.style.display='none';return;}
   var ctx=canvas.getContext('2d');
   var W,H,nodes=[],packets=[],frame=0;
   var NODE_COUNT=72,CONNECT=155;
