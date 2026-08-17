@@ -1,3 +1,4 @@
+// One-shot patch; remove after the four Home files are verified.
 const fs=require('fs');
 const replacements={
  en:['The right manufacturer, supplier or specialized plant partner is matched from our verified network.','The right manufacturer, supplier or specialized plant partner is identified through requirement-specific supplier and partner research.'],
