@@ -11,7 +11,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const response = await fetch("https://api.openai.com/v1/responses", {
+    const direct = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,18 +24,16 @@ module.exports = async function handler(req, res) {
       }),
     });
 
-    let body = null;
-    try {
-      body = await response.json();
-    } catch (_) {}
+    let directBody = null;
+    try { directBody = await direct.json(); } catch (_) {}
 
-    if (!response.ok) {
-      const err = body && body.error ? body.error : {};
+    if (!direct.ok) {
+      const err = directBody && directBody.error ? directBody.error : {};
       res.statusCode = 502;
       return res.end(JSON.stringify({
         ok: false,
-        stage: "openai",
-        upstream_status: response.status,
+        stage: "openai_direct",
+        upstream_status: direct.status,
         upstream_error_type: err.type || null,
         upstream_error_code: err.code || null,
         upstream_error_message: err.message || null,
@@ -43,18 +41,35 @@ module.exports = async function handler(req, res) {
       }));
     }
 
-    const text = typeof body?.output_text === "string"
-      ? body.output_text
-      : (body?.output || []).flatMap(i => i.content || []).filter(c => c.type === "output_text").map(c => c.text || "").join("\n");
+    const smoke = await fetch("https://www.vorqaglobal.com/api/mira-generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        topic: "Why technical procurement should compare lifecycle cost, not only purchase price",
+        persona: "MIRA",
+        language: "EN",
+        content_type: "Procurement Education",
+        source_class: "PUBLIC"
+      }),
+    });
+
+    let smokeBody = null;
+    try { smokeBody = await smoke.json(); } catch (_) {}
 
     res.statusCode = 200;
     return res.end(JSON.stringify({
-      ok: true,
-      stage: "openai",
-      upstream_status: response.status,
-      model: body?.model || model,
-      response_id: body?.id || null,
-      output_ok: String(text).trim() === "MIRA_DIAGNOSTIC_OK",
+      ok: direct.ok && smoke.ok,
+      stage: "full_mira_smoke",
+      direct_openai_status: direct.status,
+      direct_model: directBody?.model || model,
+      mira_status: smoke.status,
+      mira_ok: Boolean(smokeBody?.ok),
+      mira_error: smokeBody?.error || null,
+      mira_message: smokeBody?.message || null,
+      generation_mode: smokeBody?.generation?.mode || null,
+      generation_model: smokeBody?.generation?.model || null,
+      human_approved: typeof smokeBody?.human_approved === "boolean" ? smokeBody.human_approved : null,
+      fact_validation_passed: typeof smokeBody?.fact_validation?.passed === "boolean" ? smokeBody.fact_validation.passed : null
     }));
   } catch (error) {
     res.statusCode = 500;
