@@ -360,17 +360,80 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 @media(max-width:768px){.co-hx-link{opacity:1;transform:none}}
 
 /* ══════════════════════════════════════════
-   §01 SHOWROOM — copy + dual-column auto-scrolling vitrine (light-alt)
-   No pin/ScrollTrigger yet — the vitrine flows on its own via CSS
-   keyframes, independent of scroll position.
+   §01 HOW WE WORK — animated radial working model.
+   Center emblem (dual counter-rotating rings + breathing glow) with 6
+   nodes (3 left / 3 right) connected by curved SVG wires; orange energy
+   dots flow inward along each wire, node badges pulse in sequence, and
+   nodes highlight orange on hover. Everything here is pure CSS —
+   transform/opacity/stroke-dashoffset only (no filter/blur: that class
+   of property forces a repaint per frame instead of a compositor-only
+   op, the exact cause of an earlier scroll-jank bug in this same area),
+   driven entirely by @keyframes + animation-delay, so there's no
+   ScrollTrigger/pin and no JS at all — replaces the old pinned
+   sticky+scrub scene (see git history) that used to live here.
 ══════════════════════════════════════════ */
-/* Capped so the whole pinned scene fits in one viewport — otherwise
-   steps 3-5 sit below the fold the entire time the section is pinned,
-   since pinning holds the section's TOP at the viewport's top but
-   does nothing about content taller than the viewport itself. */
-.showroom-grid{display:grid;grid-template-columns:2fr 1fr;gap:clamp(30px,5vw,70px);align-items:start;max-height:min(100vh,760px)}
+.stage{position:relative;height:680px;max-width:1160px;margin:40px auto 0}
+.wires{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.wire{fill:none;stroke:var(--line-light);stroke-width:1.5}
+.wire .flow{fill:none;stroke:var(--orange);stroke-width:2;stroke-linecap:round;
+  stroke-dasharray:4 120;animation:how-flow 3s linear infinite}
+@keyframes how-flow{to{stroke-dashoffset:-124}}
+.wire.w2 .flow{animation-delay:.5s}.wire.w3 .flow{animation-delay:1s}
+.wire.w4 .flow{animation-delay:1.5s}.wire.w5 .flow{animation-delay:2s}.wire.w6 .flow{animation-delay:2.5s}
 
-.showroom-vitrine{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:min(72vh,620px);overflow:hidden;position:relative;
+.how-node{position:absolute;z-index:2;width:260px;display:flex;gap:14px;align-items:center}
+.how-node.left{flex-direction:row-reverse;text-align:right}
+.how-badge{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--navy);
+  display:grid;place-items:center;font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:800;font-size:1rem;
+  color:#fff;position:relative;transition:background .3s,transform .3s,color .3s}
+.how-badge::before{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid var(--orange);
+  opacity:0;animation:how-pulse 4s ease-out infinite}
+.n1 .how-badge::before{animation-delay:0s}.n2 .how-badge::before{animation-delay:.66s}.n3 .how-badge::before{animation-delay:1.33s}
+.n4 .how-badge::before{animation-delay:2s}.n5 .how-badge::before{animation-delay:2.66s}.n6 .how-badge::before{animation-delay:3.33s}
+@keyframes how-pulse{0%{opacity:.7;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.5)}}
+.how-node:hover .how-badge{background:var(--orange);color:var(--mid);transform:scale(1.1)}
+.how-txt h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);margin-bottom:4px;letter-spacing:-.01em;transition:color .3s}
+.how-node:hover .how-txt h3{color:var(--orange)}
+.how-txt p{font-family:'Manrope Variable',Manrope,sans-serif;font-size:.82rem;color:var(--ink-soft);line-height:1.45}
+
+.n1{top:20px;left:0}.n2{top:254px;left:0}.n3{top:488px;left:0}
+.n4{top:20px;right:0}.n5{top:254px;right:0}.n6{top:488px;right:0}
+
+.how-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;
+  width:160px;height:160px;display:grid;place-items:center}
+.how-ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--line-light);animation:how-spin 50s linear infinite}
+.how-ring2{position:absolute;inset:16px;border-radius:50%;border:1px dashed var(--steel);opacity:.55;animation:how-spin-r 35s linear infinite}
+@keyframes how-spin{to{transform:rotate(360deg)}}
+@keyframes how-spin-r{to{transform:rotate(-360deg)}}
+.how-emb{width:56%;height:56%;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 34px -8px rgba(10,37,64,.35);z-index:2;overflow:hidden}
+.how-emb img{width:84%;height:84%;object-fit:contain;display:block}
+.how-glow{position:absolute;inset:-10%;border-radius:50%;background:radial-gradient(circle,rgba(232,119,34,.14),transparent 60%);animation:how-breathe 4s ease-in-out infinite}
+@keyframes how-breathe{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+
+html[dir="rtl"] .n1,html[dir="rtl"] .n2,html[dir="rtl"] .n3{left:auto;right:0}
+html[dir="rtl"] .n4,html[dir="rtl"] .n5,html[dir="rtl"] .n6{right:auto;left:0}
+html[dir="rtl"] .how-node.left{flex-direction:row;text-align:left}
+html[dir="rtl"] .how-node:not(.left){flex-direction:row-reverse;text-align:right}
+html[dir="rtl"] .wires{transform:scaleX(-1)}
+
+@media(max-width:820px){
+  .stage{height:auto;display:flex;flex-direction:column;gap:0;margin-top:24px}
+  .wires{display:none}
+  .how-center{position:relative;left:auto;top:auto;transform:none;margin:0 auto 30px;order:-1}
+  .how-node{position:static;width:100%;flex-direction:row !important;text-align:left !important;margin-bottom:22px}
+  html[dir="rtl"] .how-node{flex-direction:row-reverse !important;text-align:right !important}
+}
+@media(prefers-reduced-motion:reduce){
+  .wire .flow,.how-ring,.how-ring2,.how-glow,.how-badge::before{animation:none}
+  .how-glow{opacity:.6}
+}
+
+/* ══════════════════════════════════════════
+   §01b SHOWROOM — standalone dual-column auto-scrolling vitrine
+   (decoupled from How We Work; no pin/ScrollTrigger — the vitrine flows
+   on its own via CSS keyframes, independent of scroll position).
+══════════════════════════════════════════ */
+.showroom-vitrine{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:min(60vh,520px);width:min(100%,440px);margin:0 auto;overflow:hidden;position:relative;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%)}
 .sr-col{overflow:hidden;position:relative;height:100%}
@@ -386,51 +449,8 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
 .sr-cap{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;
   background:linear-gradient(to top,rgba(5,23,40,.82) 0%,transparent 100%);
   font-family:'JetBrains Mono Variable',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#fff}
-/* Tablet: pin still runs (see JS matchMedia), but 33% felt cramped for
-   the vitrine at this width — give it ~40% instead. */
-@media(min-width:821px) and (max-width:1024px){
-  .showroom-grid{grid-template-columns:3fr 2fr}
-}
-/* Mobile (matches the site-wide 820/821 breakpoint used by every other
-   scene, e.g. the What We Do rows below): pin is disabled entirely in
-   JS (sticky/pin feels janky at this size) — plain single-column stack
-   instead, steps first in DOM/visual order (spine), vitrine as its own
-   block below with its own flow (the scroll-driven dim/highlight only
-   exists at >=821px). */
 @media(max-width:820px){
-  /* max-height:none: the base rule's min(100vh,760px) cap exists only to
-     keep the desktop PINNED scene inside one viewport (see its comment) —
-     on mobile there's no pin, so the 6 stacked steps + vitrine (easily
-     1200px+ of real content) were being capped at ~760px with the excess
-     silently overlapped by the next section (What We Do), instead of
-     just letting the column grow to its natural content height. */
-  .showroom-grid{grid-template-columns:1fr;gap:36px;max-height:none}
-  .showroom-vitrine{height:56vh}
-  .showroom-how-col .step-cell{opacity:1 !important;transform:none !important}
-}
-
-/* ══════════════════════════════════════════
-   §02 HOW WE WORK — 2×3 step grid (light)
-══════════════════════════════════════════ */
-/* Fixed-height frame so the whole pinned scene still fits in one
-   viewport: 6 cells in a plain 2-column/3-row grid (normal flow, no
-   absolute stacking) reveal ONE AT A TIME, in DOM order (step 1, 2, 3...
-   6 — left-to-right then down within the 2-col grid), as the pin
-   progresses — see the JS matchMedia block below. padding-left makes
-   room for .spine-line, a vertical progress indicator that draws top to
-   bottom in sync (desktop only — see its own media-scoped display:none). */
-.spine{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:24px 40px;height:min(56vh,460px);margin-top:32px;position:relative;padding-left:22px}
-.spine-line{position:absolute;left:0;top:2px;bottom:2px;width:2px;border-radius:2px;background:linear-gradient(180deg,#2874B2,rgba(40,116,178,.15));transform-origin:top;transform:scaleY(0)}
-.step-cell{display:flex;flex-direction:column;justify-content:center}
-.step-cell-num{font-family:'JetBrains Mono Variable',monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--steel);margin-bottom:8px;display:block}
-.step-cell h3{font-family:'Sora Variable',Sora,'Noto Sans Arabic Variable',sans-serif;font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em}
-.step-cell p{font-family:'Manrope Variable',Manrope,sans-serif;color:var(--ink-soft);font-size:.88rem;line-height:1.55}
-@media(max-width:820px){
-  /* Pin is disabled here too (see the JS matchMedia block) — plain
-     single-column stack, all 6 cells always at full opacity, no spine
-     line (that's a desktop-only progress indicator tied to the pin). */
-  .spine{grid-template-columns:1fr;grid-template-rows:none;height:auto;gap:22px;padding-left:0}
-  .spine-line{display:none}
+  .showroom-vitrine{height:56vh;width:100%;max-width:360px}
 }
 
 /* ══════════════════════════════════════════
@@ -1001,31 +1021,52 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 <!-- ════════════════════════════════════
-     SHOWROOM + HOW WE WORK — merged, pinned scene. §01.
-     Left 2/3: How We Work's 6-cell step grid (2 cols x 3 rows,
-     revealed two at a time per scroll page). Right 1/3: the showroom
-     vitrine (untouched). Pin disabled + plain stacked flow on mobile.
+     HOW WE WORK — animated radial working model. §01.
+     Center emblem + 6 nodes (3 left / 3 right) connected by curved
+     wires; all CSS-driven (see its <style> block for the full mechanic
+     rundown) — no pin, no JS.
 ════════════════════════════════════ -->
-<section id="showroom-how" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(6vh,48px)">
+<section id="how-we-work" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(2vh,16px)">
   <div class="hero-grid-bg" style="opacity:.05"></div>
-  <div class="showroom-grid" style="max-width:1160px;margin:0 auto;position:relative">
-    <div class="showroom-how-col">
-      <div class="rv"><div class="sec-num" data-i18n="how.num">§ 01 / How We Work</div></div>
-      <div class="rv d1"><h2 class="sec-title-l" data-i18n="how.title">From request to delivery, one accountable partner.</h2></div>
-      <div class="spine">
-        <div class="spine-line" aria-hidden="true"></div>
-        <div class="step-cell rv d1"><span class="step-cell-num" data-i18n="how1.num">01</span><h3 data-i18n="how1.title">Requirement Review</h3><p data-i18n="how1.body">We review your project requirement and technical scope together.</p></div>
-        <div class="step-cell rv d1"><span class="step-cell-num" data-i18n="how2.num">02</span><h3 data-i18n="how2.title">Technical Clarification</h3><p data-i18n="how2.body">Open questions, specifications and constraints are clarified before any offer is compared.</p></div>
-        <div class="step-cell rv d2"><span class="step-cell-num" data-i18n="how3.num">03</span><h3 data-i18n="how3.title">Supplier / Partner Selection</h3><p data-i18n="how3.body">The right manufacturer, supplier or specialized plant partner is identified through requirement-specific supplier and partner research.</p></div>
-        <div class="step-cell rv d2"><span class="step-cell-num" data-i18n="how4.num">04</span><h3 data-i18n="how4.title">Offer &amp; Order Coordination</h3><p data-i18n="how4.body">Technical and commercial offers are compared and consolidated into one coordinated order.</p></div>
-        <div class="step-cell rv d3"><span class="step-cell-num" data-i18n="how5.num">05</span><h3 data-i18n="how5.title">Production &amp; Quality Documentation</h3><p data-i18n="how5.body">Manufacturing progress and quality documentation are tracked and verified at each stage.</p></div>
-        <div class="step-cell rv d3"><span class="step-cell-num" data-i18n="how6.num">06</span><h3 data-i18n="how6.title">Logistics &amp; Delivery Follow-Up</h3><p data-i18n="how6.body">Consolidation, export documentation, shipping and delivery are followed through to destination.</p></div>
-      </div>
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="rv"><div class="sec-num" data-i18n="how.num">§ 01 / How We Work</div></div>
+    <div class="rv d1"><h2 class="sec-title-l" data-i18n="how.title">From request to delivery, one accountable partner.</h2></div>
+  </div>
+
+  <div class="stage rv d2">
+    <svg class="wires" viewBox="0 0 1100 520" preserveAspectRatio="none" aria-hidden="true">
+      <g class="wire w1"><path d="M290 66 Q430 120 500 240"/><path class="flow" d="M290 66 Q430 120 500 240"/></g>
+      <g class="wire w2"><path d="M270 260 Q400 260 470 260"/><path class="flow" d="M270 260 Q400 260 470 260"/></g>
+      <g class="wire w3"><path d="M290 454 Q430 400 500 280"/><path class="flow" d="M290 454 Q430 400 500 280"/></g>
+      <g class="wire w4"><path d="M810 66 Q670 120 600 240"/><path class="flow" d="M810 66 Q670 120 600 240"/></g>
+      <g class="wire w5"><path d="M830 260 Q700 260 630 260"/><path class="flow" d="M830 260 Q700 260 630 260"/></g>
+      <g class="wire w6"><path d="M810 454 Q670 400 600 280"/><path class="flow" d="M810 454 Q670 400 600 280"/></g>
+    </svg>
+
+    <div class="how-node left n1"><div class="how-badge" data-i18n="how1.num">01</div><div class="how-txt"><h3 data-i18n="how1.title">Requirement Review</h3><p data-i18n="how1.body">We review your project requirement and technical scope together.</p></div></div>
+    <div class="how-node left n2"><div class="how-badge" data-i18n="how2.num">02</div><div class="how-txt"><h3 data-i18n="how2.title">Technical Clarification</h3><p data-i18n="how2.body">Open questions, specifications and constraints are clarified before any offer is compared.</p></div></div>
+    <div class="how-node left n3"><div class="how-badge" data-i18n="how3.num">03</div><div class="how-txt"><h3 data-i18n="how3.title">Supplier / Partner Selection</h3><p data-i18n="how3.body">The right manufacturer, supplier or specialized plant partner is identified through requirement-specific supplier and partner research.</p></div></div>
+    <div class="how-node n4"><div class="how-badge" data-i18n="how4.num">04</div><div class="how-txt"><h3 data-i18n="how4.title">Offer &amp; Order Coordination</h3><p data-i18n="how4.body">Technical and commercial offers are compared and consolidated into one coordinated order.</p></div></div>
+    <div class="how-node n5"><div class="how-badge" data-i18n="how5.num">05</div><div class="how-txt"><h3 data-i18n="how5.title">Production &amp; Quality Documentation</h3><p data-i18n="how5.body">Manufacturing progress and quality documentation are tracked and verified at each stage.</p></div></div>
+    <div class="how-node n6"><div class="how-badge" data-i18n="how6.num">06</div><div class="how-txt"><h3 data-i18n="how6.title">Logistics &amp; Delivery Follow-Up</h3><p data-i18n="how6.body">Consolidation, export documentation, shipping and delivery are followed through to destination.</p></div></div>
+
+    <div class="how-center">
+      <div class="how-glow"></div>
+      <div class="how-ring"></div><div class="how-ring2"></div>
+      <div class="how-emb"><img src="/brand_assets/vorqa_amblem_main.png" alt="" width="1254" height="1254"></div>
     </div>
-    <div class="showroom-vitrine rv d2">
-      <div class="sr-col sr-col-down"><div class="sr-track" id="sr-track-1"></div></div>
-      <div class="sr-col sr-col-up"><div class="sr-track" id="sr-track-2"></div></div>
-    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SHOWROOM — standalone flowing product vitrine. §01b.
+     Decoupled from How We Work now that the pin is gone; same
+     dual-column auto-scroll mechanic as before, untouched.
+════════════════════════════════════ -->
+<section id="showroom" class="sec" style="background:var(--bg2);padding-top:min(2vh,16px);padding-bottom:min(6vh,48px)">
+  <div class="showroom-vitrine rv">
+    <div class="sr-col sr-col-down"><div class="sr-track" id="sr-track-1"></div></div>
+    <div class="sr-col sr-col-up"><div class="sr-track" id="sr-track-2"></div></div>
   </div>
 </section>
 
@@ -1749,117 +1790,13 @@ window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(
     });
   }
 
-  /* §2b/§2c — Showroom + How-We-Work pinned scene, responsive per
-     breakpoint via ScrollTrigger.matchMedia (which owns setup/teardown
-     itself on resize/rotation, so there's no manual cleanup to track).
-     Breakpoint matches the site-wide 820/821 convention used by every
-     other responsive scene (What We Do rows, About grid) — this scene
-     used to switch at 767/768 instead, which left 768-820px viewports
-     (e.g. common tablet widths) running the desktop pin, stuck showing
-     only the first step since pin+scrub doesn't advance cleanly on
-     touch at that size:
-     - >=821px: pinned. The 6 .step-cell elements sit in a plain
-       2-col/3-row grid (normal flow, no absolute stacking) and reveal
-       ONE AT A TIME, in DOM order (step 1, 2, 3...6 — left-to-right
-       then down within the grid), as the user scrolls — cumulative in
-       the sense that scrolling forward only adds steps, but like the
-       pin scrub itself this tracks self.progress directly, so scrolling
-       back up un-reveals steps in step (matches how the pin's own
-       progress already behaves in both directions — nothing new here).
-       Driven by the pin's own scroll progress (self.progress, 0->1
-       across start->end — the same math getBoundingClientRect would
-       give, without a second scroll listener duplicating what
-       ScrollTrigger already tracks), split into 6 equal windows (one
-       per step) so the 6th step arrives right near the end of the pin
-       range. .spine-line (a thin vertical bar to the left of the grid)
-       scales in sync via the same progress, transform-origin:top, so it
-       reads as a progress indicator being "drawn" alongside the steps.
-       Only transform + opacity animate (no filter/blur — that class of
-       property forces a repaint per frame instead of a compositor-only
-       op, the exact cause of an earlier scroll-jank bug in this same
-       area). will-change is applied only while a step is actively
-       tweening (set before the tween, cleared in onComplete) rather
-       than left on permanently. Under reduced-motion the same end
-       states apply instantly instead of tweening. The vitrine's own
-       CSS keyframe animation keeps running throughout, untouched.
-     - <=820px: no pin at all (sticky/pin feels janky at this size);
-       cells go back to plain stacked-in-flow layout at full opacity
-       via clearProps, so nothing here fights the mobile media query;
-       .spine-line is display:none there (see its CSS).
-     RTL: self.progress is a vertical scroll fraction, identical
-     regardless of text direction, so no logic here needs to change
-     for Arabic — only the CSS column order mirrors (inherited
-     direction:rtl on the auto-placement grid, same mechanism as the
-     What We Do rows / About stat rail). */
-  var showroomHowScene = document.querySelector('#showroom-how');
-  var howSteps = showroomHowScene ? Array.prototype.slice.call(showroomHowScene.querySelectorAll('.spine .step-cell')) : [];
-  var howSpineLine = showroomHowScene ? showroomHowScene.querySelector('.spine-line') : null;
-  var HOW_STEPS = howSteps.length; // 6
+  /* §2b — How We Work is now a pure-CSS animated radial (see its own
+     <style> block) — no pin, no ScrollTrigger, no JS at all. Showroom
+     is a fully standalone section too (its card-population script is
+     further down and only touches #sr-track-1/2 by ID, unaffected by
+     any of this).
 
-  if(showroomHowScene && howSteps.length && window.gsap && window.ScrollTrigger){
-    if(reduceMotion){
-      /* Reveal (and the pin driving it) fully skipped under
-         reduced-motion — not just instant-jumped — so there's no
-         pin-scroll requirement at all for these users, matching the
-         mobile no-pin experience. Explicit opacity:1/y:0 (not
-         clearProps) because clearProps would hand control back to the
-         sitewide .rv CSS class every step-cell also carries, which
-         defaults to opacity:0 until its own IntersectionObserver fires
-         — invisible until scrolled near, not "visible from the start"
-         as required here. */
-      gsap.set(howSteps, { opacity: 1, y: 0 });
-      if(howSpineLine) gsap.set(howSpineLine, { scaleY: 1 });
-    } else {
-      var visibleCount = -1;
-      function setVisibleCount(count){
-        if(count === visibleCount) return;
-        visibleCount = count;
-        howSteps.forEach(function(el, i){
-          var isVisible = i < count;
-          var vars = { opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 };
-          el.style.willChange = 'opacity,transform';
-          gsap.to(el, Object.assign({
-            duration: .5, ease: 'power2.out',
-            onComplete: function(){ el.style.willChange = 'auto'; }
-          }, vars));
-        });
-        if(howSpineLine){
-          var lineProgress = HOW_STEPS ? Math.min(1, count / HOW_STEPS) : 0;
-          gsap.to(howSpineLine, { scaleY: lineProgress, duration: .5, ease: 'power2.out' });
-        }
-      }
-
-      ScrollTrigger.matchMedia({
-        '(min-width: 821px)': function(){
-          visibleCount = -1;
-          gsap.set(howSteps, { opacity: 0, y: 20 });
-          if(howSpineLine) gsap.set(howSpineLine, { scaleY: 0 });
-          setVisibleCount(1);
-          var st = ScrollTrigger.create({
-            trigger: showroomHowScene,
-            start: 'top top',
-            end: '+=3600',
-            pin: true,
-            pinSpacing: true,
-            onUpdate: function(self){
-              var count = Math.min(HOW_STEPS, Math.floor(self.progress * HOW_STEPS) + 1);
-              setVisibleCount(count);
-            }
-          });
-          return function(){ st.kill(); };
-        },
-        '(max-width: 820px)': function(){
-          visibleCount = -1;
-          gsap.set(howSteps, { clearProps: 'opacity,transform' });
-          if(howSpineLine) gsap.set(howSpineLine, { clearProps: 'transform' });
-          return function(){};
-        }
-      });
-      ScrollTrigger.refresh();
-    }
-  }
-
-  /* §2d — What We Do: zigzag row reveal (left/right alternating,
+     §2d — What We Do: zigzag row reveal (left/right alternating,
      matching each row's own text-alignment) + a very slow horizontal
      watermark drift tied to scroll position within the section.
      Under reduced-motion both are skipped entirely and everything
