@@ -1,0 +1,29 @@
+| Alan                 | Değer                     |
+| -------------------- | ------------------------- |
+| Ürün                 | ARMATÖR                   |
+| Hat / Firma          | CMA CGM                   |
+| Booking No           | ISB1961678                |
+| Ekipman              | 2 × 40 OT                 |
+| Gemi Adı / Sefer No  | JEAN PIERRE A / 0BOENS1MA |
+| Ardiyesiz Giriş      | 20.04.2026                |
+| Talimat Cut-Off      | 21.04.2026 – 10:00        |
+| Beyanname Cut-Off    | 21.04.2026 – 16:00        |
+| POL (Yükleme Limanı) | Mersin                    |
+| POD (Varış Limanı)   | Bingazi                   |
+| ETD (Mersin)         | 25.04.2026                |
+| ETA (Bingazi)        | 24.05.2026                |
+
+
+|                              |                           |
+| ---------------------------- | ------------------------- |
+| Line / Carrier               | CMA CGM                   |
+| Booking No                   | ISB1961678                |
+| Equipment                    | 2 × 40 OT                 |
+| Vessel / Voyage No           | JEAN PIERRE A / 0BOENS1MA |
+| Gate-In Free Storage         | 20.04.2026                |
+| Shipping Instruction Cut-Off | 21.04.2026 – 10:00        |
+| Customs Declaration Cut-Off  | 21.04.2026 – 16:00        |              
+| POL (Port of Loading)        | Mersin                    |
+| POD (Port of Discharge)      | Benghazi                  |
+| ETD (Mersin)                 | 25.04.2026                |
+| ETA (Benghazi)               | 24.05.2026                |
