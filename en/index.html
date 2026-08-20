@@ -369,7 +369,8 @@ html[dir="rtl"] .hero-h1 .accent{font-style:normal}
    ScrollTrigger/pin and no JS at all — replaces the old pinned
    sticky+scrub scene (see git history) that used to live here.
 ══════════════════════════════════════════ */
-.stage{position:relative;height:680px;max-width:1160px;margin:40px auto 0}
+.how-showroom-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;max-width:1400px;margin:40px auto 0}
+.stage{position:relative;height:680px}
 .wires{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .wire{fill:none;stroke:var(--line-light);stroke-width:1.5}
 .wire .flow{fill:none;stroke:var(--orange);stroke-width:2;stroke-linecap:round;
@@ -414,7 +415,8 @@ html[dir="rtl"] .how-node:not(.left){flex-direction:row-reverse;text-align:right
 html[dir="rtl"] .wires{transform:scaleX(-1)}
 
 @media(max-width:820px){
-  .stage{height:auto;display:flex;flex-direction:column;gap:0;margin-top:24px}
+  .how-showroom-grid{grid-template-columns:1fr;gap:48px;margin-top:24px}
+  .stage{height:auto;display:flex;flex-direction:column;gap:0}
   .wires{display:none}
   .how-center{position:relative;left:auto;top:auto;transform:none;margin:0 auto 30px;order:-1}
   .how-node{position:static;width:100%;flex-direction:row !important;text-align:left !important;margin-bottom:22px}
@@ -1022,52 +1024,50 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
 </section>
 
 <!-- ════════════════════════════════════
-     HOW WE WORK — animated radial working model. §01.
-     Center emblem + 6 nodes (3 left / 3 right) connected by curved
-     wires; all CSS-driven (see its <style> block for the full mechanic
-     rundown) — no pin, no JS.
+     HOW WE WORK + SHOWROOM — side by side. §01.
+     Left: animated radial working model (center emblem + 6 nodes
+     connected by curved wires, all CSS-driven — see its <style> block
+     for the full mechanic rundown, no pin, no JS). Right: the flowing
+     product vitrine (untouched mechanic). Single grid — see
+     .how-showroom-grid — stacks to one column (radial first, vitrine
+     below) on mobile.
 ════════════════════════════════════ -->
-<section id="how-we-work" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(2vh,16px)">
+<section id="how-we-work" class="sec" style="background:var(--bg2);padding-top:min(6vh,48px);padding-bottom:min(6vh,48px)">
   <div class="hero-grid-bg" style="opacity:.05"></div>
-  <div style="max-width:1160px;margin:0 auto">
+  <div style="max-width:1400px;margin:0 auto">
     <div class="rv"><div class="sec-num">§ 01 / How We Work</div></div>
     <div class="rv d1"><h2 class="sec-title-l">From request to delivery, one accountable partner.</h2></div>
   </div>
 
-  <div class="stage rv d2">
-    <svg class="wires" viewBox="0 0 1100 520" preserveAspectRatio="none" aria-hidden="true">
-      <g class="wire w1"><path d="M290 66 Q430 120 500 240"></path><path class="flow" d="M290 66 Q430 120 500 240"></path></g>
-      <g class="wire w2"><path d="M270 260 Q400 260 470 260"></path><path class="flow" d="M270 260 Q400 260 470 260"></path></g>
-      <g class="wire w3"><path d="M290 454 Q430 400 500 280"></path><path class="flow" d="M290 454 Q430 400 500 280"></path></g>
-      <g class="wire w4"><path d="M810 66 Q670 120 600 240"></path><path class="flow" d="M810 66 Q670 120 600 240"></path></g>
-      <g class="wire w5"><path d="M830 260 Q700 260 630 260"></path><path class="flow" d="M830 260 Q700 260 630 260"></path></g>
-      <g class="wire w6"><path d="M810 454 Q670 400 600 280"></path><path class="flow" d="M810 454 Q670 400 600 280"></path></g>
-    </svg>
+  <div class="how-showroom-grid">
+    <div class="stage rv d2">
+      <svg class="wires" viewBox="0 0 1100 520" preserveAspectRatio="none" aria-hidden="true">
+        <g class="wire w1"><path d="M290 66 Q430 120 500 240"></path><path class="flow" d="M290 66 Q430 120 500 240"></path></g>
+        <g class="wire w2"><path d="M270 260 Q400 260 470 260"></path><path class="flow" d="M270 260 Q400 260 470 260"></path></g>
+        <g class="wire w3"><path d="M290 454 Q430 400 500 280"></path><path class="flow" d="M290 454 Q430 400 500 280"></path></g>
+        <g class="wire w4"><path d="M810 66 Q670 120 600 240"></path><path class="flow" d="M810 66 Q670 120 600 240"></path></g>
+        <g class="wire w5"><path d="M830 260 Q700 260 630 260"></path><path class="flow" d="M830 260 Q700 260 630 260"></path></g>
+        <g class="wire w6"><path d="M810 454 Q670 400 600 280"></path><path class="flow" d="M810 454 Q670 400 600 280"></path></g>
+      </svg>
 
-    <div class="how-node left n1"><div class="how-badge">01</div><div class="how-txt"><h3>Requirement Review</h3><p>We review your project requirement and technical scope together.</p></div></div>
-    <div class="how-node left n2"><div class="how-badge">02</div><div class="how-txt"><h3>Technical Clarification</h3><p>Open questions, specifications and constraints are clarified before any offer is compared.</p></div></div>
-    <div class="how-node left n3"><div class="how-badge">03</div><div class="how-txt"><h3>Supplier / Partner Selection</h3><p>The right manufacturer, supplier or specialized plant partner is identified through requirement-specific supplier and partner research.</p></div></div>
-    <div class="how-node n4"><div class="how-badge">04</div><div class="how-txt"><h3>Offer &amp; Order Coordination</h3><p>Technical and commercial offers are compared and consolidated into one coordinated order.</p></div></div>
-    <div class="how-node n5"><div class="how-badge">05</div><div class="how-txt"><h3>Production &amp; Quality Documentation</h3><p>Manufacturing progress and quality documentation are tracked and verified at each stage.</p></div></div>
-    <div class="how-node n6"><div class="how-badge">06</div><div class="how-txt"><h3>Logistics &amp; Delivery Follow-Up</h3><p>Consolidation, export documentation, shipping and delivery are followed through to destination.</p></div></div>
+      <div class="how-node left n1"><div class="how-badge">01</div><div class="how-txt"><h3>Requirement Review</h3><p>We review your project requirement and technical scope together.</p></div></div>
+      <div class="how-node left n2"><div class="how-badge">02</div><div class="how-txt"><h3>Technical Clarification</h3><p>Open questions, specifications and constraints are clarified before any offer is compared.</p></div></div>
+      <div class="how-node left n3"><div class="how-badge">03</div><div class="how-txt"><h3>Supplier / Partner Selection</h3><p>The right manufacturer, supplier or specialized plant partner is identified through requirement-specific supplier and partner research.</p></div></div>
+      <div class="how-node n4"><div class="how-badge">04</div><div class="how-txt"><h3>Offer &amp; Order Coordination</h3><p>Technical and commercial offers are compared and consolidated into one coordinated order.</p></div></div>
+      <div class="how-node n5"><div class="how-badge">05</div><div class="how-txt"><h3>Production &amp; Quality Documentation</h3><p>Manufacturing progress and quality documentation are tracked and verified at each stage.</p></div></div>
+      <div class="how-node n6"><div class="how-badge">06</div><div class="how-txt"><h3>Logistics &amp; Delivery Follow-Up</h3><p>Consolidation, export documentation, shipping and delivery are followed through to destination.</p></div></div>
 
-    <div class="how-center">
-      <div class="how-glow"></div>
-      <div class="how-ring"></div><div class="how-ring2"></div>
-      <div class="how-emb"><img src="/brand_assets/vorqa_amblem_main.png" alt="" width="1254" height="1254"></div>
+      <div class="how-center">
+        <div class="how-glow"></div>
+        <div class="how-ring"></div><div class="how-ring2"></div>
+        <div class="how-emb"><img src="/brand_assets/vorqa_amblem_main.png" alt="" width="1254" height="1254"></div>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- ════════════════════════════════════
-     SHOWROOM — standalone flowing product vitrine. §01b.
-     Decoupled from How We Work now that the pin is gone; same
-     dual-column auto-scroll mechanic as before, untouched.
-════════════════════════════════════ -->
-<section id="showroom" class="sec" style="background:var(--bg2);padding-top:min(2vh,16px);padding-bottom:min(6vh,48px)">
-  <div class="showroom-vitrine rv">
-    <div class="sr-col sr-col-down"><div class="sr-track" id="sr-track-1"></div></div>
-    <div class="sr-col sr-col-up"><div class="sr-track" id="sr-track-2"></div></div>
+    <div class="showroom-vitrine rv d3">
+      <div class="sr-col sr-col-down"><div class="sr-track" id="sr-track-1"></div></div>
+      <div class="sr-col sr-col-up"><div class="sr-track" id="sr-track-2"></div></div>
+    </div>
   </div>
 </section>
 
