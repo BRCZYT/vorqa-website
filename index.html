@@ -833,7 +833,7 @@ html[dir="rtl"] .hero-h1{direction:rtl}
    property both hover AND reveal need animated so neither one snaps. */
 .ind-rail .ind-panel{
   transition:
-    flex-basis .7s cubic-bezier(.33,0,.2,1),
+    flex-basis .38s cubic-bezier(.33,0,.2,1),
     border-color .3s,
     opacity .9s cubic-bezier(.22,1,.36,1),
     transform .9s cubic-bezier(.22,1,.36,1);
@@ -852,11 +852,21 @@ html[dir="rtl"] .hero-h1{direction:rtl}
 html[dir="rtl"] .ind-rail .ind-panel.rv{transform:translateY(30px) scale(.98) translateX(24px)}
 /* More pronounced stagger than the sitewide .d1-d4 (shared/reused
    everywhere else) so the cascade reads as ritmik/one-by-one rather
-   than "everything nearly at once" across a wide horizontal rail. */
-.ind-rail .ind-panel.d1{transition-delay:.12s}
-.ind-rail .ind-panel.d2{transition-delay:.24s}
-.ind-rail .ind-panel.d3{transition-delay:.36s}
-.ind-rail .ind-panel.d4{transition-delay:.48s}
+   than "everything nearly at once" across a wide horizontal rail.
+   Per-property delay list (matching the 4 properties in .ind-rail
+   .ind-panel's own transition, in the same order: flex-basis,
+   border-color, opacity, transform) instead of one blanket value —
+   a single transition-delay applies to EVERY listed property, so the
+   entrance stagger was also delaying the hover-triggered flex-basis/
+   border-color expansion by up to .48s on every hover, long after the
+   one-time entrance had already finished. Only opacity/transform (the
+   entrance-reveal properties) keep the staggered delay; flex-basis/
+   border-color (the hover properties) stay at 0 so hover opens/closes
+   instantly regardless of which panel it is. */
+.ind-rail .ind-panel.d1{transition-delay:0,0,.12s,.12s}
+.ind-rail .ind-panel.d2{transition-delay:0,0,.24s,.24s}
+.ind-rail .ind-panel.d3{transition-delay:0,0,.36s,.36s}
+.ind-rail .ind-panel.d4{transition-delay:0,0,.48s,.48s}
 
 /* ── Arabic heading fix — negative letter-spacing/uppercase break Arabic
    glyph shaping; reset on RTL pages only, headings only, body text untouched ── */
