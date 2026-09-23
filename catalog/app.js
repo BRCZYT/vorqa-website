@@ -4,7 +4,7 @@ const dots=document.getElementById('dots');
 let idx=0;
 pages.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label',`${i+1}. bölüm`);b.onclick=()=>go(i);dots.appendChild(b)});
 const dotEls=[...dots.children],prev=document.getElementById('prev'),next=document.getElementById('next');
-function updateNav(){dotEls.forEach((d,n)=>d.classList.toggle('active',n===idx));prev.disabled=idx===0;next.disabled=idx===pages.length-1;document.body.classList.toggle('edge-page',idx===0||idx===pages.length-1)}
+function updateNav(){dotEls.forEach((d,n)=>d.classList.toggle('active',n===idx));prev.disabled=idx===0;next.disabled=idx===pages.length-1;document.body.classList.toggle('first-page',idx===0);document.body.classList.toggle('last-page',idx===pages.length-1)}
 function go(i){idx=Math.max(0,Math.min(pages.length-1,i));pages[idx].scrollTop=0;pages[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});updateNav()}
 prev.onclick=()=>go(idx-1);next.onclick=()=>go(idx+1);
 document.getElementById('startBtn').onclick=e=>{e.preventDefault();go(1)};
@@ -48,3 +48,6 @@ document.getElementById('closeSheet').onclick=()=>{sheet.classList.remove('open'
 document.getElementById('shareBtn').onclick=async()=>{try{if(navigator.share)await navigator.share({title:'VORQA Global Supply',text:'VORQA Interactive Company Profile',url:location.href});else{await navigator.clipboard.writeText(location.href);alert(currentLang==='tr'?'Bağlantı kopyalandı':'Link copied')}}catch(e){}};
 
 setLang('tr');
+
+// keep touch scrolling stable after viewport changes
+let resizeTimer; addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{pages[idx].scrollIntoView({behavior:'auto',inline:'start',block:'nearest'});updateNav()},120)});
