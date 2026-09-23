@@ -13,3 +13,13 @@
 @media (max-width:359px){.inner{padding-left:13px;padding-right:13px}.cover .title{font-size:39px}.title{font-size:32px}.signature{height:215px}.cap{padding:9px}.cap b{font-size:8.8px}.systems .single-line{font-size:28px}.system-card{grid-template-columns:36% 64%}.system-card>div{padding-left:10px}.journey{padding:11px}.journey-track span{font-size:7.3px}}
 @media (max-height:680px){.inner{padding-top:calc(var(--safeT) + 60px);gap:9px}.cover .title{font-size:39px}.title{font-size:32px}.signature{height:185px}.lead{font-size:11.5px}.cap{min-height:50px;padding:9px}.identity-visual{height:110px}.scope-grid article img{height:70px}.system-card{min-height:94px}.system-card>img{min-height:94px}.contact-links a{min-height:49px;padding:8px 10px}}
 @media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}.sheet{transition:none}}
+.sheet>header img{width:auto;max-width:150px}
+body[data-lang="en"] .cover .title{font-size:clamp(35px,9.5vw,58px);max-width:12ch}
+body[data-lang="en"] .identity .title{font-size:clamp(30px,7.5vw,44px)}
+body[data-lang="ar"] .cover .title{font-size:clamp(36px,10vw,58px);max-width:10ch}
+body[data-lang="ar"] .identity .title{font-size:clamp(31px,8vw,45px)}
+.rtl .page,.rtl .sheet{direction:rtl;text-align:right}
+.rtl .topbar{direction:ltr}
+.rtl .system-card,.rtl .contact-links a{text-align:right}
+.rtl .journey-track{direction:rtl}
+.rtl .signature-copy{text-align:right}
