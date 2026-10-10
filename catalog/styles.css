@@ -387,3 +387,56 @@ body[data-lang="ar"] .identity .title{font-size:clamp(30px,7.4vw,44px)}
   .tablet{max-width:none;transform:perspective(900px) rotateX(4deg);border-radius:24px;padding:10px}
   .tablet-grid figcaption{font-size:6.5px}
 }
+
+/* FINAL CLEANUP — no numeric badges, no filler, motion stays subtle */
+.coord-step{
+  grid-template-columns:1fr!important;
+  padding:12px 13px!important;
+}
+.coord-step>span{display:none!important}
+.coord-step h3{margin:0 0 4px!important;font-size:11.5px!important}
+.coord-step p{font-size:9.3px!important;line-height:1.33!important}
+.coord-step:after{
+  content:"";
+  position:absolute;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--blue);
+  box-shadow:0 0 0 4px rgba(23,119,255,.09),0 0 18px rgba(23,119,255,.25);
+  top:14px;right:14px;
+}
+.coord-step:nth-of-type(even):after{
+  background:var(--orange);
+  box-shadow:0 0 0 4px rgba(242,138,23,.09),0 0 18px rgba(242,138,23,.22);
+}
+.identity.is-active .coord-step:after{animation:liveDot 2.2s ease-in-out infinite}
+.identity.is-active .coord-step:nth-of-type(2):after{animation-delay:.25s}
+.identity.is-active .coord-step:nth-of-type(3):after{animation-delay:.5s}
+.identity.is-active .coord-step:nth-of-type(4):after{animation-delay:.75s}
+.identity.is-active .coord-step:nth-of-type(5):after{animation-delay:1s}
+.identity.is-active .coord-step:nth-of-type(6):after{animation-delay:1.25s}
+
+/* Supply cards stay ordered visually but without numbered labels */
+.scope-grid .scope-no{display:none!important}
+.scope-grid article>span:not(.scope-no){padding:10px 30px 10px 10px!important}
+.scope-grid article:before{
+  content:"";
+  position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,var(--blue),var(--orange));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .32s ease;
+}
+.scope-grid article:hover:before,.scope-grid article:active:before{transform:scaleX(1)}
+
+/* remove unused space created by deleted intro copy */
+.scope .inner,.systems .inner{gap:11px}
+
+/* quieter animation language */
+.page.is-active .title{animation:textIn .48s .04s both}
+.page.is-active .eyebrow{animation:textIn .34s both}
+.scope.is-active .scope-grid article{animation-duration:.38s}
+.systems.is-active .system-card{animation-duration:.4s}
+
+@keyframes liveDot{
+  0%,100%{transform:scale(.82);opacity:.65}
+  50%{transform:scale(1.14);opacity:1}
+}
