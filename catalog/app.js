@@ -4,7 +4,7 @@ const dots=document.getElementById('dots');
 let idx=0;
 pages.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label',`${i+1}. bölüm`);b.onclick=()=>go(i);dots.appendChild(b)});
 const dotEls=[...dots.children],prev=document.getElementById('prev'),next=document.getElementById('next');
-function updateNav(){dotEls.forEach((d,n)=>d.classList.toggle('active',n===idx));prev.disabled=idx===0;next.disabled=idx===pages.length-1;document.body.classList.toggle('first-page',idx===0);document.body.classList.toggle('last-page',idx===pages.length-1)}
+function updateNav(){dotEls.forEach((d,n)=>d.classList.toggle('active',n===idx));pages.forEach((p,n)=>p.classList.toggle('is-active',n===idx));prev.disabled=idx===0;next.disabled=idx===pages.length-1;document.body.classList.toggle('first-page',idx===0);document.body.classList.toggle('last-page',idx===pages.length-1)}
 function go(i){idx=Math.max(0,Math.min(pages.length-1,i));pages[idx].scrollTop=0;pages[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});updateNav()}
 prev.onclick=()=>go(idx-1);next.onclick=()=>go(idx+1);
 document.getElementById('startBtn').onclick=e=>{e.preventDefault();go(1)};
@@ -32,6 +32,14 @@ contactEyebrow:'اتصل بنا',contact1:'تواصل',contact2:'معنا',conta
 let currentLang='tr';
 function setLang(l){currentLang=l;document.documentElement.lang=l;document.documentElement.dir='ltr';document.body.dataset.lang=l;document.body.classList.toggle('rtl',l==='ar');document.querySelectorAll('.lang').forEach(b=>{b.classList.toggle('active',b.dataset.lang===l);b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false')});document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;el.innerHTML=l==='tr'?(original[k]??el.innerHTML):(strings[l]?.[k]??original[k]??el.innerHTML)});updateWhatsAppLinks()}
 document.querySelectorAll('.lang').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+document.querySelectorAll('.coord-step').forEach(step=>{
+  step.tabIndex=0;
+  const activate=()=>{document.querySelectorAll('.coord-step').forEach(s=>s.classList.remove('is-active'));step.classList.add('is-active')};
+  step.addEventListener('click',activate);
+  step.addEventListener('focus',activate);
+  step.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate()}});
+});
+
 const waMessages={tr:{general:'Merhaba VORQA, bir teklif talebim var',specialist:'Merhaba VORQA, uzman sistemler hakkında teklif almak istiyorum'},en:{general:'Hello VORQA, I would like to request a quotation',specialist:'Hello VORQA, I would like to request a quotation for a specialist system'},ar:{general:'مرحباً VORQA، أود طلب عرض سعر',specialist:'مرحباً VORQA، أود طلب عرض سعر لنظام متخصص'}};
 function updateWhatsAppLinks(){document.querySelectorAll('[data-wa]').forEach(a=>{const type=a.dataset.wa||'general';const msg=waMessages[currentLang]?.[type]||waMessages.en[type];a.href='https://wa.me/905400086772?text='+encodeURIComponent(msg)})}
 
