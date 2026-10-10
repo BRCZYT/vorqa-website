@@ -251,3 +251,139 @@ body[data-lang="ar"] .identity .title{font-size:clamp(30px,7.4vw,44px)}
 @media (prefers-reduced-motion:reduce){
  .page.is-active *,.sheet.open *{animation:none!important;transition:none!important}
 }
+
+/* =========================================================
+   FINAL DESIGN FAMILY — coded from approved brochure visuals
+   ========================================================= */
+.page{background:#f7f9fc}
+.page:before{background:none!important}
+.page:after{display:none!important}
+.page .inner{background:
+  radial-gradient(circle at 86% 7%,rgba(23,119,255,.05),transparent 28%),
+  linear-gradient(155deg,#ffffff 0%,#f9fbfd 62%,#eef4f8 100%)}
+.page .inner:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.48;background:
+  repeating-radial-gradient(ellipse at 10% 82%,transparent 0 18px,rgba(10,55,94,.028) 19px 20px,transparent 21px 36px)}
+.inner{position:relative}
+
+/* Cover: white editorial panel + illuminated V + solution collage */
+.cover .inner{background:
+  linear-gradient(90deg,#fbfcfe 0 44%,rgba(244,248,252,.93) 44% 47%,transparent 47%),
+  radial-gradient(circle at 65% 46%,rgba(31,126,255,.18),transparent 32%),
+  #061f38}
+.cover .inner:before{background:
+  linear-gradient(120deg,transparent 0 39%,rgba(255,255,255,.92) 39.5% 40.1%,transparent 40.8% 59%,rgba(255,255,255,.82) 59.6% 60.1%,transparent 60.8%),
+  url('/brand_assets/earth-equirect-night.webp') 62% 42%/78% auto no-repeat;
+  opacity:.92;mix-blend-mode:screen}
+.cover-lockup{position:relative;z-index:5}
+.cover .eyebrow,.cover .title,.cover .lead,.cover-sub{max-width:100%}
+.cover .signature{position:relative;z-index:4;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;height:390px!important}
+.cover .signature:before{display:none}
+.cover .signature:after{left:6%;right:6%;bottom:4px;background:linear-gradient(90deg,#1678ff,#fff,#f28a17);box-shadow:0 0 26px rgba(54,145,255,.8)}
+.cover .signature-grid .mix{border-radius:0;border:0;box-shadow:none;overflow:hidden}
+.cover .signature-grid .mix:nth-child(1){left:42%;top:0;bottom:auto;width:62%;height:34%;transform:none;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%)}
+.cover .signature-grid .mix:nth-child(2){left:30%;top:32%;bottom:auto;width:74%;height:36%;transform:none;clip-path:polygon(13% 0,100% 0,100% 100%,0 100%)}
+.cover .signature-grid .mix:nth-child(3){left:20%;right:auto;top:65%;bottom:auto;width:84%;height:35%;transform:none;clip-path:polygon(17% 0,100% 0,100% 100%,0 100%)}
+.cover .signature-grid img{filter:saturate(.8) contrast(1.05) brightness(.78)}
+.cover .signature-copy{left:auto;right:5%;top:18px;bottom:auto;width:50%;max-width:50%;background:rgba(4,30,53,.74);padding:12px 13px}
+.cover .primary-cta{position:relative;z-index:6}
+.cover .domain{position:relative;z-index:6}
+
+/* Identity: brochure-style editorial left + live coordination constellation */
+.identity .inner{background:
+  linear-gradient(105deg,#fcfdff 0 44%,#f4f8fc 44% 100%)}
+.identity .identity-card{border-left:3px solid var(--orange);border-radius:0 18px 18px 0;padding:14px 16px;background:rgba(255,255,255,.9)}
+.coordination-map{background:
+  radial-gradient(circle at 50% 50%,rgba(10,111,255,.15),transparent 24%),
+  linear-gradient(150deg,#fdfefe,#eef5fb);border-radius:28px}
+.coordination-map:before{width:58%;height:58%;border:1px dashed rgba(20,115,255,.28)}
+.coordination-map:after{width:76%;height:76%;border-color:rgba(12,87,160,.1)}
+.coord-step{border-radius:20px;box-shadow:0 12px 30px rgba(6,38,69,.07)}
+.coord-step:before{content:"";position:absolute;z-index:-1;background:linear-gradient(90deg,rgba(23,119,255,.26),rgba(242,138,23,.45));height:1px;width:44px;top:50%}
+.coord-step.c1:before,.coord-step.c2:before,.coord-step.c3:before{right:-44px}
+.coord-step.c4:before,.coord-step.c5:before,.coord-step.c6:before{left:-44px}
+
+/* Supply scope: approved brochure grid language */
+.scope .inner{background:#fbfcfe}
+.scope-grid article{border-radius:12px;background:linear-gradient(#fff,#f9fbfd);border:1px solid #cad9e5;box-shadow:none}
+.scope-grid article img{border-radius:0;height:100px!important;object-fit:cover}
+.scope-grid article>span:not(.scope-no){min-height:68px!important;font-size:9.2px!important;color:#082844}
+.scope-grid .scope-no{background:#0872f8;border-color:#fff;box-shadow:0 0 0 2px rgba(242,138,23,.75)}
+.scope-grid article>i{background:#082844;color:#fff;border:0}
+
+/* Specialist systems: slanted photo + deep navy information field */
+.systems .inner{background:
+  linear-gradient(105deg,#fcfdff 0 46%,#062848 46% 100%)}
+.systems .eyebrow,.systems .title,.systems .lead{position:relative;z-index:2;max-width:48%}
+.systems .lead{color:#546b80}
+.system-list{position:relative;z-index:2;margin-top:2px}
+.system-card{height:136px!important;grid-template-columns:44% 56%;border-radius:0;background:linear-gradient(90deg,transparent 0 44%,#073051 44% 100%);border:0;border-bottom:1px solid rgba(255,255,255,.24);box-shadow:none;color:#fff}
+.system-card:first-child{border-radius:20px 20px 0 0;overflow:hidden}
+.system-card:last-child{border-radius:0 0 20px 20px;overflow:hidden;border-bottom:0}
+.system-card>img{height:136px!important;clip-path:polygon(15% 0,100% 0,86% 100%,0 100%);filter:saturate(.82) contrast(1.03)}
+.system-card>div{padding-left:18px}
+.system-card h3{color:#fff;font-size:13px}
+.system-card small{color:#bdd2e6}
+.system-card>b{background:rgba(255,255,255,.12);color:#58a3ff;border:1px solid rgba(255,255,255,.18)}
+.system-card:hover{transform:none;background:linear-gradient(90deg,transparent 0 44%,#0a3a62 44% 100%)}
+
+/* Contact: approved white/dark split + floating tablet */
+.contact .inner{background:
+  linear-gradient(108deg,#fcfdff 0 46%,#062848 46% 100%)}
+.contact .eyebrow,.contact .title,.contact .lead,.contact-links,.contact .primary-cta{position:relative;z-index:3}
+.contact .title,.contact .lead{max-width:44%}
+.contact-links{max-width:45%;display:grid!important;grid-template-columns:1fr!important;gap:7px!important}
+.contact-links a{min-height:56px!important;padding:10px 12px!important;background:rgba(255,255,255,.95);border-radius:13px!important}
+.contact-links a b{font-size:10px!important}.contact-links a span{font-size:9px!important}
+.contact-showcase{position:absolute;z-index:2;right:2.5%;top:16%;width:51%;height:69%;display:flex;align-items:center;justify-content:center}
+.contact-showcase:before{content:"";position:absolute;inset:-20%;background:
+  linear-gradient(68deg,transparent 44%,rgba(255,255,255,.9) 44.4% 44.8%,transparent 45.2%),
+  linear-gradient(112deg,transparent 52%,rgba(35,135,255,.7) 52.4% 52.8%,transparent 53.2%),
+  radial-gradient(circle at 52% 54%,rgba(0,105,255,.35),transparent 45%);filter:blur(.1px)}
+.tablet{position:relative;width:100%;max-width:580px;aspect-ratio:1.28/1;padding:14px;border-radius:32px;background:linear-gradient(145deg,#1b2732,#050a0f 55%,#455360);box-shadow:0 32px 80px rgba(0,0,0,.42),inset 0 0 0 2px rgba(255,255,255,.28);transform:perspective(1100px) rotateY(-8deg) rotateX(3deg);overflow:hidden}
+.tablet:before{content:"";position:absolute;inset:8px;border-radius:24px;border:1px solid rgba(255,255,255,.12);pointer-events:none}
+.tablet-brand{height:16%;display:flex;align-items:center;justify-content:center;background:#082844}
+.tablet-brand img{width:34%;filter:brightness(0) invert(1);opacity:.96}
+.tablet-grid{height:84%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:2px;background:#294661}
+.tablet-grid figure{position:relative;margin:0;overflow:hidden;background:#0b3559}
+.tablet-grid img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) brightness(.72)}
+.tablet-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:7px 5px;background:linear-gradient(transparent,rgba(4,28,50,.92));color:white;text-align:center;font-size:7px;line-height:1.15;font-weight:800}
+.contact .primary-cta{max-width:45%}
+
+/* desktop brochure proportions */
+@media (min-width:760px){
+  .cover .inner{grid-template-columns:34% 66%;column-gap:22px}
+  .cover-lockup{align-self:start;margin-top:7vh}
+  .cover .signature{grid-column:2;grid-row:1/6;min-height:640px;height:auto!important}
+  .cover .signature-copy{top:7%;width:38%;max-width:38%}
+  .identity .inner{grid-template-columns:34% 66%;column-gap:28px}
+  .systems .inner{display:grid;grid-template-columns:40% 60%;column-gap:28px}
+  .systems .eyebrow,.systems .title,.systems .lead{grid-column:1;max-width:none}
+  .system-list{grid-column:2;grid-row:1/6;margin-top:0}
+  .contact .inner{display:block}
+}
+
+/* mobile translation of the same visual language */
+@media (max-width:759px){
+  .cover .inner{background:
+    linear-gradient(180deg,#fff 0 43%,rgba(255,255,255,.94) 43% 45%,#062848 45% 100%)}
+  .cover .inner:before{background:
+    linear-gradient(154deg,transparent 0 48%,rgba(255,255,255,.88) 48.4% 49%,transparent 49.6%),
+    url('/brand_assets/earth-equirect-night.webp') 50% 54%/130% auto no-repeat}
+  .cover .signature{margin-top:8px;height:330px!important}
+  .cover .signature-grid .mix:nth-child(1){left:0;width:62%;height:42%;top:0}
+  .cover .signature-grid .mix:nth-child(2){left:36%;width:64%;height:42%;top:26%}
+  .cover .signature-grid .mix:nth-child(3){left:0;width:100%;height:42%;top:58%}
+  .cover .signature-copy{left:12px;right:12px;top:auto;bottom:15px;width:auto;max-width:none}
+  .identity .inner{background:#fbfcfe}
+  .coord-step:before{display:none}
+  .systems .inner{background:#fbfcfe}
+  .systems .eyebrow,.systems .title,.systems .lead{max-width:none}
+  .system-card{grid-template-columns:42% 58%;background:linear-gradient(90deg,transparent 0 42%,#073051 42% 100%)}
+  .contact .inner{background:
+    linear-gradient(180deg,#fbfcfe 0 58%,#062848 58% 100%)}
+  .contact .title,.contact .lead,.contact-links,.contact .primary-cta{max-width:none}
+  .contact-showcase{position:relative;right:auto;top:auto;width:100%;height:auto;margin:6px 0 10px}
+  .contact-showcase:before{inset:-12%}
+  .tablet{max-width:none;transform:perspective(900px) rotateX(4deg);border-radius:24px;padding:10px}
+  .tablet-grid figcaption{font-size:6.5px}
+}
