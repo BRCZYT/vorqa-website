@@ -3,147 +3,285 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#061f38">
-<title>VORQA Global Supply | Interactive Company Profile</title>
-<meta name="description" content="VORQA Global Supply mobil interaktif tanıtım kataloğu: endüstriyel tedarik, proje tedariki ve uzman sistemler.">
+<meta name="theme-color" content="#f7fbff">
+<title>VORQA Global Supply | Interactive Catalog</title>
+<meta name="description" content="VORQA Global Supply — endüstriyel tedarik, proje tedariki ve uzman sistemler için interaktif katalog.">
 <meta property="og:title" content="VORQA Global Supply | İhtiyaçtan Teslimata">
 <meta property="og:description" content="Endüstriyel tedarik, proje tedariki ve uzman sistemler">
-<meta property="og:image" content="https://www.vorqaglobal.com/brand_assets/VORQA_B_COVER.png">
+<meta property="og:image" content="https://www.vorqaglobal.com/brand_assets/vorqa_logo_main.png">
 <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/manrope@5.0.20/index.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="first-page">
-<div class="app">
+<body>
+<div class="catalog-shell">
 <header class="topbar">
-  <a href="/" aria-label="VORQA ana sayfa"><img class="logo" src="/brand_assets/vorqa_logo_main.png" alt="VORQA Global Supply"></a>
-  <div class="top-actions" aria-label="Dil ve paylaşım">
-    <button class="lang active" data-lang="tr" aria-pressed="true">TR</button>
-    <button class="lang" data-lang="en" aria-pressed="false">EN</button>
-    <button class="lang" data-lang="ar" aria-pressed="false">AR</button>
-    <button class="share" id="shareBtn" aria-label="Kataloğu paylaş"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.6 6.8-4M8.6 13.4l6.8 4"/></svg></button>
+  <a class="brand-home" href="/" aria-label="VORQA ana sayfa"><img src="/brand_assets/vorqa_logo_main.png" alt="VORQA Global Supply"></a>
+  <div class="top-actions">
+    <button class="lang active" data-lang="tr">TR</button>
+    <button class="lang" data-lang="en">EN</button>
+    <button class="lang" data-lang="ar">AR</button>
+    <button class="share" id="shareBtn" aria-label="Kataloğu paylaş">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.6 6.8-4M8.6 13.4l6.8 4"/></svg>
+    </button>
   </div>
 </header>
 
 <main class="deck" id="deck">
-<section class="page cover v3-cover" data-page="0"><div class="inner v3-inner">
-  <div class="cover-lockup v3-lockup">
-    <div class="eyebrow" data-i="coverEyebrow">ENDÜSTRİYEL TEDARİK · PROJE TEDARİKİ</div>
-    <h1 class="title"><span data-i="cover1">İhtiyaçtan</span><br><span class="accent" data-i="cover2">Teslimata</span></h1>
-    <p class="lead" data-i="coverLead">Teknik netlik, doğru kaynak ve koordineli yürütme</p>
-    <p class="cover-sub" data-i="coverTag">Endüstriyel Tedarik · Proje Tedariki · Tek Sorumlu İş Ortağı</p>
-  </div>
-  <div class="v3-hero" aria-label="VORQA endüstriyel tedarik ağı">
-    <div class="hero-panel hp1"><img src="/images/showroom/metal-raw-materials.webp" alt=""></div>
-    <div class="hero-panel hp2"><img src="/images/showroom/pump-valve.webp" alt=""></div>
-    <div class="hero-panel hp3"><img src="/images/showroom/electrical-automation.webp" alt=""></div>
-    <div class="hero-panel hp4"><img src="/images/showroom/gear-motor-reducer.webp" alt=""></div>
-    <div class="hero-network" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-  </div>
-  <div class="v3-values" aria-label="VORQA yaklaşımı">
-    <div><b data-i="v1">Teknik Netlik</b></div>
-    <div><b data-i="v2">Güvenilir Tedarikçi Ağı</b></div>
-    <div><b data-i="v3">Koordineli Yürütme</b></div>
-    <div><b data-i="v4">Güvenilir Teslimat</b></div>
-  </div>
-  <a class="primary-cta" href="#" id="startBtn"><span data-i="discover">Kataloğu Keşfet</span><span>›</span></a>
-  <div class="domain">www.vorqaglobal.com</div>
-</div></section>
 
-<section class="page identity v3-identity" data-page="1"><div class="inner v3-inner">
-  <div class="v3-brand"><img src="/brand_assets/vorqa_logo_main.png" alt="VORQA Global Supply"></div>
-  <div class="eyebrow" data-i="idEyebrow">BİZ KİMİZ</div>
-  <h2 class="title"><span data-i="id1">Teknik & Ticari</span><br><span class="accent" data-i="id2">Koordinasyon</span></h2>
-  <div class="identity-card"><p data-i="idText">VORQA, endüstriyel ihtiyaçları doğrulanmış tedarikçiler ve uzman tesis partnerleriyle buluşturur; teknik, ticari ve teslimat koordinasyonunu talepten hedefe kadar yönetir</p></div>
-  <div class="coordination-map v3-map">
-    <svg class="coord-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M50 50 L50 13"/><path d="M50 50 L17 34"/><path d="M50 50 L83 34"/><path d="M50 50 L20 78"/><path d="M50 50 L80 78"/>
-    </svg>
-    <article class="coord-step c1"><div><h3 data-i="s1">Talep İncelemesi</h3><p data-i="sd1">Kapsam ve hedefi netleştiririz</p></div></article>
-    <article class="coord-step c2"><div><h3 data-i="s2">Teknik Netleştirme</h3><p data-i="sd2">Şartname ve kritik detayları kesinleştiririz</p></div></article>
-    <article class="coord-step c3"><div><h3 data-i="s3">Tedarikçi / Partner Seçimi</h3><p data-i="sd3">Doğru üretici veya partneri eşleştiririz</p></div></article>
-    <div class="coord-hub"><img src="/brand_assets/vorqa_amblem_transparent.png" alt="VORQA"></div>
-    <article class="coord-step c4"><div><h3 data-i="s4">Teklif & Sipariş Koordinasyonu</h3><p data-i="sd4">Teknik ve ticari teklifleri koordine ederiz</p></div></article>
-    <article class="coord-step c5"><div><h3 data-i="s6">Lojistik ve Teslimat Takibi</h3><p data-i="sd6">Sevkiyatı teslimata kadar yönetiriz</p></div></article>
-  </div>
-</div></section>
+<section class="page cover" data-page="0">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner cover-layout">
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="coverEyebrow">ENDÜSTRİYEL TEDARİK · PROJE TEDARİKİ</div>
+      <h1><span data-i="cover1">İhtiyaçtan</span><br><em data-i="cover2">Teslimata</em></h1>
+      <p class="lead" data-i="coverLead">Teknik netlik, doğru kaynak ve koordineli yürütme</p>
+      <p class="sublead" data-i="coverTag">Endüstriyel Tedarik · Proje Tedariki · Tek Sorumlu İş Ortağı</p>
+    </div>
 
-<section class="page scope" data-page="2"><div class="inner">
-  <div class="eyebrow" data-i="scopeEyebrow">TEDARİK KAPSAMI</div>
-  <h2 class="title"><span data-i="scope1">Endüstriyel</span> <span class="accent" data-i="scope2">Tedarik Kapsamı</span></h2>
-  <div class="scope-grid">
-    <article><img src="/images/galvaniz/galvaniz1.jpg" alt="Çelik konstrüksiyon ve özel imalatlar"><span data-i="g12">Çelik Konstrüksiyon ve Özel İmalatlar</span><i>›</i></article>
-    <article><img src="/images/showroom/silo-equipment.webp" alt="Silo, konveyör ve dökme malzeme ekipmanları"><span data-i="g10">Silo, Konveyör ve Dökme Malzeme Ekipmanları</span><i>›</i></article>
-    <article><img src="/images/showroom/insulation-materials.webp" alt="Filtrasyon, havalandırma ve toz toplama sistemleri"><span data-i="g11">Filtrasyon, Havalandırma ve Toz Toplama Sistemleri</span><i>›</i></article>
-    <article><img src="/images/showroom/pump-valve.webp" alt="Pompa, vana ve akış kontrol ekipmanları"><span data-i="g3">Pompa, Vana ve Akış Kontrol Ekipmanları</span><i>›</i></article>
-    <article><img src="/images/showroom/hydraulic-pneumatic-products.webp" alt="Hidrolik ve pnömatik sistemler"><span data-i="g8">Hidrolik ve Pnömatik Sistemler</span><i>›</i></article>
-    <article><img src="/images/showroom/electrical-automation.webp" alt="Elektrik ekipmanları ve güç dağıtımı"><span data-i="g6">Elektrik Ekipmanları ve Güç Dağıtımı</span><i>›</i></article>
-    <article><img src="/images/showroom/electrical-automation.webp" alt="Otomasyon, enstrümantasyon ve kontrol"><span data-i="g7">Otomasyon, Enstrümantasyon ve Kontrol</span><i>›</i></article>
-    <article><img src="/images/showroom/fitting-piping-products.webp" alt="Boru, tüp, bağlantı parçaları ve flanşlar"><span data-i="g2">Boru, Tüp, Bağlantı Parçaları ve Flanşlar</span><i>›</i></article>
-    <article><img src="/images/showroom/gear-motor-reducer.webp" alt="Motor, redüktör ve güç aktarma sistemleri"><span data-i="g4">Motor, Redüktör ve Güç Aktarma Sistemleri</span><i>›</i></article>
-    <article><img src="/images/showroom/gear-motor-reducer.webp" alt="Rulman, kaplin ve mekanik komponentler"><span data-i="g5">Rulman, Kaplin ve Mekanik Komponentler</span><i>›</i></article>
-    <article><img src="/images/showroom/fitting-piping-products.webp" alt="Bağlantı elemanları, contalar ve endüstriyel donanım"><span data-i="g9">Bağlantı Elemanları, Contalar ve Endüstriyel Donanım</span><i>›</i></article>
-    <article><img src="/images/showroom/metal-raw-materials.webp" alt="Çelik, metaller ve hammaddeler"><span data-i="g1">Çelik, Metaller ve Hammaddeler</span><i>›</i></article>
-  </div>
-</div></section>
+    <div class="cover-visual media-reveal">
+      <figure class="cover-shot cs1"><img src="/images/showroom/metal-raw-materials.webp" alt="Çelik ve hammaddeler"></figure>
+      <figure class="cover-shot cs2"><img src="/images/showroom/pump-valve.webp" alt="Pompa ve vana"></figure>
+      <figure class="cover-shot cs3"><img src="/images/showroom/electrical-automation.webp" alt="Elektrik ve otomasyon"></figure>
+      <figure class="cover-shot cs4"><img src="/images/showroom/gear-motor-reducer.webp" alt="Motor ve redüktör"></figure>
+      <svg class="cover-lines" viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M7 46 C30 19 46 38 60 18 S85 12 94 5"/>
+        <path d="M8 10 C29 36 46 21 63 45 S83 45 95 51"/>
+      </svg>
+    </div>
 
-<section class="page systems" data-page="3"><div class="inner">
-  <div class="eyebrow" data-i="sysEyebrow">UZMAN SİSTEMLER</div>
-  <h2 class="title single-line"><span data-i="sys1">Uzman</span> <span class="accent" data-i="sys2">Sistemler</span></h2>
-  <div class="system-list">
-    <button class="system-card" data-system="concrete"><img src="/images/beton/prj-1.webp" alt="Beton santrali"><div><h3 data-i="sysA">Beton Santralleri</h3><small data-i="tap">Detayları görüntüle</small></div><b>›</b></button>
-    <button class="system-card" data-system="galv"><img src="/images/galvaniz/galvaniz1.jpg" alt="Komple galvaniz tesisi"><div><h3 data-i="sysB">Komple Galvaniz Tesisleri</h3><small data-i="tap">Detayları görüntüle</small></div><b>›</b></button>
-    <button class="system-card" data-system="asphalt"><img src="/images/illustrations/srv-asphalt-plant.svg" alt="Asfalt plenti ve ekipmanları"><div><h3 data-i="sysC">Asfalt Plentleri ve Ekipmanları</h3><small data-i="tap">Detayları görüntüle</small></div><b>›</b></button>
-    <button class="system-card" data-system="waste"><img src="/images/dönüşüm/waste-to-energy.jpg" alt="Atıktan enerji tesisi"><div><h3 data-i="sysD">Atıktan Enerji Tesisleri</h3><small data-i="tap">Detayları görüntüle</small></div><b>›</b></button>
-    <button class="system-card" data-system="crush"><img src="/images/kırma/mobile-crushing-screening-plant-1.jpeg" alt="Kırma ve eleme tesisi"><div><h3 data-i="sysE">Kırma ve Eleme Tesisleri</h3><small data-i="tap">Detayları görüntüle</small></div><b>›</b></button>
-  </div>
-</div></section>
+    <div class="value-row stagger">
+      <div><span class="dot orange"></span><b data-i="v1">Teknik Netlik</b></div>
+      <div><span class="dot blue"></span><b data-i="v2">Güvenilir Tedarikçi Ağı</b></div>
+      <div><span class="dot orange"></span><b data-i="v3">Koordineli Yürütme</b></div>
+      <div><span class="dot blue"></span><b data-i="v4">Güvenilir Teslimat</b></div>
+    </div>
 
-<section class="page contact" data-page="4"><div class="inner">
-  <div class="eyebrow" data-i="contactEyebrow">İLETİŞİM</div>
-  <h2 class="title"><span data-i="contact1">Bize</span> <span class="accent" data-i="contact2">Ulaşın</span></h2>
-  <p class="lead" data-i="contactLead">Endüstriyel tedarik, proje tedariki ve çözüm ihtiyaçlarınız için ekibimizle iletişime geçin</p>
-  <div class="contact-links">
-    <a data-wa="general" href="https://wa.me/905400086772" target="_blank" rel="noopener"><b>WhatsApp</b><span>+90 540 008 67 72</span></a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Uzay+Çağı+Caddesi+Ostim+Yenimahalle+Ankara+Türkiye" target="_blank" rel="noopener"><b data-i="addressLabel">Adres</b><span>Uzay Çağı Caddesi, Ostim, Yenimahalle, Ankara, Türkiye</span></a>
-    <a href="mailto:purchasing@vorqaglobal.com"><b data-i="purchasingLabel">Satınalma</b><span>purchasing@vorqaglobal.com</span></a>
-    <a href="mailto:info@vorqaglobal.com"><b data-i="emailLabel">E-posta</b><span>info@vorqaglobal.com</span></a>
-    <a href="https://www.linkedin.com/company/vorqaglobal/" target="_blank" rel="noopener"><b>LinkedIn</b><span>linkedin.com/company/vorqaglobal</span></a>
-    <a href="https://www.vorqaglobal.com/" target="_blank" rel="noopener"><b>Website</b><span>www.vorqaglobal.com</span></a>
+    <button class="cta" id="startBtn"><span data-i="discover">Kataloğu Keşfet</span><b>→</b></button>
+    <div class="domain">www.vorqaglobal.com</div>
   </div>
-  <div class="contact-showcase" aria-label="VORQA supply and systems overview">
-    <div class="tablet">
-      <div class="tablet-brand"><img src="/brand_assets/vorqa_logo_main.png" alt="VORQA Global Supply"></div>
-      <div class="tablet-grid">
-        <figure><img src="/images/showroom/fitting-piping-products.webp" alt=""><figcaption data-i="tg1">Boru & Bağlantı</figcaption></figure>
-        <figure><img src="/images/showroom/pump-valve.webp" alt=""><figcaption data-i="tg2">Pompa & Vana</figcaption></figure>
-        <figure><img src="/images/showroom/gear-motor-reducer.webp" alt=""><figcaption data-i="tg3">Motor & Redüktör</figcaption></figure>
-        <figure><img src="/images/showroom/electrical-automation.webp" alt=""><figcaption data-i="tg4">Elektrik & Otomasyon</figcaption></figure>
-        <figure><img src="/images/showroom/hydraulic-pneumatic-products.webp" alt=""><figcaption data-i="tg5">Hidrolik & Pnömatik</figcaption></figure>
-        <figure><img src="/images/galvaniz/galvaniz1.jpg" alt=""><figcaption data-i="tg6">Özel İmalat</figcaption></figure>
-        <figure><img src="/images/showroom/silo-equipment.webp" alt=""><figcaption data-i="tg7">Silo & Bulk</figcaption></figure>
-        <figure><img src="/images/illustrations/srv-asphalt-plant.svg" alt=""><figcaption data-i="tg8">Uzman Sistemler</figcaption></figure>
+</section>
+
+<section class="page identity" data-page="1">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner">
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="idEyebrow">BİZ KİMİZ</div>
+      <h2><span data-i="id1">Teknik & Ticari</span><br><em data-i="id2">Koordinasyon</em></h2>
+      <p class="lead wide" data-i="idText">VORQA, endüstriyel ihtiyaçları doğrulanmış tedarikçiler ve uzman tesis partnerleriyle buluşturur; teknik, ticari ve teslimat koordinasyonunu talepten hedefe kadar yönetir</p>
+    </div>
+
+    <div class="coordination-stage">
+      <svg class="coord-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M50 49 L50 15"/><path d="M47 50 L19 35"/><path d="M53 50 L81 35"/><path d="M47 54 L22 78"/><path d="M53 54 L78 78"/>
+      </svg>
+      <div class="coord-hub"><img src="/brand_assets/vorqa_amblem_transparent.png" alt=""></div>
+      <article class="coord-card cc1"><span class="mini-icon">⌕</span><h3 data-i="s1">Talep İncelemesi</h3><p data-i="sd1">Kapsam ve hedefi netleştiririz</p></article>
+      <article class="coord-card cc2"><span class="mini-icon">⚙</span><h3 data-i="s2">Teknik Netleştirme</h3><p data-i="sd2">Şartname ve kritik detayları kesinleştiririz</p></article>
+      <article class="coord-card cc3"><span class="mini-icon">◎</span><h3 data-i="s3">Tedarikçi / Partner Seçimi</h3><p data-i="sd3">Doğru üretici veya partneri eşleştiririz</p></article>
+      <article class="coord-card cc4"><span class="mini-icon">✓</span><h3 data-i="s4">Teklif & Sipariş Koordinasyonu</h3><p data-i="sd4">Teknik ve ticari teklifleri koordine ederiz</p></article>
+      <article class="coord-card cc5"><span class="mini-icon">→</span><h3 data-i="s6">Lojistik ve Teslimat Takibi</h3><p data-i="sd6">Sevkiyatı teslimata kadar yönetiriz</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="page scope" data-page="2">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner">
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="scopeEyebrow">TEDARİK KAPSAMI</div>
+      <h2><span data-i="scope1">Öncelikli</span><br><em data-i="scope2">Tedarik Kalemleri</em></h2>
+      <p class="lead" data-i="scopeLead">Koordine edilen çok kategorili endüstriyel tedarik kapsamı</p>
+    </div>
+
+    <div class="scope-grid stagger">
+      <article><img src="/images/galvaniz/galvaniz1.jpg" alt=""><span data-i="g12">Çelik Konstrüksiyon ve Özel İmalatlar</span></article>
+      <article><img src="/images/showroom/silo-equipment.webp" alt=""><span data-i="g10">Silo, Konveyör ve Dökme Malzeme Ekipmanları</span></article>
+      <article><img src="/images/showroom/insulation-materials.webp" alt=""><span data-i="g11">Filtrasyon, Havalandırma ve Toz Toplama Sistemleri</span></article>
+      <article><img src="/images/showroom/pump-valve.webp" alt=""><span data-i="g3">Pompa, Vana ve Akış Kontrol Ekipmanları</span></article>
+      <article><img src="/images/showroom/hydraulic-pneumatic-products.webp" alt=""><span data-i="g8">Hidrolik ve Pnömatik Sistemler</span></article>
+      <article><img src="/images/showroom/electrical-automation.webp" alt=""><span data-i="g6">Elektrik Ekipmanları ve Güç Dağıtımı</span></article>
+      <article><img src="/images/showroom/electrical-automation.webp" alt=""><span data-i="g7">Otomasyon, Enstrümantasyon ve Kontrol</span></article>
+      <article><img src="/images/showroom/fitting-piping-products.webp" alt=""><span data-i="g2">Boru, Tüp, Bağlantı Parçaları ve Flanşlar</span></article>
+      <article><img src="/images/showroom/gear-motor-reducer.webp" alt=""><span data-i="g4">Motor, Redüktör ve Güç Aktarma Sistemleri</span></article>
+      <article><img src="/images/showroom/gear-motor-reducer.webp" alt=""><span data-i="g5">Rulman, Kaplin ve Mekanik Komponentler</span></article>
+      <article><img src="/images/showroom/fitting-piping-products.webp" alt=""><span data-i="g9">Bağlantı Elemanları, Contalar ve Endüstriyel Donanım</span></article>
+      <article><img src="/images/showroom/metal-raw-materials.webp" alt=""><span data-i="g1">Çelik, Metaller ve Hammaddeler</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="page systems" data-page="3">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner">
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="sysEyebrow">ÇÖZÜM ALANLARI</div>
+      <h2><span data-i="sys1">Sistem</span><br><em data-i="sys2">Çözümleri</em></h2>
+      <p class="lead" data-i="sysLead">Mühendislik, tedarik ve koordinasyon birlikte yürütülür</p>
+    </div>
+
+    <div class="system-grid stagger">
+      <button data-target="4"><img src="/images/beton/prj-1.webp" alt=""><span><b data-i="sysA">Beton Santralleri</b><small data-i="tap">Detayları görüntüle</small></span><i>→</i></button>
+      <button data-target="5"><img src="/images/galvaniz/galvaniz1.jpg" alt=""><span><b data-i="sysB">Komple Galvaniz Tesisleri</b><small data-i="tap">Detayları görüntüle</small></span><i>→</i></button>
+      <button data-target="6"><img src="/images/illustrations/srv-asphalt-plant.svg" alt=""><span><b data-i="sysC">Asfalt Plentleri ve Ekipmanları</b><small data-i="tap">Detayları görüntüle</small></span><i>→</i></button>
+      <button data-target="7"><img src="/images/dönüşüm/waste-to-energy.jpg" alt=""><span><b data-i="sysD">Atıktan Enerji Tesisleri</b><small data-i="tap">Detayları görüntüle</small></span><i>→</i></button>
+      <button class="wide" data-target="8"><img src="/images/kırma/mobile-crushing-screening-plant-1.jpeg" alt=""><span><b data-i="sysE">Kırma ve Eleme Tesisleri</b><small data-i="tap">Detayları görüntüle</small></span><i>→</i></button>
+    </div>
+  </div>
+</section>
+
+<section class="page solution concrete" data-page="4" data-solution="concrete">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner solution-inner">
+    <button class="back-systems" data-back="3">← <span data-i="backSystems">Sistem Çözümleri</span></button>
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="solutionEyebrow">SİSTEM ÇÖZÜMÜ</div>
+      <h2><span data-i="con1">Beton</span><br><em data-i="con2">Santralleri</em></h2>
+      <p class="lead" data-i="conLead">Beton santrali projeleriniz için koordineli tedarik ve teknik-ticari yürütme desteği</p>
+    </div>
+    <figure class="solution-hero media-reveal"><img src="/images/beton/prj-1.webp" alt="Beton santrali"></figure>
+    <div class="process-row stagger">
+      <article><b data-i="conP1">Proje Kapsamı Netleştirme</b></article>
+      <article><b data-i="conP2">Ana Ekipman ve Yardımcı Sistemler</b></article>
+      <article><b data-i="conP3">Üretici / Partner Eşleştirme</b></article>
+      <article><b data-i="conP4">Sevkiyat ve Saha Koordinasyonu</b></article>
+    </div>
+    <div class="supply-box">
+      <h3 data-i="detailSupply">Tedarik Kapsamı</h3>
+      <div class="supply-items stagger">
+        <span data-i="conS1">Mikser ve agrega bunkerleri</span><span data-i="conS2">Silo ve helezon sistemleri</span><span data-i="conS3">Filtre ve dozaj ekipmanları</span><span data-i="conS4">Otomasyon ve elektrik çözümleri</span>
       </div>
     </div>
   </div>
-  <a class="primary-cta" data-wa="general" href="https://wa.me/905400086772" target="_blank" rel="noopener"><span data-i="rfq">Teklif Talebi Gönder</span><span>›</span></a>
-</div></section>
+</section>
+
+<section class="page solution galv" data-page="5" data-solution="galv">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner solution-inner">
+    <button class="back-systems" data-back="3">← <span data-i="backSystems">Sistem Çözümleri</span></button>
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="solutionEyebrow">SİSTEM ÇÖZÜMÜ</div>
+      <h2><span data-i="galv1">Komple</span><br><em data-i="galv2">Galvaniz Tesisleri</em></h2>
+      <p class="lead" data-i="galvLead">Galvaniz hat projeleriniz için koordineli tedarik ve teknik-ticari yürütme</p>
+    </div>
+    <figure class="solution-hero media-reveal"><img src="/images/galvaniz/galvaniz1.jpg" alt="Komple galvaniz tesisi"></figure>
+    <div class="process-row stagger">
+      <article><b data-i="galvP1">Hat Konfigürasyonu</b></article>
+      <article><b data-i="galvP2">Ana Ekipman ve Yardımcı Üniteler</b></article>
+      <article><b data-i="galvP3">Üretici / Partner Eşleştirme</b></article>
+      <article><b data-i="galvP4">Montaj ve Lojistik Koordinasyonu</b></article>
+    </div>
+    <div class="supply-box">
+      <h3 data-i="detailSupply">Tedarik Kapsamı</h3>
+      <div class="supply-items stagger">
+        <span data-i="galvS1">Kettle, fırın ve ısı sistemleri</span><span data-i="galvS2">Kimyasal ön işlem hatları</span><span data-i="galvS3">Taşıma ve kaldırma ekipmanları</span><span data-i="galvS4">Otomasyon ve enerji entegrasyonu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page solution asphalt" data-page="6" data-solution="asphalt">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner solution-inner">
+    <button class="back-systems" data-back="3">← <span data-i="backSystems">Sistem Çözümleri</span></button>
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="solutionEyebrow">SİSTEM ÇÖZÜMÜ</div>
+      <h2><span data-i="asp1">Asfalt Plentleri ve</span><br><em data-i="asp2">Ekipmanları</em></h2>
+      <p class="lead" data-i="aspLead">Asfalt plent projeleriniz için doğru tedarikçilerle koordineli, teknik ve ticari yürütme</p>
+    </div>
+    <figure class="solution-hero media-reveal"><img src="/images/illustrations/srv-asphalt-plant.svg" alt="Asfalt plenti"></figure>
+    <div class="process-row stagger">
+      <article><b data-i="aspP1">Uygulama ve Kapasite Uyumlandırma</b></article>
+      <article><b data-i="aspP2">Ana Ekipman ve Yardımcı Sistemler</b></article>
+      <article><b data-i="aspP3">Üretici / Partner Eşleştirme</b></article>
+      <article><b data-i="aspP4">Sevkiyat ve Devreye Alma Koordinasyonu</b></article>
+    </div>
+    <div class="supply-box">
+      <h3 data-i="detailSupply">Tedarik Kapsamı</h3>
+      <div class="supply-items stagger">
+        <span data-i="aspS1">Kurutucu tambur ve brülör sistemi</span><span data-i="aspS2">Elek, bunker ve elevatör grupları</span><span data-i="aspS3">Bitüm ve filler ekipmanları</span><span data-i="aspS4">Filtre, otomasyon ve kontrol</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page solution waste" data-page="7" data-solution="waste">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner solution-inner">
+    <button class="back-systems" data-back="3">← <span data-i="backSystems">Sistem Çözümleri</span></button>
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="solutionEyebrow">SİSTEM ÇÖZÜMÜ</div>
+      <h2><span data-i="waste1">Atıktan</span><br><em data-i="waste2">Enerji Tesisleri</em></h2>
+      <p class="lead" data-i="wasteLead">Atıktan enerji projelerinde koordineli tedarik ve teknik-ticari yürütme ile sürdürülebilir çözümler</p>
+    </div>
+    <figure class="solution-hero media-reveal"><img src="/images/dönüşüm/waste-to-energy.jpg" alt="Atıktan enerji tesisi"></figure>
+    <div class="process-row stagger">
+      <article><b data-i="wasteP1">Teknik Kapsam Uyumlandırma</b></article>
+      <article><b data-i="wasteP2">Ana Ekipman ve Proses Bileşenleri</b></article>
+      <article><b data-i="wasteP3">Üretici / Partner Eşleştirme</b></article>
+      <article><b data-i="wasteP4">Sevkiyat ve Dokümantasyon Takibi</b></article>
+    </div>
+    <div class="supply-box">
+      <h3 data-i="detailSupply">Tedarik Kapsamı</h3>
+      <div class="supply-items stagger">
+        <span data-i="wasteS1">Kazan ve proses ekipmanları</span><span data-i="wasteS2">Filtrasyon, fan ve baca sistemleri</span><span data-i="wasteS3">Boru, vana ve akış ekipmanları</span><span data-i="wasteS4">Elektrik, otomasyon ve kontrol</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page solution crush" data-page="8" data-solution="crush">
+  <div class="page-bg network-bg"></div>
+  <div class="page-inner solution-inner">
+    <button class="back-systems" data-back="3">← <span data-i="backSystems">Sistem Çözümleri</span></button>
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="solutionEyebrow">SİSTEM ÇÖZÜMÜ</div>
+      <h2><span data-i="crush1">Kırma ve Eleme</span><br><em data-i="crush2">Tesisleri</em></h2>
+      <p class="lead" data-i="crushLead">Kırma ve eleme projelerinde ihtiyaçlara uygun tedarik ve teknik-ticari koordinasyonu uçtan uca yönetiyoruz</p>
+    </div>
+    <figure class="solution-hero media-reveal"><img src="/images/kırma/mobile-crushing-screening-plant-1.jpeg" alt="Kırma ve eleme tesisi"></figure>
+    <div class="process-row stagger">
+      <article><b data-i="crushP1">Sistem Konfigürasyonu</b></article>
+      <article><b data-i="crushP2">Ana Ekipman ve Yardımcı Üniteler</b></article>
+      <article><b data-i="crushP3">Üretici / Partner Eşleştirme</b></article>
+      <article><b data-i="crushP4">Lojistik ve Kurulum Koordinasyonu</b></article>
+    </div>
+    <div class="supply-box">
+      <h3 data-i="detailSupply">Tedarik Kapsamı</h3>
+      <div class="supply-items stagger">
+        <span data-i="crushS1">Kırıcılar ve titreşimli elekler</span><span data-i="crushS2">Konveyör ve besleme sistemleri</span><span data-i="crushS3">Çelik konstrüksiyon ve platformlar</span><span data-i="crushS4">Yardımcı ekipman ve otomasyon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page contact" data-page="9">
+  <div class="page-bg contact-bg"></div>
+  <div class="page-inner">
+    <div class="intro copy-animate">
+      <div class="eyebrow" data-i="contactEyebrow">İLETİŞİM</div>
+      <h2><span data-i="contact1">Bize</span><br><em data-i="contact2">Ulaşın</em></h2>
+      <p class="lead" data-i="contactLead">Endüstriyel tedarik ve proje koordinasyonu için ekibimizle iletişime geçin</p>
+    </div>
+
+    <div class="contact-grid stagger">
+      <a data-wa="general" href="https://wa.me/905400086772" target="_blank" rel="noopener"><b data-i="phoneLabel">Telefon / WhatsApp</b><span>+90 540 008 67 72</span></a>
+      <a href="mailto:purchasing@vorqaglobal.com"><b data-i="purchasingLabel">Satınalma</b><span>purchasing@vorqaglobal.com</span></a>
+      <a href="mailto:info@vorqaglobal.com"><b data-i="emailLabel">E-posta</b><span>info@vorqaglobal.com</span></a>
+      <a href="https://www.vorqaglobal.com/" target="_blank" rel="noopener"><b>Website</b><span>www.vorqaglobal.com</span></a>
+      <a href="https://www.linkedin.com/company/vorqaglobal/" target="_blank" rel="noopener"><b>LinkedIn</b><span>linkedin.com/company/vorqaglobal</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Uzay+Çağı+Caddesi+Ostim+Yenimahalle+Ankara+Türkiye" target="_blank" rel="noopener"><b data-i="addressLabel">Adres</b><span>Uzay Çağı Caddesi, Ostim, Yenimahalle, Ankara, Türkiye</span></a>
+    </div>
+    <a class="cta rfq" data-wa="general" href="https://wa.me/905400086772" target="_blank" rel="noopener"><span data-i="rfq">Teklif Talebi Gönder</span><b>→</b></a>
+    <div class="domain">www.vorqaglobal.com</div>
+  </div>
+</section>
+
 </main>
 
-<div class="navdots" id="dots" aria-label="Katalog bölümleri"></div>
-<div class="arrows"><button id="prev" aria-label="Önceki bölüm">‹</button><button id="next" aria-label="Sonraki bölüm">›</button></div>
-</div>
-
-<div class="sheet" id="sheet" aria-modal="true" aria-hidden="true" role="dialog">
-  <header><img src="/brand_assets/vorqa_logo_main.png" alt="VORQA Global Supply"><button id="closeSheet" aria-label="Detay ekranını kapat">×</button></header>
-  <div class="sheet-hero"><img id="sheetImg" alt=""><div><span data-i="detailEyebrow">UZMAN SİSTEM</span><h2 id="sheetTitle"></h2></div></div>
-  <main>
-    <section><h3 data-i="dScope">Kapsam</h3><p id="sheetScope"></p></section>
-    <section><h3 data-i="dTypical">Tipik İçerik</h3><ul id="sheetList"></ul></section>
-    <section><h3 data-i="dCoord">Koordinasyon</h3><p id="sheetCoord"></p></section>
-    <a class="primary-cta" data-wa="specialist" href="https://wa.me/905400086772" target="_blank" rel="noopener"><span data-i="rfq">Teklif Talebi Gönder</span><span>›</span></a>
-  </main>
+<div class="nav-dots" id="dots" aria-label="Katalog sayfaları"></div>
+<div class="page-arrows"><button id="prev" aria-label="Önceki sayfa">‹</button><button id="next" aria-label="Sonraki sayfa">›</button></div>
 </div>
 <script src="./app.js"></script>
 </body>
