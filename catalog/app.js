@@ -2,61 +2,121 @@ const deck=document.getElementById('deck');
 const pages=[...document.querySelectorAll('.page')];
 const dots=document.getElementById('dots');
 let idx=0;
-pages.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label',`${i+1}. bölüm`);b.onclick=()=>go(i);dots.appendChild(b)});
-const dotEls=[...dots.children],prev=document.getElementById('prev'),next=document.getElementById('next');
-function updateNav(){dotEls.forEach((d,n)=>d.classList.toggle('active',n===idx));pages.forEach((p,n)=>p.classList.toggle('is-active',n===idx));prev.disabled=idx===0;next.disabled=idx===pages.length-1;document.body.classList.toggle('first-page',idx===0);document.body.classList.toggle('last-page',idx===pages.length-1)}
-function go(i){idx=Math.max(0,Math.min(pages.length-1,i));pages[idx].scrollTop=0;pages[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});updateNav()}
-prev.onclick=()=>go(idx-1);next.onclick=()=>go(idx+1);
-document.getElementById('startBtn').onclick=e=>{e.preventDefault();go(1)};
+
+pages.forEach((_,i)=>{
+  const b=document.createElement('button');
+  b.className=i===0?'active':'';
+  b.setAttribute('aria-label',`${i+1}. sayfa`);
+  b.onclick=()=>go(i);
+  dots.appendChild(b);
+});
+const dotEls=[...dots.children];
+const prev=document.getElementById('prev');
+const next=document.getElementById('next');
+
+function updateNav(){
+  dotEls.forEach((d,n)=>d.classList.toggle('active',n===idx));
+  pages.forEach((p,n)=>p.classList.toggle('is-active',n===idx));
+  prev.disabled=idx===0;
+  next.disabled=idx===pages.length-1;
+}
+function go(i){
+  idx=Math.max(0,Math.min(pages.length-1,i));
+  pages[idx].scrollTop=0;
+  pages[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+  updateNav();
+}
+prev.onclick=()=>go(idx-1);
+next.onclick=()=>go(idx+1);
+document.getElementById('startBtn').onclick=()=>go(1);
+document.querySelectorAll('[data-target]').forEach(b=>b.onclick=()=>go(Number(b.dataset.target)));
+document.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>go(Number(b.dataset.back)));
+
 let raf=0;
-deck.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const n=Math.round(deck.scrollLeft/deck.clientWidth);if(n!==idx){idx=n;updateNav()}})},{passive:true});
-addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(idx+1);if(e.key==='ArrowLeft')go(idx-1);if(e.key==='Escape')document.getElementById('sheet').classList.remove('open')});
+deck.addEventListener('scroll',()=>{
+  cancelAnimationFrame(raf);
+  raf=requestAnimationFrame(()=>{
+    const n=Math.round(deck.scrollLeft/deck.clientWidth);
+    if(n!==idx){idx=n;updateNav()}
+  });
+},{passive:true});
+addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight')go(idx+1);
+  if(e.key==='ArrowLeft')go(idx-1);
+});
 updateNav();
 
-const original={};document.querySelectorAll('[data-i]').forEach(el=>original[el.dataset.i]=el.innerHTML);
+const original={};
+document.querySelectorAll('[data-i]').forEach(el=>original[el.dataset.i]=el.innerHTML);
+
 const strings={
 en:{
-coverEyebrow:'INDUSTRIAL SOURCING · PROJECT SUPPLY',cover1:'From Requirement',cover2:'to Delivery',coverLead:'Technical clarity, the right source and coordinated execution',coverTag:'Industrial Sourcing · Project Supply · One Accountable Partner',sigTitle:'We turn requirements into a coordinated supply flow',sigText:'Technical evaluation, supplier selection, coordination and delivery under one accountability',v1:'Technical Clarity',v2:'Reliable Supplier Network',v3:'Coordinated Execution',v4:'Reliable Delivery',discover:'Explore the Profile',
-idEyebrow:'WHO WE ARE',id1:'Technical & Commercial',id2:'Coordination',idText:'VORQA connects industrial requirements with verified suppliers and specialist plant partners, managing technical, commercial and delivery coordination from request to target.',s1:'Requirement Review',sd1:'Scope and target are clarified',s2:'Technical Clarification',sd2:'Specifications and constraints are aligned',s3:'Supplier / Partner Selection',sd3:'The right verified source is matched',s4:'Quotation & Order Coordination',sd4:'Technical and commercial offers are aligned',s5:'Production & Quality',sd5:'Progress and quality documents are followed',s6:'Logistics & Delivery',sd6:'Shipment is managed through delivery',
-scopeEyebrow:'SUPPLY SCOPE',scope1:'Industrial',scope2:'Supply Scope',scopeLead:'Coordinated supply solutions across a broad range of industrial requirements',g1:'Steel, Metals & Raw Materials',g2:'Pipes, Tubes, Fittings & Flanges',g3:'Pumps, Valves & Flow Control Equipment',g4:'Motors, Gear Reducers & Power Transmission',g5:'Bearings, Couplings & Mechanical Components',g6:'Electrical Equipment & Power Distribution',g7:'Automation, Instrumentation & Control',g8:'Hydraulic & Pneumatic Systems',g9:'Fasteners, Gaskets & Industrial Hardware',g10:'Silos, Conveyors & Bulk Handling Equipment',g11:'Filtration, Ventilation & Dust Collection',g12:'Fabricated Steel & Custom Manufacturing',
-sysEyebrow:'SPECIALIST SYSTEMS',sys1:'Specialist',sys2:'Systems',sysLead:'Tap a system to view scope, typical content and coordination details',sysA:'Concrete Plants',sysB:'Complete Galvanizing Plants',sysC:'Asphalt Plants & Equipment',sysD:'Waste-to-Energy Plants',sysE:'Crushing & Screening Plants',tap:'View details',
-contactEyebrow:'CONTACT',contact1:'Contact',contact2:'Us',contactLead:'Contact our team for industrial sourcing, project supply and specialist solution requirements',tg1:'Pipes & Fittings',tg2:'Pumps & Valves',tg3:'Motors & Gear Reducers',tg4:'Electrical & Automation',tg5:'Hydraulic & Pneumatic',tg6:'Custom Fabrication',tg7:'Silo & Bulk',tg8:'Specialist Systems',phoneLabel:'Phone',purchasingLabel:'Purchasing',emailLabel:'E-mail',addressLabel:'Address',rfq:'Request a Quote',detailEyebrow:'SPECIALIST SYSTEM',dScope:'Scope',dTypical:'Typical Content',dCoord:'Coordination'
+coverEyebrow:'INDUSTRIAL SOURCING · PROJECT SUPPLY',cover1:'From Requirement',cover2:'to Delivery',coverLead:'Technical clarity, the right source and coordinated execution',coverTag:'Industrial Sourcing · Project Supply · One Accountable Partner',v1:'Technical Clarity',v2:'Reliable Supplier Network',v3:'Coordinated Execution',v4:'Reliable Delivery',discover:'Explore the Catalog',
+idEyebrow:'WHO WE ARE',id1:'Technical & Commercial',id2:'Coordination',idText:'VORQA connects industrial requirements with verified suppliers and specialist plant partners, managing technical, commercial and delivery coordination from request to target.',s1:'Requirement Review',sd1:'We clarify scope and target',s2:'Technical Clarification',sd2:'We align specifications and critical details',s3:'Supplier / Partner Selection',sd3:'We match the right manufacturer or partner',s4:'Quotation & Order Coordination',sd4:'We coordinate technical and commercial offers',s6:'Logistics & Delivery Tracking',sd6:'We manage shipment through delivery',
+scopeEyebrow:'SUPPLY SCOPE',scope1:'Priority',scope2:'Supply Categories',scopeLead:'Coordinated multi-category industrial supply',g1:'Steel, Metals & Raw Materials',g2:'Pipes, Tubes, Fittings & Flanges',g3:'Pumps, Valves & Flow Control Equipment',g4:'Motors, Gear Reducers & Power Transmission',g5:'Bearings, Couplings & Mechanical Components',g6:'Electrical Equipment & Power Distribution',g7:'Automation, Instrumentation & Control',g8:'Hydraulic & Pneumatic Systems',g9:'Fasteners, Gaskets & Industrial Hardware',g10:'Silos, Conveyors & Bulk Handling Equipment',g11:'Filtration, Ventilation & Dust Collection',g12:'Fabricated Steel & Custom Manufacturing',
+sysEyebrow:'SOLUTION AREAS',sys1:'System',sys2:'Solutions',sysLead:'Engineering, sourcing and coordination are managed together',sysA:'Concrete Plants',sysB:'Complete Galvanizing Plants',sysC:'Asphalt Plants & Equipment',sysD:'Waste-to-Energy Plants',sysE:'Crushing & Screening Plants',tap:'View details',
+solutionEyebrow:'SYSTEM SOLUTION',backSystems:'System Solutions',detailSupply:'Supply Scope',
+con1:'Concrete',con2:'Plants',conLead:'Coordinated sourcing and technical-commercial execution support for concrete plant projects',conP1:'Project Scope Clarification',conP2:'Main Equipment & Auxiliary Systems',conP3:'Manufacturer / Partner Matching',conP4:'Shipment & Site Coordination',conS1:'Mixer and aggregate bunkers',conS2:'Silo and screw conveyor systems',conS3:'Filter and dosing equipment',conS4:'Automation and electrical solutions',
+galv1:'Complete',galv2:'Galvanizing Plants',galvLead:'Coordinated sourcing and technical-commercial execution for galvanizing line projects',galvP1:'Line Configuration',galvP2:'Main Equipment & Auxiliary Units',galvP3:'Manufacturer / Partner Matching',galvP4:'Installation & Logistics Coordination',galvS1:'Kettle, furnace and heating systems',galvS2:'Chemical pretreatment lines',galvS3:'Handling and lifting equipment',galvS4:'Automation and energy integration',
+asp1:'Asphalt Plants &',asp2:'Equipment',aspLead:'Coordinated technical and commercial execution with the right suppliers for asphalt plant projects',aspP1:'Application & Capacity Adaptation',aspP2:'Main Equipment & Auxiliary Systems',aspP3:'Manufacturer / Partner Matching',aspP4:'Shipment & Commissioning Coordination',aspS1:'Dryer drum and burner system',aspS2:'Screen, bunker and elevator groups',aspS3:'Bitumen and filler equipment',aspS4:'Filter, automation and control',
+waste1:'Waste-to-',waste2:'Energy Plants',wasteLead:'Coordinated sourcing and technical-commercial execution for sustainable waste-to-energy projects',wasteP1:'Technical Scope Alignment',wasteP2:'Main Equipment & Process Components',wasteP3:'Manufacturer / Partner Matching',wasteP4:'Shipment & Documentation Tracking',wasteS1:'Boiler and process equipment',wasteS2:'Filtration, fan and stack systems',wasteS3:'Piping, valves and flow equipment',wasteS4:'Electrical, automation and control',
+crush1:'Crushing & Screening',crush2:'Plants',crushLead:'End-to-end sourcing and technical-commercial coordination tailored to crushing and screening requirements',crushP1:'System Configuration',crushP2:'Main Equipment & Auxiliary Units',crushP3:'Manufacturer / Partner Matching',crushP4:'Logistics & Installation Coordination',crushS1:'Crushers and vibrating screens',crushS2:'Conveyor and feeding systems',crushS3:'Steel structures and platforms',crushS4:'Auxiliary equipment and automation',
+contactEyebrow:'CONTACT',contact1:'Contact',contact2:'Us',contactLead:'Contact our team for industrial sourcing and project coordination',phoneLabel:'Phone / WhatsApp',purchasingLabel:'Purchasing',emailLabel:'E-mail',addressLabel:'Address',rfq:'Request a Quote'
 },
 ar:{
-coverEyebrow:'التوريد الصناعي · توريد المشاريع',cover1:'من الاحتياج',cover2:'إلى التسليم',coverLead:'وضوح فني ومصدر مناسب وتنفيذ منسق',coverTag:'التوريد الصناعي · توريد المشاريع · شريك واحد مسؤول',sigTitle:'نحوّل الاحتياجات إلى مسار توريد منسق',sigText:'تقييم فني واختيار المورد والتنسيق والتسليم ضمن مسؤولية واحدة',v1:'وضوح فني',v2:'شبكة موردين موثوقة',v3:'تنفيذ منسق',v4:'تسليم موثوق',discover:'استكشف الملف',
-idEyebrow:'من نحن',id1:'التنسيق الفني',id2:'والتجاري',idText:'تربط VORQA الاحتياجات الصناعية بالموردين المعتمدين وشركاء المنشآت المتخصصين، وتدير التنسيق الفني والتجاري وتنسيق التسليم من الطلب حتى الهدف.',s1:'مراجعة الطلب',sd1:'توضيح النطاق والهدف',s2:'التوضيح الفني',sd2:'مواءمة المواصفات والقيود',s3:'اختيار المورد / الشريك',sd3:'مطابقة المصدر المعتمد الأنسب',s4:'تنسيق العرض والطلب',sd4:'مواءمة العروض الفنية والتجارية',s5:'الإنتاج والجودة',sd5:'متابعة التقدم ووثائق الجودة',s6:'الخدمات اللوجستية والتسليم',sd6:'إدارة الشحن حتى التسليم',
-scopeEyebrow:'نطاق التوريد',scope1:'نطاق',scope2:'التوريد الصناعي',scopeLead:'حلول توريد منسقة تغطي مجموعة واسعة من الاحتياجات الصناعية',g1:'الصلب والمعادن والمواد الخام',g2:'الأنابيب والوصلات والفلنجات',g3:'المضخات والصمامات ومعدات التحكم بالتدفق',g4:'المحركات وعلب التروس ونقل الحركة',g5:'المحامل والوصلات والمكونات الميكانيكية',g6:'المعدات الكهربائية وتوزيع الطاقة',g7:'الأتمتة وأجهزة القياس والتحكم',g8:'الأنظمة الهيدروليكية والهوائية',g9:'المثبتات والحشيات والمستلزمات الصناعية',g10:'الصوامع والسيور ومعدات مناولة المواد السائبة',g11:'الترشيح والتهوية وتجميع الغبار',g12:'الهياكل الفولاذية والتصنيع حسب الطلب',
-sysEyebrow:'الأنظمة المتخصصة',sys1:'الأنظمة',sys2:'المتخصصة',sysLead:'اضغط على أي نظام لعرض النطاق والمحتوى النموذجي وتفاصيل التنسيق',sysA:'محطات الخرسانة',sysB:'مصانع الجلفنة المتكاملة',sysC:'محطات الأسفلت ومعداتها',sysD:'محطات تحويل النفايات إلى طاقة',sysE:'محطات التكسير والغربلة',tap:'عرض التفاصيل',
-contactEyebrow:'اتصل بنا',contact1:'تواصل',contact2:'معنا',contactLead:'تواصل مع فريقنا لاحتياجات التوريد الصناعي وتوريد المشاريع والحلول المتخصصة',tg1:'الأنابيب والوصلات',tg2:'المضخات والصمامات',tg3:'المحركات وعلب التروس',tg4:'الكهرباء والأتمتة',tg5:'الهيدروليك والهواء المضغوط',tg6:'التصنيع الخاص',tg7:'الصوامع والمناولة',tg8:'الأنظمة المتخصصة',phoneLabel:'الهاتف',purchasingLabel:'المشتريات',emailLabel:'البريد الإلكتروني',addressLabel:'العنوان',rfq:'طلب عرض سعر',detailEyebrow:'نظام متخصص',dScope:'النطاق',dTypical:'المحتوى النموذجي',dCoord:'التنسيق'
+coverEyebrow:'التوريد الصناعي · توريد المشاريع',cover1:'من الاحتياج',cover2:'إلى التسليم',coverLead:'وضوح فني، مصدر مناسب وتنفيذ منسق',coverTag:'التوريد الصناعي · توريد المشاريع · شريك واحد مسؤول',v1:'وضوح فني',v2:'شبكة موردين موثوقة',v3:'تنفيذ منسق',v4:'تسليم موثوق',discover:'استكشف الكتالوج',
+idEyebrow:'من نحن',id1:'التنسيق الفني',id2:'والتجاري',idText:'تربط VORQA الاحتياجات الصناعية بالموردين المعتمدين وشركاء المنشآت المتخصصين، وتدير التنسيق الفني والتجاري وتنسيق التسليم من الطلب حتى الهدف.',s1:'مراجعة الطلب',sd1:'نوضح النطاق والهدف',s2:'التوضيح الفني',sd2:'نوائم المواصفات والتفاصيل الحرجة',s3:'اختيار المورد / الشريك',sd3:'نطابق المصنع أو الشريك المناسب',s4:'تنسيق العرض والطلب',sd4:'ننسق العروض الفنية والتجارية',s6:'اللوجستيات والتسليم',sd6:'ندير الشحن حتى التسليم',
+scopeEyebrow:'نطاق التوريد',scope1:'فئات',scope2:'التوريد الرئيسية',scopeLead:'توريد صناعي منسق متعدد الفئات',g1:'الصلب والمعادن والمواد الخام',g2:'الأنابيب والوصلات والفلنجات',g3:'المضخات والصمامات والتحكم بالتدفق',g4:'المحركات وعلب التروس ونقل الحركة',g5:'المحامل والوصلات والمكونات الميكانيكية',g6:'المعدات الكهربائية وتوزيع الطاقة',g7:'الأتمتة وأجهزة القياس والتحكم',g8:'الأنظمة الهيدروليكية والهوائية',g9:'المثبتات والحشيات والمستلزمات الصناعية',g10:'الصوامع والسيور ومناولة المواد السائبة',g11:'الترشيح والتهوية وتجميع الغبار',g12:'الهياكل الفولاذية والتصنيع الخاص',
+sysEyebrow:'مجالات الحلول',sys1:'حلول',sys2:'الأنظمة',sysLead:'الهندسة والتوريد والتنسيق تُدار معاً',sysA:'محطات الخرسانة',sysB:'مصانع الجلفنة المتكاملة',sysC:'محطات الأسفلت ومعداتها',sysD:'محطات تحويل النفايات إلى طاقة',sysE:'محطات التكسير والغربلة',tap:'عرض التفاصيل',
+solutionEyebrow:'حل النظام',backSystems:'حلول الأنظمة',detailSupply:'نطاق التوريد',
+con1:'محطات',con2:'الخرسانة',conLead:'دعم توريد منسق وتنفيذ فني وتجاري لمشاريع محطات الخرسانة',conP1:'توضيح نطاق المشروع',conP2:'المعدات الرئيسية والأنظمة المساعدة',conP3:'مطابقة المصنع / الشريك',conP4:'تنسيق الشحن والموقع',conS1:'الخلاطات وحاويات الركام',conS2:'الصوامع وأنظمة الناقل اللولبي',conS3:'معدات الترشيح والجرعات',conS4:'حلول الأتمتة والكهرباء',
+galv1:'مصانع الجلفنة',galv2:'المتكاملة',galvLead:'توريد منسق وتنفيذ فني وتجاري لمشاريع خطوط الجلفنة',galvP1:'تهيئة الخط',galvP2:'المعدات الرئيسية والوحدات المساعدة',galvP3:'مطابقة المصنع / الشريك',galvP4:'تنسيق التركيب واللوجستيات',galvS1:'حوض الزنك والفرن وأنظمة التسخين',galvS2:'خطوط المعالجة الكيميائية المسبقة',galvS3:'معدات المناولة والرفع',galvS4:'الأتمتة وتكامل الطاقة',
+asp1:'محطات الأسفلت',asp2:'ومعداتها',aspLead:'تنفيذ فني وتجاري منسق مع الموردين المناسبين لمشاريع محطات الأسفلت',aspP1:'مواءمة التطبيق والطاقة',aspP2:'المعدات الرئيسية والأنظمة المساعدة',aspP3:'مطابقة المصنع / الشريك',aspP4:'تنسيق الشحن والتشغيل',aspS1:'أسطوانة التجفيف ونظام الحارق',aspS2:'مجموعات الغربال والحاوية والرافع',aspS3:'معدات البيتومين والفيلر',aspS4:'الترشيح والأتمتة والتحكم',
+waste1:'محطات تحويل',waste2:'النفايات إلى طاقة',wasteLead:'توريد منسق وتنفيذ فني وتجاري لمشاريع مستدامة لتحويل النفايات إلى طاقة',wasteP1:'مواءمة النطاق الفني',wasteP2:'المعدات الرئيسية ومكونات العملية',wasteP3:'مطابقة المصنع / الشريك',wasteP4:'متابعة الشحن والوثائق',wasteS1:'الغلايات ومعدات العملية',wasteS2:'الترشيح والمراوح والمداخن',wasteS3:'الأنابيب والصمامات ومعدات التدفق',wasteS4:'الكهرباء والأتمتة والتحكم',
+crush1:'محطات التكسير',crush2:'والغربلة',crushLead:'إدارة التوريد والتنسيق الفني والتجاري من البداية للنهاية وفق احتياجات التكسير والغربلة',crushP1:'تهيئة النظام',crushP2:'المعدات الرئيسية والوحدات المساعدة',crushP3:'مطابقة المصنع / الشريك',crushP4:'تنسيق اللوجستيات والتركيب',crushS1:'الكسارات والغرابيل الاهتزازية',crushS2:'السيور وأنظمة التغذية',crushS3:'الهياكل والمنصات الفولاذية',crushS4:'المعدات المساعدة والأتمتة',
+contactEyebrow:'اتصل بنا',contact1:'تواصل',contact2:'معنا',contactLead:'تواصل مع فريقنا للتوريد الصناعي وتنسيق المشاريع',phoneLabel:'الهاتف / واتساب',purchasingLabel:'المشتريات',emailLabel:'البريد الإلكتروني',addressLabel:'العنوان',rfq:'طلب عرض سعر'
 }};
+
 let currentLang='tr';
-function setLang(l){currentLang=l;document.documentElement.lang=l;document.documentElement.dir='ltr';document.body.dataset.lang=l;document.body.classList.toggle('rtl',l==='ar');document.querySelectorAll('.lang').forEach(b=>{b.classList.toggle('active',b.dataset.lang===l);b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false')});document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;el.innerHTML=l==='tr'?(original[k]??el.innerHTML):(strings[l]?.[k]??original[k]??el.innerHTML)});updateWhatsAppLinks()}
+function setLang(l){
+  currentLang=l;
+  document.documentElement.lang=l;
+  document.documentElement.dir='ltr';
+  document.body.classList.toggle('rtl',l==='ar');
+  document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.dataset.i;
+    el.innerHTML=l==='tr'?(original[k]??el.innerHTML):(strings[l]?.[k]??original[k]??el.innerHTML);
+  });
+  updateWhatsAppLinks();
+}
 document.querySelectorAll('.lang').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
-document.querySelectorAll('.coord-step').forEach(step=>{
-  step.tabIndex=0;
-  const activate=()=>{document.querySelectorAll('.coord-step').forEach(s=>s.classList.remove('is-active'));step.classList.add('is-active')};
-  step.addEventListener('click',activate);
-  step.addEventListener('focus',activate);
-  step.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate()}});
+
+const waMessages={
+tr:'Merhaba VORQA, bir teklif talebim var',
+en:'Hello VORQA, I would like to request a quotation',
+ar:'مرحباً VORQA، أود طلب عرض سعر'
+};
+function updateWhatsAppLinks(){
+  document.querySelectorAll('[data-wa]').forEach(a=>{
+    a.href='https://wa.me/905400086772?text='+encodeURIComponent(waMessages[currentLang]||waMessages.en);
+  });
+}
+
+document.getElementById('shareBtn').onclick=async()=>{
+  try{
+    if(navigator.share) await navigator.share({title:'VORQA Global Supply',text:'VORQA Interactive Catalog',url:location.href});
+    else{
+      await navigator.clipboard.writeText(location.href);
+      alert(currentLang==='tr'?'Bağlantı kopyalandı':'Link copied');
+    }
+  }catch(e){}
+};
+
+let resizeTimer;
+addEventListener('resize',()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(()=>pages[idx].scrollIntoView({behavior:'auto',inline:'start',block:'nearest'}),120);
 });
 
-const waMessages={tr:{general:'Merhaba VORQA, bir teklif talebim var',specialist:'Merhaba VORQA, uzman sistemler hakkında teklif almak istiyorum'},en:{general:'Hello VORQA, I would like to request a quotation',specialist:'Hello VORQA, I would like to request a quotation for a specialist system'},ar:{general:'مرحباً VORQA، أود طلب عرض سعر',specialist:'مرحباً VORQA، أود طلب عرض سعر لنظام متخصص'}};
-function updateWhatsAppLinks(){document.querySelectorAll('[data-wa]').forEach(a=>{const type=a.dataset.wa||'general';const msg=waMessages[currentLang]?.[type]||waMessages.en[type];a.href='https://wa.me/905400086772?text='+encodeURIComponent(msg)})}
-
-
-const detail={
-concrete:{img:'/images/beton/prj-1.webp',tr:{title:'Beton Santralleri',scope:'Beton santrali ekipmanlarının tedariki, saha koşullarına uygun sistem çözümü ve teslimat koordinasyonu',list:['Mikser ve karıştırma sistemleri','Agrega bunkerleri ve bantlar','Çimento siloları','Dozaj ve otomasyon ekipmanları'],coord:'Saha yerleşimi, lojistik, montaj desteği ve proje takvimine uyumlu teslimat yönetimi'},en:{title:'Concrete Plants',scope:'Supply of concrete plant equipment, site-adapted system solutions and coordinated delivery',list:['Mixing systems','Aggregate bunkers and conveyors','Cement silos','Dosing and automation'],coord:'Site layout, logistics, installation support and delivery aligned with the project schedule'},ar:{title:'محطات الخرسانة',scope:'توريد معدات محطات الخرسانة وحلول الأنظمة الملائمة للموقع وتنسيق التسليم',list:['أنظمة الخلط','حاويات الركام والسيور','صوامع الأسمنت','أنظمة الجرعات والأتمتة'],coord:'تنسيق تخطيط الموقع والخدمات اللوجستية ودعم التركيب والتسليم وفق برنامج المشروع'}},
-galv:{img:'/images/galvaniz/galvaniz1.jpg',tr:{title:'Komple Galvaniz Tesisleri',scope:'Galvaniz hattının ana ekipmanları, proses bölümleri ve yardımcı sistemlerinin entegre tedarik ve koordinasyonu',list:['Yükleme ve taşıma sistemleri','Ön işlem banyoları','Çinko kazanı ve ısıtma sistemleri','Soğutma ve pasivasyon','Kurutma ve son işlem bölümleri'],coord:'Teknik detaylar, üretim takibi, saha koordinasyonu ve devreye alma sürecinin tek noktadan yönetimi'},en:{title:'Complete Galvanizing Plants',scope:'Integrated sourcing and coordination of main line equipment, process sections and auxiliary systems',list:['Loading and handling','Pretreatment baths','Zinc kettle and heating','Cooling and passivation','Drying and finishing'],coord:'Single-point coordination of technical details, production follow-up, site interfaces and commissioning'},ar:{title:'مصانع الجلفنة المتكاملة',scope:'توريد وتنسيق متكامل للمعدات الرئيسية وأقسام العملية والأنظمة المساعدة لخط الجلفنة',list:['أنظمة التحميل والمناولة','أحواض المعالجة المسبقة','حوض الزنك وأنظمة التسخين','التبريد والتخميل','التجفيف والتشطيب'],coord:'إدارة موحدة للتفاصيل الفنية ومتابعة الإنتاج وتنسيق الموقع والتشغيل'}},
-asphalt:{img:'/images/illustrations/srv-asphalt-plant.svg',tr:{title:'Asfalt Plentleri ve Ekipmanları',scope:'Yeni asfalt plenti kurulumu ile mevcut tesislerin revizyon, modernizasyon ve kapasite geliştirme ihtiyaçlarının teknik ve ticari koordinasyonu',list:['Sabit ve mobil asfalt plentleri','Revizyon ve kapasite artırımı','Montaj ve demontaj','Modernizasyon projelendirme','Otomasyon sistemleri','Yedek parça ve teknik servis koordinasyonu'],coord:'İhtiyaç analizi, teknik kapsam, ekipman seçimi, üretim, otomasyon, sevkiyat ve saha süreçlerinin tek koordinasyon altında yönetimi'},en:{title:'Asphalt Plants & Equipment',scope:'Technical and commercial coordination for new asphalt plant installations and for the revision, modernization and capacity improvement of existing plants',list:['Stationary and mobile asphalt plants','Revision and capacity increase','Installation and dismantling','Modernization engineering','Automation systems','Spare parts and technical service coordination'],coord:'Single-point coordination of requirement analysis, technical scope, equipment selection, production, automation, shipment and site activities'},ar:{title:'محطات الأسفلت ومعداتها',scope:'التنسيق الفني والتجاري لإنشاء محطات أسفلت جديدة ولتحديث ومراجعة وزيادة طاقة المحطات القائمة',list:['محطات أسفلت ثابتة ومتنقلة','المراجعة وزيادة الطاقة','التركيب والتفكيك','هندسة التحديث','أنظمة الأتمتة','تنسيق قطع الغيار والخدمة الفنية'],coord:'إدارة موحدة لتحليل الاحتياجات والنطاق الفني واختيار المعدات والإنتاج والأتمتة والشحن وأعمال الموقع'}},
-waste:{img:'/images/dönüşüm/waste-to-energy.jpg',tr:{title:'Atıktan Enerji Tesisleri',scope:'Atıktan enerji çözüm paketlerinde ekipman, imalat, lojistik ve saha süreçlerinin koordinasyonu',list:['Atık kabul ve besleme','Yakma ünitesi','Kazan ve buhar çevrimi','Türbin-jeneratör','Baca gazı temizleme','Kül yönetimi'],coord:'Ekipman üreticileri, alt yükleniciler ve saha ekipleri arasında teknik ve ticari koordinasyon'},en:{title:'Waste-to-Energy Plants',scope:'Coordination of equipment, fabrication, logistics and site execution for waste-to-energy solution packages',list:['Waste reception and feeding','Combustion unit','Boiler and steam cycle','Turbine-generator','Flue gas treatment','Ash handling'],coord:'Technical and commercial coordination between equipment manufacturers, subcontractors and site teams'},ar:{title:'محطات تحويل النفايات إلى طاقة',scope:'تنسيق المعدات والتصنيع والخدمات اللوجستية والتنفيذ الموقعي لحزم حلول تحويل النفايات إلى طاقة',list:['استقبال وتغذية النفايات','وحدة الاحتراق','الغلاية ودورة البخار','التوربين والمولد','معالجة غازات المداخن','مناولة الرماد'],coord:'التنسيق الفني والتجاري بين مصنعي المعدات والمقاولين وفرق الموقع'}},
-crush:{img:'/images/kırma/mobile-crushing-screening-plant-1.jpeg',tr:{title:'Kırma ve Eleme Tesisleri',scope:'Projeye özel kırma ve eleme tesisi için ana ekipman ve yardımcı sistemlerin koordineli tedariki',list:['Besleme sistemleri','Kırıcılar','Titreşimli elekler','Konveyör bant sistemleri','Toz kontrol ekipmanları'],coord:'Uyumlu ekipman seçimi, teknik dokümantasyon, lojistik, gümrük ve saha desteğinin koordinasyonu'},en:{title:'Crushing & Screening Plants',scope:'Coordinated supply of main equipment and auxiliary systems for project-specific crushing and screening plants',list:['Feeding systems','Crushers','Vibrating screens','Conveyors','Dust control equipment'],coord:'Coordination of compatible equipment selection, technical documentation, logistics, customs and site support'},ar:{title:'محطات التكسير والغربلة',scope:'توريد منسق للمعدات الرئيسية والأنظمة المساعدة لمحطات التكسير والغربلة الخاصة بالمشروع',list:['أنظمة التغذية','الكسارات','الشاشات الاهتزازية','السيور الناقلة','معدات التحكم بالغبار'],coord:'تنسيق اختيار المعدات المتوافقة والوثائق الفنية والخدمات اللوجستية والجمارك ودعم الموقع'}}
-};
-const sheet=document.getElementById('sheet'),sheetImg=document.getElementById('sheetImg'),sheetTitle=document.getElementById('sheetTitle'),sheetScope=document.getElementById('sheetScope'),sheetList=document.getElementById('sheetList'),sheetCoord=document.getElementById('sheetCoord');
-document.querySelectorAll('.system-card').forEach(b=>b.onclick=()=>{const d=detail[b.dataset.system],x=d[currentLang]||d.en||d.tr;sheetImg.src=d.img;sheetImg.alt=x.title;sheetTitle.textContent=x.title;sheetScope.textContent=x.scope;sheetList.innerHTML=x.list.map(v=>`<li>${v}</li>`).join('');sheetCoord.textContent=x.coord;sheet.classList.add('open');sheet.setAttribute('aria-hidden','false');sheet.scrollTop=0;document.getElementById('closeSheet').focus()});
-document.getElementById('closeSheet').onclick=()=>{sheet.classList.remove('open');sheet.setAttribute('aria-hidden','true')};
-document.getElementById('shareBtn').onclick=async()=>{try{if(navigator.share)await navigator.share({title:'VORQA Global Supply',text:'VORQA Interactive Company Profile',url:location.href});else{await navigator.clipboard.writeText(location.href);alert(currentLang==='tr'?'Bağlantı kopyalandı':'Link copied')}}catch(e){}};
-
 setLang('tr');
-
-// keep touch scrolling stable after viewport changes
-let resizeTimer; addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{pages[idx].scrollIntoView({behavior:'auto',inline:'start',block:'nearest'});updateNav()},120)});
