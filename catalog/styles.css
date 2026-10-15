@@ -83,3 +83,101 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
   .copy-animate>*,.stagger>*,.media-reveal{opacity:1!important;transform:none!important;clip-path:none!important}
   .coord-lines path,.cover-lines path{stroke-dashoffset:0!important}
 }
+/* Identity page refinement: true 5-spoke radial composition + livelier motion */
+.identity .page-inner{padding-top:calc(var(--safeT) + 74px)}
+.identity .intro{position:relative;z-index:3}
+.coordination-stage{
+  min-height:560px;
+  margin-top:2px;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(23,110,242,.16) 0 7%,rgba(23,110,242,.08) 7% 20%,rgba(23,110,242,.028) 20% 42%,transparent 64%);
+  overflow:visible;
+}
+.coordination-stage:before,
+.coordination-stage:after{
+  content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  border-radius:50%;pointer-events:none;z-index:0
+}
+.coordination-stage:before{
+  width:52%;aspect-ratio:1;border:1px solid rgba(23,110,242,.12);
+  animation:orbitPulse 4.8s ease-in-out infinite
+}
+.coordination-stage:after{
+  width:70%;aspect-ratio:1;border:1px dashed rgba(23,110,242,.10);
+  animation:orbitSpin 30s linear infinite
+}
+.coord-lines path{
+  stroke-width:.85;
+  filter:drop-shadow(0 0 2px rgba(23,110,242,.18));
+}
+.page.is-active .coord-lines path{animation:lineDraw 1.15s cubic-bezier(.2,.75,.25,1) forwards}
+.coord-hub{
+  left:50%!important;top:50%!important;
+  width:128px;height:128px;
+  box-shadow:0 0 0 12px rgba(23,110,242,.08),0 0 0 26px rgba(23,110,242,.035),0 18px 50px rgba(8,43,87,.18)
+}
+.page.is-active .coord-hub{animation:hubPulse 2.8s ease-in-out infinite}
+.coord-hub:before,.coord-hub:after{
+  content:"";position:absolute;border-radius:50%;pointer-events:none
+}
+.coord-hub:before{inset:-22px;border:1px solid rgba(23,110,242,.15);animation:ringPulse 2.8s ease-in-out infinite}
+.coord-hub:after{inset:-36px;border:1px dashed rgba(242,138,22,.12);animation:orbitSpin 18s linear infinite}
+
+.coord-card{
+  width:min(36%,250px);
+  min-height:106px;
+  padding:14px 15px;
+  transform-origin:center center;
+  transition:transform .3s ease,box-shadow .3s ease
+}
+.cc1{
+  left:50%!important;top:2%!important;
+  transform:translateX(-50%)!important
+}
+.cc2{
+  left:2%!important;top:31%!important
+}
+.cc3{
+  right:2%!important;top:31%!important
+}
+.cc4{
+  left:12%!important;bottom:1%!important
+}
+.cc5{
+  right:12%!important;bottom:1%!important
+}
+.coord-card:hover,.coord-card:focus-within{
+  transform:translateY(-6px) scale(1.015);
+  box-shadow:0 18px 38px rgba(8,43,87,.13)
+}
+.cc1:hover,.cc1:focus-within{transform:translateX(-50%) translateY(-6px) scale(1.015)}
+.page.is-active .coord-card{animation:starCardIn .65s cubic-bezier(.2,.78,.25,1) both}
+.page.is-active .cc1{animation-delay:.10s}.page.is-active .cc2{animation-delay:.18s}.page.is-active .cc3{animation-delay:.26s}.page.is-active .cc4{animation-delay:.34s}.page.is-active .cc5{animation-delay:.42s}
+.page.is-active .coord-card .mini-icon{animation:iconFloat 2.8s ease-in-out infinite}
+.page.is-active .cc2 .mini-icon{animation-delay:.25s}.page.is-active .cc3 .mini-icon{animation-delay:.5s}.page.is-active .cc4 .mini-icon{animation-delay:.75s}.page.is-active .cc5 .mini-icon{animation-delay:1s}
+
+@keyframes starCardIn{
+  from{opacity:0;transform:translate(var(--sx,0),var(--sy,0)) scale(.94)}
+  to{opacity:1;transform:translate(0,0) scale(1)}
+}
+.cc1{--sy:-18px}.cc2{--sx:-18px}.cc3{--sx:18px}.cc4{--sx:-12px;--sy:16px}.cc5{--sx:12px;--sy:16px}
+@keyframes iconFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(2deg)}}
+@keyframes ringPulse{0%,100%{transform:scale(.94);opacity:.55}50%{transform:scale(1.06);opacity:1}}
+@keyframes orbitPulse{0%,100%{transform:translate(-50%,-50%) scale(.96);opacity:.55}50%{transform:translate(-50%,-50%) scale(1.04);opacity:.95}}
+@keyframes orbitSpin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+@media(max-width:600px){
+  .coordination-stage{min-height:500px}
+  .coord-hub{width:100px;height:100px}
+  .coord-card{width:39%;min-height:90px;padding:11px 12px}
+  .cc1{top:1%!important}
+  .cc2{left:0!important;top:31%!important}
+  .cc3{right:0!important;top:31%!important}
+  .cc4{left:7%!important;bottom:1%!important}
+  .cc5{right:7%!important;bottom:1%!important}
+}
+@media(max-width:370px){
+  .coordination-stage{min-height:470px}
+  .coord-card{width:40.5%;padding:9px 10px}
+  .cc4{left:4%!important}.cc5{right:4%!important}
+}
