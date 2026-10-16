@@ -77,6 +77,30 @@ crush1:'محطات التكسير',crush2:'والغربلة',crushLead:'إدار
 contactEyebrow:'اتصل بنا',contact1:'تواصل',contact2:'معنا',contactLead:'تواصل مع فريقنا للتوريد الصناعي وتنسيق المشاريع',phoneLabel:'الهاتف / واتساب',purchasingLabel:'المشتريات',emailLabel:'البريد الإلكتروني',addressLabel:'العنوان',rfq:'طلب عرض سعر'
 }};
 
+
+Object.assign(strings.en, {
+coverEyebrow:'INDUSTRIAL SOURCING · PROJECT SUPPLY',
+coverLead:'The right sources, a strong supplier network and controlled execution',
+coverTag:'Industrial Sourcing · Project Supply Management · One Accountable Partner',
+v1:'Technical Evaluation',v2:'Supplier Research',v3:'Quotation & Price Comparison',v4:'Logistics & Delivery Follow-up',
+vd1:'We analyse requirements and clarify critical specifications',
+vd2:'We compare verified manufacturers and specialist partners',
+vd3:'We assess technical fit, pricing and commercial terms together',
+vd4:'We track shipments, documentation and delivery milestones',
+id1:'One Point of Contact,',id2:'A Controlled Process'
+});
+Object.assign(strings.ar, {
+coverEyebrow:'التوريد الصناعي · توريد المشاريع',
+coverLead:'مصادر مناسبة، وشبكة موردين قوية، وتنفيذ منضبط',
+coverTag:'التوريد الصناعي · إدارة توريد المشاريع · شريك واحد مسؤول',
+v1:'التقييم الفني',v2:'البحث عن الموردين',v3:'مقارنة العروض والأسعار',v4:'متابعة اللوجستيات والتسليم',
+vd1:'نحلل الاحتياجات ونوضح المواصفات الأساسية',
+vd2:'نقارن بين المصنعين والشركاء المتحقق منهم',
+vd3:'نقيّم التوافق الفني والأسعار والشروط التجارية معاً',
+vd4:'نتابع الشحنات والمستندات ومراحل التسليم',
+id1:'نقطة اتصال واحدة،',id2:'عملية منضبطة'
+});
+
 let currentLang='tr';
 function setLang(l){
   currentLang=l;

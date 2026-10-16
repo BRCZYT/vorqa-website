@@ -181,3 +181,28 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
   .coord-card{width:40.5%;padding:9px 10px}
   .cc4{left:4%!important}.cc5{right:4%!important}
 }
+
+/* Approved cover composition: original brand tokens, type scale and logo retained. */
+.cover .intro{position:relative;isolation:isolate;padding-bottom:6px}
+.cover .intro:before{content:"";position:absolute;z-index:-1;top:-32px;right:-22px;bottom:-8px;left:18%;background:url('./assets/approved-cover-photos.png') right top/auto 216.2% no-repeat;mask-image:linear-gradient(90deg,transparent,#000 50%);opacity:.92}
+.cover .lead{max-width:76%;position:relative;font-weight:600}
+.cover .sublead{position:relative;max-width:90%}
+.cover .cover-visual{height:auto;min-height:0;aspect-ratio:2/1}
+.cover .process-montage{display:block;position:absolute;width:100%;height:186.05%;left:0;top:-86.05%;object-fit:fill}
+.cover .value-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cover .value-row>div{justify-content:flex-start;text-align:left;gap:12px;min-height:90px;padding:14px 12px}
+.cover .value-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.cover .value-copy b{font-size:clamp(10px,2.45vw,14px)}
+.cover .value-copy small{font-size:clamp(10px,2.35vw,14px);line-height:1.28;color:var(--muted)}
+.cover .value-icon{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%}
+.cover .value-icon.orange{color:var(--orange);background:#fff4e8}
+.cover .value-icon.blue{color:var(--blue);background:#edf5ff}
+.cover .value-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rtl .cover .value-row>div{text-align:right}
+@media(max-width:600px){
+.cover .cover-visual{height:auto;min-height:0;border-radius:22px}
+.cover .lead{max-width:86%}
+.cover .value-row>div{gap:8px;padding:11px 9px;min-height:90px}
+.cover .value-icon{width:34px;height:34px;flex-basis:34px}
+.cover .value-icon svg{width:20px;height:20px}
+}
