@@ -188,7 +188,7 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
 .cover .lead{max-width:76%;position:relative;font-weight:600}
 .cover .sublead{position:relative;max-width:90%}
 .cover .cover-visual{height:auto;min-height:0;aspect-ratio:2/1}
-.cover .process-montage{display:block;position:absolute;width:100%;height:186.05%;left:0;top:-86.05%;object-fit:fill}
+.cover .process-montage{display:block;position:absolute;width:100%;height:100%;left:0;top:0;object-fit:cover}
 .cover .value-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .cover .value-row>div{justify-content:flex-start;text-align:left;gap:12px;min-height:90px;padding:14px 12px}
 .cover .value-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
