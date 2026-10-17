@@ -151,5 +151,7 @@ export function renderIndustryCards(lang){
  const l=labels[lang];
  const cards=industries.map((item,i)=>`<a href="${pathForIndustry(item,lang)}" class="ind-panel" data-industry="${item.id}"><div class="ind-img"><img src="${item.cardImage||item.image}" alt="${esc(item[lang].title)}" loading="lazy" width="1200" height="800"></div><div class="ind-veil"></div><div class="ind-pnum">0${i+1}</div><div class="ind-lbl"><div class="ind-t">${esc(item[lang].title)}</div><div class="ind-d">${esc(item[lang].desc)}</div><span class="ind-go">${l.explore} <span aria-hidden="true">${lang==='ar'?'←':'→'}</span></span></div></a>`);
  cards.push(`<a href="${contactPath(lang)}" class="ind-panel" data-industry="waste-to-energy"><div class="ind-img"><img src="/images/dönüşüm/waste-to-energy.jpg" alt="${l.waste}" loading="lazy" width="1672" height="941"></div><div class="ind-veil"></div><div class="ind-pnum">06</div><div class="ind-lbl"><div class="ind-t">${l.waste}</div><div class="ind-d">${l.wasteDesc}</div><span class="ind-go">${l.contact} <span aria-hidden="true">${lang==='ar'?'←':'→'}</span></span></div></a>`);
- return cards.join('\n');
+ // The legacy homepage transition swaps only body/style nodes and leaves SEO
+ // metadata behind. Native same-tab navigation loads each detail page's full head.
+ return cards.join('\n').replaceAll('class="ind-panel"','target="_top" class="ind-panel"');
 }
