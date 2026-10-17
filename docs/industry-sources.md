@@ -28,3 +28,7 @@ Asset provenance:
 - Photos are described as sector equipment, never as proof of a VORQA-delivered project.
 
 Source files' editorial placement suggestions and pre-publication checklists are not copied into customer-facing pages. Main must not be merged as part of this task.
+
+## Brand assets and authorized live rollout (2026-10-17)
+
+The user supplied brand folder `1cfwQxsVkl07l2uOkWORXuZ_9jQJS9acu` and explicitly requested the live site update. Its contents are logos, emblems and brand collateral, not sector photographs. The white logo (`1HcLVdKBIcxtErknKbd1A5sj8gd8etnlK`) is trimmed and resized for dark headers/footers. The transparent emblem (`1aVcIkDBbNzE0Pq_jlNHbGtINrUv5XWLU`) supplies the favicon and touch icon. All locale sources use versioned asset references so existing visitors receive the supplied files. The earlier restriction against merging is superseded by this live-rollout request. Sector photo provenance remains as listed above.
