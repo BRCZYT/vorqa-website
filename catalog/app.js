@@ -2,6 +2,7 @@ const deck=document.getElementById('deck');
 const pages=[...document.querySelectorAll('.page')];
 const dots=document.getElementById('dots');
 let idx=0;
+let navigationTarget=null;
 
 pages.forEach((_,i)=>{
   const b=document.createElement('button');
@@ -22,6 +23,7 @@ function updateNav(){
 }
 function go(i){
   idx=Math.max(0,Math.min(pages.length-1,i));
+  navigationTarget=idx;
   pages[idx].scrollTop=0;
   pages[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
   updateNav();
@@ -36,10 +38,16 @@ let raf=0;
 deck.addEventListener('scroll',()=>{
   cancelAnimationFrame(raf);
   raf=requestAnimationFrame(()=>{
+    if(navigationTarget!==null){
+      if(Math.abs(deck.scrollLeft-navigationTarget*deck.clientWidth)>1)return;
+      navigationTarget=null;
+    }
     const n=Math.round(deck.scrollLeft/deck.clientWidth);
     if(n!==idx){idx=n;updateNav()}
   });
 },{passive:true});
+deck.addEventListener('pointerdown',()=>navigationTarget=null,{passive:true});
+deck.addEventListener('wheel',()=>navigationTarget=null,{passive:true});
 addEventListener('keydown',e=>{
   if(e.key==='ArrowRight')go(idx+1);
   if(e.key==='ArrowLeft')go(idx-1);
@@ -134,7 +142,12 @@ document.getElementById('shareBtn').onclick=async()=>{
 let resizeTimer;
 addEventListener('resize',()=>{
   clearTimeout(resizeTimer);
-  resizeTimer=setTimeout(()=>pages[idx].scrollIntoView({behavior:'auto',inline:'start',block:'nearest'}),120);
+  navigationTarget=idx;
+  resizeTimer=setTimeout(()=>{
+    pages[idx].scrollIntoView({behavior:'instant',inline:'start',block:'nearest'});
+    navigationTarget=null;
+    updateNav();
+  },120);
 });
 
 setLang('tr');
