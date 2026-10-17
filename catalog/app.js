@@ -95,7 +95,14 @@ idEyebrow:'من نحن وكيف نعمل',
 id1:'نقطة اتصال واحدة،',id2:'عملية منضبطة'
 });
 
+Object.assign(strings.en,{sysA:'Concrete Batching Plants',sysB:'Galvanizing Plants',sysC:'Asphalt & Bitumen Plants',sysD:'Waste-to-Energy',sysE:'Crushing & Screening Plants',sysF:'Energy & Petroleum'});
+Object.assign(strings.ar,{sysA:'محطات خلط الخرسانة',sysB:'منشآت الجلفنة',sysC:'مصانع الأسفلت والبيتومين',sysD:'تحويل النفايات إلى طاقة',sysE:'منشآت التكسير والغربلة',sysF:'الطاقة والنفط'});
+
 let currentLang='tr';
+document.querySelector('[data-energy-link]').onclick=()=>{
+  const path=currentLang==='tr'?'/tr/sektorler/enerji-petrol/':'/'+currentLang+'/industries/energy-petroleum/';
+  window.open('https://www.vorqaglobal.com'+path,'_blank','noopener');
+};
 function setLang(l){
   currentLang=l;
   document.documentElement.lang=l;
