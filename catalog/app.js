@@ -82,7 +82,7 @@ Object.assign(strings.en, {
 coverEyebrow:'INDUSTRIAL SOURCING · PROJECT SUPPLY',
 coverLead:'The right sources, a strong supplier network and controlled execution',
 coverTag:'Industrial Sourcing · Project Supply Management · One Accountable Partner',
-v1:'Project Management',v2:'Supplier Research',v3:'Quotation & Price Comparison',v4:'Commercial Coordination',v5:'Logistics Management',v6:'Logistics & Delivery Tracking',
+v1:'Project Management',v2:'Supplier Research',v3:'Quotation & Price Comparison',v4:'Commercial Coordination',v5:'Technical Evaluation',v6:'Logistics & Delivery Tracking',
 idEyebrow:'Who We Are & How We Work',
 id1:'One Point of Contact,',id2:'A Controlled Process'
 });
@@ -90,7 +90,7 @@ Object.assign(strings.ar, {
 coverEyebrow:'التوريد الصناعي · توريد المشاريع',
 coverLead:'مصادر مناسبة، وشبكة موردين قوية، وتنفيذ منضبط',
 coverTag:'التوريد الصناعي · إدارة توريد المشاريع · شريك واحد مسؤول',
-v1:'إدارة المشاريع',v2:'البحث عن الموردين',v3:'مقارنة العروض والأسعار',v4:'التنسيق التجاري',v5:'إدارة اللوجستيات',v6:'متابعة اللوجستيات والتسليم',
+v1:'إدارة المشاريع',v2:'البحث عن الموردين',v3:'مقارنة العروض والأسعار',v4:'التنسيق التجاري',v5:'التقييم الفني',v6:'متابعة اللوجستيات والتسليم',
 idEyebrow:'من نحن وكيف نعمل',
 id1:'نقطة اتصال واحدة،',id2:'عملية منضبطة'
 });
