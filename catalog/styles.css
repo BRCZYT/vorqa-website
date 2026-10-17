@@ -229,6 +229,7 @@ html,body{width:100%;overflow:hidden}
   .page-inner{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   .topbar{left:max(14px,env(safe-area-inset-left,0px));right:max(14px,env(safe-area-inset-right,0px))}
   .process-row,.supply-items{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cover .intro:before{right:-16px}
   .cover .value-row>div{min-height:72px}
   .coordination-stage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-height:0;padding:24px 0}
   .coord-lines{display:none}
@@ -239,7 +240,7 @@ html,body{width:100%;overflow:hidden}
   .coord-card:last-child{grid-column:1/-1}
 }
 @media(max-width:360px){
-  .scope-grid,.system-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .cover .value-row,.scope-grid,.system-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
   .system-grid button.wide{grid-column:auto}
   .nav-dots{gap:3px}
 }
