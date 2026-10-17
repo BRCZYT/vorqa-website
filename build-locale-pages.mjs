@@ -1,5 +1,6 @@
 import fs from 'fs';
 import * as cheerio from 'cheerio';
+import {applyIndustryHome,buildIndustries} from './build-industry-pages.mjs';
 
 // Master slug map: legacy flat file -> translated slug per language.
 // Empty string slug = site root for that language (/{lang}/).
@@ -220,6 +221,7 @@ for (const file of Object.keys(SLUGS)) {
         $(el).attr('srcset', '/' + s);
       }
     });
+    if (file === 'index.html') applyIndustryHome($,lang);
     const outPath = pathFor(lang, file);
     const outDir = '.' + outPath; // e.g. ./en/about/
     fs.mkdirSync(outDir, { recursive: true });
@@ -227,3 +229,4 @@ for (const file of Object.keys(SLUGS)) {
     console.log('wrote', outDir + 'index.html');
   }
 }
+buildIndustries();
