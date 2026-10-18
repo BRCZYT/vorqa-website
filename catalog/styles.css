@@ -266,3 +266,5 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
 .contact .rfq{min-height:34px;font-size:13px}
 .contact-collage{max-height:130px;flex-basis:70px}
 }
+
+@media(max-width:360px){html[lang="en"] .cover .intro h1{font-size:28px;line-height:1.12}.cover-layout{gap:6px}.cover .value-row>div{min-height:44px}.cover .cta{min-height:38px}}
