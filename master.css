@@ -87,3 +87,32 @@ html[dir="rtl"] #hero .hero-h1 .accent{font-family:var(--home-opening-ar-font);f
 
 #hero .hero-h1 .line3{font-family:var(--home-support-font);font-size:var(--home-support-size);font-weight:var(--home-support-weight);letter-spacing:var(--home-support-tracking);line-height:var(--home-support-leading)}
 html[dir="rtl"] #hero .hero-h1 .line3{font-family:var(--home-opening-ar-font);letter-spacing:var(--home-opening-tracking)}
+/* Homepage identity and working method. */
+#about.about-process{background:var(--about-surface);scroll-margin-top:var(--industry-header)}
+#about .about-process-grid{max-width:var(--industry-max);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:var(--about-column-gap);align-items:start}
+#about .about-process-title{font-family:var(--industry-display);font-size:var(--about-title-size);line-height:1.15;letter-spacing:var(--industry-tracking);font-weight:600;color:var(--industry-navy);margin:var(--industry-l) 0 var(--industry-gap);max-width:var(--about-title-width)}
+#about .about-process-copy{font-family:var(--industry-font);font-size:var(--industry-body);line-height:var(--industry-line-height);color:var(--industry-text);margin:0;max-width:var(--about-title-width)}
+#about .about-process-copy em{font-style:normal;color:var(--industry-blue)}
+#about .about-process-cta{margin-top:var(--industry-l)}
+#about .about-method{padding-top:var(--industry-s)}
+#about .method-caption{display:flex;justify-content:space-between;gap:var(--industry-m);font:var(--about-label-size)/1.6 var(--industry-mono);letter-spacing:var(--about-label-tracking);color:var(--industry-blue);padding-bottom:var(--industry-gap);border-bottom:1px solid var(--industry-line)}
+#about .method-list{list-style:none;margin:0;padding:0}
+#about .method-step{display:grid;grid-template-columns:var(--about-icon-size) 1fr;gap:var(--industry-gap);padding:var(--industry-l) 0;border-bottom:1px solid var(--industry-line);position:relative}
+#about .method-icon{width:var(--about-icon-size);height:var(--about-icon-size);display:grid;place-items:center;border:1px solid var(--industry-line);background:var(--about-icon-surface);color:var(--industry-blue);position:relative;transition:transform .4s ease,border-color .4s ease}
+#about .method-icon::after{content:'';position:absolute;width:var(--industry-s);height:var(--industry-s);background:var(--industry-orange);inset-inline-end:calc(var(--industry-s) / -2);top:calc(var(--industry-s) / -2)}
+#about .method-icon svg{width:var(--about-svg-size);height:var(--about-svg-size);overflow:visible;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+#about .method-accent{stroke:var(--industry-orange)}
+#about .method-text h3{font:600 var(--about-step-size)/1.4 var(--industry-display);color:var(--industry-navy);margin:var(--industry-s) 0}
+#about .method-text p{font:var(--about-copy-size)/var(--industry-line-height) var(--industry-font);color:var(--industry-text);margin:0}
+#about .method-index{font:var(--about-label-size)/1 var(--industry-mono);color:var(--industry-blue);letter-spacing:var(--about-label-tracking)}
+#about .method-step:hover .method-icon{transform:translateY(-3px);border-color:var(--industry-orange)}
+#about .method-motion{transform-box:fill-box;transform-origin:center;animation:method-focus var(--about-motion-duration) ease-in-out infinite;animation-play-state:paused}
+#about .about-method.on .method-motion{animation-play-state:running}
+#about .method-match{animation-name:method-connect;animation-delay:-2s}
+#about .method-deliver{animation-name:method-travel;animation-delay:-4s}
+@keyframes method-focus{0%,100%{transform:scale(.85);opacity:.6}45%,65%{transform:scale(1);opacity:1}}
+@keyframes method-connect{0%,100%{transform:translateX(-3px);opacity:.6}45%,65%{transform:translateX(0);opacity:1}}
+@keyframes method-travel{0%,100%{transform:translateX(-2px);opacity:.5}45%,65%{transform:translateX(2px);opacity:1}}
+@media(max-width:820px){#about .about-process-grid{grid-template-columns:1fr;gap:var(--industry-xl)}#about .about-process-title,#about .about-process-copy{max-width:none}}
+@media(max-width:480px){#about .method-step{gap:var(--industry-m);grid-template-columns:var(--about-mobile-icon) 1fr}#about .method-icon{width:var(--about-mobile-icon);height:var(--about-mobile-icon)}#about .method-text h3{font-size:var(--industry-body)}}
+@media(prefers-reduced-motion:reduce){#about .method-motion{animation:none}#about .method-icon{transition:none}#about .method-step:hover .method-icon{transform:none}}

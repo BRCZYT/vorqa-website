@@ -1129,24 +1129,13 @@ html[dir="rtl"] .stat-n{letter-spacing:normal;text-transform:none}
      ABOUT  (light-alt --bg2) — §04, watermark + orange stat rail
 ════════════════════════════════════ -->
 <div class="block-sep-light"></div>
-<section id="about" class="sec" style="background:var(--bg2)">
-  <div class="about-mark" dir="ltr">VORQA</div>
-  <div style="max-width:1160px;margin:0 auto" class="about-grid">
-    <div>
-      <div style="margin-bottom:28px"><h2 class="sec-num rv">§ 04 / VORQA Hakkında</h2><div style="width:32px;height:2px;background:#2874B2;margin-top:16px" class="rv d1"></div></div>
-      <p class="intro-text-l rv d2">VORQA, müşteri tarafında çalışan bir teknik tedarik ve proje koordinasyon partneridir. Endüstriyel tedarik ve proje yönetiminde 15+ yıllık birleşik tecrübeye sahip mühendisler tarafından kurulmuştur. Teknik gereksinimleri netleştirir, doğru üreticiyi veya uzman tesis partnerini seçer, teklifleri karşılaştırır ve çok sektörlü proje paketlerini — netleştirmeden üretim takibine, dokümantasyon ve teslimata kadar — koordine ederiz.</p>
-      <div class="btn-row rv d4" style="margin-top:36px">
-        <a href="/tr/iletisim/" class="btn-g" style="text-decoration:none">Bize Ulaşın</a>
-      </div>
-    </div>
-    <div class="about-rail rv d3">
-      <div class="item"><div class="k">15+</div><div class="v">Yıllık birleşik tecrübe</div></div>
-      <div class="item"><div class="k">✓</div><div class="v">Çok sektörlü kapsam</div></div>
-      <div class="item"><div class="k">Doğrudan</div><div class="v">İletişim ve koordinasyon</div></div>
-      <div class="item"><div class="k">MENA</div><div class="v">&amp; Afrika kapsamı</div></div>
-    </div>
-  </div>
-</section>
+<section id="about" class="sec about-process" aria-labelledby="about-title">
+ <div class="about-process-grid">
+ <div class="about-story rv"><p class="sec-num">§ 04 / VORQA</p><h2 id="about-title" class="about-process-title">Biz kimiz, nasıl çalışıyoruz?</h2><p class="about-process-copy">VORQA, müşteri tarafında çalışan bir teknik tedarik ve proje koordinasyon partneridir. Endüstriyel tedarik ve proje yönetiminde 15+ yıllık birleşik tecrübeye sahip mühendisler tarafından kurulmuştur. Teknik gereksinimleri netleştirir, doğru üreticiyi veya uzman tesis partnerini seçer, teklifleri karşılaştırır ve çok sektörlü proje paketlerini — netleştirmeden üretim takibine, dokümantasyon ve teslimata kadar — koordine ederiz.</p><div class="about-process-cta"><a href="/tr/iletisim/" class="btn-g">Bize Ulaşın</a></div></div>
+ <div class="about-method rv d2"><div class="method-caption"><span>TALEPTEN TESLİME</span><span aria-hidden="true">01 — 03</span></div><ol class="method-list"><li class="method-step"><div class="method-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="15"/><path d="M24 4v8m0 24v8M4 24h8m24 0h8"/><g class="method-motion method-scan"><circle cx="24" cy="24" r="6"/><path class="method-accent" d="m21 24 2 2 4-5"/></g></svg></div><div class="method-text"><span class="method-index" aria-hidden="true">01</span><h3>İhtiyacı netleştiririz</h3><p>Teknik gereksinimleri, proje kapsamını ve açık soruları birlikte belirleriz.</p></div></li>
+<li class="method-step"><div class="method-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M13 16l22 16M13 32l22-16"/><circle cx="11" cy="15" r="5"/><circle cx="11" cy="33" r="5"/><g class="method-motion method-match"><circle cx="36" cy="24" r="8"/><path class="method-accent" d="m32 24 3 3 5-6"/></g></svg></div><div class="method-text"><span class="method-index" aria-hidden="true">02</span><h3>Doğru partneri seçeriz</h3><p>Üretici ve uzman tesis partnerlerini eşleştirir, teklifleri karşılaştırırız.</p></div></li>
+<li class="method-step"><div class="method-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 18l16-9 16 9v17l-16 9-16-9zM8 18l16 9 16-9M24 27v17"/><g class="method-motion method-deliver"><path class="method-accent" d="M4 9h13M4 5h8M31 5h10m-4-4 4 4-4 4"/></g></svg></div><div class="method-text"><span class="method-index" aria-hidden="true">03</span><h3>Teslimata kadar koordine ederiz</h3><p>Üretim takibini, dokümantasyonu ve teslimat sürecini tek muhatap üzerinden yürütürüz.</p></div></li></ol></div>
+ </div></section>
 
 <!-- ════════════════════════════════════
      FOOTER
@@ -1347,14 +1336,16 @@ const T = {
 
 
 
-  "about.num": "§ 04 / VORQA Hakkında",
+  "about.num": "§ 04 / VORQA",
+  "about.title": "Biz kimiz, nasıl çalışıyoruz?",
+  "about.method": "TALEPTEN TESLİME",
   "about.p1": "VORQA, müşteri tarafında çalışan bir teknik tedarik ve proje koordinasyon partneridir. Endüstriyel tedarik ve proje yönetiminde 15+ yıllık birleşik tecrübeye sahip mühendisler tarafından kurulmuştur. Teknik gereksinimleri netleştirir, doğru üreticiyi veya uzman tesis partnerini seçer, teklifleri karşılaştırır ve çok sektörlü proje paketlerini — netleştirmeden üretim takibine, dokümantasyon ve teslimata kadar — koordine ederiz.",
-  "about.stat1.k": "15+",
-  "about.stat1.v": "Yıllık birleşik tecrübe",
-  "about.stat2.k": "✓",
-  "about.stat2.v": "Çok sektörlü kapsam",
-  "about.stat3.k": "Doğrudan",
-  "about.stat3.v": "İletişim ve koordinasyon",
+  "about.stat1.k": "İhtiyacı netleştiririz",
+  "about.stat1.v": "Teknik gereksinimleri, proje kapsamını ve açık soruları birlikte belirleriz.",
+  "about.stat2.k": "Doğru partneri seçeriz",
+  "about.stat2.v": "Üretici ve uzman tesis partnerlerini eşleştirir, teklifleri karşılaştırırız.",
+  "about.stat3.k": "Teslimata kadar koordine ederiz",
+  "about.stat3.v": "Üretim takibini, dokümantasyonu ve teslimat sürecini tek muhatap üzerinden yürütürüz.",
   "about.stat4.k": "MENA",
   "about.stat4.v": "& Afrika kapsamı",
   "btn.contact": "Bize Ulaşın",
@@ -1435,14 +1426,16 @@ const T = {
 
 
 
-  "about.num": "§ 04 / About VORQA",
+  "about.num": "§ 04 / VORQA",
+  "about.title": "Who we are, how we work",
+  "about.method": "FROM REQUEST TO DELIVERY",
   "about.p1": "VORQA is a customer-side technical sourcing and project coordination partner. Founded by engineers with 15+ years of combined experience in industrial procurement and project delivery, we clarify technical requirements, select the right manufacturer or specialized plant partner, compare offers, and coordinate multi-sector project packages — from clarification through production follow-up, documentation and delivery.",
-  "about.stat1.k": "15+",
-  "about.stat1.v": "Years combined experience",
-  "about.stat2.k": "✓",
-  "about.stat2.v": "Multi-sector coverage",
-  "about.stat3.k": "Direct",
-  "about.stat3.v": "Communication & coordination",
+  "about.stat1.k": "We clarify the need",
+  "about.stat1.v": "Together, we define technical requirements, project scope and open questions.",
+  "about.stat2.k": "We select the right partner",
+  "about.stat2.v": "We match manufacturers and specialist plant partners, then compare proposals.",
+  "about.stat3.k": "We coordinate through delivery",
+  "about.stat3.v": "We coordinate production follow-up, documentation and delivery through one point of contact.",
   "about.stat4.k": "MENA",
   "about.stat4.v": "& Africa reach",
   "btn.contact": "Contact Us",
@@ -1523,14 +1516,16 @@ const T = {
 
 
 
-  "about.num": "§ 04 / عن VORQA",
+  "about.num": "§ 04 / VORQA",
+  "about.title": "من نحن وكيف نعمل؟",
+  "about.method": "من الطلب إلى التسليم",
   "about.p1": "VORQA شريك في التوريد الفني وتنسيق المشاريع يعمل لصالح العميل. تأسست على يد مهندسين يمتلكون خبرة مشتركة تتجاوز 15 عامًا في التوريد الصناعي وإدارة المشاريع. نوضّح المتطلبات الفنية، ونختار الشركة المصنّعة أو الشريك المتخصص المناسب، ونقارن العروض، وننسّق حزم المشاريع متعددة القطاعات — من التوضيح حتى متابعة الإنتاج والتوثيق والتسليم.",
-  "about.stat1.k": "+15",
-  "about.stat1.v": "عامًا خبرة مشتركة",
-  "about.stat2.k": "✓",
-  "about.stat2.v": "تغطية متعددة القطاعات",
-  "about.stat3.k": "تواصل",
-  "about.stat3.v": "مباشر ومنسّق",
+  "about.stat1.k": "نوضح الاحتياج",
+  "about.stat1.v": "نحدد معاً المتطلبات الفنية ونطاق المشروع والأسئلة المفتوحة.",
+  "about.stat2.k": "نختار الشريك المناسب",
+  "about.stat2.v": "نطابق المصنعين وشركاء المنشآت المتخصصين ونقارن العروض.",
+  "about.stat3.k": "ننسق حتى التسليم",
+  "about.stat3.v": "نتابع الإنتاج والوثائق والتسليم عبر جهة اتصال واحدة.",
   "about.stat4.k": "MENA",
   "about.stat4.v": "وأفريقيا",
   "btn.contact": "تواصل معنا",
