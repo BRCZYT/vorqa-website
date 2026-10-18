@@ -19,9 +19,9 @@ Regenerate with `node build-locale-pages.mjs` (existing Cheerio dependency), or 
 Asset provenance:
 
 - `images/industries/concrete.webp`: optimized from Drive image 10gCHXZa5wLbz3nHoAenloSZwOkm_ZS18 in the concrete source folder.
-- `images/industries/crushing.webp`: optimized from Drive image 1AAK032rG9H6HdZ5oqAR5upkJema01DPc in the crushing source folder.
+- `images/industries/crushing.webp`: user-selected Drive PNG `12uySire8GJRY4e-oFnOTpkbmiPAYo8Bj` (2026-10-18), `kirma-eleme-tesisi-konveyor-sistemi.png`. Resized from 1536x1024 to 1200x800 with full composition preserved, WebP quality 84. Shared by all localized homepage cards and crushing detail pages.
 - `images/industries/asphalt.webp`: user-selected Drive image `1OGAq4PzyMSLDO2NvHdYJ2342fk0hcv2j` (2026-10-18), `uncategorized-zeytinlik-yaninda-asfalt-plenti-e647f7c0.webp`. Resized from 2048x1152 to 1600x900 and encoded as WebP quality 84; full composition retained. Shared by homepage industry cards and all three localized asphalt detail pages.
-- Concrete and crushing homepage cards retain their original plant photographs; the new Drive equipment images appear on their detail pages.
+- Concrete homepage cards retain their original plant photograph; the Drive equipment image appears on concrete detail pages. Crushing cards and detail pages share the user-selected plant photograph.
 - Galvanizing uses the repository's existing `images/galvaniz/galvaniz1.jpg`.
 - Energy source folder contains only the Word file: the existing `srv-enerji-light.svg` is explicitly captioned as an illustration.
 - Waste retains its existing repository photograph and contact behavior.
@@ -32,4 +32,3 @@ Source files' editorial placement suggestions and pre-publication checklists are
 ## Brand assets and authorized live rollout (2026-10-17)
 
 The user supplied brand folder `1cfwQxsVkl07l2uOkWORXuZ_9jQJS9acu` and explicitly requested the live site update. Its contents are logos, emblems and brand collateral, not sector photographs. The white logo (`1HcLVdKBIcxtErknKbd1A5sj8gd8etnlK`) is trimmed and resized for dark headers/footers. The transparent emblem (`1aVcIkDBbNzE0Pq_jlNHbGtINrUv5XWLU`) supplies the favicon and touch icon. All locale sources use versioned asset references so existing visitors receive the supplied files. The earlier restriction against merging is superseded by this live-rollout request. Sector photo provenance remains as listed above.
-
