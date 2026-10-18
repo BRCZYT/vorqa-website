@@ -23,7 +23,7 @@ Asset provenance:
 - `images/industries/asphalt.webp`: user-selected Drive image `1OGAq4PzyMSLDO2NvHdYJ2342fk0hcv2j` (2026-10-18), `uncategorized-zeytinlik-yaninda-asfalt-plenti-e647f7c0.webp`. Resized from 2048x1152 to 1600x900 and encoded as WebP quality 84; full composition retained. Shared by homepage industry cards and all three localized asphalt detail pages.
 - Concrete homepage cards retain their original plant photograph; the Drive equipment image appears on concrete detail pages. Crushing cards and detail pages share the user-selected plant photograph.
 - Galvanizing uses the repository's existing `images/galvaniz/galvaniz1.jpg`.
-- Energy source folder contains only the Word file: the existing `srv-enerji-light.svg` is explicitly captioned as an illustration.
+- `images/industries/energy-petroleum.webp`: user-selected Drive PNG `1j82VgMcS3WRjLB9Bd_GUzAlVoQelcg16` (2026-10-18), `energy-petroleum-card.png`. Full 1122x1402 composition retained, optimized as WebP quality 84. Replaces the earlier SVG illustration on homepage cards and all localized energy detail pages. Captions describe a sector image rather than a VORQA project reference.
 - Waste retains its existing repository photograph and contact behavior.
 - Photos are described as sector equipment, never as proof of a VORQA-delivered project.
 
