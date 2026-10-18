@@ -208,3 +208,61 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
 }
 
 .system-grid a{text-decoration:none;color:inherit;display:block}
+
+/* Cover and closing page: balanced single-screen composition. */
+.cover-layout,.contact .page-inner{width:100%;max-width:1120px;margin-inline:auto;height:100%;min-height:100%;gap:clamp(8px,1.8dvh,18px);padding-bottom:calc(var(--safeB) + 76px)}
+.cover-layout{justify-content:space-between}
+.cover .intro{padding:4px 0 12px}
+.cover .intro:before{top:0;bottom:0;right:0;left:15%;border-radius:24px}
+.cover .intro h1{max-width:none;font-size:clamp(40px,min(12vw,13dvh),112px);line-height:1.1;letter-spacing:.005em;margin:12px 0 14px}
+.cover .eyebrow{line-height:1.5;letter-spacing:.14em}
+.cover .sublead{max-width:100%;line-height:1.35}
+.local-statement{position:relative;max-width:850px}
+.local-statement h2{margin:0 0 8px;font-size:clamp(19px,3vw,30px);line-height:1.25;letter-spacing:0;color:var(--navy)}
+.local-statement p{margin:0;color:var(--muted);font-size:clamp(13px,2vw,18px);line-height:1.5}
+.cover .value-row{gap:clamp(7px,1.3dvh,14px)}
+.cover .value-row>div{min-height:clamp(52px,9dvh,94px);padding:clamp(9px,1.5dvh,16px)}
+.cover .value-copy b{font-size:clamp(11px,1.8vw,17px);line-height:1.35}
+.cover .cta{min-height:44px;flex-shrink:0}
+.contact .page-inner{justify-content:space-between}
+.contact .intro h2{max-width:none;font-size:clamp(32px,min(8vw,8dvh),60px);line-height:1.1;letter-spacing:0;margin:5px 0}
+.contact .lead{font-size:clamp(12px,1.7vw,17px);line-height:1.35}
+.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.contact-grid a{min-height:clamp(48px,8dvh,76px);padding:9px 12px;border-radius:16px;min-width:0}
+.contact-grid a:last-child{grid-column:1/-1}
+.contact-grid b{font-size:clamp(11px,1.5vw,14px)}
+.contact-grid span{font-size:clamp(10px,1.3vw,13px);line-height:1.3;margin-top:3px;overflow-wrap:anywhere}
+.contact .rfq{min-height:40px;margin:0;flex-shrink:0}
+.contact-collage{min-height:0;flex:1 1 120px;max-height:230px;overflow:hidden;border-radius:20px;position:relative}
+.contact-collage img{display:block;width:100%;height:100%;object-fit:contain}
+.contact .domain{font-size:10px}
+@media(max-width:600px){
+.cover-layout,.contact .page-inner{padding-top:calc(var(--safeT) + 76px);padding-bottom:calc(var(--safeB) + 68px);gap:9px}
+.cover .intro h1{font-size:clamp(38px,min(12vw,12dvh),66px);letter-spacing:.005em;margin:10px 0 12px}
+.cover .sublead{font-size:clamp(18px,4.8vw,25px)!important}
+.cover .value-row>div{min-height:clamp(49px,8dvh,70px);padding:8px;gap:7px}
+.cover .value-icon{width:30px;height:30px;flex-basis:30px}
+.cover .value-icon svg{width:18px;height:18px}
+.cover .value-copy b{font-size:clamp(10px,2.7vw,14px)}
+.local-statement h2{font-size:clamp(17px,4.5vw,23px);margin-bottom:6px}
+.local-statement p{font-size:12px;line-height:1.4}
+.contact-grid{gap:6px}
+.contact-grid a{min-height:44px;padding:7px 9px;border-radius:13px}
+.contact-grid b{font-size:11px}.contact-grid span{font-size:10px}
+.contact-collage{max-height:190px;flex-basis:90px}
+.contact .intro .eyebrow{font-size:9px}
+}
+@media(max-height:650px){
+.cover-layout,.contact .page-inner{gap:6px}
+.cover .intro h1{font-size:clamp(35px,min(11vw,10dvh),58px);margin:5px 0 8px}
+.cover .intro{padding-bottom:0}
+.cover .value-row>div{min-height:46px}
+.cover .value-icon{width:26px;height:26px;flex-basis:26px}
+.local-statement h2{font-size:17px}.local-statement p{font-size:11px}
+.contact .intro h2{font-size:30px}
+.contact .lead{font-size:11px}
+.contact-grid a{min-height:40px;padding:5px 8px}
+.contact-grid b{font-size:10px}.contact-grid span{font-size:9px}
+.contact .rfq{min-height:34px;font-size:13px}
+.contact-collage{max-height:130px;flex-basis:70px}
+}
