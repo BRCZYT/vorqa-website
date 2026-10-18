@@ -298,14 +298,3 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
 .contact-grid a .catalog-icon{width:18px;height:18px}
 }
 
-@media(min-width:700px){
-.contact .page-inner{max-width:1120px;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);grid-template-rows:auto auto minmax(0,1fr) auto;column-gap:22px}
-.contact .intro{grid-column:1/-1;max-width:none}
-.contact .intro h2{font-size:clamp(36px,6dvh,54px)}
-.contact .lead{font-size:14px}
-.contact-grid{grid-column:1;grid-row:2/4;grid-template-columns:1fr;grid-template-rows:repeat(5,minmax(0,1fr))}
-.contact-grid a{min-height:0}
-.contact .rfq{grid-column:2;grid-row:2}
-.contact-collage{grid-column:2;grid-row:3;align-self:stretch}
-.contact .domain{grid-column:1/-1}
-}
