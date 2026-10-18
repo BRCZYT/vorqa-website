@@ -99,12 +99,10 @@ Object.assign(strings.en,{sysA:'Concrete Batching Plants',sysB:'Galvanizing Plan
 Object.assign(strings.ar,{sysA:'محطات خلط الخرسانة',sysB:'منشآت الجلفنة',sysC:'مصانع الأسفلت والبيتومين',sysD:'تحويل النفايات إلى طاقة',sysE:'منشآت التكسير والغربلة',sysF:'الطاقة والنفط'});
 
 let currentLang='tr';
-document.querySelector('[data-energy-link]').onclick=()=>{
-  const path=currentLang==='tr'?'/tr/sektorler/enerji-petrol/':'/'+currentLang+'/industries/energy-petroleum/';
-  window.open('https://www.vorqaglobal.com'+path,'_blank','noopener');
-};
 function setLang(l){
   currentLang=l;
+  const energyPath=l==='tr'?'/tr/sektorler/enerji-petrol/':'/'+l+'/industries/energy-petroleum/';
+  document.querySelector('[data-energy-link]').href='https://www.vorqaglobal.com'+energyPath;
   document.documentElement.lang=l;
   document.documentElement.dir='ltr';
   document.body.classList.toggle('rtl',l==='ar');
