@@ -4,3 +4,4 @@
 :root{--home-opening-accent:#E87722;--home-opening-font:"DM Serif Display",Georgia,serif;--home-opening-ar-font:"Noto Naskh Arabic",serif;--home-opening-weight:400;--home-opening-ar-weight:600;--home-opening-tracking:0;--home-opening-leading:1.2}
 
 :root{--home-support-font:"JetBrains Mono Variable",monospace;--home-support-size:clamp(14px,1.5vw,22px);--home-support-weight:500;--home-support-tracking:.12em;--home-support-leading:1.6}
+:root{--about-surface:#eaf1f7;--about-column-gap:clamp(40px,7vw,100px);--about-title-size:clamp(30px,3.2vw,44px);--about-title-width:490px;--about-label-size:10px;--about-label-tracking:1.5px;--about-icon-size:64px;--about-svg-size:40px;--about-icon-surface:#f4f8fb;--about-step-size:19px;--about-copy-size:14px;--about-motion-duration:6s;--about-mobile-icon:52px}
