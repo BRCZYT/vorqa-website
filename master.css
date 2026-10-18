@@ -84,3 +84,6 @@
 /* Homepage opening statement; deliberately scoped away from detail pages. */
 #hero .hero-h1 .accent{color:var(--home-opening-accent);font-family:var(--home-opening-font);font-weight:var(--home-opening-weight);font-style:italic;text-transform:none;letter-spacing:var(--home-opening-tracking);line-height:var(--home-opening-leading)}
 html[dir="rtl"] #hero .hero-h1 .accent{font-family:var(--home-opening-ar-font);font-weight:var(--home-opening-ar-weight);font-style:normal}
+
+#hero .hero-h1 .line3{font-family:var(--home-support-font);font-size:var(--home-support-size);font-weight:var(--home-support-weight);letter-spacing:var(--home-support-tracking);line-height:var(--home-support-leading)}
+html[dir="rtl"] #hero .hero-h1 .line3{font-family:var(--home-opening-ar-font);letter-spacing:var(--home-opening-tracking)}
