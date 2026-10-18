@@ -20,7 +20,7 @@ Asset provenance:
 
 - `images/industries/concrete.webp`: optimized from Drive image 10gCHXZa5wLbz3nHoAenloSZwOkm_ZS18 in the concrete source folder.
 - `images/industries/crushing.webp`: optimized from Drive image 1AAK032rG9H6HdZ5oqAR5upkJema01DPc in the crushing source folder.
-- `images/industries/asphalt.webp`: existing publication-ready WebP from Drive ZIP 1Aygt0Zg5LLYCrOtReuXJzTV87IeB2rAt, `webp/asphalt-plant-mixers/asphalt-plant-mixers-view-080.webp`. Metadata CSV 168Q2P_yFGMR8g0zv_soTmSX1TEefbcmh identifies the mixer body and access platform, ready for publication with no visible branding detected. No branding removal was performed.
+- `images/industries/asphalt.webp`: user-selected Drive image `1OGAq4PzyMSLDO2NvHdYJ2342fk0hcv2j` (2026-10-18), `uncategorized-zeytinlik-yaninda-asfalt-plenti-e647f7c0.webp`. Resized from 2048x1152 to 1600x900 and encoded as WebP quality 84; full composition retained. Shared by homepage industry cards and all three localized asphalt detail pages.
 - Concrete and crushing homepage cards retain their original plant photographs; the new Drive equipment images appear on their detail pages.
 - Galvanizing uses the repository's existing `images/galvaniz/galvaniz1.jpg`.
 - Energy source folder contains only the Word file: the existing `srv-enerji-light.svg` is explicitly captioned as an illustration.
@@ -32,3 +32,4 @@ Source files' editorial placement suggestions and pre-publication checklists are
 ## Brand assets and authorized live rollout (2026-10-17)
 
 The user supplied brand folder `1cfwQxsVkl07l2uOkWORXuZ_9jQJS9acu` and explicitly requested the live site update. Its contents are logos, emblems and brand collateral, not sector photographs. The white logo (`1HcLVdKBIcxtErknKbd1A5sj8gd8etnlK`) is trimmed and resized for dark headers/footers. The transparent emblem (`1aVcIkDBbNzE0Pq_jlNHbGtINrUv5XWLU`) supplies the favicon and touch icon. All locale sources use versioned asset references so existing visitors receive the supplied files. The earlier restriction against merging is superseded by this live-rollout request. Sector photo provenance remains as listed above.
+
