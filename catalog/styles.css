@@ -318,3 +318,7 @@ body.rtl .eyebrow{flex-direction:row-reverse;justify-content:flex-start}
 .contact-grid a{padding:7px}
 .contact-collage{max-height:110px}
 }
+
+/* Equal space for the contact cards and closing collage. */
+.contact .page-inner{grid-template-rows:auto minmax(0,1fr) minmax(0,1fr) auto}
+.contact-collage{max-height:none;align-self:stretch}
