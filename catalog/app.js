@@ -98,6 +98,18 @@ id1:'نقطة اتصال واحدة،',id2:'عملية منضبطة'
 Object.assign(strings.en,{sysA:'Concrete Batching Plants',sysB:'Galvanizing Plants',sysC:'Asphalt & Bitumen Plants',sysD:'Waste-to-Energy',sysE:'Crushing & Screening Plants',sysF:'Energy & Petroleum'});
 Object.assign(strings.ar,{sysA:'محطات خلط الخرسانة',sysB:'منشآت الجلفنة',sysC:'مصانع الأسفلت والبيتومين',sysD:'تحويل النفايات إلى طاقة',sysE:'منشآت التكسير والغربلة',sysF:'الطاقة والنفط'});
 
+Object.assign(strings.en,{
+coverEyebrow:'Vorqa Global Supply',coverTag:'Supply Chain Management',
+localTitle:'Local expertise. National strength. Global supply.',
+localText:'We bring the value produced in Türkiye to the world through trusted partnerships.',
+sys1:'Specialist',sys2:'Systems',solutionEyebrow:'SPECIALIST SYSTEMS',backSystems:'Specialist Systems',phoneLabel:'Phone'
+});
+Object.assign(strings.ar,{
+coverEyebrow:'Vorqa Global Supply',coverTag:'إدارة سلسلة التوريد',
+localTitle:'خبرة محلية. قوة وطنية. توريد عالمي.',
+localText:'نوصل القيمة المنتجة في تركيا إلى العالم من خلال شراكات موثوقة.',
+sys1:'أنظمة',sys2:'متخصصة',solutionEyebrow:'أنظمة متخصصة',backSystems:'أنظمة متخصصة',phoneLabel:'الهاتف'
+});
 let currentLang='tr';
 function setLang(l){
   currentLang=l;
