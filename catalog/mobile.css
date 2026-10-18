@@ -39,6 +39,7 @@
 .supply-items{grid-template-columns:repeat(2,minmax(0,1fr))}
 .supply-item{min-width:0;padding:10px}
 .supply-items .supply-item span{font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+.identity .coord-hub{width:clamp(56px,18vw,72px);height:clamp(56px,18vw,72px)}
 .coord-card h3{line-height:1.3}
 .coord-card p{line-height:1.4}
 .contact-grid{min-width:0;gap:9px}
