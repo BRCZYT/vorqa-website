@@ -23,7 +23,7 @@ function updateNav(){
 function go(i){
   idx=Math.max(0,Math.min(pages.length-1,i));
   pages[idx].scrollTop=0;
-  pages[idx].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+  deck.scrollTo({left:idx*deck.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   updateNav();
 }
 prev.onclick=()=>go(idx-1);
@@ -32,13 +32,13 @@ document.getElementById('startBtn').onclick=()=>go(1);
 document.querySelectorAll('[data-target]').forEach(b=>b.onclick=()=>go(Number(b.dataset.target)));
 document.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>go(Number(b.dataset.back)));
 
-let raf=0;
+let scrollEndTimer;
 deck.addEventListener('scroll',()=>{
-  cancelAnimationFrame(raf);
-  raf=requestAnimationFrame(()=>{
+  clearTimeout(scrollEndTimer);
+  scrollEndTimer=setTimeout(()=>{
     const n=Math.round(deck.scrollLeft/deck.clientWidth);
     if(n!==idx){idx=n;updateNav()}
-  });
+  },120);
 },{passive:true});
 addEventListener('keydown',e=>{
   if(e.key==='ArrowRight')go(idx+1);
@@ -151,7 +151,7 @@ document.getElementById('shareBtn').onclick=async()=>{
 let resizeTimer;
 addEventListener('resize',()=>{
   clearTimeout(resizeTimer);
-  resizeTimer=setTimeout(()=>pages[idx].scrollIntoView({behavior:'auto',inline:'start',block:'nearest'}),120);
+  resizeTimer=setTimeout(()=>deck.scrollTo({left:idx*deck.clientWidth,behavior:'auto'}),120);
 });
 
 setLang('tr');
