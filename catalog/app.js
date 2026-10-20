@@ -100,19 +100,16 @@ Object.assign(strings.ar,{sysA:'محطات خلط الخرسانة',sysB:'منش
 
 Object.assign(strings.en,{
 coverEyebrow:'Vorqa Global Supply',coverTag:'Supply Chain Management',
-localTitle:'Local expertise. National strength. Global supply.',
-localText:'We bring the value produced in Türkiye to the world through trusted partnerships.',
 sys1:'Specialist',sys2:'Systems',solutionEyebrow:'SPECIALIST SYSTEMS',backSystems:'Specialist Systems',phoneLabel:'Phone'
 });
 Object.assign(strings.ar,{
 coverEyebrow:'Vorqa Global Supply',coverTag:'إدارة سلسلة التوريد',
-localTitle:'خبرة محلية. قوة وطنية. توريد عالمي.',
-localText:'نوصل القيمة المنتجة في تركيا إلى العالم من خلال شراكات موثوقة.',
 sys1:'أنظمة',sys2:'متخصصة',solutionEyebrow:'أنظمة متخصصة',backSystems:'أنظمة متخصصة',phoneLabel:'الهاتف'
 });
 let currentLang='tr';
 function setLang(l){
   currentLang=l;
+  document.querySelector('.local-statement').hidden=l!=='tr';
   const energyPath=l==='tr'?'/tr/sektorler/enerji-petrol/':'/'+l+'/industries/energy-petroleum/';
   document.querySelector('[data-energy-link]').href='https://www.vorqaglobal.com'+energyPath;
   document.documentElement.lang=l;
@@ -121,6 +118,7 @@ function setLang(l){
   document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
   document.querySelectorAll('[data-i]').forEach(el=>{
     const k=el.dataset.i;
+    if(l!=='tr'&&(k==='localTitle'||k==='localText')){el.replaceChildren();return;}
     el.innerHTML=l==='tr'?(original[k]??el.innerHTML):(strings[l]?.[k]??original[k]??el.innerHTML);
   });
   updateWhatsAppLinks();
